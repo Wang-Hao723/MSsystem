@@ -1,0 +1,1150 @@
+{
+  "metadata": {
+    "schema_version": "1.0.0",
+    "module_id": "v11_flagship_chem_entity_ranker",
+    "algorithm_id": "mssystem-v11-flagship-chem-entity-ranker-1.2.1",
+    "algorithm_name": "V11-Flagship",
+    "policy_sha256": "9820ecbe2a4687e482a96d48c173b3fd1fe1c93c504fa56b7f8b78fda7dea12a",
+    "task_id": "entity-demo-flavonoid",
+    "source_row_count": 3,
+    "source_matched_row_count": 3,
+    "source_semantic_sha256": "f936399c7561c589ffdf80a41747a63b705dea8b2efc69dd16c46f0b1d6a2913",
+    "entity_count": 1,
+    "entities_with_candidate": 1,
+    "entities_abstained": 0,
+    "entities_unmatched": 0,
+    "entities_reranked_from_first_scan": 0,
+    "entities_reranked_from_v14": 0,
+    "entities_with_conditioned_multilibrary_influence": 0,
+    "decision_status_counts": {
+      "selected": 1
+    },
+    "decision_scope_counts": {
+      "2d_connectivity_candidate": 1
+    },
+    "fragmentation_status_counts": {
+      "completed": 1
+    },
+    "query_spectrum_release_gate_status_counts": {
+      "not_applicable": 1
+    },
+    "entities_demoted_by_query_spectrum_release_gate": 0,
+    "entities_failed_query_spectrum_audit_only": 0,
+    "cross_platform_abstention_gate_status_counts": {
+      "not_applicable": 1
+    },
+    "entities_demoted_by_cross_platform_abstention_gate": 0,
+    "score_is_probability": false,
+    "legacy_result_mutated": false,
+    "production_identity_selector": true,
+    "identity_registry_id": "mssystem-v14-pubchem-name-formula-identity-repair-2.0.0",
+    "identity_registry_sha256": "cefc5b2804173ccc9ae29d025991ffeee187d38947c76b2bef39927bc310e0d7",
+    "v14_audit_baseline_retained": false
+  },
+  "policy": {
+    "schema_version": "1.0.0",
+    "algorithm_id": "mssystem-v11-flagship-chem-entity-ranker-1.2.1",
+    "display_name": "V11-Flagship",
+    "deployment_state": "production",
+    "decision_unit": "candidate_independent_precursor_entity",
+    "candidate_pool": {
+      "maximum_candidates_per_scan": 20,
+      "shortlist_size": 5,
+      "missing_from_truncated_topk_is_negative_evidence": false,
+      "connectivity_identity": "bounded_tautomer_standardized_nonisomeric_structure_then_inchikey",
+      "collapse_stereoisomers": true,
+      "tautomer_standardization": {
+        "enabled": true,
+        "maximum_tautomers": 32,
+        "maximum_transforms": 100,
+        "used_for_identity_collapse_only": true
+      }
+    },
+    "scan_score": {
+      "cosine": 0.35,
+      "entropy": 0.25,
+      "reverse_match": 0.15,
+      "mass_accuracy": 0.1,
+      "fragment_coverage": 0.1,
+      "intensity_agreement": 0.05,
+      "reciprocal_rank_fraction": 0.3,
+      "spectral_fraction": 0.7
+    },
+    "entity_score": {
+      "mean_collision_energy_support": 0.45,
+      "median_collision_energy_support": 0.3,
+      "collision_energy_coverage": 0.15,
+      "collision_energy_top1_fraction": 0.1
+    },
+    "collision_energy": {
+      "bin_width": 0.5,
+      "unknown_values_share_one_bin": true,
+      "technical_replicates_are_independent_votes": false,
+      "distinct_energy_bins_are_independent_votes": false,
+      "distinct_energy_bins_are_separate_measurement_conditions": true
+    },
+    "reference_provenance": {
+      "source_family_unit": "normalized_dataset_source",
+      "source_diversity_saturation": 3,
+      "spectrum_accessions_are_independent_votes": false,
+      "source_diversity_affects_score": false
+    },
+    "identity_registry": {
+      "enabled": true,
+      "path": "config/canonical_name_identity_registry.json",
+      "sha256": "cefc5b2804173ccc9ae29d025991ffeee187d38947c76b2bef39927bc310e0d7",
+      "required": true,
+      "exact_normalized_name_and_formula_required": true,
+      "ground_truth_inputs_used": false,
+      "unresolved_is_neutral": true
+    },
+    "chemistry_gate": {
+      "parent_mass_tolerance_ppm": 25.0,
+      "parent_mass_tolerance_da": 0.02,
+      "supported_fragmentation_adducts": [
+        "[M+H]+",
+        "[M-H]-",
+        "[M]+",
+        "[M]-"
+      ],
+      "candidate_mass_inference_adducts_positive": [
+        "[M+H]+",
+        "[M]+",
+        "[M+Na]+",
+        "[M+NH4]+",
+        "[M+K]+"
+      ],
+      "candidate_mass_inference_adducts_negative": [
+        "[M-H]-",
+        "[M]-",
+        "[M+Cl]-",
+        "[M+FA-H]-",
+        "[M+Hac-H]-"
+      ],
+      "candidate_independent_formula_adduct_contradiction_is_veto": true,
+      "candidate_library_adduct_contradiction_is_veto": false,
+      "missing_formula_or_adduct_is_negative_evidence": false,
+      "mass_only_neutral_loss_is_mechanism": false
+    },
+    "decision": {
+      "minimum_entity_score": 0.5,
+      "minimum_connectivity_margin": 0.04,
+      "minimum_distinct_collision_energies_for_connectivity": 2,
+      "minimum_winner_collision_energy_support": 2,
+      "isomer_group_margin": 0.05,
+      "single_spectrum_exact_structure_allowed": false,
+      "stereochemistry_claimed": false,
+      "score_is_probability": false
+    },
+    "forbidden_ranking_inputs": [
+      "expert_score",
+      "classification",
+      "biosynthetic_pathway",
+      "candidate_pathway_alignment",
+      "language_model_output",
+      "legacy_confidence_label"
+    ]
+  },
+  "invariants": {
+    "one_decision_per_candidate_independent_entity": true,
+    "technical_replicates_are_independent_votes": false,
+    "distinct_collision_energies_are_independent_samples": false,
+    "distinct_collision_energies_are_separate_measurement_conditions": true,
+    "expert_score_affects_ranking": false,
+    "classification_affects_ranking": false,
+    "feature_fragment_evidence_affects_ranking": false,
+    "biosynthetic_pathway_affects_ranking": false,
+    "candidate_pathway_affects_ranking": false,
+    "conditioned_multilibrary_affects_ranking": false,
+    "source_count_bonus_applied": false,
+    "mirrored_reference_sources_are_independent_votes": false,
+    "source_accessions_are_independent_votes": false,
+    "cross_unit_collision_energy_conversion_applied": false,
+    "missing_chemistry_is_negative_evidence": false,
+    "missing_from_truncated_topk_is_negative_evidence": false,
+    "candidate_independent_formula_adduct_contradiction_can_veto": true,
+    "candidate_library_adduct_contradiction_can_veto": false,
+    "query_spectrum_release_gate_changes_top1": false,
+    "query_spectrum_release_gate_changes_top5": false,
+    "query_spectrum_release_gate_changes_entity_score": false,
+    "query_spectrum_release_gate_affects_release_scope": false,
+    "technical_replicates_create_query_quality_conditions": false,
+    "cross_platform_abstention_gate_changes_top1": false,
+    "cross_platform_abstention_gate_changes_top5": false,
+    "cross_platform_abstention_gate_changes_entity_score": false,
+    "cross_platform_abstention_gate_independently_validated": false,
+    "identity_registry_uses_ground_truth_inputs": false,
+    "tautomer_standardization_enabled": true,
+    "mass_only_neutral_loss_called_mechanism": false,
+    "stereochemistry_claimed": false
+  },
+  "entities": [
+    {
+      "entity_id": "entity:entity-demo-flavonoid:a65874bf4f4bd921cd",
+      "entity_source": "precursor_feature_id",
+      "entity_source_value": "PF-FLAVONOID-001",
+      "member_scan_count": 3,
+      "member_result_indices": [
+        0,
+        1,
+        2
+      ],
+      "member_spectrum_ids": [
+        "MSBNK-BGC_Munich-RP017101",
+        "MSBNK-BGC_Munich-RP017102",
+        "MSBNK-BGC_Munich-RP017103"
+      ],
+      "representative_precursor_mz": 465.1027765,
+      "representative_search_precursor_mz": 465.1027765,
+      "representative_selected_ion_mz": 465.1027765,
+      "search_precursor_mz_sources": [
+        "ms2_selected_ion_mz_fallback"
+      ],
+      "representative_search_precursor_mz_source": "ms2_selected_ion_mz_fallback",
+      "lcms_feature_used_for_search": false,
+      "representative_retention_time": 2.0,
+      "representative_tic": 280898.0,
+      "ion_modes": [
+        "POS"
+      ],
+      "distinct_collision_energy_bins": 3,
+      "collision_energy_bins": [
+        {
+          "key": "10.000000:ev",
+          "value": 10.0,
+          "unit": "ev",
+          "technical_replicates": 1,
+          "condition_evidence_count": 1,
+          "independent_sample_vote_count": 0
+        },
+        {
+          "key": "20.000000:ev",
+          "value": 20.0,
+          "unit": "ev",
+          "technical_replicates": 1,
+          "condition_evidence_count": 1,
+          "independent_sample_vote_count": 0
+        },
+        {
+          "key": "40.000000:ev",
+          "value": 40.0,
+          "unit": "ev",
+          "technical_replicates": 1,
+          "condition_evidence_count": 1,
+          "independent_sample_vote_count": 0
+        }
+      ],
+      "decision": {
+        "status": "selected",
+        "scope": "2d_connectivity_candidate",
+        "winner_margin": 0.18368,
+        "minimum_score": 0.5,
+        "minimum_margin": 0.04,
+        "blockers": [],
+        "query_spectrum_release_gate": {
+          "enabled": false,
+          "algorithm_id": null,
+          "status": "not_applicable",
+          "failed_gates": [],
+          "winner_rank_changed": false,
+          "winner_score_changed": false,
+          "score_is_probability": false
+        },
+        "cross_platform_abstention_gate": {
+          "enabled": false,
+          "algorithm_id": null,
+          "status": "not_applicable",
+          "failed_gates": [],
+          "winner_rank_changed": false,
+          "winner_score_changed": false,
+          "score_is_probability": false,
+          "external_independent_validation_complete": false
+        },
+        "stereochemistry_claimed": false,
+        "score_is_probability": false
+      },
+      "winner": {
+        "identity_key": "std2d:OVSQVDMCBVZWGM",
+        "identity_scope": "2d_connectivity",
+        "identity_source": "tautomer_standardized_connectivity",
+        "candidate": {
+          "compound_name": "Hyperoside",
+          "compound_name_cn": "",
+          "source_compound_name": "",
+          "formula": "C21H20O12",
+          "smiles": "O=c1c(OC2OC(CO)C(O)C(O)C2O)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12",
+          "inchikey": "OVSQVDMCBVZWGM-UHFFFAOYSA-N",
+          "reported_inchikey": "",
+          "adduct": "[M+H]+",
+          "has_structure": true,
+          "structure_quality": "validated",
+          "name_only_lead": false,
+          "dataset_source": "flavonoid_refs-Pos",
+          "source_tier": "experimental",
+          "lib_spectrum_id": "flavonoid_pos_refs_970d13dd755c_6",
+          "lib_source_accession": "MSBNK-RIKEN_ReSpect-PS046503",
+          "classification": "flavonoid",
+          "classification_source": "unknown",
+          "classification_reliable": true,
+          "classification_reliability_reason": "cached_validated_smiles_structure_rule",
+          "feature_fragment_evidence": {
+            "module": "v15_feature_fragments",
+            "status": "unavailable",
+            "reason": "no_feature_fragment_rule_passed_sealed_runtime_gate",
+            "evidence_stage": "msms_rule_support",
+            "runtime_influence": false,
+            "identity_rank_influence": false,
+            "score_contribution": 0.0,
+            "exact_identity_confirmed": false,
+            "standard_confirmed": false,
+            "isomer_discriminating": false,
+            "confirmation_status": "not_confirmed_by_feature_fragments",
+            "feature_fragment_score_standard": {
+              "schema_version": "mssystem-v15-feature-fragment-score/1.0",
+              "primary_unit": "natural_log_likelihood_ratio_nats",
+              "one_independent_fragment": "ln[P(observation|target_class,acquisition_condition)/P(observation|background,acquisition_condition)]",
+              "two_or_more_independent_fragments": "sum of the per-group natural-log likelihood ratios",
+              "correlated_rule_handling": "within one independent_fragmentation_group retain only the rule with the largest absolute natural-log likelihood ratio",
+              "count_alone_has_fixed_points": false,
+              "collision_energy_requirement": "same reported unit, same fixed mode, and query value inside the rule minimum/maximum; no cross-unit or cross-instrument conversion",
+              "absence_requirement": "negative evidence is scored only when the rule authorizes absence and every declared spectrum-quality field is true",
+              "score_is_probability": false,
+              "identity_rank_influence": false,
+              "production_score_contribution": 0.0
+            },
+            "rule_evidence": [],
+            "informative_independent_group_count": 0,
+            "present_independent_fragment_count": 0,
+            "eligible_absence_independent_group_count": 0,
+            "cumulative_evidence_by_independent_count": [],
+            "combined_log_likelihood_ratio": 0.0,
+            "combined_score_nats": 0.0,
+            "combined_score_bits": 0.0,
+            "combined_score_decibans": 0.0,
+            "likelihood_ratio": 1.0,
+            "acquisition_domain": {},
+            "runtime_export_gate": {
+              "schema_version": "mssystem-v15-feature-fragment-runtime-gate/1.0",
+              "deployment_state": "fail_closed",
+              "runtime_evaluation_enabled": false,
+              "runtime_adapter_available": false,
+              "pilot_v1_runtime_allowed": false,
+              "pilot_v1_rule_count": 6,
+              "exported_rule_count": 0,
+              "accepted_rule_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "benchmark_runtime_export_gate_path": "docs/audits/feature_fragment_benchmark_v2/runtime_export_gate.json",
+              "benchmark_runtime_export_gate_sha256": "ea0cb31811259a8a8da0d40fd50ee552a195f7dc147e0bb5df6896a02a916624",
+              "research_catalog_evaluated": false
+            }
+          },
+          "potential_contaminant": false,
+          "contaminant_category": "",
+          "compound_role": "unclassified",
+          "standardized_nonisomeric_smiles": "O=c1c(OC2OC(CO)C(O)C(O)C2O)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12",
+          "standardized_connectivity_inchikey": "OVSQVDMCBVZWGM",
+          "reported_connectivity_matches_standardized": true,
+          "structure_standardization": "bounded_rdkit_tautomer_nonisomeric"
+        },
+        "entity_score": 0.893473,
+        "legacy_v14_entity_score": 0.893473,
+        "score_is_probability": false,
+        "score_components": {
+          "mean_collision_energy_support": 0.855249,
+          "median_collision_energy_support": 0.862037,
+          "collision_energy_coverage": 1.0,
+          "collision_energy_top1_fraction": 1.0,
+          "topk_absence_imputed_as_zero": false,
+          "reference_source_diversity": 0.333333,
+          "reference_source_diversity_affects_score": false,
+          "source_count_bonus_applied": false
+        },
+        "reference_source_family_count": 1,
+        "reference_source_families": [
+          "flavonoid-refs"
+        ],
+        "reference_source_accessions_count_as_independent": false,
+        "collision_energy_bins_supported": 3,
+        "collision_energy_bins_total": 3,
+        "collision_energy_evidence": [
+          {
+            "collision_energy_bin": "10.000000:ev",
+            "support": 0.862744,
+            "legacy_v14_support": 0.862744,
+            "technical_replicates": 1,
+            "replicates_with_candidate": 1,
+            "replicates_missing_from_truncated_topk": 0,
+            "truncated_topk_absence_imputed_as_zero": true,
+            "technical_replicates_count_as_independent_votes": false,
+            "scan_top1_fraction": 1.0,
+            "legacy_v14_scan_top1_fraction": 1.0,
+            "representative_result_index": 0,
+            "conditioned_multilibrary_evidence": null
+          },
+          {
+            "collision_energy_bin": "20.000000:ev",
+            "support": 0.862037,
+            "legacy_v14_support": 0.862037,
+            "technical_replicates": 1,
+            "replicates_with_candidate": 1,
+            "replicates_missing_from_truncated_topk": 0,
+            "truncated_topk_absence_imputed_as_zero": true,
+            "technical_replicates_count_as_independent_votes": false,
+            "scan_top1_fraction": 1.0,
+            "legacy_v14_scan_top1_fraction": 1.0,
+            "representative_result_index": 1,
+            "conditioned_multilibrary_evidence": null
+          },
+          {
+            "collision_energy_bin": "40.000000:ev",
+            "support": 0.840967,
+            "legacy_v14_support": 0.840967,
+            "technical_replicates": 1,
+            "replicates_with_candidate": 1,
+            "replicates_missing_from_truncated_topk": 0,
+            "truncated_topk_absence_imputed_as_zero": true,
+            "technical_replicates_count_as_independent_votes": false,
+            "scan_top1_fraction": 1.0,
+            "legacy_v14_scan_top1_fraction": 1.0,
+            "representative_result_index": 2,
+            "conditioned_multilibrary_evidence": null
+          }
+        ],
+        "representative_result_index": 0,
+        "representative_scan_score": 0.862744,
+        "chemistry_gate": {
+          "status": "consistent",
+          "reason": "candidate_independent_formula_adduct_mass_consistent",
+          "formula": "C21H20O12",
+          "adduct": "[M+H]+",
+          "adduct_source": "reliable_query_adduct",
+          "expected_precursor_mz": 465.10275208,
+          "observed_precursor_mz": 465.1027765,
+          "mass_error_da": 2.442e-05,
+          "mass_error_ppm": 0.053,
+          "candidate_independent_checks": [
+            {
+              "source": "reliable_query_adduct",
+              "adduct": "[M+H]+",
+              "consistent": true,
+              "reason": "candidate_independent_formula_adduct_mass_consistent",
+              "expected_precursor_mz": 465.10275207944,
+              "mass_error_da": 2.4420560009730252e-05,
+              "mass_error_ppm": 0.05250573104662945
+            }
+          ],
+          "candidate_conditioned": false,
+          "veto": false,
+          "ion_identity_network_evidence_used": false,
+          "lcms_adduct_evidence_policy": "legacy_any_lcms_feature_annotation",
+          "ion_identity_network_evidence_available": false,
+          "lcms_validated_adduct_group_evidence_available": false,
+          "unvalidated_lcms_adduct_group_ignored": false,
+          "unlinked_lcms_feature_adduct_ignored": false,
+          "unlinked_lcms_feature_neutral_mass_ignored": false,
+          "reported_library_adduct": "[M+H]+",
+          "library_adduct_is_candidate_conditioned": true,
+          "library_adduct_can_veto": false,
+          "library_adduct_audit": "mass_consistent",
+          "library_adduct_expected_precursor_mz": 465.10275208,
+          "library_adduct_mass_error_da": 2.442e-05,
+          "library_adduct_mass_error_ppm": 0.053,
+          "status_counts": {
+            "consistent": 3
+          },
+          "evaluated_collision_energy_bins": 3,
+          "precursor_transformation_ambiguity": false,
+          "precursor_transformation_ambiguity_bin_count": 0,
+          "consistent_metadata_overrides_isolated_conflicting_library_metadata": false
+        },
+        "vetoed": false,
+        "variant_count_collapsed_to_connectivity": 1,
+        "stereochemistry_claimed": false,
+        "ranking_inputs": [
+          "cosine",
+          "entropy",
+          "reverse_match",
+          "mass_accuracy",
+          "fragment_coverage",
+          "intensity_agreement",
+          "within_scan_rank",
+          "collision_energy_consistency"
+        ],
+        "conditioned_multilibrary_runtime_influence": false,
+        "legacy_v14_entity_rank": 1,
+        "fragmentation_explanation": {
+          "status": "completed",
+          "reason": null,
+          "formula": "C21H20O12",
+          "adduct": "[M+H]+",
+          "candidate_conditioned": true,
+          "formula_conserving_only": true,
+          "mass_only_mechanisms_emitted": 0,
+          "mechanism_claimed": false,
+          "fragment_nodes": 4,
+          "assigned_fragment_nodes": 2,
+          "formula_conserving_edge_count": 3,
+          "nodes": [
+            {
+              "node_id": "p0",
+              "node_type": "precursor",
+              "mz": 465.1027765,
+              "relative_intensity": null,
+              "formula_candidates": [
+                {
+                  "formula": "C21H20O12",
+                  "mass_error_da": 0.0,
+                  "mass_error_ppm": 0.0,
+                  "dbe": 12.0
+                }
+              ],
+              "assignment_status": "formula_candidates"
+            },
+            {
+              "node_id": "f1",
+              "node_type": "fragment",
+              "mz": 305.0544,
+              "relative_intensity": 0.018694,
+              "formula_candidates": [],
+              "assignment_status": "unassigned"
+            },
+            {
+              "node_id": "f2",
+              "node_type": "fragment",
+              "mz": 304.053,
+              "relative_intensity": 0.173504,
+              "formula_candidates": [],
+              "assignment_status": "unassigned"
+            },
+            {
+              "node_id": "f3",
+              "node_type": "fragment",
+              "mz": 303.0495,
+              "relative_intensity": 1.0,
+              "formula_candidates": [
+                {
+                  "formula": "C15H10O7",
+                  "mass_error_da": 0.00042913,
+                  "mass_error_ppm": 1.421,
+                  "dbe": 11.0
+                }
+              ],
+              "assignment_status": "formula_candidates"
+            },
+            {
+              "node_id": "f4",
+              "node_type": "fragment",
+              "mz": 301.034,
+              "relative_intensity": 0.027202,
+              "formula_candidates": [
+                {
+                  "formula": "C15H8O7",
+                  "mass_error_da": 0.00027906,
+                  "mass_error_ppm": 0.93,
+                  "dbe": 12.0
+                }
+              ],
+              "assignment_status": "formula_candidates"
+            }
+          ],
+          "edges": [
+            {
+              "parent_id": "p0",
+              "child_id": "f3",
+              "kind": "formula_conserving",
+              "observed_loss_da": 162.0532765,
+              "loss_formula": "C6H10O5",
+              "theoretical_loss_da": 162.05282342,
+              "mass_error_da": -0.00045308,
+              "mass_error_ppm": -2.796,
+              "parent_formula": "C21H20O12",
+              "child_formula": "C15H10O7",
+              "formula_conservation": true
+            },
+            {
+              "parent_id": "p0",
+              "child_id": "f4",
+              "kind": "formula_conserving",
+              "observed_loss_da": 164.0687765,
+              "loss_formula": "C6H12O5",
+              "theoretical_loss_da": 164.06847348,
+              "mass_error_da": -0.00030302,
+              "mass_error_ppm": -1.847,
+              "parent_formula": "C21H20O12",
+              "child_formula": "C15H8O7",
+              "formula_conservation": true
+            },
+            {
+              "parent_id": "f3",
+              "child_id": "f4",
+              "kind": "formula_conserving",
+              "observed_loss_da": 2.0155,
+              "loss_formula": "H2",
+              "theoretical_loss_da": 2.01565006,
+              "mass_error_da": 0.00015006,
+              "mass_error_ppm": 74.45,
+              "parent_formula": "C15H10O7",
+              "child_formula": "C15H8O7",
+              "formula_conservation": true
+            }
+          ]
+        },
+        "entity_rank": 1
+      },
+      "leading_candidate_when_abstained": null,
+      "candidates": [
+        {
+          "identity_key": "std2d:OVSQVDMCBVZWGM",
+          "identity_scope": "2d_connectivity",
+          "identity_source": "tautomer_standardized_connectivity",
+          "candidate": {
+            "compound_name": "Hyperoside",
+            "compound_name_cn": "",
+            "source_compound_name": "",
+            "formula": "C21H20O12",
+            "smiles": "O=c1c(OC2OC(CO)C(O)C(O)C2O)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12",
+            "inchikey": "OVSQVDMCBVZWGM-UHFFFAOYSA-N",
+            "reported_inchikey": "",
+            "adduct": "[M+H]+",
+            "has_structure": true,
+            "structure_quality": "validated",
+            "name_only_lead": false,
+            "dataset_source": "flavonoid_refs-Pos",
+            "source_tier": "experimental",
+            "lib_spectrum_id": "flavonoid_pos_refs_970d13dd755c_6",
+            "lib_source_accession": "MSBNK-RIKEN_ReSpect-PS046503",
+            "classification": "flavonoid",
+            "classification_source": "unknown",
+            "classification_reliable": true,
+            "classification_reliability_reason": "cached_validated_smiles_structure_rule",
+            "feature_fragment_evidence": {
+              "module": "v15_feature_fragments",
+              "status": "unavailable",
+              "reason": "no_feature_fragment_rule_passed_sealed_runtime_gate",
+              "evidence_stage": "msms_rule_support",
+              "runtime_influence": false,
+              "identity_rank_influence": false,
+              "score_contribution": 0.0,
+              "exact_identity_confirmed": false,
+              "standard_confirmed": false,
+              "isomer_discriminating": false,
+              "confirmation_status": "not_confirmed_by_feature_fragments",
+              "feature_fragment_score_standard": {
+                "schema_version": "mssystem-v15-feature-fragment-score/1.0",
+                "primary_unit": "natural_log_likelihood_ratio_nats",
+                "one_independent_fragment": "ln[P(observation|target_class,acquisition_condition)/P(observation|background,acquisition_condition)]",
+                "two_or_more_independent_fragments": "sum of the per-group natural-log likelihood ratios",
+                "correlated_rule_handling": "within one independent_fragmentation_group retain only the rule with the largest absolute natural-log likelihood ratio",
+                "count_alone_has_fixed_points": false,
+                "collision_energy_requirement": "same reported unit, same fixed mode, and query value inside the rule minimum/maximum; no cross-unit or cross-instrument conversion",
+                "absence_requirement": "negative evidence is scored only when the rule authorizes absence and every declared spectrum-quality field is true",
+                "score_is_probability": false,
+                "identity_rank_influence": false,
+                "production_score_contribution": 0.0
+              },
+              "rule_evidence": [],
+              "informative_independent_group_count": 0,
+              "present_independent_fragment_count": 0,
+              "eligible_absence_independent_group_count": 0,
+              "cumulative_evidence_by_independent_count": [],
+              "combined_log_likelihood_ratio": 0.0,
+              "combined_score_nats": 0.0,
+              "combined_score_bits": 0.0,
+              "combined_score_decibans": 0.0,
+              "likelihood_ratio": 1.0,
+              "acquisition_domain": {},
+              "runtime_export_gate": {
+                "schema_version": "mssystem-v15-feature-fragment-runtime-gate/1.0",
+                "deployment_state": "fail_closed",
+                "runtime_evaluation_enabled": false,
+                "runtime_adapter_available": false,
+                "pilot_v1_runtime_allowed": false,
+                "pilot_v1_rule_count": 6,
+                "exported_rule_count": 0,
+                "accepted_rule_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                "benchmark_runtime_export_gate_path": "docs/audits/feature_fragment_benchmark_v2/runtime_export_gate.json",
+                "benchmark_runtime_export_gate_sha256": "ea0cb31811259a8a8da0d40fd50ee552a195f7dc147e0bb5df6896a02a916624",
+                "research_catalog_evaluated": false
+              }
+            },
+            "potential_contaminant": false,
+            "contaminant_category": "",
+            "compound_role": "unclassified",
+            "standardized_nonisomeric_smiles": "O=c1c(OC2OC(CO)C(O)C(O)C2O)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12",
+            "standardized_connectivity_inchikey": "OVSQVDMCBVZWGM",
+            "reported_connectivity_matches_standardized": true,
+            "structure_standardization": "bounded_rdkit_tautomer_nonisomeric"
+          },
+          "entity_score": 0.893473,
+          "legacy_v14_entity_score": 0.893473,
+          "score_is_probability": false,
+          "score_components": {
+            "mean_collision_energy_support": 0.855249,
+            "median_collision_energy_support": 0.862037,
+            "collision_energy_coverage": 1.0,
+            "collision_energy_top1_fraction": 1.0,
+            "topk_absence_imputed_as_zero": false,
+            "reference_source_diversity": 0.333333,
+            "reference_source_diversity_affects_score": false,
+            "source_count_bonus_applied": false
+          },
+          "reference_source_family_count": 1,
+          "reference_source_families": [
+            "flavonoid-refs"
+          ],
+          "reference_source_accessions_count_as_independent": false,
+          "collision_energy_bins_supported": 3,
+          "collision_energy_bins_total": 3,
+          "collision_energy_evidence": [
+            {
+              "collision_energy_bin": "10.000000:ev",
+              "support": 0.862744,
+              "legacy_v14_support": 0.862744,
+              "technical_replicates": 1,
+              "replicates_with_candidate": 1,
+              "replicates_missing_from_truncated_topk": 0,
+              "truncated_topk_absence_imputed_as_zero": true,
+              "technical_replicates_count_as_independent_votes": false,
+              "scan_top1_fraction": 1.0,
+              "legacy_v14_scan_top1_fraction": 1.0,
+              "representative_result_index": 0,
+              "conditioned_multilibrary_evidence": null
+            },
+            {
+              "collision_energy_bin": "20.000000:ev",
+              "support": 0.862037,
+              "legacy_v14_support": 0.862037,
+              "technical_replicates": 1,
+              "replicates_with_candidate": 1,
+              "replicates_missing_from_truncated_topk": 0,
+              "truncated_topk_absence_imputed_as_zero": true,
+              "technical_replicates_count_as_independent_votes": false,
+              "scan_top1_fraction": 1.0,
+              "legacy_v14_scan_top1_fraction": 1.0,
+              "representative_result_index": 1,
+              "conditioned_multilibrary_evidence": null
+            },
+            {
+              "collision_energy_bin": "40.000000:ev",
+              "support": 0.840967,
+              "legacy_v14_support": 0.840967,
+              "technical_replicates": 1,
+              "replicates_with_candidate": 1,
+              "replicates_missing_from_truncated_topk": 0,
+              "truncated_topk_absence_imputed_as_zero": true,
+              "technical_replicates_count_as_independent_votes": false,
+              "scan_top1_fraction": 1.0,
+              "legacy_v14_scan_top1_fraction": 1.0,
+              "representative_result_index": 2,
+              "conditioned_multilibrary_evidence": null
+            }
+          ],
+          "representative_result_index": 0,
+          "representative_scan_score": 0.862744,
+          "chemistry_gate": {
+            "status": "consistent",
+            "reason": "candidate_independent_formula_adduct_mass_consistent",
+            "formula": "C21H20O12",
+            "adduct": "[M+H]+",
+            "adduct_source": "reliable_query_adduct",
+            "expected_precursor_mz": 465.10275208,
+            "observed_precursor_mz": 465.1027765,
+            "mass_error_da": 2.442e-05,
+            "mass_error_ppm": 0.053,
+            "candidate_independent_checks": [
+              {
+                "source": "reliable_query_adduct",
+                "adduct": "[M+H]+",
+                "consistent": true,
+                "reason": "candidate_independent_formula_adduct_mass_consistent",
+                "expected_precursor_mz": 465.10275207944,
+                "mass_error_da": 2.4420560009730252e-05,
+                "mass_error_ppm": 0.05250573104662945
+              }
+            ],
+            "candidate_conditioned": false,
+            "veto": false,
+            "ion_identity_network_evidence_used": false,
+            "lcms_adduct_evidence_policy": "legacy_any_lcms_feature_annotation",
+            "ion_identity_network_evidence_available": false,
+            "lcms_validated_adduct_group_evidence_available": false,
+            "unvalidated_lcms_adduct_group_ignored": false,
+            "unlinked_lcms_feature_adduct_ignored": false,
+            "unlinked_lcms_feature_neutral_mass_ignored": false,
+            "reported_library_adduct": "[M+H]+",
+            "library_adduct_is_candidate_conditioned": true,
+            "library_adduct_can_veto": false,
+            "library_adduct_audit": "mass_consistent",
+            "library_adduct_expected_precursor_mz": 465.10275208,
+            "library_adduct_mass_error_da": 2.442e-05,
+            "library_adduct_mass_error_ppm": 0.053,
+            "status_counts": {
+              "consistent": 3
+            },
+            "evaluated_collision_energy_bins": 3,
+            "precursor_transformation_ambiguity": false,
+            "precursor_transformation_ambiguity_bin_count": 0,
+            "consistent_metadata_overrides_isolated_conflicting_library_metadata": false
+          },
+          "vetoed": false,
+          "variant_count_collapsed_to_connectivity": 1,
+          "stereochemistry_claimed": false,
+          "ranking_inputs": [
+            "cosine",
+            "entropy",
+            "reverse_match",
+            "mass_accuracy",
+            "fragment_coverage",
+            "intensity_agreement",
+            "within_scan_rank",
+            "collision_energy_consistency"
+          ],
+          "conditioned_multilibrary_runtime_influence": false,
+          "legacy_v14_entity_rank": 1,
+          "fragmentation_explanation": {
+            "status": "completed",
+            "reason": null,
+            "formula": "C21H20O12",
+            "adduct": "[M+H]+",
+            "candidate_conditioned": true,
+            "formula_conserving_only": true,
+            "mass_only_mechanisms_emitted": 0,
+            "mechanism_claimed": false,
+            "fragment_nodes": 4,
+            "assigned_fragment_nodes": 2,
+            "formula_conserving_edge_count": 3,
+            "nodes": [
+              {
+                "node_id": "p0",
+                "node_type": "precursor",
+                "mz": 465.1027765,
+                "relative_intensity": null,
+                "formula_candidates": [
+                  {
+                    "formula": "C21H20O12",
+                    "mass_error_da": 0.0,
+                    "mass_error_ppm": 0.0,
+                    "dbe": 12.0
+                  }
+                ],
+                "assignment_status": "formula_candidates"
+              },
+              {
+                "node_id": "f1",
+                "node_type": "fragment",
+                "mz": 305.0544,
+                "relative_intensity": 0.018694,
+                "formula_candidates": [],
+                "assignment_status": "unassigned"
+              },
+              {
+                "node_id": "f2",
+                "node_type": "fragment",
+                "mz": 304.053,
+                "relative_intensity": 0.173504,
+                "formula_candidates": [],
+                "assignment_status": "unassigned"
+              },
+              {
+                "node_id": "f3",
+                "node_type": "fragment",
+                "mz": 303.0495,
+                "relative_intensity": 1.0,
+                "formula_candidates": [
+                  {
+                    "formula": "C15H10O7",
+                    "mass_error_da": 0.00042913,
+                    "mass_error_ppm": 1.421,
+                    "dbe": 11.0
+                  }
+                ],
+                "assignment_status": "formula_candidates"
+              },
+              {
+                "node_id": "f4",
+                "node_type": "fragment",
+                "mz": 301.034,
+                "relative_intensity": 0.027202,
+                "formula_candidates": [
+                  {
+                    "formula": "C15H8O7",
+                    "mass_error_da": 0.00027906,
+                    "mass_error_ppm": 0.93,
+                    "dbe": 12.0
+                  }
+                ],
+                "assignment_status": "formula_candidates"
+              }
+            ],
+            "edges": [
+              {
+                "parent_id": "p0",
+                "child_id": "f3",
+                "kind": "formula_conserving",
+                "observed_loss_da": 162.0532765,
+                "loss_formula": "C6H10O5",
+                "theoretical_loss_da": 162.05282342,
+                "mass_error_da": -0.00045308,
+                "mass_error_ppm": -2.796,
+                "parent_formula": "C21H20O12",
+                "child_formula": "C15H10O7",
+                "formula_conservation": true
+              },
+              {
+                "parent_id": "p0",
+                "child_id": "f4",
+                "kind": "formula_conserving",
+                "observed_loss_da": 164.0687765,
+                "loss_formula": "C6H12O5",
+                "theoretical_loss_da": 164.06847348,
+                "mass_error_da": -0.00030302,
+                "mass_error_ppm": -1.847,
+                "parent_formula": "C21H20O12",
+                "child_formula": "C15H8O7",
+                "formula_conservation": true
+              },
+              {
+                "parent_id": "f3",
+                "child_id": "f4",
+                "kind": "formula_conserving",
+                "observed_loss_da": 2.0155,
+                "loss_formula": "H2",
+                "theoretical_loss_da": 2.01565006,
+                "mass_error_da": 0.00015006,
+                "mass_error_ppm": 74.45,
+                "parent_formula": "C15H10O7",
+                "child_formula": "C15H8O7",
+                "formula_conservation": true
+              }
+            ]
+          },
+          "entity_rank": 1
+        },
+        {
+          "identity_key": "std2d:OIUBYZLTFSLSBY",
+          "identity_scope": "2d_connectivity",
+          "identity_source": "tautomer_standardized_connectivity",
+          "candidate": {
+            "compound_name": "Spiraeoside",
+            "compound_name_cn": "",
+            "source_compound_name": "",
+            "formula": "C21H20O12",
+            "smiles": "O=c1c(O)c(-c2ccc(OC3OC(CO)C(O)C(O)C3O)c(O)c2)oc2cc(O)cc(O)c12",
+            "inchikey": "OIUBYZLTFSLSBY-UHFFFAOYSA-N",
+            "reported_inchikey": "",
+            "adduct": "[M+H]+",
+            "has_structure": true,
+            "structure_quality": "validated",
+            "name_only_lead": false,
+            "dataset_source": "flavonoid_refs-Pos",
+            "source_tier": "experimental",
+            "lib_spectrum_id": "flavonoid_pos_refs_970d13dd755c_8",
+            "lib_source_accession": "MSBNK-RIKEN_ReSpect-PS086903",
+            "classification": "flavonoid",
+            "classification_source": "unknown",
+            "classification_reliable": true,
+            "classification_reliability_reason": "cached_validated_smiles_structure_rule",
+            "feature_fragment_evidence": {
+              "module": "v15_feature_fragments",
+              "status": "unavailable",
+              "reason": "no_feature_fragment_rule_passed_sealed_runtime_gate",
+              "evidence_stage": "msms_rule_support",
+              "runtime_influence": false,
+              "identity_rank_influence": false,
+              "score_contribution": 0.0,
+              "exact_identity_confirmed": false,
+              "standard_confirmed": false,
+              "isomer_discriminating": false,
+              "confirmation_status": "not_confirmed_by_feature_fragments",
+              "feature_fragment_score_standard": {
+                "schema_version": "mssystem-v15-feature-fragment-score/1.0",
+                "primary_unit": "natural_log_likelihood_ratio_nats",
+                "one_independent_fragment": "ln[P(observation|target_class,acquisition_condition)/P(observation|background,acquisition_condition)]",
+                "two_or_more_independent_fragments": "sum of the per-group natural-log likelihood ratios",
+                "correlated_rule_handling": "within one independent_fragmentation_group retain only the rule with the largest absolute natural-log likelihood ratio",
+                "count_alone_has_fixed_points": false,
+                "collision_energy_requirement": "same reported unit, same fixed mode, and query value inside the rule minimum/maximum; no cross-unit or cross-instrument conversion",
+                "absence_requirement": "negative evidence is scored only when the rule authorizes absence and every declared spectrum-quality field is true",
+                "score_is_probability": false,
+                "identity_rank_influence": false,
+                "production_score_contribution": 0.0
+              },
+              "rule_evidence": [],
+              "informative_independent_group_count": 0,
+              "present_independent_fragment_count": 0,
+              "eligible_absence_independent_group_count": 0,
+              "cumulative_evidence_by_independent_count": [],
+              "combined_log_likelihood_ratio": 0.0,
+              "combined_score_nats": 0.0,
+              "combined_score_bits": 0.0,
+              "combined_score_decibans": 0.0,
+              "likelihood_ratio": 1.0,
+              "acquisition_domain": {},
+              "runtime_export_gate": {
+                "schema_version": "mssystem-v15-feature-fragment-runtime-gate/1.0",
+                "deployment_state": "fail_closed",
+                "runtime_evaluation_enabled": false,
+                "runtime_adapter_available": false,
+                "pilot_v1_runtime_allowed": false,
+                "pilot_v1_rule_count": 6,
+                "exported_rule_count": 0,
+                "accepted_rule_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                "benchmark_runtime_export_gate_path": "docs/audits/feature_fragment_benchmark_v2/runtime_export_gate.json",
+                "benchmark_runtime_export_gate_sha256": "ea0cb31811259a8a8da0d40fd50ee552a195f7dc147e0bb5df6896a02a916624",
+                "research_catalog_evaluated": false
+              }
+            },
+            "potential_contaminant": false,
+            "contaminant_category": "",
+            "compound_role": "unclassified",
+            "standardized_nonisomeric_smiles": "O=c1c(O)c(-c2ccc(OC3OC(CO)C(O)C(O)C3O)c(O)c2)oc2cc(O)cc(O)c12",
+            "standardized_connectivity_inchikey": "OIUBYZLTFSLSBY",
+            "reported_connectivity_matches_standardized": true,
+            "structure_standardization": "bounded_rdkit_tautomer_nonisomeric"
+          },
+          "entity_score": 0.709793,
+          "legacy_v14_entity_score": 0.709793,
+          "score_is_probability": false,
+          "score_components": {
+            "mean_collision_energy_support": 0.743554,
+            "median_collision_energy_support": 0.750647,
+            "collision_energy_coverage": 1.0,
+            "collision_energy_top1_fraction": 0.0,
+            "topk_absence_imputed_as_zero": false,
+            "reference_source_diversity": 0.333333,
+            "reference_source_diversity_affects_score": false,
+            "source_count_bonus_applied": false
+          },
+          "reference_source_family_count": 1,
+          "reference_source_families": [
+            "flavonoid-refs"
+          ],
+          "reference_source_accessions_count_as_independent": false,
+          "collision_energy_bins_supported": 3,
+          "collision_energy_bins_total": 3,
+          "collision_energy_evidence": [
+            {
+              "collision_energy_bin": "10.000000:ev",
+              "support": 0.751032,
+              "legacy_v14_support": 0.751032,
+              "technical_replicates": 1,
+              "replicates_with_candidate": 1,
+              "replicates_missing_from_truncated_topk": 0,
+              "truncated_topk_absence_imputed_as_zero": true,
+              "technical_replicates_count_as_independent_votes": false,
+              "scan_top1_fraction": 0.0,
+              "legacy_v14_scan_top1_fraction": 0.0,
+              "representative_result_index": 0,
+              "conditioned_multilibrary_evidence": null
+            },
+            {
+              "collision_energy_bin": "20.000000:ev",
+              "support": 0.750647,
+              "legacy_v14_support": 0.750647,
+              "technical_replicates": 1,
+              "replicates_with_candidate": 1,
+              "replicates_missing_from_truncated_topk": 0,
+              "truncated_topk_absence_imputed_as_zero": true,
+              "technical_replicates_count_as_independent_votes": false,
+              "scan_top1_fraction": 0.0,
+              "legacy_v14_scan_top1_fraction": 0.0,
+              "representative_result_index": 1,
+              "conditioned_multilibrary_evidence": null
+            },
+            {
+              "collision_energy_bin": "40.000000:ev",
+              "support": 0.728982,
+              "legacy_v14_support": 0.728982,
+              "technical_replicates": 1,
+              "replicates_with_candidate": 1,
+              "replicates_missing_from_truncated_topk": 0,
+              "truncated_topk_absence_imputed_as_zero": true,
+              "technical_replicates_count_as_independent_votes": false,
+              "scan_top1_fraction": 0.0,
+              "legacy_v14_scan_top1_fraction": 0.0,
+              "representative_result_index": 2,
+              "conditioned_multilibrary_evidence": null
+            }
+          ],
+          "representative_result_index": 0,
+          "representative_scan_score": 0.751032,
+          "chemistry_gate": {
+            "status": "consistent",
+            "reason": "candidate_independent_formula_adduct_mass_consistent",
+            "formula": "C21H20O12",
+            "adduct": "[M+H]+",
+            "adduct_source": "reliable_query_adduct",
+            "expected_precursor_mz": 465.10275208,
+            "observed_precursor_mz": 465.1027765,
+            "mass_error_da": 2.442e-05,
+            "mass_error_ppm": 0.053,
+            "candidate_independent_checks": [
+              {
+                "source": "reliable_query_adduct",
+                "adduct": "[M+H]+",
+                "consistent": true,
+                "reason": "candidate_independent_formula_adduct_mass_consistent",
+                "expected_precursor_mz": 465.10275207944,
+                "mass_error_da": 2.4420560009730252e-05,
+                "mass_error_ppm": 0.05250573104662945
+              }
+            ],
+            "candidate_conditioned": false,
+            "veto": false,
+            "ion_identity_network_evidence_used": false,
+            "lcms_adduct_evidence_policy": "legacy_any_lcms_feature_annotation",
+            "ion_identity_network_evidence_available": false,
+            "lcms_validated_adduct_group_evidence_available": false,
+            "unvalidated_lcms_adduct_group_ignored": false,
+            "unlinked_lcms_feature_adduct_ignored": false,
+            "unlinked_lcms_feature_neutral_mass_ignored": false,
+            "reported_library_adduct": "[M+H]+",
+            "library_adduct_is_candidate_conditioned": true,
+            "library_adduct_can_veto": false,
+            "library_adduct_audit": "mass_consistent",
+            "library_adduct_expected_precursor_mz": 465.10275208,
+            "library_adduct_mass_error_da": 2.442e-05,
+            "library_adduct_mass_error_ppm": 0.053,
+            "status_counts": {
+              "consistent": 3
+            },
+            "evaluated_collision_energy_bins": 3,
+            "precursor_transformation_ambiguity": false,
+            "precursor_transformation_ambiguity_bin_count": 0,
+            "consistent_metadata_overrides_isolated_conflicting_library_metadata": false
+          },
+          "vetoed": false,
+          "variant_count_collapsed_to_connectivity": 1,
+          "stereochemistry_claimed": false,
+          "ranking_inputs": [
+            "cosine",
+            "entropy",
+            "reverse_match",
+            "mass_accuracy",
+            "fragment_coverage",
+            "intensity_agreement",
+            "within_scan_rank",
+            "collision_energy_consistency"
+          ],
+          "conditioned_multilibrary_runtime_influence": false,
+          "legacy_v14_entity_rank": 2,
+          "entity_rank": 2
+        }
+      ],
+      "candidate_count": 2,
+      "vetoed_candidate_count": 0,
+      "ranking_changed_from_scan_top1": false,
+      "ranking_changed_from_v14": false,
+      "v14_audit_baseline": {
+        "identity_key": "std2d:OVSQVDMCBVZWGM",
+        "entity_score": 0.893473,
+        "rank": 1
+      },
+      "scan_top1_audit_baseline": {
+        "selection": "highest_tic_then_spectrum_id_then_lowest_result_index",
+        "result_index": 0,
+        "spectrum_id": "MSBNK-BGC_Munich-RP017101",
+        "identity_key": "std2d:OVSQVDMCBVZWGM"
+      }
+    }
+  ]
+}

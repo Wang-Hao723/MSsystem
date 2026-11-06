@@ -10,4 +10,6 @@ This repository publishes the reviewed 2026-11-02 MSsystem source snapshot that 
 
 No Python source, configuration, test, documentation or data file of the snapshot payload was modified. `SOURCE_MANIFEST.json`, `SOURCE_PRIVACY_SCAN.json` and `CURRENT_LICENSE_SCOPE.json` describe the archived snapshot exactly as delivered with the manuscript.
 
+`example_entity/` (added 2026-11-07, repository main branch) contains the competing-candidate entity example: three multi-energy public scans of isoquercitrin are aggregated into one precursor entity and ranked against experimental references for hyperoside (same 2D connectivity, different stereochemistry) and spiraeoside (different 2D connectivity). The example exercises multi-scan entity aggregation, connectivity-level competition, the reporting decision with margins and per-scan evidence export, using the shipped matcher and entity layer. It is additive to the reviewed snapshot and is described in RELEASE_NOTES rather than in the manuscript's Additional file 3.
+
 The manuscript additional files are attached byte-identically to the `v1.0.0` GitHub release (Additional File 1: source archive; Additional File 2: evaluation results and recomputation materials; Additional File 3: executable example bundle).

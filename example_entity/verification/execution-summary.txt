@@ -1,0 +1,25 @@
+Entity example execution summary (2026-11-07, macOS arm64, CPython 3.13.5)
+============================================================================
+Command: bash example_entity/run_entity_demo.sh <venv-python> <repo-root> <work-parent>
+Result: all 15 verification checks passed (verify_entity_outputs.py).
+
+Inputs : 3 positive-mode query scans of isoquercitrin (BGC Munich, CC BY) at 10/20/40 eV;
+         10 experimental references (Fiocruz CC BY-NC; RIKEN ReSpect CC BY-NC) covering
+         isoquercitrin and hyperoside (same 2D connectivity) and spiraeoside
+         (different 2D connectivity) in the same precursor window.
+Outputs: entity_ranking.tsv, entity_decision.json, scan_evidence.json.
+
+Observed entity result (expected/):
+  rank 1  connectivity OVSQVDMCBVZWGM (quercetin O-hexoside; isoquercitrin/hyperoside
+          collapsed to one connectivity identity), entity score 0.893473,
+          supported at 3/3 collision-energy bins;
+  rank 2  connectivity OIUBYZLTFSLSBY (spiraeoside), entity score 0.709793.
+  decision: status "selected", scope 2d_connectivity_candidate,
+          winner margin 0.18368 (minimum score 0.50, minimum margin 0.04).
+
+Truth: the query analyte is isoquercitrin (connectivity OVSQVDMCBVZWGM) — rank 1.
+The example demonstrates: multi-scan entity aggregation across collision energies,
+competing-candidate ranking at the connectivity level, reporting decision with
+margins, and per-scan reference/matched-peak evidence export. It does not
+separate the same-connectivity sugar stereoisomers; that distinction remains
+with standards and same-condition comparison, as stated in the manuscript.
