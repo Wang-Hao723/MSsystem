@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "registry_id": "mssystem-v12-eight-formula-reference-standard-qc-20260820",
+  "truth_source": "outputs/019fc5bf-15dc-76a1-9d64-57597ecfcda1/inventory_reconcile_corrected/八个方_库存采购核对.json",
+  "selection_policy": "explicit_only_no_filename_inference",
+  "analysis_role": "post_hoc_quality_control_only",
+  "used_for_candidate_generation": false,
+  "used_for_ranking": false,
+  "sets": [
+    {"id": "F001", "label": "F001 混标（独活寄生汤对应 20 标准品）", "formula_name": "独活寄生汤", "declared_standard_count": 20},
+    {"id": "F002", "label": "F002 混标（四神煎对应 9 标准品）", "formula_name": "四神煎", "declared_standard_count": 9},
+    {"id": "F003", "label": "F003 混标（乌头汤对应 8 标准品）", "formula_name": "乌头汤", "declared_standard_count": 8},
+    {"id": "F004", "label": "F004 混标（双合汤对应 9 标准品）", "formula_name": "双合汤", "declared_standard_count": 9},
+    {"id": "F005", "label": "F005 混标（宣痹汤对应 11 标准品）", "formula_name": "宣痹汤", "declared_standard_count": 11},
+    {"id": "F006", "label": "F006 混标（身痛逐瘀汤对应 10 标准品）", "formula_name": "身痛逐瘀汤", "declared_standard_count": 10},
+    {"id": "F007", "label": "F007 混标（黄芪桂枝五物汤对应 9 标准品）", "formula_name": "黄芪桂枝五物汤", "declared_standard_count": 9},
+    {"id": "F008", "label": "F008 混标（羌活胜湿汤对应 12 标准品）", "formula_name": "羌活胜湿汤", "declared_standard_count": 12}
+  ]
+}

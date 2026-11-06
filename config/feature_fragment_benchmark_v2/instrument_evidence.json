@@ -1,0 +1,313 @@
+{
+  "schema_version": "2.0.0",
+  "reviewed_on": "2026-08-26",
+  "scope": "Acquisition-domain evidence used to prevent cross-instrument and cross-CE pooling in the V15 feature-fragment benchmark.",
+  "record_level_policy": {
+    "exact_model_required": true,
+    "activation_literal_preserved": true,
+    "massbank_cid_is_not_automatically_psi_beam_type_cid": true,
+    "psi_beam_type_cid_accession": "MS:1000422",
+    "ce_unit_conversion_allowed": false,
+    "ce_mode_conversion_allowed": false,
+    "cross_vendor_equivalence_allowed": false,
+    "cross_model_equivalence_allowed": false,
+    "unreported_collision_cell_region_is_explicit": true,
+    "unreported_stepped_ramp_or_spread_state_is_not_inferred": true
+  },
+  "sources": [
+    {
+      "source_id": "SRC-MASSBANK3-OPENAPI",
+      "source_type": "official_repository_api_specification",
+      "title": "MassBank3 API OpenAPI 3.0 specification",
+      "url": "https://massbank.eu/MassBank-api/ui/openapi.yaml",
+      "locator": "paths /records, /records/{accession}, and /metadata",
+      "supports": [
+        "filtered record retrieval",
+        "individual record retrieval",
+        "repository release metadata"
+      ],
+      "does_not_support": [
+        "upgrading contributor free text CID to PSI beam-type CID",
+        "converting collision-energy units"
+      ]
+    },
+    {
+      "source_id": "SRC-THERMO-QEHF-MANUAL-1372090",
+      "source_type": "official_vendor_software_manual",
+      "title": "Q Exactive HF Software Manual, P/N 1372090 Revision A",
+      "url": "https://documents.thermofisher.com/TFS-Assets/CMD/manuals/man-1372090-q-exactive-hf-soft-man1372090-en.pdf",
+      "locator": "Experiment Setup, NCE / Stepped NCE",
+      "supports": [
+        "NCE is dimensionless",
+        "NCE is approximately the HCD energy in eV only for a reference ion at m/z 500 and charge 1",
+        "actual HCD energy is calculated from precursor mass and charge",
+        "multiple NCE values create one spectrum containing fragments from the steps"
+      ],
+      "does_not_support": [
+        "treating NCE as eV for arbitrary precursors",
+        "treating stepped NCE as a fixed-energy spectrum"
+      ]
+    },
+    {
+      "source_id": "SRC-THERMO-QEHFX-MANUAL-BRE0012262",
+      "source_type": "official_vendor_software_manual",
+      "title": "Q Exactive HF-X Software Manual, P/N BRE0012262 Revision A",
+      "url": "https://documents.thermofisher.com/TFS-Assets/CMD/manuals/man-bre0012262-q-exactive-hf-x-soft-manbre0012262-en.pdf",
+      "locator": "HCD collision energy settings",
+      "supports": [
+        "the instrument distinguishes normalized collision energy from absolute collision energy",
+        "charge changes the absolute energy needed for fragmentation"
+      ],
+      "does_not_support": [
+        "a universal conversion between Q Exactive models",
+        "a universal conversion from HCD settings to QTOF settings"
+      ]
+    },
+    {
+      "source_id": "SRC-AGILENT-QTOF-FAMILIARIZATION-G3335-90206",
+      "source_type": "official_vendor_software_guide",
+      "title": "Agilent MassHunter Workstation TOF/Q-TOF Familiarization Guide",
+      "url": "https://www.agilent.com/cs/library/usermanuals/public/G3335-90206_TOF_Q-TOF_Familiarization.pdf",
+      "locator": "Auto MS/MS collision energy formula setup",
+      "supports": [
+        "a method can compute collision energy from precursor m/z using a slope and offset",
+        "the guide's example coefficients are compound- and charge-dependent method settings"
+      ],
+      "does_not_support": [
+        "using the example slope and offset as a vendor-wide conversion",
+        "treating an m/z-dependent energy as a fixed-energy spectrum"
+      ]
+    },
+    {
+      "source_id": "SRC-AGILENT-ISOURCE-VS-BEAM-CID-2021",
+      "source_type": "peer_reviewed_primary",
+      "title": "Comparison of in-source collision-induced dissociation and beam-type collision-induced dissociation of emerging synthetic drugs using a high-resolution quadrupole time-of-flight mass spectrometer",
+      "doi": "10.1002/jms.4679",
+      "url": "https://doi.org/10.1002/jms.4679",
+      "locator": "experimental comparison across fragmentor voltages and collision energies",
+      "supports": [
+        "in-source CID and collision-cell beam-type CID are distinct acquisition conditions",
+        "fragment abundances depend on the applied energy setting"
+      ],
+      "does_not_support": [
+        "assigning beam-type CID when a repository record only says CID"
+      ]
+    },
+    {
+      "source_id": "SRC-SCIEX-X500R-COMPENDIUM",
+      "source_type": "official_vendor_technical_compendium",
+      "title": "X500R QTOF System Compendium",
+      "url": "https://sciex.com/content/dam/SCIEX/pdf/tech-notes/all/X500RCompendium.pdf",
+      "locator": "example acquisition methods reporting CE 35 V and CES plus or minus 15 V",
+      "supports": [
+        "SCIEX methods report collision energy in V",
+        "collision energy spread combines a range around a center value"
+      ],
+      "does_not_support": [
+        "treating a CES spectrum as fixed at its center value",
+        "converting V to MassBank eV literals"
+      ]
+    },
+    {
+      "source_id": "SRC-SCIEX-TRIPLETOF-5600-USER-GUIDE",
+      "source_type": "official_vendor_user_guide",
+      "title": "TripleTOF 5600 System User Guide",
+      "url": "https://sciex.com/content/dam/SCIEX/pdf/customer-docs/user-guide/5600-system-user-guide-en.pdf",
+      "locator": "Q2 collision cell and acquisition parameters",
+      "supports": [
+        "fragmentation occurs in the Q2 collision cell",
+        "collision gas and collision energy are separate method parameters"
+      ],
+      "does_not_support": [
+        "inferring CES or dynamic CE when these fields are absent from a repository record"
+      ]
+    },
+    {
+      "source_id": "SRC-BRUKER-IMPACTII-GLYCOPEPTIDE-CE-2016",
+      "source_type": "peer_reviewed_primary",
+      "title": "Distinguishing N- and O-glycopeptides using collision-energy-resolved QTOF tandem mass spectrometry",
+      "doi": "10.1007/s13361-015-1308-6",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4756043/",
+      "locator": "Impact II collision-energy series from 10 to 140 eV",
+      "supports": [
+        "fragment channels change across a wide collision-energy series",
+        "useful energy ranges depend on precursor m/z and structural channel"
+      ],
+      "does_not_support": [
+        "a universal Bruker energy conversion for small molecules",
+        "transferring glycopeptide-specific fragmentation thresholds to metabolite classes"
+      ]
+    },
+    {
+      "source_id": "SRC-BRUKER-QTOF-ARCHITECTURE",
+      "source_type": "official_vendor_product_documentation",
+      "title": "Bruker QTOF mass spectrometry overview",
+      "url": "https://www.bruker.com/en/products-and-solutions/mass-spectrometry/qtof.html",
+      "locator": "quadrupole isolation and controlled MS/MS fragmentation",
+      "supports": [
+        "Bruker QTOF instruments use a quadrupolar system for isolation and controlled MS/MS fragmentation"
+      ],
+      "does_not_support": [
+        "the exact activation controlled vocabulary or collision-cell region of an individual MassBank record"
+      ]
+    },
+    {
+      "source_id": "SRC-WATERS-QTOF-PREMIER-MSE-2007",
+      "source_type": "official_vendor_application_note",
+      "title": "The Simultaneous Acquisition of Exact Mass Data Using Alternating Collision Cell Energy: MSE",
+      "url": "https://www.waters.com/nextgen/us/en/library/application-notes/2007/the-simultaneous-acquisition-of-exact-mass-data-using-alternating-collision-cell-energy-mse.html",
+      "locator": "Q-Tof Premier T-Wave collision cell and alternating low/high energy acquisition",
+      "supports": [
+        "MSE alternates low- and high-collision-cell-energy functions",
+        "the high-energy function contains fragment ions without precursor selection",
+        "fixed and ramped high-energy methods are distinguishable acquisition conditions"
+      ],
+      "does_not_support": [
+        "treating MSE as precursor-selected MS/MS",
+        "assigning MSE when the repository record lacks an MSE label"
+      ]
+    },
+    {
+      "source_id": "SRC-CROSS-PLATFORM-ANALCHEM-2024",
+      "source_type": "peer_reviewed_primary",
+      "title": "Tandem Mass Spectrometry across Platforms",
+      "doi": "10.1021/acs.analchem.3c05576",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11007677/",
+      "locator": "comparison of Agilent, Bruker, SCIEX, Waters, and Thermo instruments across collision energies",
+      "supports": [
+        "spectral similarity changes with collision energy and instrument platform",
+        "high cosine similarity can occur for different structures",
+        "fragment spectra alone do not establish exact identity or resolve isomers"
+      ],
+      "does_not_support": [
+        "a universal cross-vendor collision-energy conversion",
+        "using a cross-platform similarity result as standard confirmation"
+      ]
+    },
+    {
+      "source_id": "SRC-QTOF-HCD-PEPTIDE-COMPARISON-2021",
+      "source_type": "peer_reviewed_primary",
+      "title": "Comparison of peptide fragmentation on Bruker Maxis II QTOF CID and Thermo Q Exactive Focus HCD",
+      "doi": "10.1002/jms.4693",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33277714/",
+      "locator": "direct instrument comparison in the reported peptide experiment",
+      "supports": [
+        "matched fragmentation extent required different instrument settings in the reported experiment"
+      ],
+      "does_not_support": [
+        "a model-independent conversion",
+        "a conversion validated for small-molecule chemical classes"
+      ]
+    }
+  ],
+  "families": [
+    {
+      "family_id": "thermo_qe_orbitrap_hcd",
+      "benchmark_domain_ids": [
+        "thermo_exploris_240_hcd",
+        "thermo_q_exactive_hcd",
+        "thermo_q_exactive_plus_hcd",
+        "thermo_q_exactive_hf_hcd"
+      ],
+      "activation_architecture": "HCD with Orbitrap mass analysis; exact collision-cell metadata are preserved as reported or marked unreported",
+      "ce_dimensions_kept_separate": [
+        "NCE",
+        "percent_nominal",
+        "absolute eV",
+        "fixed",
+        "stepped"
+      ],
+      "source_ids": [
+        "SRC-THERMO-QEHF-MANUAL-1372090",
+        "SRC-THERMO-QEHFX-MANUAL-BRE0012262",
+        "SRC-CROSS-PLATFORM-ANALCHEM-2024",
+        "SRC-QTOF-HCD-PEPTIDE-COMPARISON-2021"
+      ]
+    },
+    {
+      "family_id": "agilent_qtof_collision_cell_cid",
+      "benchmark_domain_ids": [
+        "agilent_6530_qtof_cid_contributor_text",
+        "agilent_6545_qtof_cid_contributor_text",
+        "agilent_6560_qtof_cid_contributor_text"
+      ],
+      "activation_architecture": "QTOF collision-cell CID is documented for the family; benchmark records retain the contributor literal CID and do not claim PSI beam-type CID",
+      "ce_dimensions_kept_separate": [
+        "fixed repository eV literal",
+        "m/z-dependent slope and offset",
+        "in-source fragmentation voltage"
+      ],
+      "source_ids": [
+        "SRC-AGILENT-QTOF-FAMILIARIZATION-G3335-90206",
+        "SRC-AGILENT-ISOURCE-VS-BEAM-CID-2021",
+        "SRC-CROSS-PLATFORM-ANALCHEM-2024"
+      ]
+    },
+    {
+      "family_id": "sciex_qtof_q2_cid",
+      "benchmark_domain_ids": [
+        "sciex_tripletof_5600plus_qtof_cid_contributor_text",
+        "sciex_x500r_qtof_cid_contributor_text"
+      ],
+      "activation_architecture": "Q2 collision-cell CID is documented for the family; benchmark records retain contributor CID without a PSI beam-type-CID upgrade",
+      "ce_dimensions_kept_separate": [
+        "fixed V",
+        "repository eV literal",
+        "CES",
+        "rolling or dynamic CE"
+      ],
+      "source_ids": [
+        "SRC-SCIEX-X500R-COMPENDIUM",
+        "SRC-SCIEX-TRIPLETOF-5600-USER-GUIDE",
+        "SRC-CROSS-PLATFORM-ANALCHEM-2024"
+      ]
+    },
+    {
+      "family_id": "bruker_maxis_impact_qtof_cid",
+      "benchmark_domain_ids": [
+        "bruker_maxis_impact_qtof_cid_contributor_text",
+        "bruker_maxis_qtof_cid_contributor_text"
+      ],
+      "activation_architecture": "Quadrupole-isolated QTOF MS/MS fragmentation is documented; benchmark records retain contributor CID without a PSI beam-type-CID upgrade",
+      "ce_dimensions_kept_separate": [
+        "fixed eV",
+        "ramp eV",
+        "bbCID"
+      ],
+      "source_ids": [
+        "SRC-BRUKER-IMPACTII-GLYCOPEPTIDE-CE-2016",
+        "SRC-BRUKER-QTOF-ARCHITECTURE",
+        "SRC-CROSS-PLATFORM-ANALCHEM-2024",
+        "SRC-QTOF-HCD-PEPTIDE-COMPARISON-2021"
+      ]
+    },
+    {
+      "family_id": "waters_qtof_collision_cell_cid",
+      "benchmark_domain_ids": [
+        "waters_qtof_premier_low_energy_cid_contributor_text"
+      ],
+      "activation_architecture": "Q-Tof Premier collision-cell fragmentation is documented; benchmark records retain LOW-ENERGY CID and do not infer MSE or PSI beam-type CID",
+      "ce_dimensions_kept_separate": [
+        "fixed V",
+        "fixed eV",
+        "ramp V",
+        "ramp eV",
+        "alternating MSE low/high energy"
+      ],
+      "source_ids": [
+        "SRC-WATERS-QTOF-PREMIER-MSE-2007",
+        "SRC-CROSS-PLATFORM-ANALCHEM-2024"
+      ]
+    }
+  ],
+  "benchmark_conclusion": {
+    "instrument_family_coverage": 5,
+    "exact_domain_count": 12,
+    "cross_domain_pooling_performed": false,
+    "cross_unit_ce_conversion_performed": false,
+    "ce_dependence_series_tested": 5,
+    "ce_dependence_series_passing_minimum_shared_identity_count": 0,
+    "reason": "Each CE series had 11 shared test identities; the preregistered minimum was 20.",
+    "runtime_rule_eligibility_from_this_evidence": 0
+  }
+}

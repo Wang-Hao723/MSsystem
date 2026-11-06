@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "mssystem-v12-evograph-f-shadow-20260818",
+  "module_id": "evograph_fragmentation",
+  "deployment_state": "shadow",
+  "scientific_scope": "charge-aware sparse neutral-loss graph prototype",
+  "runtime_influence": {
+    "retrieval": false,
+    "ranking": false,
+    "confidence": false,
+    "claim_scope": false,
+    "release": false,
+    "high_promotion": false
+  },
+  "input_policy": {
+    "prefer_raw_peaks": false,
+    "max_peaks": 24,
+    "minimum_relative_intensity": 0.01,
+    "minimum_loss_da": 1.0,
+    "maximum_spectra_per_task": 1000
+  },
+  "formula_policy": {
+    "supported_charge_magnitude": 1,
+    "supported_charge_retention_adducts": ["[M+H]+", "[M-H]-", "[M]+", "[M]-"],
+    "fragment_mass_tolerance_ppm": 10.0,
+    "fragment_mass_tolerance_da": 0.0025,
+    "parent_mass_tolerance_ppm": 10.0,
+    "parent_mass_tolerance_da": 0.003,
+    "max_candidates_per_peak": 5,
+    "max_enumeration_states_per_peak": 15000,
+    "minimum_dbe": -0.5
+  },
+  "graph_policy": {
+    "max_parents_per_fragment": 8,
+    "max_incoming_edges_retained": 3,
+    "known_loss_tolerance_da": 0.005,
+    "edge_mass_tolerance_ppm": 10.0,
+    "minimum_loss_dbe": -0.5,
+    "null_edge_weight": 0.35,
+    "heuristic_support_threshold": 0.55,
+    "ambiguity_margin": 0.15
+  },
+  "calibration": {
+    "status": "unavailable",
+    "heuristic_marginals_are_probabilities": false,
+    "log_bayes_factor_available": false,
+    "reason": "No identity-disjoint external-standard calibration has been completed for EvoGraph-F."
+  },
+  "promotion_gate": {
+    "cohort": "identity-disjoint external authentic standards",
+    "primary_metric": "high-confidence neutral-loss precision",
+    "minimum_precision": 0.95,
+    "confidence_interval": "two-sided 95% Wilson interval",
+    "minimum_lower_bound": 0.90,
+    "required_strata": ["adduct", "polarity", "collision-energy band", "instrument family"],
+    "ranking_noninferiority_required": true,
+    "promotion_is_automatic": false
+  }
+}

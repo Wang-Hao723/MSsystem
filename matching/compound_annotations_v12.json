@@ -1,0 +1,60 @@
+{
+  "catalog_id": "mssystem-v12-reporting-risk-supplement",
+  "catalog_version": "2026-08-18.1",
+  "matching_rule": "exact full InChIKey only",
+  "annotations": {
+    "UAZLASMTBCLJKO-UHFFFAOYSA-N": {
+      "canonical_name": "Decylbenzenesulfonic acid",
+      "compound_role": "external_contaminant",
+      "contaminant_category": "alkylbenzene_sulfonate_surfactant",
+      "exclude_from_natural_product_count": true,
+      "classification_override": "other",
+      "note_cn": "C10 烷基苯磺酸类表面活性剂相关物，优先按外源物、清洗剂残留或实验背景复核。",
+      "role_annotation_scope": "exact_identity_curation",
+      "role_annotation_source": "mssystem_v12_reporting_risk_review"
+    },
+    "FERBTPHUEYEGDN-UHFFFAOYSA-N": {
+      "canonical_name": "4-(Undecan-5-yl)benzenesulfonic acid",
+      "compound_role": "external_contaminant",
+      "contaminant_category": "alkylbenzene_sulfonate_surfactant",
+      "exclude_from_natural_product_count": true,
+      "classification_override": "other",
+      "note_cn": "C11 烷基苯磺酸类表面活性剂相关物，优先按外源物、清洗剂残留或实验背景复核。",
+      "role_annotation_scope": "exact_identity_curation",
+      "role_annotation_source": "mssystem_v12_reporting_risk_review"
+    },
+    "UCDCOJNNUVYFKJ-UHFFFAOYSA-N": {
+      "canonical_name": "4-Undecylbenzenesulfonic acid",
+      "compound_role": "external_contaminant",
+      "contaminant_category": "alkylbenzene_sulfonate_surfactant",
+      "exclude_from_natural_product_count": true,
+      "classification_override": "other",
+      "note_cn": "C11 烷基苯磺酸类表面活性剂相关物，优先按外源物、清洗剂残留或实验背景复核。",
+      "role_annotation_scope": "exact_identity_curation",
+      "role_annotation_source": "mssystem_v12_reporting_risk_review"
+    },
+    "KWXICGTUELOLSQ-UHFFFAOYSA-N": {
+      "canonical_name": "Dodecylbenzenesulfonic acid",
+      "compound_role": "external_contaminant",
+      "contaminant_category": "alkylbenzene_sulfonate_surfactant",
+      "exclude_from_natural_product_count": true,
+      "classification_override": "other",
+      "note_cn": "C12 烷基苯磺酸类表面活性剂相关物，优先按外源物、清洗剂残留或实验背景复核。",
+      "role_annotation_scope": "exact_identity_curation",
+      "role_annotation_source": "mssystem_v12_reporting_risk_review"
+    },
+    "SYELZBGXAIXKHU-UHFFFAOYSA-N": {
+      "canonical_name": "Dodecyldimethylamine oxide",
+      "name_cn": "十二烷基二甲基氧化胺",
+      "compound_role": "external_contaminant",
+      "contaminant_category": "amine_oxide_surfactant",
+      "exclude_from_natural_product_count": true,
+      "classification_override": "amine_oxide",
+      "chemical_family": "long-chain tertiary amine oxide surfactant",
+      "identity_source": "PubChem CID 15433; exact full InChIKey",
+      "note_cn": "长链三级胺氧化物（氧化胺型表面活性剂）。在天然产物样品中应作为潜在清洗剂、耗材或环境来源信号单列；谱库身份和样品富集可支持检出，但不能仅凭名称断言具体污染来源。",
+      "role_annotation_scope": "exact_identity_curation",
+      "role_annotation_source": "mssystem_v12_pubchem_15433_reporting_review"
+    }
+  }
+}

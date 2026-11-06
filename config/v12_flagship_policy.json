@@ -1,0 +1,115 @@
+{
+  "schema_version": "2.0.0",
+  "algorithm_id": "mssystem-v12-flagship-evirank-mv-0.2.0",
+  "display_name": "V12-Flagship / EviRank-MV",
+  "deployment_state": "shadow",
+  "base_algorithm": {
+    "algorithm_id": "mssystem-v11-flagship-chem-entity-ranker-1.2.1",
+    "display_name": "V11-Flagship",
+    "require_embedded_policy_hash_integrity": true,
+    "production_result_is_immutable": true
+  },
+  "decision_unit": "candidate_independent_precursor_entity",
+  "candidate_recall": {
+    "module_id": "v12_evirank_candidate_recall",
+    "algorithm_id": "mssystem-v12-evirecall-mv-0.2.0",
+    "policy_sha256": "0bd5ce8b9a7c03771287841c491fcc346162d97097bca0ea06fbf1f2fcb2fa6a",
+    "deployment_state": "shadow",
+    "minimum_audited_shortlist_size": 5,
+    "target_candidate_pool_size": 20,
+    "truth_absent_from_candidate_pool_is_rerank_unrecoverable": true,
+    "adaptive_expansion_requires_retrieval_callback": true,
+    "missing_candidate_is_not_a_negative_score": true,
+    "expanded_candidates_enter_shadow_candidate_union": true,
+    "expanded_candidates_enter_residual_model_scoring": false,
+    "expanded_candidate_selection_requires_qualified_source_paired_consensus": true,
+    "source_paired_consensus_module_id": "v12_source_paired_ce_consensus",
+    "source_paired_consensus_algorithm_id": "mssystem-v12-source-paired-ce-consensus-0.1.0",
+    "production_effect": false
+  },
+  "multi_view": {
+    "missing_view_semantics": "neutral",
+    "minimum_eligible_view_families_for_residual": 2,
+    "native_view_families": [
+      "measured_spectral",
+      "collision_energy_consistency",
+      "reference_provenance",
+      "candidate_independent_chemistry"
+    ],
+    "optional_view_contracts": {
+      "forward_spectrum_ensemble": {
+        "candidate_conditioned": true,
+        "require_instrument_domain_match": true,
+        "minimum_independent_architecture_families": 2
+      },
+      "fragment_graph_fit": {
+        "candidate_conditioned": true,
+        "require_instrument_domain_match": false
+      },
+      "retention_time_fit": {
+        "candidate_conditioned": true,
+        "require_instrument_domain_match": true
+      },
+      "ccs_fit": {
+        "candidate_conditioned": true,
+        "require_instrument_domain_match": true
+      },
+      "isotope_fit": {
+        "candidate_conditioned": true,
+        "require_instrument_domain_match": false
+      },
+      "ion_identity_fit": {
+        "candidate_conditioned": true,
+        "require_instrument_domain_match": false
+      }
+    }
+  },
+  "residual_model": {
+    "default_state": "unavailable_no_frozen_model",
+    "maximum_absolute_delta": 0.08,
+    "activation": "tanh",
+    "entity_centering": "median_candidate_utility",
+    "missing_feature_normalization": "training_mean_zero_residual",
+    "requires_identity_disjoint_training": true,
+    "requires_same_identity_cross_method_retention": true,
+    "requires_technical_repeat_nonindependence": true,
+    "score_is_probability": false
+  },
+  "method_case_contract": {
+    "unit": "connectivity_identity_x_detection_method_id",
+    "same_identity_different_methods_are_retained": true,
+    "technical_repeats_share_one_method_case": true,
+    "technical_repeats_increase_independent_identity_n": false,
+    "method_cases_increase_independent_identity_n": false
+  },
+  "decision": {
+    "minimum_entity_score": 0.50,
+    "minimum_connectivity_margin": 0.04,
+    "minimum_distinct_collision_energies_for_connectivity": 2,
+    "minimum_winner_collision_energy_support": 2,
+    "isomer_group_margin": 0.05,
+    "stereochemistry_claimed": false,
+    "score_is_probability": false
+  },
+  "forbidden_ranking_inputs": [
+    "compound_name",
+    "ground_truth_identity",
+    "standard_id",
+    "expert_score",
+    "classification",
+    "biosynthetic_pathway",
+    "candidate_pathway_alignment",
+    "language_model_output",
+    "legacy_confidence_label"
+  ],
+  "promotion_requirements": [
+    "frozen_residual_model_artifact",
+    "connectivity_identity_disjoint_external_validation",
+    "same_identity_cross_method_records_retained",
+    "candidate_recall_reported_separately_from_reranking",
+    "paired_top1_confidence_interval_lower_bound_above_zero",
+    "project_fdr_noninferiority",
+    "calibration_and_selective_risk_report",
+    "zero_v11_artifact_mutation"
+  ]
+}

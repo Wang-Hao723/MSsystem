@@ -1,0 +1,124 @@
+{
+  "entries": [
+    {
+      "connectivity_inchikey": "QPMSXPMLTYTHGM",
+      "connectivity_smiles": "CC12CCC3C(C1CCC2OC(=O)CCC4CCCC4)CCC5=CC(=O)C=CC35C",
+      "formula": "C27H38O3",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C27H38O3/c1-26-15-13-20(28)17-19(26)8-9-21-22-10-11-24(27(22,2)16-14-23(21)26)30-25(29)12-7-18-5-3-4-6-18/h13,15,17-18,21-24H,3-12,14,16H2,1-2H3/t21-,22-,23-,24-,26-,27-/m0/s1",
+      "inchikey": "QPMSXPMLTYTHGM-ZLQWOROUSA-N",
+      "isomeric_smiles": "C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2OC(=O)CCC4CCCC4)CCC5=CC(=O)C=C[C@]35C",
+      "name_key": "boldenone cypionate",
+      "observed_connectivity_identities": [
+        "std2d:QPMSXPMLTYTHGM",
+        "std2d:RSQJGCLXNWSOAD"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Boldenone%20Cypionate/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 71314193,
+      "pubchem_title": "((8R,9S,10R,13S,14S,17S)-10,13-dimethyl-3-oxo-6,7,8,9,11,12,14,15,16,17-decahydrocyclopenta(a)phenanthren-17-yl) 3-cyclopentylpropanoate",
+      "query_name": "Boldenone Cypionate",
+      "source_artifacts": [
+        "mix33-pos1_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "LZFZMUMEGBBDTC",
+      "connectivity_smiles": "CC(C(=O)N1CCCC1C(=O)O)NC(CCC2=CC=CC=C2)C(=O)O",
+      "formula": "C18H24N2O5",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C18H24N2O5/c1-12(16(21)20-11-5-8-15(20)18(24)25)19-14(17(22)23)10-9-13-6-3-2-4-7-13/h2-4,6-7,12,14-15,19H,5,8-11H2,1H3,(H,22,23)(H,24,25)/t12-,14-,15-/m0/s1",
+      "inchikey": "LZFZMUMEGBBDTC-QEJZJMRPSA-N",
+      "isomeric_smiles": "C[C@@H](C(=O)N1CCC[C@H]1C(=O)O)N[C@@H](CCC2=CC=CC=C2)C(=O)O",
+      "name_key": "enalaprilat",
+      "observed_connectivity_identities": [
+        "std2d:LZFZMUMEGBBDTC",
+        "std2d:VPHZAKHKNGOIBF"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/ENALAPRILAT/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5462501,
+      "pubchem_title": "Enalaprilat",
+      "query_name": "ENALAPRILAT",
+      "source_artifacts": [
+        "mix33-pos1_v11_flagship.json",
+        "mix33-pos2_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "LPLVUJXQOOQHMX",
+      "connectivity_smiles": "CC1(C2CCC3(C(C2(CCC1OC4C(C(C(C(O4)C(=O)O)O)O)OC5C(C(C(C(O5)C(=O)O)O)O)O)C)C(=O)C=C6C3(CCC7(C6CC(CC7)(C)C(=O)O)C)C)C)C",
+      "formula": "C42H62O16",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C42H62O16/c1-37(2)21-8-11-42(7)31(20(43)16-18-19-17-39(4,36(53)54)13-12-38(19,3)14-15-41(18,42)6)40(21,5)10-9-22(37)55-35-30(26(47)25(46)29(57-35)33(51)52)58-34-27(48)23(44)24(45)28(56-34)32(49)50/h16,19,21-31,34-35,44-48H,8-15,17H2,1-7H3,(H,49,50)(H,51,52)(H,53,54)/t19-,21-,22-,23-,24-,25-,26-,27+,28-,29-,30+,31+,34-,35-,38+,39-,40-,41+,42+/m0/s1",
+      "inchikey": "LPLVUJXQOOQHMX-QWBHMCJMSA-N",
+      "isomeric_smiles": "C[C@]12CC[C@](C[C@H]1C3=CC(=O)[C@@H]4[C@]5(CC[C@@H](C([C@@H]5CC[C@]4([C@@]3(CC2)C)C)(C)C)O[C@@H]6[C@@H]([C@H]([C@@H]([C@H](O6)C(=O)O)O)O)O[C@H]7[C@@H]([C@H]([C@@H]([C@H](O7)C(=O)O)O)O)O)C)(C)C(=O)O",
+      "name_key": "glycyrrhizic acid",
+      "observed_connectivity_identities": [
+        "std2d:LPLVUJXQOOQHMX",
+        "std2d:QCQGNTXXPCJRFZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Glycyrrhizic%20acid/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 14982,
+      "pubchem_title": "Glycyrrhizin",
+      "query_name": "Glycyrrhizic acid",
+      "source_artifacts": [
+        "mix33-neg1_v11_flagship.json",
+        "mix33-neg2_v11_flagship.json",
+        "mix33-pos1_v11_flagship.json",
+        "mix33-pos2_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "ZHYQCBCBTQWPLC",
+      "connectivity_smiles": "COC1=C(C2=C(C=C1)C=C3C4=CC5=C(C=C4CCN3C2=O)OCO5)OC",
+      "formula": "C20H17NO5",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C20H17NO5/c1-23-15-4-3-12-7-14-13-9-17-16(25-10-26-17)8-11(13)5-6-21(14)20(22)18(12)19(15)24-2/h3-4,7-9H,5-6,10H2,1-2H3",
+      "inchikey": "ZHYQCBCBTQWPLC-UHFFFAOYSA-N",
+      "isomeric_smiles": "COC1=C(C2=C(C=C1)C=C3C4=CC5=C(C=C4CCN3C2=O)OCO5)OC",
+      "name_key": "oxyberberine",
+      "observed_connectivity_identities": [
+        "std2d:PJTYPIGQKDTERS",
+        "std2d:ZHYQCBCBTQWPLC"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Oxyberberine/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 11066,
+      "pubchem_title": "Oxyberberine",
+      "query_name": "Oxyberberine",
+      "source_artifacts": [
+        "mix33-pos1_v11_flagship.json",
+        "mix33-pos2_v11_flagship.json"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "formula": "C18H30O3S",
+      "name_key": "dodecylbenzenesulfonic acid",
+      "query_name": "Dodecylbenzenesulfonic acid",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C47H81NO18",
+      "name_key": "hex3cer 29:4;2o",
+      "query_name": "Hex3Cer 29:4;2O",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    }
+  ],
+  "generated_at": "2026-08-07T18:28:41.067708+00:00",
+  "registry_id": "mssystem-v11-pubchem-name-formula-identity-repair-1.0.0",
+  "schema_version": "1.0.0",
+  "selection_contract": {
+    "formula_must_match": true,
+    "ground_truth_inputs_used": false,
+    "rdkit_must_reproduce_full_inchikey": true,
+    "trigger": "same exact normalized name and formula bound to multiple candidate connectivities",
+    "unresolved_or_ambiguous_is_neutral": true
+  },
+  "source": "PubChem PUG REST exact submitted name",
+  "source_artifact_sha256": {
+    "mix33-neg1_v11_flagship.json": "be9de5af544696494dd780188fe3bca3874477ba24c93a04549741fef5ac76a1",
+    "mix33-neg2_v11_flagship.json": "37f9f942774f9e234a55638ffe5cde3a1081ba0f9621e72ac6e2198d8434b125",
+    "mix33-pos1_v11_flagship.json": "0a2282187c04a63771f8a1d5a3a18ea86306ecfba5bacf90c155cf2a29587160",
+    "mix33-pos2_v11_flagship.json": "3b77b8231a779b76d216a466504e37583ea7cd7c4b296b554f7491618aaeae6d"
+  }
+}

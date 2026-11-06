@@ -1,0 +1,417 @@
+{
+  "schema_version": "mssystem-v15-release-confidence-shadow/1.0.0",
+  "protocol_id": "mssystem-v15-margin-only-release-confidence-shadow-1.0.0",
+  "protocol_date": "2026-08-27",
+  "protocol_state": "retrospective_baseline_locked_future_validation_not_started",
+  "deployment": {
+    "state": "shadow_only",
+    "runtime_influence": false,
+    "production_release_changes_allowed": false,
+    "automatic_activation_allowed": false,
+    "production_qvalue_assignment_allowed": false,
+    "production_calibration_id_expected": null
+  },
+  "authoritative_current_gate": {
+    "policy_path": "config/v15_flagship_policy.json",
+    "json_pointer": "/cross_platform_abstention_gate",
+    "algorithm_id": "mssystem-v15-cross-platform-abstention-gate-1.0.0",
+    "minimum_entity_score": 0.7,
+    "minimum_winner_margin": 0.12,
+    "minimum_collision_energy_bins_supported": 2,
+    "failed_action": "demote_to_candidate_only_without_changing_winner_rank_or_score",
+    "external_independent_validation_complete": false
+  },
+  "threshold_provenance": {
+    "qtof_pretransfer_locked_threshold": {
+      "minimum_entity_score": 0.75,
+      "minimum_winner_margin": 0.12,
+      "minimum_collision_energy_bins_supported": 2,
+      "source": "config/v15_multilayer_experiment.json#/qtof_development_selection_locked_for_transfer/abstention"
+    },
+    "current_0_70_threshold_state": "retrospective_two_cohort_selection_after_qtof_and_mix33_results_were_available",
+    "current_0_70_threshold_must_not_be_described_as_locked_before_mix33_transfer": true,
+    "this_protocol_does_not_reselect_the_current_gate": true
+  },
+  "historical_frozen_audit": {
+    "use": "immutable_regression_sentinels_and_feasibility_description_only",
+    "may_fit_or_select_shadow_rule": false,
+    "qtof_input": {
+      "path": "eval/v15_multilayer_optimization/results/qtof_multilayer_benchmark.json",
+      "sha256": "c2ccee4ba9f487fb37510aaf46b07c4d3abed54055d8690cd937bf2e0804f9e5"
+    },
+    "mix33_input": {
+      "path": "eval/v15_multilayer_optimization/results/mix33_locked_transfer.json",
+      "sha256": "23bac49321d37b8f855ede668898182ba8c72e00019dc6e780d28fe778dfa867"
+    },
+    "current_combined_counts": {
+      "eligible_records": 138,
+      "base_releases": 115,
+      "base_correct_releases": 94,
+      "base_wrong_releases": 21,
+      "current_releases": 93,
+      "current_correct_releases": 88,
+      "current_wrong_releases": 5,
+      "demoted_records": 22,
+      "demoted_correct_records": 6,
+      "demoted_correct_connectivity_identities": 4,
+      "demoted_wrong_records": 16
+    },
+    "historical_error_sentinel_record_ids": [
+      "A0509:NEG",
+      "A0129:NEG",
+      "A0090:NEG",
+      "A0146:NEG",
+      "A0477:NEG",
+      "A0284:POS",
+      "A0257:NEG",
+      "A0259:NEG",
+      "A0011:POS",
+      "A0217:POS",
+      "A1558:NEG",
+      "A0590:NEG",
+      "mix33-neg1:Aucubin",
+      "mix33-neg2:Aucubin",
+      "mix33-pos2:Chlorogenic acid",
+      "mix33-pos2:Naringenin"
+    ],
+    "historical_correct_demotion_record_ids": [
+      "A0132:NEG",
+      "B21596:POS",
+      "mix33-neg1:Hyperoside",
+      "mix33-neg2:Hyperoside",
+      "mix33-neg2:Monotropein",
+      "mix33-pos1:Naringenin"
+    ],
+    "record_level_and_connectivity_level_results_must_both_be_reported": true
+  },
+  "fixed_shadow_rule": {
+    "algorithm_id": "mssystem-v15-margin-only-shadow-rescue-r1-1.0.0",
+    "base_minimum_winner_margin": 0.04,
+    "current_minimum_entity_score": 0.7,
+    "current_minimum_winner_margin": 0.12,
+    "current_minimum_ce_support": 2,
+    "only_allowed_current_gate_failure": "winner_margin_below_cross_platform_release_gate",
+    "minimum_independent_acquisition_support": 2,
+    "maximum_same_formula_connectivities": 2,
+    "minimum_unique_compatible_reference_profiles": 2,
+    "minimum_compatible_reference_provenance_strata": 2,
+    "minimum_development_domain_cases": 5
+  },
+  "fixed_shadow_rule_definitions": {
+    "base_minimum_winner_margin_source": "config/v15_flagship_policy.json#/formal_2d_release/minimum_connectivity_margin; this is inherited from the base release and is not a newly selected rescue threshold",
+    "independent_acquisition_support": "distinct_sample_preparation_or_acquisition_batch; repeated_MS2_scans_collision_energies_and_repeat_injections_from_one_preparation_do_not_increase_this_count",
+    "top1_consistency": "every_eligible_independent_acquisition_selects_the_same_2d_connectivity_before_truth_is_opened",
+    "reference_profile": "unique_peak_content_fingerprint_after_cross_database_mirror_collapse",
+    "reference_provenance_stratum": "normalized_dataset_source_after_mirror_collapse; accessions_and_technical_repeats_do_not_add_strata",
+    "development_domain_case": "development_connectivity_identity_in_the_same_coarse_instrument_domain_polarity_and_adduct_triple; physical_instrument_instances_and_laboratories_remain_separate_from_sealed_validation",
+    "conflicts_that_force_withholding": [
+      "molecular_formula_conflict",
+      "adduct_conflict",
+      "precursor_mass_or_transformation_conflict",
+      "sample_source_compatibility_conflict"
+    ],
+    "labels_forbidden_from_rule": [
+      "ground_truth_identity",
+      "top1_correct",
+      "compound_name",
+      "standard_name",
+      "database_accession",
+      "historical_correct_demotion_membership"
+    ]
+  },
+  "partition_contract": {
+    "partitions": [
+      "development",
+      "tuning",
+      "sealed_validation"
+    ],
+    "blocking_identifiers_that_must_not_cross_partitions": [
+      "2d_connectivity_id",
+      "molecular_formula_family_id",
+      "source_dataset_id",
+      "source_record_id",
+      "source_peak_content_fingerprint",
+      "laboratory_id",
+      "physical_instrument_instance_id",
+      "acquisition_batch_id"
+    ],
+    "coarse_instrument_domain_may_repeat_only_when": [
+      "laboratory_id_is_different",
+      "physical_instrument_instance_id_is_different",
+      "acquisition_batch_id_is_different"
+    ],
+    "same_coarse_domain_claim": "transfer_to_new_laboratory_and_physical_instrument_instance_within_the_same_acquisition_domain",
+    "new_coarse_domain_claim": "transfer_to_a_new_acquisition_domain",
+    "unknown_lab_instrument_source_or_batch_metadata_action": "exclude_from_sealed_validation_and_withhold_shadow_rescue"
+  },
+  "cross_fitting": {
+    "required": true,
+    "folds": 5,
+    "seed": 20260827,
+    "leakage_components_union": [
+      "2d_connectivity_id",
+      "molecular_formula_family_id",
+      "source_record_id",
+      "source_peak_content_fingerprint"
+    ],
+    "blocking_stratum": [
+      "coarse_instrument_domain_id",
+      "polarity",
+      "adduct"
+    ],
+    "out_of_fold_predictions_required_for_every_training_or_tuning_record": true,
+    "technical_repeats_share_one_fold": true
+  },
+  "modeling": {
+    "primary": {
+      "method": "fixed_deterministic_rule",
+      "parameters_selected_from_historical_6_correct_or_16_wrong_records": false,
+      "probability_output": false
+    },
+    "secondary_exploratory_model": {
+      "method": "firth_penalized_logistic_regression",
+      "allowed_only_if_wrong_outcome_count_at_least": 30,
+      "maximum_predictor_degrees_of_freedom": 3,
+      "training_predictions": "out_of_fold_only",
+      "allowed_predictors": [
+        "winner_entity_score",
+        "winner_margin",
+        "collision_energy_support",
+        "same_formula_connectivity_count",
+        "mirror_collapsed_reference_support"
+      ],
+      "forbidden_predictors": [
+        "compound_name",
+        "database_identifier",
+        "ground_truth_identity",
+        "standard_id",
+        "source_label_without_peak_content_collapse"
+      ],
+      "production_influence": false
+    },
+    "calibration_diagnostics": {
+      "evaluated_only_on_sealed_labels": true,
+      "internal_bootstrap_optimism_correction": {
+        "required_for_secondary_model": true,
+        "resamples": 2000,
+        "cluster": "molecular_formula_family_id",
+        "seed": 20260827
+      },
+      "fixed_probability_bins": 5,
+      "minimum_observations_per_reported_bin": 20,
+      "report": [
+        "calibration_intercept_with_formula_family_cluster_interval",
+        "calibration_slope_with_formula_family_cluster_interval",
+        "brier_score",
+        "fixed_bin_observed_fraction_table",
+        "expected_calibration_error",
+        "coarse_instrument_domain_strata",
+        "polarity_and_adduct_strata"
+      ],
+      "exploratory_model_retention_checks": [
+        "calibration_intercept_95_percent_interval_contains_0",
+        "calibration_slope_95_percent_interval_contains_1",
+        "brier_score_not_worse_than_frozen_prevalence_only_model",
+        "log_loss_not_worse_than_frozen_prevalence_only_model"
+      ],
+      "expected_calibration_error_has_no_universal_pass_threshold_and_is_descriptive_only": true,
+      "isotonic_calibration_forbidden_below_1000_calibration_units": true,
+      "probability_semantics_require_a_separate_future_protocol_even_if_diagnostics_pass": true,
+      "score_or_qvalue_may_be_named_probability": false,
+      "failed_diagnostics_action": "discard_the_exploratory_model_and_retain_fixed_shadow_rule_only"
+    }
+  },
+  "endpoints": {
+    "ordered_primary_safety": {
+      "historical_sentinel_endpoint": "number_of_the_16_frozen_wrong_demotion_records_restored",
+      "required_value": 0,
+      "sealed_endpoint": "new_wrong_formal_2d_releases_per_sealed_evaluable_connectivity_identity",
+      "required_observed_count": 0,
+      "one_sided_noninferiority_margin": 0.025
+    },
+    "ordered_primary_recovery": {
+      "endpoint": "correct_formal_2d_releases_restored_per_sealed_connectivity_identity",
+      "tested_only_after_safety_passes": true,
+      "alternative": "shadow_rule_has_more_correct_releases_than_current_gate",
+      "paired_test": "exact_one_sided_mcnemar",
+      "alpha": 0.05,
+      "minimum_for_descriptive_feasibility": 1,
+      "minimum_for_runtime_review_when_no_correct_releases_are_lost": 5,
+      "one_to_four_independent_correct_gains": "descriptive_feasibility_only_not_runtime_qualification"
+    },
+    "secondary": [
+      "record_level_correct_releases_restored",
+      "release_precision_with_identity_level_denominator",
+      "coverage_fraction_among_current_margin_only_demotions",
+      "abstention_fraction",
+      "repeat_injection_consistency_nested_within_connectivity_identity",
+      "results_by_coarse_instrument_domain_polarity_and_adduct"
+    ],
+    "candidate_recall_top1_release_isomer_and_standard_confirmation_are_separate_fields": true
+  },
+  "inference": {
+    "zero_new_wrong_interval": "one_sided_95_percent_exact_clopper_pearson",
+    "conditional_minimum_n_for_zero_events_at_2_5_percent_margin": 119,
+    "n_119_is_a_consequence_of_the_selected_2_5_percent_margin_not_a_universal_requirement": true,
+    "primary_recovery_paired_binary_test": "exact_one_sided_mcnemar_shadow_gain_alternative",
+    "secondary_paired_binary_test": "exact_two_sided_mcnemar",
+    "paired_effect_intervals": [
+      "newcombe_1998_paired_score_interval",
+      "connectivity_identity_cluster_bootstrap_95_percent",
+      "molecular_formula_family_cluster_bootstrap_95_percent"
+    ],
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20260827,
+    "minimum_clusters_for_bootstrap_inferential_use": 32,
+    "bootstrap_below_32_clusters": "descriptive_only_and_cannot_qualify_runtime",
+    "technical_repeats_count_as_independent_n": false,
+    "post_hoc_observed_power_allowed": false
+  },
+  "multiplicity": {
+    "testing_order": [
+      "historical_sentinel_zero_regression",
+      "sealed_new_wrong_release_safety",
+      "sealed_correct_release_recovery"
+    ],
+    "recovery_not_tested_when_safety_fails": true,
+    "exploratory_subgroups_and_model_variants": "holm_adjustment_within_each_declared_family",
+    "selecting_R1_R2_R3_R4_after_viewing_the_historical_6_and_16": "forbidden",
+    "new_rule_after_sealed_label_review_requires": "new_protocol_version_and_new_unopened_sealed_validation_partition"
+  },
+  "sealed_validation_feasibility": {
+    "historical_unique_connectivity_universe": 86,
+    "historical_universe_state": "already_inspected_not_eligible_as_sealed_validation",
+    "currently_qualified_sealed_units": 0,
+    "minimum_sealed_units_if_zero_new_wrong_releases": 119,
+    "conclusion_without_unopened_external_or_preexisting_project_data": "confirmatory_safety_endpoint_is_unreachable",
+    "permitted_zero_purchase_sources_after_user_approval": [
+      "preexisting_project_authentic_standard_runs_never_used_by_v15_development_tuning_library_or_threshold_selection",
+      "open_reference_or_raw_spectra_with_complete_source_laboratory_physical_instrument_batch_and_license_metadata"
+    ],
+    "public_spectrum_is_not_automatically_sealed": true,
+    "required_external_metadata": [
+      "stable_2d_connectivity_id",
+      "molecular_formula_family_id",
+      "source_dataset_and_record_id",
+      "peak_content_fingerprint",
+      "laboratory_id",
+      "vendor",
+      "exact_instrument_model",
+      "analyzer",
+      "activation",
+      "collision_energy_value_unit_and_mode",
+      "polarity",
+      "adduct",
+      "isolation_window",
+      "physical_instrument_instance_id",
+      "acquisition_batch_id"
+    ],
+    "if_119_units_cannot_be_assembled": {
+      "allowed_analysis": "leave_one_source_out_and_leave_one_laboratory_out_internal_stability_only",
+      "required_claim": "internal_stability_supported_research_hypothesis_not_production_qualification",
+      "forbidden_claims": [
+        "external_validation_passed",
+        "calibration_passed",
+        "production_qualified"
+      ],
+      "qvalue": null,
+      "runtime_influence": false
+    },
+    "new_authentic_standard_purchase_or_request_allowed": false
+  },
+  "target_decoy_or_negative_control_contract": {
+    "qvalue_state_until_all_checks_pass": null,
+    "required_for_project_qvalue": [
+      "one_target_decoy_competition_per_candidate_independent_entity",
+      "same_runtime_snapshot",
+      "same_library_snapshot",
+      "same_candidate_generation_and_filtering_rules",
+      "same_score_field_used_by_the_final_release_layer",
+      "complete_competition_universe",
+      "target_decoy_identity_and_mirror_overlap_zero",
+      "ties_awarded_to_decoy",
+      "method_frozen_before_project_data",
+      "project_not_reused_for_threshold_selection",
+      "minimum_target_and_decoy_winner_counts_met_in_the_applied_stratum"
+    ],
+    "legal_decoy_boundaries": [
+      "decoy_must_obey_the_same_precursor_polarity_adduct_formula_and_candidate_filters_as_target_candidates",
+      "decoy_identity_must_not_equal_truth_target_or_an_indistinguishable_stereoisomer_group",
+      "cross_database_peak_content_mirrors_must_be_collapsed_before_competition",
+      "entrapment_compounds_must_be_declared_absent_before_predictions_and_must_use_the_same_search_path"
+    ],
+    "not_valid_for_production_qvalue": [
+      "shuffled_peak_nulls",
+      "pooled_candidate_scores_without_one_call_per_entity",
+      "historical_incorrect_top1_rows_reused_as_decoy_winners",
+      "cosine_curves_when_the_release_layer_uses_a_different_final_score",
+      "arbitrary_plus_or_minus_10_ppm_candidate_universe_if_runtime_uses_different_filters"
+    ],
+    "alternative_negative_examples": {
+      "frozen_authentic_standard_incorrect_top1_rows": "allowed_for_error_classification_and_sentinel_tests_not_for_qvalue_estimation",
+      "mix33_size_matched_entrapment_development_20260801": "development_only_starting_asset; requires_entity_collapse_project_rank_score_assignable_calls_new_unopened_data_and_runtime_library_transfer_before_reconsideration",
+      "predeclared_absent_entrapment_library": "allowed_only_after_absence_and_exchangeability_audit",
+      "synthetic_peak_perturbations": "stress_test_only"
+    }
+  },
+  "failure_and_fallback": {
+    "force_withhold_and_keep_current_gate": [
+      "any_of_16_historical_error_sentinels_would_be_restored",
+      "any_new_wrong_release_in_sealed_validation",
+      "split_or_crossfit_leakage",
+      "missing_source_laboratory_instrument_batch_or_mirror_metadata",
+      "query_quality_failure",
+      "formula_adduct_precursor_or_sample_source_conflict",
+      "insufficient_independent_acquisition_support",
+      "insufficient_mirror_collapsed_reference_support",
+      "sealed_safety_interval_upper_bound_above_0_025",
+      "rule_or_threshold_changed_after_labels_were_opened"
+    ],
+    "retry_limit": {
+      "maximum_protocol_revisions_using_one_sealed_partition": 0,
+      "failed_sealed_partition_may_be_reused_for_tuning": false,
+      "a_revised_rule_requires_a_new_unopened_partition": true,
+      "maximum_confirmatory_sealed_attempts_without_new_user_project_approval": 2,
+      "second_failed_attempt_action": "retain_current_gate_and_keep_production_calibration_id_null_until_user_opens_a_new_project"
+    },
+    "fallback_action": "retain_current_0_70_0_12_2_gate_and_emit_shadow_audit_only",
+    "qvalue_must_remain_null_when": [
+      "production_calibration_id_is_null",
+      "competition_universe_does_not_match_runtime",
+      "project_data_were_used_for_threshold_or_model_selection",
+      "entity_level_target_decoy_competition_is_incomplete",
+      "decoy_exchangeability_or_identity_separation_is_unverified",
+      "applied_score_runtime_library_candidate_space_or_stratum_does_not_match"
+    ]
+  },
+  "claim_contract": {
+    "candidate": "retrieved_structure_or_formula_hypothesis_not_a_release",
+    "formal_2d_release": "selected_2d_connectivity_candidate_that_passed_the_release_rules_not_standard_confirmation",
+    "isomer_group": "members_not_distinguished_by_current_evidence",
+    "authentic_standard_confirmation": "requires_same_method_reference_material_RT_and_MS_MS_comparison_already_available_to_the_project",
+    "new_authentic_standards_may_be_purchased_or_requested": false,
+    "database_identifier_may_be_used_as_compound_name": false,
+    "score_is_probability_correct": false,
+    "qvalue_is_probability_correct": false
+  },
+  "registration": {
+    "current_level": "internally_hashed_protocol_not_external_preregistration",
+    "semantic_sha256_recorded_in_structured_receipt": true,
+    "git_commit_created": false,
+    "external_timestamp_or_registry_entry_created": false,
+    "required_before_any_future_sealed_label_opening": [
+      "user_approval_of_protocol_and_manifest",
+      "immutable_protocol_and_manifest_hashes",
+      "independent_timestamp_or_registry_receipt_if_the_user_authorizes_external_registration"
+    ]
+  },
+  "interfaces": {
+    "python_module": "calibration.release_confidence",
+    "historical_audit_cli": "eval/v15_release_confidence_shadow.py",
+    "isolation_manifest_schema": "IsolationRecord",
+    "shadow_candidate_schema": "ShadowCandidate",
+    "shadow_decision_schema": "ShadowDecision",
+    "structured_receipt": "docs/audits/V15_RELEASE_CONFIDENCE_SHADOW_BASELINE_RECEIPT_20260827.json",
+    "runtime_interface_status": "not_connected_pending_user_review"
+  }
+}

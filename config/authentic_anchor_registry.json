@@ -1,0 +1,11 @@
+{
+  "schema_version": "authentic-anchor-registry/1.0",
+  "active_library": "output/validation_eval/20260825_authentic_anchor_ms/authentic_anchor_library_rtqc_v2.json",
+  "active_library_content_sha256": "1524d205c8dc2de6453cbe42bb64ae2df7ad01cbf35bd8475a59a64b71ea12bc",
+  "active_library_file_sha256": "a41a309a0347db594287279d023ec6cade6e6b09130366b907940007765a8162",
+  "state": "active_authentic_reference_display_ranker",
+  "instrument_family": "agilent-qtof-6546",
+  "activation_scope": "EviTwin-MS candidate display ranking only",
+  "formal_level1_release_enabled": false,
+  "validation_note": "Post-reveal engineering library. Each reference is restricted to one adduct and one coherent RT cluster before CE matching. In the V14 replay, the qualified candidate-display lane increased distinct-2D difficult-family Top-1 coverage from 25/39 to 29/39 and safe single-candidate-or-isomer-group scope from 36/45 to 38/45, with 0 outside-composition priority predictions. This is not a formal Level-1 increment; independent locked validation is still required."
+}

@@ -1,0 +1,136 @@
+{
+  "absolute_local_path_file_count_before_runtime_manifest_sanitization": 50,
+  "absolute_local_path_occurrence_count_before_runtime_manifest_sanitization": 105,
+  "absolute_path_files": [
+    "analyze_mzml_batch.py",
+    "build_from_mgf_msp.py",
+    "classifier/msclass_wrapper.py",
+    "config/canonical_name_identity_registry.json",
+    "config/library_counts_snapshot.json",
+    "config/library_polarity_snapshot.json",
+    "config/library_record_store.json",
+    "config/model_registry.json",
+    "config/public_source_registry.json",
+    "config/screening_catalog_coverage.json",
+    "config/source_compound_mass_repairs.json",
+    "config/sql_metadata_repairs.json",
+    "config/v14_derivation_baseline.json",
+    "config/v15_derivation_baseline.json",
+    "config/v16_derivation_baseline.json",
+    "kb_mining/mine_rules.py",
+    "kb_mining/mine_seeds.py",
+    "kb_v3/build_kb_v3.py",
+    "matching/compound_name_aliases_quarantine.json",
+    "matching/model_predictor.py",
+    "pipeline/structure_prediction.py",
+    "run.sh",
+    "scripts/audit_eight_formula_target_databases.py",
+    "scripts/audit_ml_precision.py",
+    "scripts/benchmark_v7_network.py",
+    "scripts/build_latest_report.py",
+    "scripts/curate_head_classes.py",
+    "scripts/import_ciead_library.py",
+    "scripts/install_jiawei_sanwujiao_targets.py",
+    "scripts/install_qft_negative_panel.py",
+    "scripts/migrate_targeted_database.py",
+    "scripts/migrate_ydf_targeted_database.py",
+    "scripts/migrate_zytw_bzl_targets.py",
+    "scripts/mine_pathways.py",
+    "scripts/repair_verified_target_identity_conflicts.py",
+    "scripts/run_evidiscrim_shadow.py",
+    "scripts/run_formula_shadow.py",
+    "scripts/run_openworld_shadow.py",
+    "scripts/run_v12_candidate_recall.py",
+    "scripts/split_zytw_bzl_targets.py",
+    "scripts/train_isopair_ms.py",
+    "scripts/zz_enrich_niuxi_20260731.py",
+    "tests/fixtures/report_role_high_laur3.json",
+    "tests/test_completed_batches.py",
+    "tests/test_regression_smoke.py",
+    "tests/test_report_html_io.py",
+    "tests/test_v10_procurement_reconciliation.py",
+    "tools/build_frozen_native_delivery.py",
+    "tools/retry_frozen_access_audit.py",
+    "web/server.py"
+  ],
+  "credential_pattern_finding_count": 0,
+  "credential_pattern_types": [
+    "aws_access_key",
+    "generic_secret_assignment",
+    "github_token",
+    "private_key_block",
+    "slack_token"
+  ],
+  "limitations": "Pattern scan is not a formal secret-detection guarantee; no credential values were printed.",
+  "sanitization_modifications": [
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/authentic_reference/library_path"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/authentic_reference/registry_path"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/golden_baseline/path"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/library/mapping/path"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/library/production_full/path"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/models/models/2/artifacts/0/path"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/models/models/2/artifacts/1/path"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/models/models/3/artifacts/0/path"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/models/models/4/artifacts/0/path"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/models/models/4/artifacts/1/path"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/models/registry"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/project_root"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/role_catalogs/compound_roles/path"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/role_catalogs/screening/library_coverage/artifact_path"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/role_catalogs/screening/path"
+    },
+    {
+      "change": "absolute local path replaced by portable placeholder",
+      "json_pointer": "/screening_coverage_refresh/coverage_artifact"
+    }
+  ],
+  "sanitized_config": "config/runtime_manifest.json",
+  "sanitized_field_count": 16,
+  "scanned_file_count": 863,
+  "schema_version": "mssystem-source-privacy-scan/1.0",
+  "values_disclosed_in_report": false
+}

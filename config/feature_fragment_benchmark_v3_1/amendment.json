@@ -1,0 +1,116 @@
+{
+  "schema_version": "3.1.0",
+  "amendment_id": "v15-instrument-conditioned-feature-fragment-v3.1-20260827",
+  "frozen_on": "2026-08-27",
+  "base_release": {
+    "machine_preregistration_path": "config/feature_fragment_benchmark_v3/preregistration.json",
+    "machine_preregistration_sha256": "f381858976a2809ae179678b411dd0b326bc48187833226ecd679be088d6c475",
+    "human_preregistration_path": "docs/V15_FEATURE_FRAGMENT_BENCHMARK_V3_PREREGISTRATION.md",
+    "human_preregistration_sha256": "92bbbf04fec475d8a287aab9c06fed791b58ff57c1a2fb3053cf3a36981a6e5d",
+    "phase1_receipt_path": "docs/audits/V15_FEATURE_FRAGMENT_BENCHMARK_V3_RECEIPT_20260827.json",
+    "phase1_receipt_sha256": "89ac088ff9abb67569bed936d6b9f2db05ad9fe5e0b63d20ad4a158ecf018bb5",
+    "benchmark_receipt_path": "docs/audits/feature_fragment_benchmark_v3/benchmark_receipt.json",
+    "benchmark_receipt_sha256": "ee8592920370896a59105b6f7426a183a9524dd077192c0a67e98b474565e83c",
+    "frozen_corpus_sha256": "292cc687b37f2e0c60ad51dcde9d43e8726e0e0e5e28c15504d5dc129fdc6cf6",
+    "accepted_audit_record_count": 33928
+  },
+  "scope": {
+    "phase": "phase_1_research_audit_amendment",
+    "runtime_effect": "none_fail_closed",
+    "runtime_catalog_modification_allowed": false,
+    "identity_ranking_modification_allowed": false,
+    "phase_2_allowed": false,
+    "commit_allowed": false,
+    "standards_purchase_or_acquisition_allowed": false
+  },
+  "unchanged_primary_thresholds": {
+    "minimum_target_identities": 30,
+    "minimum_background_identities": 30,
+    "minimum_target_formula_families": 10,
+    "minimum_background_formula_families": 10,
+    "minimum_target_sources": 3,
+    "minimum_background_sources": 3,
+    "minimum_target_laboratories": 2,
+    "minimum_background_laboratories": 2,
+    "lr_positive_lower_95_minimum_exclusive": 1.0,
+    "maximum_log_lr_interval_half_width": 0.6931471805599453,
+    "holm_family_wise_alpha": 0.05
+  },
+  "accepted_changes": [
+    "replace the generic SCIEX 4600 citation with model-specific TripleTOF 5600+ and X500 system guides",
+    "register MoNA as a screening source only and require origin-level provenance plus per-spectrum license evidence before integration",
+    "extract mzML PSI-MS cvParams and mzXML attributes through separate interfaces with raw-file hashes",
+    "report exact-domain capacity for the frozen release before rule discovery",
+    "externalize the already-used relative-intensity and mass-tolerance settings",
+    "treat a canonical USI, a complete origin raw locator, and an exact peak hash as separate exact-mirror edges",
+    "complete article and official-document citation metadata"
+  ],
+  "rejected_changes": [
+    {
+      "proposal": "derive eV from NCE",
+      "reason": "the conversion is instrument-, calibration-, precursor-mass-, and charge-dependent; V3.1 retains native units and models NCE with precursor m/z and charge"
+    },
+    {
+      "proposal": "allow ramp, CES, or stepped programs to contribute LR- when a fragment appears at any energy elsewhere",
+      "reason": "that rule selects the detection condition from external observations and does not establish an absence detection floor for the tested composite program"
+    },
+    {
+      "proposal": "label a domain infeasible forever",
+      "reason": "the result is bounded by one frozen public-data release and can change when independently licensed, fully traced spectra become available"
+    },
+    {
+      "proposal": "require at least five peaks in m/z 1-1000 without calibration",
+      "reason": "the threshold and window were not estimated against labelled usable and unusable spectra"
+    },
+    {
+      "proposal": "make USI an exclusive first mirror key",
+      "reason": "USI, origin raw locator, and exact peak content answer different duplicate questions and must be retained as separately audited edges"
+    }
+  ],
+  "multi_energy_evidence": {
+    "fixed_precursor_selected": {
+      "lr_positive_allowed_if_all_other_gates_pass": true,
+      "lr_negative_allowed_if_all_other_gates_pass": true
+    },
+    "positive_only_modes": [
+      "stepped",
+      "CES",
+      "ramp",
+      "rolling",
+      "dynamic",
+      "MSE",
+      "bbCID",
+      "all_ions"
+    ],
+    "in_source_positive_only": true,
+    "composite_quantitative_positive_requires_complete_numeric_weights": true,
+    "continuous_or_variable_program_requires_same_model_program_detection_floor_validation": true,
+    "missing_weights_action": "audit_only_observed_fragment_no_quantitative_lr",
+    "negative_evidence_reenable_gate": "same exact model, full native program, precursor isolation, precursor-purity threshold, fragment-specific detection floor, and sealed validation must all be frozen before analysis"
+  },
+  "collision_energy": {
+    "native_unit_retained": true,
+    "nce_to_ev_conversion_allowed": false,
+    "cross_vendor_conversion_allowed": false,
+    "nce_model_covariates": [
+      "precursor_mz",
+      "charge"
+    ],
+    "fixed_and_composite_pooling_allowed": false
+  },
+  "feasibility": {
+    "unit": "exact instrument domain within the frozen V3 corpus",
+    "pre_discovery_required": true,
+    "infeasible_status": "infeasible_for_frozen_release",
+    "permanent_infeasibility_claim_allowed": false,
+    "partial_pooling_may_rescue_failed_exact_domain": false,
+    "capacity_sufficient_status": "capacity_sufficient_requires_rule_specific_check"
+  },
+  "failure_action": {
+    "rule_status": "provisional_or_unavailable",
+    "runtime_exported_rule_count": 0,
+    "runtime_ranking_enabled": false,
+    "score_contribution": 0.0,
+    "next_state": "waiting_user_review"
+  }
+}

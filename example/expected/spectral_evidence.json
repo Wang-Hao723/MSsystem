@@ -1,0 +1,366 @@
+[
+  {
+    "query": "MSBNK-IPB_Halle-PB002410",
+    "rank": 1,
+    "spectral_evidence": {
+      "schema": "mssystem.spectral_evidence.v1",
+      "status": "captured",
+      "score_scope": "raw_spectrum_candidate_comparison",
+      "pair_origin": "deterministic_replay_of_saved_scoring_views",
+      "index_basis": "zero_based_saved_scoring_peak_arrays",
+      "algorithm": "ModifiedCosineGreedy",
+      "mz_power": 0.0,
+      "intensity_power": 1.0,
+      "tolerance_da": 0.1,
+      "query_precursor_mz": 301.0353735,
+      "library_precursor_mz": 301.0353735,
+      "precursor_shift_da": 0.0,
+      "query_view": "primary_top15",
+      "query_peaks": [
+        [
+          107.016,
+          756.023
+        ],
+        [
+          121.029,
+          1763.081
+        ],
+        [
+          151.004,
+          10000.0
+        ],
+        [
+          178.996,
+          6476.907
+        ],
+        [
+          273.044,
+          895.658
+        ]
+      ],
+      "library_peaks": [
+        [
+          65.0014,
+          1149.0
+        ],
+        [
+          83.0128,
+          1456.0
+        ],
+        [
+          93.0339,
+          1200.0
+        ],
+        [
+          107.0135,
+          3999.0
+        ],
+        [
+          121.0292,
+          4485.0
+        ],
+        [
+          149.0246,
+          823.0
+        ],
+        [
+          151.0037,
+          14350.0
+        ],
+        [
+          178.9987,
+          5938.0
+        ],
+        [
+          273.041,
+          966.0
+        ]
+      ],
+      "query_peak_sha256": "416763b65448bb75a960043879304adb080dce39651a91e09719c1a886fd9cb2",
+      "library_peak_sha256": "5c4ad8c0a6cade40889fa68e351b70d5f0c440209ef39f4a63ef722155e5f126",
+      "reference": {
+        "spectrum_id": "MassBank_quercetin_a3eb38cc0b95_1",
+        "source_accession": "MSBNK-RIKEN-PR040049",
+        "dataset_source": "MassBank_quercetin"
+      },
+      "matched_pairs": [
+        {
+          "query_peak_index": 2,
+          "library_peak_index": 6,
+          "query_mz": 151.004,
+          "lib_mz": 151.0037,
+          "match_mode": "direct",
+          "residual_da": 0.00029999999998153726
+        },
+        {
+          "query_peak_index": 3,
+          "library_peak_index": 7,
+          "query_mz": 178.996,
+          "lib_mz": 178.9987,
+          "match_mode": "direct",
+          "residual_da": -0.0027000000000043656
+        },
+        {
+          "query_peak_index": 1,
+          "library_peak_index": 4,
+          "query_mz": 121.029,
+          "lib_mz": 121.0292,
+          "match_mode": "direct",
+          "residual_da": -0.0002000000000066393
+        },
+        {
+          "query_peak_index": 0,
+          "library_peak_index": 3,
+          "query_mz": 107.016,
+          "lib_mz": 107.0135,
+          "match_mode": "direct",
+          "residual_da": 0.002500000000011937
+        },
+        {
+          "query_peak_index": 4,
+          "library_peak_index": 8,
+          "query_mz": 273.044,
+          "lib_mz": 273.041,
+          "match_mode": "direct",
+          "residual_da": 0.002999999999985903
+        }
+      ],
+      "replayed_modified_cosine": 0.9504842638959043,
+      "comparison_cosine": 0.9504842638959043,
+      "replay_matches_comparison": true,
+      "ranking_influence": false,
+      "fragment_atom_assignment": false,
+      "view_sha256": "1a37dc5c8257c9deed849d68c1b1052baf5842dab64616c9a6e211f02f8c1e98"
+    }
+  },
+  {
+    "query": "MSBNK-IPB_Halle-PB002412",
+    "rank": 1,
+    "spectral_evidence": {
+      "schema": "mssystem.spectral_evidence.v1",
+      "status": "captured",
+      "score_scope": "raw_spectrum_candidate_comparison",
+      "pair_origin": "deterministic_replay_of_saved_scoring_views",
+      "index_basis": "zero_based_saved_scoring_peak_arrays",
+      "algorithm": "ModifiedCosineGreedy",
+      "mz_power": 0.0,
+      "intensity_power": 1.0,
+      "tolerance_da": 0.1,
+      "query_precursor_mz": 301.0353735,
+      "library_precursor_mz": 301.0353735,
+      "precursor_shift_da": 0.0,
+      "query_view": "primary_top15",
+      "query_peaks": [
+        [
+          63.024,
+          7137.554
+        ],
+        [
+          65.003,
+          10000.0
+        ],
+        [
+          83.012,
+          3144.554
+        ],
+        [
+          93.033,
+          4522.219
+        ],
+        [
+          107.016,
+          5295.365
+        ],
+        [
+          108.024,
+          1454.025
+        ],
+        [
+          109.031,
+          1544.172
+        ],
+        [
+          121.03,
+          5329.303
+        ],
+        [
+          133.029,
+          1100.859
+        ],
+        [
+          135.045,
+          519.673
+        ],
+        [
+          139.041,
+          1316.152
+        ],
+        [
+          149.026,
+          545.127
+        ],
+        [
+          151.005,
+          2414.89
+        ],
+        [
+          159.048,
+          573.231
+        ],
+        [
+          161.027,
+          906.777
+        ]
+      ],
+      "library_peaks": [
+        [
+          63.024,
+          1232.387
+        ],
+        [
+          65.003,
+          1638.063
+        ],
+        [
+          83.012,
+          1187.312
+        ],
+        [
+          93.034,
+          928.214
+        ],
+        [
+          107.016,
+          6547.579
+        ],
+        [
+          109.031,
+          818.364
+        ],
+        [
+          121.029,
+          5202.003
+        ],
+        [
+          139.042,
+          719.533
+        ],
+        [
+          149.025,
+          955.259
+        ],
+        [
+          151.004,
+          10000.0
+        ],
+        [
+          163.023,
+          825.71
+        ],
+        [
+          164.014,
+          641.068
+        ],
+        [
+          178.997,
+          1031.719
+        ]
+      ],
+      "query_peak_sha256": "2914b2bf9b7f205979e06089b1eb209f98e7c53f97bf24d8c2565206d0b4706f",
+      "library_peak_sha256": "fba19ab2a7725df6ddef8100e239a57c417bb3cc0d8df46ad31dd0704edc48d2",
+      "reference": {
+        "spectrum_id": "MassBank_quercetin_a3eb38cc0b95_0",
+        "source_accession": "MSBNK-IPB_Halle-PB002411",
+        "dataset_source": "MassBank_quercetin"
+      },
+      "matched_pairs": [
+        {
+          "query_peak_index": 4,
+          "library_peak_index": 4,
+          "query_mz": 107.016,
+          "lib_mz": 107.016,
+          "match_mode": "direct",
+          "residual_da": 0.0
+        },
+        {
+          "query_peak_index": 7,
+          "library_peak_index": 6,
+          "query_mz": 121.03,
+          "lib_mz": 121.029,
+          "match_mode": "direct",
+          "residual_da": 0.0010000000000047748
+        },
+        {
+          "query_peak_index": 12,
+          "library_peak_index": 9,
+          "query_mz": 151.005,
+          "lib_mz": 151.004,
+          "match_mode": "direct",
+          "residual_da": 0.0010000000000047748
+        },
+        {
+          "query_peak_index": 1,
+          "library_peak_index": 1,
+          "query_mz": 65.003,
+          "lib_mz": 65.003,
+          "match_mode": "direct",
+          "residual_da": 0.0
+        },
+        {
+          "query_peak_index": 0,
+          "library_peak_index": 0,
+          "query_mz": 63.024,
+          "lib_mz": 63.024,
+          "match_mode": "direct",
+          "residual_da": 0.0
+        },
+        {
+          "query_peak_index": 3,
+          "library_peak_index": 3,
+          "query_mz": 93.033,
+          "lib_mz": 93.034,
+          "match_mode": "direct",
+          "residual_da": -0.0010000000000047748
+        },
+        {
+          "query_peak_index": 2,
+          "library_peak_index": 2,
+          "query_mz": 83.012,
+          "lib_mz": 83.012,
+          "match_mode": "direct",
+          "residual_da": 0.0
+        },
+        {
+          "query_peak_index": 6,
+          "library_peak_index": 5,
+          "query_mz": 109.031,
+          "lib_mz": 109.031,
+          "match_mode": "direct",
+          "residual_da": 0.0
+        },
+        {
+          "query_peak_index": 10,
+          "library_peak_index": 7,
+          "query_mz": 139.041,
+          "lib_mz": 139.042,
+          "match_mode": "direct",
+          "residual_da": -0.0010000000000047748
+        },
+        {
+          "query_peak_index": 11,
+          "library_peak_index": 8,
+          "query_mz": 149.026,
+          "lib_mz": 149.025,
+          "match_mode": "direct",
+          "residual_da": 0.0010000000000047748
+        }
+      ],
+      "replayed_modified_cosine": 0.5727565051419324,
+      "comparison_cosine": 0.5727565051419324,
+      "replay_matches_comparison": true,
+      "ranking_influence": false,
+      "fragment_atom_assignment": false,
+      "view_sha256": "48cecab18ac03e5f8e7ec4c17cbf3e570d754c1c057efcca1612b26f72c4450e"
+    }
+  }
+]

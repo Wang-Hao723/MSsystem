@@ -1,0 +1,18 @@
+{
+  "schema_version": "mssystem-v15-feature-fragment-runtime-gate/1.0",
+  "deployment_state": "fail_closed",
+  "runtime_evaluation_enabled": false,
+  "runtime_adapter_available": false,
+  "pilot_v1_runtime_allowed": false,
+  "pilot_v1_rule_count": 6,
+  "exported_rule_count": 0,
+  "accepted_rule_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "benchmark_runtime_export_gate": {
+    "path": "docs/audits/feature_fragment_benchmark_v2/runtime_export_gate.json",
+    "sha256": "ea0cb31811259a8a8da0d40fd50ee552a195f7dc147e0bb5df6896a02a916624"
+  },
+  "reason": "no_feature_fragment_rule_passed_sealed_runtime_gate",
+  "runtime_influence": false,
+  "identity_rank_influence": false,
+  "score_contribution": 0.0
+}

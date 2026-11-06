@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "conditional-retrieval-v1",
+  "direct_precursor_retrieval": "always",
+  "neutral_mass_retrieval": "only_with_supported_specific_adduct_and_reliable_parser_state",
+  "semantic_gate_order": [
+    "source_tier",
+    "polarity",
+    "dense_window_candidate_budget",
+    "expensive_scoring"
+  ],
+  "searchable_source_tiers": [
+    "curated",
+    "experimental",
+    "massbank_supplement",
+    "merged",
+    "legacy_unresolved"
+  ],
+  "excluded_source_tiers": [
+    "predicted",
+    "in_silico",
+    "literature_presence_only",
+    "user_unverified",
+    "metadata_conflict",
+    "quarantined",
+    "unknown"
+  ],
+  "offline_mmap_cutover": {
+    "default_enabled": false,
+    "requires_complete_library": true,
+    "requires_library_snapshot_match": true,
+    "requires_record_alignment_hash_match": true,
+    "requires_candidate_order_equivalence": true,
+    "requires_golden_topk_equivalence": true
+  }
+}

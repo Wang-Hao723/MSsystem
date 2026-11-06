@@ -1,0 +1,117 @@
+{
+  "schema_version": "mssystem.v16.dual-polarity-shadow.policy/1.0.0",
+  "module_id": "v16_dual_polarity_evidence_graph",
+  "algorithm_id": "mssystem-v16-dual-polarity-evidence-graph-1.0.0",
+  "execution": {
+    "mode": "shadow_only",
+    "runtime_effect": false,
+    "production_top1_changed": false,
+    "production_top5_changed": false,
+    "production_score_changed": false,
+    "production_decision_changed": false,
+    "production_confidence_changed": false,
+    "production_compound_count_changed": false,
+    "automatic_activation_allowed": false
+  },
+  "task_pairing": {
+    "explicit_task_ids_required": true,
+    "filename_pairing_allowed": false,
+    "required_task_status": "completed",
+    "required_polarities": [
+      "POS",
+      "NEG"
+    ],
+    "mixed_or_unknown_polarity_action": "reject",
+    "same_task_or_same_polarity_action": "reject"
+  },
+  "candidate_independent_anchor": {
+    "allowed_sources": [
+      "reliable_iimn",
+      "validated_openms_adduct_group"
+    ],
+    "iimn_required": {
+      "ion_identity_status": "networked",
+      "evidence_status": "networked",
+      "runtime_influence": true,
+      "network_id_required": true,
+      "minimum_member_feature_count": 2,
+      "explicit_adduct_required": true,
+      "adduct_sign_must_match_task_ion_mode": true,
+      "candidate_identity_conflict_affects_membership": false
+    },
+    "openms_group_required": {
+      "status": "validated",
+      "runtime_influence": true,
+      "neutral_mass_consistent": true,
+      "neutral_mass_tolerance_ppm": 10.0,
+      "neutral_mass_tolerance_da_floor": 0.001,
+      "maximum_member_rt_delta_seconds": 10.0,
+      "minimum_member_feature_count": 2,
+      "minimum_distinct_adduct_count": 2,
+      "group_id_required": true,
+      "explicit_adduct_required": true,
+      "adduct_sign_must_match_task_ion_mode": true,
+      "pyopenms_manifest_and_feature_xml_hash_binding_required": true,
+      "deconvolution_status_required": "ok",
+      "candidate_identity_conflict_affects_membership": false
+    },
+    "unlinked_feature_neutral_mass_allowed": false,
+    "polarity_only_default_adduct_allowed": false
+  },
+  "cross_polarity_edge": {
+    "neutral_mass_tolerance_ppm": 10.0,
+    "neutral_mass_tolerance_da_floor": 0.001,
+    "maximum_rt_delta_seconds": 20.0,
+    "pairing_strategy": "degree_one_unique_only",
+    "one_to_many_action": "ambiguous_no_merge",
+    "candidate_identity_used_for_edge_construction": false,
+    "spectrum_similarity_used_for_edge_construction": false
+  },
+  "rt_alignment": {
+    "optional": true,
+    "when_supplied_task_and_source_hash_binding_required": true,
+    "failed_or_partial_alignment_action": "reject",
+    "missing_anchor_mapping_action": "exclude_anchor",
+    "raw_rt_used_when_alignment_absent": true
+  },
+  "candidate_support": {
+    "stable_2d_connectivity_required": true,
+    "same_name_is_connectivity_evidence": false,
+    "same_formula_is_connectivity_evidence": false,
+    "formula_conflict_action": "retain_conflict_without_dual_support",
+    "top40_single_polarity_candidate_scope": "candidate_hypothesis_support_only",
+    "dual_polarity_candidate_scope": "dual_polarity_candidate_support_only",
+    "candidate_can_replace_winner": false,
+    "candidate_can_receive_2d_connectivity_decision": false,
+    "candidate_can_increase_compound_count": false,
+    "candidate_attachment_occurs_after_graph_freeze": true,
+    "flagship_binding_field": "member_result_indices",
+    "potential_contaminants_excluded_from_display_support": true,
+    "explicit_contaminant_or_exogenous_roles_excluded_from_display_support": true,
+    "excluded_candidates_retained_for_quality_control": true,
+    "forbidden_inference_inputs": [
+      "compound_name",
+      "translated_compound_name",
+      "database_accession_as_identity",
+      "ground_truth_identity",
+      "standard_name",
+      "sample_filename"
+    ]
+  },
+  "cross_polarity_ms2_similarity": {
+    "state": "auxiliary_only",
+    "allowed_uses": [
+      "edge_annotation",
+      "analogue_hint"
+    ],
+    "can_create_candidate_independent_edge": false,
+    "can_create_dual_connectivity_support": false,
+    "can_change_ranking": false,
+    "score_is_probability": false
+  },
+  "entity_accounting": {
+    "one_accepted_pair_creates_neutral_entities": 1,
+    "precursor_event_evidence_records_per_neutral_entity": 2,
+    "compound_count_increment": 0
+  }
+}

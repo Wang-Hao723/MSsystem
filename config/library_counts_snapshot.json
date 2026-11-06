@@ -1,0 +1,56 @@
+{
+  "schema_version": "mssystem.library-counts-snapshot/1.0.0",
+  "generated_at": "2026-08-31T00:00:00+08:00",
+  "load_name_only_leads": false,
+  "libraries": {
+    "small": {
+      "path": "/Users/zizi/Desktop/Mssystem_shared_data/local_library_small.db",
+      "size_bytes": 1199210496,
+      "mtime_ns": 1784810671159092334,
+      "counts": {
+        "spectra": 646080,
+        "physical_spectra": 646080,
+        "source_searchable_spectra": 605229,
+        "runtime_searchable_spectra": 585918,
+        "excluded_by_source": 40851,
+        "excluded_by_runtime_structure_gate": 19311,
+        "runtime_projection_exact": true,
+        "compounds": 250653,
+        "source_tiers": {
+          "legacy_unresolved": 605229,
+          "predicted": 39631,
+          "quarantined": 1220
+        }
+      }
+    },
+    "full": {
+      "path": "/Users/zizi/Desktop/Mssystem_shared_data/local_library.db",
+      "size_bytes": 5396340736,
+      "mtime_ns": 1787578055804880602,
+      "snapshot_id": "sqlite-d62ca6d20bbf916ecf7f2edc",
+      "counts": {
+        "spectra": 4674363,
+        "physical_spectra": 4674363,
+        "source_searchable_spectra": 3809877,
+        "runtime_searchable_spectra": 3364256,
+        "excluded_by_source": 864486,
+        "excluded_by_runtime_structure_gate": 445621,
+        "runtime_projection_exact": true,
+        "compounds": 1436463,
+        "source_tiers": {
+          "curated": 443,
+          "experimental": 3696954,
+          "massbank_supplement": 4074,
+          "merged": 108406,
+          "predicted": 490043,
+          "quarantined": 374443
+        }
+      }
+    }
+  },
+  "calculation": {
+    "physical_spectra": "Spectra rows with finite positive precursor_mz",
+    "source_searchable_spectra": "physical rows after source_tier inclusion",
+    "runtime_searchable_spectra": "source-searchable rows after the production structure gate"
+  }
+}

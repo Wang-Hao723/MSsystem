@@ -1,0 +1,41 @@
+[
+  {
+    "package": "smiles-drawer",
+    "version": "2.0.3",
+    "metadata_url": "https://registry.npmjs.org/smiles-drawer/2.0.3",
+    "tarball": "https://registry.npmjs.org/smiles-drawer/-/smiles-drawer-2.0.3.tgz",
+    "npm_integrity": "sha512-G95FIAqeVyZOj5LlAE5QR0ERfGL5cOvx+LQfEGmtqVLQ8LypKRZ9TCo2Ne2lgqhFrdXQpftKf+79o6C0ItDMNg==",
+    "integrity_verified": true,
+    "license_from_package": "package/LICENSE.md",
+    "bundle": "smiles-drawer-2.0.3.min.js",
+    "bytes": 183137,
+    "sha256": "917c95165fd8af50f76ffbf35eac0b74e7f0c93d715132eaa9bfc5e3374445ec",
+    "license_sha256": "919c7fa7363867d5785a1362aeb1df8ffa62f976db7f963fd57c397c2cbadeb4"
+  },
+  {
+    "package": "plotly.js-dist-min",
+    "version": "2.35.2",
+    "metadata_url": "https://registry.npmjs.org/plotly.js-dist-min/2.35.2",
+    "tarball": "https://registry.npmjs.org/plotly.js-dist-min/-/plotly.js-dist-min-2.35.2.tgz",
+    "npm_integrity": "sha512-oWDTf2kYOmTtEw3epeeSBdfH/H3OSktF0suST9oI6fIgKfbyd4MT7TPh8+CVzdHYllYon24Q0HI1hZjOnLqk6g==",
+    "integrity_verified": true,
+    "license_from_package": "package/LICENSE",
+    "bundle": "plotly-2.35.2.min.js",
+    "bytes": 4558696,
+    "sha256": "6d21266ce1bd7d9e5ab4e115989c70c20de0382fd973a8f26ab58619eba4d603",
+    "license_sha256": "67a26cf80f03ff388f26945dfc1f6caed1a0746ff43871190339b3aee49b94bb"
+  },
+  {
+    "package": "cytoscape",
+    "version": "3.28.1",
+    "metadata_url": "https://registry.npmjs.org/cytoscape/3.28.1",
+    "tarball": "https://registry.npmjs.org/cytoscape/-/cytoscape-3.28.1.tgz",
+    "npm_integrity": "sha512-xyItz4O/4zp9/239wCcH8ZcFuuZooEeF8KHRmzjDfGdXsj3OG9MFSMA0pJE0uX3uCN/ygof6hHf4L7lst+JaDg==",
+    "integrity_verified": true,
+    "license_from_package": "package/LICENSE",
+    "bundle": "cytoscape-3.28.1.min.js",
+    "bytes": 365827,
+    "sha256": "92d752b48ea949720675865197fd2a0001c95bc5888545e990af60321712d4c6",
+    "license_sha256": "ac2a446d6e1b489d9568def4ba7790ab81f5023ebba335d49a77dbff1960232e"
+  }
+]

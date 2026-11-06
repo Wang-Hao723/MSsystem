@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.2.0",
+  "protocol_id": "mssystem-v11-flagship-external-connectivity-validation-1.2.0",
+  "study_state": "locked_protocol_awaiting_external_authentic_standard_manifest",
+  "flagship_contract": {
+    "algorithm_id": "mssystem-v11-flagship-chem-entity-ranker-1.2.1",
+    "policy_semantic_sha256": "e2811611ab697b5e5b81cdd9cf9cd8ff14bfb867d727f33a660ad5f0635fd3ac",
+    "identity_registry_sha256": "a65b333256213878d0fb412042bd86c053c16d35d5c31bd211113b805f88e2ef",
+    "candidate_generator": "same_frozen_scan_level_top20_for_both_methods",
+    "baseline": "candidate_independent_highest_tic_representative_scan_top1",
+    "challenger": "strict_v11_2d_connectivity_release",
+    "forbidden_changes_after_freeze": [
+      "ranking_weights",
+      "decision_thresholds",
+      "candidate_budget",
+      "identity_registry",
+      "ground_truth_matching_rules"
+    ]
+  },
+  "truth": {
+    "identity_unit": "rdkit_two_dimensional_connectivity",
+    "required_status": "authentic_standard",
+    "allowed_provenance": [
+      "authenticated_reference_material",
+      "in_house_authentic_standard_with_lot_record",
+      "certified_reference_material"
+    ],
+    "require_nonempty_standard_lot": true,
+    "require_single_component_rdkit_structure": true,
+    "require_declared_formula_structure_agreement": true,
+    "require_declared_inchikey_structure_agreement": true
+  },
+  "independence": {
+    "primary_unit": "unique_truth_connectivity_identity",
+    "at_most_one_novel_identity_primary_per_connectivity": true,
+    "method_transfer_only_identities_may_have_zero_novel_primary": true,
+    "method_variant_unit": "unique_truth_connectivity_by_detection_method",
+    "same_identity_different_detection_methods_retained": true,
+    "method_variants_increase_novel_identity_primary_n": false,
+    "technical_repeats_increase_primary_n": false,
+    "technical_repeats_are_secondary_repeatability_only": true,
+    "same_raw_artifact_for_paired_methods": true
+  },
+  "externality": {
+    "flagship_policy_path": "config/v11_flagship_policy_v11_frozen.json",
+    "development_truth_manifest_path": "eval/v7val/33components_gt_enriched.csv",
+    "development_truth_manifest_sha256": "69bfb363cbab960f3616d33954ad66a95e9773fb4a4b680d608b9db5feff799a",
+    "canonical_identity_registry_path": "config/canonical_name_identity_registry_v11_frozen.json",
+    "development_identity_overlap": "allowed_for_method_transfer_forbidden_for_novel_identity_primary",
+    "identity_repair_registry_overlap": "allowed_for_method_transfer_forbidden_for_novel_identity_primary",
+    "murcko_scaffold_overlap": "report_only_stratification"
+  },
+  "blinding": {
+    "hide_truth_name_structure_identity_and_standard_id_from_prediction_bundle": true,
+    "seal_truth_before_predictions": true,
+    "lock_predictions_to_public_cohort_sha256_before_unsealing": true,
+    "derive_baseline_and_flagship_from_pinned_v11_sidecar": true,
+    "manual_baseline_or_winner_submission_is_confirmatory": false,
+    "reject_truth_or_correctness_fields_in_prediction_input": true
+  },
+  "primary_endpoint": {
+    "name": "complete_strict_2d_connectivity_top1_accuracy",
+    "flagship_release_status": "selected",
+    "flagship_release_scope": "2d_connectivity_candidate",
+    "single_energy_ambiguous_isomer_group_and_unmatched_count_as_incorrect": true,
+    "abstention_counts_as_incorrect": true,
+    "method_variants_excluded_from_novel_identity_primary_endpoint": true,
+    "technical_repeats_excluded_from_primary_endpoint": true,
+    "paired_test": "two_sided_exact_mcnemar",
+    "effect": "flagship_minus_scan_top1_accuracy",
+    "confidence_interval": "paired_identity_bootstrap_percentile"
+  },
+  "secondary_endpoints": [
+    "raw_flagship_winner_top1_accuracy",
+    "strict_release_coverage",
+    "strict_release_selective_accuracy",
+    "technical_repeat_correctness_agreement",
+    "method_transfer_accuracy_clustered_by_connectivity_identity",
+    "same_identity_cross_method_correctness_agreement",
+    "polarity_adduct_instrument_and_batch_strata",
+    "murcko_scaffold_overlap_strata"
+  ],
+  "statistics": {
+    "alpha": 0.05,
+    "confidence_level": 0.95,
+    "paired_bootstrap_iterations": 10000,
+    "paired_bootstrap_seed": 20260808,
+    "minimum_independent_identities": 239,
+    "confirmatory_gate_requires_positive_point_estimate": true,
+    "confirmatory_gate_requires_ci_lower_bound_greater_than": 0.0,
+    "confirmatory_gate_requires_exact_mcnemar_p_below": 0.05,
+    "automatic_deployment_authorized": false
+  },
+  "sample_size_planning": {
+    "method": "exact_two_sided_mcnemar",
+    "target_power": 0.90,
+    "alpha": 0.05,
+    "primary_assumption": {
+      "flagship_only_correct_probability": 0.1,
+      "baseline_only_correct_probability": 0.025,
+      "net_accuracy_gain": 0.075,
+      "required_analyzable_identities": 239,
+      "unusable_fraction": 0.1,
+      "target_enrollment": 266
+    },
+    "sensitivity": [
+      {
+        "flagship_only_correct_probability": 0.075,
+        "baseline_only_correct_probability": 0.0,
+        "net_accuracy_gain": 0.075,
+        "required_n_80_percent_power": 104,
+        "required_n_90_percent_power": 122
+      },
+      {
+        "flagship_only_correct_probability": 0.1,
+        "baseline_only_correct_probability": 0.025,
+        "net_accuracy_gain": 0.075,
+        "required_n_80_percent_power": 185,
+        "required_n_90_percent_power": 239
+      },
+      {
+        "flagship_only_correct_probability": 0.075,
+        "baseline_only_correct_probability": 0.025,
+        "net_accuracy_gain": 0.05,
+        "required_n_80_percent_power": 337,
+        "required_n_90_percent_power": 431
+      },
+      {
+        "flagship_only_correct_probability": 0.1,
+        "baseline_only_correct_probability": 0.05,
+        "net_accuracy_gain": 0.05,
+        "required_n_80_percent_power": 498,
+        "required_n_90_percent_power": 652
+      },
+      {
+        "flagship_only_correct_probability": 0.125,
+        "baseline_only_correct_probability": 0.025,
+        "net_accuracy_gain": 0.1,
+        "required_n_80_percent_power": 122,
+        "required_n_90_percent_power": 158
+      }
+    ]
+  },
+  "acquisition_controls": {
+    "randomize_injection_order_with_seed": true,
+    "randomization_schedule_schema_version": "1.1.0",
+    "randomization_algorithm_id": "mssystem-v11-external-blocked-randomization-1.1.0",
+    "require_frozen_randomization_schedule_sha256": true,
+    "require_unique_run_order_within_instrument_batch": true,
+    "physical_randomization_block_by": [
+      "instrument_domain",
+      "acquisition_batch"
+    ],
+    "stratify_within_physical_block_by": [
+      "polarity",
+      "adduct",
+      "chemical_class"
+    ],
+    "balance_chemical_class_when_feasible": true,
+    "require_detection_method_id_for_every_method_case": true,
+    "allow_same_connectivity_under_distinct_detection_methods": true,
+    "reject_duplicate_connectivity_detection_method_cells": true,
+    "default_technical_repeat_fraction": 0.1,
+    "maximum_technical_repeat_fraction": 0.2,
+    "maximum_technical_repeats_per_method_case": 1,
+    "minimum_technical_repeat_run_separation": 5,
+    "explicit_sidecar_binding_required": true,
+    "directory_discovery_for_sidecars_forbidden": true,
+    "prediction_methods_run_on_identical_source_artifacts": true,
+    "analyst_blinded_until_prediction_lock": true
+  }
+}

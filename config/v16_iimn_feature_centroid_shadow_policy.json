@@ -1,0 +1,58 @@
+{
+  "schema_version": "mssystem.v16.iimn-feature-centroid-shadow.policy/1.0.0",
+  "module_id": "v16_iimn_feature_centroid_shadow",
+  "algorithm_id": "mssystem-v16-iimn-feature-centroid-shadow-1.0.0",
+  "execution": {
+    "mode": "shadow_only",
+    "runtime_effect": false,
+    "production_results_mutated": false,
+    "production_ranking_changed": false,
+    "production_confidence_changed": false,
+    "production_compound_count_changed": false,
+    "automatic_activation_allowed": false
+  },
+  "candidate_independent_projection": {
+    "allowed_result_fields": [
+      "spectrum_id",
+      "precursor_mz",
+      "retention_time",
+      "retention_time_unit",
+      "ion_mode",
+      "polarity",
+      "lcms_feature_id",
+      "precursor_feature_id",
+      "lcms_feature_mz",
+      "lcms_feature_rt_minutes",
+      "lcms_feature_link_status",
+      "lcms_feature_candidate_count"
+    ],
+    "candidate_fields_projected": false,
+    "candidate_identity_used_for_trace_selection": false,
+    "candidate_identity_used_for_network_construction": false
+  },
+  "trace_center": {
+    "current_source": "precursor_mz",
+    "shadow_source": "lcms_feature_mz",
+    "required_link_status": "linked_openms_feature",
+    "feature_id_required": true,
+    "finite_positive_feature_mz_required": true,
+    "fallback_source": "precursor_mz",
+    "fallback_when_missing_or_nonunique": true,
+    "mz_tolerance_da_floor": 0.001,
+    "mz_tolerance_ppm": 10.0
+  },
+  "network_construction": {
+    "neutral_mass_hypothesis_input_unchanged": true,
+    "pairing_rt_input_unchanged": true,
+    "ion_species_table_unchanged": true,
+    "shape_correlation_threshold_unchanged": true,
+    "overlap_threshold_unchanged": true,
+    "apex_rt_threshold_unchanged": true
+  },
+  "source_binding": {
+    "candidate_independent_projection_sha256_required": true,
+    "task_metadata_sha256_required": true,
+    "source_file_sha256_when_path_supplied": true,
+    "source_files_must_remain_unchanged": true
+  }
+}

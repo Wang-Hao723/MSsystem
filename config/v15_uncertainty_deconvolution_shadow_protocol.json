@@ -1,0 +1,124 @@
+{
+  "schema_version": "mssystem.v15.uncertainty-deconvolution-shadow/1.0.0",
+  "protocol_id": "mssystem-v15-project-aware-candidate-set-and-selective-deconvolution-shadow-1.0.0",
+  "protocol_date": "2026-08-29",
+  "execution": {
+    "mode": "retrospective_shadow",
+    "runtime_effect": false,
+    "production_ranking_changed": false,
+    "production_score_changed": false,
+    "production_decision_changed": false,
+    "production_task_artifacts_changed": false,
+    "production_qvalue_assignment_allowed": false,
+    "automatic_activation_allowed": false
+  },
+  "cohorts": {
+    "calibration": [
+      "MIX33",
+      "F001"
+    ],
+    "retrospective_transfer_evaluation": [
+      "F002",
+      "F003",
+      "F004",
+      "F005",
+      "F006",
+      "F007",
+      "F008"
+    ],
+    "deconvolution_applicability_audit": [
+      "MIX33",
+      "F001",
+      "F002",
+      "F003",
+      "F004",
+      "F005",
+      "F006",
+      "F007",
+      "F008"
+    ],
+    "automs_samples_allowed": false,
+    "technical_injections_are_independent_samples": false
+  },
+  "candidate_set": {
+    "ranking_source": "frozen_v15_top40_pairwise_shadow_score",
+    "ranking_source_is_production_score": false,
+    "model_refit_allowed": false,
+    "nonconformity": "maximum_candidate_score_minus_best_acceptable_truth_candidate_score",
+    "primary_miscoverage_alpha": 0.05,
+    "finite_sample_quantile": "ceil((n_calibration_plus_1)*(1-alpha))_th_order_statistic_capped_at_n",
+    "current_v15_winner_must_be_included_when_present": true,
+    "candidate_set_can_change_production_top1": false,
+    "candidate_set_can_create_unique_connectivity_release": false,
+    "candidate_set_can_increase_compound_count": false,
+    "truth_absent_from_top40_action": "candidate_retrieval_failure_and_unresolved_event",
+    "same_formula_multiple_connectivities_action": "unresolved_isomer_candidate_group",
+    "different_or_missing_formula_action": "unresolved_precursor_event",
+    "singleton_action": "retain_existing_v15_scope_without_promotion",
+    "score_is_probability": false,
+    "coverage_is_valid_only_if_exchangeability_and_candidate_recall_hold": true,
+    "forbidden_inputs": [
+      "compound_name",
+      "translated_compound_name",
+      "database_accession",
+      "standard_name",
+      "standard_code",
+      "sample_filename",
+      "ground_truth_identity_at_inference"
+    ],
+    "distribution_shift_audit": {
+      "method": "two_sample_kolmogorov_smirnov",
+      "fields": [
+        "candidate_count",
+        "top_shadow_score",
+        "shadow_score_entropy"
+      ],
+      "maximum_p_value": 0.01,
+      "minimum_ks_statistic": 0.20,
+      "failed_action": "withhold_coverage_claim_and_keep_shadow_only"
+    },
+    "cluster_bootstrap": {
+      "cluster": "truth_2d_connectivity",
+      "replicates": 10000,
+      "seed": 20260829,
+      "confidence_level": 0.95
+    }
+  },
+  "selective_deconvolution": {
+    "implementation": "matching/chimeric_deconvolution.py",
+    "method": "nonnegative_l1_sparse_regression",
+    "global_application_allowed": false,
+    "required_isolation_statuses": [
+      "mixed",
+      "severe"
+    ],
+    "required_inputs": [
+      "preceding_or_referenced_ms1_scan",
+      "selected_precursor_mz",
+      "per_scan_isolation_window_lower_offset",
+      "per_scan_isolation_window_upper_offset",
+      "at_least_two_nonredundant_component_spectra"
+    ],
+    "explicit_method_full_width_may_replace_missing_offsets": true,
+    "default_or_inferred_isolation_width_allowed": false,
+    "missing_isolation_width_action": "not_applicable_without_deconvolution",
+    "synthetic_positive_control_can_support_real_sample_gain_claim": false,
+    "accepted_fit_can_change_production_top1": false,
+    "accepted_fit_requires_independent_fdr_noninferiority_before_promotion": true
+  },
+  "identity_governance": {
+    "one_precursor_event_primary_result_record_count": 1,
+    "database_name_translation_allowed": false,
+    "database_name_used_for_scoring": false,
+    "database_name_used_for_calibration": false,
+    "same_formula_different_structure": "unresolved_isomer_candidate_group",
+    "different_formula": "unresolved_precursor_event_not_counted_as_compound"
+  },
+  "claim_boundary": {
+    "retrospective_results_are_confirmatory": false,
+    "independent_sealed_validation_complete": false,
+    "candidate_set_coverage_guarantee_allowed_after_detected_shift": false,
+    "decoid_over_30_percent_external_result_transfers_to_v15": false,
+    "production_integration_allowed": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "method_id": "mssystem-project-target-decoy-v1",
+  "method_version": "1.0.0",
+  "score_field": "rank_score",
+  "higher_score_is_better": true,
+  "winner_tie_policy": "decoy",
+  "pseudocount": 1.0,
+  "min_competitions": 100,
+  "min_target_winners": 50,
+  "min_decoy_winners": 10,
+  "allowed_unit_levels": [
+    "precursor_event",
+    "chromatographic_feature",
+    "ion_identity_group",
+    "neutral_analyte"
+  ],
+  "allowed_claim_scopes": [
+    "2d_connectivity",
+    "isomer_group",
+    "molecular_formula",
+    "chemical_class"
+  ],
+  "stratum_fallback": [
+    ["unit_level", "claim_scope", "polarity", "instrument_family", "source_tier"],
+    ["unit_level", "claim_scope", "polarity", "instrument_family"],
+    ["unit_level", "claim_scope", "polarity"],
+    ["unit_level", "claim_scope"]
+  ],
+  "max_target_decoy_pool_ratio": 4.0,
+  "qvalue_release_thresholds": [0.01, 0.05, 0.1]
+}

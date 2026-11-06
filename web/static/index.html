@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSsystem · I.D.E.A platform</title>
+<link rel="stylesheet" href="/static/css/style.css?v=16.3.1-qftoverlap">
+<link rel="stylesheet" href="/static/css/workspace-v7.css?v=16.0">
+<link rel="stylesheet" href="/static/css/mssystem-brand.css?v=20261024v16">
+<link rel="icon" type="image/png" href="/static/brand/MSsystem-icon-light.png?v=20261024v16">
+<link rel="stylesheet" href="/static/css/visual-results.css?v=16.5-20261015">
+<link rel="stylesheet" href="/static/css/result-evidence-visual.css?v=16.6-20261016">
+<link rel="stylesheet" href="/static/css/completed-batches.css?v=20261022-xbt1">
+<link rel="stylesheet" href="/static/css/storage-manager.css?v=20261024b">
+<script src="/static/js/i18n-catalog.js?v=16.2"></script>
+<script src="/static/js/i18n-results-catalog.js?v=15.5"></script>
+<script src="/static/js/i18n-report-catalog.js?v=15.8"></script>
+<script src="/static/js/i18n-evidence-catalog.js?v=15.7"></script>
+<script src="/static/js/i18n.js?v=15.10"></script>
+<script src="/static/vendor/plotly-2.35.2.min.js"></script>
+<script src="/static/vendor/smiles-drawer-2.0.3.min.js"></script>
+<script src="/static/vendor/cytoscape-3.28.1.min.js"></script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     Mobile Toggle & Overlay
+     ═══════════════════════════════════════════════════════════════ -->
+<button class="mobile-nav-toggle" onclick="App.toggleSidebar()" title="菜单">☰</button>
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="App.toggleSidebar()"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     Sidebar Navigation
+     ═══════════════════════════════════════════════════════════════ -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand mssystem-brand-approved">
+    <div class="sidebar-logo mssystem-approved-icon"><img src="/static/brand/MSsystem-icon-light.png?v=20261024v16" alt="MSsystem"></div>
+    <div class="sidebar-brand-text">
+      <h1>MSsystem</h1>
+      <span>I.D.E.A platform</span>
+    </div>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">总览 / Overview</div>
+    <button class="nav-item active" data-page="dashboard" data-label="分析工作台" data-label-en="Analysis Workspace">
+      <span class="nav-icon">⌂</span><span class="nav-copy"><span>分析工作台</span><small>Analysis Workspace</small></span>
+    </button>
+
+    <div class="nav-section-label">分析流程 / Analysis Workflow</div>
+    <button class="nav-item" data-page="upload" data-label="数据与质量控制" data-label-en="Data &amp; Quality Control">
+      <span class="nav-icon">01</span><span class="nav-copy"><span>数据与质量控制</span><small>Data &amp; Quality Control</small></span>
+    </button>
+    <button class="nav-item" data-page="tasks" data-label="运行队列" data-label-en="Run Queue">
+      <span class="nav-icon">02</span><span class="nav-copy"><span>运行队列</span><small>Run Queue</small></span>
+      <span class="nav-badge" id="taskCount" style="display:none">0</span>
+    </button>
+    <button class="nav-item" data-page="results" data-label="鉴定结果" data-label-en="Identification Results">
+      <span class="nav-icon">03</span><span class="nav-copy"><span>鉴定结果</span><small>Identification Results</small></span>
+    </button>
+    <button class="nav-item" data-page="completed-batches" data-label="完整批次结果" data-label-en="Completed Batches">
+      <span class="nav-icon">▦</span><span class="nav-copy"><span>完整批次结果</span><small>Completed Batches</small></span>
+    </button>
+
+    <div class="nav-section-label">证据解释 / Evidence</div>
+    <button class="nav-item" data-page="review" data-label="鉴定详情" data-label-en="Identification Details">
+      <span class="nav-icon">✓</span><span class="nav-copy"><span>鉴定详情</span><small>Identification Details</small></span>
+    </button>
+    <button class="nav-item" data-page="spectrum" data-label="谱图证据" data-label-en="Spectral Evidence">
+      <span class="nav-icon">◫</span><span class="nav-copy"><span>谱图证据</span><small>Spectral Evidence</small></span>
+    </button>
+    <button class="nav-item" data-page="network" data-label="分子网络" data-label-en="Molecular Networking">
+      <span class="nav-icon">◇</span><span class="nav-copy"><span>分子网络</span><small>Molecular Networking</small></span>
+    </button>
+    <button class="nav-item" data-page="classification" data-label="分类总览" data-label-en="Classification Overview">
+      <span class="nav-icon">◌</span><span class="nav-copy"><span>分类总览</span><small>Classification Overview</small></span>
+    </button>
+
+    <div class="nav-section-label">交付与资源 / Delivery &amp; Resources</div>
+    <button class="nav-item" data-page="export" data-label="报告与导出" data-label-en="Reports &amp; Exports">
+      <span class="nav-icon">⇩</span><span class="nav-copy"><span>报告与导出</span><small>Reports &amp; Exports</small></span>
+    </button>
+    <button class="nav-item" data-page="library" data-label="谱库管理" data-label-en="Library Management">
+      <span class="nav-icon">▤</span><span class="nav-copy"><span>谱库管理</span><small>Library Management</small></span>
+    </button>
+  </nav>
+  <div class="sidebar-footer">
+    <span class="sidebar-runtime-dot"></span>
+    <span id="sidebarRuntimeState">I.D.E.A platform · V16 · 8516</span>
+  </div>
+</aside>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     Main Content
+     ═══════════════════════════════════════════════════════════════════ -->
+<main class="main">
+  <header class="app-topbar">
+    <div>
+      <div class="topbar-brand-row">
+        <div class="topbar-kicker">MSsystem</div>
+        <span class="idea-platform-tag">I.D.E.A platform</span>
+      </div>
+      <div class="topbar-title" id="currentPageLabel">分析工作台 · Analysis Workspace</div>
+    </div>
+    <div class="topbar-status">
+      <div class="global-language-switch" data-language-switch role="group" aria-label="界面语言">
+        <svg class="global-language-icon" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16">
+          <circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.2 2.5 3.4 5.5 3.4 9S14.2 18.5 12 21M12 3C9.8 5.5 8.6 8.5 8.6 12S9.8 18.5 12 21"></path>
+        </svg>
+        <button type="button" class="global-language-option" data-language-option="zh-CN" lang="zh-CN" data-i18n-skip>中文</button>
+        <span class="global-language-divider" aria-hidden="true"></span>
+        <button type="button" class="global-language-option" data-language-option="en-US" lang="en" data-i18n-skip>English</button>
+      </div>
+      <span class="topbar-chip" id="topbarLibraryState"><i></i>谱库未加载</span>
+      <span class="topbar-chip topbar-chip-runtime" id="topbarRuntimeState"><i></i>V16 · 8516</span>
+    </div>
+  </header>
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       PAGE: LC–MS/MS Analysis Dashboard
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="page active" id="page-dashboard">
+    <div class="dashboard-hero">
+      <div class="dashboard-hero-copy">
+        <div class="dashboard-eyebrow">I.D.E.A PLATFORM · LC–MS/MS ANALYSIS WORKBENCH</div>
+        <h2>LC–MS/MS 数据处理与<span class="dashboard-title-term">化合物鉴定</span></h2>
+        <p>面向正、负离子数据的统一流程：原始数据转换、逐谱表征核验、MS1 色谱特征提取、MS/MS 谱库检索、分子网络和跨样本对齐。候选注释与结构确认分层呈现。</p>
+        <div class="dashboard-hero-actions">
+          <button class="btn dashboard-primary-action" onclick="App.navigateTo('upload')">开始新分析 <span>→</span></button>
+          <button class="btn dashboard-secondary-action" onclick="App.navigateTo('tasks')">查看运行队列</button>
+        </div>
+      </div>
+      <div class="dashboard-hero-system">
+        <span class="hero-system-label">CURRENT INSTANCE</span>
+        <strong id="dashInstanceName">MSsystem V16 · 8516</strong>
+        <span id="dashRuntimePath">正在核验运行路径…</span>
+        <div class="hero-system-line"><i id="dashServiceDot"></i><span id="dashServiceStatus">连接服务中</span></div>
+      </div>
+    </div>
+
+    <div data-completed-batch-entry="dashboard" class="completed-batch-entry" data-i18n-skip></div>
+
+    <div class="workflow-rail" aria-label="分析工作流">
+      <button class="workflow-step" onclick="App.navigateTo('upload')">
+        <span class="workflow-index">01</span><span><strong>数据导入 <em>Data Import</em></strong><small>.d / mzML / MGF</small></span>
+      </button>
+      <span class="workflow-arrow">→</span>
+      <button class="workflow-step" onclick="App.navigateTo('upload')">
+        <span class="workflow-index">02</span><span><strong>质量审计 <em>Quality Audit</em></strong><small>MS1 / MS2 / 极性 / 空白</small></span>
+      </button>
+      <span class="workflow-arrow">→</span>
+      <button class="workflow-step" onclick="App.navigateTo('tasks')">
+        <span class="workflow-index">03</span><span><strong>谱库分析 <em>Library Analysis</em></strong><small>匹配 / 结构 / 证据门</small></span>
+      </button>
+      <span class="workflow-arrow">→</span>
+      <button class="workflow-step" onclick="App.navigateTo('network')">
+        <span class="workflow-index">04</span><span><strong>证据解释 <em>Evidence Interpretation</em></strong><small>谱图 / 网络 / 分类</small></span>
+      </button>
+      <span class="workflow-arrow">→</span>
+      <button class="workflow-step" onclick="App.navigateTo('export')">
+        <span class="workflow-index">05</span><span><strong>报告交付 <em>Report Delivery</em></strong><small>HTML / PDF / 数据表</small></span>
+      </button>
+    </div>
+
+    <div class="dashboard-metrics">
+      <article class="dashboard-metric">
+        <span class="metric-label">参考谱库</span>
+        <strong id="dashLibraryValue">检查中</strong>
+        <span class="metric-meta" id="dashLibraryMeta">读取加载状态</span>
+      </article>
+      <article class="dashboard-metric">
+        <span class="metric-label">运行队列</span>
+        <strong id="dashTaskValue">—</strong>
+        <span class="metric-meta" id="dashTaskMeta">读取任务状态</span>
+      </article>
+      <article class="dashboard-metric">
+        <span class="metric-label">已完成分析</span>
+        <strong id="dashCompletedValue">—</strong>
+        <span class="metric-meta">可进入结果与网络</span>
+      </article>
+      <article class="dashboard-metric">
+        <span class="metric-label">可用存储</span>
+        <strong id="dashStorageValue">—</strong>
+        <span class="metric-meta">运行输出空间</span>
+      </article>
+    </div>
+
+    <div class="dashboard-content-grid">
+      <section class="dashboard-panel">
+        <div class="dashboard-panel-head">
+          <div><span class="panel-eyebrow">READINESS</span><h3>分析就绪状态</h3></div>
+          <button class="text-action" onclick="Dashboard.load(true)">刷新</button>
+        </div>
+        <div class="readiness-list">
+          <div class="readiness-item"><span class="readiness-icon">IN</span><div><strong>原始输入审计</strong><small>Agilent `.d` 与开放格式均在分析前核对 MS1/MS2、前体和来源。</small></div><span class="readiness-state ready">就绪</span></div>
+          <div class="readiness-item"><span class="readiness-icon">±</span><div><strong>极性对称流程</strong><small>POS 与 NEG 使用同一分析流程和判定标准：过滤、匹配、空白和报告逻辑完全对称。</small></div><span class="readiness-state ready">就绪</span></div>
+          <div class="readiness-item"><span class="readiness-icon">MN</span><div><strong>特征级分子网络</strong><small>优先使用连续 MS1 色谱特征及其 MS2 共识谱；未链接谱图明确标为回退节点。</small></div><span class="readiness-state ready">READY</span></div>
+          <div class="readiness-item"><span class="readiness-icon">DB</span><div><strong>参考谱库</strong><small id="dashLibraryReadiness">需要在分析前明确选择 Full 或 Small。</small></div><span class="readiness-state" id="dashLibraryBadge">待加载</span></div>
+        </div>
+      </section>
+
+      <section class="dashboard-panel">
+        <div class="dashboard-panel-head">
+          <div><span class="panel-eyebrow">RECENT RUNS</span><h3>最近分析</h3></div>
+          <button class="text-action" onclick="App.navigateTo('tasks')">全部任务 →</button>
+        </div>
+        <div id="dashRecentTasks" class="dashboard-recent-list">
+          <div class="dashboard-empty">正在读取任务记录…</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="dashboard-shortcuts">
+      <button class="shortcut-card" onclick="App.navigateTo('results')"><span>01</span><strong>查看鉴定结果</strong><small>候选、得分、结构与证据层级</small></button>
+      <button class="shortcut-card" onclick="App.navigateTo('spectrum')"><span>02</span><strong>检查谱图证据</strong><small>原始谱、库谱与匹配碎片</small></button>
+      <button class="shortcut-card" onclick="App.navigateTo('network')"><span>03</span><strong>探索分子家族</strong><small>多层网络与孤立点统计</small></button>
+      <button class="shortcut-card" onclick="App.navigateTo('library')"><span>04</span><strong>管理参考谱库</strong><small>覆盖、来源、扩增与质量门</small></button>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       PAGE: Upload
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="page" id="page-upload">
+    <div class="page-header">
+      <span class="page-eyebrow">STAGE 01–02</span>
+      <h2>数据与质量控制</h2>
+      <span class="page-title-en">Data &amp; Quality Control</span>
+      <p>导入采集文件，核对 MS1/MS2、极性和空白证据，再进入分析队列。</p>
+      <div id="runtimeInstanceBadge" role="status" aria-live="polite"
+           style="display:inline-flex;align-items:center;margin-top:7px;padding:4px 9px;border-radius:999px;background:#edf2f7;color:#4a5568;font-size:0.72rem;font-weight:600;">
+        正在核验 MSsystem 服务实例…
+      </div>
+    </div>
+
+    <nav class="intake-step-rail" aria-label="数据导入流程 / Data intake workflow">
+      <div class="intake-step-rail-item is-ready"><span>01</span><strong>参考谱库 <em>Reference Library</em></strong><small>确认检索范围</small></div>
+      <div class="intake-step-rail-item is-current"><span>02</span><strong>选择样本 <em>Select Samples</em></strong><small>开放格式或 Agilent .d</small></div>
+      <div class="intake-step-rail-item"><span>03</span><strong>可选质控 <em>Optional QC</em></strong><small>空白背景证据</small></div>
+      <div class="intake-step-rail-item"><span>04</span><strong>参数与运行 <em>Parameters &amp; Run</em></strong><small>确认后进入队列</small></div>
+    </nav>
+
+    <!-- Step 1: Library Status -->
+    <section class="card intake-step-card intake-library-card">
+      <div class="intake-step-header">
+        <span class="intake-step-number">01</span>
+        <div><strong>参考质谱库</strong><span class="module-en">Reference Spectral Library</span><small>先确认检索库；默认 Full 适合完整筛查。</small></div>
+        <div class="btn-group intake-step-actions">
+          <select class="form-select" id="dbMode" style="width:auto;">
+            <option value="full" selected>Full</option>
+            <option value="small">Small (&lt;800 Da)</option>
+          </select>
+          <button class="btn btn-primary btn-sm" onclick="Upload.loadLibrary()" id="btnLoadLib">加载数据库</button>
+        </div>
+      </div>
+      <div id="libStatusArea"></div>
+    </section>
+
+    <!-- Step 2: Samples -->
+    <section class="card intake-step-card">
+      <div class="intake-step-header">
+        <span class="intake-step-number">02</span>
+        <div><strong>选择样本</strong><span class="module-en">Select Samples</span><small>两种入口只选一种；单批最多 100 个样本。</small></div>
+      </div>
+      <div class="sample-source-grid">
+        <div class="sample-source-card">
+          <div class="sample-source-heading">
+            <span class="sample-source-icon">↥</span>
+            <div><strong>开放格式 <span class="inline-en">Open Formats</span></strong><small>MGF / mzML / mzXML / 可解析 HTML</small></div>
+          </div>
+          <div class="upload-zone upload-zone-compact" id="uploadZone" onclick="document.getElementById('fileInput').click()">
+            <div class="upload-text">拖拽文件到这里</div>
+            <div class="upload-hint">或从本机批量选择</div>
+            <div class="sample-source-actions">
+              <button type="button" class="btn btn-primary btn-sm"
+                      onclick="event.stopPropagation();document.getElementById('fileInput').click()">选择多个文件</button>
+              <button type="button" class="btn btn-secondary btn-sm"
+                      onclick="event.stopPropagation();document.getElementById('folderInput').click()">选择整个文件夹</button>
+            </div>
+          </div>
+        </div>
+        <div class="sample-source-card vendor-source-card">
+          <div class="sample-source-heading">
+            <span class="sample-source-icon">RAW</span>
+            <div><strong>厂商原始数据 <span class="inline-en">Vendor Raw Data</span></strong><small>Agilent MassHunter .d / Thermo Fisher QE .raw，本机只读转换</small></div>
+          </div>
+          <div class="sample-source-actions">
+            <button type="button" class="btn btn-primary vendor-primary-action" id="btnSelectLocalVendorFolder"
+                    onclick="Upload.selectLocalVendorFolder()">选择 Agilent .d / 父目录</button>
+            <button type="button" class="btn btn-primary vendor-primary-action" id="btnSelectLocalThermoFolder"
+                    onclick="Upload.selectLocalThermoFolder()">选择 Thermo QE .raw / 批次目录</button>
+          </div>
+          <div class="centroid-policy-note" id="vendorAcquisitionPolicy">
+            <span>✓</span>
+            <div><strong id="vendorAcquisitionPolicyTitle">centroid 数据不二次质心化</strong><small id="vendorAcquisitionPolicyDetail">选择目录后读取 AcqMethod.xml；centroid 仅转换格式并保留峰表，不做二次质心化，MS1 与 MS2 均保留。</small></div>
+          </div>
+          <details class="inline-help-details">
+            <summary>Agilent / Thermo 单个与批量如何选择 · Chrome 备用入口</summary>
+            <p><strong>Agilent .d：</strong>选择完整 <code>xxx.d</code>，或选择这些 <code>.d</code> 共同所在的父文件夹；不要进入 <code>AcqData</code>，也不要单独选择 <code>MSScan.bin</code>、<code>MSPeak.bin</code> 或 <code>AcqMethod.xml</code>。Codex 内嵌窗口若限制浏览器目录选择，仍使用上方本机入口。</p>
+            <p><strong>Thermo QE .raw：</strong>选择含一个或多个 <code>.raw</code> 的目录；若批次按 <code>pos/neg</code> 分层，可直接选择它们共同的父目录。系统只检查所选目录和一层直接子目录，逐文件校验实际极性、仪器型号、MS1/MS2 与隔离窗，不递归扫描其他位置。</p>
+            <button type="button" class="btn btn-secondary btn-sm"
+                    onclick="document.getElementById('vendorRawInput').click()">🌐 浏览器选择 Agilent .d（Chrome）</button>
+          </details>
+        </div>
+      </div>
+      <input type="file" id="fileInput" accept=".mgf,.mzML,.mzml,.mzXML,.mzxml,.xml,.html,.htm" multiple style="display:none">
+      <input type="file" id="folderInput" accept=".mgf,.mzML,.mzml,.mzXML,.mzxml,.xml,.html,.htm"
+             webkitdirectory directory multiple style="display:none">
+      <input type="file" id="vendorRawInput" webkitdirectory directory multiple style="display:none">
+      <div class="upload-progress-wrap" id="uploadProgressWrap">
+        <div class="upload-progress-text" id="uploadProgressText">上传进度: 0%</div>
+        <div class="progress-wrap"><div class="progress-bar" id="uploadProgressBar" style="width:0%"></div></div>
+      </div>
+      <div class="file-list" id="fileList"></div>
+      <div id="vendorRawStatus" class="vendor-raw-status"></div>
+
+      <details id="vendorConverterSetup" class="converter-panel">
+        <summary>
+          <span><strong>本机厂商原始数据转换器</strong><small>ProteoWizard msconvert + Agilent / Thermo 厂商读取器</small></span>
+          <span id="vendorConverterBadge" class="converter-status-badge is-checking">正在检测…</span>
+        </summary>
+        <div class="converter-panel-body">
+          <div id="vendorConverterStatus">正在检查转换器状态…</div>
+          <p class="converter-offline-note"><strong>本地 / 离线：</strong>镜像只是本机封装的 ProteoWizard 与 Agilent / Thermo 读取器，原始数据不会上传到云端。分析和厂商数据转换过程绝不联网拉取镜像；只在你单独点击下方“准备 / 下载”时允许一次性下载。镜像缓存后无需重复下载（断网时仍需启动 Docker Desktop）；若本机已有可用的 <code>msconvert</code>，系统会优先直接调用它而不使用 Docker。</p>
+          <label>
+            <input type="checkbox" id="vendorLicenseAccepted">
+            我已阅读并接受 ProteoWizard 镜像所含的
+            <a href="https://proteowizard.sourceforge.io/licenses.html" target="_blank" rel="noopener">厂商读取器许可</a>（确认一次后仅记在本机浏览器；取消勾选即可撤销）。
+          </label>
+          <label>
+            <input type="checkbox" id="vendorAllowPull">
+            若本机尚无转换镜像，允许首次下载 ProteoWizard Docker 镜像（约 2.2 GB；同一镜像只需下载一次）。
+          </label>
+          <div class="converter-actions">
+            <button type="button" class="btn btn-secondary btn-sm" id="btnPrepareVendorConverter"
+                    onclick="Upload.prepareVendorConverter()">准备 / 下载 ProteoWizard 转换器</button>
+            <span>只有点击此按钮才可能下载；开始分析只使用本机已有转换器，绝不联网。</span>
+          </div>
+        </div>
+      </details>
+
+      <details id="vendorRawOptions" class="hidden vendor-options-panel">
+        <summary>专业转换设置 <span id="vendorRepresentationSummary">centroid 原样保留</span></summary>
+        <div class="vendor-options-body">
+          <label for="vendorPeakPicking">谱图表征处理</label>
+          <select class="form-select" id="vendorPeakPicking">
+            <option value="auto" selected>自动：centroid 保留；profile 才由厂商算法质心化（推荐）</option>
+            <option value="preserve">完全保留原始表征（profile 留到分析阶段处理）</option>
+            <option value="vendor">强制 ProteoWizard vendor peakPicking</option>
+            <option value="openms">转换保留，分析时逐谱 OpenMS peak picking</option>
+          </select>
+          <p>转换固定为 mzML / 64-bit / zlib，且不使用 <code>msLevel 2</code> 过滤，因此 MS1 与 MS2 均保留。相对强度、前体峰和 Top-N 过滤属于后续独立且可审计的步骤。</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Step 3: Optional blank evidence -->
+    <details class="card intake-step-card optional-qc-card">
+      <summary class="intake-step-header">
+        <span class="intake-step-number">03</span>
+        <div><strong>空白背景评估 <em>可选</em></strong><span class="module-en">Blank Background Assessment · Optional QC</span><small>没有空白时直接跳过；已上传的空白仅在展开后管理。</small></div>
+        <span class="optional-qc-state">未启用</span>
+      </summary>
+      <div class="optional-qc-body">
+        <div class="blank-quick-actions">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('blankFileQuick').click()">➕ 选择空白文件（可多选）</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="btnClearBlankUploads"
+                  onclick="Upload.clearBlankUploads()" style="display:none;">🗑 删除本批所选空白</button>
+          <input type="file" id="blankFileQuick" accept=".mgf,.mzML,.mzml,.mzXML,.mzxml" multiple style="display:none"
+                 onchange="Upload.uploadBlankQuick(this.files)">
+          <span id="blankStatusQuick"></span>
+        </div>
+        <p>样品与空白使用同一 MS1 XIC 口径。默认执行同极性、同方法的特征级背景排除；完整审计记录仍保留。该操作不是把不同进样的 MS/MS 碎片强度逐峰相减。</p>
+        <div id="blankUploadManager"></div>
+        <div class="blank-policy-panel">
+          <label class="blank-enable-row">
+            <input type="checkbox" id="enableBlank" onchange="Upload.toggleBlank(this.checked)">
+            <span><strong>将所选空白用于本批分析</strong><small>必须明确选择“实际背景排除”或“仅比较”；系统不再静默改成 0 扣除。</small></span>
+          </label>
+          <div id="blankControls" style="display:none;">
+            <input type="file" id="blankFile" accept=".mgf,.mzML,.mzml,.mzXML,.mzxml" multiple
+                   onchange="Upload.uploadBlank(this.files)" class="form-input">
+            <div class="blank-policy-grid">
+              <div>
+                <label>证据策略</label>
+                <select id="blankFilterPolicy" class="form-select" onchange="Upload.updateBlankPolicyUI()" disabled>
+                  <option value="hard_legacy" selected>执行特征级空白背景排除（主结果扣除，审计保留）</option>
+                  <option value="soft_evidence">仅作背景比较（明确不扣除）</option>
+                </select>
+                <div id="blankPolicyRuntimeStatus">正在核验当前服务能力…</div>
+              </div>
+              <div><label>样品富集判定比值</label><input type="number" id="blankSampleRatio" class="form-input" value="3" step="0.5" min="1" max="100"></div>
+              <div><label>RT 窗口（min）</label><input type="number" id="blankRtTolerance" class="form-input" value="0.30" step="0.05" min="0.01" max="5"></div>
+              <div><label>重复空白最低出现率</label><input type="number" id="blankMinDetectionFraction" class="form-input" value="0.50" step="0.05" min="0" max="1"></div>
+            </div>
+            <div id="blankHardExclusionConfirmations">
+              <label class="blank-enable-row">
+                <input type="checkbox" id="blankMethodComparable">
+                <span><strong>确认空白与样品属于同批次、同色谱方法</strong><small>RT 与强度比较只有在方法可比时才有效。</small></span>
+              </label>
+              <label class="blank-enable-row">
+                <input type="checkbox" id="blankExclusionConfirmed">
+                <span><strong>确认从主检索中排除空白占优特征</strong><small>样品/空白低于设定比值的 MS2 不进入主检索，但仍保存在空白审计层。</small></span>
+              </label>
+            </div>
+            <p id="blankPolicyExplanation">实际背景排除下：样品/空白低于设定比值的同极性特征在检索前排除并计入“已扣除”；原始 MS/MS 与排除原因保留用于追溯。系统不跨针逐峰相减碎片强度。</p>
+            <div id="blankStatus"></div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- Analysis settings stay visible so the method can be configured before file selection. -->
+    <div class="card intake-step-card" id="settingsCard">
+      <div class="intake-step-header">
+        <span class="intake-step-number">04</span>
+        <div><strong>参数与运行</strong><span class="module-en">Analysis Parameters &amp; Run</span><small>先选择分析级别；可在选样本前查看和调整全部阈值。</small></div>
+      </div>
+      <div class="run-basics-grid">
+        <div class="form-group analysis-level-setting">
+          <label class="form-label">🎚️ 分析级别</label>
+          <select class="form-select" id="analysisLevel" onchange="applyAnalysisLevel(this.value)">
+            <option value="routine" selected>常规筛查（推荐 · 高通量）</option>
+            <option value="sensitive">高灵敏探索（更多候选 · 较慢）</option>
+            <option value="report">严格报告（证据优先）</option>
+            <option value="custom">自定义阈值</option>
+          </select>
+          <span class="field-help" id="analysisLevelHint">常规筛查：Cosine ≥ 0.30、Final ≥ 0.25、5% / Top 15；适合批量样本。</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">🔬 仪器类型预设</label>
+          <select class="form-select" id="instrumentPreset" onchange="applyInstrumentPreset(this.value)">
+            <option value="balanced" selected>⚖️ Q-TOF / TripleTOF</option>
+            <option value="highres">🔬 高分辨 (Orbitrap / FT-ICR)</option>
+            <option value="lowres">📊 低分辨 (Triple Quad / Ion Trap)</option>
+            <option value="custom">🔧 自定义</option>
+          </select>
+          <span class="field-help" id="presetHint">Q-TOF / TripleTOF：0.02 Da / 10 ppm；只设置质量窗口，不改变证据级别。</span>
+        </div>
+        <div class="form-group ion-mode-setting">
+          <label class="form-label">⚡ 离子模式</label>
+          <select class="form-select" id="ionMode">
+            <option value="auto" selected>自动识别（推荐）</option>
+            <option value="POS">正离子 POS</option>
+            <option value="NEG">负离子 NEG</option>
+          </select>
+          <span class="field-help">自动读取 mzML 极性标记或 MGF IONMODE / CHARGE；批量混合上传正、负样本时会逐样本分配同极性空白。该步骤只核对极性，不证明同批次／同方法配对；类型未注明的空白仅产生警示，不会自动剔除候选。无法可靠识别极性时会停止并提示。</span>
+        </div>
+      </div>
+      <div class="analysis-parameter-summary" id="analysisParameterSummary" aria-live="polite">
+        <span><small>当前级别</small><strong id="analysisSummaryLevel">常规筛查</strong></span>
+        <span><small>Cosine</small><strong id="analysisSummaryCosine">≥ 0.30</strong></span>
+        <span><small>Final Score</small><strong id="analysisSummaryFinal">≥ 0.25</strong></span>
+        <span><small>质量窗口</small><strong id="analysisSummaryMass">0.02 Da / 10 ppm</strong></span>
+        <span><small>MS/MS 峰视图</small><strong id="analysisSummaryPeaks">5% / Top 15</strong></span>
+        <span><small>严格证据门</small><strong id="analysisSummaryStrict">关闭</strong></span>
+      </div>
+      <div class="analysis-default-strip" aria-label="默认分析模块">
+        <span>centroid 感知</span>
+        <span>连续 MS1 特征</span>
+        <span>Expected Compounds</span>
+        <span>去卷积 + IIMN</span>
+      </div>
+      <details id="advancedAnalysisSettings" class="advanced-analysis-settings">
+        <summary>
+          <span><strong>查看 / 修改全部分析阈值</strong><small>Cosine、Final、质量窗口、峰处理、MS1、靶向层与证据规则</small></span>
+          <span class="advanced-settings-state" id="advancedSettingsState">常规 · 0.30 / 0.25</span>
+        </summary>
+        <div class="advanced-analysis-body">
+          <div class="settings-grid">
+        <div class="form-group">
+          <label class="form-label">Cosine 阈值</label>
+          <input type="range" class="form-range" id="cosTh" min="0" max="1" step="0.05" value="0.3"
+            oninput="document.getElementById('cosThVal').textContent=this.value">
+          <span style="font-size:0.78rem;color:var(--text-secondary);">≥ <strong id="cosThVal">0.3</strong></span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Final Score 阈值</label>
+          <input type="range" class="form-range" id="finalTh" min="0" max="1" step="0.05" value="0.25"
+            oninput="document.getElementById('finalThVal').textContent=this.value">
+          <span style="font-size:0.78rem;color:var(--text-secondary);">≥ <strong id="finalThVal">0.25</strong></span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">m/z Tolerance (Da)</label>
+          <input type="number" class="form-input" id="mzDa" value="0.02" step="0.01" min="0.01" max="5">
+          <span class="field-help">用于低分辨率/仪器类型未知时的绝对质量窗口；不会放宽 Orbitrap、QTOF 或 FTICR 的 ppm 前体硬门。</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">m/z Tolerance (ppm)</label>
+          <input type="number" class="form-input" id="mzPpm" value="10" step="1" min="1" max="100">
+          <span class="field-help">高分辨率 MS 的前体候选必须通过此 ppm 硬门；结构式、分子式与加合物理论 m/z 矛盾的库记录会直接排除。</span>
+        </div>
+          </div>
+      <div class="form-group" style="margin-top:12px;padding:12px;border:1px solid #dbe6ef;border-radius:10px;background:#f8fbfd;">
+        <div style="font-weight:700;color:#28445e;margin-bottom:8px;">谱图表征与 MS/MS 峰处理</div>
+        <div class="settings-grid">
+          <div>
+            <label class="form-label">profile / centroid 处理</label>
+            <select class="form-select" id="profilePeakPicking">
+              <option value="auto" selected>逐谱读取 CV；centroid 原样保留，profile/未知由 OpenMS 处理</option>
+              <option value="openms">强制启用 OpenMS 检查与 peak picking</option>
+              <option value="reject">发现 profile/未知即停止</option>
+              <option value="assume_centroid">仅对缺 CV 的峰表显式按 centroid 接受</option>
+            </select>
+            <span class="field-help">读取每张 MS1/MS2 的 mzML CV；DAD 等辅助检测器单独统计，不混入质谱判断。</span>
+          </div>
+          <div>
+            <label class="form-label">OpenMS Peak Picker</label>
+            <select class="form-select" id="profilePeakPicker">
+              <option value="hires" selected>PeakPickerHiRes</option>
+              <option value="iterative">PeakPickerIterative</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label">Peak picker S/N</label>
+            <input type="number" class="form-input" id="profilePeakPickerSnr" value="1.0" step="0.5" min="0" max="100">
+          </div>
+          <div>
+            <label class="form-label">MS/MS 处理预设</label>
+            <select class="form-select" id="peakProcessingPreset">
+              <option value="library_match" selected>谱库匹配：5% / Top 15</option>
+              <option value="sensitive">灵敏检索：1% / Top 40</option>
+              <option value="network_rich">丰富碎片：1% / Top 70</option>
+            </select>
+          </div>
+        </div>
+        <details style="margin-top:9px;">
+          <summary style="cursor:pointer;color:#49657d;font-size:.76rem;font-weight:650;">高级峰过滤参数</summary>
+          <div class="settings-grid" style="margin-top:9px;">
+            <div><label class="form-label">相对强度阈值（0–1，可留空用预设）</label><input type="number" class="form-input" id="peakRelativeThreshold" placeholder="预设值" step="0.01" min="0" max="1"></div>
+            <div><label class="form-label">前体排除窗（Da）</label><input type="number" class="form-input" id="peakPrecursorExclusion" value="0.5" step="0.1" min="0" max="10"></div>
+            <div><label class="form-label">Top-N（可留空用预设）</label><input type="number" class="form-input" id="peakTopN" placeholder="预设值" step="1" min="3" max="500"></div>
+            <label style="display:flex;align-items:center;gap:7px;margin-top:22px;"><input type="checkbox" id="peakUpperMassBound" checked style="width:auto;">按前体电荷约束产物离子上限</label>
+          </div>
+        </details>
+        <div style="margin-top:9px;font-size:.72rem;color:var(--text-secondary);line-height:1.55;">执行顺序固定记录为：有效正强度峰 → 相对强度 → 前体邻域排除 → 电荷感知质量上限 → Top-N。查询谱与库谱使用同一配置；结果页显示每阶段保留率。</div>
+      </div>
+      <div class="form-group" style="margin-top:12px;padding:12px;border:1px solid #d9eadf;border-radius:10px;background:#f7fbf8;">
+        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
+          <input type="checkbox" id="enableMs1FeatureDetection" checked style="width:auto;margin-top:2px;">
+          <span><strong>连续 MS1 非靶向特征流程（OpenMS）</strong><br><span style="font-size:.72rem;color:var(--text-secondary);">MassTraceDetection → ElutionPeakDetection → FeatureFindingMetabo → 同位素/加合物归并；MS2 按 m/z 与色谱峰 RT 边界归属，并生成特征级共识谱。</span></span>
+        </label>
+        <details style="margin-top:9px;">
+          <summary style="cursor:pointer;color:#496b58;font-size:.76rem;font-weight:650;">MS1 特征参数</summary>
+          <div class="settings-grid" style="margin-top:9px;">
+            <div><label class="form-label">MS1 特征质量误差（ppm）</label><input type="number" class="form-input" id="ms1MassErrorPpm" value="10" step="1" min="0.1" max="100"></div>
+            <div><label class="form-label">MS2 隔离目标→MS1 特征关联（ppm）</label><input type="number" class="form-input" id="ms2FeatureLinkTolerancePpm" value="20" step="1" min="0.1" max="100"><div class="form-hint">仅用于以 RT/电荷约束把隔离设定值关联到实测 MS1 质心；谱库检索仍使用上方 HRMS ppm 门限。</div></div>
+            <div><label class="form-label">噪声强度阈值</label><input type="number" class="form-input" id="ms1NoiseThreshold" value="1000" step="100" min="0"></div>
+            <div><label class="form-label">色谱峰 S/N</label><input type="number" class="form-input" id="ms1ChromPeakSnr" value="3" step="0.5" min="0" max="100"></div>
+            <div><label class="form-label">最短质量轨迹（s）</label><input type="number" class="form-input" id="ms1MinTraceLength" value="5" step="1" min="0.1" max="300"></div>
+            <div><label class="form-label">FWHM 范围（s）</label><div style="display:flex;gap:5px;"><input type="number" class="form-input" id="ms1MinFwhm" value="1" min="0.1" max="300"><input type="number" class="form-input" id="ms1MaxFwhm" value="60" min="0.1" max="1800"></div></div>
+            <div><label class="form-label">电荷范围</label><div style="display:flex;gap:5px;"><input type="number" class="form-input" id="ms1ChargeLow" value="1" min="1" max="10"><input type="number" class="form-input" id="ms1ChargeHigh" value="1" min="1" max="10"></div><span class="field-help">小分子 ESI 默认只探索单电荷；确认存在多电荷时再提高上限。</span></div>
+            <label style="display:flex;align-items:center;gap:7px;margin-top:22px;"><input type="checkbox" id="enableAdductGrouping" checked style="width:auto;">归并同位素与加合物</label>
+          </div>
+        </details>
+      </div>
+      <!-- Compound Discoverer-like Expected Compounds: independent targeted MS1/XIC branch -->
+      <div class="form-group" style="margin-top:14px;padding:12px;border:1px solid #93c5fd;border-radius:8px;background:#f8fbff;">
+        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;margin:0;">
+          <input type="checkbox" id="enableExpectedCompounds"
+                 onchange="Upload.toggleExpectedCompounds(this.checked)" style="width:auto;margin-top:2px;">
+          <span>
+            <strong>🎯 Expected Compounds（文献已报道成分靶向筛查）</strong><br>
+            <span style="font-size:0.72rem;color:var(--text-secondary);">
+              默认关闭；只有明确勾选并选择目标数据集时才运行。该层按分子式/精确质量和加合物在连续 MS1 中提取 XIC，再用同位素、诊断离子或真实实验谱提高证据等级。
+              该结果独立展示，<b>不计入普通 MS2 谱库的 High、匹配谱图或去重候选数</b>。
+            </span>
+          </span>
+        </label>
+        <div id="expectedCompoundsControls" style="display:none;margin-top:10px;">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <strong style="font-size:0.78rem;">目标数据集</strong>
+            <button type="button" class="btn btn-secondary btn-sm"
+                    onclick="Upload.clearExpectedDatasetSelection()">清除选择</button>
+            <span id="expectedDatasetStatus" style="font-size:0.72rem;color:var(--text-secondary);">正在读取可用数据集…</span>
+          </div>
+          <div id="expectedDatasetList"
+               style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:6px 12px;margin-top:7px;max-height:150px;overflow:auto;padding:8px;border:1px solid #dbeafe;border-radius:6px;background:#fff;">
+            <span style="font-size:0.72rem;color:var(--text-secondary);">正在加载…</span>
+          </div>
+          <div style="font-size:0.72rem;color:#1d4ed8;margin-top:6px;">
+            <b>必须显式勾选与样本真实类型一致的数据库</b>。文件名中的 F001–F008
+            可能只是混标/序列编号，系统不会再据此自动绑定复方库；未选择时不运行靶向层，
+            也绝不会默认搜索全部复方库。
+          </div>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin-top:10px;">
+            <div>
+              <label for="expectedMassTolerancePpm" style="font-size:0.72rem;color:var(--text-secondary);display:block;">MS1 质量窗口（ppm）</label>
+              <input type="number" id="expectedMassTolerancePpm" class="form-input" value="5" step="0.5" min="0.1" max="50" style="width:90px;padding:3px 7px;">
+            </div>
+            <div>
+              <label for="expectedMinPeakIntensity" style="font-size:0.72rem;color:var(--text-secondary);display:block;">最低峰强度</label>
+              <input type="number" id="expectedMinPeakIntensity" class="form-input" value="1000" step="100" min="0" style="width:105px;padding:3px 7px;">
+            </div>
+            <div>
+              <label for="expectedMinSnr" style="font-size:0.72rem;color:var(--text-secondary);display:block;">最低 S/N</label>
+              <input type="number" id="expectedMinSnr" class="form-input" value="1.5" step="0.1" min="0" max="1000" style="width:82px;padding:3px 7px;">
+            </div>
+            <div>
+              <label for="expectedMinScanPoints" style="font-size:0.72rem;color:var(--text-secondary);display:block;">最低扫描点数</label>
+              <input type="number" id="expectedMinScanPoints" class="form-input" value="5" step="1" min="3" max="100" style="width:82px;padding:3px 7px;">
+            </div>
+            <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.76rem;padding-bottom:4px;">
+              <input type="checkbox" id="expectedGenerateCommonAdducts" checked style="width:auto;">
+              自动生成常见加合物
+            </label>
+          </div>
+          <div style="font-size:0.7rem;color:var(--text-secondary);margin-top:6px;">
+            需要完整连续 MS1 的 mzML（或由厂商原始数据转换得到的 mzML）；MGF/HTML 只有离散 MS2，无法执行色谱 XIC。
+          </div>
+          <details style="margin-top:8px;">
+            <summary style="cursor:pointer;color:#1d4ed8;font-size:.74rem;font-weight:650;">峰质量、背景与独立 OpenMS 复核</summary>
+            <div class="settings-grid" style="margin-top:8px;">
+              <div><label class="form-label">最大缺口比例</label><input type="number" class="form-input" id="expectedMaxGapRatio" value="0.35" step="0.05" min="0" max="1"></div>
+              <div><label class="form-label">最大 FWHM（s）</label><input type="number" class="form-input" id="expectedMaxFwhmSeconds" value="60" step="5" min="0.1" max="1800"></div>
+              <div><label class="form-label">最小相对谷深</label><input type="number" class="form-input" id="expectedMinValleyDepth" value="0.10" step="0.05" min="0" max="1"></div>
+              <div><label class="form-label">OpenMS RT 复核窗（min）</label><input type="number" class="form-input" id="expectedOpenmsRtTolerance" value="0.05" step="0.01" min="0.001" max="1"></div>
+              <div><label class="form-label">样本/空白背景阈值</label><input type="number" class="form-input" id="expectedBackgroundRatio" value="5" step="0.5" min="1" max="100"></div>
+            </div>
+            <div style="font-size:0.7rem;color:var(--text-secondary);margin-top:6px;">
+              这些是公开、可审计的 CD 思路复现：峰缺口、峰宽、谷底拆峰、样本/空白比以及 OpenMS m/z+RT 交叉验证；不宣称复制 Thermo 的专有 PQF 算法。
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="form-group" style="margin-top:12px;padding:10px 12px;border:1px solid var(--border-color);border-radius:8px;">
+        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;margin:0;">
+          <input type="checkbox" id="strictEvidenceGate" style="width:auto;margin-top:2px;">
+          <span>
+            <strong>严格证据门槛（最终报告用）</strong><br>
+            <span style="font-size:0.72rem;color:var(--text-secondary);">额外要求 Final ≥ 0.50、Entropy ≥ 0.45、Reverse ≥ 0.55、|ppm| ≤ 100；常规筛查请保持关闭。</span>
+          </span>
+        </label>
+      </div>
+      <div class="form-group" style="margin-top:12px;padding:10px 12px;border:1px solid var(--border-color);border-radius:8px;">
+        <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;">
+          <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;margin:0;flex:1;min-width:260px;">
+            <input type="checkbox" id="enableChimericDeconvolution" checked style="width:auto;margin-top:2px;">
+            <span>
+              <strong>嵌合 MS/MS 稀疏去卷积（DecoID-like）</strong><br>
+              <span style="font-size:0.72rem;color:var(--text-secondary);">仅在真实 MS1 隔离窗为 mixed/severe、非负 L1 多组分拟合稳定且净化谱确实改善时影响分数；原始分数完整保留。</span>
+            </span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;margin:0;flex:1;min-width:260px;">
+            <input type="checkbox" id="enableIonIdentityNetworking" checked style="width:auto;margin-top:2px;">
+            <span>
+              <strong>离子身份分子网络（IIMN）</strong><br>
+              <span style="font-size:0.72rem;color:var(--text-secondary);">用连续 MS1 共洗脱峰形 + 中性质量合并加合物和源内碎片；链接离子不会冒充独立 High 鉴定。</span>
+            </span>
+          </label>
+        </div>
+        <div style="margin-top:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <label class="form-label" for="isolationWindowWidth" style="margin:0;">隔离窗全宽（Da，可选）</label>
+          <input type="number" id="isolationWindowWidth" class="form-input" step="0.1" min="0.1" max="20" placeholder="如 1.0" style="width:100px;padding:3px 7px;">
+          <span style="font-size:0.72rem;color:var(--text-secondary);">mzML 已含 lower/upper offset 时优先读取；直接上传 Agilent .d 时可审计地继承 AcqMethod.xml，普通开放文件缺失时仍须显式填写，系统不会暗猜。</span>
+        </div>
+        <div style="margin-top:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <label class="form-label" for="rtMethodId" style="margin:0;">本批 LC 方法 ID（可选）</label>
+          <input type="text" id="rtMethodId" class="form-input" maxlength="128" placeholder="如 HILIC_NEG_v3" style="width:180px;padding:3px 7px;">
+          <span style="font-size:0.72rem;color:var(--text-secondary);">只有与本地标准品表中 method_id 完全一致、且完整 InChIKey 一致的 RT 才能帮助解析具体异构体；留空时 RT 只展示，不会升高具体结构置信度。</span>
+        </div>
+      </div>
+        </div>
+      </details>
+      <div class="text-center mt-2">
+        <button class="btn btn-primary btn-lg" onclick="Upload.startAnalysis()" id="btnStartAnalysis" disabled>
+          🚀 开始分析
+        </button>
+        <div class="analysis-run-readiness" id="analysisRunReadiness">参数可先设置；选择样本后即可开始分析。</div>
+        <div class="batch-analysis-note">批量样本会一次加入队列；Full 库为控制内存会逐个运行，排队不代表未批量提交。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE: Molecular Networking -->
+  <section class="page" id="page-network">
+    <style>
+      .net-hero{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:16px;padding:22px 24px;border:1px solid #dbeafe;border-radius:16px;background:linear-gradient(135deg,#f8fbff 0%,#eef7ff 48%,#f7fbf9 100%);}
+      .net-hero h2{margin:0 0 5px;color:#17324d;font-size:1.55rem;}.net-hero p{margin:0;color:#5b7086;font-size:.88rem;max-width:720px;line-height:1.55;}
+      .net-hero-mark{font-size:2.7rem;filter:drop-shadow(0 8px 13px rgba(30,64,175,.15));}
+      .net-controls{display:grid;grid-template-columns:minmax(250px,1.6fr) repeat(3,minmax(150px,1fr));gap:12px;align-items:end;}
+      .net-control label{display:block;margin-bottom:6px;color:#526579;font-size:.75rem;font-weight:650;}.net-control small{display:block;margin-top:4px;color:#8796a5;font-size:.69rem;}
+      .net-build{height:40px;white-space:nowrap;box-shadow:0 7px 18px rgba(37,99,235,.16);}
+      .net-stat-row{display:grid;grid-template-columns:repeat(7,minmax(92px,1fr));gap:9px;margin-bottom:12px;}
+      .net-stat{position:relative;overflow:hidden;padding:11px 12px;border:1px solid #e4eaf0;border-radius:11px;background:#fff;box-shadow:0 3px 12px rgba(31,50,70,.035);}
+      .net-stat:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent,#9aa8b6);}.net-stat-num{display:block;color:#20364c;font-size:1.35rem;font-weight:750;line-height:1.15;}.net-stat-lbl{display:block;margin-top:3px;color:#7a8a9a;font-size:.7rem;}
+      .net-board{overflow:hidden;padding:0!important;border:1px solid #dfe7ee;border-radius:14px!important;box-shadow:0 10px 30px rgba(33,53,72,.07);}
+      .net-toolbar{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid #e6ecf1;background:#fbfcfd;}
+      .net-search{width:230px;max-width:35vw;height:34px;padding:0 10px;border:1px solid #d6e0e8;border-radius:8px;background:#fff;font-size:.78rem;outline:none;}.net-search:focus{border-color:#60a5fa;box-shadow:0 0 0 3px rgba(96,165,250,.13);}
+      .net-tool-btn{height:34px;padding:0 10px;border:1px solid #d6e0e8;border-radius:8px;background:#fff;color:#41576b;font-size:.74rem;cursor:pointer;}.net-tool-btn:hover{border-color:#93b4d2;background:#f5f9fc;}
+      .net-legend{display:flex;align-items:center;gap:11px;margin-left:auto;color:#66788a;font-size:.72rem;white-space:nowrap;}.net-dot{display:inline-block;width:9px;height:9px;margin-right:4px;border:2px solid rgba(0,0,0,.12);border-radius:50%;vertical-align:-1px;}
+      .net-workspace{display:grid;grid-template-columns:minmax(0,1fr) 330px;min-height:690px;}.net-canvas-wrap{position:relative;min-width:0;background:radial-gradient(circle at 50% 45%,#fff 0,#f8fafc 65%,#f2f6f9 100%);}
+      #networkGraph{width:100%;height:690px;}.net-empty{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#8190a0;pointer-events:none;}.net-empty strong{display:block;margin-bottom:6px;color:#55697d;font-size:.95rem;}
+      .net-side{overflow:auto;max-height:690px;border-left:1px solid #e3eaf0;background:#fbfcfd;}.net-side-section{padding:15px;border-bottom:1px solid #e6ecf1;}.net-side-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;color:#344b61;font-size:.78rem;font-weight:750;letter-spacing:.02em;}
+      .net-node-head{display:flex;align-items:center;gap:7px;margin-bottom:11px;}.net-node-name{min-width:0;color:#20364c;font-size:.92rem;font-weight:700;overflow-wrap:anywhere;}.net-badge{display:inline-block;flex:none;padding:3px 7px;border-radius:99px;font-size:.65rem;font-weight:700;}.net-badge-library{background:#dff7ef;color:#006c50;}.net-badge-propagated{background:#fff0cf;color:#925d00;}.net-badge-ion_identity{background:#daf3e6;color:#226748;}.net-badge-unknown{background:#e9edf1;color:#536170;}
+      .net-node-grid{display:grid;gap:0;}.net-kv{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dashed #e3e9ef;font-size:.73rem;}.net-kv-k{color:#82909e;}.net-kv-v{max-width:64%;color:#354b60;font-weight:600;text-align:right;overflow-wrap:anywhere;}
+      #networkNodeSpectrum{width:100%;height:235px;margin-top:8px;}.net-fam-list{display:grid;gap:6px;}.net-family{display:grid;grid-template-columns:36px 35px minmax(0,1fr);gap:7px;align-items:center;width:100%;padding:7px 8px;border:1px solid #e3e9ef;border-radius:8px;background:#fff;text-align:left;cursor:pointer;}.net-family:hover,.net-family.active{border-color:#82add2;background:#f1f7fc;}.net-family-id{color:#678097;font-size:.69rem;font-weight:700;}.net-family-size{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:#eaf2f8;color:#315a7d;font-size:.68rem;font-weight:750;}.net-family-name{overflow:hidden;color:#41576b;font-size:.7rem;text-overflow:ellipsis;white-space:nowrap;}.net-family-name strong{display:block;color:#253d53;font-size:.72rem;}
+      .net-tip{position:absolute;z-index:8;display:none;max-width:260px;padding:8px 10px;border:1px solid rgba(255,255,255,.25);border-radius:8px;background:rgba(24,39,54,.94);box-shadow:0 8px 25px rgba(0,0,0,.18);color:#fff;font-size:.7rem;line-height:1.5;pointer-events:none;}
+      .net-note{margin-top:10px;color:#788999;font-size:.72rem;line-height:1.5;}.net-note strong{color:#54697d;}
+      @media(max-width:1250px){.net-controls{grid-template-columns:repeat(3,minmax(150px,1fr));}.net-workspace{grid-template-columns:minmax(0,1fr) 290px;}.net-stat-row{grid-template-columns:repeat(4,1fr);}}
+      @media(max-width:900px){.net-hero{align-items:center}.net-controls{grid-template-columns:1fr 1fr}.net-workspace{display:block}.net-side{max-height:none;border-top:1px solid #e3eaf0;border-left:0}#networkGraph{height:560px}.net-legend{display:none}.net-search{max-width:none;flex:1}.net-stat-row{grid-template-columns:repeat(2,1fr)}}
+    </style>
+
+    <div class="net-hero">
+      <div><h2>特征级分子网络与跨样本对齐</h2><span class="page-title-en">Feature-level Molecular Networking &amp; Cross-sample Alignment</span><p>有连续 MS1 时，以色谱特征及其 MS2 共识谱作为节点；只有无法链接的谱图才使用明确标记的前体事件回退。谱图相似、质量位移、中性丢失和离子身份分别保留证据类型。</p></div>
+      <div class="net-hero-mark">🕸️</div>
+    </div>
+
+    <div class="card">
+      <div class="net-controls">
+        <div class="net-control"><label>分析任务</label><select class="form-select" id="networkTaskSelect" onchange="NetworkPage.loadTask(this.value)"><option value="">-- 选择已完成任务 --</option></select><small>使用任务中的全部 MS/MS 查询谱图</small></div>
+        <div class="net-control"><label>Cosine 阈值 <strong id="netCosThreshVal">0.70</strong></label><input type="range" class="form-range" id="netCosThresh" min="0.5" max="0.95" step="0.05" value="0.7"><small>越高，网络越严格</small></div>
+        <div class="net-control"><label>最少匹配峰 <strong id="netMinPeaksVal">6</strong></label><input type="range" class="form-range" id="netMinPeaks" min="3" max="15" step="1" value="6"><small>低碎片谱建议 3–5</small></div>
+        <div class="net-control"><label>每节点邻居 <strong id="netTopkVal">10</strong></label><input type="range" class="form-range" id="netTopk" min="1" max="30" step="1" value="10"><small>限制网络拥挤度</small></div>
+        <div class="net-control"><label>Top-K 策略</label><select class="form-select" id="netTopkPolicy"><option value="mutual" selected>双方互惠（稳健）</option><option value="either">任一端进入（探索）</option><option value="off">不裁边</option></select><small>默认要求双方均进入 Top-K，减少常见碎片造成的巨型组件</small></div>
+        <div class="net-control"><label>碎片容差 (Da)</label><input type="number" class="form-input" id="netMzTol" value="0.1" step="0.01" min="0.01" max="2"><small>Q-TOF 通常 0.05–0.10</small></div>
+        <div class="net-control"><label>最大家族节点</label><input type="number" class="form-input" id="netMaxComponent" value="0" step="10" min="0" max="5000"><small>0 保留自然连通家族；100 为 GNPS 防发团上限</small></div>
+        <button class="btn btn-primary net-build" onclick="NetworkPage.build()" id="btnBuildNetwork" disabled>构建网络</button>
+      </div>
+      <div class="net-note"><strong>科学提示：</strong>蓝灰实线为直接谱图边，紫色虚线为质量位移/中性丢失类似物边，绿色点线仅表示经 MS1 共洗脱验证的离子身份。任何网络边都不等同于结构确认。</div>
+      <div id="networkWorkflowAudit" class="net-note"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div><div class="card-title">跨样本保留时间对齐</div><div class="card-subtitle">选择至少两个已完成且生成 featureXML 的任务；使用 OpenMS pose clustering 对齐后再做 QT feature grouping。</div></div>
+        <button class="btn btn-secondary btn-sm" onclick="NetworkPage.alignSelectedTasks()">执行对齐</button>
+      </div>
+      <select class="form-select" id="rtAlignmentTasks" multiple size="4" style="width:100%;"></select>
+      <div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;margin-top:9px;">
+        <div><label class="form-label">RT 容差（s）</label><input class="form-input" id="rtAlignmentTolerance" type="number" value="20" min="0.1" max="300" style="width:100px;"></div>
+        <div><label class="form-label">m/z 容差（ppm）</label><input class="form-input" id="rtAlignmentMzTolerance" type="number" value="10" min="0.1" max="1000" style="width:100px;"></div>
+        <div id="rtAlignmentStatus" style="font-size:.75rem;color:var(--text-secondary);"></div>
+      </div>
+    </div>
+
+    <div class="hidden" id="networkArea">
+      <div class="net-stat-row" id="networkStats"></div>
+      <div class="card net-board">
+        <div class="net-toolbar">
+          <input class="net-search" id="netSearch" placeholder="搜索化合物、类别或 m/z…" onkeydown="if(event.key==='Enter')NetworkPage.search()">
+          <button class="net-tool-btn" onclick="NetworkPage.search()">定位</button>
+          <button class="net-tool-btn" onclick="NetworkPage.fit()">适合窗口</button>
+          <button class="net-tool-btn" id="netLabelBtn" onclick="NetworkPage.toggleLabels()">显示标签</button>
+          <button class="net-tool-btn" id="netSingletonBtn" onclick="NetworkPage.toggleSingletons()">显示孤立点</button>
+          <button class="net-tool-btn" onclick="NetworkPage.relayout()">重新布局</button>
+          <button class="net-tool-btn" onclick="NetworkPage.resetFocus()">清除聚焦</button>
+          <div class="net-legend"><span><i class="net-dot" style="background:#009e73"></i>库匹配</span><span><i class="net-dot" style="background:#e69f00"></i>谱图传播</span><span><i class="net-dot" style="background:#40a070"></i>离子身份</span><span><i class="net-dot" style="background:#7b8794"></i>未知</span></div>
+          <button class="net-tool-btn" onclick="NetworkPage.downloadPng()">PNG</button>
+          <button class="net-tool-btn" onclick="NetworkPage.downloadGraphml()">GraphML</button>
+          <button class="net-tool-btn" onclick="NetworkPage.downloadNodesCsv()">节点 CSV</button>
+          <button class="net-tool-btn" onclick="NetworkPage.downloadEdgesCsv()">边 CSV</button>
+        </div>
+        <div class="net-workspace">
+          <div class="net-canvas-wrap">
+            <div id="networkGraph"></div>
+            <div class="net-empty" id="networkEmpty"><div><strong>准备构建分子网络</strong>选择任务并设置参数后点击“构建网络”</div></div>
+            <div class="net-tip" id="networkTooltip"></div>
+          </div>
+          <aside class="net-side">
+            <div class="net-side-section">
+              <div class="net-side-title"><span>节点详情</span><span id="networkSelectionHint">点击节点查看</span></div>
+              <div id="networkNodeInfo" style="color:#82909e;font-size:.76rem;line-height:1.6;">可查看前体 m/z、注释来源、匹配分数与原始 MS/MS 谱图。</div>
+              <div id="networkNodeSpectrum"></div>
+            </div>
+            <div class="net-side-section">
+              <div class="net-side-title"><span>主要分子家族</span><span>点击聚焦</span></div>
+              <div class="net-fam-list" id="networkFamilies"></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       PAGE: Task Manager
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="page" id="page-tasks">
+    <div class="page-header">
+      <span class="page-eyebrow">STAGE 03</span>
+      <h2>运行队列</h2>
+      <span class="page-title-en">Run Queue</span>
+      <p>批量安排样本分析，核对正负离子模式、输入审计和实时运行状态；等待中的 Full 库任务可置顶、上移或下移。</p>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <span class="card-title">分析任务列表</span>
+          <div class="card-subtitle">勾选多个样本后可一次加入运行队列；Full 库保持单任务串行，等待任务可随时调整先后顺序。</div>
+        </div>
+        <div class="btn-group">
+          <div class="search-input-wrap">
+            <input type="text" class="form-input" id="taskSearch"
+              placeholder="搜索任务 ID / 文件名..." style="width:220px;"
+              oninput="Tasks.setSearch(this.value)">
+          </div>
+          <select class="form-select" id="taskFilter" onchange="Tasks.setStatusFilter(this.value)" style="width:auto;">
+            <option value="">全部状态</option>
+            <option value="pending">待处理</option>
+            <option value="queued">排队中</option>
+            <option value="running">运行中</option>
+            <option value="cancelled">已停止</option>
+            <option value="completed">已完成</option>
+            <option value="failed">失败</option>
+          </select>
+          <button class="btn btn-secondary btn-sm" onclick="Tasks.loadTasks()">🔄 刷新</button>
+          <button class="btn btn-secondary btn-sm" id="btnTaskRecycleBin"
+                  onclick="Tasks.toggleRecycleBin()" title="查看和恢复已移除任务">♻ 回收站</button>
+          <button class="btn btn-secondary btn-sm" id="btnStorageManagement"
+                  onclick="MSsystemStorage.open()" title="设置回收站保留天数和临时缓存清理">存储管理</button>
+          <select class="form-select form-select-sm" id="batchIonMode" title="批量运行离子模式">
+            <option value="auto" selected>⚡ 自动识别极性</option>
+            <option value="POS">⊕ 正离子 POS</option>
+            <option value="NEG">⊖ 负离子 NEG</option>
+          </select>
+          <button class="btn btn-primary btn-sm" id="btnBatchRun" disabled
+                  onclick="Tasks.batchRun()" title="将勾选样本加入分析队列">▶ 批量运行</button>
+          <button class="btn btn-secondary btn-sm" id="btnCrossOccurrence" disabled
+                  onclick="Tasks.crossOccurrenceRank()" title="对至少 3 个同一 LC 方法的已完成独立进样执行 V16 同分子式 Top-5 共识排序">⇄ 跨进样共识排序</button>
+          <button class="btn btn-danger btn-sm" id="btnBatchDelete" disabled
+                  onclick="Tasks.batchDelete()" title="将勾选任务移入回收站">🗑 批量移除</button>
+        </div>
+      </div>
+      <div id="taskTableArea">
+        <div class="empty-state">
+          <div class="empty-icon">📋</div>
+          <div class="empty-title">暂无分析任务</div>
+          <div class="empty-desc">上传文件并开始分析后，任务会显示在这里</div>
+        </div>
+      </div>
+      <div id="taskRecycleBinArea" hidden style="margin-top:14px;"></div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       PAGE: Results Viewer
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="page" id="page-results">
+    <div class="page-header">
+      <span class="page-eyebrow">IDENTIFICATION</span>
+      <h2>样本鉴定结果</h2>
+      <span class="page-title-en">Identification Results</span>
+      <p>先看候选结构与证据分布，点击结果查看实测谱图、库谱对照和完整证据。</p>
+    </div>
+    <div data-completed-batch-entry="results" class="completed-batch-entry" data-i18n-skip></div>
+    <div class="card result-task-selector">
+      <div class="card-header">
+        <div><div class="card-title">选择样本</div><div class="card-subtitle">仅显示已经完成分析的样本</div></div>
+        <select class="form-select" id="resultTaskSelect" style="width:auto;min-width:260px;">
+          <option value="">-- 选择已完成的任务 --</option>
+        </select>
+      </div>
+    </div>
+    <div id="sampleOverviewArea">
+      <div class="empty-state">
+        <div class="empty-icon">🔬</div>
+        <div class="empty-title">选择样本以查看鉴定结果</div>
+        <div class="empty-desc">结构卡片 · RT–m/z 分布 · 谱图证据 · 候选筛选</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page completed-batches-page" id="page-completed-batches" data-i18n-skip>
+    <div class="page-header">
+      <span class="page-eyebrow">COMPLETED BATCHES</span>
+      <h2>完整批次结果</h2>
+      <span class="page-title-en">MS1 · MS/MS · Paired Blanks</span>
+      <p>查看已完成批次的联合结果、逐文件记录和完整报告，下载全部结果表。</p>
+    </div>
+    <div class="card cb-selector-card">
+      <label for="completedBatchSelect">选择已完成批次</label>
+      <select id="completedBatchSelect" class="form-select"><option value="">读取批次…</option></select>
+      <button type="button" id="completedBatchRefresh" class="btn btn-secondary btn-sm">刷新列表</button>
+    </div>
+    <div id="completedBatchStatus" class="cb-status" role="status" aria-live="polite"></div>
+    <div id="completedBatchContent" hidden>
+      <div class="card cb-batch-header">
+        <div><h3 id="completedBatchTitle"></h3><p id="completedBatchSubtitle"></p></div>
+        <div class="cb-action-row">
+          <button type="button" class="btn btn-primary" data-cb-tab="report">查看完整报告</button>
+          <a id="completedBatchDownloadAll" class="btn btn-secondary" download>下载全部结果与报告（ZIP）</a>
+        </div>
+      </div>
+      <div id="completedBatchMetrics" class="cb-metrics"></div>
+      <p id="completedBatchEvidence" class="cb-evidence-note"></p>
+      <div class="cb-tabs" role="tablist" aria-label="批次结果页面">
+        <button type="button" role="tab" data-cb-tab="overview" aria-selected="true" class="active">逐文件结果与表格浏览</button>
+        <button type="button" role="tab" data-cb-tab="report" aria-selected="false">完整中文报告</button>
+        <button type="button" role="tab" data-cb-tab="exports" aria-selected="false">全部结果表下载</button>
+      </div>
+      <div data-cb-panel="overview">
+        <section class="card cb-card">
+          <div class="cb-section-head"><div><h3>149份样本文件</h3><p>点击文件可查看对应的 MS1、MS/MS、XBT 候选和配对空白标记。</p></div>
+            <label class="cb-search-label">筛选文件<input id="completedBatchSampleSearch" class="form-input" placeholder="样本编号 / POS / NEG" type="search"></label>
+          </div>
+          <div id="completedBatchSampleCount" class="cb-table-count"></div>
+          <div class="cb-table-wrap cb-sample-wrap"><table class="cb-table"><thead><tr><th>样本文件</th><th>极性</th><th>重复针</th><th>MS/MS事件</th><th>有候选MS/MS谱</th><th>MS1特征</th><th>全部原生结论</th><th>XBT附加筛选</th><th>空白标记事件</th><th>空白净视图排除事件</th><th>查看</th></tr></thead><tbody id="completedBatchSamples"></tbody></table></div>
+        </section>
+        <section class="card cb-card" id="completedBatchPreviewSection">
+          <div class="cb-section-head"><div><h3>结果表浏览</h3><p>按文件和表格切换；显示已保存的候选、异构体限定、MS1 关联和空白标记。</p></div></div>
+          <div class="cb-preview-controls">
+            <label>结果表<select id="completedBatchTableSelect" class="form-select"><option value="native_compounds">全部原生结论与QC记录</option><option value="xbt_csv">XBT 联合附加筛选（含未解析事件）</option><option value="msms_table">全部 MS/MS 前体事件</option><option value="ms1_table">全部 MS1 特征（含 MS1-only）</option><option value="qc_table">四类 QC 记录</option><option value="file_manifest">149份文件索引</option></select></label>
+            <label>样本文件<select id="completedBatchSampleFilter" class="form-select"><option value="">全部样本文件</option></select></label>
+            <a id="completedBatchTableCsv" class="btn btn-secondary btn-sm" download>下载整批该表 CSV</a>
+          </div>
+          <div id="completedBatchPreviewStatus" class="cb-status" role="status" aria-live="polite"></div>
+          <div class="cb-table-wrap cb-preview-wrap"><table class="cb-table cb-preview-table"><thead id="completedBatchPreviewHead"></thead><tbody id="completedBatchPreviewRows"></tbody></table></div>
+          <div class="cb-pager"><span id="completedBatchPreviewCount"></span><div><button id="completedBatchPrevious" type="button" class="btn btn-secondary btn-sm">上一页</button><button id="completedBatchNext" type="button" class="btn btn-secondary btn-sm">下一页</button></div></div>
+        </section>
+      </div>
+      <div data-cb-panel="report" hidden>
+        <section class="card cb-card"><div class="cb-section-head"><div><h3>完整原生结果、MS1与配对空白报告</h3><p>逐文件列出全部原生结论、MS/MS谱库候选、独立MS1特征及空白标记，并提供每份样本的全量证据报告。</p></div><div class="cb-action-row"><a id="completedBatchOpenReport" class="btn btn-secondary btn-sm" target="_blank" rel="noopener">在新页面打开</a><a id="completedBatchDownloadReport" class="btn btn-secondary btn-sm" download>下载报告 HTML</a></div></div>
+          <iframe id="completedBatchReportFrame" title="宣痹汤 MS1、MS/MS 与配对空白完整联合报告" loading="lazy"></iframe>
+        </section>
+      </div>
+      <div data-cb-panel="exports" hidden>
+        <section class="card cb-card"><div class="cb-section-head"><div><h3>全部原生结论及既有9项结果文件</h3><p>全量原生结论表包含候选、背景、未解析和未匹配记录；MS1、MS/MS事件、QC和XBT附加筛选分别导出。整批ZIP包含全部表、报告和索引。</p></div><a id="completedBatchDownloadIndex" class="btn btn-secondary btn-sm" download>下载结果索引 JSON</a></div>
+          <div class="cb-table-wrap"><table class="cb-table cb-export-table"><thead><tr><th>内容</th><th>记录数</th><th>压缩大小</th><th>下载</th></tr></thead><tbody id="completedBatchExports"></tbody></table></div>
+          <p class="cb-evidence-note">候选与 QC 记录按跨文件出现次数计数。外源、背景、名称未确定和 XBT 链接待复核记录分别保留在 QC 中。</p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       PAGE: Identification Details
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="page" id="page-review">
+    <div class="page-header">
+      <span class="page-eyebrow">IDENTIFICATION DETAILS</span>
+      <h2>候选鉴定详情</h2>
+      <span class="page-title-en">Candidate Identification Details</span>
+      <p>逐个去重化合物查看鉴定结论、原始扫描证据，以及分类、生源、规则证据和碎裂解释。</p>
+      <button class="text-action page-back-action" onclick="EvidenceReview.backToResults()">← 返回样本鉴定结果</button>
+    </div>
+    <div class="card result-task-selector">
+      <div class="card-header">
+        <div><div class="card-title">选择要查看详情的样本</div><div class="card-subtitle">完整展示候选鉴定证据和未匹配谱图，不改变原候选排序</div></div>
+        <select class="form-select" id="reviewTaskSelect" style="width:auto;min-width:260px;">
+          <option value="">-- 选择已完成的任务 --</option>
+        </select>
+      </div>
+    </div>
+    <div class="review-tabs" role="tablist" aria-label="鉴定详情页面">
+      <button class="review-tab active" data-review-tab="identification" onclick="EvidenceReview.showTab('identification')">候选证据工作台</button>
+      <button class="review-tab" data-review-tab="unmatched" onclick="EvidenceReview.showTab('unmatched')">未匹配谱图</button>
+      <button class="review-tab" data-review-tab="process" onclick="EvidenceReview.showTab('process')">分析质量与适用性</button>
+      <button class="review-tab" data-review-tab="followup" onclick="EvidenceReview.showTab('followup')">确认实验建议</button>
+    </div>
+    <div class="review-panel active" data-review-panel="identification" id="resultsArea">
+      <div class="empty-state"><div class="empty-icon">⌕</div><div class="empty-title">选择样本以查看鉴定详情</div><div class="empty-desc">这里会显示去重化合物结论、原始谱图、分类、生源、规则证据与推测碎裂途径</div></div>
+    </div>
+    <div class="review-panel" data-review-panel="unmatched" id="unmatchedWorkbenchPanel">
+      <div class="empty-state"><div class="empty-icon">≋</div><div class="empty-title">选择样本以查看未匹配谱图</div><div class="empty-desc">未匹配谱图保留原始碎片、类别 Top-3 和逐谱定位</div></div>
+    </div>
+    <div class="review-panel" data-review-panel="process" id="moduleEffectPanel"></div>
+    <div class="review-panel" data-review-panel="followup" id="eviAcquirePanel"></div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       PAGE: Export Center
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="page" id="page-export">
+    <div class="page-header">
+      <span class="page-eyebrow">DELIVERY</span>
+      <h2>报告与导出</h2>
+      <span class="page-title-en">Reports &amp; Exports</span>
+      <p>把同一分析任务交付为数据表、完整报告、图像或可继续处理的开放格式。</p>
+      <button class="text-action page-back-action" onclick="App.navigateTo('report')">进入综合报告生成器 →</button>
+    </div>
+
+    <div data-completed-batch-entry="export" class="completed-batch-entry" data-i18n-skip></div>
+
+    <!-- Task selector with search -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">选择要导出的任务</span>
+        <div class="btn-group">
+          <div class="search-input-wrap">
+            <input type="text" class="form-input" id="exportSearch"
+              placeholder="搜索任务 ID / 文件名..." style="width:220px;">
+          </div>
+          <select class="form-select" id="exportTaskSelect" style="width:auto;min-width:260px;">
+            <option value="">-- 选择已完成的任务 --</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div id="frozenSingleExport"></div>
+    <div id="singleExportProgress" aria-label="单样本导出进度" hidden></div>
+
+    <!-- Export format cards -->
+    <div id="exportOptions" class="hidden">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title mb-1">📄 导出格式</div>
+            <div id="csvLayerContract" style="font-size:.72rem;color:var(--text-secondary);">
+              Excel 已按“结果导航 → 靶向高证据 → MS2 谱库鉴定 → 异构体竞争候选明细 → 同位素支持 → 仅质量候选 → 多谱库证据”分层；
+              靶向 CSV 与 MS2 CSV 分开下载；MS2 主表按“候选身份 → 采集信息 → 匹配与碎片证据 → 分类 → 谱库追溯”排序，
+              所有异构体竞争候选与对应 MS2 证据均在同一文件中，内部 ID、状态码和 JSON 只保留在详细审计表。
+              <b>该层不计入普通 MS2 的匹配数、High 数或去重候选数。</b>
+            </div>
+          </div>
+          <label style="font-size:.74rem;color:var(--text-secondary);">MS2 CSV 结果视图
+            <select id="exportBlankView" class="form-select" style="width:auto;padding:2px 6px;margin-left:4px;">
+              <option value="all" selected>完整鉴定</option>
+              <option value="clean">空白清洁视图</option>
+              <option value="flagged">仅空白相关</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid-3">
+          <div class="export-card">
+            <div class="export-card-icon">📊</div>
+            <div class="export-card-title" id="targetedCsvTitle">CSV 靶向结果</div>
+            <div class="export-card-desc" id="targetedCsvDescription">仅连续 MS1 数据库靶向结果</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadCSV('results','targeted')">下载</button>
+          </div>
+          <div class="export-card" id="targetedFeatureAuditCard" style="display:none;">
+            <div class="export-card-icon">🔬</div>
+            <div class="export-card-title">CSV 靶向峰审计</div>
+            <div class="export-card-desc">每个通过质量门槛的 XIC 峰段一行，供追溯峰边界与质量</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadCSV('results','targeted_features')">下载</button>
+          </div>
+          <div class="export-card">
+            <div class="export-card-icon">🧪</div>
+            <div class="export-card-title">MS2 技术全表 CSV（含全部异构体候选）</div>
+            <div class="export-card-desc">未按来源筛选的技术全表，含外源复核候选；植物正文请使用下方植物候选表。保留 RT、m/z、加合物和得分；超长原始峰显示节选，完整数组在 JSONL.gz 或 Excel 原始峰表</div>
+            <button class="btn btn-primary btn-sm" id="ms2CsvPackageButton" onclick="ExportMod.downloadMs2Csv()">下载 MS2 结果 CSV</button>
+          </div>
+          <div class="export-card" id="allMs2EventsExportCard">
+            <div class="export-card-icon">📋</div>
+            <div class="export-card-title">全部 MS/MS 原始事件 CSV</div>
+            <div class="export-card-desc">每张保存谱一行，包含未匹配及空白相关记录；保留原始结果索引、实测谱证据和完整记录 JSON，供逐谱追溯。</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadAllMs2Events()">下载全部 MS/MS 事件</button>
+          </div>
+          <div class="export-card" id="rawPeaksExportCard">
+            <div class="export-card-icon">🔎</div>
+            <div class="export-card-title">完整原始峰 JSONL.gz</div>
+            <div class="export-card-desc">每张已保存谱一行，包含未匹配和空白排除谱；保留完整峰数组、结果索引、原始完整性标记与 SHA256，可与 CSV 按谱图编号关联。历史未保存峰不能补回</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadRawPeaks()">下载完整原始峰</button>
+          </div>
+          <div class="export-card" id="plantCandidateExportCard">
+            <div class="export-card-icon">🌱</div>
+            <div class="export-card-title">植物候选与外源复核 CSV</div>
+            <div class="export-card-desc">植物候选表排除已核验外源和身份冲突候选；未分类来源仍标记未核验。保留原排名及未解异构体限定；技术全表、原始峰和外源复核记录均保留</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadCSV('results','plant_candidates')">下载植物候选</button>
+            <button class="btn btn-secondary btn-sm" onclick="ExportMod.downloadCSV('results','external_review')">下载外源与冲突复核</button>
+          </div>
+          <div class="export-card">
+            <div class="export-card-icon">🧬</div>
+            <div class="export-card-title">可选：仅异构体候选 CSV</div>
+            <div class="export-card-desc">仅在需要单独审计异构体时使用；主 MS2 CSV 已完整包含这些逐候选记录</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadCSV('results','isomer_candidates')">下载</button>
+          </div>
+          <div class="export-card">
+            <div class="export-card-icon">🗂️</div>
+            <div class="export-card-title">V15 多谱库证据 CSV</div>
+            <div class="export-card-desc">每行为“实体 × 候选 × CE × 谱库”，保留单库分数、条件相容性、accession、谱图编号和是否参与排序</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadCSV('results','multilibrary')">下载 CSV</button>
+            <button class="btn btn-secondary btn-sm" onclick="ExportMod.downloadMultilibraryJson()">下载 JSON</button>
+          </div>
+          <div class="export-card">
+            <div class="export-card-icon">📈</div>
+            <div class="export-card-title">CSV 详细审计</div>
+            <div class="export-card-desc">机器审计用途：内部 ID、状态码、规则版本、JSON 与全部低层字段</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadCSV('report','ms2')">下载</button>
+          </div>
+          <div class="export-card">
+            <div class="export-card-icon">📗</div>
+            <div class="export-card-title">Excel 工作簿</div>
+            <div class="export-card-desc">03_MS2 主表与 CSV 同候选行；14_原始峰索引与15_原始峰JSON保存全部原始峰，按片段序号拼接可恢复保存数组；13_多谱库证据保留</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadExcel()">下载</button>
+          </div>
+          <div class="export-card">
+            <div class="export-card-icon">🌐</div>
+            <div class="export-card-title">HTML 标准报告</div>
+            <div class="export-card-desc">靶向库结果置顶 + MS2 化合物汇总</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadHTML('standard')">下载</button>
+          </div>
+          <div class="export-card">
+            <div class="export-card-icon">🔬</div>
+            <div class="export-card-title">HTML 详细报告</div>
+            <div class="export-card-desc">靶向库结果置顶 + MS2 碎片证据</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadHTML('detailed')">下载</button>
+          </div>
+          <div class="export-card">
+            <div class="export-card-icon">🎯</div>
+            <div class="export-card-title">HTML 靶向库匹配报告</div>
+            <div class="export-card-desc">仅显示 Expected Compounds 靶向数据库匹配结果</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadHTML('targeted')">下载</button>
+          </div>
+          <div class="export-card">
+            <div class="export-card-icon">🖨️</div>
+            <div class="export-card-title">PDF 报告</div>
+            <div class="export-card-desc">含靶向摘要与前 200 条特征</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadPDF()">下载</button>
+          </div>
+          <div class="export-card" data-language-export="en">
+            <div class="export-card-icon">🇬🇧</div>
+            <div class="export-card-title">English HTML Standard Report</div>
+            <div class="export-card-desc">Fully English summary, evidence tiers and searchable results</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadHTML('standard','en')">Download</button>
+          </div>
+          <div class="export-card" data-language-export="en">
+            <div class="export-card-icon">🔬</div>
+            <div class="export-card-title">English HTML Detailed Report</div>
+            <div class="export-card-desc">Targeted matches first, followed by MS2 fragments and pathways</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadHTML('detailed','en')">Download</button>
+          </div>
+          <div class="export-card" data-language-export="en">
+            <div class="export-card-icon">🎯</div>
+            <div class="export-card-title">English Targeted Library Report</div>
+            <div class="export-card-desc">Expected Compounds targeted-library results only</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadHTML('targeted','en')">Download</button>
+          </div>
+          <div class="export-card" data-language-export="en">
+            <div class="export-card-icon">🇬🇧</div>
+            <div class="export-card-title">English PDF Report</div>
+            <div class="export-card-desc">Printable fully English identification report</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.downloadPDF('en')">Download</button>
+          </div>
+          <div class="export-card">
+            <div class="export-card-icon">🧬</div>
+            <div class="export-card-title">结构式图片</div>
+            <div class="export-card-desc">PNG / SVG 化学结构图</div>
+            <button class="btn btn-primary btn-sm" onclick="ExportMod.openStructureDownload()">下载</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Batch Export -->
+      <div class="card" id="batchExportCard">
+        <div class="card-title mb-1">📦 批量导出</div>
+        <p class="text-secondary mb-1" style="font-size:0.82rem;">
+          ZIP 按项目命名并附导出清单。推荐使用“CSV 完整包”：每个样本包含
+          MS2 鉴定结果表（含异构体候选）、靶向化合物汇总、靶向离子/原始峰审计三份 CSV；
+          异构体候选已经逐行合并进 MS2 表，不再重复生成第二份候选文件。
+        </p>
+        <div id="batchTaskList" class="mb-1"></div>
+        <!-- 悬浮导出按钮条 -->
+        <div id="batchFloatBar" class="batch-float-bar hidden">
+          <span id="batchFloatCount" style="font-size:0.78rem;color:#666;margin-right:8px;">已选 0 项</span>
+          <button class="btn btn-primary btn-sm" id="batchCsvBundleButton"
+                  onclick="ExportMod.batchExport('csv')">
+            📦 CSV 完整包（每样本 3 份）
+          </button>
+          <select id="batchExportType" class="form-select" style="width:auto;min-width:275px;padding:4px 7px;">
+            <optgroup label="CSV 分层数据">
+              <option value="csv_ms2|zh" selected>CSV — MS2 鉴定结果（含异构体候选；每样本 1 份）</option>
+              <option value="csv_isomer_candidates|zh">仅 CSV — 异构体竞争候选明细（逐候选）</option>
+              <option value="csv_targeted|zh">仅 CSV — 靶向化合物汇总</option>
+              <option value="csv_targeted_features|zh">仅 CSV — 靶向离子 / 原始峰审计（逐峰）</option>
+              <option value="csv_audit|zh">CSV — MS2 详细审计</option>
+            </optgroup>
+            <optgroup label="分层工作簿">
+              <option value="excel|zh">Excel — MS2 + 靶向分层工作簿</option>
+            </optgroup>
+            <optgroup label="中文样本综合报告（现有格式）">
+              <option value="html_integrated|zh">HTML — 新版样本综合报告（每样本 1 份，ZIP）</option>
+            </optgroup>
+            <optgroup label="跟随界面语言">
+              <option value="html_standard|auto">HTML — 标准综合报告</option>
+              <option value="html_detailed|auto">HTML — 详细综合报告</option>
+              <option value="html_targeted|auto">HTML — 仅靶向库匹配</option>
+              <option value="pdf|auto">PDF — 综合报告</option>
+            </optgroup>
+            <optgroup label="English reports">
+              <option value="html_standard|en">English HTML — Standard</option>
+              <option value="html_detailed|en">English HTML — Detailed</option>
+              <option value="html_targeted|en">English HTML — Targeted only</option>
+              <option value="pdf|en">English PDF — Combined</option>
+            </optgroup>
+          </select>
+          <button class="btn btn-primary btn-sm" id="batchExportButton"
+                  onclick="ExportMod.batchExportSelected()">下载所选单层 / 报告</button>
+        </div>
+        <div id="batchExportProgress" aria-label="批量导出进度" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE: Spectrum Viewer -->
+  <section class="page" id="page-spectrum">
+    <div class="page-header"><span class="page-eyebrow">EVIDENCE</span><h2>谱图证据</h2><span class="page-title-en">Spectral Evidence</span><p>在原始谱、库谱和匹配碎片之间核对鉴定依据。</p></div>
+    <div class="card">
+      <div class="card-header"><span class="card-title">选择任务</span>
+        <select class="form-select" id="specTaskSelect" style="width:auto;min-width:260px;" onchange="SpectrumPage.loadTask(this.value)"><option value="">-- 选择任务 --</option></select>
+      </div>
+    </div>
+    <div class="card hidden" id="specControlsCard">
+      <div class="card-header">
+        <span class="card-title">谱图列表</span>
+        <div class="btn-group">
+          <button class="btn btn-secondary btn-sm" onclick="SpectrumPage.prev()">◀ 上一条</button>
+          <span id="specCounter" style="font-size:0.85rem;padding:4px 8px;">0/0</span>
+          <button class="btn btn-secondary btn-sm" onclick="SpectrumPage.next()">下一条 ▶</button>
+        </div>
+      </div>
+      <div id="spectrumContainer" style="width:100%;height:400px;border:1px solid #e2e8f0;border-radius:8px;"></div>
+      <div id="specMetadata" style="margin-top:12px;font-size:0.85rem;color:var(--text-secondary);"></div>
+    </div>
+  </section>
+
+  <!-- PAGE: Classification -->
+  <section class="page" id="page-classification">
+    <div class="page-header"><span class="page-eyebrow">INTERPRETATION</span><h2>分类总览</h2><span class="page-title-en">Classification Overview</span><p>按证据可用性汇总化合物类别、结构候选与代表谱图。</p></div>
+    <div class="card">
+      <div class="card-header"><span class="card-title">选择任务</span>
+        <select class="form-select" id="classTaskSelect" style="width:auto;min-width:260px;" onchange="ClassPage.loadTask(this.value)"><option value="">-- 选择任务 --</option></select>
+      </div>
+    </div>
+    <div class="hidden class-dashboard" id="classDashboard">
+      <div class="class-summary-grid" aria-label="分类摘要">
+        <div class="class-summary-card"><span>已匹配谱图</span><strong id="classMatchedCount">0</strong></div>
+        <div class="class-summary-card"><span>分类类别</span><strong id="classCategoryCount">0</strong></div>
+        <div class="class-summary-card"><span>有结构候选</span><strong id="classStructureCount">0</strong></div>
+        <div class="class-summary-card"><span>主要类别</span><strong id="classTopCategory">—</strong></div>
+      </div>
+      <div class="card class-panel">
+        <div class="class-panel-header"><div><div class="card-title">化合物分类分布</div><div class="card-subtitle">仅统计已匹配谱图；柱形显示数量与占比</div></div></div>
+        <div id="class-accuracy-chart" class="class-chart"></div>
+      </div>
+      <div class="card class-panel">
+        <div class="class-panel-header"><div><div class="card-title">代表性分子结构</div><div class="card-subtitle">按化合物去重，最多展示 12 个有结构候选</div></div><span class="class-panel-count" id="classMoleculeCount">0 个</span></div>
+        <div id="molecule-grid" class="molecule-gallery"></div>
+      </div>
+      <div class="card class-panel"><div class="class-panel-header"><div><div class="card-title">镜像谱图对比</div><div class="card-subtitle">选择候选后对照样本谱图与馆藏谱图</div></div></div>
+        <div class="class-compare-controls">
+          <label style="font-size:0.85rem;">选择匹配项:</label>
+          <select class="form-select" id="compareSelect" onchange="ClassPage.loadComparison(this.value)"></select>
+        </div>
+        <div id="compareContainer" class="class-compare-chart"><div class="class-empty">请选择一个匹配项查看镜像谱图</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE: Report Generator -->
+  <section class="page" id="page-report">
+    <div class="page-header"><span class="page-eyebrow">DELIVERY · SAMPLE REPORT</span><h2>样本综合报告</h2><span class="page-title-en">Integrated Sample Report</span><p>用一份报告说明样本结论、主要化合物、分析方法、证据边界和后续确认建议。</p><button class="text-action page-back-action" onclick="App.navigateTo('results')">← 返回样本鉴定结果</button></div>
+    <div class="card result-task-selector">
+      <div class="card-header"><div><div class="card-title">选择样本</div><div class="card-subtitle">报告内容随样本自动更新</div></div>
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end;">
+          <select class="form-select" id="reportTaskSelect" style="width:auto;min-width:260px;"><option value="">-- 选择已完成的任务 --</option></select>
+          <button class="btn btn-primary" onclick="SampleReport.openBatchExport()">批量选择并下载（ZIP）</button>
+        </div>
+      </div>
+    </div>
+    <div class="sample-report-toolbar hidden" id="sampleReportToolbar">
+      <div>
+        <strong>报告交付</strong>
+        <span>页面预览与下载报告使用同一任务，不重新计算或改变候选排序。</span>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="SampleReport.generate()">下载样本综合报告（HTML）</button>
+        <button class="btn btn-secondary" onclick="SampleReport.printReport()">打印 / 另存为 PDF</button>
+        <button class="btn btn-secondary" onclick="SampleReport.downloadReviewIndex()">下载 MS2 人工复核索引（CSV）</button>
+        <button class="btn btn-secondary" onclick="SampleReport.downloadIsomerCandidateCsv()">下载异构体逐候选明细（CSV）</button>
+        <button class="btn btn-secondary" onclick="SampleReport.downloadServerReport('standard')">下载标准证据报告</button>
+        <button class="btn btn-secondary" onclick="SampleReport.downloadServerReport('detailed')">下载详细技术报告</button>
+      </div>
+    </div>
+    <div id="sampleReportArea"><div class="empty-state"><div class="empty-icon">▤</div><div class="empty-title">选择样本以生成综合报告</div><div class="empty-desc">报告将先给出总体结论，再说明方法、局限和建议</div></div></div>
+  </section>
+
+  <!-- PAGE: Polarity-neutral library governance -->
+  <section class="page" id="page-library">
+    <div class="page-header">
+      <span class="page-eyebrow">REFERENCE DATA</span>
+      <h2>谱库管理</h2>
+      <span class="page-title-en">Library Management</span>
+      <p>统一查看正负离子覆盖、运行库状态、公开数据治理和实验谱扩增。</p>
+    </div>
+
+    <div class="library-hero">
+      <div>
+        <span class="panel-eyebrow">LIBRARY GOVERNANCE</span>
+        <h3>一个谱库中心，同时服务 POS 与 NEG</h3>
+        <p>极性是谱图属性和检索约束，不是系统产品方向。覆盖缺口、来源质量和导入证据在这里统一管理。</p>
+      </div>
+      <div class="library-hero-actions">
+        <button class="btn btn-secondary" onclick="App.navigateTo('upload')">选择并加载运行库</button>
+        <button class="btn btn-primary" onclick="App.navigateTo('libaugment')">扩增实验谱 / 文献靶标</button>
+      </div>
+    </div>
+
+    <div class="card library-runtime-card" id="v7RuntimeCard">
+      <div class="card-header">
+        <div>
+          <div class="card-title">当前运行库与系统实例</div>
+          <div class="card-subtitle">运行实例、数据库位置和网络引擎使用同一份后端事实。</div>
+        </div>
+        <span class="library-neutral-badge">POS / NEG 对称</span>
+      </div>
+      <div id="v7RuntimeInfo" class="library-runtime-info">正在读取 MSsystem 运行实例…</div>
+    </div>
+    <div class="library-section-title">
+      <div><span class="panel-eyebrow">COVERAGE</span><h3>全库极性覆盖</h3></div>
+      <p>物理谱图数与化合物覆盖分开呈现，避免单纯用谱图总量判断库是否完整。</p>
+    </div>
+    <div class="library-coverage-grid" id="negativeCoverageCards"></div>
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">公开谱库补充与覆盖缺口</div>
+          <div class="card-subtitle">当前清单可按 POS、NEG、化合物类别和实验/预测证据层筛选；负离子天然产物只是已识别的一项缺口，不定义系统用途。</div>
+        </div>
+        <div class="btn-group">
+          <span class="library-gap-badge">SOURCE AUDIT</span>
+          <button class="btn btn-secondary btn-sm" onclick="LibraryCenterPage.load()">刷新清单</button>
+        </div>
+      </div>
+      <div id="negativeSourceList"><div style="color:var(--text-secondary);padding:1rem 0;">正在加载数据源清单…</div></div>
+    </div>
+    <div class="warning-card">
+      <h3>入库证据边界</h3>
+      <p style="font-size:.82rem;line-height:1.65;margin:0;">默认生产检索层只接收实验谱。标准品、植物组织生物谱和公共原始数据分层保存；in silico 谱仅进入 shadow 层。公共原始 LC-MS/MS 必须经过方法/极性核验、共识谱构建和可追溯注释后，才可成为参考谱。</p>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       PAGE: Library Augment (谱库扩增)
+       ───────────────────────────────────────────────────────────────── -->
+  <section class="page" id="page-libaugment">
+    <div class="page-header">
+      <span class="page-eyebrow">REFERENCE DATA · IMPORT</span>
+      <h2>实验谱 / 文献靶标导入</h2>
+      <span class="page-title-en">Experimental Spectra / Literature Targets Import</span>
+      <p>导入前强制核验谱图强度、分子式、加合物、前体质量与结构一致性。</p>
+      <button class="text-action page-back-action" onclick="App.navigateTo('library')">← 返回谱库管理</button>
+    </div>
+
+    <div class="card" style="background:var(--info-bg,#ebf8ff);border-color:#BEE3F8;">
+      <div style="display:flex;align-items:flex-start;gap:0.65rem;">
+        <span style="font-size:1.2rem;">💡</span>
+        <div style="font-size:0.85rem;line-height:1.6;">
+          <strong>重要：</strong>只有包含真实碎片强度的测量结果才作为实验谱；仅列 fragment_mz、没有 intensity 的文献表会标为“文献靶标线索”，不能获得实验谱高置信鉴定。<br>
+          <strong>质量门控：</strong>系统核验 formula–adduct–precursor、SMILES–formula 和 InChIKey 一致性；不一致行隔离且不写入数据库。<br>
+          <strong>支持格式：</strong>CSV/Excel、MGF、MSP、质心 mzML，以及“谱图图片 + V15 JSON 清单 + 经人工复核的峰表”。mzXML 必须先规范化为质心 mzML；Thermo .raw、Agilent .d 等厂商原始文件先走系统的原始数据转换流程。<br>
+          <strong>对照品重复谱：</strong>同一结构、分子式、加合物、极性、仪器、活化方式、采集方法、批号以及固定 CE 完全一致时，系统自动用同批技术重复生成一张共识谱；原文件哈希和成员扫描号写入审计信息，技术重复只计一份独立证据。<br>
+          <strong>图片边界：</strong>PNG/JPEG/TIFF 不会仅凭像素进入实验谱检索。图片必须关联至少 3 个经复核的 m/z–intensity 数值和横轴提取方法；入库时保留图片哈希，但图片数字化强度只进入文献靶标/复核记录。<br>
+          <strong>缺 InChIKey/SMILES：</strong>可按“名称+分子式”保存为低证据线索；系统不会再按名称自动借用结构，避免异构体串库。
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title mb-1">📂 选择表格、原始峰文件或参考谱图片</div>
+      <div class="upload-zone" id="libaugmentZone">
+        <div class="upload-icon">📚</div>
+        <div class="upload-text">拖拽文件到此处，或点击选择</div>
+        <div class="upload-hint">.csv / .xlsx / .mgf / .msp / .mzML / .json / .png / .jpg / .tif；可批量上传</div>
+        <input type="file" id="libaugmentFileInput" accept=".csv,.xlsx,.xls,.mgf,.msp,.mzml,.mzxml,.xml,.json,.png,.jpg,.jpeg,.tif,.tiff" multiple style="display:none">
+      </div>
+      <div class="file-list" id="libaugmentFileList"></div>
+      <div class="btn-group mt-1">
+        <button class="btn btn-primary" id="libaugmentPreviewBtn" disabled>🔍 预览（转换 + 比对）</button>
+        <button class="btn btn-primary hidden" id="libaugmentImportBtn" style="background:#38a169;">⬆️ 确认导入到双库</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title mb-1">🧪 从对照品原始谱或谱图图片建立参考记录</div>
+      <div class="la-muted" style="line-height:1.6;margin-bottom:.8rem;">先把 MGF/MSP/mzML 或图片加入上方文件列表，再填写此表。系统会生成同批 JSON 清单，把化合物身份、对照品批号/纯度、仪器、活化方式和 CE 绑定到指定文件。空缺条件不会被系统猜测。只有含可解析 SMILES 或 InChI 的同条件重复谱才会合并，避免把同分异构体混为一张谱。</div>
+      <div class="la-form-grid">
+        <label>关联源文件<select id="laRefSource"><option value="">请选择已加入的 MGF/MSP/mzML 或图片</option></select></label>
+        <label>谱图/扫描 ID（可空）<input id="laRefSpectrumId" placeholder="例如 scan=125；留空则应用于文件内全部谱图"></label>
+        <label>化合物名称<input id="laRefName" placeholder="可核查名称"></label>
+        <label>分子式<input id="laRefFormula" placeholder="例如 C15H20O2"></label>
+        <label>SMILES<input id="laRefSmiles" placeholder="用于结构与 InChIKey 复核"></label>
+        <label>InChIKey（来源记录）<input id="laRefInchikey" placeholder="系统仍会从结构重新计算"></label>
+        <label>前体 m/z<input id="laRefPrecursor" type="number" step="any"></label>
+        <label>加合物<input id="laRefAdduct" placeholder="例如 [M+H]+"></label>
+        <label>极性<select id="laRefPolarity"><option value="POS">POS</option><option value="NEG">NEG</option></select></label>
+        <label>电荷数<input id="laRefCharge" type="number" step="1" value="1"></label>
+        <label>仪器型号<input id="laRefInstrument" placeholder="例如 Agilent 6560 QTOF"></label>
+        <label>分析器族<select id="laRefAnalyzer"><option value="qtof">Q-TOF</option><option value="orbitrap">Orbitrap / QE</option><option value="triple_quadrupole">Triple quadrupole</option><option value="ion_trap">Ion trap</option><option value="">其他/未记录</option></select></label>
+        <label>活化方式<input id="laRefActivation" placeholder="CID / beam CID / HCD"></label>
+        <label>碰撞区（如适用）<input id="laRefCollisionRegion" placeholder="Waters: trap / transfer；SCIEX: Q2"></label>
+        <label>CE 数值<input id="laRefCe" type="number" step="any"></label>
+        <label>CE 最小值（stepped/ramp）<input id="laRefCeMin" type="number" step="any"></label>
+        <label>CE 最大值（stepped/ramp）<input id="laRefCeMax" type="number" step="any"></label>
+        <label>CE 单位<select id="laRefCeUnit"><option value="eV">eV</option><option value="NCE">NCE</option><option value="V">V</option><option value="">未记录</option></select></label>
+        <label>CE 模式<select id="laRefCeMode"><option value="fixed">fixed</option><option value="stepped">stepped</option><option value="ramp">ramp</option><option value="">未记录</option></select></label>
+        <label>采集方法 ID<input id="laRefMethod" placeholder="实验方法或方法文件标识"></label>
+        <label>对照品类型<select id="laRefMaterial"><option value="authentic_standard">真实对照品</option><option value="certified_reference_material">有证标准物质</option><option value="public_experimental_spectrum">公共实验谱</option></select></label>
+        <label>批号<input id="laRefLot" placeholder="对照品 lot"></label>
+        <label>纯度（%）<input id="laRefPurity" type="number" min="0" max="100" step="any"></label>
+        <label>来源 accession<input id="laRefAccession" placeholder="MassBank/GNPS/本地登记号"></label>
+        <label>DOI<input id="laRefDoi" placeholder="公共谱来源 DOI；本地对照品可空"></label>
+      </div>
+      <label style="display:block;margin-top:.7rem;">图片数字化峰表（仅图片源需要；每行 m/z intensity，至少 3 行）<textarea id="laRefPeaks" rows="6" style="width:100%;font-family:monospace;" placeholder="184.0733 100\n104.1070 35\n86.0964 18"></textarea></label>
+      <div style="display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin-top:.7rem;">
+        <label><input id="laRefVerified" type="checkbox"> 我已核对源文件、对照品批号/纯度、仪器和采集条件</label>
+        <button class="btn btn-secondary btn-sm" type="button" onclick="LibAugmentPage.addReferenceManifest()">加入 V15 参考谱清单</button>
+        <button class="btn btn-secondary btn-sm" type="button" onclick="LibAugmentPage.downloadManifestTemplate()">下载 JSON 模板</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div id="libaugmentResult"><div class="la-muted">预览或导入结果将显示在此处</div></div>
+    </div>
+
+    <style>
+      .la-card{padding:1rem;border:1px solid #e2e8f0;border-radius:8px;margin-bottom:1rem;background:#fff;}
+      .la-card h4{margin:0 0 0.6rem;}
+      .la-stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.8rem;margin-bottom:0.8rem;}
+      .la-stat{text-align:center;padding:0.8rem;border-radius:8px;background:#f7fafc;border:1px solid #e2e8f0;}
+      .la-stat-num{font-size:1.6rem;font-weight:700;color:#2d3748;}
+      .la-stat-lbl{font-size:0.78rem;color:#718096;margin-top:0.2rem;}
+      .la-stat.la-new .la-stat-num{color:#38a169;}
+      .la-stat.la-warn .la-stat-num{color:#dd6b20;}
+      .la-badge{display:inline-block;padding:1px 6px;border-radius:4px;font-size:0.7rem;margin-right:3px;}
+      .la-badge-new{background:#c6f6d5;color:#22543d;}
+      .la-badge-exist{background:#bee3f8;color:#2a4365;}
+      .la-badge-warn{background:#feebc8;color:#7b341e;}
+      .la-table-wrap{overflow-x:auto;}
+      .la-table{width:100%;border-collapse:collapse;font-size:0.82rem;}
+      .la-table th,.la-table td{padding:5px 8px;border-bottom:1px solid #edf2f7;text-align:left;}
+      .la-table th{background:#f7fafc;font-weight:600;}
+      .la-muted{color:#718096;font-size:0.85rem;}
+      .la-error{color:#e53e3e;}
+      .la-success{border-color:#c6f6d5;background:#f0fff4;}
+      .la-warn-card{padding:0.6rem 0.8rem;background:#fffaf0;border:1px solid #feebc8;border-radius:6px;font-size:0.82rem;color:#7b341e;margin-top:0.6rem;}
+      .la-file-row{display:flex;justify-content:space-between;align-items:center;padding:4px 8px;border-bottom:1px solid #edf2f7;}
+      .upload-zone.dragover{border-color:#3182ce;background:#ebf8ff;}
+      .la-form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.65rem;}
+      .la-form-grid label{font-size:.75rem;color:#475569;display:flex;flex-direction:column;gap:.25rem;}
+      .la-form-grid input,.la-form-grid select{padding:.42rem .5rem;border:1px solid #cbd5e1;border-radius:6px;background:#fff;}
+    </style>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     Modal & Toast Containers
+     ═══════════════════════════════════════════════════════════════ -->
+<div id="modalContainer"></div>
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     Analysis-level and instrument preset logic
+     ═══════════════════════════════════════════════════════════════ -->
+<script>
+/**
+ * Analysis level controls evidence strictness and the MS/MS peak view.
+ * Instrument preset independently controls only precursor-mass tolerance.
+ * The split prevents selecting a mass spectrometer from silently changing
+ * the requested discovery/reporting evidence level.
+ */
+const ANALYSIS_LEVELS = {
+  routine: {
+    label: '常规筛查',
+    cosTh: 0.30,
+    finalTh: 0.25,
+    peakProcessingPreset: 'library_match',
+    strictEvidenceGate: false,
+    hint: '常规筛查：Cosine ≥ 0.30、Final ≥ 0.25、5% / Top 15；适合批量样本。'
+  },
+  sensitive: {
+    label: '高灵敏探索',
+    cosTh: 0.20,
+    finalTh: 0.20,
+    peakProcessingPreset: 'sensitive',
+    strictEvidenceGate: false,
+    hint: '高灵敏探索：Cosine ≥ 0.20、Final ≥ 0.20、1% / Top 40；候选更多、耗时更长，结果需要复核。'
+  },
+  report: {
+    label: '严格报告',
+    cosTh: 0.50,
+    finalTh: 0.50,
+    peakProcessingPreset: 'library_match',
+    strictEvidenceGate: true,
+    hint: '严格报告：Cosine ≥ 0.50、Final ≥ 0.50，并要求 Entropy ≥ 0.45、Reverse ≥ 0.55；证据优先。'
+  }
+};
+
+const INSTRUMENT_PRESETS = {
+  highres: {
+    label: '高分辨 (Orbitrap / FT-ICR)',
+    mzDa: 0.02, mzPpm: 5,
+    hint: 'Orbitrap / FT-ICR：0.02 Da / 5 ppm；只设置质量窗口，不改变证据级别。'
+  },
+  balanced: {
+    label: 'Q-TOF / TripleTOF',
+    mzDa: 0.02, mzPpm: 10,
+    hint: 'Q-TOF / TripleTOF：0.02 Da / 10 ppm；只设置质量窗口，不改变证据级别。'
+  },
+  lowres: {
+    label: '低分辨 (Triple Quad / Ion Trap)',
+    mzDa: 0.5, mzPpm: 50,
+    hint: 'Triple Quad / Ion Trap：0.50 Da / 50 ppm；请结合实际质量精度再确认。'
+  }
+};
+
+let applyingAnalysisPreset = false;
+let applyingInstrumentPreset = false;
+
+function setAnalysisControlValue(id, value) {
+  const element = document.getElementById(id);
+  if (!element) return;
+  if (element.type === 'checkbox') {
+    element.checked = Boolean(value);
+  } else {
+    element.value = value;
+  }
+  if (id === 'cosTh') {
+    const display = document.getElementById('cosThVal');
+    if (display) display.textContent = Number(value).toFixed(2).replace(/0$/, '');
+  }
+  if (id === 'finalTh') {
+    const display = document.getElementById('finalThVal');
+    if (display) display.textContent = Number(value).toFixed(2).replace(/0$/, '');
+  }
+}
+
+function peakPresetSummary(value) {
+  if (value === 'sensitive') return '1% / Top 40';
+  if (value === 'network_rich') return '1% / Top 70';
+  return '5% / Top 15';
+}
+
+function updateAnalysisParameterSummary() {
+  const analysisSelect = document.getElementById('analysisLevel');
+  const level = analysisSelect?.value || 'custom';
+  const levelLabel = ANALYSIS_LEVELS[level]?.label || '自定义';
+  const cosine = Number(document.getElementById('cosTh')?.value || 0);
+  const finalScore = Number(document.getElementById('finalTh')?.value || 0);
+  const mzDa = Number(document.getElementById('mzDa')?.value || 0);
+  const mzPpm = Number(document.getElementById('mzPpm')?.value || 0);
+  const peakPreset = document.getElementById('peakProcessingPreset')?.value || 'library_match';
+  const strictEnabled = document.getElementById('strictEvidenceGate')?.checked || false;
+
+  const write = (id, text) => {
+    const element = document.getElementById(id);
+    if (element) element.textContent = text;
+  };
+  write('analysisSummaryLevel', levelLabel);
+  write('analysisSummaryCosine', `≥ ${cosine.toFixed(2)}`);
+  write('analysisSummaryFinal', `≥ ${finalScore.toFixed(2)}`);
+  write(
+    'analysisSummaryMass',
+    `${mzDa.toFixed(mzDa < 0.1 ? 2 : 1)} Da / ${
+      Number.isInteger(mzPpm) ? mzPpm.toFixed(0) : mzPpm.toFixed(1)
+    } ppm`
+  );
+  write('analysisSummaryPeaks', peakPresetSummary(peakPreset));
+  write('analysisSummaryStrict', strictEnabled ? '开启' : '关闭');
+
+  const advancedState = document.getElementById('advancedSettingsState');
+  if (advancedState) {
+    advancedState.textContent = `${levelLabel} · ${cosine.toFixed(2)} / ${finalScore.toFixed(2)}`;
+    advancedState.classList.toggle('is-custom', level === 'custom');
+  }
+}
+
+function applyAnalysisLevel(level) {
+  const preset = ANALYSIS_LEVELS[level];
+  const hint = document.getElementById('analysisLevelHint');
+  if (!preset) {
+    if (hint) hint.textContent = '自定义模式：以下实际阈值会原样提交到分析任务。';
+    updateAnalysisParameterSummary();
+    return;
+  }
+  applyingAnalysisPreset = true;
+  setAnalysisControlValue('cosTh', preset.cosTh);
+  setAnalysisControlValue('finalTh', preset.finalTh);
+  setAnalysisControlValue('peakProcessingPreset', preset.peakProcessingPreset);
+  setAnalysisControlValue('strictEvidenceGate', preset.strictEvidenceGate);
+  applyingAnalysisPreset = false;
+  if (hint) hint.textContent = preset.hint;
+  updateAnalysisParameterSummary();
+}
+
+function applyInstrumentPreset(preset) {
+  const p = INSTRUMENT_PRESETS[preset];
+  const hint = document.getElementById('presetHint');
+  if (!p) {
+    if (hint) hint.textContent = '自定义质量窗口：以下 Da / ppm 数值会原样提交。';
+    updateAnalysisParameterSummary();
+    return;
+  }
+  applyingInstrumentPreset = true;
+  setAnalysisControlValue('mzDa', p.mzDa);
+  setAnalysisControlValue('mzPpm', p.mzPpm);
+  applyingInstrumentPreset = false;
+  if (hint) hint.textContent = p.hint;
+  updateAnalysisParameterSummary();
+}
+
+function markAnalysisLevelCustom() {
+  if (applyingAnalysisPreset) return;
+  const select = document.getElementById('analysisLevel');
+  if (select && select.value !== 'custom') select.value = 'custom';
+  const hint = document.getElementById('analysisLevelHint');
+  if (hint) hint.textContent = '自定义模式：以下实际阈值会原样提交到分析任务。';
+  updateAnalysisParameterSummary();
+}
+
+function markInstrumentPresetCustom() {
+  if (applyingInstrumentPreset) return;
+  const select = document.getElementById('instrumentPreset');
+  if (select && select.value !== 'custom') select.value = 'custom';
+  const hint = document.getElementById('presetHint');
+  if (hint) hint.textContent = '自定义质量窗口：以下 Da / ppm 数值会原样提交。';
+  updateAnalysisParameterSummary();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  ['cosTh', 'finalTh'].forEach(id => {
+    document.getElementById(id)?.addEventListener('input', markAnalysisLevelCustom);
+  });
+  ['peakProcessingPreset', 'strictEvidenceGate'].forEach(id => {
+    document.getElementById(id)?.addEventListener('change', markAnalysisLevelCustom);
+  });
+  ['mzDa', 'mzPpm'].forEach(id => {
+    document.getElementById(id)?.addEventListener('input', markInstrumentPresetCustom);
+  });
+  applyAnalysisLevel(document.getElementById('analysisLevel')?.value || 'routine');
+  applyInstrumentPreset(document.getElementById('instrumentPreset')?.value || 'balanced');
+});
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     JavaScript Modules (order matters)
+     ═══════════════════════════════════════════════════════════════ -->
+<script src="/static/js/api.js?v=3.4"></script>
+<script src="/static/js/upload.js?v=16.0"></script>
+<script src="/static/js/tasks.js?v=20261022-native-all4"></script>
+<script src="/static/js/storage-manager.js?v=20261024a"></script>
+<script src="/static/js/module-effects.js?v=10.3"></script>
+<script src="/static/js/eviacquire.js?v=10.4"></script>
+<script src="/static/js/results.js?v=16.7-evidence-20261016a"></script>
+    <script src="/static/js/confidence-guide.js?v=14.0.4"></script>
+<script src="/static/js/compound-search.js?v=16.4-governance-search-20260922"></script>
+<script src="/static/js/visual-results.js?v=16.5-20261015"></script>
+<script src="/static/js/saved-result-fallback.js?v=16.5-20261015"></script>
+<script src="/static/js/frozen-task-ui.js?v=20261022-native-all4"></script>
+<script src="/static/js/sample-overview.js?v=20261022-core-evidence-repair-v1"></script>
+<script src="/static/js/candidate-comparison.js?v=16.0.0"></script>
+<script src="/static/js/evidence-review.js?v=20261022-native-xbt1"></script>
+<script src="/static/js/export.js?v=20261022-core-evidence-repair-v1"></script>
+<script src="/static/js/spectrum-viewer.js?v=3.8"></script>
+<script src="/static/js/molecule-viewer.js?v=3.3"></script>
+<script src="/static/js/classification-dashboard.js?v=3.2"></script>
+<script src="/static/js/spectrum-compare.js?v=16.7.1-20261016"></script>
+<script src="/static/js/report-generator.js?v=20261022-native-all4"></script>
+<script src="/static/js/libaugment.js?v=15.0.1"></script>
+  <script src="/static/js/dashboard.js?v=15.1"></script>
+<script src="/static/js/library-center.js?v=7.2"></script>
+<script src="/static/js/network.js?v=20261022-core-evidence-repair-v1"></script>
+<script src="/static/js/completed-batches.js?v=20261022-native-all4"></script>
+<script src="/static/js/app.js?v=15.1-xbt20261022"></script>
+
+</body>
+</html>

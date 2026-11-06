@@ -1,0 +1,328 @@
+{
+  "schema_version": "2.0.0",
+  "module_id": "v15_conditioned_multilibrary_flagship",
+  "algorithm_id": "mssystem-v16-shared-spectral-ties-multilibrary-1.0.0",
+  "display_name": "V16-Flagship / Shared Spectral Ties and Replicate Audit",
+  "deployment_state": "production",
+  "decision_unit": "candidate_independent_precursor_entity",
+  "candidate_pool": {
+    "maximum_candidates_per_scan": 20,
+    "shortlist_size": 5,
+    "missing_from_truncated_topk_is_negative_evidence": false,
+    "same_energy_replicate_support": "legacy_zero_fill",
+    "connectivity_identity": "bounded_tautomer_standardized_nonisomeric_structure_then_inchikey",
+    "collapse_stereoisomers": true,
+    "tautomer_standardization": {
+      "enabled": true,
+      "maximum_tautomers": 32,
+      "maximum_transforms": 100,
+      "used_for_identity_collapse_only": true
+    }
+  },
+  "replicate_missingness_audit": {
+    "enabled": true,
+    "observed_support_rule": "observed_candidates_only_v16",
+    "affects_primary_ranking": false,
+    "promotion_state": "rejected_after_qe_top1_loss_58_to_57_of_72",
+    "missing_is_measured_zero": false
+  },
+  "scan_score": {
+    "cosine": 0.35,
+    "entropy": 0.25,
+    "reverse_match": 0.15,
+    "mass_accuracy": 0.1,
+    "fragment_coverage": 0.1,
+    "intensity_agreement": 0.05,
+    "reciprocal_rank_fraction": 0.3,
+    "spectral_fraction": 0.7
+  },
+  "conditioned_multilibrary": {
+    "enabled": true,
+    "reference_unit": "one_peak_content_profile_after_mirror_collapse",
+    "source_unit": "normalized_dataset_source_within_content_profile",
+    "aggregation": "mean_of_legacy_best_and_qualified_provenance_stratum_median",
+    "best_reference_fraction": 0.5,
+    "consensus_fraction": 0.5,
+    "minimum_provenance_strata": 2,
+    "minimum_unique_content_profiles": 2,
+    "near_collision_energy_delta": {
+      "eV": 5.0,
+      "NCE": 5.0
+    },
+    "compatible_instrument_domain_near_ce_preferred": true,
+    "ce_comparability_requires_activation_and_fixed_mode": true,
+    "stepped_ramp_or_composite_ce_reduced_to_midpoint": false,
+    "cross_vendor_qtof_ce_equivalence_assumed": false,
+    "fallback_when_condition_metadata_incomplete": "legacy_best_reference_with_display_only_all_condition_median",
+    "unconditioned_consensus_affects_ranking": false,
+    "report_source_families": [
+      "massbank",
+      "gnps",
+      "mona",
+      "nist",
+      "spectraverse",
+      "bmdms",
+      "vaniya-fiehn"
+    ],
+    "missing_content_fingerprint_can_corroborate": false,
+    "source_accessions_are_independent_evidence": false,
+    "mirrored_source_labels_are_independent_evidence": false,
+    "technical_replicates_are_independent_evidence": false,
+    "cross_instrument_ce_conversion_allowed": false,
+    "cross_unit_ce_conversion_allowed": false,
+    "score_is_probability": false,
+    "affects_scan_ranking": true
+  },
+  "source_paired_ce_gate": {
+    "enabled": true,
+    "module_id": "v15_source_paired_platform_ce_gate",
+    "algorithm_id": "mssystem-v15-source-paired-platform-ce-gate-1.0.0",
+    "candidate_scope": "existing_v15_shortlist_same_formula_connectivities_only",
+    "minimum_same_formula_connectivities": 2,
+    "maximum_same_formula_connectivities": 12,
+    "maximum_selected_v15_rank": 5,
+    "maximum_v15_top1_margin": 0.1,
+    "minimum_query_collision_energy_conditions": 2,
+    "expanded_candidates_can_be_selected": false,
+    "reference_platform_anchor": {
+      "instrument_scope": "exact_domain_then_model_then_vendor_analyzer; analyzer_family_only_when_vendor_and_model_are_both_missing",
+      "minimum_paired_observations": 6,
+      "minimum_common_provenance_strata": 1,
+      "minimum_query_collision_energy_conditions": 2,
+      "minimum_spectral_views": 2,
+      "minimum_unique_evidence_profiles": 1,
+      "minimum_median_score_delta": 0.01,
+      "minimum_observation_win_fraction": 0.6666666666666666,
+      "minimum_unique_profile_win_fraction": 1.0,
+      "missing_reference_collision_energy_is_exact_match": false
+    },
+    "broad_source_paired_gate_retained": true,
+    "mirrored_reference_content_creates_extra_votes": false,
+    "technical_repeats_create_extra_query_conditions": false,
+    "cross_instrument_conversion_allowed": false,
+    "cross_unit_ce_conversion_allowed": false,
+    "same_formula_connectivity_requires_orthogonal_confirmation": true,
+    "score_is_probability": false,
+    "affects_final_candidate_selection": true
+  },
+  "feature_fragment_runtime": {
+    "deployment_state": "fail_closed",
+    "runtime_evaluation_enabled": false,
+    "runtime_adapter_available": false,
+    "accepted_rule_count": 0,
+    "pilot_v1_rule_count": 6,
+    "pilot_v1_runtime_allowed": false,
+    "research_catalog_evaluated_by_search": false,
+    "affects_ranking": false,
+    "affects_score": false,
+    "reason": "no_feature_fragment_rule_passed_sealed_runtime_gate"
+  },
+  "entity_score": {
+    "mean_collision_energy_support": 0.45,
+    "median_collision_energy_support": 0.3,
+    "collision_energy_coverage": 0.15,
+    "collision_energy_top1_fraction": 0.1
+  },
+  "collision_energy": {
+    "bin_width": 0.5,
+    "unknown_values_share_one_bin": true,
+    "technical_replicates_are_independent_votes": false,
+    "distinct_energy_bins_are_independent_votes": false,
+    "distinct_energy_bins_are_separate_measurement_conditions": true
+  },
+  "reference_provenance": {
+    "source_family_unit": "normalized_dataset_source",
+    "source_diversity_saturation": 3,
+    "spectrum_accessions_are_independent_votes": false,
+    "source_diversity_affects_score": true,
+    "source_count_bonus_applied": false
+  },
+  "identity_registry": {
+    "enabled": true,
+    "path": "config/canonical_name_identity_registry.json",
+    "sha256": "cefc5b2804173ccc9ae29d025991ffeee187d38947c76b2bef39927bc310e0d7",
+    "required": true,
+    "exact_normalized_name_and_formula_required": true,
+    "ground_truth_inputs_used": false,
+    "unresolved_is_neutral": true
+  },
+  "chemistry_gate": {
+    "parent_mass_tolerance_ppm": 25.0,
+    "parent_mass_tolerance_da": 0.02,
+    "lcms_adduct_hard_veto_requires_validated_network_or_group_evidence": true,
+    "supported_fragmentation_adducts": [
+      "[M+H]+",
+      "[M-H]-",
+      "[M]+",
+      "[M]-"
+    ],
+    "candidate_mass_inference_adducts_positive": [
+      "[M+H]+",
+      "[M]+",
+      "[M+Na]+",
+      "[M+NH4]+",
+      "[M+K]+"
+    ],
+    "candidate_mass_inference_adducts_negative": [
+      "[M-H]-",
+      "[M]-",
+      "[M+Cl]-",
+      "[M+FA-H]-",
+      "[M+Hac-H]-"
+    ],
+    "candidate_independent_formula_adduct_contradiction_is_veto": true,
+    "candidate_library_adduct_contradiction_is_veto": false,
+    "mass_consistent_library_neutral_loss_can_mark_precursor_transformation_ambiguity": true,
+    "precursor_transformation_ambiguity_adducts": [
+      "[M-H2O+H]+",
+      "[M+H-H2O]+",
+      "[M+H-NH3]+",
+      "[M-H-H2O]-"
+    ],
+    "precursor_transformation_ambiguity_independent_sources": [
+      "ion_identity_network_adduct",
+      "ion_identity_network_neutral_mass",
+      "lcms_feature_adduct",
+      "lcms_feature_neutral_mass"
+    ],
+    "precursor_transformation_ambiguity_can_confirm_identity": false,
+    "precursor_transformation_ambiguity_can_receive_2d_connectivity_decision": false,
+    "missing_formula_or_adduct_is_negative_evidence": false,
+    "mass_only_neutral_loss_is_mechanism": false
+  },
+  "decision": {
+    "minimum_entity_score": 0.5,
+    "minimum_connectivity_margin": 0.04,
+    "minimum_distinct_collision_energies_for_connectivity": 2,
+    "minimum_winner_collision_energy_support": 2,
+    "isomer_group_margin": 0.05,
+    "single_spectrum_exact_structure_allowed": false,
+    "stereochemistry_claimed": false,
+    "score_is_probability": false
+  },
+  "identity_resolution": {
+    "enabled": true,
+    "module_id": "v15_identity_scope_resolution",
+    "algorithm_id": "mssystem-v15-identity-scope-resolution-1.2.0",
+    "candidate_scope": "existing_v15_ranked_shortlist_only",
+    "competition_set_rule": "all_non_vetoed_v15_ranked_shortlist_candidates",
+    "maximum_ranked_shortlist_size": 5,
+    "fixed_score_threshold_used": false,
+    "score_ratio_threshold_used": false,
+    "collision_energy_threshold_used_for_candidate_exclusion": false,
+    "ranking_lead_always_participates_in_identity_conflict_resolution": true,
+    "same_formula_multiple_connectivities_action": "unresolved_molecular_formula_isomer_group",
+    "cross_formula_multiple_connectivities_action": "unresolved_precursor_event_excluded_from_compound_count",
+    "incomplete_formula_multiple_connectivities_action": "unresolved_precursor_event_excluded_from_compound_count",
+    "candidate_names_affect_resolution": false,
+    "ground_truth_affects_resolution": false,
+    "top1_can_change": false,
+    "top5_can_change": false,
+    "entity_score_can_change": false,
+    "score_is_probability": false
+  },
+  "query_spectrum_release_gate": {
+    "enabled": true,
+    "algorithm_id": "mssystem-v15-query-spectrum-release-gate-1.0.0",
+    "deployment_state": "audit_only_failed_locked_transfer_guardrail",
+    "affects_release_scope": false,
+    "minimum_valid_fragment_peaks_per_ce_bin": 3,
+    "minimum_quality_qualified_ce_bins": 2,
+    "explicit_unreliable_search_precursor_is_failure": true,
+    "limited_fragment_list_is_failure": true,
+    "chimeric_isolation_statuses_requiring_deconvolution": [
+      "mixed",
+      "severe"
+    ],
+    "accepted_chimeric_deconvolution_statuses": [
+      "accepted_score_applied"
+    ],
+    "applies_only_to_existing_2d_connectivity_release": true,
+    "technical_replicate_can_rescue_same_ce_bin": true,
+    "technical_replicates_create_extra_conditions": false,
+    "failed_gate_action": "record_per_ce_quality_audit_without_changing_release_scope",
+    "threshold_selection": "predeclared_minimum_structural_evidence_not_accuracy_optimized",
+    "locked_transfer_result": {
+      "qtof_cross_platform_correct_wrong_before": [
+        41,
+        3
+      ],
+      "qtof_cross_platform_plus_query_quality_correct_wrong_after": [
+        40,
+        3
+      ],
+      "qtof_incremental_wrong_release_relative_reduction": 0.0,
+      "qtof_incremental_correct_release_relative_loss": 0.024390243902439046,
+      "mix33_cross_platform_correct_wrong_before": [
+        47,
+        2
+      ],
+      "mix33_cross_platform_plus_query_quality_correct_wrong_after": [
+        29,
+        0
+      ],
+      "mix33_incremental_wrong_release_relative_reduction": 1.0,
+      "mix33_incremental_correct_release_relative_loss": 0.3829787234042553,
+      "selection_guardrail_passed": false
+    },
+    "top1_can_change": false,
+    "top5_can_change": false,
+    "entity_score_can_change": false,
+    "score_is_probability": false
+  },
+  "cross_platform_abstention_gate": {
+    "enabled": true,
+    "algorithm_id": "mssystem-v15-cross-platform-abstention-gate-1.0.0",
+    "calibration_state": "retrospective_worst_cohort_constrained_two_qtof_cohorts",
+    "minimum_entity_score": 0.7,
+    "minimum_winner_margin": 0.12,
+    "minimum_collision_energy_bins_supported": 2,
+    "applies_only_to_existing_2d_connectivity_release": true,
+    "failed_gate_action": "demote_to_candidate_only_without_changing_winner_rank_or_score",
+    "top1_can_change": false,
+    "top5_can_change": false,
+    "entity_score_can_change": false,
+    "score_is_probability": false,
+    "external_independent_validation_complete": false,
+    "development_qtof": {
+      "valid_anchor_n": 76,
+      "baseline_correct_releases": 43,
+      "baseline_wrong_releases": 15,
+      "gated_correct_releases": 41,
+      "gated_wrong_releases": 3
+    },
+    "locked_mix33_transfer": {
+      "valid_anchor_n": 62,
+      "baseline_correct_releases": 51,
+      "baseline_wrong_releases": 6,
+      "gated_correct_releases": 47,
+      "gated_wrong_releases": 2
+    }
+  },
+  "forbidden_ranking_inputs": [
+    "compound_name",
+    "ground_truth_identity",
+    "standard_id",
+    "expert_score",
+    "classification",
+    "feature_fragment_evidence",
+    "biosynthetic_pathway",
+    "candidate_pathway_alignment",
+    "language_model_output",
+    "legacy_confidence_label"
+  ],
+  "spectral_tie_handling": {
+    "enabled": true,
+    "algorithm_id": "mssystem-v16-shared-spectral-ties-1.0.2",
+    "scan_score_decimal_places": 8,
+    "ce_support_decimal_places": 6,
+    "rank_support": "mean_over_tied_ordinal_positions",
+    "top1_support": "equal_share_among_tied_leaders",
+    "identity_key_affects_evidence_support": false,
+    "library_records_changed": false
+  },
+  "artifact_namespace": {
+    "name": "exact-spectral-ties-v1",
+    "implementation_sha256": "d0db29cee96b6233bf6e4ce8646f211be14f2cedca473fa3aae3fe6ba0bed632"
+  }
+}

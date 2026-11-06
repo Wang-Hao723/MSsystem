@@ -1,0 +1,2297 @@
+{
+  "meta": {
+    "title": "mssystem 天然产物裂解规则库 v3",
+    "version": "3.0.0",
+    "schema": "unified: class→{skeleton_subtypes, functional_group_effects, mechanisms, empirical{pos/neg{diagnostic_ions[mz/freq/n_support], neutral_losses[loss_da/freq/n_support/annotation]}}, plant_families}",
+    "principle": "全数值 m/z/loss 可机器匹配; 经验挖掘(频率) ∪ 文献策展(机制/4维)",
+    "sources": [
+      "913k本地库经验挖掘",
+      "《中药质谱分析》刘淑莹2012",
+      "Cuyckens&Claeys2004",
+      "ClassyFire本体",
+      "GNPS/MassBank",
+      "Spectraverse (Gupta et al., Anal. Chem. 2026; spectral-data curation)",
+      "质谱裂解特征/8篇PDF"
+    ],
+    "n_classes": 12
+  },
+  "classes": {
+    "flavonoid": {
+      "class": "flavonoid",
+      "class_en": "Flavonoids",
+      "core_skeleton": "C6-C3-C6 (2-苯基色原酮)",
+      "biosynthesis_pathway": "莽草酸途径 → 苯丙素 → 查耳酮 → 各亚型",
+      "skeleton_subtypes": {
+        "flavone": "芹菜素/木犀草素/黄芩素 (C2=C3, C4=O)",
+        "flavonol": "槲皮素/山柰酚/杨梅素 (C3-OH)",
+        "flavanone": "柚皮素 (C2-C3 饱和)",
+        "flavan-3-ol": "儿茶素 (无C4酮)",
+        "isoflavone": "葛根素/大豆苷元 (B环在C3)",
+        "chalcone": "C6-C3-C6 开环",
+        "anthocyanidin": "花色素 (flavylium 阳离子)"
+      },
+      "functional_group_effects": {
+        "3-OH": "黄酮醇 vs 黄酮区分 (3-OH 引导不同 RDA)",
+        "5,7-diOH": "A环 m/z 151/153 诊断",
+        "3',4'-diOH(B环)": "m/z 135/137 诊断",
+        "O-glycoside": "脱 162(hexose)/146(deoxyhexose)/308(rutinose)",
+        "C-glycoside": "抗脱糖, 丢失 120/90 (糖环内碎裂)",
+        "prenyl": "异戊烯基黄酮, 丢失 69 (C5H9) / 56",
+        "methoxy": "丢失 15 (CH3) / 32 (CH3OH)"
+      },
+      "fragmentation_mechanisms": [
+        {
+          "name": "RDA 逆Diels-Alder (C环1,3断裂)",
+          "products": "1,3A⁻ (m/z 151 for 5,7-diOH) + 1,3B⁻",
+          "note": "黄酮/黄酮醇诊断; A环碎片常为基峰",
+          "ref": "Cuyckens & Claeys 2004; Fabre 2001"
+        },
+        {
+          "name": "糖苷键断裂脱糖",
+          "products": "[M-H-162]⁻ (hexose), [M-H-308]⁻ (rutinose)",
+          "note": "O-苷先脱糖得苷元; C-苷难断裂",
+          "ref": "March 2006"
+        },
+        {
+          "name": "CO/CO2 丢失",
+          "products": "[A-CO]⁻, [A-CO2]⁻",
+          "ref": "—"
+        }
+      ],
+      "empirical": {
+        "neg": {
+          "n_spectra": 8698,
+          "diagnostic_ions": [
+            {
+              "mz": 151.0125,
+              "freq": 0.394,
+              "n_support": 3427
+            },
+            {
+              "mz": 65.0125,
+              "freq": 0.247,
+              "n_support": 2146
+            },
+            {
+              "mz": 255.0375,
+              "freq": 0.241,
+              "n_support": 2098
+            },
+            {
+              "mz": 227.0375,
+              "freq": 0.241,
+              "n_support": 2094
+            },
+            {
+              "mz": 107.0375,
+              "freq": 0.234,
+              "n_support": 2038
+            },
+            {
+              "mz": 121.0375,
+              "freq": 0.211,
+              "n_support": 1835
+            },
+            {
+              "mz": 125.0375,
+              "freq": 0.211,
+              "n_support": 1831
+            },
+            {
+              "mz": 285.0625,
+              "freq": 0.198,
+              "n_support": 1725
+            },
+            {
+              "mz": 149.0375,
+              "freq": 0.196,
+              "n_support": 1702
+            },
+            {
+              "mz": 93.0375,
+              "freq": 0.193,
+              "n_support": 1681
+            },
+            {
+              "mz": 117.0375,
+              "freq": 0.193,
+              "n_support": 1675
+            },
+            {
+              "mz": 163.0125,
+              "freq": 0.191,
+              "n_support": 1659
+            },
+            {
+              "mz": 109.0375,
+              "freq": 0.19,
+              "n_support": 1649
+            },
+            {
+              "mz": 211.0625,
+              "freq": 0.184,
+              "n_support": 1602
+            },
+            {
+              "mz": 133.0375,
+              "freq": 0.184,
+              "n_support": 1600
+            },
+            {
+              "mz": 83.0375,
+              "freq": 0.179,
+              "n_support": 1557
+            },
+            {
+              "mz": 159.0625,
+              "freq": 0.178,
+              "n_support": 1549
+            },
+            {
+              "mz": 284.0375,
+              "freq": 0.178,
+              "n_support": 1546
+            },
+            {
+              "mz": 165.0375,
+              "freq": 0.176,
+              "n_support": 1531
+            },
+            {
+              "mz": 199.0625,
+              "freq": 0.17,
+              "n_support": 1483
+            },
+            {
+              "mz": 161.0375,
+              "freq": 0.17,
+              "n_support": 1478
+            },
+            {
+              "mz": 187.0625,
+              "freq": 0.169,
+              "n_support": 1473
+            },
+            {
+              "mz": 145.0375,
+              "freq": 0.168,
+              "n_support": 1463
+            },
+            {
+              "mz": 135.0125,
+              "freq": 0.167,
+              "n_support": 1456
+            },
+            {
+              "mz": 164.0125,
+              "freq": 0.163,
+              "n_support": 1416
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 162.0625,
+              "freq": 0.16,
+              "n_support": 1392,
+              "annotation": "己糖 hexose"
+            }
+          ]
+        },
+        "pos": {
+          "n_spectra": 35376,
+          "diagnostic_ions": [
+            {
+              "mz": 91.0625,
+              "freq": 0.173,
+              "n_support": 6128
+            },
+            {
+              "mz": 153.0375,
+              "freq": 0.155,
+              "n_support": 5490
+            }
+          ],
+          "neutral_losses": []
+        }
+      },
+      "plant_families": [
+        "Asteraceae(菊科)",
+        "Fabaceae(豆科)",
+        "Lamiaceae(唇形科)",
+        "Rutaceae(芸香科)"
+      ]
+    },
+    "alkaloid": {
+      "class": "alkaloid",
+      "class_en": "Alkaloids",
+      "core_skeleton": "含氮碱性天然产物 (生源: 氨基酸衍生)",
+      "biosynthesis_pathway": "氨基酸途径 (Trp/Tyr/Phe/Lys → 各类生物碱)",
+      "skeleton_subtypes": {
+        "isoquinoline": "小檗碱/吗啡/青藤碱 (苄基异喹啉)",
+        "indole": "β-卡波林/长春新碱/士的宁",
+        "quinoline": "奎宁/喜树碱",
+        "quinolizidine": "苦参碱/金雀花碱 (豆科)",
+        "pyrrolizidine": "千里光碱 (菊科, 肝毒)",
+        "tropane": "阿托品/东莨菪碱 (茄科)",
+        "diterpene_alkaloid": "乌头碱/次乌头碱 (毛茛科, 极毒)",
+        "purine(xanthine)": "咖啡因/可可碱 (嘌呤生物碱)",
+        "steroidal_alkaloid": "茄碱/番茄碱 (茄科)"
+      },
+      "functional_group_effects": {
+        "ester": "乌头碱型: 丢失 60 (AcOH) / 76 (benzoyl 相关)",
+        "methoxy": "丢失 31/32",
+        "N-oxide": "丢失 16 (O)"
+      },
+      "fragmentation_mechanisms": [
+        {
+          "name": "α-断裂 (N旁C-C)",
+          "products": "亚胺离子/iminium (稳定)",
+          "note": "胺类生物碱α断裂产生共振稳定碳正离子",
+          "ref": "《中药质谱分析》2012"
+        },
+        {
+          "name": "RDA (含N环)",
+          "products": "依赖骨架",
+          "ref": "—"
+        },
+        {
+          "name": "脱水/脱甲基",
+          "products": "[M+H-18]+, [M+H-15]+",
+          "ref": "—"
+        }
+      ],
+      "empirical": {
+        "neg": {
+          "n_spectra": 33417,
+          "diagnostic_ions": [
+            {
+              "mz": 42.0125,
+              "freq": 0.251,
+              "n_support": 8371
+            }
+          ],
+          "neutral_losses": []
+        },
+        "pos": {
+          "n_spectra": 151044,
+          "diagnostic_ions": [
+            {
+              "mz": 91.0625,
+              "freq": 0.223,
+              "n_support": 33669
+            },
+            {
+              "mz": 95.0625,
+              "freq": 0.171,
+              "n_support": 25801
+            },
+            {
+              "mz": 79.0625,
+              "freq": 0.155,
+              "n_support": 23392
+            }
+          ],
+          "neutral_losses": []
+        }
+      },
+      "plant_families": [
+        "Ranunculaceae(毛茛科=乌头)",
+        "Papaveraceae(罂粟科)",
+        "Solanaceae(茄科)",
+        "Fabaceae(豆科=苦参)",
+        "Rubiaceae(茜草科)"
+      ]
+    },
+    "terpenoid": {
+      "class": "terpenoid",
+      "class_en": "Terpenoids",
+      "core_skeleton": "异戊二烯(C5)单元聚合",
+      "biosynthesis_pathway": "MVA + MEP 途径 (C5 → C10/C15/C20/C30/C40)",
+      "skeleton_subtypes": {
+        "monoterpene(C10)": "环烯醚萜前体/薄荷烷/龙脑 (丢失 69 C5H9)",
+        "sesquiterpene(C15)": "倍半萜内酯(白术内酯/土木香内酯)",
+        "diterpene(C20)": "丹参酮/穿心莲内酯/雷公藤内酯",
+        "triterpene(C30)": "齐墩果烷/乌苏烷/达玛烷型 (皂苷元)",
+        "tetraterpene(C40)": "类胡萝卜素"
+      },
+      "functional_group_effects": {
+        "lactone": "倍半萜内酯: 丢失 44/56 (内酯开环)",
+        "ester": "乌头酯型生物碱同",
+        "OH": "脱水 18",
+        "glycoside": "皂苷先脱糖"
+      },
+      "fragmentation_mechanisms": [
+        {
+          "name": "逆Diels-Alder",
+          "products": "异戊二烯片段 m/z 91/105/119/131",
+          "ref": "—"
+        },
+        {
+          "name": "脱水 (含OH)",
+          "products": "[M+H-18]+ / [M-H2O-H]-",
+          "ref": "—"
+        },
+        {
+          "name": "脱甲基",
+          "products": "-15",
+          "ref": "—"
+        }
+      ],
+      "empirical": {
+        "neg": {
+          "n_spectra": 1864,
+          "diagnostic_ions": [
+            {
+              "mz": 83.0625,
+              "freq": 0.238,
+              "n_support": 443
+            },
+            {
+              "mz": 57.0375,
+              "freq": 0.222,
+              "n_support": 413
+            },
+            {
+              "mz": 96.9625,
+              "freq": 0.2,
+              "n_support": 372
+            },
+            {
+              "mz": 59.0125,
+              "freq": 0.197,
+              "n_support": 368
+            },
+            {
+              "mz": 69.0375,
+              "freq": 0.177,
+              "n_support": 330
+            },
+            {
+              "mz": 79.9625,
+              "freq": 0.164,
+              "n_support": 306
+            },
+            {
+              "mz": 73.0375,
+              "freq": 0.159,
+              "n_support": 296
+            },
+            {
+              "mz": 95.0625,
+              "freq": 0.155,
+              "n_support": 288
+            },
+            {
+              "mz": 71.0625,
+              "freq": 0.154,
+              "n_support": 287
+            },
+            {
+              "mz": 61.9875,
+              "freq": 0.15,
+              "n_support": 280
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 44.0125,
+              "freq": 0.26,
+              "n_support": 485,
+              "annotation": "CO2"
+            },
+            {
+              "loss_da": 62.0125,
+              "freq": 0.248,
+              "n_support": 462,
+              "annotation": null
+            },
+            {
+              "loss_da": 60.0375,
+              "freq": 0.205,
+              "n_support": 382,
+              "annotation": "CH2CO+OH?"
+            },
+            {
+              "loss_da": 18.0125,
+              "freq": 0.168,
+              "n_support": 313,
+              "annotation": "H2O"
+            }
+          ]
+        },
+        "pos": {
+          "n_spectra": 13154,
+          "diagnostic_ions": [
+            {
+              "mz": 105.0875,
+              "freq": 0.396,
+              "n_support": 5207
+            },
+            {
+              "mz": 119.0875,
+              "freq": 0.383,
+              "n_support": 5044
+            },
+            {
+              "mz": 91.0625,
+              "freq": 0.366,
+              "n_support": 4812
+            },
+            {
+              "mz": 107.0875,
+              "freq": 0.361,
+              "n_support": 4746
+            },
+            {
+              "mz": 81.0875,
+              "freq": 0.36,
+              "n_support": 4741
+            },
+            {
+              "mz": 93.0875,
+              "freq": 0.355,
+              "n_support": 4665
+            },
+            {
+              "mz": 95.0875,
+              "freq": 0.353,
+              "n_support": 4645
+            },
+            {
+              "mz": 131.0875,
+              "freq": 0.33,
+              "n_support": 4336
+            },
+            {
+              "mz": 145.1125,
+              "freq": 0.328,
+              "n_support": 4313
+            },
+            {
+              "mz": 133.1125,
+              "freq": 0.319,
+              "n_support": 4202
+            },
+            {
+              "mz": 79.0625,
+              "freq": 0.295,
+              "n_support": 3881
+            },
+            {
+              "mz": 121.1125,
+              "freq": 0.286,
+              "n_support": 3761
+            },
+            {
+              "mz": 157.1125,
+              "freq": 0.277,
+              "n_support": 3649
+            },
+            {
+              "mz": 67.0625,
+              "freq": 0.277,
+              "n_support": 3648
+            },
+            {
+              "mz": 109.1125,
+              "freq": 0.274,
+              "n_support": 3603
+            },
+            {
+              "mz": 143.0875,
+              "freq": 0.273,
+              "n_support": 3588
+            },
+            {
+              "mz": 159.1375,
+              "freq": 0.268,
+              "n_support": 3529
+            },
+            {
+              "mz": 69.0875,
+              "freq": 0.254,
+              "n_support": 3338
+            },
+            {
+              "mz": 95.0625,
+              "freq": 0.251,
+              "n_support": 3298
+            },
+            {
+              "mz": 121.0875,
+              "freq": 0.239,
+              "n_support": 3144
+            },
+            {
+              "mz": 147.1375,
+              "freq": 0.237,
+              "n_support": 3116
+            },
+            {
+              "mz": 55.0625,
+              "freq": 0.235,
+              "n_support": 3095
+            },
+            {
+              "mz": 117.0875,
+              "freq": 0.233,
+              "n_support": 3064
+            },
+            {
+              "mz": 57.0875,
+              "freq": 0.225,
+              "n_support": 2957
+            },
+            {
+              "mz": 135.0875,
+              "freq": 0.218,
+              "n_support": 2867
+            }
+          ],
+          "neutral_losses": []
+        }
+      },
+      "plant_families": [
+        "Asteraceae(菊科=倍半萜内酯/白术)",
+        "Lamiaceae(唇形科=丹参酮)",
+        "Lauraceae(樟科=单萜)",
+        "Apocynaceae(夹竹桃科)"
+      ]
+    },
+    "iridoid": {
+      "class": "iridoid",
+      "class_en": "Iridoids & Secoiridoids",
+      "core_skeleton": "环戊烷[c]吡喃 (monoterpene)",
+      "biosynthesis_pathway": "MEP途径 → 环烯醚萜苷",
+      "skeleton_subtypes": {
+        "iridoid_glycoside": "京尼平苷/梓醇/桃叶珊瑚苷/车叶草苷",
+        "secoiridoid": "橄榄苦苷/龙胆苦苷/番木鳖苷"
+      },
+      "functional_group_effects": {
+        "glycoside": "脱 162",
+        "ester": "脱 60 (AcOH) 京尼平苷",
+        "lactone": "环戊吡喃开环"
+      },
+      "fragmentation_mechanisms": [
+        {
+          "name": "脱糖得苷元",
+          "products": "[M-H-162]⁻ (hexose)",
+          "ref": "—"
+        },
+        {
+          "name": "苷元脱 CO/CO2/H2O",
+          "products": "m/z 145/127/109 系列",
+          "ref": "《中药质谱分析》"
+        }
+      ],
+      "empirical": {
+        "pos": {
+          "n_spectra": 1198,
+          "diagnostic_ions": [
+            {
+              "mz": 91.0625,
+              "freq": 0.339,
+              "n_support": 406
+            },
+            {
+              "mz": 85.0375,
+              "freq": 0.277,
+              "n_support": 332
+            },
+            {
+              "mz": 119.0625,
+              "freq": 0.25,
+              "n_support": 299
+            },
+            {
+              "mz": 121.0875,
+              "freq": 0.214,
+              "n_support": 256
+            },
+            {
+              "mz": 149.0625,
+              "freq": 0.208,
+              "n_support": 249
+            }
+          ],
+          "neutral_losses": []
+        },
+        "neg": {
+          "n_spectra": 206,
+          "diagnostic_ions": [
+            {
+              "mz": 101.0375,
+              "freq": 0.524,
+              "n_support": 108
+            },
+            {
+              "mz": 123.0625,
+              "freq": 0.515,
+              "n_support": 106
+            },
+            {
+              "mz": 147.0625,
+              "freq": 0.427,
+              "n_support": 88
+            },
+            {
+              "mz": 85.0375,
+              "freq": 0.374,
+              "n_support": 77
+            },
+            {
+              "mz": 59.0125,
+              "freq": 0.33,
+              "n_support": 68
+            },
+            {
+              "mz": 89.0375,
+              "freq": 0.316,
+              "n_support": 65
+            },
+            {
+              "mz": 119.0625,
+              "freq": 0.301,
+              "n_support": 62
+            },
+            {
+              "mz": 113.0375,
+              "freq": 0.291,
+              "n_support": 60
+            },
+            {
+              "mz": 207.0875,
+              "freq": 0.282,
+              "n_support": 58
+            },
+            {
+              "mz": 71.0125,
+              "freq": 0.257,
+              "n_support": 53
+            },
+            {
+              "mz": 93.0375,
+              "freq": 0.248,
+              "n_support": 51
+            },
+            {
+              "mz": 111.0125,
+              "freq": 0.248,
+              "n_support": 51
+            },
+            {
+              "mz": 59.0375,
+              "freq": 0.223,
+              "n_support": 46
+            },
+            {
+              "mz": 119.0375,
+              "freq": 0.223,
+              "n_support": 46
+            },
+            {
+              "mz": 69.0125,
+              "freq": 0.223,
+              "n_support": 46
+            },
+            {
+              "mz": 121.0375,
+              "freq": 0.209,
+              "n_support": 43
+            },
+            {
+              "mz": 105.0375,
+              "freq": 0.204,
+              "n_support": 42
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 162.0625,
+              "freq": 0.325,
+              "n_support": 67,
+              "annotation": "hexose"
+            },
+            {
+              "loss_da": 286.1125,
+              "freq": 0.262,
+              "n_support": 54
+            },
+            {
+              "loss_da": 180.0875,
+              "freq": 0.248,
+              "n_support": 51,
+              "annotation": "hexose+H2O"
+            }
+          ]
+        }
+      },
+      "plant_families": [
+        "Scrophulariaceae(玄参科=地黄/梓醇)",
+        "Caprifoliaceae(忍冬科=金银花)",
+        "Gentianaceae(龙胆科=龙胆苦苷)",
+        "Oleaceae(木犀科=橄榄苦苷)",
+        "Rubiaceae(茜草科=车叶草苷)"
+      ]
+    },
+    "saponin": {
+      "class": "saponin",
+      "class_en": "Saponins (triterpene/steroid glycosides)",
+      "core_skeleton": "三萜/甾体苷元 + 糖链",
+      "biosynthesis_pathway": "MVA途径 (三萜) + 糖基化",
+      "skeleton_subtypes": {
+        "triterpene_saponin": "人参皂苷/甘草酸/柴胡皂苷 (达玛烷/齐墩果烷型)",
+        "steroid_saponin": "薯蓣皂苷/重楼皂苷"
+      },
+      "functional_group_effects": {
+        "hexose": 162,
+        "deoxyhexose": 146,
+        "glucuronic_acid": 176,
+        "pentose": 132,
+        "acyl": "乙酰糖 +42/+60"
+      },
+      "fragmentation_mechanisms": [
+        {
+          "name": "逐糖级联丢失",
+          "products": "[M-H-162]⁻→[-162]⁻→...→苷元 (m/z 455/470 齐墩果酸等)",
+          "note": "糖链序列可由级联丢失质量读出",
+          "ref": "—"
+        }
+      ],
+      "empirical": {
+        "pos": {
+          "n_spectra": 6451,
+          "diagnostic_ions": [],
+          "neutral_losses": []
+        },
+        "neg": {
+          "n_spectra": 317,
+          "diagnostic_ions": [
+            {
+              "mz": 101.0375,
+              "freq": 0.498,
+              "n_support": 158
+            },
+            {
+              "mz": 113.0375,
+              "freq": 0.479,
+              "n_support": 152
+            },
+            {
+              "mz": 89.0375,
+              "freq": 0.407,
+              "n_support": 129
+            },
+            {
+              "mz": 85.0375,
+              "freq": 0.397,
+              "n_support": 126
+            },
+            {
+              "mz": 161.0625,
+              "freq": 0.356,
+              "n_support": 113
+            },
+            {
+              "mz": 73.0375,
+              "freq": 0.312,
+              "n_support": 99
+            },
+            {
+              "mz": 99.0125,
+              "freq": 0.284,
+              "n_support": 90
+            },
+            {
+              "mz": 119.0375,
+              "freq": 0.274,
+              "n_support": 87
+            },
+            {
+              "mz": 71.0375,
+              "freq": 0.265,
+              "n_support": 84
+            },
+            {
+              "mz": 71.0125,
+              "freq": 0.227,
+              "n_support": 72
+            },
+            {
+              "mz": 159.0375,
+              "freq": 0.221,
+              "n_support": 70
+            },
+            {
+              "mz": 59.0375,
+              "freq": 0.205,
+              "n_support": 65
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 162.0625,
+              "freq": 0.309,
+              "n_support": 98,
+              "annotation": "hexose"
+            },
+            {
+              "loss_da": 161.0625,
+              "freq": 0.205,
+              "n_support": 65
+            }
+          ]
+        }
+      },
+      "plant_families": [
+        "Araliaceae(五加科=人参皂苷)",
+        "Fabaceae(豆科=甘草酸)",
+        "Liliaceae(百合科=重楼)",
+        "Caryophyllaceae(石竹科=牛膝皂苷)"
+      ]
+    },
+    "phenolic_acid": {
+      "class": "phenolic_acid",
+      "class_en": "Phenolic acids",
+      "core_skeleton": "酚环 + 羧基 (苯甲酸/肉桂酸型)",
+      "biosynthesis_pathway": "莽草酸途径",
+      "skeleton_subtypes": {
+        "hydroxybenzoic": "没食子酸/原儿茶酸/水杨酸/香草酸",
+        "hydroxycinnamic": "咖啡酸/阿魏酸/芥子酸/p-香豆酸/绿原酸(奎宁酸酯)"
+      },
+      "functional_group_effects": {
+        "methoxy": "阿魏酸/芥子酸 脱 CH3(15)/CH3OH(32)",
+        "quinic_acid_ester": "绿原酸系列 (3-/4-/5-咖啡酰奎宁酸异构)"
+      },
+      "fragmentation_mechanisms": [
+        {
+          "name": "脱羧 (neg)",
+          "products": "[M-H-44]⁻ (CO2)",
+          "ref": "—"
+        },
+        {
+          "name": "脱水 (pos)",
+          "products": "[M+H-18]+",
+          "ref": "—"
+        },
+        {
+          "name": "绿原酸酯键断裂",
+          "products": "咖啡酸 m/z 179/180 + 奎宁酸 m/z 191",
+          "ref": "Clifford 2005"
+        }
+      ],
+      "empirical": {
+        "neg": {
+          "n_spectra": 10611,
+          "diagnostic_ions": [
+            {
+              "mz": 93.0375,
+              "freq": 0.198,
+              "n_support": 2104
+            },
+            {
+              "mz": 135.0625,
+              "freq": 0.184,
+              "n_support": 1954
+            },
+            {
+              "mz": 121.0375,
+              "freq": 0.16,
+              "n_support": 1695
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 44.0125,
+              "freq": 0.309,
+              "n_support": 3277,
+              "annotation": "CO2"
+            }
+          ]
+        },
+        "pos": {
+          "n_spectra": 26221,
+          "diagnostic_ions": [
+            {
+              "mz": 91.0625,
+              "freq": 0.294,
+              "n_support": 7719
+            },
+            {
+              "mz": 95.0625,
+              "freq": 0.213,
+              "n_support": 5597
+            },
+            {
+              "mz": 79.0625,
+              "freq": 0.207,
+              "n_support": 5440
+            },
+            {
+              "mz": 81.0875,
+              "freq": 0.172,
+              "n_support": 4501
+            },
+            {
+              "mz": 105.0875,
+              "freq": 0.166,
+              "n_support": 4354
+            },
+            {
+              "mz": 107.0625,
+              "freq": 0.157,
+              "n_support": 4124
+            },
+            {
+              "mz": 67.0625,
+              "freq": 0.156,
+              "n_support": 4084
+            },
+            {
+              "mz": 93.0875,
+              "freq": 0.155,
+              "n_support": 4066
+            },
+            {
+              "mz": 89.0625,
+              "freq": 0.153,
+              "n_support": 4019
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 18.0125,
+              "freq": 0.156,
+              "n_support": 4089,
+              "annotation": "H2O"
+            }
+          ]
+        }
+      },
+      "plant_families": [
+        "Lamiaceae(唇形科=丹参酚酸)",
+        "Asteraceae(菊科=绿原酸)",
+        "Caprifoliaceae(忍冬科=绿原酸)"
+      ]
+    },
+    "coumarin": {
+      "class": "coumarin",
+      "class_en": "Coumarins",
+      "core_skeleton": "苯并吡喃-2-酮 (C6-C3 内酯)",
+      "biosynthesis_pathway": "莽草酸途径 (phenylpropanoid)",
+      "skeleton_subtypes": {
+        "simple": "伞形酮/七叶苷",
+        "furanocoumarin": "补骨脂素/白芷素 (芸香科)",
+        "pyranocoumarin": "邪蒿素",
+        "isoprenylated": "紫花前胡苷"
+      },
+      "functional_group_effects": {
+        "prenyl": "异戊烯基香豆素 丢失 56/69",
+        "methoxy": "脱 15"
+      },
+      "fragmentation_mechanisms": [
+        {
+          "name": "脱 CO2 (neg)",
+          "products": "[M-H-44]⁻",
+          "ref": "—"
+        },
+        {
+          "name": "内酯环碎裂",
+          "products": "[M-28] CO 丢失",
+          "ref": "—"
+        },
+        {
+          "name": "脱糖 (苷)",
+          "products": "-162",
+          "ref": "—"
+        }
+      ],
+      "empirical": {
+        "neg": {
+          "n_spectra": 1495,
+          "diagnostic_ions": [
+            {
+              "mz": 161.0375,
+              "freq": 0.177,
+              "n_support": 265
+            },
+            {
+              "mz": 133.0375,
+              "freq": 0.176,
+              "n_support": 263
+            },
+            {
+              "mz": 117.0375,
+              "freq": 0.174,
+              "n_support": 260
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 44.0125,
+              "freq": 0.239,
+              "n_support": 357,
+              "annotation": "CO2"
+            },
+            {
+              "loss_da": 15.0375,
+              "freq": 0.163,
+              "n_support": 244,
+              "annotation": null
+            }
+          ]
+        },
+        "pos": {
+          "n_spectra": 11253,
+          "diagnostic_ions": [
+            {
+              "mz": 91.0625,
+              "freq": 0.273,
+              "n_support": 3077
+            },
+            {
+              "mz": 131.0625,
+              "freq": 0.198,
+              "n_support": 2223
+            },
+            {
+              "mz": 115.0625,
+              "freq": 0.184,
+              "n_support": 2074
+            },
+            {
+              "mz": 105.0875,
+              "freq": 0.17,
+              "n_support": 1918
+            },
+            {
+              "mz": 147.0625,
+              "freq": 0.164,
+              "n_support": 1850
+            },
+            {
+              "mz": 79.0625,
+              "freq": 0.164,
+              "n_support": 1844
+            },
+            {
+              "mz": 175.0625,
+              "freq": 0.16,
+              "n_support": 1800
+            },
+            {
+              "mz": 103.0625,
+              "freq": 0.158,
+              "n_support": 1779
+            }
+          ],
+          "neutral_losses": []
+        }
+      },
+      "plant_families": [
+        "Rutaceae(芸香科=呋喃香豆素/白芷)",
+        "Apiaceae(伞形科=前胡/当归)",
+        "Fabaceae"
+      ]
+    },
+    "lignan": {
+      "class": "lignan",
+      "class_en": "Lignans",
+      "core_skeleton": "C6-C3 二聚 (8-8' 连接的苯丙素)",
+      "biosynthesis_pathway": "莽草酸途径 → 苯丙素二聚",
+      "skeleton_subtypes": {
+        "dibenzylbutyrolactone": "牛蒡苷元/罗汉松脂素",
+        "aryltetralin": "五味子素/鬼臼毒素",
+        "furofuran": "松脂醇/松脂醇二葡萄糖苷"
+      },
+      "functional_group_effects": {
+        "methylenedioxy": "丢失 44 (CH2O+CO)",
+        "methoxy": "脱 15"
+      },
+      "fragmentation_mechanisms": [
+        {
+          "name": "脱糖 (苷)",
+          "products": "-162/-324",
+          "ref": "—"
+        },
+        {
+          "name": "脱甲基/亚甲二氧基",
+          "products": "-15/-44",
+          "ref": "—"
+        },
+        {
+          "name": "苄基断裂",
+          "products": "酚丙烷碎片",
+          "ref": "—"
+        }
+      ],
+      "empirical": {
+        "neg": {
+          "n_spectra": 3284,
+          "diagnostic_ions": [
+            {
+              "mz": 93.0375,
+              "freq": 0.213,
+              "n_support": 699
+            },
+            {
+              "mz": 121.0375,
+              "freq": 0.188,
+              "n_support": 616
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 15.0375,
+              "freq": 0.187,
+              "n_support": 614,
+              "annotation": null
+            }
+          ]
+        },
+        "pos": {
+          "n_spectra": 13650,
+          "diagnostic_ions": [
+            {
+              "mz": 91.0625,
+              "freq": 0.311,
+              "n_support": 4240
+            },
+            {
+              "mz": 79.0625,
+              "freq": 0.22,
+              "n_support": 2998
+            },
+            {
+              "mz": 95.0625,
+              "freq": 0.2,
+              "n_support": 2730
+            },
+            {
+              "mz": 105.0875,
+              "freq": 0.19,
+              "n_support": 2588
+            },
+            {
+              "mz": 103.0625,
+              "freq": 0.186,
+              "n_support": 2533
+            },
+            {
+              "mz": 107.0625,
+              "freq": 0.184,
+              "n_support": 2513
+            },
+            {
+              "mz": 115.0625,
+              "freq": 0.167,
+              "n_support": 2276
+            },
+            {
+              "mz": 121.0875,
+              "freq": 0.166,
+              "n_support": 2263
+            },
+            {
+              "mz": 131.0625,
+              "freq": 0.159,
+              "n_support": 2170
+            },
+            {
+              "mz": 135.0625,
+              "freq": 0.156,
+              "n_support": 2123
+            }
+          ],
+          "neutral_losses": []
+        }
+      },
+      "plant_families": [
+        "Schisandraceae(五味子科)",
+        "Asteraceae(菊科=牛蒡)",
+        "Pinaceae"
+      ]
+    },
+    "quinone": {
+      "class": "quinone",
+      "class_en": "Quinones",
+      "core_skeleton": "蒽醌/萘醌/苯醌",
+      "biosynthesis_pathway": "醋酸-丙二酸途径 (聚酮) / 莽草酸",
+      "skeleton_subtypes": {
+        "anthraquinone": "大黄素/芦荟大黄素 (蓼科)",
+        "naphthoquinone": "紫草素/胡桃醌",
+        "benzoquinone": "辅酶Q类"
+      },
+      "functional_group_effects": {
+        "OH": "脱水",
+        "COOH": "脱 CO2/CO 大黄酸型",
+        "prenyl": "脱 56/69"
+      },
+      "fragmentation_mechanisms": [
+        {
+          "name": "脱 CO/CO2",
+          "products": "[M-28]/[M-44]",
+          "ref": "—"
+        },
+        {
+          "name": "脱 H2O (含OH蒽醌)",
+          "products": "-18",
+          "ref": "—"
+        },
+        {
+          "name": "脱甲基/羧基",
+          "products": "大黄素型 -15/-CH3",
+          "ref": "—"
+        }
+      ],
+      "empirical": {
+        "neg": {
+          "n_spectra": 518,
+          "diagnostic_ions": [
+            {
+              "mz": 211.0625,
+              "freq": 0.313,
+              "n_support": 162
+            },
+            {
+              "mz": 210.0375,
+              "freq": 0.286,
+              "n_support": 148
+            },
+            {
+              "mz": 183.0625,
+              "freq": 0.247,
+              "n_support": 128
+            },
+            {
+              "mz": 227.0375,
+              "freq": 0.245,
+              "n_support": 127
+            },
+            {
+              "mz": 195.0625,
+              "freq": 0.241,
+              "n_support": 125
+            },
+            {
+              "mz": 225.0625,
+              "freq": 0.236,
+              "n_support": 122
+            },
+            {
+              "mz": 239.0375,
+              "freq": 0.218,
+              "n_support": 113
+            },
+            {
+              "mz": 182.0375,
+              "freq": 0.201,
+              "n_support": 104
+            },
+            {
+              "mz": 167.0625,
+              "freq": 0.183,
+              "n_support": 95
+            },
+            {
+              "mz": 199.0625,
+              "freq": 0.18,
+              "n_support": 93
+            },
+            {
+              "mz": 224.0625,
+              "freq": 0.178,
+              "n_support": 92
+            },
+            {
+              "mz": 240.0625,
+              "freq": 0.17,
+              "n_support": 88
+            },
+            {
+              "mz": 255.0375,
+              "freq": 0.156,
+              "n_support": 81
+            },
+            {
+              "mz": 241.0625,
+              "freq": 0.154,
+              "n_support": 80
+            },
+            {
+              "mz": 196.0625,
+              "freq": 0.151,
+              "n_support": 78
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 44.0125,
+              "freq": 0.351,
+              "n_support": 182,
+              "annotation": "CO2"
+            },
+            {
+              "loss_da": 28.0125,
+              "freq": 0.324,
+              "n_support": 168,
+              "annotation": "CO"
+            },
+            {
+              "loss_da": 71.9875,
+              "freq": 0.322,
+              "n_support": 167,
+              "annotation": null
+            },
+            {
+              "loss_da": 43.0375,
+              "freq": 0.193,
+              "n_support": 100,
+              "annotation": null
+            },
+            {
+              "loss_da": 99.9875,
+              "freq": 0.185,
+              "n_support": 96,
+              "annotation": null
+            },
+            {
+              "loss_da": 56.0125,
+              "freq": 0.178,
+              "n_support": 92,
+              "annotation": null
+            },
+            {
+              "loss_da": 29.0125,
+              "freq": 0.158,
+              "n_support": 82,
+              "annotation": null
+            },
+            {
+              "loss_da": 73.0125,
+              "freq": 0.158,
+              "n_support": 82,
+              "annotation": null
+            },
+            {
+              "loss_da": 74.0125,
+              "freq": 0.153,
+              "n_support": 79,
+              "annotation": null
+            }
+          ]
+        },
+        "pos": {
+          "n_spectra": 2162,
+          "diagnostic_ions": [
+            {
+              "mz": 91.0625,
+              "freq": 0.234,
+              "n_support": 506
+            },
+            {
+              "mz": 67.0625,
+              "freq": 0.17,
+              "n_support": 368
+            },
+            {
+              "mz": 81.0875,
+              "freq": 0.169,
+              "n_support": 365
+            },
+            {
+              "mz": 57.0875,
+              "freq": 0.167,
+              "n_support": 362
+            },
+            {
+              "mz": 95.0875,
+              "freq": 0.159,
+              "n_support": 344
+            },
+            {
+              "mz": 61.0125,
+              "freq": 0.155,
+              "n_support": 335
+            },
+            {
+              "mz": 69.0875,
+              "freq": 0.154,
+              "n_support": 334
+            }
+          ],
+          "neutral_losses": []
+        }
+      },
+      "plant_families": [
+        "Polygonaceae(蓼科=大黄蒽醌)",
+        "Boraginaceae(紫草科=紫草素萘醌)",
+        "Leguminosae"
+      ]
+    },
+    "steroid": {
+      "class": "steroid",
+      "class_en": "Steroids",
+      "core_skeleton": "环戊烷并全氢菲 (gonane, 6-6-6-5 四环)",
+      "biosynthesis_pathway": "MVA途径 (角鲨烯 → 羊毛甾醇 → 甾醇)",
+      "skeleton_subtypes": {
+        "phytosterol": "β-谷甾醇/豆甾醇",
+        "ecdysteroid": "β-蜕皮甾酮",
+        "withanolide": "醉茄内酯 (茄科)",
+        "cardiac_glycoside": "强心苷 (夹竹桃科, 甾体+丁烯内酯)"
+      },
+      "functional_group_effects": {
+        "OH": "脱水 18 (多个OH多次脱)",
+        "glycoside": "脱糖",
+        "side_chain": "侧链断裂质量取决于C数"
+      },
+      "fragmentation_mechanisms": [
+        {
+          "name": "脱水",
+          "products": "[M+H-18]+ (-H2O), 连续脱 -18/-18",
+          "ref": "—"
+        },
+        {
+          "name": "侧链断裂",
+          "products": "甾体核碎片 m/z 255/271/273",
+          "ref": "—"
+        },
+        {
+          "name": "强心苷丁烯内酯丢失",
+          "products": "特征 m/z 111 (butenolide)",
+          "ref": "—"
+        }
+      ],
+      "empirical": {
+        "neg": {
+          "n_spectra": 812,
+          "diagnostic_ions": [
+            {
+              "mz": 96.9625,
+              "freq": 0.246,
+              "n_support": 200
+            },
+            {
+              "mz": 79.9625,
+              "freq": 0.192,
+              "n_support": 156
+            },
+            {
+              "mz": 123.0875,
+              "freq": 0.192,
+              "n_support": 156
+            },
+            {
+              "mz": 109.0875,
+              "freq": 0.18,
+              "n_support": 146
+            },
+            {
+              "mz": 123.0625,
+              "freq": 0.179,
+              "n_support": 145
+            },
+            {
+              "mz": 95.0625,
+              "freq": 0.164,
+              "n_support": 133
+            },
+            {
+              "mz": 135.0875,
+              "freq": 0.16,
+              "n_support": 130
+            },
+            {
+              "mz": 137.0625,
+              "freq": 0.16,
+              "n_support": 130
+            },
+            {
+              "mz": 57.0375,
+              "freq": 0.158,
+              "n_support": 128
+            },
+            {
+              "mz": 297.1625,
+              "freq": 0.155,
+              "n_support": 126
+            },
+            {
+              "mz": 125.0625,
+              "freq": 0.154,
+              "n_support": 125
+            },
+            {
+              "mz": 61.9875,
+              "freq": 0.15,
+              "n_support": 122
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 18.0125,
+              "freq": 0.196,
+              "n_support": 159,
+              "annotation": "H2O"
+            },
+            {
+              "loss_da": 48.0375,
+              "freq": 0.151,
+              "n_support": 123,
+              "annotation": null
+            }
+          ]
+        },
+        "pos": {
+          "n_spectra": 8749,
+          "diagnostic_ions": [
+            {
+              "mz": 119.0875,
+              "freq": 0.406,
+              "n_support": 3549
+            },
+            {
+              "mz": 145.1125,
+              "freq": 0.381,
+              "n_support": 3331
+            },
+            {
+              "mz": 105.0875,
+              "freq": 0.378,
+              "n_support": 3307
+            },
+            {
+              "mz": 133.1125,
+              "freq": 0.368,
+              "n_support": 3221
+            },
+            {
+              "mz": 131.0875,
+              "freq": 0.364,
+              "n_support": 3182
+            },
+            {
+              "mz": 107.0875,
+              "freq": 0.349,
+              "n_support": 3053
+            },
+            {
+              "mz": 147.1375,
+              "freq": 0.328,
+              "n_support": 2868
+            },
+            {
+              "mz": 95.0875,
+              "freq": 0.323,
+              "n_support": 2827
+            },
+            {
+              "mz": 143.0875,
+              "freq": 0.323,
+              "n_support": 2826
+            },
+            {
+              "mz": 157.1125,
+              "freq": 0.309,
+              "n_support": 2704
+            },
+            {
+              "mz": 93.0875,
+              "freq": 0.306,
+              "n_support": 2680
+            },
+            {
+              "mz": 121.0875,
+              "freq": 0.305,
+              "n_support": 2671
+            },
+            {
+              "mz": 81.0875,
+              "freq": 0.303,
+              "n_support": 2652
+            },
+            {
+              "mz": 91.0625,
+              "freq": 0.3,
+              "n_support": 2621
+            },
+            {
+              "mz": 159.1375,
+              "freq": 0.297,
+              "n_support": 2598
+            },
+            {
+              "mz": 121.1125,
+              "freq": 0.29,
+              "n_support": 2534
+            },
+            {
+              "mz": 147.0875,
+              "freq": 0.279,
+              "n_support": 2438
+            },
+            {
+              "mz": 135.0875,
+              "freq": 0.267,
+              "n_support": 2332
+            },
+            {
+              "mz": 161.1125,
+              "freq": 0.255,
+              "n_support": 2234
+            },
+            {
+              "mz": 161.1375,
+              "freq": 0.253,
+              "n_support": 2211
+            },
+            {
+              "mz": 135.1375,
+              "freq": 0.25,
+              "n_support": 2187
+            },
+            {
+              "mz": 171.1375,
+              "freq": 0.247,
+              "n_support": 2163
+            },
+            {
+              "mz": 159.0875,
+              "freq": 0.247,
+              "n_support": 2159
+            },
+            {
+              "mz": 79.0625,
+              "freq": 0.241,
+              "n_support": 2106
+            },
+            {
+              "mz": 173.1125,
+              "freq": 0.239,
+              "n_support": 2093
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 18.0125,
+              "freq": 0.212,
+              "n_support": 1859,
+              "annotation": "H2O"
+            },
+            {
+              "loss_da": 36.0375,
+              "freq": 0.182,
+              "n_support": 1590,
+              "annotation": null
+            }
+          ]
+        }
+      },
+      "plant_families": [
+        "Apocynaceae(夹竹桃科=强心苷)",
+        "Solanaceae(茄科=甾体皂苷/醉茄内酯)",
+        "Liliaceae"
+      ]
+    },
+    "xanthone": {
+      "class": "xanthone",
+      "class_en": "Xanthones",
+      "core_skeleton": "二苯并-γ-吡喃酮 (9H-xanthen-9-one)",
+      "biosynthesis_pathway": "聚酮途径 (龙胆科) / 莽草酸",
+      "skeleton_subtypes": {
+        "simple": "1,3,6,7-四羟基 (芒果苷元)",
+        "prenylated": "异戊烯基山酮",
+        "glycoside": "芒果苷"
+      },
+      "functional_group_effects": {
+        "OH": "脱水",
+        "prenyl": "脱 69"
+      },
+      "fragmentation_mechanisms": [
+        {
+          "name": "脱 CO",
+          "products": "[M-28]",
+          "ref": "—"
+        },
+        {
+          "name": "脱糖(苷)",
+          "products": "-162",
+          "ref": "—"
+        },
+        {
+          "name": "RDA (山酮环)",
+          "products": "依赖取代",
+          "ref": "—"
+        }
+      ],
+      "empirical": {
+        "neg": {
+          "n_spectra": 343,
+          "diagnostic_ions": [
+            {
+              "mz": 283.0375,
+              "freq": 0.21,
+              "n_support": 72
+            },
+            {
+              "mz": 227.0375,
+              "freq": 0.204,
+              "n_support": 70
+            },
+            {
+              "mz": 255.0375,
+              "freq": 0.192,
+              "n_support": 66
+            },
+            {
+              "mz": 242.0375,
+              "freq": 0.187,
+              "n_support": 64
+            },
+            {
+              "mz": 271.0375,
+              "freq": 0.181,
+              "n_support": 62
+            },
+            {
+              "mz": 295.0375,
+              "freq": 0.178,
+              "n_support": 61
+            },
+            {
+              "mz": 267.0375,
+              "freq": 0.169,
+              "n_support": 58
+            },
+            {
+              "mz": 258.0375,
+              "freq": 0.155,
+              "n_support": 53
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 15.0375,
+              "freq": 0.408,
+              "n_support": 140,
+              "annotation": null
+            },
+            {
+              "loss_da": 43.0375,
+              "freq": 0.19,
+              "n_support": 65,
+              "annotation": null
+            },
+            {
+              "loss_da": 58.0875,
+              "freq": 0.178,
+              "n_support": 61,
+              "annotation": null
+            },
+            {
+              "loss_da": 32.0375,
+              "freq": 0.175,
+              "n_support": 60,
+              "annotation": null
+            },
+            {
+              "loss_da": 30.0625,
+              "freq": 0.157,
+              "n_support": 54,
+              "annotation": null
+            },
+            {
+              "loss_da": 70.0875,
+              "freq": 0.155,
+              "n_support": 53,
+              "annotation": null
+            },
+            {
+              "loss_da": 162.0625,
+              "freq": 0.152,
+              "n_support": 52,
+              "annotation": "己糖 hexose"
+            }
+          ]
+        },
+        "pos": {
+          "n_spectra": 1582,
+          "diagnostic_ions": [
+            {
+              "mz": 257.0625,
+              "freq": 0.25,
+              "n_support": 395
+            },
+            {
+              "mz": 271.0625,
+              "freq": 0.168,
+              "n_support": 266
+            },
+            {
+              "mz": 229.0625,
+              "freq": 0.154,
+              "n_support": 244
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 18.0125,
+              "freq": 0.218,
+              "n_support": 345,
+              "annotation": "H2O"
+            },
+            {
+              "loss_da": 44.0375,
+              "freq": 0.173,
+              "n_support": 274,
+              "annotation": null
+            },
+            {
+              "loss_da": 28.0125,
+              "freq": 0.162,
+              "n_support": 256,
+              "annotation": "CO"
+            }
+          ]
+        }
+      },
+      "plant_families": [
+        "Gentianaceae(龙胆科)",
+        "Clusiaceae/Hypericaceae(金丝桃科)",
+        "Mangifera(芒果)"
+      ]
+    },
+    "stilbene": {
+      "class": "stilbene",
+      "class_en": "Stilbenes",
+      "core_skeleton": "1,2-二苯乙烯 (C6-C2-C6)",
+      "biosynthesis_pathway": "莽草酸+聚酮 (芪合成酶 STS)",
+      "skeleton_subtypes": {
+        "resveratrol": "白藜芦醇/虎杖苷",
+        "pterostilbene": "紫檀芪",
+        "glycoside": "虎杖苷(polydatin)"
+      },
+      "functional_group_effects": {
+        "OH": "脱水/重排",
+        "glycoside": "脱 162"
+      },
+      "fragmentation_mechanisms": [
+        {
+          "name": "脱糖(苷)",
+          "products": "-162 → 苷元 m/z 227 (白藜芦醇)",
+          "ref": "—"
+        },
+        {
+          "name": "脱 CO/H2O",
+          "products": "[M-28]/[M-18]",
+          "ref": "—"
+        },
+        {
+          "name": "逆Diels-Alder",
+          "products": "m/z 143/107 (取代苯环)",
+          "ref": "—"
+        }
+      ],
+      "empirical": {
+        "neg": {
+          "n_spectra": 570,
+          "diagnostic_ions": [
+            {
+              "mz": 225.0625,
+              "freq": 0.281,
+              "n_support": 160
+            },
+            {
+              "mz": 185.0625,
+              "freq": 0.277,
+              "n_support": 158
+            },
+            {
+              "mz": 143.0625,
+              "freq": 0.268,
+              "n_support": 153
+            },
+            {
+              "mz": 197.0625,
+              "freq": 0.246,
+              "n_support": 140
+            },
+            {
+              "mz": 181.0875,
+              "freq": 0.223,
+              "n_support": 127
+            },
+            {
+              "mz": 93.0375,
+              "freq": 0.209,
+              "n_support": 119
+            },
+            {
+              "mz": 157.0875,
+              "freq": 0.205,
+              "n_support": 117
+            },
+            {
+              "mz": 180.0625,
+              "freq": 0.174,
+              "n_support": 99
+            },
+            {
+              "mz": 183.0625,
+              "freq": 0.167,
+              "n_support": 95
+            },
+            {
+              "mz": 159.0875,
+              "freq": 0.163,
+              "n_support": 93
+            },
+            {
+              "mz": 119.0625,
+              "freq": 0.16,
+              "n_support": 91
+            },
+            {
+              "mz": 117.0375,
+              "freq": 0.153,
+              "n_support": 87
+            },
+            {
+              "mz": 183.0875,
+              "freq": 0.151,
+              "n_support": 86
+            },
+            {
+              "mz": 227.0875,
+              "freq": 0.151,
+              "n_support": 86
+            }
+          ],
+          "neutral_losses": [
+            {
+              "loss_da": 84.0375,
+              "freq": 0.219,
+              "n_support": 125,
+              "annotation": null
+            },
+            {
+              "loss_da": 44.0125,
+              "freq": 0.207,
+              "n_support": 118,
+              "annotation": "CO2"
+            },
+            {
+              "loss_da": 60.0375,
+              "freq": 0.2,
+              "n_support": 114,
+              "annotation": "CH2CO+OH?"
+            },
+            {
+              "loss_da": 42.0125,
+              "freq": 0.195,
+              "n_support": 111,
+              "annotation": null
+            },
+            {
+              "loss_da": 16.0375,
+              "freq": 0.156,
+              "n_support": 89,
+              "annotation": null
+            }
+          ]
+        },
+        "pos": {
+          "n_spectra": 2362,
+          "diagnostic_ions": [
+            {
+              "mz": 91.0625,
+              "freq": 0.344,
+              "n_support": 813
+            },
+            {
+              "mz": 107.0625,
+              "freq": 0.284,
+              "n_support": 670
+            },
+            {
+              "mz": 165.0875,
+              "freq": 0.27,
+              "n_support": 638
+            },
+            {
+              "mz": 115.0625,
+              "freq": 0.218,
+              "n_support": 515
+            },
+            {
+              "mz": 77.0625,
+              "freq": 0.181,
+              "n_support": 428
+            },
+            {
+              "mz": 152.0625,
+              "freq": 0.179,
+              "n_support": 422
+            },
+            {
+              "mz": 79.0625,
+              "freq": 0.178,
+              "n_support": 421
+            },
+            {
+              "mz": 95.0625,
+              "freq": 0.176,
+              "n_support": 416
+            },
+            {
+              "mz": 181.0875,
+              "freq": 0.176,
+              "n_support": 415
+            },
+            {
+              "mz": 119.0625,
+              "freq": 0.171,
+              "n_support": 404
+            },
+            {
+              "mz": 58.0875,
+              "freq": 0.166,
+              "n_support": 393
+            },
+            {
+              "mz": 178.0875,
+              "freq": 0.165,
+              "n_support": 389
+            },
+            {
+              "mz": 105.0875,
+              "freq": 0.16,
+              "n_support": 379
+            },
+            {
+              "mz": 103.0625,
+              "freq": 0.16,
+              "n_support": 377
+            },
+            {
+              "mz": 153.0875,
+              "freq": 0.154,
+              "n_support": 363
+            }
+          ],
+          "neutral_losses": []
+        }
+      },
+      "plant_families": [
+        "Polygonaceae(蓼科=虎杖)",
+        "Vitaceae(葡萄科=葡萄)",
+        "Leguminosae(豆科)"
+      ]
+    }
+  },
+  "plant_family_chemistry": {
+    "Ranunculaceae(毛茛科)": {
+      "classes": [
+        "alkaloid(二萜生物碱)"
+      ],
+      "markers": [
+        "乌头碱(aconitine)",
+        "次乌头碱",
+        "小檗碱(黄连)"
+      ],
+      "notes": "乌头碱型二萜生物碱极毒; 丢失 60(AcOH)/90/120(苯甲酰) 酯链; 炮制减毒"
+    },
+    "Apocynaceae(夹竹桃科)": {
+      "classes": [
+        "steroid(强心苷)",
+        "alkaloid(吲哚)"
+      ],
+      "markers": [
+        "地高辛/洋地黄毒苷",
+        "长春新碱"
+      ],
+      "notes": "强心苷=甾体+丁烯内酯, 特征 m/z 111; 长春花吲哚生物碱"
+    },
+    "Solanaceae(茄科)": {
+      "classes": [
+        "alkaloid(甾体/托品)",
+        "steroid"
+      ],
+      "markers": [
+        "茄碱(solanine)",
+        "东莨菪碱/阿托品"
+      ],
+      "notes": "甾体生物碱 (茄碱) + 托品生物碱 (莨菪烷型)"
+    },
+    "Rutaceae(芸香科)": {
+      "classes": [
+        "coumarin(呋喃香豆素)",
+        "alkaloid(喹啉/呋喃)",
+        "flavonoid"
+      ],
+      "markers": [
+        "补骨脂素",
+        "白芷素",
+        "黄柏碱(小檗碱)",
+        "橙皮苷"
+      ],
+      "notes": "呋喃香豆素特征; 喹啉生物碱; 黄酮苷"
+    },
+    "Lamiaceae(唇形科)": {
+      "classes": [
+        "terpenoid(二萜)",
+        "phenolic_acid(丹酚酸)"
+      ],
+      "markers": [
+        "丹参酮IIA",
+        "丹酚酸B",
+        "迷迭香酸"
+      ],
+      "notes": "丹参=二萜醌(丹参酮)+缩酚酸(丹酚酸); 酚酸丰富"
+    },
+    "Asteraceae(菊科)": {
+      "classes": [
+        "terpenoid(倍半萜内酯)",
+        "phenolic_acid(绿原酸)"
+      ],
+      "markers": [
+        "白术内酯",
+        "青蒿素",
+        "绿原酸",
+        "洋蓟素"
+      ],
+      "notes": "倍半萜内酯丰富; 绿原酸系列"
+    },
+    "Fabaceae(豆科)": {
+      "classes": [
+        "flavonoid(异黄酮)",
+        "alkaloid(喹嗪啶)",
+        "saponin(三萜皂苷)"
+      ],
+      "markers": [
+        "葛根素/大豆苷元",
+        "苦参碱",
+        "甘草酸"
+      ],
+      "notes": "异黄酮特征(豆科); 喹嗪啶生物碱(苦参); 三萜皂苷"
+    },
+    "Polygonaceae(蓼科)": {
+      "classes": [
+        "quinone(蒽醌)",
+        "stilbene"
+      ],
+      "markers": [
+        "大黄素/大黄酸",
+        "白藜芦醇/虎杖苷"
+      ],
+      "notes": "蒽醌(大黄); 二苯乙烯(虎杖)"
+    },
+    "Araliaceae(五加科)": {
+      "classes": [
+        "saponin(三萜皂苷)"
+      ],
+      "markers": [
+        "人参皂苷Rg1/Re/Rb1",
+        "三七皂苷"
+      ],
+      "notes": "达玛烷型三萜皂苷, 逐糖级联丢失"
+    },
+    "Zingiberaceae(姜科)": {
+      "classes": [
+        "terpenoid(二芳基庚烷/二萜)"
+      ],
+      "markers": [
+        "姜黄素(curcuminoid)",
+        "姜辣素"
+      ],
+      "notes": "二芳基庚烷类(姜黄素); 酚性二萜"
+    },
+    "Gentianaceae(龙胆科)": {
+      "classes": [
+        "iridoid(裂环环烯醚萜)",
+        "xanthone"
+      ],
+      "markers": [
+        "龙胆苦苷",
+        "芒果苷"
+      ],
+      "notes": "裂环环烯醚萜苷(龙胆苦苷); 山酮"
+    },
+    "Caprifoliaceae(忍冬科)": {
+      "classes": [
+        "iridoid",
+        "phenolic_acid"
+      ],
+      "markers": [
+        "马钱苷/番木鳖苷",
+        "绿原酸"
+      ],
+      "notes": "环烯醚萜苷 + 绿原酸 (金银花)"
+    },
+    "Scrophulariaceae(玄参科)": {
+      "classes": [
+        "iridoid"
+      ],
+      "markers": [
+        "梓醇(catalpol)",
+        "胡黄连苷"
+      ],
+      "notes": "环烯醚萜苷 (地黄/梓醇) — 用户杜仲苷/车叶草苷同类"
+    },
+    "Boraginaceae(紫草科)": {
+      "classes": [
+        "quinone(萘醌)"
+      ],
+      "markers": [
+        "紫草素(shikonin)"
+      ],
+      "notes": "萘醌类 (紫草), 异戊烯基侧链"
+    },
+    "Oleaceae(木犀科)": {
+      "classes": [
+        "iridoid(secoiridoid)"
+      ],
+      "markers": [
+        "橄榄苦苷(oleuropein)",
+        "女贞苷"
+      ],
+      "notes": "裂环环烯醚萜苷 (女贞子/连翘)"
+    },
+    "Schisandraceae(五味子科)": {
+      "classes": [
+        "lignan"
+      ],
+      "markers": [
+        "五味子甲素/乙素/醇甲"
+      ],
+      "notes": "木脂素 (五味子), 联苯环辛二烯型"
+    }
+  },
+  "common_neutral_losses": {
+    "18.0106": "H2O",
+    "27.9949": "CO",
+    "28.0061": "CH2=CH2",
+    "31.9898": "S",
+    "33.9877": "H2S",
+    "43.9898": "CO2",
+    "46.0055": "HCOOH",
+    "57.0215": "CH3NCO",
+    "59.9847": "COS",
+    "79.9568": "SO3",
+    "120.0423": "C7H4O2",
+    "131.0375": "C8H3O?",
+    "132.0423": "pentose",
+    "146.0579": "deoxyhexose",
+    "162.0528": "hexose",
+    "176.0321": "glucuronic_acid",
+    "180.0634": "hexose+H2O",
+    "246.0618": "acetylhexose",
+    "308.0905": "rutinose(hexose+deoxyhexose)",
+    "17.0265": "NH3",
+    "32.0262": "methanol",
+    "42.0106": "acetyl",
+    "68.0626": "isoprene(C5H8)",
+    "86.0004": "malonyl",
+    "248.0532": "malonyl_hexose"
+  }
+}

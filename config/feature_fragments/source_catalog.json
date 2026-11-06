@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "source_id": "massbank_api_antwerp_metox_2022",
+      "source_type": "public_experimental_spectrum",
+      "title": "University of Antwerp METOX phospholipid LC-ESI-QTOF MS2 records",
+      "authors_or_organization": "da Silva KM; Iturrospe E; van de Lavoir M; Robeyns R; University of Antwerp",
+      "year": 2022,
+      "repository": "MassBank Europe",
+      "release": "API records fetched 2026-08-26; individual record dates and hashes preserved",
+      "url": "https://massbank.eu/MassBank-api/",
+      "locator": "30 accessions enumerated in tests/fixtures/feature_fragments/massbank_antwerp_phospholipids_v1.json",
+      "access_level": "full experimental record and peak list",
+      "license": "CC BY per record",
+      "supported_claims": [
+        "Observed product-ion and neutral-loss occurrence in the named records",
+        "Agilent 6560 QTOF, CID, reported 10/20/40 eV, positive [M+H]+ conditions"
+      ],
+      "limitations": [
+        "One laboratory and one instrument model",
+        "Repository collision-energy labels are preserved as reported and are not physical cross-platform calibration",
+        "Class evidence cannot confirm exact identity or distinguish isomers"
+      ]
+    },
+    {
+      "source_id": "massbank_record_format_2_6_0",
+      "source_type": "official_repository_document",
+      "title": "MassBank Record Format, version 2.6.0",
+      "authors_or_organization": "MassBank Consortium",
+      "year": 2024,
+      "url": "https://github.com/MassBank/MassBank-web/blob/dev/Documentation/MassBankRecordFormat.md",
+      "locator": "AC$INSTRUMENT; AC$INSTRUMENT_TYPE; AC$MASS_SPECTROMETRY; PK$PEAK",
+      "access_level": "full documentation",
+      "supported_claims": [
+        "Instrument model, fragmentation mode, collision energy, collision gas, and peak lists are separate record fields"
+      ],
+      "limitations": [
+        "Optional fields can be missing",
+        "The format does not make unlike collision-energy units interchangeable"
+      ]
+    },
+    {
+      "source_id": "hsu_turk_pc_2003",
+      "source_type": "peer_reviewed_primary",
+      "title": "Electrospray ionization/tandem quadrupole mass spectrometric studies on phosphatidylcholines: the fragmentation processes",
+      "authors_or_organization": "Hsu FF; Turk J",
+      "year": 2003,
+      "doi": "10.1016/S1044-0305(03)00064-3",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12686482/",
+      "locator": "J Am Soc Mass Spectrom 14(4):352-363",
+      "access_level": "abstract and bibliographic record",
+      "supported_claims": [
+        "Low-energy CAD fragmentation pathways of phosphatidylcholine ions"
+      ],
+      "limitations": [
+        "Tandem-quadrupole conditions do not establish Agilent 6560 CE equivalence",
+        "Phosphocholine fragments are not unique to phosphatidylcholine"
+      ]
+    },
+    {
+      "source_id": "hsu_turk_pe_2000",
+      "source_type": "peer_reviewed_primary",
+      "title": "Charge-remote and charge-driven fragmentation processes in diacyl glycerophosphoethanolamine upon low-energy collisional activation: a mechanistic proposal",
+      "authors_or_organization": "Hsu FF; Turk J",
+      "year": 2000,
+      "doi": "10.1016/S1044-0305(00)00159-8",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11014451/",
+      "locator": "J Am Soc Mass Spectrom 11(10):892-899",
+      "access_level": "abstract and bibliographic record",
+      "supported_claims": [
+        "Low-energy CAD fragmentation pathways of diacyl glycerophosphoethanolamines"
+      ],
+      "limitations": [
+        "Mechanistic observations do not supply an Agilent 6560 CE conversion",
+        "Headgroup loss does not determine acyl positions or stereochemistry"
+      ]
+    },
+    {
+      "source_id": "kim_et_al_pe_plasmalogen_2012",
+      "source_type": "peer_reviewed_primary",
+      "title": "Identification of ethanolamine plasmalogens from complex lipid mixtures by MS/MS and Ag adduction",
+      "authors_or_organization": "Kim SJ; Kim N; Koh EH; Yoo HJ",
+      "year": 2012,
+      "doi": "10.2116/analsci.28.1207",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23232243/",
+      "locator": "Anal Sci 28(12):1207-1212",
+      "access_level": "abstract",
+      "supported_claims": [
+        "Neutral loss 141 can be weak for ethanolamine plasmalogens in positive-ion CID"
+      ],
+      "limitations": [
+        "Ag-adduct enhancement is outside the [M+H]+ rules in this catalog"
+      ]
+    },
+    {
+      "source_id": "hoang_cross_platform_2024",
+      "source_type": "peer_reviewed_primary",
+      "title": "Tandem Mass Spectrometry across Platforms",
+      "authors_or_organization": "Hoang C et al.",
+      "year": 2024,
+      "doi": "10.1021/acs.analchem.3c05576",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11007677/",
+      "locator": "Anal Chem 96:5478-5488; Methods and cross-platform results",
+      "access_level": "full text",
+      "supported_claims": [
+        "Agilent, Bruker, SCIEX, Waters QTOF and Thermo Q Exactive spectra differ with platform and CE",
+        "In the studied standards, nominal 20 eV produced more cross-platform matches than 10 or 40 eV"
+      ],
+      "limitations": [
+        "The observed 20 eV result is dataset-specific, not a universal CE conversion",
+        "High cosine similarity did not prevent an isomeric lipid misidentification"
+      ]
+    },
+    {
+      "source_id": "thermo_qe_hfx_manual_2018",
+      "source_type": "official_vendor_document",
+      "title": "Q Exactive HF-X Software Manual, Exactive Series 2.9",
+      "authors_or_organization": "Thermo Fisher Scientific",
+      "year": 2018,
+      "url": "https://documents.thermofisher.com/TFS-Assets/CMD/manuals/man-bre0012262-q-exactive-hf-x-soft-manbre0012262-en.pdf",
+      "locator": "HCD collision energy, normalized collision energy, stepped CE sections",
+      "access_level": "full official PDF",
+      "supported_claims": [
+        "Q Exactive HCD accepts absolute CE in eV or dimensionless NCE",
+        "NCE only approximates eV for the reference m/z 500, z=1 ion and actual energy depends on precursor mass and charge",
+        "Stepped energies produce one composite detected spectrum"
+      ],
+      "limitations": [
+        "Peptide-derived charge adjustments cannot be applied to all small molecules",
+        "No universal NCE-to-QTOF conversion is supplied"
+      ]
+    },
+    {
+      "source_id": "olsen_hcd_2007",
+      "source_type": "peer_reviewed_primary",
+      "title": "Higher-energy C-trap dissociation for peptide modification analysis",
+      "authors_or_organization": "Olsen JV et al.",
+      "year": 2007,
+      "doi": "10.1038/nmeth1060",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17721543/",
+      "locator": "Nature Methods 4:709-712",
+      "access_level": "abstract",
+      "supported_claims": [
+        "HCD uses an additional multipole collision cell and yields high-resolution full-range MS/MS"
+      ],
+      "limitations": [
+        "Peptide results do not establish small-molecule CE transfer"
+      ]
+    },
+    {
+      "source_id": "agilent_6200_6500_concepts_2017",
+      "source_type": "official_vendor_document",
+      "title": "6200 Series TOF and 6500 Series Q-TOF LC/MS System Concepts Guide",
+      "authors_or_organization": "Agilent Technologies",
+      "year": 2017,
+      "url": "https://www.agilent.com/cs/library/usermanuals/public/G3335-90231_TOF_Q-TOF_Concepts.pdf",
+      "locator": "Collision cell and collision energy sections; All-Ions examples",
+      "access_level": "full official PDF",
+      "supported_claims": [
+        "6500 QTOF uses a nitrogen-filled axially accelerating hexapole collision cell",
+        "Methods can use fixed CE, m/z-dependent slope/offset, or CE tables"
+      ],
+      "limitations": [
+        "The guide uses voltage labels in some methods and does not authorize cross-vendor equivalence",
+        "Collision-cell settings vary by model"
+      ]
+    },
+    {
+      "source_id": "agilent_pcdl_2015",
+      "source_type": "official_vendor_document",
+      "title": "MassHunter PCDL Familiarization Guide",
+      "authors_or_organization": "Agilent Technologies",
+      "year": 2015,
+      "url": "https://www.agilent.com/cs/library/usermanuals/public/G5883-90002_PCDL_Familiarization.pdf",
+      "locator": "Auto-MS/MS collision-energy slope and offset example",
+      "access_level": "full official PDF",
+      "supported_claims": [
+        "The example method calculates CE from precursor m/z using a slope and offset"
+      ],
+      "limitations": [
+        "The example coefficients are method settings, not universal constants"
+      ]
+    },
+    {
+      "source_id": "sciex_tripletof_6600_manual_2018",
+      "source_type": "official_vendor_document",
+      "title": "TripleTOF 6600 System User Guide",
+      "authors_or_organization": "SCIEX",
+      "year": 2018,
+      "url": "https://sciex.com/content/dam/SCIEX/pdf/customer-docs/user-guide/6600-system-user-guide-en.pdf",
+      "locator": "Q2 collision cell; CE and CES parameters",
+      "access_level": "full official PDF",
+      "supported_claims": [
+        "CE controls the potential difference into the nitrogen-filled Q2 collision cell",
+        "CES can combine CE-CES, CE, and CE+CES product-ion energies"
+      ],
+      "limitations": [
+        "A CES composite cannot be represented as one fixed energy",
+        "CAD gas pressure remains a separate condition"
+      ]
+    },
+    {
+      "source_id": "sciex_rolling_ce_2023",
+      "source_type": "official_vendor_document",
+      "title": "Optimized rolling collision energy curves for IDA and SWATH DIA for peptides",
+      "authors_or_organization": "SCIEX; Christie Hunter",
+      "year": 2023,
+      "url": "https://community.sciex.com/2023/04/18/optimized-rolling-collision-energy-curves-for-ida-and-swath-dia-for-peptides/",
+      "locator": "Rolling CE and CES acquisition descriptions",
+      "access_level": "full official technical page",
+      "supported_claims": [
+        "Rolling CE depends on precursor m/z and charge; CES semantics depend on acquisition mode"
+      ],
+      "limitations": [
+        "The reported curves were trained on tryptic peptides and cannot be transferred to small molecules without testing"
+      ]
+    },
+    {
+      "source_id": "hinneburg_bruker_2016",
+      "source_type": "peer_reviewed_primary",
+      "title": "The Art of Destruction: Optimizing Collision Energies in Q-TOF MS of Glycopeptides",
+      "authors_or_organization": "Hinneburg H et al.",
+      "year": 2016,
+      "doi": "10.1007/s13361-015-1308-6",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4756043/",
+      "locator": "Bruker impact II, 10-140 eV energy-resolved experiments",
+      "access_level": "full text",
+      "supported_claims": [
+        "Optimal Bruker impact II collision energy depended on precursor m/z and fragmentation channel"
+      ],
+      "limitations": [
+        "Glycopeptide results are not a universal small-molecule calibration"
+      ]
+    },
+    {
+      "source_id": "bruker_impact_bbcid_2021",
+      "source_type": "official_vendor_document",
+      "title": "LCMS-180: COVID impact II application note",
+      "authors_or_organization": "Bruker Daltonics",
+      "year": 2021,
+      "url": "https://www.bruker.com/content/dam/bruker/int/en/resources/bdal/lsms/application-note/2021/1886244-lcms-180-covid-impact-II-ebook-rev-01.pdf",
+      "locator": "impact II MS/MS and bbCID acquisition methods",
+      "access_level": "full official PDF",
+      "supported_claims": [
+        "impact II methods can use fixed or ranged collision energies; bbCID alternates full-scan and broadband fragmentation"
+      ],
+      "limitations": [
+        "bbCID is not precursor-selected fixed-CE MS/MS"
+      ]
+    },
+    {
+      "source_id": "waters_synapt_g2s_manual_2016",
+      "source_type": "official_vendor_document",
+      "title": "SYNAPT G2-S Overview and Maintenance Guide",
+      "authors_or_organization": "Waters Corporation",
+      "year": 2016,
+      "url": "https://help.waters.com/content/dam/waters/en/support/usermanuals/2016/715003891/715003891re.pdf",
+      "locator": "Triwave trap and transfer collision-cell descriptions",
+      "access_level": "full official PDF",
+      "supported_claims": [
+        "SYNAPT has distinct Trap and Transfer T-Wave regions that can fragment ions"
+      ],
+      "limitations": [
+        "A record labeled only Waters QTOF CID does not identify the collision region"
+      ]
+    },
+    {
+      "source_id": "waters_masslynx_acquisition_2003",
+      "source_type": "official_vendor_document",
+      "title": "MassLynx NT Guide to Data Acquisition",
+      "authors_or_organization": "Waters Corporation",
+      "year": 2003,
+      "url": "https://help.waters.com/content/dam/waters/it/support/usermanuals/2003/USRM1853411/data_acquisition_35.pdf",
+      "locator": "Collision-energy ramp definition",
+      "access_level": "full official PDF",
+      "supported_claims": [
+        "MassLynx collision-energy ramps use mass points and start/end voltages"
+      ],
+      "limitations": [
+        "A ramp midpoint is not a fixed-energy observation"
+      ]
+    },
+    {
+      "source_id": "waters_mse_2007",
+      "source_type": "official_vendor_document",
+      "title": "The Simultaneous Acquisition of Exact Mass Data Using Alternating Collision Cell Energy MSE",
+      "authors_or_organization": "Waters Corporation; Rainville P; Plumb R",
+      "year": 2007,
+      "url": "https://www.waters.com/nextgen/is/en/library/application-notes/2007/the-simultaneous-acquisition-of-exact-mass-data-using-alternating-collision-cell-energy-mse.html",
+      "locator": "MSE low/high energy acquisition description",
+      "access_level": "full official application note",
+      "supported_claims": [
+        "MSE alternates low- and high-energy functions"
+      ],
+      "limitations": [
+        "MSE high-energy spectra are not precursor-selected fixed-CE spectra"
+      ]
+    },
+    {
+      "source_id": "szabo_qtof_orbitrap_2021",
+      "source_type": "peer_reviewed_primary",
+      "title": "Collision energies on QTof and Orbitrap instruments: How to make proteomics measurements comparable?",
+      "authors_or_organization": "Szabo D et al.",
+      "year": 2021,
+      "doi": "10.1002/jms.4693",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33277714/",
+      "locator": "Bruker Maxis II CID versus Q Exactive Focus HCD experiments",
+      "access_level": "abstract and bibliographic record",
+      "supported_claims": [
+        "Matched peptide spectra required empirical CE adjustment between the studied QTOF and Orbitrap"
+      ],
+      "limitations": [
+        "The peptide comparison does not provide a universal metabolite or NCE conversion"
+      ]
+    },
+    {
+      "source_id": "v15_feature_fragment_engineering_policy",
+      "source_type": "computational_inference",
+      "title": "V15 feature-fragment mass-window and evidence policy",
+      "authors_or_organization": "Mssystem V15",
+      "year": 2026,
+      "locator": "matching/feature_fragments/schema.py and evidence.py",
+      "access_level": "local source code",
+      "supported_claims": [
+        "Rule-specific max(abs Da, ppm) windows and Jeffreys-smoothed conditional likelihood ratios are engineering choices",
+        "Correlated rules contribute at most one likelihood-ratio term per declared independent fragmentation group"
+      ],
+      "limitations": [
+        "Engineering settings do not establish chemical specificity",
+        "Performance claims require identity- and formula-family-isolated public spectra"
+      ]
+    }
+  ]
+}

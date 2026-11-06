@@ -1,0 +1,407 @@
+{
+  "acceptance_receipt_file_sha256": "02155ccf9bdbc527eec3aad76c05eb23ecf1c5749db286161593e04326a61d65",
+  "accepted_cache_manifest_semantic_sha256": "cde0b3df2b3b8604c9b5200143d9eb3a40f90ace33289e2598c4deb664d972e4",
+  "activation_status": "enabled_after_full_record_retrieval_and_paired_scoring_acceptance",
+  "cache_dir": "/Users/zizi/Desktop/Mssystem/mssystem_V16/output/library_record_store/full-20260915-formula-composition-v1",
+  "enabled": true,
+  "post_acceptance_jiawei_target_only_source_rebind": {
+    "catalog_sha256": "a4b838b9e699a62d7446a129b134ed6755ce0e4f072761dccb80b38e04d974f4",
+    "compound_rows_changed": 0,
+    "consolidated_source_datasets": [
+      "JWSWJ_加味三乌胶_targeted_20261020",
+      "JWSWJ_加味三乌胶_全文增补_targeted_20261021_v10",
+      "JWSWJ_加味三乌胶_全文增补_targeted_20261021_v5",
+      "JWSWJ_加味三乌胶_全文增补_targeted_20261021_v6",
+      "JWSWJ_加味三乌胶_全文增补_targeted_20261021_v7",
+      "JWSWJ_加味三乌胶_全文增补_targeted_20261021_v8",
+      "JWSWJ_加味三乌胶_全文增补_targeted_20261021_v9",
+      "JWSWJ_加味三乌胶_原文补充_targeted_20261020_v4",
+      "JWSWJ_加味三乌胶_成分与MSMS_targeted_20261020_v3",
+      "JWSWJ_加味三乌胶_扩展文献_targeted_20261020_v2"
+    ],
+    "consolidated_target_rows": 4324,
+    "current_database_sha256": "bcb13cdced59033fdcd0b6d32d4681f8ccd34ec575458635ac6aa708021cbf66",
+    "dataset_source": "加味三乌胶靶向库",
+    "dataset_version": "consolidated-20261023",
+    "diagnostic_semantic_sha256": null,
+    "expected_compounds_product_ion_rules_changed": false,
+    "inserted_diagnostic_rows": 0,
+    "inserted_target_rows": 0,
+    "install_receipt": "/Users/zizi/Desktop/Mssystem/research/20261020_jiawei_sanwujiao_targeted/consolidated_20261023/MERGE_RECEIPT.json",
+    "install_receipt_sha256": "0cceb272d4bb498c9e5b5d0ca9c8f2571b816754338d3d6bcd3459f1fde7592f",
+    "mapping_rows_changed": 0,
+    "non_dataset_target_rows_changed": 0,
+    "normalized_record_content_changed": false,
+    "previous_database_sha256": "8f1c54224b89c785cf961f89ce527839b8d5f1f320970043d76d148d09bd6e7a",
+    "processing_identity_compatibility": {
+      "accepted_source_files_sha256": "177013bdfedaaac5eb96d885d54e6022cdf0b34e3f28786a3d1d71055fdea924",
+      "compatible": true,
+      "current_source_files_sha256": "531da7e241a3fc91f1883df24e2a5e71497a9e2542ed0ddca5836236ca62b934",
+      "excluded_additions": [
+        {
+          "path": "matching/masscube_peak_evidence.py",
+          "sha256": "c8a7e5350b6dc10b4883551fc75b877fe4a3c413e9951521e85cb3703f18ff90",
+          "size_bytes": 16040
+        },
+        {
+          "path": "matching/masscube_peak_workflow.py",
+          "sha256": "a4a774c7609ab9411ed132c1d8d304682b4f79b82d45eac8af9c3ae9397c6034",
+          "size_bytes": 10724
+        }
+      ],
+      "mode": "verified_isolated_non_normalizing_additions",
+      "normalization_or_scoring_inputs_changed": false,
+      "reconstructed_source_files_sha256": "177013bdfedaaac5eb96d885d54e6022cdf0b34e3f28786a3d1d71055fdea924",
+      "reviewed_non_normalizing_replacements": [
+        {
+          "after": {
+            "sha256": "85861050f03c36ad12dc328715c9f52e995a201d4ca804383b965025969cbfcd",
+            "size_bytes": 48216
+          },
+          "before": {
+            "sha256": "2fde1efe4440f2619053adb96dafd39168182dd11a4a568c99d2c95cffe9492d",
+            "size_bytes": 45670
+          },
+          "path": "matching/evidence_network.py"
+        },
+        {
+          "after": {
+            "sha256": "fdd7017c39396562dbd37773c1eaa94d748d1174cbbe813bdb2385e179d6579c",
+            "size_bytes": 33002
+          },
+          "before": {
+            "sha256": "ba1ed046c89b41bc0768024feabc713e7be0ae60f6d8440866699932abc4d0b4",
+            "size_bytes": 29814
+          },
+          "path": "matching/molecular_network.py"
+        }
+      ]
+    },
+    "rebound_at": "2026-10-23T05:24:43.110023+00:00",
+    "schema_version": "mssystem-jiawei-target-consolidation-rebind/1.0",
+    "score_inputs_changed": false,
+    "score_inputs_scope": "normalized_spectral_library_records",
+    "spectra_rows_changed": 0,
+    "verified_scope": {
+      "diagnostics_sha256": "2be83138b875d4320f5cd9c297408ea1bd35ba256d0227e7019dfb2f0eb72c01",
+      "file_stat": {
+        "mtime_ns": 1792733029788028432,
+        "size_bytes": 5424619520
+      },
+      "non_dataset_target_rows": 38107,
+      "non_dataset_targets_sha256": "ed7e3ac0c7158738bea08946deea83b8d1bbf2440dfdce0eebc884f2aefef9e2",
+      "schema_sha256": "b001cebd82143b2ccb37e34c29ce889fd8822612b6746e00d6013d7904a7f1b7",
+      "schema_version": 63,
+      "table_row_counts": {
+        "Compounds": 1436463,
+        "DiagnosticIons": 64195,
+        "Mapping": 4674363,
+        "Spectra": 4674363,
+        "TargetCompounds": 42431
+      }
+    }
+  },
+  "post_acceptance_non_normalization_source_rebind": {
+    "candidate_scores_changed": false,
+    "changed_file": "matching/expected_compounds.py",
+    "current_processing_identity": {
+      "library_relative_threshold": 0.05,
+      "library_top_n_peaks": 15,
+      "load_name_only_leads": false,
+      "numpy": "2.1.3",
+      "python": [
+        3,
+        13
+      ],
+      "source_files_sha256": "177013bdfedaaac5eb96d885d54e6022cdf0b34e3f28786a3d1d71055fdea924"
+    },
+    "current_version_sha256": "0b9f10685564a1c9d4b01a88a92abc3af4d7fd9ea16540ec0e9f8fe57a41d26e",
+    "current_version_size_bytes": 120696,
+    "normalized_record_content_changed": false,
+    "normalized_records_sha256": "15e12823a52c664177092efc2e38322edb28dd12e0b482512530833f075b3629",
+    "other_processing_identity_files_changed": 0,
+    "previous_processing_identity": {
+      "library_relative_threshold": 0.05,
+      "library_top_n_peaks": 15,
+      "load_name_only_leads": false,
+      "numpy": "2.1.3",
+      "python": [
+        3,
+        13
+      ],
+      "source_files_sha256": "e854e751fac4bf2e57987e1069e62a45d5e00a23320a9121ab76e99690e93b6e"
+    },
+    "reason": "matching.expected_compounds implements a separate targeted MS1 workflow and is not called while normalized library records are built",
+    "rebound_at": "2026-10-20T12:14:39.987285+00:00",
+    "reconstructed_accepted_source_files_sha256": "e854e751fac4bf2e57987e1069e62a45d5e00a23320a9121ab76e99690e93b6e",
+    "record_alignment_sha256": "4cdef20ebb5e7871c0c22443f7df5ec8b79bb9e2fb38c76a9bc7bdda9d818b21",
+    "record_count": 3153872,
+    "repository_version_sha256": "906847c3b1a57e8be16385180cf8087763175eee7ba63fc023a59b7621906768",
+    "repository_version_size_bytes": 120053,
+    "schema_version": "mssystem-non-normalization-source-rebind/1.0"
+  },
+  "post_acceptance_reliability_source_rebind": {
+    "candidate_scores_changed": false,
+    "current_processing_identity": {
+      "library_relative_threshold": 0.05,
+      "library_top_n_peaks": 15,
+      "load_name_only_leads": false,
+      "numpy": "2.1.3",
+      "python": [
+        3,
+        13
+      ],
+      "source_files_sha256": "3fd33f519e886f79e99965903d79c5f1c8a38641ca003315da88b9a3554d6ee3"
+    },
+    "library_normalizer_imports_changed_modules": false,
+    "normalized_record_content_changed": false,
+    "normalized_records_sha256": "15e12823a52c664177092efc2e38322edb28dd12e0b482512530833f075b3629",
+    "other_processing_identity_files_changed": 0,
+    "previous_processing_identity": {
+      "library_relative_threshold": 0.05,
+      "library_top_n_peaks": 15,
+      "load_name_only_leads": false,
+      "numpy": "2.1.3",
+      "python": [
+        3,
+        13
+      ],
+      "source_files_sha256": "724bca448c216cfb9c8a65eaad55df72d5f116fe28ea656722506725a594711c"
+    },
+    "reason": "expected-compound opt-in isolation and feature-level query organization are outside spectral-library record normalization",
+    "rebound_at": "2026-09-20T11:58:00.407879+00:00",
+    "reconstructed_accepted_source_files_sha256": "724bca448c216cfb9c8a65eaad55df72d5f116fe28ea656722506725a594711c",
+    "record_alignment_sha256": "4cdef20ebb5e7871c0c22443f7df5ec8b79bb9e2fb38c76a9bc7bdda9d818b21",
+    "record_count": 3153872,
+    "schema_version": "mssystem-non-normalization-source-rebind/2.0",
+    "sqlite_library_changed": false,
+    "substituted_file_count": 2,
+    "substituted_files": {
+      "matching/expected_compounds.py": {
+        "current_sha256": "b031443917c25d9164b71400e230ae11c1469255e36393e17b5a405d77fa160d",
+        "current_size_bytes": 116188,
+        "previous": {
+          "sha256": "40ef8e0ec974c9e8e0b3307c2fd3504b701843fdd4c5a1311b96b6a2f9e96610",
+          "size_bytes": 120183,
+          "source": "prior accepted rebind audit current_version"
+        }
+      },
+      "matching/untargeted_workflow.py": {
+        "current_sha256": "f66ae7eb9c6f00f5cc99a39e4265e26eba68a9f08e9953c721d945a7a8b80d5a",
+        "current_size_bytes": 18497,
+        "previous": {
+          "sha256": "94bb8e64e9d2b46077df1ccc2e075fbe81c59d5afb92b095e49d51b78a09692d",
+          "size_bytes": 14889,
+          "source": "git HEAD before reliability architecture edit"
+        }
+      }
+    }
+  },
+  "post_acceptance_representative_summary_rebind": {
+    "candidate_scores_changed": false,
+    "changed_fields": [
+      "consensus_spectra",
+      "multi_spectrum_consensus",
+      "single_spectrum_consensus",
+      "multi_spectrum_representative_groups",
+      "single_spectrum_representatives"
+    ],
+    "changed_file": "matching/untargeted_workflow.py",
+    "current_file_sha256": "5bc165c2b6a9bc5cfc00ed5f951e5045c9d5f7bb86d54fd7d0b68a558d345998",
+    "current_file_size_bytes": 18581,
+    "current_processing_identity": {
+      "library_relative_threshold": 0.05,
+      "library_top_n_peaks": 15,
+      "load_name_only_leads": false,
+      "numpy": "2.1.3",
+      "python": [
+        3,
+        13
+      ],
+      "source_files_sha256": "ec8ef79314f2b91e2661905a148c7e8b336b5b1a7e298d46e3179f6987919970"
+    },
+    "library_normalizer_imports_changed_module": false,
+    "normalized_record_content_changed": false,
+    "normalized_records_sha256": "15e12823a52c664177092efc2e38322edb28dd12e0b482512530833f075b3629",
+    "other_processing_identity_files_changed": 0,
+    "previous_file_sha256": "f66ae7eb9c6f00f5cc99a39e4265e26eba68a9f08e9953c721d945a7a8b80d5a",
+    "previous_file_size_bytes": 18497,
+    "previous_processing_identity": {
+      "library_relative_threshold": 0.05,
+      "library_top_n_peaks": 15,
+      "load_name_only_leads": false,
+      "numpy": "2.1.3",
+      "python": [
+        3,
+        13
+      ],
+      "source_files_sha256": "3fd33f519e886f79e99965903d79c5f1c8a38641ca003315da88b9a3554d6ee3"
+    },
+    "reason": "correct representative-spectrum summary labels without changing library normalization, retrieval, scoring, or cached records",
+    "rebound_at": "2026-09-20T13:35:13.131469+00:00",
+    "reconstructed_accepted_source_files_sha256": "3fd33f519e886f79e99965903d79c5f1c8a38641ca003315da88b9a3554d6ee3",
+    "record_alignment_sha256": "4cdef20ebb5e7871c0c22443f7df5ec8b79bb9e2fb38c76a9bc7bdda9d818b21",
+    "record_count": 3153872,
+    "reverse_patch_reproduced_previous_file": true,
+    "schema_version": "mssystem-non-normalization-source-rebind/3.0",
+    "sqlite_library_changed": false
+  },
+  "post_acceptance_spectral_evidence_source_rebind": {
+    "acceptance_results_retained": {
+      "candidate_order_cases": 10384,
+      "candidate_order_mismatches": 0,
+      "full_record_roundtrip_sha256": "15e12823a52c664177092efc2e38322edb28dd12e0b482512530833f075b3629",
+      "paired_scoring_queries": 128,
+      "score_mismatches": 0,
+      "shared_database_unchanged": true,
+      "verified_record_count": 3153872
+    },
+    "candidate_scores_changed": false,
+    "complete_library": true,
+    "current_processing_identity": {
+      "library_relative_threshold": 0.05,
+      "library_top_n_peaks": 15,
+      "load_name_only_leads": false,
+      "numpy": "2.1.3",
+      "python": [
+        3,
+        13
+      ],
+      "source_files_sha256": "df30c7ac58d07c50a8871d72209cc1087363544b2455e702386ed1eac54e7825"
+    },
+    "fresh_fault_isolation": true,
+    "inherited_historical_acceptance_status": [
+      "post_acceptance_non_normalization_source_rebind",
+      "post_acceptance_reliability_source_rebind",
+      "post_acceptance_representative_summary_rebind",
+      "post_acceptance_target_only_source_rebind"
+    ],
+    "normal_runtime_loader_validation": "pending",
+    "normalized_record_content_changed": false,
+    "normalized_records_sha256": "15e12823a52c664177092efc2e38322edb28dd12e0b482512530833f075b3629",
+    "original_metadata_sha256": {
+      "/Users/zizi/Desktop/Mssystem/mssystem_V16/config/library_record_store.json": "9ea90f58f5ef327ac61df37053282ab377cbda6735d4d4efe55c44d034d18dc8",
+      "/Users/zizi/Desktop/Mssystem/mssystem_V16/config/sql_metadata_repairs.json": "fe0337def768b22eedd1e2788ead063a0cf8de78543a73652022199e0ba116c4",
+      "/Users/zizi/Desktop/Mssystem/mssystem_V16/output/library_record_store/full-20260915-formula-composition-v1/acceptance.json": "663c24517d4d843dabf6be1f4f4e216af191c82a1ca39bb1bf52b98ea056f489",
+      "/Users/zizi/Desktop/Mssystem/mssystem_V16/output/library_record_store/full-20260915-formula-composition-v1/manifest.json": "16b18d2c64ab4c68a4cd5c6c952bcae27853298ef6ea923748f1f5edb0c9b696"
+    },
+    "payload_bindings": {
+      "neutral_masses.npy": {
+        "sha256": "935f970cfe272915592cbe0540eaacdf2f27f71c07e416a113ddaf358a49aa7b",
+        "size_bytes": 25157680
+      },
+      "neutral_record_indices.npy": {
+        "sha256": "5dca85e37961596015b941230eb6a6ddc0f0f59cc8dd1afb32b85e485b898e76",
+        "size_bytes": 12578904
+      },
+      "precursor_masses.npy": {
+        "sha256": "a77edc1475cfb331d1d5891a5f1c5263ed35647a16fc0c41203c9422f983de87",
+        "size_bytes": 25231104
+      },
+      "precursor_record_indices.npy": {
+        "sha256": "0344d6592806496564bd715ac6c5896c2d3a1ba73bd1209251080d9bdb1bd61e",
+        "size_bytes": 12615616
+      },
+      "record_offsets.npy": {
+        "sha256": "02d951200ad872bbe0508a3c8e223c13b664a7af9908bdab06181c0f89d7f63f",
+        "size_bytes": 25231112
+      },
+      "records.jsonl": {
+        "sha256": "15e12823a52c664177092efc2e38322edb28dd12e0b482512530833f075b3629",
+        "size_bytes": 16903969967
+      }
+    },
+    "payload_files_written": false,
+    "previous_processing_identity": {
+      "library_relative_threshold": 0.05,
+      "library_top_n_peaks": 15,
+      "load_name_only_leads": false,
+      "numpy": "2.1.3",
+      "python": [
+        3,
+        13
+      ],
+      "source_files_sha256": "ec8ef79314f2b91e2661905a148c7e8b336b5b1a7e298d46e3179f6987919970"
+    },
+    "protocol_path": "/Users/zizi/Desktop/Mssystem/research/20261016_v16_real_execution/source_recovery/REBIND_PROTOCOL.json",
+    "protocol_sha256": "120623c3fecd132c56f676649ef3391a82636cd50b60f13e9dfb9a683538ff92",
+    "rebound_at": "2026-10-16T08:02:10.588828+00:00",
+    "record_alignment_sha256": "4cdef20ebb5e7871c0c22443f7df5ec8b79bb9e2fb38c76a9bc7bdda9d818b21",
+    "record_count": 3153872,
+    "review_receipt": {
+      "path": "/Users/zizi/Desktop/Mssystem/research/20261016_v16_real_execution/source_recovery/INDEPENDENT_CACHE_PROOF_REVIEW.json",
+      "sha256": "1fb7cf11bddf15122650a4d9b11be4c74aa766e8dbf57423521f027c52967c89"
+    },
+    "schema_version": "mssystem-spectral-evidence-source-rebind/1.0",
+    "scope_excludes_unconditional_all_resource_equivalence": true,
+    "source_db": {
+      "path": "/Users/zizi/Desktop/桌面分类/共享与备份/Mssystem_shared_data/local_library.db",
+      "sha256": "f59e8adf343057acff937bc24f480e26bf51b23c3d150fe3397d03012ecd9514",
+      "size_bytes": 5396361216
+    },
+    "source_proof": {
+      "accepted_source_files_sha256": "ec8ef79314f2b91e2661905a148c7e8b336b5b1a7e298d46e3179f6987919970",
+      "baseline_ref": "1a5bb000",
+      "capture_after_best_selection": true,
+      "current_source_files_sha256": "df30c7ac58d07c50a8871d72209cc1087363544b2455e702386ed1eac54e7825",
+      "fresh_exception_isolation": true,
+      "iter_normalized_library_records_ast_sha256": "24eb6d26114e4a58f2d378a65f389ee2ceca737beb521011e54e53cf8bb9ff07",
+      "iter_normalized_library_records_unchanged": true,
+      "other_covered_source_files_changed": 0,
+      "ranking_influence_declared": false,
+      "reconstructed_baseline_search": {
+        "path": "matching/search.py",
+        "sha256": "8b6cd724fe4e624a08c89d57a13d87f03726b89ece87f42fb527b59e7db4ea28",
+        "size_bytes": 196514
+      },
+      "removed_new_helper_from_baseline_snapshot": true,
+      "removed_post_selection_capture_blocks": 1,
+      "removed_trailing_argument": "capture_peak_evidence=True",
+      "reviewed_sources": {
+        "matching/search.py": {
+          "sha256": "35e567e5dfbf36208f2e523c9cffc2b3a19de4382bb3fe70f3e4539171633130",
+          "size_bytes": 197287
+        },
+        "matching/spectral_evidence.py": {
+          "sha256": "1fa749750e061f4357889a25aea04de596e60006eaa703358624d9b4b8a955b4",
+          "size_bytes": 6449
+        }
+      },
+      "successful_result_fields": [
+        "spectral_evidence"
+      ],
+      "top_level_only_docstring_imports_and_functions": true,
+      "whole_module_ast_matches_baseline": true
+    },
+    "sqlite_library_written": false,
+    "successful_result_fields": [
+      "spectral_evidence"
+    ],
+    "test_receipt": {
+      "path": "/Users/zizi/Desktop/Mssystem/research/20261016_v16_real_execution/source_recovery/HARDENING_TEST_RECEIPT.json",
+      "sha256": "c679c2b7ea34fa9ec50e35060ac029c7caa4f8679b6fe6cbc82ed1e3bd5b1d02"
+    }
+  },
+  "post_acceptance_target_only_source_rebind": {
+    "compound_rows_changed": 0,
+    "current_database_sha256": "f59e8adf343057acff937bc24f480e26bf51b23c3d150fe3397d03012ecd9514",
+    "dataset_source": "QFT_青风藤_NEG_experimental_reference_20260920",
+    "inserted_diagnostic_rows": 0,
+    "inserted_target_rows": 8,
+    "mapping_rows_changed": 0,
+    "normalized_record_content_changed": false,
+    "panel_receipt": "/Users/zizi/Desktop/Mssystem/mssystem_V16/research/20260920_qft_negative_panel/INSTALL_RECEIPT.json",
+    "panel_receipt_sha256": "b55cbba887c8983004b337a051850009778c7d9dc7f3a0b96bee1e92de0171cb",
+    "previous_database_sha256": "c44332bea84846a0dd7e7f9108af2dd5eaf180784395e246eb76a297b9a1a8d3",
+    "rebound_at": "2026-09-20T02:56:40.826182+00:00",
+    "schema_version": "mssystem-target-only-source-rebind/1.0",
+    "score_inputs_changed": false,
+    "spectra_rows_changed": 0
+  },
+  "requires_candidate_order_equivalence": true,
+  "requires_full_record_roundtrip": true,
+  "requires_paired_scoring_equivalence": true,
+  "schema_version": "mssystem.library-record-store-config/1.0.0",
+  "shared_database_writes_allowed": false,
+  "source_db": "/Users/zizi/Desktop/Mssystem_shared_data/local_library.db"
+}

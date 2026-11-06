@@ -1,0 +1,85 @@
+{
+  "alias_graph": {
+    "acyclic": true,
+    "edge_count": 15
+  },
+  "asset_sha256": {
+    "atomicization_queue_v1.jsonl": "e6edf1d7e9cca8efd86521a201899740b01740727d5cf412bf15f6f9cb528da2",
+    "ledger_lock_v1.json": "3cdff8625ec68f24ce13f0235c887036e8eb86ab8d6d8c3c142f24b674e0cf65",
+    "legacy_aliases_v1.jsonl": "addc9ec7402cdf472c01c2b030509332d05430a30a3645f3aab48ee2614550a0",
+    "quarantine_v1.jsonl": "18891377f7f05aa6c97987291ff51179522ee87923ef2520720a044f7da925e9",
+    "source_claims_v1.jsonl": "b167441baefe6cb3db1b9f19484c4c756e448cf12801d79c0ac9d1bad143fc86",
+    "statistics_plans_v1.json": "a3fa9b971ce3808d92c91eeda844eaf1dd4e1769ccd072882cee318a257c3bf5"
+  },
+  "coverage": {
+    "ledger_item_count": 2030,
+    "orphan_ledger_item_count": 0,
+    "terminal_decision_count": 2030,
+    "terminal_relationship_counts": {
+      "defer": 1950,
+      "exact_alias": 28,
+      "numeric_correction": 2,
+      "quarantined_duplicate": 4,
+      "quarantined_formula_mass": 9,
+      "quarantined_misplaced": 1,
+      "rejected_incorrect": 1,
+      "split_parent": 34,
+      "superseded": 1
+    },
+    "terminal_relationships_mutually_exclusive": true,
+    "unique_terminal_item_count": 2030,
+    "unknown_overlay_item_count": 0
+  },
+  "formula_mass_quarantine": {
+    "actual_count": 9,
+    "all_outside_0_01_da": true,
+    "legacy_item_ids": [
+      "feature_profile:alkaloid:012",
+      "feature_profile:amino_acid:011",
+      "feature_profile:fatty_acid:001",
+      "feature_profile:flavonoid:007",
+      "feature_profile:flavonoid:008",
+      "feature_profile:lignan:003",
+      "feature_profile:lipid:008",
+      "feature_profile:steroid:007",
+      "feature_profile:terpenoid:008"
+    ],
+    "required_count": 9
+  },
+  "generated_by": "scripts/curate_feature_fragment_legacy.py",
+  "generated_on": "2026-08-26",
+  "ledger": {
+    "format": "JSON Lines; one immutable legacy occurrence per line",
+    "path": "docs/audits/V15_FEATURE_FRAGMENT_LEGACY_PROVENANCE_LEDGER_20260826.jsonl",
+    "record_count": 2030,
+    "sha256": "926a85ca00abebf0775205007b727dac2b641c860ba6083fb0a706aaf2e81fa3"
+  },
+  "proposals": {
+    "accepted_shadow_rule_ids": [
+      "FF-PC-184-POS-H-AG6560-10EV",
+      "FF-PC-184-POS-H-AG6560-20EV",
+      "FF-PC-184-POS-H-AG6560-40EV",
+      "FF-PE-NL141-POS-H-AG6560-10EV",
+      "FF-PE-NL141-POS-H-AG6560-20EV",
+      "FF-PE-NL141-POS-H-AG6560-40EV"
+    ],
+    "count": 40,
+    "export_policy": "no curation proposal is runtime-export eligible; six accepted_shadow entries are deterministic CI and research-audit records only",
+    "runtime_export_eligible_rule_ids": [],
+    "status_counts": {
+      "accepted_shadow": 6,
+      "literature_only": 9,
+      "needs_recount": 25
+    }
+  },
+  "receipt_id": "v15-feature-fragment-curation-overlay-20260826",
+  "runtime_boundary": {
+    "curation_directory_loaded_by_runtime_catalog": false,
+    "exact_identity_upgrade_allowed": false,
+    "isomer_discrimination_upgrade_allowed": false,
+    "runtime_catalog_files_modified": false,
+    "standard_confirmation_upgrade_allowed": false
+  },
+  "runtime_influence": false,
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,554 @@
+{
+  "plans": [
+    {
+      "background_definitions": [
+        "beta-amino acids",
+        "gamma-amino acids",
+        "epsilon-amino acids",
+        "other CH2O2-loss compounds"
+      ],
+      "counting_unit": "independent_2d_identity",
+      "deduplication": {
+        "mirror_key": "base-peak-normalized peak-content SHA-256",
+        "source_family": "record repository lineage; mirrored exports do not create a second identity",
+        "technical_replicates": "collapse within identity x method x CE before identity counting"
+      },
+      "fixed_fragment_point_values_allowed": false,
+      "fixture": null,
+      "formula_family_key": "charge-neutralized Hill formula",
+      "holdout": {
+        "discovery_validation_formula_family_overlap_allowed": false,
+        "discovery_validation_identity_overlap_allowed": false,
+        "discovery_validation_source_family_overlap_allowed": false
+      },
+      "identity_key": "standardized_2d_connectivity",
+      "negative_evidence_quality_gates": [
+        "complete_mass_range",
+        "centroided",
+        "sufficient_signal",
+        "precursor_isolated",
+        "collision_energy_verified",
+        "instrument_domain_verified"
+      ],
+      "required_outputs": [
+        "target_present",
+        "target_total",
+        "target_frequency",
+        "background_present",
+        "background_total",
+        "background_frequency",
+        "conditional_likelihood_ratio_with_interval",
+        "identity_formula_source_split_manifest_sha256"
+      ],
+      "runtime_influence": false,
+      "special_requirements": [
+        "HCOOH and H2O+CO labels share one observed-mass event",
+        "Record MSn stage"
+      ],
+      "statistics_plan_id": "STAT-AA-ALPHA-NL46-POS-H",
+      "status": "planned_no_strict_counts",
+      "stratify_exactly_by": [
+        "vendor",
+        "instrument_model",
+        "analyzer",
+        "activation",
+        "collision_cell_region",
+        "collision_energy_raw",
+        "collision_energy_unit",
+        "collision_energy_mode",
+        "adduct",
+        "polarity",
+        "precursor_charge"
+      ],
+      "target_definition": "protonated alpha-amino-acid identities"
+    },
+    {
+      "background_definitions": [
+        "O-glycosides",
+        "non-glycosides",
+        "same-aglycone analogs"
+      ],
+      "counting_unit": "independent_2d_identity",
+      "deduplication": {
+        "mirror_key": "base-peak-normalized peak-content SHA-256",
+        "source_family": "record repository lineage; mirrored exports do not create a second identity",
+        "technical_replicates": "collapse within identity x method x CE before identity counting"
+      },
+      "fixed_fragment_point_values_allowed": false,
+      "fixture": null,
+      "formula_family_key": "charge-neutralized Hill formula",
+      "holdout": {
+        "discovery_validation_formula_family_overlap_allowed": false,
+        "discovery_validation_identity_overlap_allowed": false,
+        "discovery_validation_source_family_overlap_allowed": false
+      },
+      "identity_key": "standardized_2d_connectivity",
+      "negative_evidence_quality_gates": [
+        "complete_mass_range",
+        "centroided",
+        "sufficient_signal",
+        "precursor_isolated",
+        "collision_energy_verified",
+        "instrument_domain_verified"
+      ],
+      "required_outputs": [
+        "target_present",
+        "target_total",
+        "target_frequency",
+        "background_present",
+        "background_total",
+        "background_frequency",
+        "conditional_likelihood_ratio_with_interval",
+        "identity_formula_source_split_manifest_sha256"
+      ],
+      "runtime_influence": false,
+      "special_requirements": [
+        "60/90/120 losses share one independent fragmentation group"
+      ],
+      "statistics_plan_id": "STAT-CGLYCOSIDE-NEG-H",
+      "status": "planned_no_strict_counts",
+      "stratify_exactly_by": [
+        "vendor",
+        "instrument_model",
+        "analyzer",
+        "activation",
+        "collision_cell_region",
+        "collision_energy_raw",
+        "collision_energy_unit",
+        "collision_energy_mode",
+        "adduct",
+        "polarity",
+        "precursor_charge"
+      ],
+      "target_definition": "phenolic/flavonoid C-glycosides under negative [M-H]-"
+    },
+    {
+      "background_definitions": [
+        "other glycerophospholipid classes",
+        "NAPE/L-NAPE",
+        "other sphingoid chain lengths",
+        "phosphorylated sugars"
+      ],
+      "counting_unit": "independent_2d_identity",
+      "deduplication": {
+        "mirror_key": "base-peak-normalized peak-content SHA-256",
+        "source_family": "record repository lineage; mirrored exports do not create a second identity",
+        "technical_replicates": "collapse within identity x method x CE before identity counting"
+      },
+      "fixed_fragment_point_values_allowed": false,
+      "fixture": null,
+      "formula_family_key": "charge-neutralized Hill formula",
+      "holdout": {
+        "discovery_validation_formula_family_overlap_allowed": false,
+        "discovery_validation_identity_overlap_allowed": false,
+        "discovery_validation_source_family_overlap_allowed": false
+      },
+      "identity_key": "standardized_2d_connectivity",
+      "negative_evidence_quality_gates": [
+        "complete_mass_range",
+        "centroided",
+        "sufficient_signal",
+        "precursor_isolated",
+        "collision_energy_verified",
+        "instrument_domain_verified"
+      ],
+      "required_outputs": [
+        "target_present",
+        "target_total",
+        "target_frequency",
+        "background_present",
+        "background_total",
+        "background_frequency",
+        "conditional_likelihood_ratio_with_interval",
+        "identity_formula_source_split_manifest_sha256"
+      ],
+      "runtime_influence": false,
+      "special_requirements": [
+        "Separate PC224 formate and acetate adducts",
+        "All-ion-fragmentation records cannot establish precursor-linked absence"
+      ],
+      "statistics_plan_id": "STAT-LIPID-HEADGROUP-BY-DOMAIN",
+      "status": "planned_no_strict_counts",
+      "stratify_exactly_by": [
+        "vendor",
+        "instrument_model",
+        "analyzer",
+        "activation",
+        "collision_cell_region",
+        "collision_energy_raw",
+        "collision_energy_unit",
+        "collision_energy_mode",
+        "adduct",
+        "polarity",
+        "precursor_charge"
+      ],
+      "target_definition": "each d18:1, PC224-adduct, PE196, or PI241 structural class separately"
+    },
+    {
+      "background_definitions": [
+        "other nucleobases",
+        "modified nucleosides",
+        "nucleotides",
+        "O-glycosides sharing loss 132"
+      ],
+      "counting_unit": "independent_2d_identity",
+      "deduplication": {
+        "mirror_key": "base-peak-normalized peak-content SHA-256",
+        "source_family": "record repository lineage; mirrored exports do not create a second identity",
+        "technical_replicates": "collapse within identity x method x CE before identity counting"
+      },
+      "fixed_fragment_point_values_allowed": false,
+      "fixture": null,
+      "formula_family_key": "charge-neutralized Hill formula",
+      "holdout": {
+        "discovery_validation_formula_family_overlap_allowed": false,
+        "discovery_validation_identity_overlap_allowed": false,
+        "discovery_validation_source_family_overlap_allowed": false
+      },
+      "identity_key": "standardized_2d_connectivity",
+      "negative_evidence_quality_gates": [
+        "complete_mass_range",
+        "centroided",
+        "sufficient_signal",
+        "precursor_isolated",
+        "collision_energy_verified",
+        "instrument_domain_verified"
+      ],
+      "required_outputs": [
+        "target_present",
+        "target_total",
+        "target_frequency",
+        "background_present",
+        "background_total",
+        "background_frequency",
+        "conditional_likelihood_ratio_with_interval",
+        "identity_formula_source_split_manifest_sha256"
+      ],
+      "runtime_influence": false,
+      "special_requirements": [
+        "Separate loss 132, loss 116, and each protonated-base product",
+        "Do not treat pooled contrastive_v2 discovery counts as validation"
+      ],
+      "statistics_plan_id": "STAT-NUCLEOSIDE-POS-H",
+      "status": "planned_no_strict_counts",
+      "stratify_exactly_by": [
+        "vendor",
+        "instrument_model",
+        "analyzer",
+        "activation",
+        "collision_cell_region",
+        "collision_energy_raw",
+        "collision_energy_unit",
+        "collision_energy_mode",
+        "adduct",
+        "polarity",
+        "precursor_charge"
+      ],
+      "target_definition": "each base x ribose/deoxyribose class counted separately"
+    },
+    {
+      "background_definitions": [
+        "C-glycosides",
+        "other sugar types",
+        "non-glycosides matched by aglycone/formula where possible"
+      ],
+      "counting_unit": "independent_2d_identity",
+      "deduplication": {
+        "mirror_key": "base-peak-normalized peak-content SHA-256",
+        "source_family": "record repository lineage; mirrored exports do not create a second identity",
+        "technical_replicates": "collapse within identity x method x CE before identity counting"
+      },
+      "fixed_fragment_point_values_allowed": false,
+      "fixture": null,
+      "formula_family_key": "charge-neutralized Hill formula",
+      "holdout": {
+        "discovery_validation_formula_family_overlap_allowed": false,
+        "discovery_validation_identity_overlap_allowed": false,
+        "discovery_validation_source_family_overlap_allowed": false
+      },
+      "identity_key": "standardized_2d_connectivity",
+      "negative_evidence_quality_gates": [
+        "complete_mass_range",
+        "centroided",
+        "sufficient_signal",
+        "precursor_isolated",
+        "collision_energy_verified",
+        "instrument_domain_verified"
+      ],
+      "required_outputs": [
+        "target_present",
+        "target_total",
+        "target_frequency",
+        "background_present",
+        "background_total",
+        "background_frequency",
+        "conditional_likelihood_ratio_with_interval",
+        "identity_formula_source_split_manifest_sha256"
+      ],
+      "runtime_influence": false,
+      "special_requirements": [
+        "Loss 132 shares an evidence group with ribonucleosides",
+        "Do not infer that every residue loss occurs in both polarities"
+      ],
+      "statistics_plan_id": "STAT-OGLYCOSIDE-BY-DOMAIN",
+      "status": "planned_no_strict_counts",
+      "stratify_exactly_by": [
+        "vendor",
+        "instrument_model",
+        "analyzer",
+        "activation",
+        "collision_cell_region",
+        "collision_energy_raw",
+        "collision_energy_unit",
+        "collision_energy_mode",
+        "adduct",
+        "polarity",
+        "precursor_charge"
+      ],
+      "target_definition": "O-glycosides separated by sugar residue and polarity/adduct"
+    },
+    {
+      "background_definitions": [
+        "glycerophosphoethanolamines",
+        "glycerophosphoserines"
+      ],
+      "counting_unit": "independent_2d_identity",
+      "deduplication": {
+        "mirror_key": "base-peak-normalized peak-content SHA-256",
+        "source_family": "record repository lineage; mirrored exports do not create a second identity",
+        "technical_replicates": "collapse within identity x method x CE before identity counting"
+      },
+      "fixed_fragment_point_values_allowed": false,
+      "fixture": "tests/fixtures/feature_fragments/massbank_antwerp_phospholipids_v1.json",
+      "formula_family_key": "charge-neutralized Hill formula",
+      "holdout": {
+        "discovery_validation_formula_family_overlap_allowed": false,
+        "discovery_validation_identity_overlap_allowed": false,
+        "discovery_validation_source_family_overlap_allowed": false
+      },
+      "identity_key": "standardized_2d_connectivity",
+      "negative_evidence_quality_gates": [
+        "complete_mass_range",
+        "centroided",
+        "sufficient_signal",
+        "precursor_isolated",
+        "collision_energy_verified",
+        "instrument_domain_verified"
+      ],
+      "required_outputs": [
+        "target_present",
+        "target_total",
+        "target_frequency",
+        "background_present",
+        "background_total",
+        "background_frequency",
+        "conditional_likelihood_ratio_with_interval",
+        "identity_formula_source_split_manifest_sha256"
+      ],
+      "runtime_influence": false,
+      "special_requirements": [
+        "Do not claim specificity against sphingomyelin until SM is an explicit background"
+      ],
+      "statistics_plan_id": "STAT-PC184-AG6560-PUBLIC-PILOT",
+      "status": "complete_public_pilot_single_laboratory",
+      "stratify_exactly_by": [
+        "vendor",
+        "instrument_model",
+        "analyzer",
+        "activation",
+        "collision_cell_region",
+        "collision_energy_raw",
+        "collision_energy_unit",
+        "collision_energy_mode",
+        "adduct",
+        "polarity",
+        "precursor_charge"
+      ],
+      "target_definition": "phosphocholine-containing target identities represented as PC in the fixture"
+    },
+    {
+      "background_definitions": [
+        "glycerophosphocholines",
+        "glycerophosphoserines"
+      ],
+      "counting_unit": "independent_2d_identity",
+      "deduplication": {
+        "mirror_key": "base-peak-normalized peak-content SHA-256",
+        "source_family": "record repository lineage; mirrored exports do not create a second identity",
+        "technical_replicates": "collapse within identity x method x CE before identity counting"
+      },
+      "fixed_fragment_point_values_allowed": false,
+      "fixture": "tests/fixtures/feature_fragments/massbank_antwerp_phospholipids_v1.json",
+      "formula_family_key": "charge-neutralized Hill formula",
+      "holdout": {
+        "discovery_validation_formula_family_overlap_allowed": false,
+        "discovery_validation_identity_overlap_allowed": false,
+        "discovery_validation_source_family_overlap_allowed": false
+      },
+      "identity_key": "standardized_2d_connectivity",
+      "negative_evidence_quality_gates": [
+        "complete_mass_range",
+        "centroided",
+        "sufficient_signal",
+        "precursor_isolated",
+        "collision_energy_verified",
+        "instrument_domain_verified"
+      ],
+      "required_outputs": [
+        "target_present",
+        "target_total",
+        "target_frequency",
+        "background_present",
+        "background_total",
+        "background_frequency",
+        "conditional_likelihood_ratio_with_interval",
+        "identity_formula_source_split_manifest_sha256"
+      ],
+      "runtime_influence": false,
+      "special_requirements": [
+        "Report the 2/3 target frequency at 40 eV; absence is weak evidence"
+      ],
+      "statistics_plan_id": "STAT-PE141-AG6560-PUBLIC-PILOT",
+      "status": "complete_public_pilot_single_laboratory",
+      "stratify_exactly_by": [
+        "vendor",
+        "instrument_model",
+        "analyzer",
+        "activation",
+        "collision_cell_region",
+        "collision_energy_raw",
+        "collision_energy_unit",
+        "collision_energy_mode",
+        "adduct",
+        "polarity",
+        "precursor_charge"
+      ],
+      "target_definition": "protonated glycerophosphoethanolamine identities"
+    },
+    {
+      "background_definitions": [
+        "peptides lacking the residue",
+        "isomeric residue contexts",
+        "non-peptide compounds sharing the product m/z"
+      ],
+      "counting_unit": "independent_2d_identity",
+      "deduplication": {
+        "mirror_key": "base-peak-normalized peak-content SHA-256",
+        "source_family": "record repository lineage; mirrored exports do not create a second identity",
+        "technical_replicates": "collapse within identity x method x CE before identity counting"
+      },
+      "fixed_fragment_point_values_allowed": false,
+      "fixture": null,
+      "formula_family_key": "charge-neutralized Hill formula",
+      "holdout": {
+        "discovery_validation_formula_family_overlap_allowed": false,
+        "discovery_validation_identity_overlap_allowed": false,
+        "discovery_validation_source_family_overlap_allowed": false
+      },
+      "identity_key": "standardized_2d_connectivity",
+      "negative_evidence_quality_gates": [
+        "complete_mass_range",
+        "centroided",
+        "sufficient_signal",
+        "precursor_isolated",
+        "collision_energy_verified",
+        "instrument_domain_verified"
+      ],
+      "required_outputs": [
+        "target_present",
+        "target_total",
+        "target_frequency",
+        "background_present",
+        "background_total",
+        "background_frequency",
+        "conditional_likelihood_ratio_with_interval",
+        "identity_formula_source_split_manifest_sha256"
+      ],
+      "runtime_influence": false,
+      "special_requirements": [
+        "Do not reuse these statistics for free amino acids",
+        "Leu/Ile remain an unresolved isomer group",
+        "Arg/Lys require an additional primary source"
+      ],
+      "statistics_plan_id": "STAT-PEPTIDE-IMMONIUM-QTOF-CID",
+      "status": "literature_scope_repair_required",
+      "stratify_exactly_by": [
+        "vendor",
+        "instrument_model",
+        "analyzer",
+        "activation",
+        "collision_cell_region",
+        "collision_energy_raw",
+        "collision_energy_unit",
+        "collision_energy_mode",
+        "adduct",
+        "polarity",
+        "precursor_charge"
+      ],
+      "target_definition": "peptides containing each named residue under exact QTOF-CID conditions"
+    },
+    {
+      "background_definitions": [
+        "sulfonates",
+        "phosphates",
+        "sulfites",
+        "nonsulfated analogs"
+      ],
+      "counting_unit": "independent_2d_identity",
+      "deduplication": {
+        "mirror_key": "base-peak-normalized peak-content SHA-256",
+        "source_family": "record repository lineage; mirrored exports do not create a second identity",
+        "technical_replicates": "collapse within identity x method x CE before identity counting"
+      },
+      "fixed_fragment_point_values_allowed": false,
+      "fixture": null,
+      "formula_family_key": "charge-neutralized Hill formula",
+      "holdout": {
+        "discovery_validation_formula_family_overlap_allowed": false,
+        "discovery_validation_identity_overlap_allowed": false,
+        "discovery_validation_source_family_overlap_allowed": false
+      },
+      "identity_key": "standardized_2d_connectivity",
+      "negative_evidence_quality_gates": [
+        "complete_mass_range",
+        "centroided",
+        "sufficient_signal",
+        "precursor_isolated",
+        "collision_energy_verified",
+        "instrument_domain_verified"
+      ],
+      "required_outputs": [
+        "target_present",
+        "target_total",
+        "target_frequency",
+        "background_present",
+        "background_total",
+        "background_frequency",
+        "conditional_likelihood_ratio_with_interval",
+        "identity_formula_source_split_manifest_sha256"
+      ],
+      "runtime_influence": false,
+      "special_requirements": [
+        "SO3 loss and m/z 80/97 products share one headgroup evidence group"
+      ],
+      "statistics_plan_id": "STAT-SULFATE-SO3-NEG-H",
+      "status": "planned_no_strict_counts",
+      "stratify_exactly_by": [
+        "vendor",
+        "instrument_model",
+        "analyzer",
+        "activation",
+        "collision_cell_region",
+        "collision_energy_raw",
+        "collision_energy_unit",
+        "collision_energy_mode",
+        "adduct",
+        "polarity",
+        "precursor_charge"
+      ],
+      "target_definition": "deprotonated sulfate esters"
+    }
+  ],
+  "runtime_influence": false,
+  "schema_version": "1.0.0"
+}

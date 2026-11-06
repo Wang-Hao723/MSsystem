@@ -1,0 +1,67 @@
+{
+  "schema_version": "mssystem.v16.cross_occurrence_consensus.runtime_policy/1.0.0",
+  "module_id": "v16_cross_occurrence_consensus_ranker",
+  "algorithm_id": "mssystem-v16-cross-occurrence-consensus-top5-1.0.0",
+  "deployment_state": "controlled_opt_in",
+  "validation_state": "retrospective_qtof_gain_requires_independent_confirmation",
+  "activation": {
+    "explicit_completed_task_ids_required": true,
+    "minimum_task_count": 3,
+    "maximum_task_count": 100,
+    "same_lc_method_confirmation_required": true,
+    "automatic_filename_grouping_allowed": false,
+    "running_or_queued_tasks_allowed": false
+  },
+  "alignment": {
+    "fields": [
+      "polarity",
+      "measured_precursor_mz",
+      "retention_time_min",
+      "independent_task_id"
+    ],
+    "mz_tolerance_ppm": 15.0,
+    "rt_window_min": 0.15,
+    "linkage": "complete_link",
+    "maximum_one_event_per_task_per_cluster": true,
+    "candidate_identity_or_score_used_for_alignment": false
+  },
+  "candidate_scoring": {
+    "candidate_scope": "existing_non_vetoed_native_ranked_shortlist",
+    "maximum_native_candidates": 5,
+    "formula_lock": "current_ranking_lead_formula",
+    "views": [
+      "library_match",
+      "sensitive"
+    ],
+    "score": "median_of_equal_weight_modified_cosine_and_neutral_loss_cosine",
+    "direct_weight": 0.5,
+    "neutral_loss_weight": 0.5,
+    "technical_repeats": "median_within_condition_view_reference_content_profile",
+    "baseline_score_required": true,
+    "score_is_probability": false,
+    "expanded_candidates_can_replace_winner": false
+  },
+  "peer_rule": {
+    "target_event_excluded_from_its_own_consensus": true,
+    "minimum_peer_tasks": 2,
+    "minimum_winner_vote_fraction": 0.6666666666666666,
+    "peer_formula_must_equal_target_formula": true,
+    "target_direct_top1_must_equal_peer_winner": true,
+    "peer_winner_must_exist_in_target_native_shortlist": true,
+    "ties": "retain_current_ranking"
+  },
+  "claim_boundary": {
+    "same_formula_order_only": true,
+    "decision_scope_may_be_upgraded": false,
+    "authentic_standard_confirmation_created": false,
+    "candidate_score_changed": false,
+    "compound_count_may_increase": false,
+    "candidate_names_used_for_alignment_or_scoring": false,
+    "ground_truth_used_at_inference": false
+  },
+  "rollback": {
+    "original_artifact_backup_required": true,
+    "atomic_replacement_required": true,
+    "current_artifact_hash_must_match_activation_receipt": true
+  }
+}

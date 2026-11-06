@@ -1,0 +1,119 @@
+{
+  "schema_version": "3.0.0",
+  "reviewed_on": "2026-08-27",
+  "admissible_evidence_types": [
+    "peer-reviewed primary research article",
+    "official vendor technical documentation",
+    "official public spectral-repository documentation",
+    "frozen public experimental spectrum with accession and source hash"
+  ],
+  "inadmissible_evidence_types": [
+    "review or marketing summary used as the sole technical basis",
+    "database identifier used as a compound name",
+    "unverifiable spectrum screenshot",
+    "cross-vendor CE conversion inferred without a validated experiment"
+  ],
+  "sources": [
+    {
+      "source_id": "MASSBANK-RECORD-FORMAT",
+      "type": "official_repository_documentation",
+      "title": "MassBank Record Format",
+      "url": "https://github.com/MassBank/MassBank-web/blob/dev/Documentation/MassBankRecordFormat.md",
+      "supports": ["record fields", "accession-level traceability", "peak and acquisition metadata literals"]
+    },
+    {
+      "source_id": "MASSBANK-AN111301",
+      "type": "public_experimental_spectrum",
+      "title": "MSBNK-Antwerp_Univ-AN111301",
+      "url": "https://massbank.eu/MassBank-api/records/MSBNK-Antwerp_Univ-AN111301",
+      "supports": ["real MASS_RANGE_M/Z literal 55-1254", "Agilent 6560 QTOF record", "record-level CC BY literal"]
+    },
+    {
+      "source_id": "THERMO-QE-HF-MANUAL-1372090",
+      "type": "official_vendor_manual",
+      "title": "Q Exactive HF Software Manual",
+      "url": "https://documents.thermofisher.com/TFS-Assets/CMD/manuals/man-1372090-q-exactive-hf-soft-man1372090-en.pdf",
+      "supports": ["HCD", "NCE depends on precursor m/z and charge", "stepped NCE creates a composite spectrum"]
+    },
+    {
+      "source_id": "THERMO-EXPLORIS-HCD-SOFTWARE",
+      "type": "official_vendor_manual",
+      "title": "Orbitrap Exploris 120 Software Manual",
+      "url": "https://docs.thermofisher.com/r/Orbitrap-Exploris-120-Software-Manual/2080876427v2en-US",
+      "supports": ["Orbitrap Exploris HCD method fields", "fixed and stepped collision-energy settings"]
+    },
+    {
+      "source_id": "AGILENT-QTOF-CONCEPTS-G3335-90231",
+      "type": "official_vendor_manual",
+      "title": "Agilent 6200 Series TOF and 6500 Series Q-TOF LC/MS System Concepts Guide",
+      "url": "https://www.agilent.com/cs/library/usermanuals/public/G3335-90231_TOF_Q-TOF_Concepts.pdf",
+      "supports": ["quadrupole precursor selection", "collision-cell fragmentation", "m/z-dependent CE methods"]
+    },
+    {
+      "source_id": "SCIEX-SYSTEM-USER-GUIDE-4600",
+      "type": "official_vendor_manual",
+      "title": "SCIEX 4600 System User Guide",
+      "url": "https://sciex.com/content/dam/SCIEX/pdf/customer-docs/user-guide/4600-system-user-guide-en.pdf",
+      "supports": ["Q2 collision cell", "collision energy and collision-energy spread are distinct method fields"]
+    },
+    {
+      "source_id": "BRUKER-BBCID-APPLICATION-NOTE",
+      "type": "official_vendor_application_note",
+      "title": "Bruker bbCID acquisition example",
+      "url": "https://www.bruker.com/content/dam/bruker/int/en/resources/bdal/lsms/application-note/2021/1886244-lcms-180-covid-impact-II-ebook-rev-01.pdf",
+      "supports": ["bbCID is a composite data-independent acquisition condition", "bbCID is not equivalent to precursor-selected fixed CE"]
+    },
+    {
+      "source_id": "WATERS-QTOF-PREMIER-GUIDE",
+      "type": "official_vendor_manual",
+      "title": "Waters Q-Tof Premier Mass Spectrometer Operator's Guide",
+      "url": "https://help.waters.com/content/dam/waters/fr/support/usermanuals/2007/71500089402/71500089402rb.pdf",
+      "supports": ["quadrupole and collision-cell architecture", "Trap and Transfer regions must not be silently combined"]
+    },
+    {
+      "source_id": "WATERS-MSE-2007",
+      "type": "official_vendor_application_note",
+      "title": "The Simultaneous Acquisition of Exact Mass Data Using Alternating Collision Cell Energy: MSE",
+      "url": "https://www.waters.com/nextgen/sg/en/library/application-notes/2007/the-simultaneous-acquisition-of-exact-mass-data-using-alternating-collision-cell-energy-mse.html",
+      "supports": ["alternating low/high energy", "high-energy fragments are not precursor selected", "MSE cannot provide LR- without verified deconvolution"]
+    },
+    {
+      "source_id": "HOANG-2024-CROSS-PLATFORM",
+      "type": "peer_reviewed_primary",
+      "title": "Tandem Mass Spectrometry across Platforms",
+      "doi": "10.1021/acs.analchem.3c05576",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11007677/",
+      "supports": ["platform- and CE-dependent fragmentation", "cross-platform spectra cannot be assumed equivalent", "MS/MS alone does not establish exact identity or resolve isomers"]
+    },
+    {
+      "source_id": "SZABO-2021-QTOF-HCD",
+      "type": "peer_reviewed_primary",
+      "title": "Comparison of peptide fragmentation on Bruker Maxis II QTOF CID and Thermo Q Exactive Focus HCD",
+      "doi": "10.1002/jms.4693",
+      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/jms.4693",
+      "supports": ["matched fragmentation extent required instrument-specific settings in the reported experiment"]
+    },
+    {
+      "source_id": "DAVIDSON-2021-INSOURCE-BEAM",
+      "type": "peer_reviewed_primary",
+      "title": "Comparison of in-source CID and beam-type CID using a high-resolution QTOF",
+      "doi": "10.1002/jms.4679",
+      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/abs/10.1002/jms.4679",
+      "supports": ["in-source fragmentation and collision-cell beam-type CID are distinct conditions", "fragment abundance changes with applied energy"]
+    },
+    {
+      "source_id": "GNPS-LICENSE-DOCUMENTATION",
+      "type": "official_repository_documentation",
+      "title": "GNPS spectral library browsing and license documentation",
+      "url": "https://ccms-ucsd.github.io/GNPSDocumentation/browselibraries/",
+      "supports": ["GNPS-generated spectra and third-party library records require separate license handling"]
+    },
+    {
+      "source_id": "NIST-TANDEM-LIBRARY",
+      "type": "official_repository_documentation",
+      "title": "NIST Tandem Mass Spectral Library",
+      "url": "https://www.nist.gov/programs-projects/tandem-mass-spectral-library",
+      "supports": ["the distributor library is not an unrestricted public corpus and is excluded from this task"]
+    }
+  ]
+}

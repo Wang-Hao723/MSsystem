@@ -1,0 +1,132 @@
+{
+  "base_library_snapshot_id": "sqlite-fd59dc84d3263230d27aac92",
+  "base_normalized_records_sha256": "15e12823a52c664177092efc2e38322edb28dd12e0b482512530833f075b3629",
+  "base_record_alignment_sha256": "4cdef20ebb5e7871c0c22443f7df5ec8b79bb9e2fb38c76a9bc7bdda9d818b21",
+  "database_writes_allowed": false,
+  "enabled": true,
+  "post_acceptance_jiawei_target_only_source_rebind": {
+    "catalog_sha256": "a4b838b9e699a62d7446a129b134ed6755ce0e4f072761dccb80b38e04d974f4",
+    "compound_rows_changed": 0,
+    "consolidated_source_datasets": [
+      "JWSWJ_加味三乌胶_targeted_20261020",
+      "JWSWJ_加味三乌胶_全文增补_targeted_20261021_v10",
+      "JWSWJ_加味三乌胶_全文增补_targeted_20261021_v5",
+      "JWSWJ_加味三乌胶_全文增补_targeted_20261021_v6",
+      "JWSWJ_加味三乌胶_全文增补_targeted_20261021_v7",
+      "JWSWJ_加味三乌胶_全文增补_targeted_20261021_v8",
+      "JWSWJ_加味三乌胶_全文增补_targeted_20261021_v9",
+      "JWSWJ_加味三乌胶_原文补充_targeted_20261020_v4",
+      "JWSWJ_加味三乌胶_成分与MSMS_targeted_20261020_v3",
+      "JWSWJ_加味三乌胶_扩展文献_targeted_20261020_v2"
+    ],
+    "consolidated_target_rows": 4324,
+    "current_database_sha256": "bcb13cdced59033fdcd0b6d32d4681f8ccd34ec575458635ac6aa708021cbf66",
+    "dataset_source": "加味三乌胶靶向库",
+    "dataset_version": "consolidated-20261023",
+    "diagnostic_semantic_sha256": null,
+    "expected_compounds_product_ion_rules_changed": false,
+    "inserted_diagnostic_rows": 0,
+    "inserted_target_rows": 0,
+    "install_receipt": "/Users/zizi/Desktop/Mssystem/research/20261020_jiawei_sanwujiao_targeted/consolidated_20261023/MERGE_RECEIPT.json",
+    "install_receipt_sha256": "0cceb272d4bb498c9e5b5d0ca9c8f2571b816754338d3d6bcd3459f1fde7592f",
+    "mapping_rows_changed": 0,
+    "non_dataset_target_rows_changed": 0,
+    "normalized_record_content_changed": false,
+    "previous_database_sha256": "8f1c54224b89c785cf961f89ce527839b8d5f1f320970043d76d148d09bd6e7a",
+    "processing_identity_compatibility": {
+      "accepted_source_files_sha256": "177013bdfedaaac5eb96d885d54e6022cdf0b34e3f28786a3d1d71055fdea924",
+      "compatible": true,
+      "current_source_files_sha256": "531da7e241a3fc91f1883df24e2a5e71497a9e2542ed0ddca5836236ca62b934",
+      "excluded_additions": [
+        {
+          "path": "matching/masscube_peak_evidence.py",
+          "sha256": "c8a7e5350b6dc10b4883551fc75b877fe4a3c413e9951521e85cb3703f18ff90",
+          "size_bytes": 16040
+        },
+        {
+          "path": "matching/masscube_peak_workflow.py",
+          "sha256": "a4a774c7609ab9411ed132c1d8d304682b4f79b82d45eac8af9c3ae9397c6034",
+          "size_bytes": 10724
+        }
+      ],
+      "mode": "verified_isolated_non_normalizing_additions",
+      "normalization_or_scoring_inputs_changed": false,
+      "reconstructed_source_files_sha256": "177013bdfedaaac5eb96d885d54e6022cdf0b34e3f28786a3d1d71055fdea924",
+      "reviewed_non_normalizing_replacements": [
+        {
+          "after": {
+            "sha256": "85861050f03c36ad12dc328715c9f52e995a201d4ca804383b965025969cbfcd",
+            "size_bytes": 48216
+          },
+          "before": {
+            "sha256": "2fde1efe4440f2619053adb96dafd39168182dd11a4a568c99d2c95cffe9492d",
+            "size_bytes": 45670
+          },
+          "path": "matching/evidence_network.py"
+        },
+        {
+          "after": {
+            "sha256": "fdd7017c39396562dbd37773c1eaa94d748d1174cbbe813bdb2385e179d6579c",
+            "size_bytes": 33002
+          },
+          "before": {
+            "sha256": "ba1ed046c89b41bc0768024feabc713e7be0ae60f6d8440866699932abc4d0b4",
+            "size_bytes": 29814
+          },
+          "path": "matching/molecular_network.py"
+        }
+      ]
+    },
+    "rebound_at": "2026-10-23T05:24:43.110023+00:00",
+    "schema_version": "mssystem-jiawei-target-consolidation-rebind/1.0",
+    "score_inputs_changed": false,
+    "score_inputs_scope": "normalized_spectral_library_records",
+    "spectra_rows_changed": 0,
+    "verified_scope": {
+      "diagnostics_sha256": "2be83138b875d4320f5cd9c297408ea1bd35ba256d0227e7019dfb2f0eb72c01",
+      "file_stat": {
+        "mtime_ns": 1792733029788028432,
+        "size_bytes": 5424619520
+      },
+      "non_dataset_target_rows": 38107,
+      "non_dataset_targets_sha256": "ed7e3ac0c7158738bea08946deea83b8d1bbf2440dfdce0eebc884f2aefef9e2",
+      "schema_sha256": "b001cebd82143b2ccb37e34c29ce889fd8822612b6746e00d6013d7904a7f1b7",
+      "schema_version": 63,
+      "table_row_counts": {
+        "Compounds": 1436463,
+        "DiagnosticIons": 64195,
+        "Mapping": 4674363,
+        "Spectra": 4674363,
+        "TargetCompounds": 42431
+      }
+    }
+  },
+  "post_acceptance_target_only_source_rebind": {
+    "compound_rows_changed": 0,
+    "current_database_sha256": "f59e8adf343057acff937bc24f480e26bf51b23c3d150fe3397d03012ecd9514",
+    "dataset_source": "QFT_青风藤_NEG_experimental_reference_20260920",
+    "inserted_diagnostic_rows": 0,
+    "inserted_target_rows": 8,
+    "mapping_rows_changed": 0,
+    "normalized_record_content_changed": false,
+    "panel_receipt": "/Users/zizi/Desktop/Mssystem/mssystem_V16/research/20260920_qft_negative_panel/INSTALL_RECEIPT.json",
+    "panel_receipt_sha256": "b55cbba887c8983004b337a051850009778c7d9dc7f3a0b96bee1e92de0171cb",
+    "previous_database_sha256": "c44332bea84846a0dd7e7f9108af2dd5eaf180784395e246eb76a297b9a1a8d3",
+    "rebound_at": "2026-09-20T02:56:40.826182+00:00",
+    "schema_version": "mssystem-target-only-source-rebind/1.0",
+    "score_inputs_changed": false,
+    "spectra_rows_changed": 0
+  },
+  "registered_reference_count": 6623,
+  "registry_path": "config/library_compound_mass_repairs.json",
+  "registry_semantic_sha256": "ca66ccea312cfcda9c1101c6866deaeac6016ce5025b1387fe59d1601ee62cc4",
+  "registry_sha256": "19c3530123bbb6a31790a35fa93cdf557b80b2eb225c1ec09c2e91f745392702",
+  "schema_version": "mssystem.source-compound-mass-runtime/1.0.0",
+  "semantic_sha256": "880449fee002f918bc4257fa291dbbf33b709acee959169638007900afa8d5e5",
+  "source_database_path": "/Users/zizi/Desktop/桌面分类/共享与备份/Mssystem_shared_data/local_library.db",
+  "source_database_sha256": "bcb13cdced59033fdcd0b6d32d4681f8ccd34ec575458635ac6aa708021cbf66",
+  "source_verification_timeout_seconds": 120.0,
+  "sql_bindings_path": "config/sql_compound_mass_bindings.jsonl",
+  "sql_bindings_sha256": "d47898e4be504d892735bf4ad2207d11aab41452db6ac10f9aaa99d688805d03",
+  "sql_bindings_size_bytes": 7482898
+}

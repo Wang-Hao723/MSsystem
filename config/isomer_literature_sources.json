@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "curation_date": "2026-07-29",
+  "policy": {
+    "bibliographic_evidence_changes_scores": false,
+    "bibliographic_evidence_is_reference_spectrum": false,
+    "exact_identity_requires": "An authenticated exact-identity reference measured under a comparable method, or independently validated orthogonal evidence.",
+    "notes": "Titles, identifiers, applicability and concise evidence-scope summaries are curated. A literature mention is never converted into measured fragment intensities."
+  },
+  "sources": [
+    {
+      "source_id": "reporting_best_practices_2021",
+      "pmid": "34239102",
+      "pmcid": "PMC8592384",
+      "doi": "10.1038/s41592-021-01197-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34239102/",
+      "title": "Mass spectrometry-based metabolomics: a guide for annotation, quantification and best reporting practices",
+      "applies_to": [
+        "all_isomer_groups"
+      ],
+      "evidence_scope": "identification_reporting_standard",
+      "finding": "High-resolution mass and MS/MS annotation can remain structurally ambiguous; authenticated standards and orthogonal evidence are needed for the strongest identification claims.",
+      "usable_for": [
+        "confidence_scope",
+        "reporting_requirement"
+      ],
+      "not_usable_for": [
+        "fragment_score",
+        "candidate_ranking",
+        "exact_identity_promotion"
+      ]
+    },
+    {
+      "source_id": "lcms_identification_tools_2018",
+      "pmid": "29748461",
+      "pmcid": "PMC6027441",
+      "doi": "10.3390/metabo8020031",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29748461/",
+      "title": "Software Tools and Approaches for Compound Identification of LC-MS/MS Data in Metabolomics",
+      "applies_to": [
+        "all_isomer_groups"
+      ],
+      "evidence_scope": "orthogonal_identification_framework",
+      "finding": "Combining independent molecular properties is more informative than treating one spectral-library score as exact structural proof.",
+      "usable_for": [
+        "resolution_requirement",
+        "method_selection"
+      ],
+      "not_usable_for": [
+        "fragment_score",
+        "candidate_ranking",
+        "exact_identity_promotion"
+      ]
+    },
+    {
+      "source_id": "product_ion_mobility_positional_isomers_2011",
+      "pmid": "22095497",
+      "doi": "10.1002/rcm.5258",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22095497/",
+      "title": "Product ion mobility as a promising tool for assignment of positional isomers of drug metabolites",
+      "applies_to": [
+        "constitutional_or_positional_isomer_group",
+        "mixed_isomer_group"
+      ],
+      "evidence_scope": "orthogonal_positional_isomer_method",
+      "finding": "Product-ion mobility and collision-cross-section evidence can add positional information when conventional product-ion spectra are insufficient.",
+      "usable_for": [
+        "ion_mobility_method_lead",
+        "resolution_requirement"
+      ],
+      "not_usable_for": [
+        "fragment_score_without_source_spectra",
+        "candidate_ranking",
+        "exact_identity_promotion"
+      ]
+    },
+    {
+      "source_id": "ion_mobility_untargeted_metabolomics_2023",
+      "pmid": "37002244",
+      "pmcid": "PMC10066191",
+      "doi": "10.1038/s41467-023-37539-0",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37002244/",
+      "title": "A mass spectrum-oriented computational method for ion mobility-resolved untargeted metabolomics",
+      "applies_to": [
+        "constitutional_or_positional_isomer_group",
+        "mixed_isomer_group",
+        "same_connectivity_variant_group"
+      ],
+      "evidence_scope": "ion_mobility_resolved_metabolomics",
+      "finding": "Ion mobility adds a gas-phase separation dimension that can reduce unresolved isomer overlap, subject to method and reference comparability.",
+      "usable_for": [
+        "ion_mobility_method_lead",
+        "resolution_requirement"
+      ],
+      "not_usable_for": [
+        "fragment_score",
+        "candidate_ranking",
+        "exact_identity_promotion_without_reference"
+      ]
+    },
+    {
+      "source_id": "ephedrine_pseudoephedrine_chiral_lchrms_2019",
+      "pmid": "31250489",
+      "doi": "10.1002/chir.23104",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31250489/",
+      "title": "Separation of ephedrine and pseudoephedrine enantiomers using a polysaccharide-based chiral column: A normal phase liquid chromatography-high-resolution mass spectrometry approach",
+      "pair_names": [
+        "ephedrine",
+        "pseudoephedrine"
+      ],
+      "applies_to": [
+        "same_connectivity_variant_group",
+        "mixed_isomer_group"
+      ],
+      "evidence_scope": "pair_specific_chiral_separation_method",
+      "finding": "A polysaccharide-based chiral stationary phase in normal-phase LC-HRMS separated ephedrine and pseudoephedrine stereoisomers; mobile-phase and modifier choice materially affected separation.",
+      "reported_conditions": {
+        "stationary_phase": "Lux i-Amylose-1",
+        "separation_mode": "normal-phase chiral LC-HRMS",
+        "stereochemistry_capable": true
+      },
+      "usable_for": [
+        "pair_specific_method_selection"
+      ],
+      "not_usable_for": [
+        "transferable_retention_time",
+        "fragment_score",
+        "candidate_ranking",
+        "exact_identity_promotion_without_same_method_standard"
+      ]
+    },
+    {
+      "source_id": "albiflorin_paeoniflorin_buffered_lcms_2026",
+      "pmid": "41549502",
+      "pmcid": "PMC12813524",
+      "doi": "10.1002/bmc.70353",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41549502/",
+      "title": "A Buffered LC-MS Method for Resolving and Quantifying Albiflorin and Paeoniflorin",
+      "pair_names": [
+        "albiflorin",
+        "paeoniflorin"
+      ],
+      "applies_to": [
+        "constitutional_or_positional_isomer_group",
+        "mixed_isomer_group"
+      ],
+      "evidence_scope": "pair_specific_chromatographic_separation_method",
+      "finding": "The isomers showed similar mass-spectral behavior and method-dependent chromatographic artifacts; a buffered phenyl-hexyl LC method was developed to resolve and quantify them.",
+      "reported_conditions": {
+        "stationary_phase": "phenyl-hexyl",
+        "mobile_phase": "10 mM ammonium acetate adjusted with acetic acid",
+        "reported_pH": 4.4,
+        "warning": "Formic-acid conditions can produce an additional albiflorin-related chromatographic peak with similar m/z and fragmentation."
+      },
+      "usable_for": [
+        "pair_specific_method_selection",
+        "chromatographic_artifact_warning"
+      ],
+      "not_usable_for": [
+        "transferable_retention_time",
+        "fragment_score_without_source_spectra",
+        "candidate_ranking",
+        "exact_identity_promotion_without_same_method_standard"
+      ]
+    }
+  ]
+}

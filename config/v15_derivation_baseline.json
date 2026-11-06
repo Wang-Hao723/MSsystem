@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "created_at_utc": "2026-08-26T12:13:52Z",
+  "version": "V15",
+  "derivation": {
+    "source_version": "V14",
+    "source_project_root": "/Users/zizi/Desktop/Mssystem/mssystem_V14",
+    "target_project_root": "/Users/zizi/Desktop/Mssystem/mssystem_V15",
+    "source_git_branch": "v14",
+    "source_git_commit": "c3850f491069740702d7fc524de36a4a6123307f",
+    "target_git_branch": "v15",
+    "source_worktree_was_dirty": true,
+    "source_git_status_entry_count": 161,
+    "source_git_status_sha256": "4e4065fdc614f1a4136f4adb493abc6bae71fc4b99dadf77b576b3280122f1af",
+    "source_runtime_snapshot_id": "v14-12cc311eced2b93c4c0f25fa",
+    "copy_method": "apfs_clonefile_copy_on_write",
+    "source_file_hash_checks": {
+      "MEMORY.md": "9fb136bd97f3935bb881daa42b3f6df0d66c5e92faf6d88130a425ce6993a3ff",
+      "CLAUDE.md": "2153e7fe490ebc95d244d9a380e511dc5fc78f79839173da4383d1ff549b9d1c",
+      "matching/flagship_ranker.py": "3a01d9302c926a412d3bd2edbc0bdbafcd33358a868dacb2a60a57b2dad10148"
+    }
+  },
+  "storage_contract": {
+    "shared_library_path": "/Users/zizi/Desktop/Mssystem_shared_data/local_library.db",
+    "shared_library_default_access": "read_only",
+    "v14_source_mutation_allowed": false,
+    "v15_output_is_independent": true,
+    "v15_logs_are_independent": true
+  },
+  "purpose": "Bind V15 to the exact user-visible V14 working tree copied before condition-aware multi-library and collision-energy optimization. The V14 directory remains the frozen paired comparator and rollback source."
+}

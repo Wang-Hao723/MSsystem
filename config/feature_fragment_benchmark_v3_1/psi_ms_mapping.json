@@ -1,0 +1,61 @@
+{
+  "schema_version": "3.1.0",
+  "source": {
+    "title": "Proteomics Standards Initiative Mass Spectrometry controlled vocabulary",
+    "official_url": "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.obo",
+    "repository_url": "https://github.com/HUPO-PSI/psi-ms-CV",
+    "reviewed_on": "2026-08-27"
+  },
+  "mzml": {
+    "value_origin": "mzml_cv_param",
+    "isolation_window": {
+      "target_mz": "MS:1000827",
+      "lower_offset": "MS:1000828",
+      "upper_offset": "MS:1000829"
+    },
+    "activation": {
+      "MS:1000133": {
+        "canonical_name": "collision-induced dissociation",
+        "activation_family": "CID",
+        "specificity": "general"
+      },
+      "MS:1000422": {
+        "canonical_name": "beam-type collision-induced dissociation",
+        "activation_family": "beam_type_CID",
+        "synonym": "HCD"
+      },
+      "MS:1002481": {
+        "canonical_name": "higher energy beam-type collision-induced dissociation",
+        "activation_family": "higher_energy_beam_type_CID"
+      },
+      "MS:1002472": {
+        "canonical_name": "trap-type collision-induced dissociation",
+        "activation_family": "trap_type_CID"
+      }
+    },
+    "terms_not_activation": {
+      "MS:1002482": {
+        "canonical_name": "statistical threshold",
+        "reason": "this term must never be mapped to an activation method"
+      }
+    },
+    "collision_energy": {
+      "absolute": "MS:1000045",
+      "normalized": "MS:1000138",
+      "ramp_start_ev": "MS:1002013",
+      "ramp_end_ev": "MS:1002014",
+      "ramp_start_percent": "MS:1002218",
+      "ramp_end_percent": "MS:1002219"
+    },
+    "scan_window": {
+      "lower_limit": "MS:1000501",
+      "upper_limit": "MS:1000500"
+    }
+  },
+  "mzxml": {
+    "value_origin": "mzxml_attribute",
+    "rule": "read only literal mzXML attributes; do not label them as PSI-MS cvParams and do not infer a collision-energy unit"
+  },
+  "missing_value_action": "retain null with the source-file SHA-256 and block the affected quantitative evidence gate",
+  "unit_conversion_allowed": false
+}

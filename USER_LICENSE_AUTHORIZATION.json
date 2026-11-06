@@ -1,0 +1,14 @@
+{
+  "schema_version": "mssystem-user-license-authorization/1.0",
+  "authorization_date": "2026-11-02",
+  "source": "Direct human reply in this conversation",
+  "human_reply_verbatim": "确认有权，按MIT和CC BY 4.0准备投稿补充文件",
+  "confirmed_scope": {
+    "self_developed_source": "MIT preparation for all self-developed source in the current 855-file reviewed archive",
+    "author_owned_data": "CC BY 4.0 preparation for the manuscript data supplement",
+    "third_party_source_and_data": "retain original licenses and terms"
+  },
+  "relationship_to_2026_10_15_authorization": "Extends the earlier exact 396-file MIT preparation scope to modified and new self-developed source in the current reviewed archive.",
+  "public_upload_performed_by_this_step": false,
+  "doi_created_by_this_step": false
+}

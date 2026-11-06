@@ -1,0 +1,46 @@
+{
+  "schema_version": "3.0.0",
+  "policy_id": "v15-feature-fragment-public-spectrum-license-policy-v3",
+  "record_literal_license_is_preserved": true,
+  "license_version_is_not_inferred": true,
+  "per_spectrum_attribution_required": true,
+  "label_decisions": {
+    "CC0": {
+      "tier": "primary",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "commercial_use_allowed": true,
+      "share_alike_review_complete": true,
+      "reason": "Public-domain dedication is eligible for the preregistered primary analysis."
+    },
+    "CC BY": {
+      "tier": "primary",
+      "license_url": "https://creativecommons.org/licenses/by/",
+      "commercial_use_allowed": true,
+      "share_alike_review_complete": true,
+      "reason": "Record-level attribution is retained; the record's unversioned literal is not relabelled as CC BY 4.0."
+    },
+    "CC BY-SA": {
+      "tier": "quarantine",
+      "license_url": "https://creativecommons.org/licenses/by-sa/",
+      "commercial_use_allowed": true,
+      "share_alike_review_complete": false,
+      "reason": "Share-alike compatibility with a future derived runtime catalog requires separate legal review."
+    },
+    "CC BY-NC": {
+      "tier": "sensitivity",
+      "license_url": "https://creativecommons.org/licenses/by-nc/",
+      "commercial_use_allowed": false,
+      "share_alike_review_complete": true,
+      "reason": "Noncommercial records may be counted only in a separately labelled research sensitivity analysis."
+    },
+    "CC BY-NC-SA": {
+      "tier": "sensitivity",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/",
+      "commercial_use_allowed": false,
+      "share_alike_review_complete": false,
+      "reason": "Noncommercial and share-alike records remain outside primary analysis and runtime export."
+    }
+  },
+  "missing_or_ambiguous_license_action": "exclude",
+  "runtime_export_from_any_tier": false
+}

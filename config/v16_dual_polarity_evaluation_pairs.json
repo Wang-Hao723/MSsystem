@@ -1,0 +1,216 @@
+{
+  "schema_version": "mssystem.v16.dual-polarity-evaluation-pairs/1.0.0",
+  "manifest_id": "v16-f001-f008-mix33-explicit-pairs-20260831",
+  "selection_method": "explicit_study_design_manifest_not_filename_inference",
+  "task_status_required": "completed",
+  "positive_task_ion_mode_required": "POS",
+  "negative_task_ion_mode_required": "NEG",
+  "candidate_ground_truth_included": false,
+  "expected_pair_count": 25,
+  "cohort_pair_counts": {
+    "F001_F008": 23,
+    "MIX_33": 2
+  },
+  "pairs": [
+    {
+      "pair_label": "F001_replicate_1_POS_NEG",
+      "positive_task_id": "c5e1b939eb5a",
+      "negative_task_id": "4bdd291eda7b",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F001_replicate_2_POS_NEG",
+      "positive_task_id": "4acc981f7b0e",
+      "negative_task_id": "9305a02e24c6",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F001_replicate_3_POS_NEG",
+      "positive_task_id": "ade106cc9a74",
+      "negative_task_id": "9810577e800b",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F002_replicate_1_POS_NEG",
+      "positive_task_id": "43c927c80aa6",
+      "negative_task_id": "0f799e3aa94e",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F002_replicate_2_POS_NEG",
+      "positive_task_id": "464a49946f22",
+      "negative_task_id": "f8e539746744",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F002_replicate_3_POS_NEG",
+      "positive_task_id": "5108373b5f64",
+      "negative_task_id": "8573b9ac79d1",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F003_replicate_1_POS_NEG",
+      "positive_task_id": "9e5b1cdc3bf5",
+      "negative_task_id": "702ab2a35faa",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F003_replicate_2_POS_NEG",
+      "positive_task_id": "0013e0b02f5b",
+      "negative_task_id": "7ad306cb1311",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F003_replicate_3_POS_NEG",
+      "positive_task_id": "12df693e554a",
+      "negative_task_id": "55412720c190",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F004_replicate_1_POS_NEG",
+      "positive_task_id": "6b225cc5e3d9",
+      "negative_task_id": "6b2d440b9363",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F004_replicate_2_POS_NEG",
+      "positive_task_id": "55e4b275779c",
+      "negative_task_id": "87f10abca698",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F004_replicate_3_POS_NEG",
+      "positive_task_id": "72f03dae27be",
+      "negative_task_id": "77d248e6b094",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F005_replicate_1_POS_NEG",
+      "positive_task_id": "a4c649288d95",
+      "negative_task_id": "ffb8d0271c93",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F005_replicate_2_POS_NEG",
+      "positive_task_id": "47a14bf56475",
+      "negative_task_id": "f64a735be1f6",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F005_replicate_3_POS_NEG",
+      "positive_task_id": "9fd2ed4184cc",
+      "negative_task_id": "890f0a541998",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F006_replicate_1_POS_NEG",
+      "positive_task_id": "3873259acd5f",
+      "negative_task_id": "373546c131c4",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F006_replicate_3_POS_NEG",
+      "positive_task_id": "cdf120e88e24",
+      "negative_task_id": "79fabfed7634",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F007_replicate_1_POS_NEG",
+      "positive_task_id": "203e426750b0",
+      "negative_task_id": "550305f42173",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F007_replicate_2_POS_NEG",
+      "positive_task_id": "4cc7b7861473",
+      "negative_task_id": "6ed1c7e608e0",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F007_replicate_3_POS_NEG",
+      "positive_task_id": "ab45d501a8a9",
+      "negative_task_id": "fdd5e34c7726",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F008_replicate_1_POS_NEG",
+      "positive_task_id": "22c62a0b9ea8",
+      "negative_task_id": "556e00e48f52",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F008_replicate_2_POS_NEG",
+      "positive_task_id": "9cbc1eb931a2",
+      "negative_task_id": "3acd92a38c56",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "F008_replicate_3_POS_NEG",
+      "positive_task_id": "278f067846cc",
+      "negative_task_id": "3a7c081c8566",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "MIX_33_replicate_1_POS_NEG",
+      "positive_task_id": "d5f1e22a6285",
+      "negative_task_id": "6ff25e8cffcb",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    },
+    {
+      "pair_label": "MIX_33_replicate_2_POS_NEG",
+      "positive_task_id": "9cf967274994",
+      "negative_task_id": "0107e880d3af",
+      "same_sample_confirmed": true,
+      "same_lc_method_confirmed": true,
+      "confirmation_source": "explicit_study_design_manifest_not_filename_inference"
+    }
+  ]
+}

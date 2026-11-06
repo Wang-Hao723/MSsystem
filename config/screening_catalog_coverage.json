@@ -1,0 +1,319 @@
+{
+  "audit_generated_at": "2026-10-21T10:14:01.297872+00:00",
+  "catalog_full_key_coverage_fraction": 1.0,
+  "catalog_full_keys_with_searchable_spectra": 20,
+  "catalog_id": "mssystem-screening-cn-phase1-2026-08-03",
+  "catalog_sha256": "83227efb040f388665f0b7588196e65cd55e39ca5422f93725d46829609fc0c5",
+  "database_fingerprint": {
+    "mtime_ns": 1792733029788028432,
+    "path": "/Users/zizi/Desktop/桌面分类/共享与备份/Mssystem_shared_data/local_library.db",
+    "size_bytes": 5424619520
+  },
+  "database_path": "/Users/zizi/Desktop/桌面分类/共享与备份/Mssystem_shared_data/local_library.db",
+  "database_snapshot_binding": "target_dataset_consolidation_only_rebound",
+  "database_snapshot_id": "sqlite-fd59dc84d3263230d27aac92",
+  "domains": {
+    "pesticide_residue": 18
+  },
+  "entries": 18,
+  "identities": [
+    {
+      "canonical_name": "Carbaryl",
+      "compound_records": 1,
+      "inchikey": "CVXBEEMKQHEXEN-UHFFFAOYSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 115,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 149,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Carbofuran",
+      "compound_records": 1,
+      "inchikey": "DUEPRVBVGDRKAG-UHFFFAOYSA-N",
+      "ion_modes": [
+        "NEG"
+      ],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 132,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 143,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Diazinon",
+      "compound_records": 1,
+      "inchikey": "FHIVAFMUCKRCQO-UHFFFAOYSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 167,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 176,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Glufosinate",
+      "compound_records": 1,
+      "inchikey": "IAJOBQBIJHVGMQ-UHFFFAOYSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 19,
+      "source_tiers": [
+        "experimental",
+        "merged"
+      ],
+      "spectrum_count": 19,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Malathion",
+      "compound_records": 1,
+      "inchikey": "JXSJBGJIGXNWCI-UHFFFAOYSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 80,
+      "source_tiers": [
+        "experimental"
+      ],
+      "spectrum_count": 80,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Dimethoate",
+      "compound_records": 1,
+      "inchikey": "MCWXGJITAZMZEV-UHFFFAOYSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 204,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 208,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Atrazine",
+      "compound_records": 1,
+      "inchikey": "MXWJVTOOROXGIU-UHFFFAOYSA-N",
+      "ion_modes": [
+        "NEG"
+      ],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 255,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 269,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Thiamethoxam",
+      "compound_records": 1,
+      "inchikey": "NWWZPOKUUAIXIW-DHZHZOJOSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 154,
+      "source_tiers": [
+        "experimental"
+      ],
+      "spectrum_count": 154,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Thiamethoxam",
+      "compound_records": 2,
+      "inchikey": "NWWZPOKUUAIXIW-UHFFFAOYSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "connectivity_alias_full_key",
+      "searchable_spectrum_count": 112,
+      "source_tiers": [
+        "experimental"
+      ],
+      "spectrum_count": 112,
+      "structure_verified_records": 2
+    },
+    {
+      "canonical_name": "Tebuconazole",
+      "compound_records": 2,
+      "inchikey": "PXMNMQRDXWABCY-UHFFFAOYSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 235,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 245,
+      "structure_verified_records": 2
+    },
+    {
+      "canonical_name": "Chlorpyrifos",
+      "compound_records": 1,
+      "inchikey": "SBPBAQFWLVIOKP-UHFFFAOYSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 167,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 168,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Propiconazole",
+      "compound_records": 2,
+      "inchikey": "STJLVHWMYQXCPB-UHFFFAOYSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 267,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 277,
+      "structure_verified_records": 2
+    },
+    {
+      "canonical_name": "Carbendazim",
+      "compound_records": 1,
+      "inchikey": "TWFZGCMQGLPBSX-UHFFFAOYSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 134,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 174,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Acetamiprid",
+      "compound_records": 1,
+      "inchikey": "WCXDHFDTOYPNIE-RIYZIHGNSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "connectivity_alias_full_key",
+      "searchable_spectrum_count": 39,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 53,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Acetamiprid",
+      "compound_records": 1,
+      "inchikey": "WCXDHFDTOYPNIE-UHFFFAOYSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 113,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 130,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Azoxystrobin",
+      "compound_records": 1,
+      "inchikey": "WFDXOXNFNRHQEC-GHRIWEEISA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 153,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 166,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Glyphosate",
+      "compound_records": 1,
+      "inchikey": "XDDAORKBJWWYJS-UHFFFAOYSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 3,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 6,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Imidacloprid",
+      "compound_records": 1,
+      "inchikey": "YWTYJOPNNQFBPC-UHFFFAOYSA-N",
+      "ion_modes": [
+        "NEG"
+      ],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 321,
+      "source_tiers": [
+        "experimental",
+        "merged",
+        "quarantined"
+      ],
+      "spectrum_count": 343,
+      "structure_verified_records": 1
+    },
+    {
+      "canonical_name": "Fipronil",
+      "compound_records": 2,
+      "inchikey": "ZOCSXAVNDGMNBV-UHFFFAOYSA-N",
+      "ion_modes": [
+        "NEG"
+      ],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 308,
+      "source_tiers": [
+        "experimental",
+        "merged",
+        "quarantined"
+      ],
+      "spectrum_count": 330,
+      "structure_verified_records": 2
+    },
+    {
+      "canonical_name": "Metalaxyl",
+      "compound_records": 2,
+      "inchikey": "ZQEIXNIJLIKNTD-UHFFFAOYSA-N",
+      "ion_modes": [],
+      "screening_identity_scope": "full_inchikey",
+      "searchable_spectrum_count": 220,
+      "source_tiers": [
+        "experimental",
+        "quarantined"
+      ],
+      "spectrum_count": 224,
+      "structure_verified_records": 2
+    }
+  ],
+  "indexed_full_inchikeys": 20,
+  "regulatory_claims_encoded": false,
+  "released_at": "2026-08-03",
+  "status": "valid",
+  "target_consolidation_rebind": {
+    "Spectra_Compounds_Mapping_and_DiagnosticIons_unchanged": true,
+    "generated_at": "2026-10-23T05:25:58.323771+00:00",
+    "receipt": "/Users/zizi/Desktop/Mssystem/research/20261020_jiawei_sanwujiao_targeted/consolidated_20261023/MERGE_RECEIPT.json",
+    "source_datasets": 10,
+    "source_rows": 4324
+  }
+}

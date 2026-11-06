@@ -1,0 +1,177 @@
+{
+  "schema_version": "3.0.0",
+  "domain_definition": "vendor + exact model + analyzer + activation + collision-cell region + native CE unit + CE mode/program + polarity + adduct + charge",
+  "cross_vendor_primary_pooling": false,
+  "cross_model_primary_pooling": false,
+  "cross_ce_unit_conversion": false,
+  "fixed_and_composite_pooling": false,
+  "unreported_collision_cell_is_complete_metadata": false,
+  "instrument_domains": [
+    {
+      "domain_id": "agilent_6530_qtof_cid_contributor_text_v3",
+      "family_id": "agilent_6500_qtof",
+      "vendor": "Agilent Technologies",
+      "models": ["Agilent 6530 QTOF"],
+      "analyzer": "QTOF",
+      "activation": ["CID"],
+      "activation_location": "collision_cell",
+      "collision_cell_regions": ["instrument_specific_collision_cell_not_reported_in_record"],
+      "ce_units": ["eV"],
+      "ce_modes": ["fixed", "ramp", "dynamic"]
+    },
+    {
+      "domain_id": "agilent_6545_qtof_cid_contributor_text_v3",
+      "family_id": "agilent_6500_qtof",
+      "vendor": "Agilent Technologies",
+      "models": ["Agilent QTof 6545, Agilent Technologies [MS:1000490]"],
+      "analyzer": "QTOF",
+      "activation": ["CID"],
+      "activation_location": "collision_cell",
+      "collision_cell_regions": ["instrument_specific_collision_cell_not_reported_in_record"],
+      "ce_units": ["eV"],
+      "ce_modes": ["fixed", "ramp", "dynamic"]
+    },
+    {
+      "domain_id": "agilent_6560_qtof_cid_contributor_text_v3",
+      "family_id": "agilent_6500_qtof",
+      "vendor": "Agilent Technologies",
+      "models": ["Agilent 6560 QTOF"],
+      "analyzer": "QTOF",
+      "activation": ["CID"],
+      "activation_location": "collision_cell",
+      "collision_cell_regions": ["instrument_specific_collision_cell_not_reported_in_record"],
+      "ce_units": ["eV"],
+      "ce_modes": ["fixed", "ramp", "dynamic"]
+    },
+    {
+      "domain_id": "bruker_maxis_impact_qtof_cid_contributor_text_v3",
+      "family_id": "bruker_maxis_impact_qtof",
+      "vendor": "Bruker Daltonics",
+      "models": ["Bruker maXis Impact"],
+      "analyzer": "QTOF",
+      "activation": ["CID"],
+      "activation_location": "collision_cell",
+      "collision_cell_regions": ["instrument_specific_collision_cell_not_reported_in_record"],
+      "ce_units": ["eV"],
+      "ce_modes": ["fixed", "ramp", "bbCID"]
+    },
+    {
+      "domain_id": "bruker_maxis_qtof_cid_contributor_text_v3",
+      "family_id": "bruker_maxis_qtof",
+      "vendor": "Bruker Daltonics",
+      "models": ["maXis (Bruker Daltonics)"],
+      "analyzer": "QTOF",
+      "activation": ["CID"],
+      "activation_location": "collision_cell",
+      "collision_cell_regions": ["instrument_specific_collision_cell_not_reported_in_record"],
+      "ce_units": ["eV"],
+      "ce_modes": ["fixed", "ramp", "bbCID"]
+    },
+    {
+      "domain_id": "sciex_tripletof_5600plus_qtof_cid_contributor_text_v3",
+      "family_id": "sciex_tripletof",
+      "vendor": "SCIEX",
+      "models": ["TripleTOF 5600+SCIEX"],
+      "analyzer": "QTOF",
+      "activation": ["CID"],
+      "activation_location": "Q2_collision_cell",
+      "collision_cell_regions": ["Q2_collision_cell_not_reported_in_record"],
+      "ce_units": ["eV", "V"],
+      "ce_modes": ["fixed", "CES", "rolling", "dynamic"]
+    },
+    {
+      "domain_id": "sciex_x500r_qtof_cid_contributor_text_v3",
+      "family_id": "sciex_x500r_qtof",
+      "vendor": "SCIEX",
+      "models": [
+        "X500R QTOF (AB Sciex LLC, USA)",
+        "X500R QTOF (AB Sciex LLC, MA, USA)",
+        "X500R QTOF (AB Sciex Pte. Ltd, USA)",
+        "X500R QTOF ( AB Sciex LLC, USA)"
+      ],
+      "analyzer": "QTOF",
+      "activation": ["CID"],
+      "activation_location": "Q2_collision_cell",
+      "collision_cell_regions": ["Q2_collision_cell_not_reported_in_record"],
+      "ce_units": ["V", "eV"],
+      "ce_modes": ["fixed", "CES", "rolling", "dynamic"]
+    },
+    {
+      "domain_id": "thermo_exploris_240_hcd_v3",
+      "family_id": "thermo_orbitrap_exploris",
+      "vendor": "Thermo Fisher Scientific",
+      "models": [
+        "Exploris 240 Orbitrap Thermo Scientific",
+        "Exploris 240 Thermo Scientific",
+        "Orbitrap Exploris 240 Thermo Scientific"
+      ],
+      "analyzer": "Orbitrap",
+      "activation": ["HCD"],
+      "activation_location": "HCD_cell",
+      "collision_cell_regions": ["HCD_cell_not_reported_in_record"],
+      "ce_units": ["percent_nominal", "NCE", "eV"],
+      "ce_modes": ["fixed", "stepped"]
+    },
+    {
+      "domain_id": "thermo_q_exactive_hcd_v3",
+      "family_id": "thermo_q_exactive",
+      "vendor": "Thermo Fisher Scientific",
+      "models": ["Q Exactive Orbitrap Thermo Scientific", "Q Exactive"],
+      "analyzer": "Orbitrap",
+      "activation": ["HCD"],
+      "activation_location": "HCD_cell",
+      "collision_cell_regions": ["HCD_cell_not_reported_in_record"],
+      "ce_units": ["percent_nominal", "NCE", "eV"],
+      "ce_modes": ["fixed", "stepped"]
+    },
+    {
+      "domain_id": "thermo_q_exactive_plus_hcd_v3",
+      "family_id": "thermo_q_exactive_plus",
+      "vendor": "Thermo Fisher Scientific",
+      "models": ["Q Exactive Plus Orbitrap Thermo Scientific", "Q Exactive Plus"],
+      "analyzer": "Orbitrap",
+      "activation": ["HCD"],
+      "activation_location": "HCD_cell",
+      "collision_cell_regions": ["HCD_cell_not_reported_in_record"],
+      "ce_units": ["percent_nominal", "NCE", "eV"],
+      "ce_modes": ["fixed", "stepped"]
+    },
+    {
+      "domain_id": "thermo_q_exactive_hf_hcd_v3",
+      "family_id": "thermo_q_exactive_hf",
+      "vendor": "Thermo Fisher Scientific",
+      "models": ["Q-Exactive HF, Thermo Scientific [MS:1002523]"],
+      "analyzer": "Orbitrap",
+      "activation": ["HCD"],
+      "activation_location": "HCD_cell",
+      "collision_cell_regions": ["HCD_cell_not_reported_in_record"],
+      "ce_units": ["NCE", "percent_nominal", "eV"],
+      "ce_modes": ["fixed", "stepped"]
+    },
+    {
+      "domain_id": "waters_qtof_premier_low_energy_cid_contributor_text_v3",
+      "family_id": "waters_qtof_premier",
+      "vendor": "Waters Corporation",
+      "models": ["UPLC Q-Tof Premier, Waters"],
+      "analyzer": "QTOF",
+      "activation": ["LOW-ENERGY CID"],
+      "activation_location": "collision_cell",
+      "collision_cell_regions": ["collision_cell_region_not_reported_in_record"],
+      "ce_units": ["V", "eV"],
+      "ce_modes": ["fixed", "ramp", "MSE"]
+    }
+  ],
+  "secondary_partial_pooling_gate": {
+    "may_rescue_failed_exact_domain": false,
+    "each_domain_must_pass_all_primary_thresholds": true,
+    "same_activation_required": true,
+    "same_ce_unit_required": true,
+    "same_ce_mode_required": true,
+    "same_polarity_adduct_charge_required": true,
+    "minimum_shared_identities": 20,
+    "minimum_shared_ce_settings": 3,
+    "source_direction_consistency_required": true,
+    "leave_one_domain_out_lower_95_minimum": 1.0,
+    "maximum_between_domain_log_lr_sd": 0.4054651081081644
+  }
+}

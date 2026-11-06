@@ -1,0 +1,187 @@
+{
+  "schema_version": "mssystem-v15-multilayer-experiment/1.0.0",
+  "frozen_before_outcome_computation": true,
+  "pre_ranking_anchor_amendments": [
+    {
+      "id": "ANCHOR-001",
+      "reason": "The first all-cohort anchor pass exposed a missing permanent-ion class and nominal-mass truth values. The amendment was made before any recall, ranking or abstention outcome was computed.",
+      "changes": [
+        "add [M]+ and [M]- hypotheses",
+        "fail closed for charged formulas paired with an unsupported additional-adduct declaration",
+        "separate nominal rounded m/z from exact HRMS anchors"
+      ]
+    }
+  ],
+  "evaluation_state": "retrospective_internal_development",
+  "truth_separation": {
+    "prediction_freeze_before_truth_scoring": true,
+    "truth_allowed_for_target_entity_selection_only": true,
+    "truth_forbidden_from_candidate_generation": true,
+    "truth_forbidden_from_candidate_scoring": true,
+    "truth_forbidden_from_abstention_features": true,
+    "same_formula_family_kept_within_one_cross_validation_fold": true
+  },
+  "anchor_integrity": {
+    "formula_mass_tolerance_da": 0.005,
+    "formula_mass_tolerance_ppm": 10.0,
+    "precursor_tolerance_da": 0.02,
+    "precursor_tolerance_ppm": 10.0,
+    "metric_eligible_statuses": ["valid_observed_anchor"],
+    "automatic_truth_rewrite_allowed": false,
+    "common_positive_adducts": [
+      "[M]+",
+      "[M+H]+",
+      "[M+Na]+",
+      "[M+NH4]+",
+      "[M+K]+",
+      "[M-H2O+H]+",
+      "[M+2H]2+"
+    ],
+    "common_negative_adducts": [
+      "[M]-",
+      "[M-H]-",
+      "[M+Cl]-",
+      "[M+FA-H]-",
+      "[M+Hac-H]-",
+      "[M-2H]2-"
+    ]
+  },
+  "candidate_recall_variants": [
+    {
+      "id": "R0_NATIVE_TOP5",
+      "candidate_total": 5,
+      "views": "saved_v15_native"
+    },
+    {
+      "id": "R1_EXACT_RRF20",
+      "candidate_total": 20,
+      "maximum_additions": 20,
+      "views": ["modified_cosine_0.02", "modified_cosine_0.05"]
+    },
+    {
+      "id": "R2_EXACT_RRF40",
+      "candidate_total": 40,
+      "maximum_additions": 40,
+      "views": ["modified_cosine_0.02", "modified_cosine_0.05"]
+    },
+    {
+      "id": "R3_EXACT_RRF40_NEUTRAL_LOSS",
+      "candidate_total": 40,
+      "maximum_additions": 40,
+      "views": [
+        "modified_cosine_0.02",
+        "modified_cosine_0.05",
+        "neutral_loss_cosine_0.02"
+      ]
+    }
+  ],
+  "ranking_variants": [
+    {
+      "id": "S0_V15_CURRENT",
+      "policy": "config/v15_flagship_policy.json"
+    },
+    {
+      "id": "S1_ENTROPY_HEAVY",
+      "scan_score": {
+        "cosine": 0.25,
+        "entropy": 0.35,
+        "reverse_match": 0.15,
+        "mass_accuracy": 0.10,
+        "fragment_coverage": 0.10,
+        "intensity_agreement": 0.05,
+        "reciprocal_rank_fraction": 0.30,
+        "spectral_fraction": 0.70
+      }
+    },
+    {
+      "id": "S2_REVERSE_HEAVY",
+      "scan_score": {
+        "cosine": 0.30,
+        "entropy": 0.20,
+        "reverse_match": 0.25,
+        "mass_accuracy": 0.10,
+        "fragment_coverage": 0.10,
+        "intensity_agreement": 0.05,
+        "reciprocal_rank_fraction": 0.30,
+        "spectral_fraction": 0.70
+      }
+    },
+    {
+      "id": "S3_CE_MEDIAN_HEAVY",
+      "entity_score": {
+        "mean_collision_energy_support": 0.25,
+        "median_collision_energy_support": 0.50,
+        "collision_energy_coverage": 0.15,
+        "collision_energy_top1_fraction": 0.10
+      }
+    }
+  ],
+  "abstention": {
+    "development_cohort": "77_unique_connectivity_agilent_qtof_standards",
+    "grouping_key": "normalized_molecular_formula",
+    "cross_validation_folds": 5,
+    "seed": 20260827,
+    "candidate_features": [
+      "winner_entity_score",
+      "winner_margin",
+      "collision_energy_bins_supported",
+      "distinct_collision_energy_bins",
+      "same_formula_competitor_count",
+      "candidate_count",
+      "vetoed_candidate_count"
+    ],
+    "threshold_grid": {
+      "minimum_entity_score": [0.50, 0.55, 0.60, 0.65, 0.70, 0.75],
+      "minimum_winner_margin": [0.04, 0.06, 0.08, 0.10, 0.12],
+      "minimum_collision_energy_bins_supported": [2, 3]
+    },
+    "selection_objective": "maximize_correct_2d_releases_subject_to_minimum_0.90_training_release_precision_then_minimize_wrong_releases",
+    "production_acceptance": {
+      "wrong_release_relative_reduction_minimum": 0.30,
+      "correct_release_relative_loss_maximum": 0.10,
+      "qe_wrong_release_increase_allowed": 0,
+      "mix33_top1_loss_allowed": 0
+    }
+  },
+  "multiplicity": {
+    "primary_endpoint_order": [
+      "candidate_recall",
+      "same_formula_top1",
+      "wrong_formal_2d_release"
+    ],
+    "paired_binary_test": "exact_two_sided_mcnemar",
+    "exploratory_variant_adjustment": "holm",
+    "confidence_interval": "formula_family_cluster_bootstrap_95"
+  },
+  "qtof_development_selection_locked_for_transfer": {
+    "source_benchmark_sha256": "9b01a962612e3ebdaa8569b1bc27e89a95e8d04948752a4a59c3773d9f7ccc65",
+    "candidate_recall": {
+      "selected_variant": "R2_EXACT_RRF40",
+      "reason": "75/76 versus 69/76 native Top5; six gains, zero losses; the neutral-loss view produced no additional recovery"
+    },
+    "public_library_ranking": {
+      "selected_variant": "S0_V15_CURRENT",
+      "reason": "entropy-heavy and reverse-heavy variants each changed only one case and did not pass the predeclared multiplicity test"
+    },
+    "abstention": {
+      "minimum_entity_score": 0.75,
+      "minimum_winner_margin": 0.12,
+      "minimum_collision_energy_bins_supported": 2,
+      "source": "global QTOF development fit after formula-family-disjoint cross-validation"
+    },
+    "locked_before_qe_or_mix33_transfer": true
+  },
+  "same_formula_authentic_reference_lane": {
+    "module": "EviTwin-MS 1.2",
+    "integration_action": "bind the existing validated authentic-reference sidecar to the V15 primary entity artifact",
+    "same_query_source_task_reference_excluded": true,
+    "required_query_collision_energy_conditions": 2,
+    "minimum_priority_similarity": 0.95,
+    "minimum_singleton_similarity": 0.98,
+    "minimum_connectivity_margin": 0.05,
+    "exact_query_reference_instrument_family_required": true,
+    "formal_level1_release_allowed": false,
+    "qe_orbitrap_application_allowed": false
+  },
+  "claim_boundary": "All cohorts are retrospective and have informed system engineering. Results can support an engineering ablation claim, not independent clinical, regulatory, or Level-1 identification superiority."
+}

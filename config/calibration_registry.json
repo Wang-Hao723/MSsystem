@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "production_calibration_id": null,
+  "entries": [
+    {
+      "calibration_id": "mix33-shuffled-mz-development-20260801",
+      "artifact": "eval/v7val/results/fdr_targetdecoy.json",
+      "sha256": "115596b20403896aebb612fa0a6b39cbb8eb47e09ae01f2e07ccfe0f52c5cf8d",
+      "status": "research_diagnostic_only",
+      "score_field": "cosine",
+      "unit": "pooled_candidate_scores",
+      "production_eligible": false,
+      "reason_codes": [
+        "shuffled_peak_null_not_real_compound_competition",
+        "pooled_candidates_not_one_call_per_entity",
+        "not_project_local_rank_score",
+        "summary_curve_without_assignable_calls"
+      ]
+    },
+    {
+      "calibration_id": "mix33-size-matched-entrapment-development-20260801",
+      "artifact": "eval/v7val/results/fdr_entrapment_sizematched.json",
+      "sha256": "d3a016686b499883c7dd56f8b77ce7c93dcd9a4ef43d218d54b88165c2fb7cec",
+      "status": "qualified_internal_validation",
+      "score_field": "cosine",
+      "unit": "query_scan",
+      "production_eligible": false,
+      "reason_codes": [
+        "same_mix33_cohort_inspected_during_development",
+        "scan_pseudoreplicates_not_collapsed_to_entity",
+        "not_project_local_rank_score",
+        "summary_curve_without_assignable_calls",
+        "current_runtime_and_library_transfer_not_established"
+      ]
+    }
+  ],
+  "policy": {
+    "raw_similarity_is_probability": false,
+    "qvalue_is_probability": false,
+    "uncalibrated_tasks_expose_qvalues": false,
+    "calibration_changes_retrieval_ranking": false,
+    "legacy_high_is_project_fdr_tier": false
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": "3.1.0",
+  "contract_id": "v15-feature-fragment-v31-metadata-origin-contract-20260827",
+  "record_literal_origin": "repository_record_literal",
+  "vendor_manual_origin": "vendor_manual_derived",
+  "permitted_vendor_manual_derived_fields": [
+    "acquisition.collision_cell_region"
+  ],
+  "protected_per_scan_fields": [
+    "acquisition.activation",
+    "acquisition.collision_energy",
+    "acquisition.polarity",
+    "acquisition.adduct",
+    "acquisition.charge",
+    "acquisition.precursor_isolation",
+    "acquisition.precursor_mz",
+    "acquisition.scan_range",
+    "raw_acquisition.acquisition_event_id",
+    "raw_acquisition.injection_id",
+    "raw_acquisition.raw_file_id",
+    "raw_acquisition.scan_id",
+    "quantitative_eligibility.precursor_selection_verified",
+    "quantitative_eligibility.verified_single_compound_reference_acquisition"
+  ],
+  "derivation_rules": [
+    {
+      "derivation_id": "agilent-6500-hexapole-cell-2017",
+      "enabled": true,
+      "match": {
+        "instrument_vendor": "Agilent Technologies",
+        "instrument_models": [
+          "Agilent 6530 QTOF",
+          "Agilent QTof 6545, Agilent Technologies [MS:1000490]",
+          "Agilent 6560 QTOF"
+        ],
+        "analyzer": "QTOF",
+        "activation": "CID"
+      },
+      "field": "acquisition.collision_cell_region",
+      "value": "agilent_axial_acceleration_hexapole_collision_cell",
+      "value_origin": "vendor_manual_derived",
+      "source": {
+        "source_id": "AGILENT-QTOF-CONCEPTS-G3335-90231",
+        "title": "Agilent 6200 Series TOF and 6500 Series Q-TOF LC/MS System Concepts Guide",
+        "document_revision": "Revision A, April 2017",
+        "manual_part_number": "G3335-90231",
+        "pdf_page_index_zero_based": 26,
+        "supporting_lines": "The 6500 Series Q-TOF uses a quadrupole, a hexapole collision cell, and a TOF; the quadrupole selects precursor ions and fragmentation occurs in the collision cell.",
+        "url": "https://www.agilent.com/cs/library/usermanuals/public/G3335-90231_TOF_Q-TOF_Concepts.pdf"
+      }
+    },
+    {
+      "derivation_id": "thermo-qe-hf-hcd-cell-revision-a",
+      "enabled": true,
+      "match": {
+        "instrument_vendor": "Thermo Fisher Scientific",
+        "instrument_models": [
+          "Q-Exactive HF, Thermo Scientific [MS:1002523]"
+        ],
+        "analyzer": "Orbitrap",
+        "activation": "HCD"
+      },
+      "field": "acquisition.collision_cell_region",
+      "value": "thermo_hcd_cell",
+      "value_origin": "vendor_manual_derived",
+      "source": {
+        "source_id": "THERMO-QE-HF-MANUAL-1372090",
+        "title": "Q Exactive HF Software Manual",
+        "document_revision": "Revision A",
+        "manual_part_number": "1372090",
+        "pdf_page_index_zero_based": 223,
+        "supporting_lines": "HCD occurs in a straight multipole mounted inside a collision-gas-filled tube; the voltage offset accelerates parent ions into that HCD cell.",
+        "url": "https://documents.thermofisher.com/TFS-Assets/CMD/manuals/man-1372090-q-exactive-hf-soft-man1372090-en.pdf"
+      }
+    }
+  ],
+  "non_derivable_examples": [
+    "collision energy for an individual scan",
+    "precursor isolation window for an individual scan",
+    "whether the reported spectrum used precursor selection",
+    "activation mode when absent from the repository record",
+    "raw file, injection, acquisition-event, or scan identifiers",
+    "reference-material purity or batch identifier"
+  ]
+}

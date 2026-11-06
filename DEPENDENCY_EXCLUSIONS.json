@@ -1,0 +1,92 @@
+{
+  "archive_scope": "source only; not a complete runnable or scientific-reproduction package",
+  "dependency_notes": {
+    "environment.yml": "historical Python 3.10 declaration conflicts with the recorded Python 3.13.5 runtime and is not the recommended installer",
+    "requirements.lock": "exact direct versions from the recorded runtime; fresh resolution not tested",
+    "runtime_manifest": "runtime snapshot; local absolute paths sanitized in this archive"
+  },
+  "external_required_or_conditional_inputs": [
+    {
+      "access": "manuscript controlled-data route",
+      "expected_name": "local_library.db",
+      "included": false,
+      "path_role": "production spectral library",
+      "required_for": "full database-backed retrieval"
+    },
+    {
+      "access": "manuscript controlled-data route",
+      "expected_name": "library_mapping.csv",
+      "included": false,
+      "path_role": "library mapping",
+      "required_for": "source/name provenance workflows"
+    },
+    {
+      "access": "manuscript data route or user's own instrument data",
+      "included": false,
+      "path_role": "raw or converted LC-MS/MS inputs",
+      "required_for": "sample analysis"
+    },
+    {
+      "access": "separate model asset package where authorized",
+      "included": false,
+      "path_role": "model weights",
+      "required_for": "optional shadow/model-assisted workflows only"
+    },
+    {
+      "access": "manuscript reproducibility data package",
+      "included": false,
+      "path_role": "frozen output/evaluation artifacts",
+      "required_for": "exact manuscript result reproduction"
+    }
+  ],
+  "hard_blockers": [
+    "Full service/database verification is blocked without the compatible external SQLite library and mapping/repair assets.",
+    "Exact manuscript result reproduction is blocked without frozen raw inputs, output artifacts, and any referenced model assets.",
+    "Source licensing is resolved by the 2026-11-02 authorization: self-developed source is MIT and listed third-party files retain original terms. Scientific reproduction remains conditional on the separately licensed data and model inputs above."
+  ],
+  "large_derived_files_excluded": [
+    {
+      "path": "kb_v3/empirical_rules_candidates_v2.json",
+      "reason": "explicit derived-data or private-config exclusion",
+      "sha256": "e59ae49089a003b4ed3e5eef2158101e02f12cbca356b406b561a1c98facadb7",
+      "size_bytes": 2944287
+    },
+    {
+      "path": "matching/compound_name_aliases_pubchem.json",
+      "reason": "explicit derived-data or private-config exclusion",
+      "sha256": "ef05f7e7f53e9f71cc5d9e985f77eefa1a3076b7d557423f464b4f238c9f89c5",
+      "size_bytes": 3192003
+    },
+    {
+      "path": "matching/pubchem_names_batch_cache.jsonl",
+      "reason": "explicit derived-data or private-config exclusion",
+      "sha256": "66e624f0cfd20ddec3aecf35df61e0a0e2bb1339e4a75b4c831cfa2160764a65",
+      "size_bytes": 4121178
+    },
+    {
+      "path": "config/library_compound_mass_repairs.json",
+      "reason": "explicit derived-data or private-config exclusion",
+      "sha256": "19c3530123bbb6a31790a35fa93cdf557b80b2eb225c1ec09c2e91f745392702",
+      "size_bytes": 7429192
+    },
+    {
+      "path": "config/library_metadata_repairs.json",
+      "reason": "explicit derived-data or private-config exclusion",
+      "sha256": "a6697e88631f3126047c46773a0644d41cf711f5a5879882fcf41de0663875e2",
+      "size_bytes": 133209088
+    },
+    {
+      "path": "config/sql_compound_mass_bindings.jsonl",
+      "reason": "explicit derived-data or private-config exclusion",
+      "sha256": "d47898e4be504d892735bf4ad2207d11aab41452db6ac10f9aaa99d688805d03",
+      "size_bytes": 7482898
+    },
+    {
+      "path": "config/feature_fragments/curation/legacy_aliases_v1.jsonl",
+      "reason": "derived data exceeds 1 MiB source-snapshot limit",
+      "sha256": "addc9ec7402cdf472c01c2b030509332d05430a30a3645f3aab48ee2614550a0",
+      "size_bytes": 1232441
+    }
+  ],
+  "schema_version": "mssystem-source-dependency-exclusions/1.0"
+}

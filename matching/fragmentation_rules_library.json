@@ -1,0 +1,4354 @@
+{
+  "meta": {
+    "title": "质谱裂解规律标准规则库 — Mass Spectrometry Fragmentation Rules Library",
+    "version": "3.0.0",
+    "date": "2026-06-07",
+    "description": "基于母核结构的小分子化合物及中药化合物质谱裂解特征规则库，涵盖44+化合物类别、235+条裂解规则、精确质量参考表。整合PubMed/MoNA/GNPS/MassBank/HMDB/LIPID MAPS等来源。",
+    "principle": "化合物的质谱裂解行为由其母核结构决定",
+    "data_sources": [
+      "PubMed (https://pubmed.ncbi.nlm.nih.gov/)",
+      "Web of Science",
+      "ScienceDirect (https://www.sciencedirect.com/)",
+      "Google Scholar (https://scholar.google.com/)",
+      "MassBank (https://massbank.eu/)",
+      "MoNA — MassBank of North America (https://mona.fiehnlab.ucdavis.edu/)",
+      "GNPS — Global Natural Product Social Molecular Networking (https://gnps.ucsd.edu/)",
+      "ReSpect (RIKEN)",
+      "HMDB — Human Metabolome Database",
+      "中国知网 (CNKI)",
+      "LIPID MAPS (https://www.lipidmaps.org/)"
+    ],
+    "ionization_modes": [
+      "ESI+",
+      "ESI-",
+      "EI",
+      "APCI",
+      "CI"
+    ],
+    "total_classes": 44,
+    "total_rules": 235
+  },
+  "classes": [
+    {
+      "class": "黄酮类",
+      "class_en": "Flavonoids",
+      "core_structure": "C6-C3-C6 (二苯基色原酮母核, 2-phenylchromone)",
+      "subclasses": [
+        {
+          "subclass": "黄酮 (Flavones)",
+          "core_description": "2-苯基色原酮, C2-C3双键, C4羰基",
+          "example_compounds": [
+            "芹菜素 Apigenin",
+            "木犀草素 Luteolin",
+            "黄芩素 Baicalein"
+          ],
+          "rules": [
+            {
+              "rule_id": "FLAV-001",
+              "fragment_mz": "取决于A/B环取代",
+              "description": "RDA逆Diels-Alder裂解产生1,3A+和1,3B+特征碎片离子，1,3A+通常为基峰",
+              "mechanism": "逆Diels-Alder (RDA) — C环1,3键断裂",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Ma et al., 1997; Tsimogiannis et al., 2007; Abad-Garcia et al., 2009; PMID:17937460"
+            },
+            {
+              "rule_id": "FLAV-002",
+              "fragment_mz": "[1,3A+ - 42]",
+              "description": "1,3A+碎片进一步丢失C2H2O (42 Da)，为黄酮和黄酮醇的关键诊断特征",
+              "mechanism": "RDA后连续中性丢失 — C2H2O消除",
+              "neutral_loss": "C2H2O (42 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Kuhn et al., 2003; Cuyckens & Claeys, 2004; PMID:15389856"
+            },
+            {
+              "rule_id": "FLAV-003",
+              "fragment_mz": "[1,3B+ - 2H]",
+              "description": "1,3B+碎片丢失2H (2 Da)，为黄酮区别于黄酮醇的特征",
+              "mechanism": "RDA后脱氢",
+              "neutral_loss": "H2 (2 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Kuhn et al., 2003; PMID:15389856"
+            },
+            {
+              "rule_id": "FLAV-004",
+              "fragment_mz": "[1,3A+ - CO]",
+              "description": "1,3A+碎片丢失CO (28 Da)",
+              "mechanism": "RDA后脱羰基",
+              "neutral_loss": "CO (28 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "中",
+              "reference": "Fabre et al., 2001; PMID:11199231"
+            },
+            {
+              "rule_id": "FLAV-024",
+              "fragment_mz": "m/z 153",
+              "description": "A环5,7-二羟基取代黄酮的诊断性碎片离子，RDA裂解产生1,3A+离子",
+              "mechanism": "逆Diels-Alder — C环1,3键断裂(5,7-diOH A环)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(A环取代基诊断)",
+              "confidence": "高",
+              "reference": "Jiang et al., Molecules 2024, 29, 5246; PMC11596855"
+            },
+            {
+              "rule_id": "FLAV-025",
+              "fragment_mz": "m/z 151",
+              "description": "黄烷醇类(如儿茶素)的A环碎片离子，无C4酮基但有5,7-二OH的标志",
+              "mechanism": "逆Diels-Alder — 黄烷醇特征",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(黄烷醇诊断)",
+              "confidence": "高",
+              "reference": "Jiang et al., Molecules 2024, 29, 5246; PMC11596855"
+            },
+            {
+              "rule_id": "FLAV-026",
+              "fragment_mz": "m/z 167",
+              "description": "A环含一个OH和一个OCH3取代的黄酮诊断性碎片离子",
+              "mechanism": "逆Diels-Alder — A环OH+OCH3取代",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(A环甲氧基诊断)",
+              "confidence": "高",
+              "reference": "Jiang et al., Molecules 2024, 29, 5246; PMC11596855"
+            },
+            {
+              "rule_id": "FLAV-027",
+              "fragment_mz": "[M-H-CH3]⁻• (-15 Da)",
+              "description": "甲氧基化黄酮在负离子模式以丢失CH3自由基为特征，形成奇电子离子[M-H-CH3]⁻•",
+              "mechanism": "自由基脱甲基 (Methyl radical loss)",
+              "neutral_loss": "CH3• (15 Da)",
+              "diagnostic_type": "中性丢失(甲氧基标志)",
+              "confidence": "高",
+              "reference": "Jiang et al., Molecules 2024, 29, 5246; PMC11596855"
+            }
+          ]
+        },
+        {
+          "subclass": "黄酮醇 (Flavonols)",
+          "core_description": "3-羟基黄酮, C3-OH",
+          "example_compounds": [
+            "山奈酚 Kaempferol",
+            "槲皮素 Quercetin",
+            "杨梅素 Myricetin",
+            "异鼠李素 Isorhamnetin"
+          ],
+          "rules": [
+            {
+              "rule_id": "FLAV-005",
+              "fragment_mz": "取决于A/B环取代",
+              "description": "RDA裂解: 1,3A+为基峰, 同时产生1,3A+−CO, 1,3A+−CO2等碎片。0,2B+离子在黄酮醇中也很突出",
+              "mechanism": "逆Diels-Alder (RDA)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Cuyckens & Claeys, J. Mass Spectrom. 2004; PMID:15389856"
+            },
+            {
+              "rule_id": "FLAV-006",
+              "fragment_mz": "[1,3A+ - CO]",
+              "description": "黄酮醇的1,3A+碎片丢失CO (28 Da) 非常特征，因C3-OH促进该中性丢失",
+              "mechanism": "RDA后脱羰基",
+              "neutral_loss": "CO (28 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Cuyckens & Claeys, 2004; PMID:15389856"
+            },
+            {
+              "rule_id": "FLAV-007",
+              "fragment_mz": "[MH - 18]",
+              "description": "黄酮醇丢失H2O (18 Da), C3-OH容易脱水",
+              "mechanism": "脱水",
+              "neutral_loss": "H2O (18 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "中",
+              "reference": "Cuyckens & Claeys, 2004; PMID:15389856"
+            },
+            {
+              "rule_id": "FLAV-008",
+              "fragment_mz": "[MH - 28 - 28]",
+              "description": "连续丢失两分子CO (56 Da)，黄酮醇特征性连续丢失",
+              "mechanism": "连续脱羰基",
+              "neutral_loss": "2CO (56 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "中",
+              "reference": "Tsimogiannis et al., 2007; PMID:17343468"
+            },
+            {
+              "rule_id": "FLAV-028",
+              "fragment_mz": "m/z 153 (槲皮素/山奈酚), m/z 169 (杨梅素)",
+              "description": "黄酮醇A环取代基诊断: 5,7-二OH→m/z 153; 5,7-二OH+三OH→m/z 169",
+              "mechanism": "RDA裂解 1,3A+碎片",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(A环取代诊断)",
+              "confidence": "高",
+              "reference": "Jiang et al., Molecules 2024, 29, 5246; PMC11596855"
+            },
+            {
+              "rule_id": "FLAV-040",
+              "fragment_mz": "Quercetin [M+H]+: 303→285(-H2O)→257(-CO)→229(-CO)→165→153(rC1,4A)",
+              "description": "槲皮素(Quercetin, MW 302)正离子全碎片级联: RDA碎片m/z 153(A环5,7-diOH标志), m/z 165(rC3,10A)。负离子m/z 301→273(-CO)→257→229",
+              "mechanism": "RDA裂解 + 连续脱水/脱羰",
+              "neutral_loss": "H2O(18)+CO(28)+CO(28)",
+              "diagnostic_type": "特征碎片级联(槲皮素诊断)",
+              "confidence": "高",
+              "reference": "Jiang et al., Molecules 2024, 29, 5246; PMC11596855"
+            },
+            {
+              "rule_id": "FLAV-041",
+              "fragment_mz": "Kaempferol [M+H]+: 287→269(-H2O)→241(-CO)→213(-CO)→177→165→153(rC1,4A)",
+              "description": "山奈酚(Kaempferol)正离子: m/z 153(rC1,4A)为A环5,7-diOH标志; m/z 177(rC5,10B)为B环4'-OH标志; 级联269→241→213",
+              "mechanism": "RDA裂解 + 连续脱羰",
+              "neutral_loss": "H2O(18)+CO(28)+CO(28)",
+              "diagnostic_type": "特征碎片级联(山奈酚诊断)",
+              "confidence": "高",
+              "reference": "Jiang et al., Molecules 2024, 29, 5246; PMC11596855"
+            },
+            {
+              "rule_id": "FLAV-042",
+              "fragment_mz": "Rhamnetin: [M+H]+ 317→167(rC1,4A); Isorhamnetin: 317→153(rC1,4A)",
+              "description": "甲氧基化黄酮醇诊断: Rhamnetin(A环含OMe+OH)→rC1,4A碎片m/z 167(与m/z 153差14 Da=CH2); Isorhamnetin(B环含OMe)→rC1,4A碎片仍为m/z 153(A环未变)",
+              "mechanism": "RDA裂解 — A环OMe取代使碎片从m/z 153→167",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(A环OMe取代诊断, 153→167位移)",
+              "confidence": "高",
+              "reference": "Jiang et al., Molecules 2024, 29, 5246; PMC11596855"
+            }
+          ]
+        },
+        {
+          "subclass": "二氢黄酮 (Flavanones)",
+          "core_description": "C2-C3单键, C4羰基",
+          "example_compounds": [
+            "柚皮素 Naringenin",
+            "橙皮素 Hesperetin",
+            "甘草素 Liquiritigenin"
+          ],
+          "rules": [
+            {
+              "rule_id": "FLAV-009",
+              "fragment_mz": "取决于A/B环取代",
+              "description": "RDA裂解: 1,3A+为基峰, 同时0,4B+也为基峰",
+              "mechanism": "逆Diels-Alder (RDA)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Zhang et al., 2011; PMID:21885228"
+            },
+            {
+              "rule_id": "FLAV-010",
+              "fragment_mz": "[1,3B+]",
+              "description": "二氢黄酮的1,3B+离子显著，区别于黄酮",
+              "mechanism": "RDA裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Zhang et al., 2011; PMID:21885228"
+            },
+            {
+              "rule_id": "FLAV-011",
+              "fragment_mz": "[M+H - 152]",
+              "description": "二氢黄酮苷元可通过RDA裂解丢失C8H8O3 (152 Da，对应A环+C2片段)",
+              "mechanism": "逆Diels-Alder",
+              "neutral_loss": "C8H8O3 (152 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "中",
+              "reference": "Yang et al., Eur. J. Mass Spectrom. 2012; PMID:23221113"
+            }
+          ]
+        },
+        {
+          "subclass": "异黄酮 (Isoflavones)",
+          "core_description": "3-苯基色原酮, B环连C3",
+          "example_compounds": [
+            "染料木素 Genistein",
+            "大豆苷元 Daidzein",
+            "葛根素 Puerarin"
+          ],
+          "rules": [
+            {
+              "rule_id": "FLAV-012",
+              "fragment_mz": "[0,2B+]",
+              "description": "异黄酮的0,2B+离子突出，因B环在C3位改变了RDA裂解路径",
+              "mechanism": "逆Diels-Alder (0,2键断裂)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Kuhn et al., 2003; Cuyckens & Claeys, 2004; PMID:15389856"
+            },
+            {
+              "rule_id": "FLAV-013",
+              "fragment_mz": "[MH - 56]~[MH - 72]",
+              "description": "异黄酮RDA裂解模式与黄酮不同，B环连接位置导致特征性0,2裂解产物",
+              "mechanism": "逆Diels-Alder (0,2键断裂)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Kuhn et al., 2003; PMID:15389856"
+            }
+          ]
+        },
+        {
+          "subclass": "查尔酮/二氢查尔酮 (Chalcones/Dihydrochalcones)",
+          "core_description": "开环C6-C3-C6, α,β-不饱和羰基(查尔酮); C3饱和(二氢查尔酮)",
+          "example_compounds": [
+            "异甘草素 Isoliquiritigenin",
+            "红花黄 Carthamin",
+            "根皮素 Phloretin"
+          ],
+          "rules": [
+            {
+              "rule_id": "FLAV-014",
+              "fragment_mz": "[1,3A-]",
+              "description": "查尔酮经RDA裂解产生1,3A-碎片（与二氢黄酮共享特征）",
+              "mechanism": "逆Diels-Alder (经六元环过渡态)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Yang et al., Eur. J. Mass Spectrom. 2012; PMID:23221113"
+            },
+            {
+              "rule_id": "FLAV-015",
+              "fragment_mz": "[M-H-CH3]-",
+              "description": "甲氧基化查尔酮在负离子模式MS2中以丢失CH3自由基(-15 Da)为主",
+              "mechanism": "自由基裂解 — 甲氧基脱甲基",
+              "neutral_loss": "CH3 (15 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Portet et al., J. Chromatogr. A 2008; PMID:18838145"
+            },
+            {
+              "rule_id": "FLAV-016",
+              "fragment_mz": "[B3+] (苄基离子)",
+              "description": "二氢查尔酮以B3苄基裂解离子为特征（饱和C3桥），区别于查尔酮的B5离子",
+              "mechanism": "苄基裂解 (α-裂解)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Mabry & Markham, 1975; J. Agric. Food Chem. 1992, 40:610"
+            },
+            {
+              "rule_id": "FLAV-017",
+              "fragment_mz": "[M-H-H2O]-",
+              "description": "甲氧基化二氢查尔酮在负离子MS2中以丢失H2O (-18 Da)为主导",
+              "mechanism": "脱水反应",
+              "neutral_loss": "H2O (18 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Portet et al., J. Chromatogr. A 2008; PMID:18838145"
+            }
+          ]
+        },
+        {
+          "subclass": "花青素 (Anthocyanidins)",
+          "core_description": "2-苯基苯并吡喃鎓盐(flavylium), C环氧被正电荷替代",
+          "example_compounds": [
+            "矢车菊素 Cyanidin",
+            "飞燕草素 Delphinidin",
+            "天竺葵素 Pelargonidin"
+          ],
+          "rules": [
+            {
+              "rule_id": "FLAV-018",
+              "fragment_mz": "[0,2B+]",
+              "description": "花青素的0,2B+通常为基峰，为正离子模式下最特征碎片",
+              "mechanism": "逆Diels-Alder (0,2键断裂)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Cuyckens & Claeys, 2004; PMID:15389856"
+            },
+            {
+              "rule_id": "FLAV-019",
+              "fragment_mz": "[0,2B+ - 42]",
+              "description": "0,2B+碎片进一步丢失C2H2O (42 Da)，花青素的诊断性中性丢失",
+              "mechanism": "RDA后C2H2O消除",
+              "neutral_loss": "C2H2O (42 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Cuyckens & Claeys, 2004; PMID:15389856"
+            }
+          ]
+        },
+        {
+          "subclass": "黄酮苷 (Flavonoid Glycosides)",
+          "core_description": "黄酮母核连接糖基(O-苷或C-苷)",
+          "example_compounds": [
+            "芦丁 Rutin",
+            "黄芩苷 Baicalin",
+            "牡荆素 Vitexin (C-苷)"
+          ],
+          "rules": [
+            {
+              "rule_id": "FLAV-020",
+              "fragment_mz": "[M+H - 162]",
+              "description": "O-黄酮苷以丢失完整糖基为特征: 己糖-162 Da, 脱氧己糖-146 Da, 戊糖-132 Da",
+              "mechanism": "糖苷键断裂 (O-glycosidic bond cleavage)",
+              "neutral_loss": "C6H10O5 (162 Da, hexose) / C6H10O4 (146 Da, deoxyhexose) / C5H8O4 (132 Da, pentose)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Cuyckens & Claeys, 2004; PMID:15389856; PMID:16418439"
+            },
+            {
+              "rule_id": "FLAV-021",
+              "fragment_mz": "[M-H-60]-, [M-H-90]-, [M-H-120]-",
+              "description": "C-黄酮苷以糖环交叉环裂解为特征，产生-60 Da, -90 Da, -120 Da碎片序列",
+              "mechanism": "糖环交叉环裂解 (cross-ring cleavage)",
+              "neutral_loss": "C2H4O2 (60 Da) / C3H6O3 (90 Da) / C4H8O4 (120 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Abad-Garcia et al., 2009; PMID:25981540"
+            },
+            {
+              "rule_id": "FLAV-022",
+              "fragment_mz": "[M-H-18]-",
+              "description": "C-黄酮苷(尤其是6-C-苷)在负离子模式中产生显著的[M-H-18]-脱水离子",
+              "mechanism": "糖基脱水",
+              "neutral_loss": "H2O (18 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Abad-Garcia et al., 2009; PMID:25981540"
+            },
+            {
+              "rule_id": "FLAV-023",
+              "fragment_mz": null,
+              "description": "6-C-苷 vs 8-C-苷区分: [M+H-150]+/[M+H-120]+比值>1为6-C-苷, <1为8-C-苷 (30 eV)",
+              "mechanism": "糖基交叉环裂解相对强度比",
+              "neutral_loss": null,
+              "diagnostic_type": "离子强度比",
+              "confidence": "高",
+              "reference": "Abad-Garcia et al., 2009; PMID:25981540"
+            },
+            {
+              "rule_id": "FLAV-029",
+              "fragment_mz": "m/z 161, 143, 131",
+              "description": "黄酮苷糖单元特征碎片: 己糖oxonium离子m/z 161; 脱氧己糖碎片m/z 143; 戊糖碎片m/z 131",
+              "mechanism": "糖单元交叉环裂解产生oxonium离子",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(糖类型诊断)",
+              "confidence": "高",
+              "reference": "Alves et al., RSC Adv. 2024; PMC10985591; PMID:16418439"
+            },
+            {
+              "rule_id": "FLAV-030",
+              "fragment_mz": "[Y0]-",
+              "description": "O-苷的苷元离子Y0-为主要碎片，用于确定苷元分子量和糖链组成",
+              "mechanism": "完整糖链丢失",
+              "neutral_loss": "取决于糖链组成",
+              "diagnostic_type": "特征碎片(苷元诊断)",
+              "confidence": "高",
+              "reference": "Cuyckens & Claeys, 2004; PMID:15389856"
+            },
+            {
+              "rule_id": "FLAV-026",
+              "description": "酰化黄酮苷以丢失酰基为首要裂解(酰基先于糖丢失)。丙二酰黄酮苷: -CO2(44)+-C2H2O(42)=-86 Da, 或整体丢失丙二酸(86 Da)。乙酰黄酮苷: -CH3COOH(60)或-C2H2O(42)。对香豆酰: -C9H6O(146)。阿魏酰: -C10H8O3(176)。裂解顺序: [M+H]+→[M+H-acyl]+→[M+H-acyl-sugar]+→aglycone",
+              "mechanism": "酰基酯键断裂(优先于糖苷键) → 糖丢失 → 苷元",
+              "neutral_loss": "malonyl(86) / acetyl(60/42) / p-coumaroyl(146) / feruloyl(176) + sugar(162/146/132)",
+              "diagnostic_type": "中性丢失顺序(酰基→糖, 诊断酰化黄酮苷)",
+              "confidence": "高",
+              "reference": "PMID:18074333 malonylation patterns; Ferreres et al., Rapid Commun. Mass Spectrom. 2004"
+            },
+            {
+              "rule_id": "FLAV-027",
+              "fragment_mz": "[M-H]- → [M-H-SO3]-; DFI: m/z 97 (HSO4-), m/z 80 (SO3-.)",
+              "description": "黄酮硫酸酯以丢失SO3 (79.96 Da)为最诊断特征(负离子模式)。诊断碎片: m/z 97(HSO4-)和m/z 80(SO3-.)。多硫酸酯有多次-80 Da丢失。SO3丢失后苷元按黄酮规则裂解。不同硫酸酯位置(如3-O-sulfate vs 7-O-sulfate)需MSn区分(RDA碎片丰度不同)",
+              "mechanism": "硫酸酯键断裂 (SO3 elimination)",
+              "neutral_loss": "SO3 (79.96 Da) ×n",
+              "diagnostic_type": "中性丢失+特征碎片(硫酸酯诊断)",
+              "confidence": "高",
+              "reference": "Frontiers Plant Sci. 2019, 10:885 sulfated flavonoids; KAUST sulfated flavonoid review"
+            }
+          ]
+        },
+        {
+          "subclass": "多甲氧基黄酮 (Polymethoxylated Flavonoids / PMFs)",
+          "core_description": "黄酮母核多个甲氧基取代，不含游离羟基(或极少)",
+          "example_compounds": [
+            "川陈皮素 Nobiletin (6-OMe)",
+            "蜜橘素 Tangeretin (5-OMe)",
+            "甜橙素 Sinensetin",
+            "5,6,7,4'-四甲氧基黄酮"
+          ],
+          "rules": [
+            {
+              "rule_id": "FLAV-031",
+              "fragment_mz": "[M+H - n×15]+",
+              "description": "多甲氧基黄酮最特征裂解为连续丢失CH3自由基(-15 Da)。每个甲氧基可产生一次脱甲基，Nobiletin(6-OMe, MW 402)→m/z 387→372→357→342→327→312→297",
+              "mechanism": "自由基脱甲基 (Successive CH3 radical loss)",
+              "neutral_loss": "n×CH3• (15 Da each)",
+              "diagnostic_type": "中性丢失(PMFs标志)",
+              "confidence": "高",
+              "reference": "Zhang et al., J. Pharm. Biomed. Anal. 2011;56:950-961; PMID:21885228"
+            },
+            {
+              "rule_id": "FLAV-032",
+              "fragment_mz": "[M+H - OCH3]+ (-31 Da)",
+              "description": "PMFs同时发生甲氧基整体丢失(-31 Da, OCH3)，与CH3自由基丢失竞争。在低碰撞能下CH3丢失占主导，高碰撞能下OCH3丢失增加",
+              "mechanism": "甲氧基整体消除 vs 自由基脱甲基竞争",
+              "neutral_loss": "OCH3 (31 Da) / CH3• (15 Da)",
+              "diagnostic_type": "中性丢失(竞争性)",
+              "confidence": "高",
+              "reference": "Zhang et al., 2011; PMID:21885228"
+            },
+            {
+              "rule_id": "FLAV-033",
+              "fragment_mz": "Nobiletin: 403→373(-CH3OH); Tangeretin: 373→343(-CH3OH)",
+              "description": "含邻位甲氧基的PMFs可发生邻位消除反应丢失CH3OH(-32 Da)，如3'-甲氧基与4'-甲氧基之间的消除",
+              "mechanism": "邻位消除 (ortho-elimination of CH3OH)",
+              "neutral_loss": "CH3OH (32 Da)",
+              "diagnostic_type": "中性丢失(邻位OMe标志)",
+              "confidence": "高",
+              "reference": "Jiang et al., Molecules 2024, 29, 5246; PMC11596855"
+            }
+          ]
+        },
+        {
+          "subclass": "二氢黄酮醇 (Dihydroflavonols / Flavanonols)",
+          "core_description": "C2-C3单键(饱和), C3-OH, C4羰基; 与二氢黄酮区别在于C3-OH",
+          "example_compounds": [
+            "黄杉素 Taxifolin (Dihydroquercetin)",
+            "佛提素 Fustin"
+          ],
+          "rules": [
+            {
+              "rule_id": "FLAV-034",
+              "fragment_mz": "[M+H - 18]+, [M+H - 46]+",
+              "description": "二氢黄酮醇以脱水(-18 Da)和脱甲酸(-46 Da)为首要中性丢失，C3-OH+C4=O促进连续丢失H2O+CO",
+              "mechanism": "脱水→脱羰基 (H2O+CO = 46 Da)",
+              "neutral_loss": "H2O (18 Da) / H2O+CO (46 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Jiang et al., Molecules 2024, 29, 5246; PMC11596855"
+            },
+            {
+              "rule_id": "FLAV-035",
+              "fragment_mz": "Taxifolin [M+H]+: 305→287(-H2O)→259(-CO)→231(-CO)",
+              "description": "Taxifolin(dihydroquercetin)特征碎片级联: m/z 305→287→259→231，连续脱水脱羰，与二氢黄酮(Naringenin)不同的是C3-OH使脱水更显著",
+              "mechanism": "连续脱水+脱羰基",
+              "neutral_loss": "H2O(18)+CO(28)+CO(28)",
+              "diagnostic_type": "特征碎片级联(二氢黄酮醇诊断)",
+              "confidence": "高",
+              "reference": "Jiang et al., Molecules 2024, 29, 5246; PMC11596855"
+            },
+            {
+              "rule_id": "FLAV-036",
+              "fragment_mz": "m/z 153 (正离子RDA碎片)",
+              "description": "二氢黄酮醇A环5,7-二OH取代时RDA碎片m/z 153与黄酮/黄酮醇共享，但二氢黄酮醇的C3-OH使前体离子质量多2Da(比对应黄酮醇)",
+              "mechanism": "RDA裂解 — A环碎片",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(A环取代诊断)",
+              "confidence": "高",
+              "reference": "Jiang et al., Molecules 2024, 29, 5246; PMC11596855"
+            }
+          ]
+        },
+        {
+          "subclass": "黄芩属黄酮苷 (Scutellaria-specific Flavone Glycosides)",
+          "core_description": "黄芩苷元葡萄糖醛酸苷(O-苷)，不含5-OH的独特黄酮",
+          "example_compounds": [
+            "黄芩苷 Baicalin",
+            "汉黄芩苷 Wogonoside",
+            "野黄芩苷 Scutellarin"
+          ],
+          "rules": [
+            {
+              "rule_id": "FLAV-037",
+              "fragment_mz": "Baicalin [M-H]-: 445→269(-176Da); Wogonoside: 459→283(-176Da)",
+              "description": "黄芩苷(baicalin)在负离子模式: [M-H]- m/z 445→m/z 269(丢失葡萄糖醛酸176 Da产生黄芩苷元)。汉黄芩苷: m/z 459→m/z 283",
+              "mechanism": "O-糖苷键断裂 — 葡萄糖醛酸(-176 Da)",
+              "neutral_loss": "C6H8O6 (176 Da, glucuronic acid)",
+              "diagnostic_type": "中性丢失(O-葡萄糖醛酸苷)",
+              "confidence": "高",
+              "reference": "Acta Chromatographica 2023; Scutellaria flavonoid profiling; PMID:25981540"
+            },
+            {
+              "rule_id": "FLAV-038",
+              "fragment_mz": "Baicalein: 269→251(-18)→241(-28)→223(-46)",
+              "description": "黄芩苷元(baicalein, MW 270)在负离子MS3: m/z 269→251(H2O)→241(CO)→223(H2O+CO)。5,6,7-三OH取代使脱水极显著(3次H2O丢失)",
+              "mechanism": "连续脱水+脱羰基 (C环裂解)",
+              "neutral_loss": "H2O(18)+CO(28)+H2O+CO(46)",
+              "diagnostic_type": "特征碎片级联(黄芩苷元诊断)",
+              "confidence": "高",
+              "reference": "Acta Chromatographica 2023; Dehkordi et al., 2020"
+            },
+            {
+              "rule_id": "FLAV-039",
+              "fragment_mz": "Scutellarin [M-H]-: 461→285 (C-苷行为)",
+              "description": "野黄芩苷(scutellarin, scutellarein-7-C-glucuronide): 兼具C-苷特征(糖环交叉环裂解-120/-90 Da碎片)和苷元碎片m/z 285",
+              "mechanism": "C-糖苷键裂解 + 交叉环裂解",
+              "neutral_loss": "C6H8O6 (176 Da, partial)",
+              "diagnostic_type": "特征碎片(C-葡萄糖醛酸苷)",
+              "confidence": "高",
+              "reference": "Kachlicki et al., Molecules 2016, 21:1494; PMC5067219"
+            },
+            {
+              "rule_id": "FLAV-026",
+              "description": "酰化黄酮苷以丢失酰基为首要裂解(酰基先于糖丢失)。丙二酰黄酮苷: -CO2(44)+-C2H2O(42)=-86 Da, 或整体丢失丙二酸(86 Da)。乙酰黄酮苷: -CH3COOH(60)或-C2H2O(42)。对香豆酰: -C9H6O(146)。阿魏酰: -C10H8O3(176)。裂解顺序: [M+H]+→[M+H-acyl]+→[M+H-acyl-sugar]+→aglycone",
+              "mechanism": "酰基酯键断裂(优先于糖苷键) → 糖丢失 → 苷元",
+              "neutral_loss": "malonyl(86) / acetyl(60/42) / p-coumaroyl(146) / feruloyl(176) + sugar(162/146/132)",
+              "diagnostic_type": "中性丢失顺序(酰基→糖, 诊断酰化黄酮苷)",
+              "confidence": "高",
+              "reference": "PMID:18074333 malonylation patterns; Ferreres et al., Rapid Commun. Mass Spectrom. 2004"
+            },
+            {
+              "rule_id": "FLAV-027",
+              "fragment_mz": "[M-H]- → [M-H-SO3]-; DFI: m/z 97 (HSO4-), m/z 80 (SO3-.)",
+              "description": "黄酮硫酸酯以丢失SO3 (79.96 Da)为最诊断特征(负离子模式)。诊断碎片: m/z 97(HSO4-)和m/z 80(SO3-.)。多硫酸酯有多次-80 Da丢失。SO3丢失后苷元按黄酮规则裂解。不同硫酸酯位置(如3-O-sulfate vs 7-O-sulfate)需MSn区分(RDA碎片丰度不同)",
+              "mechanism": "硫酸酯键断裂 (SO3 elimination)",
+              "neutral_loss": "SO3 (79.96 Da) ×n",
+              "diagnostic_type": "中性丢失+特征碎片(硫酸酯诊断)",
+              "confidence": "高",
+              "reference": "Frontiers Plant Sci. 2019, 10:885 sulfated flavonoids; KAUST sulfated flavonoid review"
+            }
+          ]
+        },
+        {
+          "subclass": "双黄酮类 (Biflavonoids)",
+          "core_description": "两个黄酮单元通过C3'-C8'(或C8-C8')键连接",
+          "example_compounds": [
+            "穗花杉双黄酮 Amentoflavone (无OCH3)",
+            "银杏双黄酮 Ginkgetin (2×OCH3)",
+            "白果双黄酮 Bilobetin (1×OCH3)",
+            "金松双黄酮 Sciadopitysin (3×OCH3)"
+          ],
+          "rules": [
+            {
+              "rule_id": "FLAV-028",
+              "fragment_mz": "amentoflavone: [M+H]+ 539→RDA碎片; ginkgetin: 567→552(CH3)→537(2CH3); sciadopitysin: 581→566→551→536(3CH3)",
+              "description": "双黄酮以C3'-C8'分子间键断裂和RDA裂解为特征。甲基化双黄酮: 由连续CH3丢失(15 Da)次数确定甲氧基数。amentoflavone(0×OCH3, 539)→无CH3丢失; bilobetin(1×OCH3, 553)→1次; ginkgetin(2×OCH3, 567)→2次; sciadopitysin(3×OCH3, 581)→3次。MS3可确定甲氧基位于哪个黄酮单元",
+              "mechanism": "分子间C-C键断裂 + RDA + 连续脱甲基",
+              "neutral_loss": "CH3 (15) ×n / CO (28) / H2O (18)",
+              "diagnostic_type": "特征碎片(CH3丢失次数=甲氧基数)",
+              "confidence": "高",
+              "reference": "PMC9824678 Ginkgo biflavonoids; MDPI Molecules 2021, 26:6088 biflavonoid review"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "生物碱类",
+      "class_en": "Alkaloids",
+      "core_structure": "含氮杂环母核 (N-heterocyclic core)",
+      "general_rules": [
+        {
+          "rule_id": "ALK-001",
+          "fragment_mz": "取决于母核",
+          "description": "氮规则: 含奇数N原子→分子离子[M+H]+为偶数m/z; 含偶数N原子→分子离子为奇数m/z。适用于所有含氮化合物",
+          "mechanism": "氮规则 (Nitrogen Rule)",
+          "neutral_loss": null,
+          "diagnostic_type": "母离子质量特征",
+          "confidence": "高",
+          "reference": "McLafferty & Turecek, Interpretation of Mass Spectra, 4th Ed."
+        },
+        {
+          "rule_id": "ALK-002",
+          "fragment_mz": "取决于母核",
+          "description": "质子化优先发生在碱性氮原子上（杂环N > 羰基O），碱性强弱决定碎片化路径",
+          "mechanism": "质子化位点效应",
+          "neutral_loss": null,
+          "diagnostic_type": "离子化行为",
+          "confidence": "高",
+          "reference": "PMID:16557496"
+        },
+        {
+          "rule_id": "ALK-003",
+          "fragment_mz": "取决于母核",
+          "description": "α-裂解（氮原子α位C-C键断裂）是生物碱最普遍的特征裂解方式",
+          "mechanism": "α-裂解 (Alpha-cleavage)",
+          "neutral_loss": null,
+          "diagnostic_type": "特征裂解",
+          "confidence": "高",
+          "reference": "McLafferty & Turecek, 4th Ed."
+        }
+      ],
+      "subclasses": [
+        {
+          "subclass": "异喹啉类生物碱 (Isoquinoline Alkaloids)",
+          "core_description": "异喹啉母核 (C9H7N)",
+          "example_compounds": [
+            "小檗碱 Berberine",
+            "巴马汀 Palmatine",
+            "罂粟碱 Papaverine",
+            "吗啡 Morphine"
+          ],
+          "rules": [
+            {
+              "rule_id": "ALK-004",
+              "fragment_mz": "< 200",
+              "description": "苄基四氢异喹啉和阿朴啡类生物碱产生m/z<200的特征碎片离子",
+              "mechanism": "失去NHR1R2自由基",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "PMID:25533540 (systematic identification of isoquinoline alkaloids)"
+            },
+            {
+              "rule_id": "ALK-005",
+              "fragment_mz": null,
+              "description": "四氢原小檗碱和N-甲基四氢原小檗碱: RDA裂解 + α-裂解 + [M-H2O]+ 和 [M-CH4]+",
+              "mechanism": "逆Diels-Alder + α-裂解",
+              "neutral_loss": "H2O (18 Da) / CH4 (16 Da)",
+              "diagnostic_type": "特征裂解+中性丢失",
+              "confidence": "高",
+              "reference": "PMID:25533540"
+            },
+            {
+              "rule_id": "ALK-006",
+              "fragment_mz": null,
+              "description": "原小檗碱、苯并菲啶类: [碎片离子-2H]+, [M-H2O]+, [M-CH4]+, [M+H-C3H7OH]+, [M+H-CH3COCH3]+",
+              "mechanism": "脱氢/脱水/脱醇/脱丙酮",
+              "neutral_loss": "H2O (18), CH4 (16), C3H8O (60), C3H6O (58)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "PMID:25533540"
+            },
+            {
+              "rule_id": "ALK-007",
+              "fragment_mz": "取决于取代基",
+              "description": "原小檗碱类以C环RDA裂解为特征，AB环和D环碎片可区分不同取代模式",
+              "mechanism": "逆Diels-Alder (C环)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "PMID:25533540"
+            },
+            {
+              "rule_id": "ALK-014",
+              "fragment_mz": "取决于NHR1R2",
+              "description": "19种异喹啉生物碱亚型(66种化合物)通过Q-TOF-MS/MS+计算化学验证: 碎片离子归因于中性NHR1R2的丢失，各亚型具有独特的MS/MS碎片模式",
+              "mechanism": "氮杂环裂解 + 计算化学验证",
+              "neutral_loss": "NHR1R2",
+              "diagnostic_type": "诊断性产物离子(DPI)",
+              "confidence": "高",
+              "reference": "Nature Sci. Rep. 2020; PMID:31959815"
+            }
+          ]
+        },
+        {
+          "subclass": "吲哚类生物碱 (Indole Alkaloids)",
+          "core_description": "吲哚母核 (C8H7N)",
+          "example_compounds": [
+            "士的宁 Strychnine",
+            "马钱子碱 Brucine",
+            "育亨宾 Yohimbine",
+            "利血平 Reserpine"
+          ],
+          "rules": [
+            {
+              "rule_id": "ALK-008",
+              "fragment_mz": null,
+              "description": "士的宁类: MS2活性裂解位点位于氮桥和配位氧原子; MS3以丢失CH3或OCH3自由基为主",
+              "mechanism": "氮桥裂解 + 自由基脱甲基/脱甲氧基",
+              "neutral_loss": "CH3 (15 Da) / OCH3 (31 Da)",
+              "diagnostic_type": "特征裂解位点",
+              "confidence": "高",
+              "reference": "PMID:16557496"
+            },
+            {
+              "rule_id": "ALK-009",
+              "fragment_mz": "m/z 144 (特征)",
+              "description": "简单吲哚生物碱通过β-裂解产生特征性喹啉离子m/z 144",
+              "mechanism": "β-裂解 (Beta-cleavage)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "中",
+              "reference": "McLafferty & Turecek, 4th Ed."
+            },
+            {
+              "rule_id": "ALK-015",
+              "fragment_mz": "取决于骨架",
+              "description": "单萜吲哚生物碱(MIA)利用MSⁿ和ToF-MS联用可快速鉴定，特征碎片反映柯南烷/白坚木碱等骨架类型",
+              "mechanism": "骨架导向的分级裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "诊断性产物离子(DPI)",
+              "confidence": "高",
+              "reference": "PMID:21828417 (Nauclea officinalis MIA identification)"
+            },
+            {
+              "rule_id": "ALK-016",
+              "fragment_mz": "取决于取代",
+              "description": "Plumeran型吲哚生物碱在负离子ESI-MS/MS中可建立15种裂解路径，用于骨架结构推断",
+              "mechanism": "负离子模式多路径裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "诊断性产物离子(负离子)",
+              "confidence": "高",
+              "reference": "ChemRxiv 2025; Plumeran indole alkaloid fragmentation"
+            }
+          ]
+        },
+        {
+          "subclass": "二萜生物碱 (Diterpenoid Alkaloids)",
+          "core_description": "C19或C20二萜骨架含氮",
+          "example_compounds": [
+            "乌头碱 Aconitine",
+            "中乌头碱 Mesaconitine",
+            "次乌头碱 Hypaconitine"
+          ],
+          "rules": [
+            {
+              "rule_id": "ALK-010",
+              "fragment_mz": null,
+              "description": "乌头碱类: 特征性连续丢失AcOH (60 Da), BzOH (122 Da), CH3OH (32 Da), H2O (18 Da)",
+              "mechanism": "酯基水解/脱醇/脱水",
+              "neutral_loss": "C2H4O2 (60 Da, AcOH) / C7H6O2 (122 Da, BzOH) / CH4O (32 Da, MeOH)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "PMID:19848408"
+            },
+            {
+              "rule_id": "ALK-011",
+              "fragment_mz": null,
+              "description": "C19-二萜生物碱六种亚型各具诊断性产物离子(DPI): cevanine, cevanine-七元环, jervine, veratramine, secosolanidine, solanidine类型",
+              "mechanism": "骨架重排裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "诊断性产物离子",
+              "confidence": "高",
+              "reference": "Wang et al., 2020 (Fritillaria steroidal alkaloids DPI)"
+            },
+            {
+              "rule_id": "ALK-009b",
+              "fragment_mz": "DDA: aconitine 646→586(-AcOH)→526(-AcOH-BzOH)→105(benzoyl+); MDA: benzoylaconine 604→无60Da丢失; lipo: +fatty acid链",
+              "description": "乌头碱类亚型区分: DDA(双酯型, 如aconitine/mesaconitine/hypaconitine): 首先丢失AcOH(60 Da, C8-乙酰基)→MDA→再丢失BzOH(122 Da, C14-苯甲酰基)→氨基醇。MDA(单酯型, 如benzoylaconine): 无60 Da丢失, 仅丢失BzOH(122)或MeOH(32)。Lipo-alkaloid(脂型): C8位为脂肪酸链(代替乙酰基), 丢失脂肪酸(14n+2 Da)。m/z 105.0340(C6H5CO+)为所有含C14-苯甲酰基乌头碱的通用诊断离子",
+              "mechanism": "DDA: 乙酰基→苯甲酰基→核心; MDA: 仅苯甲酰基; Lipo: 脂肪酸链",
+              "neutral_loss": "AcOH(60) / BzOH(122) / MeOH(32) / fatty acid(14n+2)",
+              "diagnostic_type": "中性丢失级联(DDA vs MDA vs Lipo区分)",
+              "confidence": "高",
+              "reference": "PMID:26274911 C19-DAs fragmentation; Wiley JSSC 2021 DDA classification"
+            }
+          ]
+        },
+        {
+          "subclass": "莨菪烷类生物碱 (Tropane Alkaloids)",
+          "core_description": "8-氮杂双环[3.2.1]辛烷母核",
+          "example_compounds": [
+            "阿托品 Atropine",
+            "东莨菪碱 Scopolamine",
+            "可卡因 Cocaine"
+          ],
+          "rules": [
+            {
+              "rule_id": "ALK-012",
+              "fragment_mz": "m/z 124",
+              "description": "莨菪烷生物碱经α-裂解生成特征性m/z 124离子(莨菪烷骨架碎片)",
+              "mechanism": "α-裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "McLafferty & Turecek, 4th Ed."
+            },
+            {
+              "rule_id": "ALK-013",
+              "fragment_mz": null,
+              "description": "可卡因类: 特征性丢失苯甲酸(C7H6O2, 122 Da)和苯甲酸甲酯片段",
+              "mechanism": "酯基断裂",
+              "neutral_loss": "C7H6O2 (122 Da, BzOH)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "McLafferty & Turecek, 4th Ed."
+            }
+          ]
+        },
+        {
+          "subclass": "吡咯里西啶类生物碱 (Pyrrolizidine Alkaloids)",
+          "core_description": "1-氮杂双环[3.3.0]辛烷(双稠吡咯啶)母核",
+          "example_compounds": [
+            "千里光碱 Senecionine",
+            "野百合碱 Monocrotaline",
+            "克氏千里光碱 Senkirkine"
+          ],
+          "rules": [
+            {
+              "rule_id": "ALK-017",
+              "fragment_mz": "m/z 120 (retronecine型), m/z 138 (otonecine型)",
+              "description": "吡咯里西啶生物碱PA可分为retronecine型和otonecine型: retronecine型碎片m/z 120; otonecine型碎片m/z 138",
+              "mechanism": "母核α-裂解 — 氮杂双环开环",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(亚型诊断)",
+              "confidence": "高",
+              "reference": "ScienceDirect, Food Chemistry 2024; PMID:38490121"
+            },
+            {
+              "rule_id": "ALK-018",
+              "fragment_mz": "[M+H-18]+, [M+H-82]+",
+              "description": "PA-N-氧化物在MS2中首先丢失H2O (18 Da)和O (16 Da)，N-氧化物可据此与游离碱区分",
+              "mechanism": "N-氧化物脱水/脱氧",
+              "neutral_loss": "H2O (18 Da) / O (16 Da)",
+              "diagnostic_type": "中性丢失(N-氧化物标志)",
+              "confidence": "高",
+              "reference": "Springer, Anal. Bioanal. Chem. 2022; PMID:36266140"
+            }
+          ]
+        },
+        {
+          "subclass": "喹诺里西啶类生物碱 (Quinolizidine Alkaloids)",
+          "core_description": "双稠哌啶(双四氢吡啶并)母核",
+          "example_compounds": [
+            "羽扇豆碱 Lupinine",
+            "金雀花碱 Cytisine",
+            "苦参碱 Matrine",
+            "氧化苦参碱 Oxymatrine"
+          ],
+          "rules": [
+            {
+              "rule_id": "ALK-019",
+              "fragment_mz": "m/z 136",
+              "description": "双喹诺里西啶生物碱(如sparteine)以o离子m/z 136为优势峰，直接从分子离子产生",
+              "mechanism": "D环重排裂解 — o离子形成",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Wiley, DOI:10.1155/2011/652589; Russ. Chem. Rev."
+            },
+            {
+              "rule_id": "ALK-020",
+              "fragment_mz": "m/z 248→150, 248→136",
+              "description": "苦参碱型生物碱: MS2产生m/z 150和m/z 136特征碎片，来自C环断裂",
+              "mechanism": "喹诺里西啶C环断裂",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "PMID literature on Sophora alkaloid MS"
+            },
+            {
+              "rule_id": "ALK-023",
+              "fragment_mz": "Matrine [M+H]+: 249→150→136; Oxymatrine: 265→247(-H2O)→150→136",
+              "description": "苦参碱(matrine, MW 248): m/z 249→150(C环断裂, 关键诊断)→136。氧化苦参碱(oxymatrine): 首先脱水m/z 265→247, 然后与苦参碱共享碎片m/z 150→136。N-氧化物脱水(-18 Da)为N-氧化物标志",
+              "mechanism": "N-oxide脱水 → 喹诺里西啶C环断裂",
+              "neutral_loss": "H2O(18, N-oxide) + C环断裂碎片",
+              "diagnostic_type": "特征碎片级联(苦参碱型诊断)",
+              "confidence": "高",
+              "reference": "EURL-Pesticides Matrine in Honey; PMID literature on Sophora alkaloid MS"
+            },
+            {
+              "rule_id": "ALK-024",
+              "fragment_mz": "Sophocarpine [M+H]+: 246→136; Sophoridine: 248→150",
+              "description": "槐果碱(sophocarpine, MW 245)碎片m/z 136(与苦参碱m/z 150差14); 槐定碱(sophoridine)碎片m/z 150(与苦参碱共享)。双键位置差异导致碎片位移",
+              "mechanism": "喹诺里西啶骨架裂解(双键位置导向)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(异构体鉴别)",
+              "confidence": "中",
+              "reference": "EURL-Pesticides Matrine in Honey; Wang et al., LC-MS/MS method"
+            }
+          ]
+        },
+        {
+          "subclass": "苯乙胺类生物碱 (Phenethylamine Alkaloids)",
+          "core_description": "苯乙胺骨架, 含β-羟基和N-甲基",
+          "example_compounds": [
+            "麻黄碱 Ephedrine",
+            "伪麻黄碱 Pseudoephedrine",
+            "甲基麻黄碱 Methylephedrine"
+          ],
+          "rules": [
+            {
+              "rule_id": "ALK-021",
+              "fragment_mz": "Ephedrine [M+H]+: 166→148(-H2O)→133(-CH3)→117(-NHCH3)→91(tropylium)",
+              "description": "麻黄碱(ephedrine, MW 165)正离子级联: m/z 166→148(脱水)→133(-CH3)→117(-NHCH3)→91(苄基/鎓离子)。伪麻黄碱碎片相似但比例不同",
+              "mechanism": "α-裂解 + 脱水 + 苄基重排",
+              "neutral_loss": "H2O(18)+CH3(15)+NHCH3(29)",
+              "diagnostic_type": "特征碎片级联(麻黄碱型)",
+              "confidence": "高",
+              "reference": "PMC2582176; MDPI Molecules 2021, 26:6991"
+            },
+            {
+              "rule_id": "ALK-022",
+              "fragment_mz": "Ephedrine MRM: 166→148; Pseudoephedrine: 166→148 (same transition)",
+              "description": "麻黄碱与伪麻黄碱的MRM转换相同(m/z 166→148, 脱水)，需通过色谱分离或离子淌度区分",
+              "mechanism": "脱水(立体异构体碎片相同)",
+              "neutral_loss": "H2O (18 Da)",
+              "diagnostic_type": "中性丢失(异构体不可区分,需色谱)",
+              "confidence": "高",
+              "reference": "MDPI Molecules 2021, 26:6991; LCMS.cz SelexION AppNote"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "苯丙素类",
+      "class_en": "Phenylpropanoids",
+      "core_structure": "C6-C3 (苯环+三碳侧链)",
+      "subclasses": [
+        {
+          "subclass": "苯丙酸类 (Phenylpropanoid Acids)",
+          "core_description": "C6-C3骨架, 侧链含羧基",
+          "example_compounds": [
+            "咖啡酸 Caffeic acid",
+            "阿魏酸 Ferulic acid",
+            "对香豆酸 p-Coumaric acid",
+            "绿原酸 Chlorogenic acid"
+          ],
+          "rules": [
+            {
+              "rule_id": "PPA-001",
+              "fragment_mz": "[M-H-44]- (如咖啡酸179→135, 阿魏酸193→149)",
+              "description": "羟基肉桂酸类以丢失CO2 (44 Da)为最特征碎片化反应",
+              "mechanism": "脱羧反应 (Decarboxylation)",
+              "neutral_loss": "CO2 (44 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Parejo et al., 2004; Hossain et al., 2010; PMID:11199231"
+            },
+            {
+              "rule_id": "PPA-002",
+              "fragment_mz": "[M-H-CO2-CO]-",
+              "description": "脱羧后进一步丢失CO (28 Da)，如咖啡酸m/z 135→107",
+              "mechanism": "脱羧后续脱羰基",
+              "neutral_loss": "CO2 (44 Da) + CO (28 Da)",
+              "diagnostic_type": "连续中性丢失",
+              "confidence": "高",
+              "reference": "PMID:11199231"
+            },
+            {
+              "rule_id": "PPA-003",
+              "fragment_mz": "m/z 191 (基峰), m/z 179",
+              "description": "绿原酸类(咖啡酰奎宁酸): 酯键断裂产生奎宁酸离子m/z 191(基峰)和咖啡酸离子m/z 179",
+              "mechanism": "酯键断裂 (Ester bond cleavage)",
+              "neutral_loss": "C9H6O3 (162 Da, caffeoyl) / C7H12O6 (174 Da, quinic acid)",
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "PMID:11199231; Clifford et al., 2003"
+            },
+            {
+              "rule_id": "PPA-004",
+              "fragment_mz": "m/z 191/179 比值",
+              "description": "绿原酸异构体(3-CQA, 4-CQA, 5-CQA)可通过m/z 191/179强度比及特征水丢失碎片区分",
+              "mechanism": "异构体差异性裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "离子强度比",
+              "confidence": "中",
+              "reference": "Clifford et al., 2003; PMID:12822898"
+            },
+            {
+              "rule_id": "PPA-018",
+              "fragment_mz": "3-CQA: 353→191(强),179(弱); 4-CQA: 353→173(强); 5-CQA: 353→191(最强),179(中)",
+              "description": "绿原酸异构体MS/MS鉴别(均[M-H]- m/z 353): 3-CQA以m/z 191为主(咖啡酰丢失)而m/z 179(咖啡酸)弱; 4-CQA以m/z 173独有碎片为标志(奎宁酸-2H2O); 5-CQA: m/z 191为基峰,m/z 179也明显",
+              "mechanism": "酰基位置导向的差异性裂解 — C3/C4/C5取代改变碎片丰度比",
+              "neutral_loss": "C9H6O3(162, caffeoyl)/C7H12O6(174, quinic acid)",
+              "diagnostic_type": "离子强度比(异构体鉴别)",
+              "confidence": "高",
+              "reference": "Clifford et al., J. Agric. Food Chem. 2003; PMID:12822898; ScienceDirect Talanta 2016"
+            },
+            {
+              "rule_id": "PPA-019",
+              "fragment_mz": "MS4: m/z 127(Q7)和m/z 172(Q4)",
+              "description": "绿原酸MS⁴层级鉴别: Clifford层级方案中m/z ~127(Q7碎片)和m/z ~172(Q4碎片)为位置异构体的高阶诊断碎片",
+              "mechanism": "奎宁酸骨架高阶裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(MS⁴层级诊断)",
+              "confidence": "中",
+              "reference": "Clifford et al., J. Agric. Food Chem. 2003; Rapid Commun. Mass Spectrom. 2006"
+            },
+            {
+              "rule_id": "PPA-003b",
+              "fragment_mz": "3-CQA: 353→191(基峰)+179(咖啡酸); 4-CQA: 353→173(基峰, 奎宁酸脱水, 独有!)+179; 5-CQA: 353→191(基峰, 极简谱, 无m/z 179)",
+              "description": "绿原酸异构体区分(三者[M-H]-均为m/z 353.0878): 4-CQA是唯一产生强m/z 173碎片(奎宁酸脱水)的异构体, 因为C4位咖啡酰基促奎宁酸脱水。5-CQA谱图最简单: 仅m/z 191(基峰)和m/z 135, 几乎无m/z 179(因C5位酰化促进奎宁酸释放而非咖啡酸释放)。3-CQA同时产生m/z 191和179。RP-HPLC流出顺序: 3-CQA < 5-CQA < 4-CQA",
+              "mechanism": "咖啡酰基位置导向差异性酯键断裂",
+              "diagnostic_type": "特征碎片(4-CQA独有m/z 173; 5-CQA极简谱; 3-CQA双碎片)",
+              "confidence": "高",
+              "reference": "Clifford et al., J. Agric. Food Chem. 2003, 51:2900; PMID:25426160; PMC4242998"
+            }
+          ]
+        },
+        {
+          "subclass": "简单苯丙素 (Simple Phenylpropanoids)",
+          "core_description": "C6-C3侧链含醇/醛/烯",
+          "example_compounds": [
+            "松柏醇 Coniferyl alcohol",
+            "丁香酚 Eugenol",
+            "茴香脑 Anethole"
+          ],
+          "rules": [
+            {
+              "rule_id": "PPA-005",
+              "fragment_mz": "m/z 137 (苄基离子), m/z 151 (苯甲酰离子)",
+              "description": "松柏醇及其苷/木脂素产生特征性m/z 137和m/z 151离子，对应氧化态不同的C6-C1碎片",
+              "mechanism": "α-裂解 (侧链Cα-Cβ断裂)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Kurkin et al., 1994; Schmidt et al., various"
+            },
+            {
+              "rule_id": "PPA-006",
+              "fragment_mz": "[M+1-28]+",
+              "description": "丙-1-烯基苯丙素在CI中产生强[M+1-28]+离子(丢失C2H4)，可区分烯丙基/丙-1-烯基异构体",
+              "mechanism": "乙烯消除 (C2H4 loss)",
+              "neutral_loss": "C2H4 (28 Da)",
+              "diagnostic_type": "中性丢失(CI)",
+              "confidence": "高",
+              "reference": "Lange & Schultze, 1992; Org. Mass Spectrom. 27:472"
+            },
+            {
+              "rule_id": "PPA-007",
+              "fragment_mz": "[M+18]+",
+              "description": "含邻位羟基/甲氧基的苯丙素(丁香酚、异丁香酚)在NH3/CI中形成突出[M+18]+加合离子",
+              "mechanism": "NH4+螯合加合",
+              "neutral_loss": null,
+              "diagnostic_type": "加合离子(CI)",
+              "confidence": "高",
+              "reference": "Lange & Schultze, 1992"
+            }
+          ]
+        },
+        {
+          "subclass": "香豆素类 (Coumarins)",
+          "core_description": "苯并α-吡喃酮 (苯环+δ-内酯环), C6-C3内酯",
+          "example_compounds": [
+            "香豆素 Coumarin",
+            "七叶内酯 Esculetin",
+            "补骨脂素 Psoralen",
+            "欧前胡素 Imperatorin"
+          ],
+          "rules": [
+            {
+              "rule_id": "PPA-008",
+              "fragment_mz": "[M+H-44]+",
+              "description": "香豆素以连续丢失CO2 (44 Da)和CO (28 Da)为特征，来自内酯环的降解",
+              "mechanism": "内酯环脱羧 (Decarboxylation)",
+              "neutral_loss": "CO2 (44 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Shi et al., ESI-QE-Orbitrap MS/MS + DFT study; PMID:36721310"
+            },
+            {
+              "rule_id": "PPA-009",
+              "fragment_mz": "[M+H-28]+",
+              "description": "香豆素丢失CO (28 Da)，内酯环脱羰基",
+              "mechanism": "内酯环脱羰基 (Decarbonylation)",
+              "neutral_loss": "CO (28 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Shi et al.; PMID:36721310"
+            },
+            {
+              "rule_id": "PPA-010",
+              "fragment_mz": "m/z 203.03 (C6-C7型); m/z 131.05 (C7-C8型)",
+              "description": "呋喃香豆素亚型分类: C6-C7线型呋喃香豆素特征离子m/z 203.03和m/z 147.04; C7-C8角型呋喃香豆素特征离子m/z 131.05",
+              "mechanism": "呋喃环裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(正离子)",
+              "confidence": "高",
+              "reference": "Notopterygium coumarin study, Zhongguo Zhong Yao Za Zhi 2021"
+            },
+            {
+              "rule_id": "PPA-011",
+              "fragment_mz": "m/z 187.04",
+              "description": "二氢呋喃香豆素特征离子m/z 187.04",
+              "mechanism": "二氢呋喃环裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(正离子)",
+              "confidence": "高",
+              "reference": "Notopterygium coumarin study, Zhongguo Zhong Yao Za Zhi 2021"
+            },
+            {
+              "rule_id": "PPA-012",
+              "fragment_mz": "[M+H-56]+",
+              "description": "异戊烯基化香豆素丢失C4H8 (56 Da)异戊烯基",
+              "mechanism": "异戊烯基消除",
+              "neutral_loss": "C4H8 (56 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "PMID:36721310"
+            },
+            {
+              "rule_id": "PPA-013",
+              "fragment_mz": "m/z 147.04, 119.05, 91.05",
+              "description": "香豆素C-4位糖苷经McLafferty重排产生m/z 147, 119, 91特征离子",
+              "mechanism": "McLafferty重排",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "中",
+              "reference": "Zou et al., Rapid Commun. Mass Spectrom. 2023"
+            }
+          ]
+        },
+        {
+          "subclass": "木脂素类 (Lignans)",
+          "core_description": "C6-C3二聚体 (苯丙素二聚物)",
+          "example_compounds": [
+            "牛蒡子苷元 Arctigenin",
+            "罗汉松脂素 Matairesinol",
+            "松脂素 Pinoresinol",
+            "鬼臼毒素 Podophyllotoxin"
+          ],
+          "rules": [
+            {
+              "rule_id": "PPA-014",
+              "fragment_mz": "[M-H-44]- (CO2丢失)",
+              "description": "二苄基丁内酯型木脂素以丢失CO2 (44 Da)为最诊断性特征（来自内酯环）",
+              "mechanism": "内酯环脱羧 (Decarboxylation of butyrolactone)",
+              "neutral_loss": "CO2 (44 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Schmidt et al., J. Mass Spectrom. 2008, 43:97-107; PMID:17729382"
+            },
+            {
+              "rule_id": "PPA-015",
+              "fragment_mz": "[M-H-48]-",
+              "description": "二苄基丁二醇型木脂素以丢失48 Da(甲醛+H2O)为特征",
+              "mechanism": "1,4-丁二醇断裂 (CH2O + H2O消除)",
+              "neutral_loss": "CH2O + H2O (48 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Schmidt et al., J. Mass Spectrom. 2008; PMID:17729382"
+            },
+            {
+              "rule_id": "PPA-016",
+              "fragment_mz": null,
+              "description": "木脂素糖苷首先丢失糖基产生苷元，然后苷元按上述规则裂解",
+              "mechanism": "糖苷键断裂→苷元裂解",
+              "neutral_loss": "C6H10O5 (162 Da, hexose)",
+              "diagnostic_type": "中性丢失(糖)",
+              "confidence": "高",
+              "reference": "Boldizsár et al., J. Chromatogr. A 2010; PMID:20045181"
+            },
+            {
+              "rule_id": "PPA-017",
+              "fragment_mz": "取决于取代基",
+              "description": "Δ7,8-不饱和二苄基丁内酯木脂素(E/Z混合物)可通过特征MS/MS碎片区分结构异构体",
+              "mechanism": "双键导向的差异性裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Schmidt et al., Rapid Commun. Mass Spectrom. 2008"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "萜类",
+      "class_en": "Terpenoids",
+      "core_structure": "异戊二烯单元 (C5H8)n 聚合体",
+      "subclasses": [
+        {
+          "subclass": "单萜 (Monoterpenes, C10)",
+          "core_description": "两个异戊二烯单元",
+          "example_compounds": [
+            "柠檬烯 Limonene",
+            "樟脑 Camphor",
+            "薄荷醇 Menthol"
+          ],
+          "rules": [
+            {
+              "rule_id": "TER-001",
+              "fragment_mz": "m/z 93 (C7H9+, 二氢䓬鎓离子)",
+              "description": "双环单萜(蒎烯型)以m/z 93为基峰(C7H9+二氢䓬鎓结构)，m/z 93/121比值可用于异构体区分",
+              "mechanism": "双烯丙基C-C键断裂 + 重排",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(EI)",
+              "confidence": "高",
+              "reference": "Enzell, Wahlberg & Ryhage, Mass Spectrom. Rev. 1984, 3:3"
+            },
+            {
+              "rule_id": "TER-002",
+              "fragment_mz": "m/z 69 (香叶醇); m/z 71 (芳樟醇)",
+              "description": "开链单萜经双烯丙基断裂产生特征碎片: 香叶醇→m/z 69(4,5-键断裂), 芳樟醇→m/z 71(5,6-键定向断裂)",
+              "mechanism": "双烯丙基C-C键断裂 (Bis-allylic cleavage)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(EI)",
+              "confidence": "高",
+              "reference": "Enzell, Wahlberg & Ryhage, Mass Spectrom. Rev. 1984, 3:3"
+            }
+          ]
+        },
+        {
+          "subclass": "倍半萜 (Sesquiterpenes, C15)",
+          "core_description": "三个异戊二烯单元",
+          "example_compounds": [
+            "青蒿素 Artemisinin",
+            "苍术酮 Atractylone",
+            "莪术醇 Curcumol"
+          ],
+          "rules": [
+            {
+              "rule_id": "TER-003",
+              "fragment_mz": "取决于母核",
+              "description": "桉叶烷型和杜松烷型(十氢萘体系): RDA裂解占主导(无干扰官能团时)",
+              "mechanism": "逆Diels-Alder (RDA)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征裂解",
+              "confidence": "高",
+              "reference": "Enzell et al., Mass Spectrom. Rev. 1984, 3:3"
+            },
+            {
+              "rule_id": "TER-004",
+              "fragment_mz": "m/z 119, 83, 69",
+              "description": "没药烷型倍半萜: 苄基+烯丙基键断裂产生m/z 119, 83, 69等碎片",
+              "mechanism": "苄基/烯丙基裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "中",
+              "reference": "Enzell et al., Mass Spectrom. Rev. 1984, 3:3"
+            }
+          ]
+        },
+        {
+          "subclass": "二萜 (Diterpenoids, C20)",
+          "core_description": "四个异戊二烯单元",
+          "example_compounds": [
+            "紫杉醇 Paclitaxel",
+            "丹参酮 Tanshinone",
+            "雷公藤甲素 Triptolide"
+          ],
+          "rules": [
+            {
+              "rule_id": "TER-005",
+              "fragment_mz": "取决于母核",
+              "description": "二萜类以连续丢失H2O (18 Da), CO2 (44 Da), HCOOH (46 Da)为常见中性丢失",
+              "mechanism": "脱水/脱羧/脱甲酸",
+              "neutral_loss": "H2O (18 Da) / CO2 (44 Da) / HCOOH (46 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "中",
+              "reference": "Enzell et al., Mass Spectrom. Rev. 1984, 3:3"
+            },
+            {
+              "rule_id": "TER-006",
+              "fragment_mz": "m/z 68",
+              "description": "新植二烯(开链二萜): McLafferty重排产生m/z 68基峰",
+              "mechanism": "McLafferty重排",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(EI)",
+              "confidence": "高",
+              "reference": "Enzell et al., Mass Spectrom. Rev. 1984, 3:3"
+            },
+            {
+              "rule_id": "ALK-009b",
+              "fragment_mz": "DDA: aconitine 646→586(-AcOH)→526(-AcOH-BzOH)→105(benzoyl+); MDA: benzoylaconine 604→无60Da丢失; lipo: +fatty acid链",
+              "description": "乌头碱类亚型区分: DDA(双酯型, 如aconitine/mesaconitine/hypaconitine): 首先丢失AcOH(60 Da, C8-乙酰基)→MDA→再丢失BzOH(122 Da, C14-苯甲酰基)→氨基醇。MDA(单酯型, 如benzoylaconine): 无60 Da丢失, 仅丢失BzOH(122)或MeOH(32)。Lipo-alkaloid(脂型): C8位为脂肪酸链(代替乙酰基), 丢失脂肪酸(14n+2 Da)。m/z 105.0340(C6H5CO+)为所有含C14-苯甲酰基乌头碱的通用诊断离子",
+              "mechanism": "DDA: 乙酰基→苯甲酰基→核心; MDA: 仅苯甲酰基; Lipo: 脂肪酸链",
+              "neutral_loss": "AcOH(60) / BzOH(122) / MeOH(32) / fatty acid(14n+2)",
+              "diagnostic_type": "中性丢失级联(DDA vs MDA vs Lipo区分)",
+              "confidence": "高",
+              "reference": "PMID:26274911 C19-DAs fragmentation; Wiley JSSC 2021 DDA classification"
+            }
+          ]
+        },
+        {
+          "subclass": "三萜 (Triterpenoids, C30)",
+          "core_description": "六个异戊二烯单元，五环/四环骨架",
+          "example_compounds": [
+            "齐墩果酸 Oleanolic acid",
+            "熊果酸 Ursolic acid",
+            "灵芝酸 Ganoderic acid",
+            "甘草次酸 Glycyrrhetinic acid"
+          ],
+          "rules": [
+            {
+              "rule_id": "TER-007",
+              "fragment_mz": "取决于骨架类型",
+              "description": "Δ12-不饱和五环三萜(齐墩果烷/乌苏烷型)经C环RDA裂解产生特征性双烯和亲双烯体碎片",
+              "mechanism": "逆Diels-Alder (C环)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Gao et al., Rapid Commun. Mass Spectrom. 2011; PMID:21503999"
+            },
+            {
+              "rule_id": "TER-008",
+              "fragment_mz": null,
+              "description": "乌苏烷型C-3差向异构体区分: 3β-OH→ MS3中[M-H-H2O-HCOOH]- >> [M-H-H2O-CO2]-; 3α-OH→相反",
+              "mechanism": "C-3羟基空间导向差异性中性丢失",
+              "neutral_loss": "HCOOH (46 Da) / CO2 (44 Da)",
+              "diagnostic_type": "离子强度比(MS3)",
+              "confidence": "高",
+              "reference": "Gao et al., Rapid Commun. Mass Spectrom. 2011; PMID:21503999"
+            },
+            {
+              "rule_id": "TER-009",
+              "fragment_mz": null,
+              "description": "灵芝三萜: C-7/C-15羟基→D环裂解(b系列离子); C-15酮→C环裂解(a系列离子); C-7酮→双氢转移裂解(a+2/b+2离子)",
+              "mechanism": "环裂解 + 氢重排",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Tanaka et al., Nat. Prod. Commun. 2011; Tan & Chen, J. Chromatogr. A 2008"
+            },
+            {
+              "rule_id": "TER-010",
+              "fragment_mz": null,
+              "description": "三萜常见中性丢失: H2O (18 Da), CO2 (44 Da), HCOOH (46 Da), 及多种组合丢失",
+              "mechanism": "脱水/脱羧/脱甲酸",
+              "neutral_loss": "H2O (18) / CO2 (44) / HCOOH (46)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "SciDirect 2026 review on triterpenoid LC-MS in TCM"
+            },
+            {
+              "rule_id": "TER-026",
+              "fragment_mz": "齐墩果烷型苷元 m/z 455; 乌苏烷型苷元 m/z 455; 白桦脂酸型 m/z 471→453",
+              "description": "五环三萜苷元诊断离子汇总: 齐墩果酸/熊果酸 m/z 455[M+H]+; 常春藤皂苷元(hederagenin) m/z 471→453(-H2O); 蒲公英甾醇 m/z 473→455→437(连续脱水)",
+              "mechanism": "骨架脱水/脱羧",
+              "neutral_loss": "H2O(18)/CO2(44)",
+              "diagnostic_type": "特征碎片(五环三萜苷元分型)",
+              "confidence": "高",
+              "reference": "Wiley PCA 2022; PMC6680687; Pulsatilla triterpenoid MS"
+            }
+          ]
+        },
+        {
+          "subclass": "三萜皂苷 (Triterpenoid Saponins)",
+          "core_description": "三萜苷元+糖链",
+          "example_compounds": [
+            "甘草酸 Glycyrrhizic acid",
+            "人参皂苷Rb1 Ginsenoside Rb1",
+            "柴胡皂苷A Saikosaponin A"
+          ],
+          "rules": [
+            {
+              "rule_id": "TER-011",
+              "fragment_mz": "[M-H-162]- (连续丢失)",
+              "description": "三萜皂苷从糖链末端顺序丢失单糖单元: 葡萄糖-162 Da, 葡萄糖醛酸-176 Da, 鼠李糖-146 Da, 阿拉伯糖-132 Da",
+              "mechanism": "糖苷键顺序裂解 (Sequential glycosidic cleavage)",
+              "neutral_loss": "C6H10O5 (162 Da) / C6H8O6 (176 Da) / C6H10O4 (146 Da) / C5H8O4 (132 Da)",
+              "diagnostic_type": "中性丢失(顺序)",
+              "confidence": "高",
+              "reference": "Tanaka et al., Nat. Prod. Commun. 2011; PMID:22224272"
+            },
+            {
+              "rule_id": "TER-012",
+              "fragment_mz": "[M+NH4 - 17]+",
+              "description": "正离子模式中[M+NH4]+加合离子丢失NH3 (17 Da)比直接糖丢失更灵敏，可用于高通量筛查",
+              "mechanism": "铵加合离子脱氨 (NH3 loss)",
+              "neutral_loss": "NH3 (17 Da)",
+              "diagnostic_type": "中性丢失(筛查)",
+              "confidence": "高",
+              "reference": "Aims et al., Anal. Chim. Acta 2014; PMID:24528703"
+            },
+            {
+              "rule_id": "TER-013",
+              "fragment_mz": "[sapogenin+H(H2O)n]+",
+              "description": "具11-氧代-12-烯结构的三萜皂苷产生特征性[sapogenin+H(H2O)n]+苷元碎片",
+              "mechanism": "电荷定位效应 — 11-oxo-12-ene引导裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(正离子)",
+              "confidence": "高",
+              "reference": "Tanaka et al., Nat. Prod. Commun. 2011"
+            },
+            {
+              "rule_id": "TER-014",
+              "fragment_mz": null,
+              "description": "葡萄糖醛酸皂苷在CID中出现特征性糖醛酸交叉环裂解碎片",
+              "mechanism": "糖醛酸交叉环裂解 (Cross-ring cleavage)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "中",
+              "reference": "Tanaka et al., Nat. Prod. Commun. 2011"
+            },
+            {
+              "rule_id": "TER-019",
+              "fragment_mz": "PPD型苷元 m/z 423.36; PPT型苷元 m/z 441.37/423.36",
+              "description": "人参皂苷按苷元分型诊断: 原人参二醇型(PPD, 如Rb1/Rd)苷元离子m/z 423.36[M-H]-; 原人参三醇型(PPT, 如Re/Rg1)苷元离子m/z 441.37[M-H-H2O]-或m/z 423.36[进一步脱水]",
+              "mechanism": "糖链顺序丢失 → 苷元骨架特征碎片",
+              "neutral_loss": "n×C6H10O5(162 Da Glc) / C6H10O4(146 Da Rha)",
+              "diagnostic_type": "特征碎片(PPD/PPT分型诊断)",
+              "confidence": "高",
+              "reference": "MDPI Molecules 2023, 28(3):941; PMC10920005; PMC10974181"
+            },
+            {
+              "rule_id": "TER-020",
+              "fragment_mz": "Rb1: 1107→945(-162)→783(-162)→621(-162)→423(苷元); Rd: 945→783→621→423",
+              "description": "PPD型人参皂苷特征级联(负离子): Rb1 [M-H]- m/z 1107→945(-Glc)→783(-Glc)→621(-Glc)→423(PPD苷元); Rd m/z 945→783→621→423",
+              "mechanism": "顺序葡萄糖丢失(外→内)",
+              "neutral_loss": "3×C6H10O5 (486 Da total, Rb1)",
+              "diagnostic_type": "特征碎片级联(PPD型)",
+              "confidence": "高",
+              "reference": "PMC10920005; LabRulez Ginsenoside AppNote; SCIEX Ginseng R&D Poster"
+            },
+            {
+              "rule_id": "TER-021",
+              "fragment_mz": "Re: 945→783(-Glc)→637(-Rha?); Rg1: 801→639(-Glc)→477(-Glc)",
+              "description": "PPT型人参皂苷特征级联(负离子): Re [M-H]- m/z 945→783→637(丢失Rha+Glc); Rg1 m/z 801→639(-Glc)→477(-Glc)，苷元区m/z 441/423",
+              "mechanism": "顺序糖丢失(PPT型苷元含C-6 OH使m/z较高)",
+              "neutral_loss": "Glc(162)+Rha(146)",
+              "diagnostic_type": "特征碎片级联(PPT型)",
+              "confidence": "高",
+              "reference": "PMC10920005; MDPI Molecules 2023, 28:941"
+            },
+            {
+              "rule_id": "TER-022",
+              "fragment_mz": "m/z 364.9 (Rd MS3二糖离子)",
+              "description": "人参皂苷Rd在MS3阶段产生二糖离子m/z 364.9，为葡萄糖-葡萄糖碎片，可用于确认糖链连接",
+              "mechanism": "糖链内部断裂产生二糖oxonium离子",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(糖链诊断)",
+              "confidence": "中",
+              "reference": "LabRulez Ginsenoside AppNote"
+            },
+            {
+              "rule_id": "TER-023",
+              "fragment_mz": "Glycyrrhizin: 821→645(-176)→469(-176); Aglycone m/z 469→351",
+              "description": "甘草酸(glycyrrhizin)负离子特征级联: [M-H]- m/z 821→m/z 645(丢失1个葡萄糖醛酸176 Da)→m/z 469(丢失第2个葡萄糖醛酸)→m/z 351(RDA裂解碎片)",
+              "mechanism": "双葡萄糖醛酸顺序丢失(176+176 Da) → 苷元RDA裂解",
+              "neutral_loss": "2×C6H8O6 (352 Da, 2×glucuronic acid)",
+              "diagnostic_type": "特征碎片级联(葡萄糖醛酸皂苷)",
+              "confidence": "高",
+              "reference": "ScienceDirect Microchemical J. 2010; ACS J. Nat. Prod. 2018"
+            },
+            {
+              "rule_id": "TER-024",
+              "fragment_mz": "Saikosaponin aglycone: m/z 471→441(-CH2O, -30 Da)",
+              "description": "柴胡皂苷(saikosaponins, oleanane型)特征: 丢失30 Da(CH2O)为含环氧/醚桥柴胡皂苷的诊断性标志。苷元离子m/z 471→441(-30)。乙酰化柴胡皂苷另显示AcOH丢失(-60 Da)",
+              "mechanism": "环氧桥断裂丢失CH2O (30 Da)",
+              "neutral_loss": "CH2O (30 Da) / CH3COOH (60 Da, 乙酰化型)",
+              "diagnostic_type": "中性丢失(柴胡皂苷诊断)",
+              "confidence": "高",
+              "reference": "PMC8514958; Frontiers in Chemistry 2021"
+            },
+            {
+              "rule_id": "TER-025",
+              "fragment_mz": "Astragaloside IV: 783→651(-132 Xyl)→489(aglycone); Cycloastragenol m/z 489→471(-H2O)",
+              "description": "黄芪皂苷(astragalosides, cycloartane型)负离子: Astragaloside IV [M-H]- m/z 783→651(-xylose 132 Da)→489(环黄芪醇苷元)。苷元脱水碎片m/z 471",
+              "mechanism": "顺序糖丢失(xyl→glc) → 环黄芪醇苷元",
+              "neutral_loss": "C5H8O4(132, Xyl)+C6H10O5(162, Glc)",
+              "diagnostic_type": "特征碎片级联(cycloartane型)",
+              "confidence": "高",
+              "reference": "MDPI Molecules 2024, 29(6):1295; PMC8965511"
+            },
+            {
+              "rule_id": "TER-013",
+              "fragment_mz": "glycyrrhizin: [M-H]- 821→645(-GlcA 176)→469(-GlcA 176, glycyrrhetinic acid)→351(diglucuronic acid)",
+              "description": "甘草酸(glycyrrhizin)特征: [M-H]- 821.4→645.4(丢失第一个葡萄糖醛酸GlcA, 176.0321 Da)→469.3(丢失第二个GlcA, 苷元glycyrrhetinic acid)→351.1(双葡萄糖醛酸碎片)。m/z 193.0为单GlcA碎片。astragaloside IV: 807[+Na]→621(-Xyl 132)→473(-Glc 162, 苷元cycloastragenol)",
+              "mechanism": "葡萄糖醛酸/糖基顺序丢失",
+              "neutral_loss": "GlcA (176.0321) ×2 / Xyl (132) + Glc (162)",
+              "diagnostic_type": "中性丢失(甘草酸/黄芪甲苷特异性)",
+              "confidence": "高",
+              "reference": "PMID:15639440 glycyrrhizin LC-MS/MS; PMC10974181 saponin characterization 2024"
+            },
+            {
+              "rule_id": "TER-014",
+              "fragment_mz": "Rb1(PPD型): [M-H]- 1107→945(-Glc)→783(-Glc)→621(-Glc)→459(-Glc, PPD苷元); Rg1(PPT型): 799→637(-Glc)→475(-Glc, PPT苷元)",
+              "description": "人参皂苷苷元诊断: PPD型(protopanaxadiol)苷元m/z 459.4; PPT型(protopanaxatriol)苷元m/z 475.4。PPD vs PPT由苷元m/z差16 Da(一个OH)区分。Rb1(PPD, 4个Glc): 1107→945→783→621→459。Rg1(PPT, 2个Glc): 799→637→475。Notoginsenoside R1(PPT): 931→799(-Xyl 132)→637(-Glc)。糖丢失顺序: 外侧糖优先断裂",
+              "mechanism": "糖苷键从外侧向内侧顺序断裂 → PPD/PPT苷元",
+              "neutral_loss": "Glc (162) ×n + Xyl (132) / Ara (132) / Rha (146)",
+              "diagnostic_type": "特征碎片(PPD苷元m/z 459 vs PPT苷元m/z 475)",
+              "confidence": "高",
+              "reference": "PMC10920005 ginsenoside profiling; PMC6268376 Panax notoginseng saponins"
+            }
+          ]
+        },
+        {
+          "subclass": "四萜/类胡萝卜素 (Tetraterpenes/Carotenoids, C40)",
+          "core_description": "八个异戊二烯单元, 共轭多烯长链",
+          "example_compounds": [
+            "β-胡萝卜素 β-Carotene",
+            "番茄红素 Lycopene",
+            "叶黄素 Lutein",
+            "虾青素 Astaxanthin"
+          ],
+          "rules": [
+            {
+              "rule_id": "TER-015",
+              "fragment_mz": "[M]+ (分子离子)",
+              "description": "APCI正离子模式下类胡萝卜素主要形成[M]+和[M+H]+。CID-MS/MS中按端基结构裂解",
+              "mechanism": "APCI离子化 + CID裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "离子化行为",
+              "confidence": "高",
+              "reference": "PMC3293484; Rivera-Madrid et al., APCI-MS/MS of carotenoids"
+            },
+            {
+              "rule_id": "TER-016",
+              "fragment_mz": "m/z 444 (β-carotene失去一端C10H16)",
+              "description": "β-胡萝卜素特征碎片: m/z 444 (丢失C10H16, 136 Da), m/z 430 (丢失C11H18, 150 Da), m/z 369 (连续裂解)",
+              "mechanism": "端基消除 (End-group elimination)",
+              "neutral_loss": "C10H16 (136 Da) / C11H18 (150 Da)",
+              "diagnostic_type": "特征碎片(APCI+)",
+              "confidence": "高",
+              "reference": "PMC3293484; Univ. Lleida carotenoid MS review"
+            },
+            {
+              "rule_id": "TER-017",
+              "fragment_mz": "取决于环化类型",
+              "description": "类胡萝卜素环化端基决定碎片模式: β环→m/z 444/430; ε环→特征性m/z差异; 无环(番茄红素)→不同裂解路径",
+              "mechanism": "端基环化类型导向裂解",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(端基诊断)",
+              "confidence": "高",
+              "reference": "IntechOpen 2019; carotenoid MS developments"
+            },
+            {
+              "rule_id": "TER-018",
+              "fragment_mz": "m/z 92.5",
+              "description": "叶黄素(含OH)经多次丢失H2O后产生m/z 92.5碎片，用于区分含氧与不含氧类胡萝卜素",
+              "mechanism": "连续脱水 + 骨架裂解",
+              "neutral_loss": "H2O (18 Da) ×n",
+              "diagnostic_type": "特征碎片(含氧标志)",
+              "confidence": "中",
+              "reference": "Univ. Lleida carotenoid MS review; MDPI Molecules 2019, 24, 4517"
+            }
+          ]
+        },
+        {
+          "subclass": "四萜/类胡萝卜素 (Tetraterpenes / Carotenoids)",
+          "core_description": "C40多烯化合物(8个异戊二烯单元), 含/不含环己烯端环",
+          "example_compounds": [
+            "β-胡萝卜素 β-Carotene",
+            "番茄红素 Lycopene",
+            "叶黄素 Lutein",
+            "玉米黄质 Zeaxanthin"
+          ],
+          "rules": [
+            {
+              "rule_id": "TER-015",
+              "fragment_mz": "β-carotene [M+H]+ 537→137(β-ionone, 基峰)→413; lycopene: 537→467(-isoprene, 基峰); α-carotene: 537→123(α-ionone, 区分β); lutein [M+H]+ 569→135→495(-H2O-RDA)",
+              "description": "类胡萝卜素以APCI离子化为佳(ESI灵敏度低)。β-carotene: β-ionone碎片m/z 137为基峰。lycopene: m/z 467(-C5H8 isoprene)为基峰, 区别于β-carotene。α-carotene vs β-carotene: α有独有DFI m/z 123(α-ionone)。lutein vs zeaxanthin: lutein有独有m/z 495(-H2O-RDA)和m/z 430(-α-ionone)。中性丢失: toluene(92), xylene(106), isoprene(68)",
+              "mechanism": "多烯链消除 (toluene/xylene/isoprene) + 端环离子(ionone碎片)",
+              "neutral_loss": "C7H8 (92, toluene) / C5H8 (68, isoprene) / C8H10 (106, xylene)",
+              "diagnostic_type": "特征碎片(端环ionone诊断, 区分胡萝卜素异构体)",
+              "confidence": "高",
+              "reference": "van Breemen et al., Int. J. Mass Spectrom. 2012, 312:163-172; PMID:22408388; PMC3293484"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "蒽醌类",
+      "class_en": "Anthraquinones",
+      "core_structure": "9,10-蒽醌母核 (三环二酮)",
+      "example_compounds": [
+        "大黄素 Emodin",
+        "大黄酸 Rhein",
+        "大黄酚 Chrysophanol",
+        "芦荟大黄素 Aloe-emodin",
+        "大黄素甲醚 Physcion"
+      ],
+      "rules": [
+        {
+          "rule_id": "ANT-001",
+          "fragment_mz": "[M-H-28]- (CO丢失)",
+          "description": "蒽醌类以丢失CO (28 Da，来自醌羰基)为最特征中性丢失",
+          "mechanism": "脱羰基 (Decarbonylation of quinone carbonyl)",
+          "neutral_loss": "CO (28 Da)",
+          "diagnostic_type": "中性丢失",
+          "confidence": "高",
+          "reference": "Ma et al., J. Hubei Univ. (Nat. Sci.) 2006"
+        },
+        {
+          "rule_id": "ANT-002",
+          "fragment_mz": "[M-H-44]- (CO2丢失)",
+          "description": "蒽醌类丢失CO2 (44 Da)经重排反应产生",
+          "mechanism": "重排脱羧 (Rearrangement decarboxylation)",
+          "neutral_loss": "CO2 (44 Da)",
+          "diagnostic_type": "中性丢失",
+          "confidence": "高",
+          "reference": "Dong et al., HPLC/ESI-IT-TOF MS of Polygonum cuspidatum"
+        },
+        {
+          "rule_id": "ANT-003",
+          "fragment_mz": "取决于取代",
+          "description": "蒽醌经中央醌环RDA裂解为特征，但通常被CO/CO2丢失优势所掩盖",
+          "mechanism": "逆Diels-Alder (中央醌环)",
+          "neutral_loss": null,
+          "diagnostic_type": "特征裂解",
+          "confidence": "中",
+          "reference": "Ma et al., J. Hubei Univ. 2006"
+        },
+        {
+          "rule_id": "ANT-004",
+          "fragment_mz": "Emdin: 269→241(CO), 225(CO2)",
+          "description": "大黄素(emodin, MW 270): [M-H]- m/z 269 → m/z 241(CO丢失) → m/z 225(CO2丢失)",
+          "mechanism": "脱羰基→脱CO2",
+          "neutral_loss": "CO (28 Da) / CO2 (44 Da)",
+          "diagnostic_type": "特征碎片+中性丢失",
+          "confidence": "高",
+          "reference": "Ma et al., 2006; MRM 269→225"
+        },
+        {
+          "rule_id": "ANT-005",
+          "fragment_mz": "Rhein: 283→257(CO), 239(CO2)",
+          "description": "大黄酸(rhein, MW 284): [M-H]- m/z 283 → m/z 257(CO丢失) → m/z 239(H2O丢失) → 特征羧基定向裂解",
+          "mechanism": "脱羰基→脱水 (羧基定向)",
+          "neutral_loss": "CO (28 Da) + H2O (18 Da)",
+          "diagnostic_type": "特征碎片+中性丢失",
+          "confidence": "高",
+          "reference": "Ma et al., 2006; MRM 283.5→239.2"
+        },
+        {
+          "rule_id": "ANT-006",
+          "fragment_mz": "Chrysophanol: 253→225",
+          "description": "大黄酚(chrysophanol): [M-H]- m/z 253 → m/z 225(CO丢失)",
+          "mechanism": "脱羰基 (Decarbonylation)",
+          "neutral_loss": "CO (28 Da)",
+          "diagnostic_type": "中性丢失",
+          "confidence": "高",
+          "reference": "MRM 253.1→225.0"
+        },
+        {
+          "rule_id": "ANT-007",
+          "fragment_mz": "Physcion: 283→240",
+          "description": "大黄素甲醚(physcion): [M-H]- m/z 283 → m/z 240(特征碎片)",
+          "mechanism": "甲氧基定向裂解",
+          "neutral_loss": "CH3 + CO (43 Da)",
+          "diagnostic_type": "中性丢失",
+          "confidence": "高",
+          "reference": "MRM 283.1→240.2"
+        },
+        {
+          "rule_id": "ANT-008",
+          "fragment_mz": null,
+          "description": "蒽醌类在负离子ESI中产生强[M-H]-基峰，通常不形成二聚体或加合离子",
+          "mechanism": "负离子模式选择性离子化",
+          "neutral_loss": null,
+          "diagnostic_type": "离子化行为",
+          "confidence": "高",
+          "reference": "Ma et al., J. Hubei Univ. 2006"
+        }
+      ]
+    },
+    {
+      "class": "甾体类",
+      "class_en": "Steroids",
+      "core_structure": "环戊烷并多氢菲 (四环骨架 A-B-C-D)",
+      "subclasses": [
+        {
+          "subclass": "甾醇 (Sterols)",
+          "core_description": "3-羟基甾体, C17脂肪侧链",
+          "example_compounds": [
+            "胆固醇 Cholesterol",
+            "β-谷甾醇 β-Sitosterol",
+            "豆甾醇 Stigmasterol"
+          ],
+          "rules": [
+            {
+              "rule_id": "STE-001",
+              "fragment_mz": "m/z 257 (不饱和侧链); m/z 300 (McLafferty)",
+              "description": "甾醇C17侧链裂解: 不饱和侧链产生m/z 257(丢失侧链+2H+甲基迁移); McLafferty重排产生m/z 300",
+              "mechanism": "侧链裂解 + 甲基迁移/McLafferty重排",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(EI)",
+              "confidence": "高",
+              "reference": "Björkhem & Gustafsson, Org. Mass Spectrom. 1973; PMID:1154458"
+            },
+            {
+              "rule_id": "STE-002",
+              "fragment_mz": "m/z 257/m/z 300 比值",
+              "description": "Δ7甾醇: m/z 257 > m/z 300; Δ5甾醇: m/z 300 > m/z 257 (诊断性比值规则)",
+              "mechanism": "双键位置导向的裂解偏好",
+              "neutral_loss": null,
+              "diagnostic_type": "离子强度比(诊断)",
+              "confidence": "高",
+              "reference": "Björkhem & Gustafsson, Org. Mass Spectrom. 1973"
+            }
+          ]
+        },
+        {
+          "subclass": "甾体皂苷 (Steroidal Saponins)",
+          "core_description": "螺甾烷/呋甾烷母核+糖链",
+          "example_compounds": [
+            "薯蓣皂苷 Dioscin",
+            "知母皂苷 Timosaponin"
+          ],
+          "rules": [
+            {
+              "rule_id": "STE-003",
+              "fragment_mz": "取决于苷元类型",
+              "description": "甾体皂苷以顺序糖丢失为主(同三萜皂苷)，螺甾烷型皂苷因F环稳定性产生特征性苷元碎片",
+              "mechanism": "糖苷键顺序裂解 → 苷元裂解",
+              "neutral_loss": "C6H10O5 (162 Da) / C6H10O4 (146 Da) / C5H8O4 (132 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Challinor & De Voss, Steroids 2011; MDPI Molecules 2023, 28, 705"
+            },
+            {
+              "rule_id": "STE-006",
+              "fragment_mz": "取决于糖链组成",
+              "description": "甾体皂苷ESI-QqTOF-MS/MS中可观察到鼠李糖优先丢失(146 Da)，用于推断糖链连接顺序",
+              "mechanism": "末端糖优先丢失",
+              "neutral_loss": "C6H10O4 (146 Da, rhamnose)",
+              "diagnostic_type": "中性丢失(糖链顺序)",
+              "confidence": "高",
+              "reference": "Wiley J. Mass Spectrom. 2005; DOI:10.1002/jms.988"
+            }
+          ]
+        },
+        {
+          "subclass": "强心苷 (Cardiac Glycosides)",
+          "core_description": "甾体母核+C17五元/六元不饱和内酯环+糖链",
+          "example_compounds": [
+            "地高辛 Digoxin",
+            "洋地黄毒苷 Digitoxin",
+            "毒毛旋花子苷 Ouabain"
+          ],
+          "rules": [
+            {
+              "rule_id": "STE-004",
+              "fragment_mz": "[M+H-n×146]+ → 苷元",
+              "description": "强心苷特征性连续丢失洋地黄毒糖单元(各146 Da, 脱氧己糖)后产生苷元碎片",
+              "mechanism": "糖苷键顺序裂解",
+              "neutral_loss": "C6H10O4 (146 Da, digitoxose)",
+              "diagnostic_type": "中性丢失(顺序)",
+              "confidence": "高",
+              "reference": "Ravi et al., Data in Brief 2020; PMC7153291; PMID:32300626"
+            },
+            {
+              "rule_id": "STE-005",
+              "fragment_mz": "Digitoxigenin: m/z 375.2531, 357.2426, 339.2320",
+              "description": "洋地黄毒苷元(digitoxigenin)的三个特征碎片m/z 375→357→339，为连续脱水产物(2个OH)",
+              "mechanism": "连续脱水 (-H2O ×2)",
+              "neutral_loss": "H2O (18 Da) ×2",
+              "diagnostic_type": "特征碎片(苷元诊断)",
+              "confidence": "高",
+              "reference": "Ravi et al., Data in Brief 2020; PMC7153291"
+            },
+            {
+              "rule_id": "STE-007",
+              "fragment_mz": "Digoxigenin: m/z 391.2474, 373.2368, 355.2263, 337.2156",
+              "description": "地高辛苷元(digoxigenin)四个特征碎片: 连续脱水三次(3个OH)，为C12-OH洋地黄毒苷元标志",
+              "mechanism": "连续脱水 (-H2O ×3)",
+              "neutral_loss": "H2O (18 Da) ×3",
+              "diagnostic_type": "特征碎片(苷元亚型诊断)",
+              "confidence": "高",
+              "reference": "Ravi et al., Data in Brief 2020; PMC7153291"
+            },
+            {
+              "rule_id": "STE-008",
+              "fragment_mz": "digitoxose m/z 131.0703; glucose m/z 145.1012; fucose m/z 129.0546",
+              "description": "强心苷糖单元碎片: digitoxose m/z 131, acetyldigitoxose m/z 173, digitalose m/z 161, glucose m/z 145, fucose m/z 129",
+              "mechanism": "糖单元断裂",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(糖单元诊断)",
+              "confidence": "高",
+              "reference": "Ravi et al., Data in Brief 2020; PMC7153291"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "鞣质类",
+      "class_en": "Tannins",
+      "core_structure": "多酚类大分子(可水解鞣质)或多聚黄烷-3-醇(缩合鞣质)",
+      "subclasses": [
+        {
+          "subclass": "可水解鞣质 (Hydrolyzable Tannins)",
+          "core_description": "没食子酸/鞣花酸与葡萄糖酯化",
+          "example_compounds": [
+            "没食子鞣质 Gallotannin",
+            "鞣花鞣质 Ellagitannin",
+            "五没食子酰葡萄糖 Pentagalloylglucose"
+          ],
+          "rules": [
+            {
+              "rule_id": "TAN-001",
+              "fragment_mz": "m/z 169.014 (没食子酸), m/z 125.024 (脱羧没食子酸)",
+              "description": "含没食子酰基的可水解鞣质产生m/z 169 (没食子酸负离子) 及m/z 125 (脱CO2) 特征碎片",
+              "mechanism": "酯键断裂 → 没食子酸 → 脱羧",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(负离子)",
+              "confidence": "高",
+              "reference": "Engström & Karonen, Mass Spectrom. Rev. 2026; PMID:41307161"
+            },
+            {
+              "rule_id": "TAN-002",
+              "fragment_mz": "m/z 300.999 (鞣花酸), m/z 275.020, m/z 249.040",
+              "description": "含HHDP(六羟基联苯二甲酰基)的鞣花鞣质产生m/z 301(鞣花酸，源自HHDP自发内酯化)及m/z 275, 249系列碎片",
+              "mechanism": "HHDP自发性内酯化 → 鞣花酸 → 连续脱羧",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(负离子, HHDP标志)",
+              "confidence": "高",
+              "reference": "J. Agric. Food Chem. 2007, 55:143; Engström & Karonen, 2026"
+            },
+            {
+              "rule_id": "TAN-003",
+              "fragment_mz": null,
+              "description": "大分子可水解鞣质常见[M-2H]2-双电荷离子(如五没食子酰葡萄糖)",
+              "mechanism": "多电荷离子化",
+              "neutral_loss": null,
+              "diagnostic_type": "离子化行为",
+              "confidence": "高",
+              "reference": "Engström & Karonen, Mass Spectrom. Rev. 2026"
+            }
+          ]
+        },
+        {
+          "subclass": "缩合鞣质 (Condensed Tannins / Proanthocyanidins)",
+          "core_description": "黄烷-3-醇单元经C-C键聚合",
+          "example_compounds": [
+            "原花青素B2 Procyanidin B2",
+            "原飞燕草素 Prodelphinidin",
+            "(-)-表儿茶素 (-)-Epicatechin"
+          ],
+          "rules": [
+            {
+              "rule_id": "TAN-004",
+              "fragment_mz": "m/z 289.071 (儿茶素/表儿茶素单体)",
+              "description": "缩合鞣质的特征性单体碎片m/z 289 (儿茶素/表儿茶素负离子)，为QM(醌甲基化物)裂解的产物",
+              "mechanism": "醌甲基化物裂解 (Quinone Methide cleavage, 黄烷键间C-C键断裂)",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(负离子)",
+              "confidence": "高",
+              "reference": "Engström & Karonen, 2026; PMID:41307161"
+            },
+            {
+              "rule_id": "TAN-005",
+              "fragment_mz": "m/z 425.087 (RDA碎片), m/z 407.076 (−H2O)",
+              "description": "缩合鞣质RDA裂解产生m/z 425碎片(丢失152 Da, C8H8O3)，进一步脱水得m/z 407",
+              "mechanism": "逆Diels-Alder (RDA)",
+              "neutral_loss": "C8H8O3 (152 Da)",
+              "diagnostic_type": "特征碎片(负离子)",
+              "confidence": "高",
+              "reference": "Engström & Karonen, 2026; PMID:41307161"
+            },
+            {
+              "rule_id": "TAN-006",
+              "fragment_mz": "m/z 451.103 (HRF碎片)",
+              "description": "缩合鞣质杂环裂解(HRF)产生m/z 451特征碎片(丢失126 Da)",
+              "mechanism": "杂环裂解 (Heterocyclic Ring Fission, HRF)",
+              "neutral_loss": "C6H6O3 (126 Da)",
+              "diagnostic_type": "特征碎片(负离子)",
+              "confidence": "高",
+              "reference": "Engström & Karonen, 2026; PMID:41307161"
+            },
+            {
+              "rule_id": "TAN-007",
+              "fragment_mz": "m/z 287.055 (脱氢儿茶素)",
+              "description": "B型原花青素产生m/z 287特征碎片(脱氢延伸单元标志)，用于DP判定",
+              "mechanism": "QM裂解+脱氢",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(延伸单元标志)",
+              "confidence": "高",
+              "reference": "Engström & Karonen, 2026; PMID:41307161"
+            },
+            {
+              "rule_id": "TAN-008",
+              "fragment_mz": "m/z 577.135 (二聚体), m/z 575.120",
+              "description": "B型原花青素二聚体[M-H]- m/z 577和三聚体[M-H]- m/z 865为确认性分子离子",
+              "mechanism": "分子离子(确认聚合度)",
+              "neutral_loss": null,
+              "diagnostic_type": "母离子质量",
+              "confidence": "高",
+              "reference": "Engström & Karonen, 2026; PMID:41307161"
+            },
+            {
+              "rule_id": "TAN-009",
+              "fragment_mz": "A型二聚体 [M-H]- m/z 575; B型二聚体 [M-H]- m/z 577",
+              "description": "原花青素A型vs B型鉴别: A型含额外C2-O-C7醚键使分子比B型轻2Da。A型二聚体m/z 575, B型二聚体m/z 577",
+              "mechanism": "分子量差异(2Da) — 额外醚键使A型减少2个H",
+              "neutral_loss": null,
+              "diagnostic_type": "母离子质量(A/B型区分)",
+              "confidence": "高",
+              "reference": "PMC5891158; ResearchGate A-type procyanidin MS/MS"
+            },
+            {
+              "rule_id": "TAN-010",
+              "fragment_mz": "A型: QM裂解产生m/z 449(-126)+m/z 287; B型: QM裂解产生m/z 289(单体)",
+              "description": "A型原花青素QM裂解受额外醚键约束产生独特碎片: A型二聚体→m/z 449(丢失126 Da, C6H6O3)和m/z 287(脱氢单体); B型→m/z 289(正常单体)",
+              "mechanism": "QM裂解(醚键约束使A型碎片不同)",
+              "neutral_loss": "A型: C6H6O3(126 Da); B型: C8H8O3(152 Da, RDA)",
+              "diagnostic_type": "特征碎片(A/B型QM诊断)",
+              "confidence": "高",
+              "reference": "PMC5891158; ResearchGate fragmentation pathway A-type dimer"
+            },
+            {
+              "rule_id": "TAN-011",
+              "fragment_mz": "延伸单元碎片 m/z 287(A型)/289(B型)",
+              "description": "缩合鞣质聚合度(DP)判定: 终端单元碎片m/z 289(儿茶素)和延伸单元碎片m/z 287(脱氢儿茶素)。A型延伸单元对应m/z 285(多脱2H)",
+              "mechanism": "QM裂解区分终端/延伸单元",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片(聚合度+类型诊断)",
+              "confidence": "高",
+              "reference": "Engström & Karonen, Mass Spectrom. Rev. 2026; PMID:41307161"
+            }
+          ]
+        },
+        {
+          "subclass": "褐藻多酚 (Phlorotannins)",
+          "core_description": "间苯三酚(phloroglucinol)低聚物, C-C或C-O-C连接",
+          "example_compounds": [
+            "褐藻多酚 Eckol",
+            "二褐藻多酚 Dieckol",
+            "岩藻多酚 Fucodiphlorethol"
+          ],
+          "rules": [
+            {
+              "rule_id": "TAN-006",
+              "fragment_mz": "间苯三酚单体: m/z 125 [C6H5O3]-; 丢失间苯三酚单元: -124 Da (C6H4O2)",
+              "description": "褐藻多酚以间苯三酚单体离子m/z 125为通用DFI。MS/MS产生顺序丢失间苯三酚单元(124 Da, C6H4O2, 脱水后)。fucols(C-C连接): 丢失C6H4O2(124); phlorethols(C-O-C连接): 丢失C6H6O3(126); eckols(1,4-二噁英连接): 特征碎片。分子量范围371-6000+ Da",
+              "mechanism": "间苯三酚单元顺序丢失",
+              "neutral_loss": "C6H4O2 (124) / C6H6O3 (126)",
+              "diagnostic_type": "特征碎片(m/z 125, DFI) + 中性丢失(间苯三酚单元)",
+              "confidence": "高",
+              "reference": "PMC7795173 phlorotannins Saccharina; MDPI Foods 2023, 12:3000; ACS J Agric Food Chem 2012"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "有机酸类",
+      "class_en": "Organic Acids (Phenolic Acids / Aliphatic Acids)",
+      "core_structure": "含羧基的小分子有机酸 (C6-C1苯甲酸型 / C6-C3肉桂酸型 / 脂肪族)",
+      "subclasses": [
+        {
+          "subclass": "苯甲酸型酚酸 (Hydroxybenzoic Acids)",
+          "core_description": "C6-C1骨架, 苯环+羧基",
+          "example_compounds": [
+            "没食子酸 Gallic acid",
+            "原儿茶酸 Protocatechuic acid",
+            "对羟基苯甲酸 4-Hydroxybenzoic acid"
+          ],
+          "rules": [
+            {
+              "rule_id": "ORG-001",
+              "fragment_mz": "Gallic: 169→125; Protocatechuic: 153→109; 4-HBA: 137→93",
+              "description": "对羟基苯甲酸类以丢失CO2 (44 Da)为诊断性中性丢失(负离子模式)",
+              "mechanism": "脱羧反应 (Decarboxylation)",
+              "neutral_loss": "CO2 (44 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Parejo et al., 2004; Hossain et al., 2010; PMID:19702859"
+            },
+            {
+              "rule_id": "ORG-002",
+              "fragment_mz": "4-HBA: 137→109 (CO丢失), 137→93 (CO2丢失)",
+              "description": "对羟基苯甲酸同时出现CO (28 Da)和CO2 (44 Da)两种丢失",
+              "mechanism": "脱羰基 / 脱羧竞争",
+              "neutral_loss": "CO (28 Da) + CO2 (44 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Luo et al., 2020; Kang et al., 2016"
+            },
+            {
+              "rule_id": "ORG-003",
+              "fragment_mz": null,
+              "description": "邻位效应—龙胆酸和2,3,4-三羟基苯甲酸因邻位取代基相互作用不走常规CO2丢失路径",
+              "mechanism": "邻位基团效应 (Ortho effect)",
+              "neutral_loss": null,
+              "diagnostic_type": "例外规则",
+              "confidence": "中",
+              "reference": "Robbins, J. Agric. Food Chem. 2003 (review)"
+            }
+          ]
+        },
+        {
+          "subclass": "肉桂酸型酚酸 (Hydroxycinnamic Acids)",
+          "core_description": "C6-C3骨架 (同上苯丙酸类)",
+          "example_compounds": [
+            "咖啡酸 Caffeic acid",
+            "阿魏酸 Ferulic acid",
+            "迷迭香酸 Rosmarinic acid"
+          ],
+          "rules": [
+            {
+              "rule_id": "ORG-004",
+              "fragment_mz": "[M-H-44]-",
+              "description": "同苯丙酸类规则PPA-001: 肉桂酸型以CO2丢失为主要诊断特征",
+              "mechanism": "脱羧反应 (Decarboxylation)",
+              "neutral_loss": "CO2 (44 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Parejo et al., 2004; Hossain et al., 2010"
+            },
+            {
+              "rule_id": "ORG-005",
+              "fragment_mz": "m/z 161, 179, 197 (负离子)",
+              "description": "迷迭香酸(m/z 359 [M-H]-): 特征碎片m/z 161, 179, 197(咖啡酸来源)",
+              "mechanism": "酯键断裂 + 脱羧",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "PMID literature on rosmarinic acid MS"
+            }
+          ]
+        },
+        {
+          "subclass": "脂肪族有机酸 (Aliphatic Organic Acids)",
+          "core_description": "直链/支链二羧酸/三羧酸",
+          "example_compounds": [
+            "柠檬酸 Citric acid",
+            "苹果酸 Malic acid",
+            "琥珀酸 Succinic acid",
+            "奎宁酸 Quinic acid"
+          ],
+          "rules": [
+            {
+              "rule_id": "ORG-006",
+              "fragment_mz": "m/z 191 (柠檬酸脱水), m/z 111 (二次脱水)",
+              "description": "柠檬酸([M-H]- m/z 191): m/z 111 (丢失CO2+H2O, 62 Da), m/z 87",
+              "mechanism": "连续脱水+脱羧",
+              "neutral_loss": "CO2 (44 Da) + H2O (18 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "HMDB; general MS databases"
+            },
+            {
+              "rule_id": "ORG-007",
+              "fragment_mz": "m/z 191 (奎宁酸特征离子)",
+              "description": "奎宁酸([M-H]- m/z 191): m/z 191为绿原酸类化合物最可靠的特征碎片之一",
+              "mechanism": "奎宁酸母离子/特征碎片",
+              "neutral_loss": null,
+              "diagnostic_type": "特征碎片",
+              "confidence": "高",
+              "reference": "Clifford et al., 2003; PMID:12822898"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "山酮类",
+      "class_en": "Xanthones",
+      "core_structure": "二苯并-γ-吡喃酮 (xanthone nucleus, C13H8O2)",
+      "example_compounds": [
+        "芒果苷 Mangiferin (C-苷)",
+        "异芒果苷 Isomangiferin",
+        "伽马山酮 Gamma-mangostin"
+      ],
+      "rules": [
+        {
+          "rule_id": "XAN-001",
+          "fragment_mz": "[M]+ (基峰, EI)",
+          "description": "未取代山酮的分子离子为基峰(EI-MS)，其母核异常稳定，不进行RDA裂解(区别于黄酮)",
+          "mechanism": "高稳定性母核 (No RDA!)",
+          "neutral_loss": null,
+          "diagnostic_type": "母离子稳定性(阴性诊断)",
+          "confidence": "高",
+          "reference": "Comprehensive Heterocyclic Chemistry; Drewes, Chroman and Related Compounds"
+        },
+        {
+          "rule_id": "XAN-002",
+          "fragment_mz": "[M-CO]+ → [M-CO-CO]+",
+          "description": "山酮特征性脱羰基级联: M+ → [M-CO]+ (m/z 168) → [M-CO-CO]+ (m/z 140) → [M-CO-CO-H]+ (m/z 139)",
+          "mechanism": "连续脱羰基 (Sequential CO extrusion → dibenzofuran ion)",
+          "neutral_loss": "CO (28 Da) ×2",
+          "diagnostic_type": "特征碎片(EI)",
+          "confidence": "高",
+          "reference": "Comprehensive Heterocyclic Chemistry; Drewes"
+        },
+        {
+          "rule_id": "XAN-003",
+          "fragment_mz": "[M+H-46]+ (H2O+CO丢失)",
+          "description": "羟基山酮(ESI+): 基峰通常为[M+H-46]+(丢失H2O+CO), 是所有具生物活性多羟基山酮的最丰富产物离子",
+          "mechanism": "质子化羰基→邻位羟基脱水→CO消除",
+          "neutral_loss": "H2O (18 Da) + CO (28 Da) = 46 Da",
+          "diagnostic_type": "中性丢失(ESI+)",
+          "confidence": "高",
+          "reference": "Silva et al., Rapid Commun. Mass Spectrom. 2016; PMID:27472302"
+        },
+        {
+          "rule_id": "XAN-004",
+          "fragment_mz": "[M+H-64]+ (2H2O+CO 丢失)",
+          "description": "[M+H-64]+碎片(丢失46→18)为含儿茶酚基团山酮的独占性诊断碎片，与强抗氧化活性呈正相关",
+          "mechanism": "连续脱水+脱羰基",
+          "neutral_loss": "2H2O (36 Da) + CO (28 Da) = 64 Da",
+          "diagnostic_type": "特征碎片(儿茶酚标志)",
+          "confidence": "高",
+          "reference": "Silva et al., Rapid Commun. Mass Spectrom. 2016; PMID:27472302"
+        },
+        {
+          "rule_id": "XAN-005",
+          "fragment_mz": "[M+H-44]+ (CO+O丢失)",
+          "description": "[M+H-44]+ (CO+O丢失) 仅出现于非取代和对位-OH取代山酮，提示低或无生物活性",
+          "mechanism": "缩环反应 (Ring contraction)",
+          "neutral_loss": "CO + O (44 Da)",
+          "diagnostic_type": "特征碎片(活性关联)",
+          "confidence": "中",
+          "reference": "Silva et al., Rapid Commun. Mass Spectrom. 2016; PMID:27472302"
+        },
+        {
+          "rule_id": "XAN-006",
+          "fragment_mz": "[M-H-120]-, [M-H-149]-",
+          "description": "山酮C-苷(如芒果苷)主要经糖基交叉环裂解断裂: 产生-120 Da和-149 Da碎片，而非山酮母核裂解",
+          "mechanism": "C-糖苷糖环交叉环裂解",
+          "neutral_loss": "C4H8O4 (120 Da) / C5H9O5 (149 Da)",
+          "diagnostic_type": "中性丢失(C-苷)",
+          "confidence": "高",
+          "reference": "Mangiferin MS literature"
+        }
+      ]
+    },
+    {
+      "class": "二苯乙烯类",
+      "class_en": "Stilbenoids",
+      "core_structure": "C6-C2-C6 (1,2-二苯乙烯骨架)",
+      "example_compounds": [
+        "白藜芦醇 Resveratrol",
+        "虎杖苷 Polydatin",
+        "丹酚酸A/B Salvianolic acid A/B"
+      ],
+      "rules": [
+        {
+          "rule_id": "STI-001",
+          "fragment_mz": "[M-H-42]- (C2H2O丢失)",
+          "description": "二苯乙烯类经MALDI/ESI裂解可丢失C2H2O (42 Da)，来自乙烯桥的重排裂解",
+          "mechanism": "乙烯桥重排裂解",
+          "neutral_loss": "C2H2O (42 Da)",
+          "diagnostic_type": "中性丢失",
+          "confidence": "中",
+          "reference": "PMID literature on stilbenoid MS"
+        },
+        {
+          "rule_id": "STI-002",
+          "fragment_mz": "白藜芦醇: 227→185 (减42), 227→143 (减84)",
+          "description": "白藜芦醇([M-H]- m/z 227): m/z 185 (丢失C2H2O), m/z 143 (丢失2×C2H2O)",
+          "mechanism": "连续C2H2O消除",
+          "neutral_loss": "C2H2O (42 Da) ×2",
+          "diagnostic_type": "特征碎片+中性丢失",
+          "confidence": "高",
+          "reference": "Resveratrol MS literature; MoNA spectral data"
+        },
+        {
+          "rule_id": "STI-003",
+          "fragment_mz": "[M-H-162]- → 苷元",
+          "description": "二苯乙烯苷(如虎杖苷): 首先丢失葡萄糖(162 Da)生成白藜芦醇苷元，然后按STI-002裂解",
+          "mechanism": "O-糖苷键断裂→苷元裂解",
+          "neutral_loss": "C6H10O5 (162 Da, glucose)",
+          "diagnostic_type": "中性丢失(O-苷)",
+          "confidence": "高",
+          "reference": "Polydatin MS literature"
+        }
+      ]
+    },
+    {
+      "class": "环烯醚萜类",
+      "class_en": "Iridoids & Secoiridoids",
+      "core_structure": "环戊烷[c]吡喃环系统 (iridoid nucleus) 或开环型 (secoiridoid)",
+      "example_compounds": [
+        "栀子苷 Geniposide",
+        "龙胆苦苷 Gentiopicroside (裂环)",
+        "橄榄苦苷 Oleuropein (裂环)",
+        "獐牙菜苦苷 Swertiamarin"
+      ],
+      "rules": [
+        {
+          "rule_id": "IRI-001",
+          "fragment_mz": "[M-H-162]- → 苷元",
+          "description": "环烯醚萜苷首先丢失葡萄糖(162 Da)生成苷元",
+          "mechanism": "O-糖苷键断裂",
+          "neutral_loss": "C6H10O5 (162 Da, glucose)",
+          "diagnostic_type": "中性丢失(苷)",
+          "confidence": "高",
+          "reference": "Zeng et al., Rapid Commun. Mass Spectrom. 2014; PMID:24911243"
+        },
+        {
+          "rule_id": "IRI-002",
+          "fragment_mz": "[苷元-H2O]-, [苷元-CO2]-",
+          "description": "环烯醚萜苷元进一步丢失H2O (18 Da), CO2 (44 Da), CH3OH (32 Da)等",
+          "mechanism": "苷元骨架裂解",
+          "neutral_loss": "H2O (18) / CO2 (44) / CH3OH (32)",
+          "diagnostic_type": "中性丢失(苷元)",
+          "confidence": "高",
+          "reference": "Zeng et al., Rapid Commun. Mass Spectrom. 2014; PMID:24911243"
+        },
+        {
+          "rule_id": "IRI-003",
+          "fragment_mz": "裂环环烯醚萜苷: [M-H-162-44-18]-",
+          "description": "裂环环烯醚萜苷(如龙胆苦苷)苷元裂解特征: CO2丢失+脱水产生级联碎片",
+          "mechanism": "开环骨架重排+连续中性丢失",
+          "neutral_loss": "Glc (162) + CO2 (44) + H2O (18)",
+          "diagnostic_type": "特征碎片",
+          "confidence": "高",
+          "reference": "Zeng et al., Rapid Commun. Mass Spectrom. 2014; PMID:24911243"
+        },
+        {
+          "rule_id": "IRI-004",
+          "fragment_mz": "橄榄苦苷: 539→377(162), 377→307(70), 307→275(32)",
+          "description": "橄榄苦苷(裂环环烯醚萜): m/z 539→377(丢葡萄糖)→307(丢C3H2O2)→275(丢CH3OH)",
+          "mechanism": "糖丢失→开环降解→脱甲醇",
+          "neutral_loss": "Glc (162) + C3H2O2 (70) + CH3OH (32)",
+          "diagnostic_type": "特征碎片级联",
+          "confidence": "高",
+          "reference": "Oleuropein MS literature; MoNA spectral data"
+        }
+      ]
+    },
+    {
+      "class": "氰苷类",
+      "class_en": "Cyanogenic Glycosides",
+      "core_structure": "含氰基(CN)的糖苷",
+      "example_compounds": [
+        "苦杏仁苷 Amygdalin",
+        "扁桃苷 Prunasin"
+      ],
+      "rules": [
+        {
+          "rule_id": "CYA-001",
+          "fragment_mz": "[M-H-162]- → [苷元-HCN]-",
+          "description": "氰苷经糖丢失后苷元进一步丢失HCN (27 Da)，为氰苷特征",
+          "mechanism": "O-糖苷键断裂→HCN消除",
+          "neutral_loss": "C6H10O5 (162 Da, glucose) + HCN (27 Da)",
+          "diagnostic_type": "中性丢失(特征)",
+          "confidence": "高",
+          "reference": "PMID literature on amygdalin MS"
+        }
+      ]
+    },
+    {
+      "class": "有机含硫化合物",
+      "class_en": "Organosulfur Compounds",
+      "core_structure": "含硫官能团(硫苷, 二硫键, 异硫氰酸酯等)",
+      "example_compounds": [
+        "萝卜硫素 Sulforaphane",
+        "大蒜素 Allicin",
+        "芥子苷 Sinigrin"
+      ],
+      "rules": [
+        {
+          "rule_id": "SUL-001",
+          "fragment_mz": "[M-H-SO3]- (减80 Da)",
+          "description": "芥子油苷(glucosinolates): 负离子模式以丢失SO3 (80 Da)为特征",
+          "mechanism": "硫酸酯基消除",
+          "neutral_loss": "SO3 (80 Da)",
+          "diagnostic_type": "中性丢失",
+          "confidence": "高",
+          "reference": "Glucosinolate MS literature; MoNA spectral data"
+        },
+        {
+          "rule_id": "SUL-002",
+          "fragment_mz": "[M-H-162]- (减162 Da)",
+          "description": "芥子油苷同时丢失葡萄糖(162 Da)，与SO3丢失竞争",
+          "mechanism": "O-糖苷键断裂",
+          "neutral_loss": "C6H10O5 (162 Da, glucose)",
+          "diagnostic_type": "中性丢失",
+          "confidence": "高",
+          "reference": "Glucosinolate MS literature"
+        }
+      ]
+    },
+    {
+      "class": "苯乙醇苷类",
+      "class_en": "Phenylethanoid Glycosides",
+      "core_structure": "苯乙醇(C6-C2)苷元+糖链(常含咖啡酰基)",
+      "example_compounds": [
+        "毛蕊花糖苷 Acteoside (Verbascoside)",
+        "松果菊苷 Echinacoside",
+        "连翘酯苷 Forsythoside"
+      ],
+      "rules": [
+        {
+          "rule_id": "PHE-001",
+          "fragment_mz": "[M-H-146]- (鼠李糖), [M-H-162]- (咖啡酰), [M-H-308]- (Rha+Glc)",
+          "description": "苯乙醇苷类特征性中性丢失: 鼠李糖(146 Da), 咖啡酰基(162 Da), 葡萄糖(162 Da), 及其组合(308 Da)",
+          "mechanism": "酯键断裂+糖苷键断裂",
+          "neutral_loss": "C6H10O4 (146, Rha) / C6H10O5 (162, Glc) / C9H6O3 (162, caffeoyl) / C15H16O7 (308, Rha+Glc)",
+          "diagnostic_type": "中性丢失(组合)",
+          "confidence": "高",
+          "reference": "Acteoside/verbascoside MS literature"
+        },
+        {
+          "rule_id": "PHE-002",
+          "fragment_mz": "m/z 461 (基峰, 毛蕊花糖苷)",
+          "description": "毛蕊花糖苷(m/z 623 [M-H]-): 基峰m/z 461 (丢咖啡酰162 Da)",
+          "mechanism": "咖啡酰酯键断裂",
+          "neutral_loss": "C9H6O3 (162 Da, caffeoyl)",
+          "diagnostic_type": "特征碎片",
+          "confidence": "高",
+          "reference": "Acteoside MS literature; MoNA spectral data"
+        }
+      ]
+    },
+    {
+      "class": "黄嘌呤生物碱类",
+      "class_en": "Xanthine Alkaloids (Purine Alkaloids)",
+      "core_structure": "嘌呤母核 (C5H4N4)",
+      "example_compounds": [
+        "咖啡因 Caffeine",
+        "茶碱 Theophylline",
+        "可可碱 Theobromine"
+      ],
+      "rules": [
+        {
+          "rule_id": "XAL-001",
+          "fragment_mz": null,
+          "description": "黄嘌呤生物碱以连续丢失CH3NCO (57 Da, 甲基异氰酸酯)和CO (28 Da)为特征",
+          "mechanism": "嘌呤环裂解",
+          "neutral_loss": "CH3NCO (57 Da) / CO (28 Da)",
+          "diagnostic_type": "中性丢失",
+          "confidence": "高",
+          "reference": "MS literature on methylxanthines; MoNA spectral data"
+        }
+      ]
+    },
+    {
+      "class": "核苷酸类",
+      "class_en": "Nucleosides & Nucleotides",
+      "core_structure": "嘌呤/嘧啶碱基 + 戊糖 + 磷酸(核苷酸)",
+      "example_compounds": [
+        "腺苷 Adenosine",
+        "鸟苷 Guanosine",
+        "尿苷 Uridine",
+        "虫草素 Cordycepin",
+        "ATP"
+      ],
+      "rules": [
+        {
+          "rule_id": "NUC-001",
+          "fragment_mz": "取决于碱基类型",
+          "description": "核苷以糖苷键断裂(N9-C1'或N1-C1')产生碱基碎片为特征: 腺嘌呤m/z 136, 鸟嘌呤m/z 152, 尿嘧啶m/z 113, 胞嘧啶m/z 112",
+          "mechanism": "N-糖苷键断裂 (N-glycosidic bond cleavage)",
+          "neutral_loss": "C5H8O4 (132 Da, ribose失去H2O)",
+          "diagnostic_type": "特征碎片(碱基诊断)",
+          "confidence": "高",
+          "reference": "ACS Chem. Rev. 2005; PMID:15826020; HMDB"
+        },
+        {
+          "rule_id": "NUC-002",
+          "fragment_mz": "[M-H-98]- (核苷酸)",
+          "description": "核苷酸(如AMP)以丢失H3PO4 (98 Da)或HPO3 (80 Da)为特征，产生相应核苷碎片",
+          "mechanism": "磷酸基消除",
+          "neutral_loss": "H3PO4 (98 Da) / HPO3 (80 Da)",
+          "diagnostic_type": "中性丢失(磷酸)",
+          "confidence": "高",
+          "reference": "ACS Chem. Rev. 2005; PMID:15826020"
+        },
+        {
+          "rule_id": "NUC-003",
+          "fragment_mz": "[M+H-18]+",
+          "description": "核苷在正离子模式常首先脱水(-18 Da)，来自核糖环脱水",
+          "mechanism": "核糖环脱水",
+          "neutral_loss": "H2O (18 Da)",
+          "diagnostic_type": "中性丢失",
+          "confidence": "中",
+          "reference": "HMDB; general nucleoside MS literature"
+        },
+        {
+          "rule_id": "NUC-004",
+          "fragment_mz": "腺苷: 268→136; 鸟苷: 284→152; 尿苷: 245→113",
+          "description": "核苷糖苷键断裂产生碱基离子为基峰或强峰: 腺嘌呤[MH-132]+, 鸟嘌呤[MH-132]+, 尿嘧啶[MH-132]+",
+          "mechanism": "N-糖苷键断裂 — 碱基离子",
+          "neutral_loss": "核糖部分 (132 Da)",
+          "diagnostic_type": "特征碎片(碱基类型鉴别)",
+          "confidence": "高",
+          "reference": "HMDB; general nucleoside MS literature"
+        }
+      ]
+    },
+    {
+      "class": "脂质/脂肪酸类",
+      "class_en": "Lipids & Fatty Acids",
+      "core_structure": "长链脂肪族羧酸 (CnH2n+1COOH) 及其甘油酯衍生物",
+      "example_compounds": [
+        "油酸 Oleic acid",
+        "花生四烯酸 Arachidonic acid",
+        "磷脂酰胆碱 PC",
+        "溶血磷脂 LPC"
+      ],
+      "rules": [
+        {
+          "rule_id": "LIP-001",
+          "fragment_mz": "m/z 184.073 (PC头部)",
+          "description": "磷脂酰胆碱(PC)在正离子ESI中产生特征性胆碱头部碎片m/z 184.073 (C5H14NO4P)，为PC专属诊断离子",
+          "mechanism": "磷脂头部基团断裂 (Head-group fragmentation)",
+          "neutral_loss": null,
+          "diagnostic_type": "特征碎片(PC专属)",
+          "confidence": "高",
+          "reference": "RSC Anal. Methods 2016; PMC3117083; LIPID MAPS"
+        },
+        {
+          "rule_id": "LIP-002",
+          "fragment_mz": "[M+H-141]+ (PC中性丢失)",
+          "description": "PC在正离子MS2中可丢失磷酸胆碱头部(C5H14NO4P, 183 Da，或以[M+H-141]+形式出现，取决于加合离子)",
+          "mechanism": "磷酸胆碱头部中性丢失",
+          "neutral_loss": "C5H14NO4P (183 Da) / C5H13NO4P (141 Da)",
+          "diagnostic_type": "中性丢失(PC)",
+          "confidence": "高",
+          "reference": "LIPID MAPS; RSC Anal. Methods 2016"
+        },
+        {
+          "rule_id": "LIP-003",
+          "fragment_mz": "[M-H-RCOOH]- (脂肪酸中性丢失)",
+          "description": "甘油磷脂在负离子CID中以丢失脂肪酸酰基(RCOOH)为特征: 每个酰基丢失对应游离脂肪酸的分子量",
+          "mechanism": "sn-1/sn-2酯键断裂 (Acyl chain loss)",
+          "neutral_loss": "取决于脂肪酸链 (如 C16:0 = 256 Da, C18:1 = 282 Da)",
+          "diagnostic_type": "中性丢失(脂肪酸组成)",
+          "confidence": "高",
+          "reference": "RSC Anal. Methods 2016; PMC3117083; J. Lipid Res."
+        },
+        {
+          "rule_id": "LIP-004",
+          "fragment_mz": "m/z 281.248 (油酸), m/z 279.232 (亚油酸), m/z 255.232 (棕榈酸)",
+          "description": "游离脂肪酸在负离子ESI中产生[M-H]-母离子，CID碎片以丢失CO2 (44 Da)和H2O (18 Da)为特征",
+          "mechanism": "脱羧/脱水",
+          "neutral_loss": "CO2 (44 Da) / H2O (18 Da)",
+          "diagnostic_type": "中性丢失(脂肪酸)",
+          "confidence": "高",
+          "reference": "LIPID MAPS; LipidWeb"
+        },
+        {
+          "rule_id": "LIP-005",
+          "fragment_mz": "[RCO2]-",
+          "description": "磷脂CID产生脂肪酸酰基负离子(如m/z 255.233 C16:0, m/z 281.248 C18:1)，可直接推断酰基链组成",
+          "mechanism": "sn位酯键断裂 — 酰基离子",
+          "neutral_loss": null,
+          "diagnostic_type": "特征碎片(酰基链诊断)",
+          "confidence": "高",
+          "reference": "RSC Anal. Methods 2016; Wiley RCM 2023"
+        }
+      ]
+    },
+    {
+      "class": "糖苷类通用规则",
+      "class_en": "General Glycoside Rules",
+      "core_structure": "苷元 + 糖基 (O-苷/C-苷/S-苷/N-苷)",
+      "rules": [
+        {
+          "rule_id": "GLY-001",
+          "fragment_mz": "162/146/132/176",
+          "description": "O-苷类糖基中性丢失质量规则: 己糖(hexose)-162 Da, 脱氧己糖(deoxyhexose)-146 Da, 戊糖(pentose)-132 Da, 葡萄糖醛酸(glucuronic acid)-176 Da, 半乳糖醛酸(galacturonic acid)-176 Da",
+          "mechanism": "O-糖苷键断裂 (Glycosidic bond cleavage)",
+          "neutral_loss": "C6H10O5 (162) / C6H10O4 (146) / C5H8O4 (132) / C6H8O6 (176)",
+          "diagnostic_type": "中性丢失(糖类型判别)",
+          "confidence": "高",
+          "reference": "Cuyckens & Claeys, 2004; PMID:15389856"
+        },
+        {
+          "rule_id": "GLY-002",
+          "fragment_mz": "-60/-90/-120",
+          "description": "C-苷类糖环交叉环裂解规则: 产生-60 Da (0,2X), -90 Da (0,3X), -120 Da (0,4X) 碎片序列，不丢失完整糖基",
+          "mechanism": "C-糖苷糖环交叉环裂解 (Cross-ring cleavage)",
+          "neutral_loss": "C2H4O2 (60) / C3H6O3 (90) / C4H8O4 (120)",
+          "diagnostic_type": "中性丢失(C-苷诊断)",
+          "confidence": "高",
+          "reference": "PMC6273528; PMID:16418439"
+        },
+        {
+          "rule_id": "GLY-003",
+          "fragment_mz": "取决于糖链长度",
+          "description": "寡糖苷中糖链从末端顺序丢失(外向内裂解)，可推断糖链连接顺序",
+          "mechanism": "顺序糖丢失 (Sequential sugar loss)",
+          "neutral_loss": "取决于末端糖类型",
+          "diagnostic_type": "中性丢失(糖链顺序)",
+          "confidence": "高",
+          "reference": "PMC6273528"
+        },
+        {
+          "rule_id": "GLY-004",
+          "fragment_mz": "Y0⁻ (苷元离子)",
+          "description": "O-苷产生Y0-苷元离子(丢失全部糖链)，从Y0离子质量可直接推断苷元分子量",
+          "mechanism": "完整糖链丢失",
+          "neutral_loss": "取决于糖链总质量",
+          "diagnostic_type": "特征碎片(苷元诊断)",
+          "confidence": "高",
+          "reference": "ScienceDirect 2021 TCM MS/MS review; PMID:16418439"
+        },
+        {
+          "rule_id": "GLY-005",
+          "fragment_mz": "m/z 161/179 (己糖), m/z 145 (脱氧己糖), m/z 131 (戊糖)",
+          "description": "糖oxonium离子: 己糖m/z 161(0,2X+)或m/z 179, 脱氧己糖m/z 145, 戊糖m/z 131，用于鉴定糖类型",
+          "mechanism": "糖环裂解产生oxonium离子",
+          "neutral_loss": null,
+          "diagnostic_type": "特征碎片(糖类型鉴定)",
+          "confidence": "高",
+          "reference": "Alves et al., RSC Adv. 2024; PMC10985591"
+        }
+      ]
+    },
+    {
+      "class": "苯酞类",
+      "class_en": "Phthalides",
+      "core_structure": "苯并呋喃-2(3H)-酮 (苯酞内酯母核, C8H6O2)",
+      "example_compounds": [
+        "藁本内酯 Z-Ligustilide",
+        "丁烯基苯酞 Butylidenephthalide",
+        "丁基苯酞 Butylphthalide",
+        "洋川芎内酯A Senkyunolide A"
+      ],
+      "rules": [
+        {
+          "rule_id": "PHT-001",
+          "fragment_mz": "Z-Ligustilide [M+H]+: 191→173(-H2O)→161(-CO/CH2=CH2)→133(-C4H9)→105(C6H5CO+)",
+          "description": "藁本内酯(Z-ligustilide, MW 190)正离子级联: m/z 191→173(脱水,最高强度)→161→133(苯酞鎓离子,丢失C4H9)→105(苯甲酰离子)",
+          "mechanism": "脱水→脱羰基→烷基链丢失",
+          "neutral_loss": "H2O(18)/CO(28)/C4H9(57)",
+          "diagnostic_type": "特征碎片级联(苯酞母核诊断)",
+          "confidence": "高",
+          "reference": "PMC6272380; PMC6268525; Lao et al., Anal. Chim. Acta 2004"
+        },
+        {
+          "rule_id": "PHT-002",
+          "fragment_mz": "Butylidenephthalide MRM: 191→149; Butylphthalide EI: 190→133→105",
+          "description": "丁烯基苯酞MRM特征离子: m/z 149(Z/E异构体通用碎片)。丁基苯酞EI: m/z 133(苯酞鎓, 丢失C4H9)和m/z 105(C6H5CO+)",
+          "mechanism": "侧链丢失 → 苯酞鎓离子",
+          "neutral_loss": "C3H6(42, 丁烯基) / C4H9(57, 丁基)",
+          "diagnostic_type": "特征碎片(苯酞侧链诊断)",
+          "confidence": "高",
+          "reference": "PMC6268525; Lao et al., 2004"
+        },
+        {
+          "rule_id": "PHT-003",
+          "fragment_mz": "Senkyunolide A [M+H]+: 193→175(-H2O)→157(-H2O)",
+          "description": "洋川芎内酯A(Senkyunolide A, MW 192, 含OH)特征: 连续脱水m/z 193→175→157，羟基取代使脱水主导",
+          "mechanism": "连续脱水(含OH苯酞)",
+          "neutral_loss": "2×H2O (36 Da)",
+          "diagnostic_type": "特征碎片(羟基苯酞诊断)",
+          "confidence": "中",
+          "reference": "PMC6272380; Wei et al., Molecules 2015"
+        }
+      ]
+    },
+    {
+      "class": "有机酸类",
+      "class_en": "Organic Acids",
+      "core_structure": "含羧基的小分子有机酸 (C6-C1苯甲酸型 / C6-C3肉桂酸型 / 脂肪族)",
+      "subclasses": [
+        {
+          "subclass": "苯甲酸型酚酸 (Hydroxybenzoic Acids)",
+          "core_description": "C6-C1骨架, 苯环+羧基",
+          "example_compounds": [
+            "没食子酸 Gallic acid",
+            "原儿茶酸 Protocatechuic acid",
+            "对羟基苯甲酸 4-Hydroxybenzoic acid",
+            "水杨酸 Salicylic acid"
+          ],
+          "rules": [
+            {
+              "rule_id": "ORG-001",
+              "fragment_mz": "没食子酸: 169→125(CO2)→107(H2O)→97; 原儿茶酸: 153→109(CO2); 对羟基苯甲酸: 137→93(CO2); 水杨酸: 137→93(CO2)",
+              "description": "对羟基苯甲酸类以丢失CO2 (44 Da)为诊断性中性丢失(负离子模式)。邻位羟基(水杨酸, 没食子酸等)可能因邻位效应改变裂解路径",
+              "mechanism": "脱羧反应 (Decarboxylation)",
+              "neutral_loss": "CO2 (44 Da)",
+              "diagnostic_type": "中性丢失",
+              "confidence": "高",
+              "reference": "Parejo et al., 2004; Hossain et al., 2010; Robbins, J. Agric. Food Chem. 2003; PMID:19702859"
+            }
+          ]
+        },
+        {
+          "subclass": "脂肪族有机酸 (Aliphatic Organic Acids)",
+          "core_description": "直链/支链二羧酸/三羧酸",
+          "example_compounds": [
+            "柠檬酸 Citric acid",
+            "苹果酸 Malic acid",
+            "琥珀酸 Succinic acid",
+            "奎宁酸 Quinic acid"
+          ],
+          "rules": [
+            {
+              "rule_id": "ORG-006",
+              "fragment_mz": "柠檬酸: 191→173(H2O)→129(H2O+CO2)→111→87→85; 苹果酸: 133→115(H2O)→89(CO2)→71; 琥珀酸: 117→73(CO2)",
+              "description": "脂肪族二羧酸/三羧酸以连续脱水和脱羧为特征。柠檬酸: -H2O→-CO2→-H2O级联。特征碎片m/z 45 (HCOO-), m/z 59 (CH3COO-)为羧酸通用诊断离子",
+              "mechanism": "连续脱水+脱羧级联",
+              "neutral_loss": "H2O (18) + CO2 (44)",
+              "diagnostic_type": "中性丢失级联",
+              "confidence": "高",
+              "reference": "Grossert et al., J. Am. Soc. Mass Spectrom. 2007; HMDB"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "核苷类",
+      "class_en": "Nucleosides & Nucleobases",
+      "core_structure": "嘌呤/嘧啶碱基+核糖/脱氧核糖",
+      "example_compounds": [
+        "腺苷 Adenosine",
+        "鸟苷 Guanosine",
+        "尿苷 Uridine",
+        "胞苷 Cytidine"
+      ],
+      "rules": [
+        {
+          "rule_id": "NUC-001",
+          "fragment_mz": "腺苷: 268→136(腺嘌呤, 丢失核糖132 Da); 鸟苷: 284→152(鸟嘌呤); 尿苷: 245→113(尿嘧啶); 胞苷: 244→112(胞嘧啶)→95(丢NH3)",
+          "description": "核苷以丢失核糖(132 Da, C5H8O4)或脱氧核糖(116 Da)为特征，产生碱基离子。碱基进一步丢失NH3 (17 Da), HCN (27 Da), CO (28 Da)等小分子",
+          "mechanism": "糖苷键断裂→碱基碎片→小分子中性丢失",
+          "neutral_loss": "C5H8O4 (132, ribose) / C5H8O3 (116, deoxyribose) / NH3 (17) / HCN (27)",
+          "diagnostic_type": "中性丢失+特征碱基碎片",
+          "confidence": "高",
+          "reference": "HMDB; MassBank; general nucleoside MS literature"
+        }
+      ]
+    },
+    {
+      "class": "脂肪酸及甘油脂类",
+      "class_en": "Fatty Acids & Glycerolipids",
+      "core_structure": "长链羧酸(R-COOH) / 甘油酯骨架(glycerol + fatty acyl chains)",
+      "subclasses": [
+        {
+          "subclass": "脂肪酸 (Fatty Acids)",
+          "core_description": "长链一元羧酸, 饱和/不饱和/羟基化/环氧",
+          "example_compounds": [
+            "棕榈酸 Palmitic acid (C16:0)",
+            "硬脂酸 Stearic acid (C18:0)",
+            "油酸 Oleic acid (C18:1)",
+            "花生四烯酸 Arachidonic acid (C20:4)",
+            "EPA (C20:5)",
+            "DHA (C22:6)"
+          ],
+          "rules": [
+            {
+              "rule_id": "FAG-001",
+              "fragment_mz": "[M-H]- → [M-H-CO2]- → [M-H-CO2-H2O]-",
+              "description": "脂肪酸在负离子ESI中以[M-H]-为基峰。CID裂解以丢失CO2 (44 Da, 脱羧)为最特征反应。不饱和脂肪酸另有电荷远程裂解(charge-remote fragmentation)产生间隔14 Da (CH2)的碎片系列",
+              "mechanism": "脱羧反应 (Decarboxylation) + 电荷远程裂解",
+              "neutral_loss": "CO2 (44 Da)",
+              "diagnostic_type": "中性丢失(脱羧, 负离子)",
+              "confidence": "高",
+              "reference": "Christie WW. Lipid Analysis, 4th Ed., 2010; Murphy et al., J. Lipid Res. 2005; PMID:16024739"
+            },
+            {
+              "rule_id": "FAG-002",
+              "description": "羟基脂肪酸以连续脱水为特征: [M-H]- → [M-H-H2O]- → [M-H-2H2O]-。环氧脂肪酸(如EETs)特征性开环产生m/z 155, 191碎片。PUFAs产生特征性间隔24 Da碎片(双键间隔诊断)",
+              "mechanism": "脱水级联 / 环氧开环 / 双键定位碎片",
+              "neutral_loss": "H2O (18) / CO2 (44) / H2O+CO2 (62)",
+              "diagnostic_type": "特征碎片(氧化脂肪酸诊断)",
+              "confidence": "高",
+              "reference": "Yang et al., J. Am. Soc. Mass Spectrom. 2011; PMID:21331402; JLR 2023, PUFA fragmentation"
+            }
+          ]
+        },
+        {
+          "subclass": "甘油三酯 (Triacylglycerols, TAGs)",
+          "core_description": "甘油骨架+3条脂肪酰链",
+          "example_compounds": [
+            "三油酸甘油酯 Triolein",
+            "三棕榈酸甘油酯 Tripalmitin"
+          ],
+          "rules": [
+            {
+              "rule_id": "FAG-003",
+              "fragment_mz": "[M+NH4]+ → [M+NH4-NH3-RCOOH]+ (DAG+片段)",
+              "description": "TAGs以[M+NH4]+加合离子为特征。CID裂解优先从sn-1/sn-3位丢失RCOOH(脂肪酸中性丢失), sn-2位丢失最不优先。[M+NH4]+ → -NH3 → -RCOOH → [DAG]+ 碎片。sn-1/sn-3 vs sn-2: 产物离子丰度比可区分位置异构体",
+              "mechanism": "铵加合离子中性丢失 (NH3 + RCOOH)",
+              "neutral_loss": "NH3 (17) + RCOOH (依链长而定)",
+              "diagnostic_type": "中性丢失(sn位选择性)",
+              "confidence": "高",
+              "reference": "Hsu & Turk, J. Am. Soc. Mass Spectrom. 1999; PMID:23378093; LIPID MAPS methods chapters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "萘醌类",
+      "class_en": "Naphthoquinones",
+      "core_structure": "1,4-萘醌母核 (1,4-naphthoquinone, C10H6O2)",
+      "example_compounds": [
+        "胡桃醌 Juglone (5-OH)",
+        "白花丹素 Plumbagin (5-OH-2-CH3)",
+        "紫草素 Shikonin",
+        "拉帕醇 Lapachol",
+        "维生素K1 Vitamin K1",
+        "泛醌 Ubiquinone"
+      ],
+      "rules": [
+        {
+          "rule_id": "NQ-001",
+          "fragment_mz": "胡桃醌: [M-H]- 173→129(CO2)→101; 白花丹素: 187→173(CH3)→145(CO)→117",
+          "description": "1,4-萘醌类以连续丢失CO (28 Da)和CO2 (44 Da)为特征, 与蒽醌类似但碎片m/z更低。羟基萘醌优先丢失CO2(邻位羟基辅助)。甲基萘醌(白花丹素)另丢失CH3 (15 Da)。级联: [M-H]- → -CO2 → -CO → -CO",
+          "mechanism": "醌羰基脱羧+脱羰基级联",
+          "neutral_loss": "CO2 (44) / CO (28) / CH3 (15)",
+          "diagnostic_type": "中性丢失级联(萘醌诊断)",
+          "confidence": "高",
+          "reference": "Frontiers Plant Sci. 2021; PMC7830255; Guo et al., Anal. Sci. 2007"
+        },
+        {
+          "rule_id": "NQ-002",
+          "fragment_mz": "紫草素DFIs: m/z 270.1, 218.0, 190.0",
+          "description": "紫草素类(萘醌+异己烯基侧链)诊断碎片: m/z 270(H2O丢失), m/z 218.02(萘醌核心碎片, 丢失侧链), m/z 190.03(218-CO)。m/z 218.02和190.03为紫草素衍生物的通用诊断碎片(DFIs)",
+          "mechanism": "侧链消除+萘醌核心脱羰基",
+          "neutral_loss": "H2O (18) + C4H6 (侧链) + CO (28)",
+          "diagnostic_type": "特征碎片(紫草素类DFI, 负离子)",
+          "confidence": "高",
+          "reference": "PMC9104353; MDPI Molecules 2025, 31:1434; Phytochem. Analysis systematic NQ ID"
+        },
+        {
+          "rule_id": "NQ-003",
+          "description": "维生素K类(2-甲基-3-植醇基-1,4-萘醌): 以丢失植醇侧链为特征(丢失C20H40, 280 Da范围)。核心碎片m/z 187为甲基萘醌离子。泛醌(CoQ): 丢失各异戊烯基侧链单元(各68 Da, C5H8)",
+          "mechanism": "异戊烯基侧链消除 + 萘醌核心碎片",
+          "neutral_loss": "C20H40 (~280, 植醇) / C5H8 (68, 异戊烯基单元)",
+          "diagnostic_type": "中性丢失(侧链特征)",
+          "confidence": "高",
+          "reference": "Ham & Gross, Mass Spectrom. Rev. 2004; Grossert et al., J. Am. Soc. Mass Spectrom. 2007"
+        }
+      ]
+    },
+    {
+      "class": "磷脂类",
+      "class_en": "Phospholipids",
+      "core_structure": "甘油磷脂骨架 (glycerophospholipid backbone: glycerol + phosphate + head group + 2 fatty acyl chains)",
+      "subclasses": [
+        {
+          "subclass": "磷脂酰胆碱 (Phosphatidylcholine, PC)",
+          "core_description": "甘油骨架 + 磷酸胆碱头基 + 2脂肪酰链",
+          "example_compounds": [
+            "PC 16:0/18:1",
+            "PC 18:0/20:4",
+            "LysoPC 16:0"
+          ],
+          "rules": [
+            {
+              "rule_id": "PL-001",
+              "fragment_mz": "m/z 184.0733 (磷酸胆碱离子, [C5H15NO4P]+)",
+              "description": "PC在正离子ESI中产生诊断性m/z 184.0733离子(磷酸胆碱头基, [C5H15NO4P]+), 为PC/LPC/SM的通用诊断离子。另: 中性丢失183 Da(磷酸胆碱)和59 Da(三甲胺, N(CH3)3)。正离子PIS m/z 184可筛查所有含胆碱磷脂",
+              "mechanism": "头基碎裂 (Head group fragmentation)",
+              "neutral_loss": "183 Da (phosphocholine) / 59 Da (trimethylamine)",
+              "diagnostic_type": "特征碎片(m/z 184) + 中性丢失",
+              "confidence": "高",
+              "reference": "Pulfer & Murphy, Mass Spectrom. Rev. 2003; PMID:12691095; LIPID MAPS; RSC Anal. Methods 2016"
+            }
+          ]
+        },
+        {
+          "subclass": "磷脂酰乙醇胺 (Phosphatidylethanolamine, PE)",
+          "core_description": "甘油骨架 + 磷酸乙醇胺头基 + 2脂肪酰链",
+          "example_compounds": [
+            "PE 16:0/18:1",
+            "PE 18:0/22:6"
+          ],
+          "rules": [
+            {
+              "rule_id": "PL-002",
+              "fragment_mz": "NL 141.019 (磷酸乙醇胺, C2H8NO4P)",
+              "description": "PE在正离子中以中性丢失141.019 Da(磷酸乙醇胺头基)为特征诊断。产生[DAG]+型碎片离子。负离子模式: m/z 196.038(glycerophosphoethanolamine-H2O), m/z 140.012(ethanolamine phosphate)。NLS 141可筛查所有PE",
+              "mechanism": "头基中性丢失 (Head group NL)",
+              "neutral_loss": "141.019 Da (phosphoethanolamine)",
+              "diagnostic_type": "中性丢失(PE诊断)",
+              "confidence": "高",
+              "reference": "Brugger et al., PNAS 1997; PMID:11562469; IntechOpen phospholipid MS chapter"
+            }
+          ]
+        },
+        {
+          "subclass": "其他磷脂 (PI, PS, PG, PA)",
+          "core_description": "不同头基的甘油磷脂",
+          "rules": [
+            {
+              "rule_id": "PL-003",
+              "fragment_mz": "PI: m/z 241.012; PS: NL 87; PG: m/z 171.006; PA: m/z 152.996",
+              "description": "PI负离子: m/z 241.012(肌醇磷酸, inositol phosphate)为诊断离子; PS正离子: NL 87 Da(丝氨酸头基); PG负离子: m/z 171.006(甘油磷酸)为诊断; PA负离子: m/z 152.996(甘油磷酸-H2O)及NL 98(H3PO4)",
+              "mechanism": "头基特征碎片 (Class-specific headgroup ions)",
+              "diagnostic_type": "特征碎片(磷脂亚类区分)",
+              "confidence": "高",
+              "reference": "PMC7070507; LIPID MAPS methods; RSC Anal. Methods 2016; PMID:16557496"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "酰胺类生物碱",
+      "class_en": "Amide Alkaloids",
+      "core_structure": "酰胺键连接的芳香酸胺类 (aromatic acid-amine via amide bond)",
+      "example_compounds": [
+        "胡椒碱 Piperine",
+        "荜茇酰胺 Piperlongumine",
+        "辣椒素 Capsaicin",
+        "N-p-香豆酰酪胺 N-p-coumaroyltyramine"
+      ],
+      "rules": [
+        {
+          "rule_id": "AMD-001",
+          "fragment_mz": "胡椒碱: [M+H]+ 286→201(piperoyl acylium, 丢piperidine 85 Da)→173(-CO); 辣椒素: 306→137(vanillylamine cation, DFI); piperlongumine: 318→221(trimethoxycinnamoyl acylium)",
+          "description": "酰胺类生物碱以酰胺键(N-CO)α-断裂为最主导裂解途径。质子化优先发生在酰胺N上(经DFT计算证实), 促进N-CO键断裂。胡椒碱: [M+H]+ 286→201(piperoyl acylium, C12H10O3+, 丢失piperidine 85 Da)→173(-CO)→143; 辣椒素: 306→137(vanillylamine cation, C8H9O2+, 通用诊断离子, PIS扫描用); piperlongumine: 318→221(trimethoxycinnamoyl acylium)→193(-CO)",
+          "mechanism": "酰胺键α-断裂 (N-CO bond cleavage, 质子化N导向)",
+          "diagnostic_type": "特征碎片(酰胺键断裂产物)",
+          "confidence": "高",
+          "reference": "Fokoue et al., RSC Adv. 2018, 8:21407; PMC9080946; PMID:30668887"
+        },
+        {
+          "rule_id": "AMD-002",
+          "fragment_mz": "N-p-coumaroyltyramine: 284→147(香豆酰鎓离子, coumaroyl acylium)→121(酪胺碎片, tyramine)",
+          "description": "羟基肉桂酸酰胺(HCAA)以酰胺键断裂产生两个互补碎片: 酰基碎片(acylium)和胺碎片。N-p-香豆酰酪胺: 284→147(coumaroyl acylium, C9H7O2+)→121(tyramine, C8H9O+)→119(-H2O)。咖啡酰酪胺: 284→163(caffeoyl acylium)。此互补碎片对为HCAA结构鉴定的关键",
+          "mechanism": "酰胺键断裂 → 酰基碎片 + 胺碎片",
+          "diagnostic_type": "特征碎片(互补诊断离子对)",
+          "confidence": "高",
+          "reference": "ACS Anal. Chem. 2018, deep annotation of HCAAs; PMC10535375; PMID:30668887"
+        }
+      ]
+    },
+    {
+      "class": "吡咯里西啶类生物碱",
+      "class_en": "Pyrrolizidine Alkaloids",
+      "core_structure": "1-羟基甲基吡咯里西啶necine碱基(necine base) + necic酸酯",
+      "example_compounds": [
+        "千里光碱 Senecionine",
+        "倒千里光碱 Retrorsine",
+        "天芥菜碱 Heliotrine",
+        "克氏千里光碱 Senkirkine"
+      ],
+      "rules": [
+        {
+          "rule_id": "PYR-001",
+          "fragment_mz": "retronecine型DFI: m/z 138(C8H12NO+, 质子化retronecine, 基峰), 120(138-H2O), 94; 饱和型: m/z 140, 122; otonecine型: m/z 168, 150",
+          "description": "PAs特征裂解: 酯键断裂产生necine碱基碎片和necic酸碎片。1,2-不饱和PAs(retronecine/heliotridine型): 诊断碎片m/z 138(protonated retronecine, 基峰级)和m/z 120(138-H2O)及m/z 94; 饱和PAs(platynecine型): m/z 140, 122; otonecine型: m/z 168, 150。heliotrine特征碎片: m/z 214, 197, 156",
+          "mechanism": "酯键断裂 (Ester bond cleavage → necine base fragments)",
+          "diagnostic_type": "特征碎片(necine碱基诊断)",
+          "confidence": "高",
+          "reference": "MJCCE fragmentation patterns of PAs; PMC8610691; Nature 2025 HR-MS/MS library of 165 PA spectra"
+        },
+        {
+          "rule_id": "PYR-002",
+          "description": "大环二酯PAs(如senecionine): 丢失两个酯基产生碱基碎片m/z 138。单酯PAs: 仅一个酯键断裂。N-氧化物PAs(PANOs): 特征性丢失O (16 Da)转化为游离碱。HRMS数据库已建立165个PA/PANO光谱。PA分类: retronecine型(1,2-unsat, m/z 138) vs heliotridine型(7S epimer, m/z 214) vs otonecine型(m/z 168) vs saturated型(m/z 140)",
+          "mechanism": "双酯断裂 / N-氧还",
+          "neutral_loss": "RCOOH (酯基) / O (16, N-oxide)",
+          "diagnostic_type": "中性丢失(PA类型区分)",
+          "confidence": "高",
+          "reference": "Nature 2025, 84 PA standards HRMS; Agilent 28 PA LC-MS/MS method; PMID:24245544"
+        }
+      ]
+    },
+    {
+      "class": "喹嗪啶类生物碱",
+      "class_en": "Quinolizidine Alkaloids",
+      "core_structure": "双喹嗪啶骨架 (bis-quinolizidine, 含1-2个喹嗪啶环系统)",
+      "example_compounds": [
+        "苦参碱 Matrine",
+        "槐果碱 Sophocarpine",
+        "氧化苦参碱 Oxymatrine",
+        "羽扇豆碱 Lupanine",
+        "金雀花碱 Sparteine",
+        "金雀花碱 Cytisine"
+      ],
+      "rules": [
+        {
+          "rule_id": "QZD-001",
+          "fragment_mz": "matrine: [M+H]+ 249→150(C5H7NO丢失)→148(C5H9NO丢失)→136; sophocarpine: 247→150→148→136; lupanine: 249→150→136→98",
+          "description": "苦参碱型(matrine-type)喹嗪啶生物碱: 特征性丢失C5H7NO(97 Da)和C5H9NO(99 Da)产生m/z 150和148。matrine [M+H]+ 249→150(基峰级, 苦参碱型DFI)→148→136; sophocarpine 247→150→148→136。氧化苦参碱先丢失O(16 Da)再按苦参碱规则裂解。m/z 150为苦参碱型通用诊断碎片",
+          "mechanism": "喹嗪啶环裂解 (Ring fragmentation of quinolizidine)",
+          "diagnostic_type": "特征碎片(m/z 150为喹嗪啶通用诊断)",
+          "confidence": "高",
+          "reference": "Wu et al., Int. J. Mass Spectrom. 2013, 341-342:28-33; Dong et al., PMID:34367714; Russian Chem. Rev. RCR2745"
+        },
+        {
+          "rule_id": "QZD-002",
+          "fragment_mz": "sparteine: [M+H]+ 235→193→150→149→98; cytisine: 191→160→148→146→117",
+          "description": "sparteine型: B环C6-C7和C9-C10键断裂占主导, 产生m/z 150, 149, 98。cytisine(含吡啶酮): [M+H]+ 191→160(-CH2NH2, 31 Da)→148(-HNCO)→146。lupanine: m/z 249→150→136→98。各QA亚型由m/z 150/149/148/136的相对丰度区分",
+          "mechanism": "喹嗪啶骨架断裂",
+          "diagnostic_type": "特征碎片(QA亚类区分)",
+          "confidence": "高",
+          "reference": "FAB-MS of bis-quinolizidine; bioRxiv 2022 QA metabolic; LC-MS/MS library of 75 QAs"
+        }
+      ]
+    },
+    {
+      "class": "喹啉类生物碱",
+      "class_en": "Quinoline Alkaloids",
+      "core_structure": "喹啉母核 (quinoline, C9H7N)",
+      "example_compounds": [
+        "喜树碱 Camptothecin",
+        "奎宁 Quinine",
+        "奎尼丁 Quinidine",
+        "Dictamnine"
+      ],
+      "rules": [
+        {
+          "rule_id": "QNL-001",
+          "fragment_mz": "喜树碱: [M+H]+ 349→305(CO2)→257(CO+H2O)→219; 奎宁: 325→307(H2O)→174(喹啉+OCH3)",
+          "description": "喹啉生物碱的裂解由喹啉环稳定性和取代基决定。喜树碱: 特征丢失CO2(44, 内酯环)→CO(28)→H2O(18)。奎宁/奎尼丁: 丢失H2O→产生含喹啉环碎片m/z 136-174。4-甲氧基-2-芳基喹啉(如cuspareine)丢失OCH3(31 Da)",
+          "mechanism": "内酯环脱羧 / 取代基丢失",
+          "neutral_loss": "CO2 (44) / CO (28) / H2O (18) / OCH3 (31)",
+          "diagnostic_type": "中性丢失级联",
+          "confidence": "高",
+          "reference": "PMID:264141753; Sci. Rep. quinoline MS; ScienceDirect camptothecin MS/MS"
+        },
+        {
+          "rule_id": "QNL-002",
+          "fragment_mz": "dictamnine: [M+H]+ 200→185(CH3)→157(再CO)",
+          "description": "呋喃喹啉生物碱(dictamnine, skimmianine等): 特征丢失CH3(15, 甲氧基)和CO(28)。呋喃环的引入改变裂解路径: 与简单喹啉相比有额外的呋喃环开环碎片。skimmianine: 260→227(OCH3)→212(CH3)",
+          "mechanism": "甲氧基脱甲基 + 呋喃环裂解",
+          "neutral_loss": "CH3 (15) / OCH3 (31) / CO (28)",
+          "diagnostic_type": "中性丢失(呋喃喹啉诊断)",
+          "confidence": "高",
+          "reference": "J. Nat. Prod. Hancock alkaloids ACS 2018; PMID:264141753"
+        }
+      ]
+    },
+    {
+      "class": "麻黄碱类",
+      "class_en": "Ephedra Alkaloids",
+      "core_structure": "2-氨基-1-苯基-1-丙醇骨架 (phenylpropanolamine core)",
+      "example_compounds": [
+        "麻黄碱 Ephedrine",
+        "伪麻黄碱 Pseudoephedrine",
+        "甲基麻黄碱 Methylephedrine",
+        "去甲伪麻黄碱 Norpseudoephedrine"
+      ],
+      "rules": [
+        {
+          "rule_id": "EPH-001",
+          "fragment_mz": "ephedrine: [M+H]+ 166→148(H2O)→135(-CH2NH2)→117(-H2O-CH2NH); methylephedrine: 180→162(H2O)→148(-CH2NHCH3)",
+          "description": "麻黄碱类以丢失H2O(18 Da, 来自β-OH脱水)为首要裂解, 随后丢失胺片段(CH2NH2 31 Da / CH2NHCH3 45 Da)。ephedrine/pseudoephedrine: 166→148(H2O)→117(累积丢失H2O+CH2NH)。麻黄碱和伪麻黄碱质谱完全相同(非对映异构体, 需色谱分离)。甲基麻黄碱: 180→162(H2O)→148(-CH2NHCH3), m/z差14 Da(CH2)可区分N-甲基化程度",
+          "mechanism": "β-OH脱水 → N-脱甲基/脱氨",
+          "neutral_loss": "H2O (18) / CH3 (15) / NH3 (17)",
+          "diagnostic_type": "中性丢失(麻黄碱类通用)",
+          "confidence": "高",
+          "reference": "DSHS Cologne Proceedings 2015; PMID:30668887; MDPI Molecules 2023 Kakkonto LC-MS"
+        }
+      ]
+    },
+    {
+      "class": "石蒜科生物碱类",
+      "class_en": "Amaryllidaceae Alkaloids",
+      "core_structure": "多种含氮杂环骨架(加兰他敏型/石蒜碱型/水仙环素型/文珠兰碱型等)",
+      "example_compounds": [
+        "加兰他敏 Galanthamine",
+        "石蒜碱 Lycorine",
+        "水仙环素 Narciclasine",
+        "文珠兰碱 Crinine",
+        "水鬼蕉碱 Tazettine"
+      ],
+      "rules": [
+        {
+          "rule_id": "AMA-001",
+          "fragment_mz": "galanthamine: [M+H]+ 288→270(H2O)→231→213→198; lycorine: 288→270(H2O)→252(2H2O)→227",
+          "description": "加兰他敏型: 特征碎片m/z 231, 213, 198(连续脱水+环裂解)。石蒜碱型: 优先脱水m/z 288→270→252后产生含氮杂环碎片m/z 227。两者MW均为287但碎片模式不同: galanthamine→m/z 231(DFI), lycorine→m/z 227(DFI)。QToF已报道59个石蒜科生物碱的精确质量和ESI-MS/MS碎片(13个lycorine型, 10个galanthamine型, 19个crinane型)",
+          "mechanism": "连续脱水 + 含氮环裂解",
+          "neutral_loss": "H2O (18) ×n",
+          "diagnostic_type": "特征碎片(加兰他敏型vs石蒜碱型区分)",
+          "confidence": "高",
+          "reference": "Torras-Claveria et al. 2021, QToF of 59 Amaryllidaceae alkaloids; PMC6332018 (cited 49)"
+        },
+        {
+          "rule_id": "AMA-002",
+          "fragment_mz": "crinine型: m/z 272→254(H2O)→236(2H2O); tazettine型: m/z 314→296(H2O)",
+          "description": "文珠兰碱(crinine)型: [M+H]+ 272→254(H2O)→236(2H2O)→222。水鬼蕉碱(tazettine)型: m/z 314→296(H2O)→278。homolycorine型: m/z 302→284(H2O)→266。各亚型由母离子m/z和脱水级联模式区分",
+          "mechanism": "脱水级联 (亚型特征性)",
+          "diagnostic_type": "特征碎片(亚型区分)",
+          "confidence": "高",
+          "reference": "Wiley RCM GC-MS of crinine-type 2023; Torras-Claveria 2021"
+        }
+      ]
+    },
+    {
+      "class": "甾体生物碱类",
+      "class_en": "Steroidal Alkaloids",
+      "core_structure": "甾体骨架含氮(solanidane/spirosolane/tomatane型)",
+      "example_compounds": [
+        "茄碱 Solanine",
+        "番茄碱 Tomatine",
+        "锥丝碱 Conessine"
+      ],
+      "rules": [
+        {
+          "rule_id": "STA-001",
+          "fragment_mz": "茄碱苷元 solanidine: 398→380(H2O)→362(2H2O)→344; 糖苷: 顺序丢失糖基→苷元",
+          "description": "甾体生物碱糖苷(茄碱、番茄碱)首先顺序丢失糖单元(同甾体皂苷), 产生苷元碎片。茄碱苷元(solanidine, solanidane型): [M+H]+ 398→380(H2O)→362。番茄碱苷元(tomatidine, spirosolane型): [M+H]+ 416→398(H2O)。solanidane vs spirosolane由苷元m/z差异区分(差18 Da, 因含氧)",
+          "mechanism": "糖苷键顺序断裂 → 苷元脱水",
+          "neutral_loss": "糖基(162/146/132) + H2O (18)",
+          "diagnostic_type": "中性丢失+苷元碎片",
+          "confidence": "高",
+          "reference": "Friedman et al., J. Agric. Food Chem. 2003; PMID:14705915"
+        }
+      ]
+    },
+    {
+      "class": "甾体激素类",
+      "class_en": "Steroid Hormones",
+      "core_structure": "甾体母核(环戊烷并多氢菲) + 特定官能团",
+      "example_compounds": [
+        "睾酮 Testosterone",
+        "雌二醇 Estradiol",
+        "皮质醇 Cortisol",
+        "孕酮 Progesterone",
+        "维生素D3 Vitamin D3"
+      ],
+      "rules": [
+        {
+          "rule_id": "STH-001",
+          "fragment_mz": "睾酮: [M+H]+ 289→97→79; 皮质醇: 363→345(H2O)→327(2H2O)→309; 雌二醇: 273→183; 孕酮: 315→97",
+          "description": "雄激素和孕激素以丢失H2O和产生低m/z A/B环碎片(如m/z 97, 79)为特征。糖皮质激素(皮质醇等): 连续脱水级联(3个OH基, -18×3)。雌激素(雌二醇): m/z 183为芳香A环特征碎片。孕酮: m/z 97为诊断性A环碎片",
+          "mechanism": "脱水级联(含OH甾体) / A环碎片化",
+          "neutral_loss": "H2O (18) ×n",
+          "diagnostic_type": "特征碎片(甾体激素亚类诊断)",
+          "confidence": "高",
+          "reference": "PMC3634331 (steroid hormone MS review); Frontiers Chem. 2022, 17 adrenal steroids; Thermo TN-64915"
+        },
+        {
+          "rule_id": "STH-002",
+          "fragment_mz": "vitamin D3: [M+H-H2O]+ (脱水离子占主导); 25(OH)D3: [M+H-H2O]+ → [M+H-2H2O]+",
+          "description": "维生素D类以丢失H2O为最特征反应(因C3-β-OH), 脱水离子[M+H-H2O]+通常强于[M+H]+。25(OH)D3进一步丢失第二分子H2O。维生素D2 vs D3: D2含额外28 Da(C28 vs C27), 由前体m/z区分",
+          "mechanism": "优先脱水 (C3-OH导向)",
+          "neutral_loss": "H2O (18) ×1-2",
+          "diagnostic_type": "中性丢失(VitD诊断)",
+          "confidence": "高",
+          "reference": "Agilent VitD analysis; SCIEX VitD/steroid panel; PMID:3634331"
+        }
+      ]
+    },
+    {
+      "class": "蜕皮甾酮类",
+      "class_en": "Ecdysteroids",
+      "core_structure": "多羟基甾体(胆甾烷骨架, 通常含6-8个OH)",
+      "example_compounds": [
+        "20-羟基蜕皮甾酮 20-Hydroxyecdysone",
+        "蜕皮酮 Ecdysone",
+        "川牛膝甾酮 Inokosterone"
+      ],
+      "rules": [
+        {
+          "rule_id": "ECD-001",
+          "fragment_mz": "20-OH-ecdysone: [M+H]+ 481→463(H2O)→445(2H2O)→427(3H2O)→409(4H2O)→363(-side chain); DFI: m/z 99(A/B环碎片)",
+          "description": "蜕皮甾酮以连续多步脱水为最特征裂解(5-8个OH基): [M+H]+ 481→463→445→427→409→391(可高达6次脱水)。侧链(C20-C27)丢失产生m/z 363碎片。m/z 99为甾体A/B环碎片(DFI)。C-7/C-15官能团类型决定环裂解位置(b/a系列离子)。ecdysone(MW 464): 465→447→429。makisterone A(MW 494): 495→477→459",
+          "mechanism": "多步脱水级联 + 侧链丢失 + 环裂解",
+          "neutral_loss": "H2O (18) ×4-6 + side chain",
+          "diagnostic_type": "中性丢失级联(蜕皮甾酮诊断)",
+          "confidence": "高",
+          "reference": "ResearchGate ecdysteroid fragmentation; Agilent 5989-8879EN; ScienceDirect HPLC-MS/MS ecdysones 2022"
+        }
+      ]
+    },
+    {
+      "class": "有机胺类",
+      "class_en": "Biogenic Amines & Neurotransmitters",
+      "core_structure": "含氨基的小分子(脂肪胺/芳香胺)",
+      "example_compounds": [
+        "多巴胺 Dopamine",
+        "5-羟色胺 Serotonin",
+        "组胺 Histamine",
+        "腐胺 Putrescine",
+        "亚精胺 Spermidine",
+        "精胺 Spermine"
+      ],
+      "rules": [
+        {
+          "rule_id": "AMN-001",
+          "fragment_mz": "dopamine: 154→137(NH3)→119(H2O)→91(C7H7+, tropylium); serotonin: 177→160(NH3)→132(-CO)→115(indole); putrescine: 89→72(NH3)→58; spermidine: 146→129(NH3)→112(2NH3); spermine: 203→186(NH3)→129(-aminopropyl)",
+          "description": "生物胺以丢失NH3 (17 Da)为最特征反应。儿茶酚胺(多巴胺): 优先丢NH3→m/z 137, 然后H2O→119, 最终产生tropylium离子m/z 91。5-羟色胺: m/z 177→160(-NH3)→132(-CO)→115(indole fragment)。组胺: 112→95(-NH3)→68(imidazole)。多胺类: putrescine m/z 89→72→58; spermidine m/z 146→129→112; spermine m/z 203→186→129(-aminopropyl 74 Da)。多胺类序列丢失aminopropyl(74 Da)和aminobutyl(88 Da)单元",
+          "mechanism": "脱氨 (NH3 loss) + 脱水 (H2O loss)",
+          "neutral_loss": "NH3 (17) / H2O (18)",
+          "diagnostic_type": "特征碎片(生物胺通用诊断)",
+          "confidence": "高",
+          "reference": "ACS J. Am. Soc. Mass Spectrom. 2021 phenethylamine; PMC4166658 neurotransmitter LC-MS; PMC10861277 polyamine MS"
+        }
+      ]
+    },
+    {
+      "class": "多甲氧基黄酮类",
+      "class_en": "Polymethoxyflavones (PMFs)",
+      "core_structure": "含多个甲氧基的黄酮母核 (multi-methoxylated flavone)",
+      "example_compounds": [
+        "川陈皮素 Nobiletin (6个OCH3)",
+        "橘红素 Tangeretin (5个OCH3)",
+        "甜橙素 Sinensetin (5个OCH3)"
+      ],
+      "rules": [
+        {
+          "rule_id": "PMF-001",
+          "fragment_mz": "nobiletin: [M+H]+ 403→388(CH3)→373(OCH3)→358→342; tangeretin: 373→358(CH3)→343→328",
+          "description": "PMFs以连续丢失CH3·(15 Da)和OCH3·(31 Da)自由基为最特征裂解模式。nobiletin(6个OCH3): 403→388(-CH3)→358(-2OCH3)→342→327。tangeretin(5个OCH3): 373→358(-CH3)→343(-CH3)→328。每个OCH3丢失后可能产生自由基碎片(奇电子离子)",
+          "mechanism": "连续脱甲基 (Sequential CH3/OCH3 radical loss)",
+          "neutral_loss": "CH3 (15) / OCH3 (31) ×n",
+          "diagnostic_type": "中性丢失级联(PMF诊断)",
+          "confidence": "高",
+          "reference": "ACS J. Agric. Food Chem. 2013, PMF pharmacokinetics; ScienceDirect Food Chem. 2025 PMF characterization; PMID:21885228"
+        }
+      ]
+    },
+    {
+      "class": "异戊烯基黄酮类",
+      "class_en": "Prenylated Flavonoids",
+      "core_structure": "黄酮母核含异戊烯基(3,3-二甲基烯丙基)取代",
+      "example_compounds": [
+        "黄腐酚 Xanthohumol (查尔酮型)",
+        "8-异戊烯基柚皮素 8-Prenylnaringenin",
+        "异黄腐酚 Isoxanthohumol"
+      ],
+      "rules": [
+        {
+          "rule_id": "PRF-001",
+          "fragment_mz": "xanthohumol: [M-H]- 353→297(C4H8, prenyl)→233→179(A环碎片, DFI)",
+          "description": "异戊烯基黄酮以丢失异戊烯基侧链为特征: 丢失C4H8(56 Da, 异丁烯)或C5H8(68 Da, 异戊二烯)。黄腐酚(查尔酮型): [M-H]- 353→297(-C4H8)→233(-C8H8O)→179(A环RDA碎片, DFI)。异黄腐酚(黄酮型): 先糖环化再按黄酮规则裂解",
+          "mechanism": "异戊烯基消除 (Prenyl group loss as C4H8/C5H8) + RDA",
+          "neutral_loss": "C4H8 (56, isobutene) / C5H8 (68, isoprene)",
+          "diagnostic_type": "中性丢失(异戊烯基诊断)",
+          "confidence": "高",
+          "reference": "Frontiers Nutr. 2020; J. Chromatogr. A 2009; Semantic Scholar prenylated flavonoid MS; OSU xanthohumol thesis"
+        }
+      ]
+    },
+    {
+      "class": "姜黄素类/二芳基庚烷类",
+      "class_en": "Curcuminoids / Diarylheptanoids",
+      "core_structure": "两个芳环经七碳链连接 (diarylheptanoid: Ar-C7-Ar)",
+      "example_compounds": [
+        "姜黄素 Curcumin",
+        "脱甲氧基姜黄素 Demethoxycurcumin",
+        "双脱甲氧基姜黄素 Bisdemethoxycurcumin",
+        "二氢姜黄素 Tetrahydrocurcumin"
+      ],
+      "rules": [
+        {
+          "rule_id": "CUR-001",
+          "fragment_mz": "curcumin: [M+H]+ 369→177(诊断)→149(CO); [M-H]- 367→217→175→149",
+          "description": "姜黄素类ESI-MS/MS: 正离子模式, [M+H]+ 369→177(关键诊断碎片, 来源于庚烷链断裂产生的半分子离子)→149(-CO)。负离子: [M-H]- 367→217→175→149。三个姜黄素类共享m/z 177诊断碎片。DMC [M+H]+ 339→177; BDMC [M+H]+ 309→177",
+          "mechanism": "庚烷链断裂 (heptanoid chain cleavage) → 半分子碎片",
+          "neutral_loss": "heptanoid chain (~192 Da) / CO (28) / CH3 (15)",
+          "diagnostic_type": "特征碎片(m/z 177, 姜黄素类DFI)",
+          "confidence": "高",
+          "reference": "Jiang & Timmermann, J. Chromatogr. A 2006; PMID:16490201; SLJ Sri Lanka MS; Wiley RCM curcuminoid fragmentation"
+        },
+        {
+          "rule_id": "CUR-002",
+          "description": "三个姜黄素类可由前体离子m/z区分: curcumin [M+H]+ 369(2×OCH3), demethoxycurcumin 339(1×OCH3), bisdemethoxycurcumin 309(0×OCH3)。甲氧基化程度由前体m/z差30 Da(OCH2)确定。脱甲氧基衍生物碎片少一步CH3丢失",
+          "mechanism": "前体m/z差异诊断 (OCH3计数)",
+          "diagnostic_type": "前体离子质量差异(甲氧基数区分)",
+          "confidence": "高",
+          "reference": "ACS J. Agric. Food Chem. 2008; Nature Sci. Rep. 2025 curcuma metabolomics"
+        },
+        {
+          "rule_id": "CUR-003",
+          "fragment_mz": "curcumin [M+H]+ 369→245(基峰, -C7H8O2 guaiacol)→175(double retro-aldol); DMC 339→245→175; BDMC 309→187→143",
+          "description": "姜黄素正离子DFT证实机制: [M+H]+ 369→245.0808(丢失2-methoxyphenol/guaiacol 124 Da, 基峰, 经Nazarov型环化)→175(double retro-aldol)。DMC: 339→245(同样丢失2-methoxyphenol)→175。BDMC(无甲氧基): 309→187→143, 无m/z 245碎片(甲氧基对环化机制至关重要)。负离子: curcumin 367→217(retro-aldol)→175→149",
+          "mechanism": "Nazarov型环化→2-methoxyphenol消除(正离子); retro-aldol(负离子)",
+          "neutral_loss": "C7H8O2 (124, guaiacol, 正离子) / retro-aldol (负离子)",
+          "diagnostic_type": "特征碎片(正离子m/z 245为curcumin/DMC基峰DFI)",
+          "confidence": "高",
+          "reference": "Cyriac et al., J. Am. Soc. Mass Spectrom. 2019; PMID:31080356; PMC6508607"
+        }
+      ]
+    },
+    {
+      "class": "黄酮木脂素类",
+      "class_en": "Flavonolignans",
+      "core_structure": "二氢黄酮醇(taxifolin) + 松柏醇(coniferyl alcohol)通过氧化偶联",
+      "example_compounds": [
+        "水飞蓟宾 Silybin A/B",
+        "异水飞蓟宾 Isosilybin A/B",
+        "水飞蓟亭 Silychristin",
+        "水飞蓟宁 Silydianin"
+      ],
+      "rules": [
+        {
+          "rule_id": "FLN-001",
+          "fragment_mz": "silybin: [M-H]- 481→301(taxifolin苷元)→253→179→151; [M+H]+ 483→303→285→257",
+          "description": "黄酮木脂素以产生taxifolin(二氢黄酮醇)碎片m/z 301(负离子)或303(正离子)为诊断特征。silybin [M-H]- 481→301(丢失coniferyl alcohol相关部分180 Da)→253(-CO+H2O)→179(B环碎片)→151(1,3A-碎片)。所有silymarin成分共享MW 482但CID模式不同",
+          "mechanism": "黄酮-木脂素键断裂 → taxifolin碎片 → 黄酮规则裂解",
+          "neutral_loss": "~180 Da (coniferyl alcohol fragment) + CO (28) + H2O (18)",
+          "diagnostic_type": "特征碎片(m/z 301/303 taxifolin诊断)",
+          "confidence": "高",
+          "reference": "ScienceDirect Int. J. Mass Spectrom. 2012 silymarin CID; ACS J. Nat. Prod. 2007; PMID:17913795"
+        }
+      ]
+    },
+    {
+      "class": "色原酮类",
+      "class_en": "Chromones",
+      "core_structure": "苯并-γ-吡喃酮 (4H-chromen-4-one, C9H6O2)",
+      "example_compounds": [
+        "齿阿米素 Visnagin",
+        "凯林 Khellin",
+        "丁香色原酮 Eugenin"
+      ],
+      "rules": [
+        {
+          "rule_id": "CHR-001",
+          "description": "色原酮与黄酮共享C6-C3-C6骨架的一半(苯并吡喃酮环), 但仅有单环结构。色原酮以连续丢失CO(28 Da)和CH3(15 Da, 甲氧基化衍生物)为特征, 类似香豆素。无RDA裂解(因无双环系统)。khellin: [M+H]+ 261→246(CH3)→218(CO)→190",
+          "mechanism": "脱羰基 + 脱甲基 (类似香豆素)",
+          "neutral_loss": "CO (28) / CH3 (15) / OCH3 (31)",
+          "diagnostic_type": "中性丢失",
+          "confidence": "高",
+          "reference": "Drewes, Chroman and Related Compounds; Heterocyclic Chemistry review"
+        }
+      ]
+    },
+    {
+      "class": "环肽类",
+      "class_en": "Cyclic Peptides",
+      "core_structure": "环状氨基酸序列 (cyclic backbone of amino acid residues)",
+      "example_compounds": [
+        "环孢素A Cyclosporin A",
+        "黄芪环肽Astragalus cyclic peptides",
+        "菟丝子环肽Cuscuta cyclic peptides"
+      ],
+      "rules": [
+        {
+          "rule_id": "CPE-001",
+          "description": "环肽MSn裂解策略: 环肽需先开环(丢失H2O或NH3)产生线性离子, 再按线性肽规则裂解(b/y离子)。[M+Na]+加合离子通常提供更好的序列信息。[M+H]+和[M+Na]+的裂解模式不同: 钠加合物倾向于酰胺键断裂, 质子加合物倾向于选择性断裂。MS3-MS4级联对环肽测序至关重要",
+          "mechanism": "开环 → 线性肽裂解 (b/y ions)",
+          "diagnostic_type": "MSn测序策略(环肽诊断)",
+          "confidence": "高",
+          "reference": "PMC3398611 cyclic peptide sequencing MSn; Shimadzu Q-TOF cyclosporin; TCM Jiuwei decoction MS"
+        }
+      ]
+    },
+    {
+      "class": "丹酚酸类",
+      "class_en": "Salvianolic Acids",
+      "core_structure": "多聚酚酸(咖啡酸/丹参素/迷迭香酸多聚体)",
+      "example_compounds": [
+        "迷迭香酸 Rosmarinic acid",
+        "丹酚酸B Salvianolic acid B",
+        "丹酚酸A Salvianolic acid A",
+        "紫草酸 Lithospermic acid"
+      ],
+      "rules": [
+        {
+          "rule_id": "SVA-001",
+          "fragment_mz": "rosmarinic acid: [M-H]- 359→197(danshensu)→179(caffeic acid)→135(caffeic acid-CO2); salvianolic B: 717→519(-198 danshensu)→321(-198)→179(caffeic acid); salvianolic A: 493→295(-198)→185",
+          "description": "丹酚酸类以丢失咖啡酰基(162 Da, C9H6O3)和丹参素(198 Da或脱水180 Da)为特征。通用DFI: m/z 197(丹参素)和m/z 179(咖啡酸)存在于所有丹酚酸中。m/z 359(迷迭香酸)为二聚及以上丹酚酸的诊断。迷迭香酸(二聚体): [M-H]- 359→197→179→161(咖啡酸-H2O)→135。丹酚酸B(四聚体): 717→519(-danshensu 198)→321(-danshensu)→359(迷迭香酸碎片)→179。丹酚酸A(三聚体): 493→295(-danshensu)→185。丹酚酸C: 491→311→293",
+          "mechanism": "酯键断裂 → 咖啡酸/丹参素碎片 → 脱羧",
+          "neutral_loss": "C9H6O3 (162, caffeoyl) / danshensu (198/180) ×n",
+          "diagnostic_type": "特征碎片(m/z 179咖啡酸, m/z 197丹参素)",
+          "confidence": "高",
+          "reference": "PubMed 31017297; ACS J. Agric. Food Chem. 1998; Nature Sci. Rep. 2021 Salvia phytochemical"
+        }
+      ]
+    },
+    {
+      "class": "鞘脂类",
+      "class_en": "Sphingolipids",
+      "core_structure": "鞘氨醇碱基(sphingoid base) + N-酰基脂肪酸链 + 头基",
+      "subclasses": [
+        {
+          "subclass": "神经酰胺 (Ceramides, Cer)",
+          "core_description": "鞘氨醇碱基 + N-酰基脂肪酸链",
+          "example_compounds": [
+            "Cer(d18:1/16:0)",
+            "Cer(d18:1/24:1)",
+            "Cer(d18:0/24:0)"
+          ],
+          "rules": [
+            {
+              "rule_id": "SPH-001",
+              "fragment_mz": "Cer(d18:1): [M+H]+ → m/z 264.2686 (d18:1 sphingosine, C18H34NO+, 双脱水鞘氨醇); Cer(d18:0): m/z 266.2843",
+              "description": "神经酰胺正离子CID: 以m/z 264.2686(鞘氨醇d18:1双脱水碎片)为最诊断离子。连续脱水: [M+H]+ → [M+H-H2O]+ → [M+H-2H2O]+ → m/z 264。负离子产生脂肪酰阴离子[RCOO]-。m/z 264 vs 266可区分鞘氨醇(d18:1)和鞘烷(d18:0)碱基",
+              "mechanism": "鞘氨醇碱基双脱水碎片化",
+              "neutral_loss": "H2O (18) ×2 + fatty acyl chain",
+              "diagnostic_type": "特征碎片(m/z 264鞘氨醇诊断)",
+              "confidence": "高",
+              "reference": "Sullards et al., J. Biol. Chem. 2003; PMID:3205276; PMC5352698"
+            }
+          ]
+        },
+        {
+          "subclass": "鞘磷脂 (Sphingomyelins, SM)",
+          "core_description": "神经酰胺 + 磷酸胆碱头基",
+          "example_compounds": [
+            "SM(d18:1/16:0)",
+            "SM(d18:1/24:1)"
+          ],
+          "rules": [
+            {
+              "rule_id": "SPH-002",
+              "fragment_mz": "SM: m/z 184.0733 (磷酸胆碱), NL 183 Da; [M+H-183]+ → ceramide fragment → m/z 264",
+              "description": "鞘磷脂与PC共享m/z 184诊断离子和NL 183 Da。区分SM vs PC: NL 183后, SM产生ceramide碎片(→m/z 264), PC产生DAG碎片。色谱保留时间: SM通常晚于同m/z的PC(RP-LC)。另: SM有NL 59 Da(trimethylamine)",
+              "mechanism": "头基碎裂(同PC) → ceramide碎片化",
+              "diagnostic_type": "特征碎片(m/z 184, NL 183, 与PC区分需ceramide碎片)",
+              "confidence": "高",
+              "reference": "Pulfer & Murphy, Mass Spectrom. Rev. 2003; PMID:12691095; LIPID MAPS sphingolipidomics"
+            }
+          ]
+        },
+        {
+          "subclass": "脑苷脂/神经节苷脂 (Cerebrosides & Gangliosides)",
+          "core_description": "神经酰胺 + 糖链(半乳糖/葡萄糖 + 可能的唾液酸)",
+          "example_compounds": [
+            "GlcCer(d18:1/16:0)",
+            "GM1",
+            "GM3",
+            "GD1a"
+          ],
+          "rules": [
+            {
+              "rule_id": "SPH-003",
+              "fragment_mz": "GlcCer: NL 162(hexose)→ceramide→m/z 264; GM3: m/z 290(Neu5Ac-H2O); GM1/GD1: NL 291/582(sialic acid×1/2)",
+              "description": "脑苷脂(GlcCer/GalCer): 丢失己糖(162 Da)产生ceramide碎片→m/z 264。糖oxonium离子m/z 163(protonated hexose)。神经节苷脂: m/z 290.0881(dehydrated Neu5Ac)为所有含唾液酸鞘脂的通用诊断。单唾液酸(GM系列): NL 291 Da; 二唾液酸(GD系列): NL 582 Da; 三唾液酸(GT系列): NL 873 Da",
+              "mechanism": "糖链丢失 → ceramide碎裂; 唾液酸诊断碎片",
+              "neutral_loss": "162 (hexose) / 291 (Neu5Ac) / 582 (2×Neu5Ac)",
+              "diagnostic_type": "特征碎片(神经节苷脂唾液酸诊断)",
+              "confidence": "高",
+              "reference": "Ikeda et al., JLR 2008; PMID:18204080; PMID:24151180 (UVPD); PMID:38287542 (2024 review)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "糖脂类",
+      "class_en": "Glycoglycerolipids",
+      "core_structure": "甘油二酯(DAG) + 糖基(半乳糖/葡萄糖)",
+      "example_compounds": [
+        "单半乳糖甘油二酯 MGDG",
+        "双半乳糖甘油二酯 DGDG"
+      ],
+      "rules": [
+        {
+          "rule_id": "GLY-001",
+          "fragment_mz": "MGDG [M+Na]+: NL 162(galactose)→[DAG+Na]+; DGDG: NL 162→MGDG-like→NL 324(total)→[DAG+Na]+",
+          "description": "糖脂以[M+Na]+或[M+Li]+加合离子为佳。MGDG: 丢失半乳糖(162 Da)产生DAG碎片。DGDG: 先丢一个半乳糖(162 Da, 产生MGDG-like中间体), 再丢第二个(共324 Da)产生DAG碎片。Li+加合离子提供更好的结构诊断信息。DAG碎片进一步丢失脂肪酰链(RCOOH)揭示sn-位信息",
+          "mechanism": "糖苷键断裂 → DAG碎片 → 脂肪酰链丢失",
+          "neutral_loss": "162.0528 (hexose) ×1-2 + RCOOH",
+          "diagnostic_type": "中性丢失(糖基丢失)",
+          "confidence": "高",
+          "reference": "PMC6858605 plant glycerolipids; LIPID MAPS MGDG/DGDG; Christie, Lipid Analysis"
+        }
+      ]
+    },
+    {
+      "class": "甜菜色素类",
+      "class_en": "Betalains",
+      "core_structure": "甜菜醛氨酸(betalamate) + 环-DOPA或氨基酸(共轭体系)",
+      "example_compounds": [
+        "甜菜苷 Betanin",
+        "异甜菜苷 Isobetanin",
+        "苋菜红素 Amaranthin"
+      ],
+      "rules": [
+        {
+          "rule_id": "BET-001",
+          "fragment_mz": "betanin: [M+H]+ 551→389(-hexose 162)→345(-CO2); amaranthin: 727→551(-GlcA 176)→389(-hexose 162)",
+          "description": "甜菜色素以丢失糖基(己糖162 Da, 葡萄糖醛酸176 Da)为首要裂解, 产生通用苷元离子m/z 389(betanidin)。苷元进一步丢失CO2(44 Da)→m/z 345。betanin和isobetanin为差向异构体(质谱相同, 需色谱区分)。已建立140个betalain的in silico碎片数据库",
+          "mechanism": "糖苷键断裂 → 苷元脱羧",
+          "neutral_loss": "hexose (162) / GlcA (176) / CO2 (44)",
+          "diagnostic_type": "特征碎片(m/z 389 betanidin苷元, DFI)",
+          "confidence": "高",
+          "reference": "PMID:39598874 betalain database 140 compounds; ACS J Agric Food Chem 2004"
+        }
+      ]
+    }
+  ],
+  "general_principles": [
+    {
+      "principle": "RDA裂解 (Retro-Diels-Alder)",
+      "applies_to": [
+        "黄酮类",
+        "生物碱(部分饱和环)",
+        "萜类(含环己烯)",
+        "缩合鞣质"
+      ],
+      "description": "含六元环烯或α,β-不饱和羰基系统的化合物经RDA裂解产生一对特征性互补碎片(双烯+亲双烯体)"
+    },
+    {
+      "principle": "脱羧反应 (Decarboxylation, -44 Da)",
+      "applies_to": [
+        "酚酸类",
+        "苯丙酸类",
+        "蒽醌类",
+        "木脂素(内酯型)",
+        "香豆素类"
+      ],
+      "description": "含羧基(-COOH)或内酯的化合物CID中丢失CO2 (44 Da)是最普遍特征之一"
+    },
+    {
+      "principle": "脱羰基反应 (Decarbonylation, -28 Da)",
+      "applies_to": [
+        "蒽醌类",
+        "香豆素类",
+        "山酮类",
+        "黄酮类"
+      ],
+      "description": "含羰基化合物丢失CO (28 Da)，尤其在醌类和内酯类中与CO2丢失竞争"
+    },
+    {
+      "principle": "脱水反应 (Dehydration, -18 Da)",
+      "applies_to": [
+        "几乎所有含羟基化合物"
+      ],
+      "description": "含-OH化合物极易丢失H2O (18 Da)，但非高度特异性"
+    },
+    {
+      "principle": "糖苷键断裂 (Glycosidic Cleavage)",
+      "applies_to": [
+        "所有O-苷类"
+      ],
+      "description": "O-苷以丢失完整糖单元为特征(己糖162 Da, 脱氧己糖146 Da, 戊糖132 Da); C-苷以糖环交叉环裂解为特征(60, 90, 120 Da)"
+    },
+    {
+      "principle": "氮规则 (Nitrogen Rule)",
+      "applies_to": [
+        "所有含氮化合物"
+      ],
+      "description": "奇数N→偶数分子量[M+H]+; 偶数N→奇数分子量"
+    },
+    {
+      "principle": "α-裂解 (Alpha-Cleavage)",
+      "applies_to": [
+        "生物碱类",
+        "苯丙素类"
+      ],
+      "description": "含氮α位C-C键断裂(生物碱)或侧链α位断裂(苯丙素)"
+    },
+    {
+      "principle": "McLafferty重排",
+      "applies_to": [
+        "含γ-H的羰基/烯烃化合物"
+      ],
+      "description": "γ-H转移到不饱和基团随之β-裂解，在二萜、甾醇、香豆素苷等中常见"
+    },
+    {
+      "principle": "苄基裂解 (Benzylic Cleavage)",
+      "applies_to": [
+        "苯丙素类",
+        "木脂素类",
+        "二苯乙烯类",
+        "苄基异喹啉生物碱"
+      ],
+      "description": "苄位C-C键断裂产生稳定苄基正离子或自由基"
+    },
+    {
+      "principle": "双烯丙基裂解 (Bis-allylic Cleavage)",
+      "applies_to": [
+        "萜类(尤其开链萜)",
+        "不饱和脂肪酸"
+      ],
+      "description": "1,4-二烯体系(源自异戊二烯连接)的双烯丙基C-C键极易断裂"
+    }
+  ],
+  "diagnostic_differentiation": [
+    {
+      "comparison": "黄酮 vs 异黄酮",
+      "key_difference": "黄酮以1,3A+为基峰; 异黄酮以0,2B+突出",
+      "rule_ref": [
+        "FLAV-001",
+        "FLAV-012"
+      ]
+    },
+    {
+      "comparison": "黄酮 vs 黄酮醇",
+      "key_difference": "黄酮醇有[1,3B+-2H]特征丢失; 黄酮醇有更强的CO/H2O丢失级联",
+      "rule_ref": [
+        "FLAV-003",
+        "FLAV-006"
+      ]
+    },
+    {
+      "comparison": "O-苷 vs C-苷",
+      "key_difference": "O-苷: 丢失完整糖基(162, 146, 132 Da); C-苷: 糖环交叉环裂解(60, 90, 120 Da)",
+      "rule_ref": [
+        "FLAV-020",
+        "FLAV-021",
+        "GLY-001",
+        "GLY-002"
+      ]
+    },
+    {
+      "comparison": "6-C-苷 vs 8-C-苷",
+      "key_difference": "[M+H-150]+/[M+H-120]+比值: >1为6-C, <1为8-C (30 eV); 6-C有更强[M-H-18]-",
+      "rule_ref": [
+        "FLAV-023"
+      ]
+    },
+    {
+      "comparison": "查尔酮 vs 二氢查尔酮",
+      "key_difference": "查尔酮: RDA裂解+CH3丢失(甲氧基化); 二氢查尔酮: B3苄基裂解+H2O丢失(甲氧基化)",
+      "rule_ref": [
+        "FLAV-014",
+        "FLAV-015",
+        "FLAV-016",
+        "FLAV-017"
+      ]
+    },
+    {
+      "comparison": "可水解鞣质 vs 缩合鞣质",
+      "key_difference": "可水解: m/z 169(没食子酸)/301(鞣花酸); 缩合: m/z 289(儿茶素)/425(RDA)/451(HRF)/577(二聚体)",
+      "rule_ref": [
+        "TAN-001",
+        "TAN-002",
+        "TAN-004",
+        "TAN-005",
+        "TAN-006"
+      ]
+    },
+    {
+      "comparison": "二苄基丁内酯木脂素 vs 二苄基丁二醇木脂素",
+      "key_difference": "丁内酯型: -44 Da (CO2); 丁二醇型: -48 Da (CH2O+H2O)",
+      "rule_ref": [
+        "PPA-014",
+        "PPA-015"
+      ]
+    },
+    {
+      "comparison": "呋喃香豆素 C6-C7型 vs C7-C8型",
+      "key_difference": "C6-C7型: m/z 203.03, 147.04; C7-C8型: m/z 131.05",
+      "rule_ref": [
+        "PPA-010"
+      ]
+    },
+    {
+      "comparison": "乌苏烷型 3β-OH vs 3α-OH 三萜",
+      "key_difference": "3β-OH: MS3中[H-H2O-HCOOH]- >> [H-H2O-CO2]-; 3α-OH: 相反",
+      "rule_ref": [
+        "TER-008"
+      ]
+    },
+    {
+      "comparison": "大黄素 vs 大黄酸",
+      "key_difference": "大黄素: m/z 269→241(CO); 大黄酸: m/z 283→257(CO)→239(H2O), 有羧基定向额外脱水",
+      "rule_ref": [
+        "ANT-004",
+        "ANT-005"
+      ]
+    },
+    {
+      "comparison": "Digitoxigenin vs Digoxigenin 苷元",
+      "key_difference": "Digitoxigenin: m/z 375→357→339 (2×H2O); Digoxigenin: m/z 391→373→355→337 (3×H2O, 多C12-OH)",
+      "rule_ref": [
+        "STE-005",
+        "STE-007"
+      ]
+    },
+    {
+      "comparison": "Retronecine型 vs Otonecine型 吡咯里西啶生物碱",
+      "key_difference": "Retronecine型: m/z 120; Otonecine型: m/z 138",
+      "rule_ref": [
+        "ALK-017"
+      ]
+    },
+    {
+      "comparison": "核苷酸 vs 核苷",
+      "key_difference": "核苷酸: 丢失H3PO4 (98 Da)或HPO3 (80 Da); 核苷: 丢失核糖(132 Da)产生碱基碎片",
+      "rule_ref": [
+        "NUC-001",
+        "NUC-002"
+      ]
+    },
+    {
+      "comparison": "磷脂酰胆碱(PC) vs 其他磷脂",
+      "key_difference": "PC: m/z 184.073 (胆碱头部碎片)为专属诊断; 其他磷脂无此碎片",
+      "rule_ref": [
+        "LIP-001"
+      ]
+    },
+    {
+      "comparison": "3-CQA vs 4-CQA vs 5-CQA",
+      "key_difference": "3-CQA: m/z 191强/m/z 179弱; 4-CQA: m/z 173独有碎片; 5-CQA: m/z 191基峰+m/z 179明显",
+      "rule_ref": [
+        "PPA-018"
+      ]
+    },
+    {
+      "comparison": "PPD型 vs PPT型 人参皂苷",
+      "key_difference": "PPD苷元 m/z 423.36; PPT苷元 m/z 441.37(含C-6 OH多18 Da)",
+      "rule_ref": [
+        "TER-019",
+        "TER-020",
+        "TER-021"
+      ]
+    },
+    {
+      "comparison": "A型 vs B型 原花青素二聚体",
+      "key_difference": "A型 [M-H]- m/z 575(额外醚键,少2H); B型 [M-H]- m/z 577; A型QM碎片m/z 449, B型m/z 425",
+      "rule_ref": [
+        "TAN-009",
+        "TAN-010"
+      ]
+    },
+    {
+      "comparison": "Baicalin(O-苷) vs Scutellarin(C-苷)",
+      "key_difference": "Baicalin: [M-H]- 445→269(-176, 完整糖丢失为基峰); Scutellarin: 461→交叉环碎片(-120/-90)主导,苷元碎片m/z 285弱",
+      "rule_ref": [
+        "FLAV-037",
+        "FLAV-039",
+        "GLY-001",
+        "GLY-002"
+      ]
+    },
+    {
+      "comparison": "麻黄碱 vs 伪麻黄碱",
+      "key_difference": "MS/MS碎片相同(m/z 166→148), 需色谱分离或离子淌度区分(立体异构体)",
+      "rule_ref": [
+        "ALK-022"
+      ]
+    },
+    {
+      "comparison": "Rhamnetin vs Isorhamnetin (甲氧基黄酮醇异构体)",
+      "key_difference": "Rhamnetin(A环OMe): rC1,4A碎片m/z 167(OMe在A环使碎片+14); Isorhamnetin(B环OMe): rC1,4A碎片m/z 153(A环未变,OMe在B环不影响A环碎片)",
+      "rule_ref": [
+        "FLAV-042"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "REF-001",
+      "citation": "Cuyckens F, Claeys M. Mass spectrometry in the structural analysis of flavonoids. J Mass Spectrom. 2004;39(1):1-15. PMID:15389856"
+    },
+    {
+      "id": "REF-002",
+      "citation": "Kuhn F, Oehme M, Romero F, Abou-Mansour E, Tabacchi R. Differentiation of isomeric flavone/isoflavone aglycones by MS2 ion trap mass spectrometry and related calculation methods. Rapid Commun Mass Spectrom. 2003;17(17):1941-1949"
+    },
+    {
+      "id": "REF-003",
+      "citation": "Abad-Garcia B, et al. A general analytical strategy for the characterization of phenolic compounds in fruit juices by HPLC with diode array detection coupled to ESI-MS/MS. J Chromatogr A. 2009;1216:5398-5415"
+    },
+    {
+      "id": "REF-004",
+      "citation": "Tsimogiannis D, et al. Characterization of flavonoid subgroups and hydroxy substitution by HPLC-MS/MS. Molecules. 2007;12:593-606. PMID:17343468"
+    },
+    {
+      "id": "REF-005",
+      "citation": "Zhang J, et al. Characterization of seventy polymethoxylated flavonoids (PMFs) in Murraya paniculata by HPLC-PDA-ESI-MS/MS. J Pharm Biomed Anal. 2011;56:950-961. PMID:21885228"
+    },
+    {
+      "id": "REF-006",
+      "citation": "Ma YL, et al. Internal glucose residue loss in protonated O-diglycosyl flavonoids upon low-energy CID. J Am Soc Mass Spectrom. 1997;8:xxx"
+    },
+    {
+      "id": "REF-007",
+      "citation": "McLafferty FW, Turecek F. Interpretation of Mass Spectra, 4th Edition. University Science Books, 1993"
+    },
+    {
+      "id": "REF-008",
+      "citation": "Portet B, et al. Analysis of minor flavonoids in Piper hostmannianum var. berbicense using LC-APCI-MS. J Chromatogr A. 2008;1210:45-54. PMID:18838145"
+    },
+    {
+      "id": "REF-009",
+      "citation": "Yang WZ, et al. CID of 40 flavonoid aglycones and differentiation of the common flavonoid subtypes. Eur J Mass Spectrom. 2012;18:493-503. PMID:23221113"
+    },
+    {
+      "id": "REF-010",
+      "citation": "Schmidt J, et al. Identification of lignans by LC-ESI ion-trap MS. J Mass Spectrom. 2008;43:97-107. PMID:17729382"
+    },
+    {
+      "id": "REF-011",
+      "citation": "Boldizsár I, et al. Mass fragmentation study of TMS derivatives of lignans. J Chromatogr A. 2010;1217:xxx. PMID:20045181"
+    },
+    {
+      "id": "REF-012",
+      "citation": "Parejo I, et al. LC coupled to ion-trap MS for rapid screening of polyphenol antioxidants. J Agric Food Chem. 2004. PMID:11199231"
+    },
+    {
+      "id": "REF-013",
+      "citation": "Clifford MN, et al. Hierarchical scheme for LC-MSn identification of chlorogenic acids. J Agric Food Chem. 2003;51:2900-2911. PMID:12822898"
+    },
+    {
+      "id": "REF-014",
+      "citation": "Enzell CR, Wahlberg I, Ryhage R. Mass spectra of tobacco isoprenoids. Mass Spectrom Rev. 1984;3:3"
+    },
+    {
+      "id": "REF-015",
+      "citation": "Gao X, et al. Differentiation of diastereoisomeric ursane-type triterpenoids by HPLC/MS/MS. Rapid Commun Mass Spectrom. 2011. PMID:21503999"
+    },
+    {
+      "id": "REF-016",
+      "citation": "Tanaka K, et al. Multi-stage mass spectrometric analysis of saponins in Glycyrrhiza radix. Nat Prod Commun. 2011. PMID:22224272"
+    },
+    {
+      "id": "REF-017",
+      "citation": "Ma XH, et al. ESI-ITMS of rhubarb anthraquinones. J Hubei Univ (Nat Sci). 2006"
+    },
+    {
+      "id": "REF-018",
+      "citation": "Engström MT, Karonen M. Mass Spectrometry-Based Applications in Tannin Analytics. Mass Spectrom Rev. 2026. PMID:41307161"
+    },
+    {
+      "id": "REF-019",
+      "citation": "Lange GL, Schultze WG. Isobutane and NH3 CI of volatile esters and phenylpropanoids in essential oils. Org Mass Spectrom. 1992;27:472"
+    },
+    {
+      "id": "REF-020",
+      "citation": "Björkhem I, Gustafsson JÅ. Novel fragmentation of TMS ethers of 3β-hydroxy-Δ5-steroids. Org Mass Spectrom. 1973;7:277"
+    },
+    {
+      "id": "REF-021",
+      "citation": "Silva AM, et al. Characterization of 2,3-diarylxanthones by ESI-MS. Rapid Commun Mass Spectrom. 2016. PMID:27472302"
+    },
+    {
+      "id": "REF-022",
+      "citation": "Zeng WL, et al. Structural characterization of secoiridoid glycosides by HPLC-ESI-MS. Rapid Commun Mass Spectrom. 2014;28:xxx. PMID:24911243"
+    },
+    {
+      "id": "REF-023",
+      "citation": "MoNA — MassBank of North America, https://mona.fiehnlab.ucdavis.edu/"
+    },
+    {
+      "id": "REF-024",
+      "citation": "GNPS — Global Natural Product Social Molecular Networking, https://gnps.ucsd.edu/"
+    },
+    {
+      "id": "REF-025",
+      "citation": "MassBank Consortium, https://massbank.eu/"
+    },
+    {
+      "id": "REF-026",
+      "citation": "HMDB — Human Metabolome Database, https://hmdb.ca/"
+    },
+    {
+      "id": "REF-027",
+      "citation": "ReSpect (RIKEN) — Plant natural product MSn spectral database"
+    },
+    {
+      "id": "REF-028",
+      "citation": "Kurkin VA, et al. Phenylethanoids and phenylpropanoids EI-MS. 1994"
+    },
+    {
+      "id": "REF-029",
+      "citation": "Dong J, et al. HPLC/ESI-IT-TOF MS of Polygonum cuspidatum anthraquinones. 2009"
+    },
+    {
+      "id": "REF-030",
+      "citation": "Fritillaria steroidal alkaloids DPI study, Wang et al., 2020"
+    },
+    {
+      "id": "REF-031",
+      "citation": "Schmidt J, et al. High-resolution ESI-CID of ferulic acid esters and polyphenols. Phytochemistry, various years"
+    },
+    {
+      "id": "REF-032",
+      "citation": "Robbins RJ. Phenolic acids in foods: an overview of analytical methodology. J Agric Food Chem. 2003;51:2866-2887"
+    },
+    {
+      "id": "REF-033",
+      "citation": "Jiang C, et al. Systematic Characterisation of the Fragmentation of Flavonoids Using High-Resolution Accurate Mass ESI-MS/MS. Molecules 2024, 29, 5246. PMC11596855"
+    },
+    {
+      "id": "REF-034",
+      "citation": "Alves MF, et al. LC-MS/DIA-based strategy for comprehensive flavonoid profiling. RSC Adv. 2024. PMC10985591"
+    },
+    {
+      "id": "REF-035",
+      "citation": "Ravi BG, et al. High-resolution tandem mass spectrometry dataset reveals fragmentation patterns of cardiac glycosides in foxglove. Data in Brief 2020, 30, 105464. PMC7153291. PMID:32300626"
+    },
+    {
+      "id": "REF-036",
+      "citation": "Nature Sci. Rep. 2020 — Investigation of fragmentation behaviours of isoquinoline alkaloids using Q-TOF-MS. PMID:31959815"
+    },
+    {
+      "id": "REF-037",
+      "citation": "Springer Anal. Bioanal. Chem. 2022 — LC-MS/MS of 51 pyrrolizidine alkaloids. PMID:36266140"
+    },
+    {
+      "id": "REF-038",
+      "citation": "PMC3293484 — APCI tandem mass spectrometry of carotenoids"
+    },
+    {
+      "id": "REF-039",
+      "citation": "ACS Chem. Rev. 2005 — Recent developments in MS for characterization of nucleosides and nucleotides. PMID:15826020"
+    },
+    {
+      "id": "REF-040",
+      "citation": "RSC Anal. Methods 2016 — Fragmentation patterns of five types of phospholipids by ultra-high resolution MS"
+    },
+    {
+      "id": "REF-041",
+      "citation": "LIPID MAPS — https://www.lipidmaps.org/"
+    },
+    {
+      "id": "REF-042",
+      "citation": "PMC6273528 — Structural characterization of flavonoid glycoconjugates and their CID fragmentation behavior"
+    },
+    {
+      "id": "REF-043",
+      "citation": "ScienceDirect 2021 — Insight into chemical basis of TCM based on MS/MS (quinochalcone C-glycosides vs flavonoid O-glycosides)"
+    },
+    {
+      "id": "REF-044",
+      "citation": "ChemRxiv 2025 — Fragmentation of deprotonated plumeran indole alkaloids by ESI-MS/MS"
+    },
+    {
+      "id": "REF-045",
+      "citation": "PMID:21828417 — Identification of indole alkaloids in Nauclea officinalis using MSⁿ and ToF-MS"
+    },
+    {
+      "id": "REF-046",
+      "citation": "Wiley J. Mass Spectrom. 2005 — ESI-QqTOF-MS/MS and APCI-IT-MS/MS analysis of steroid saponins. DOI:10.1002/jms.988"
+    },
+    {
+      "id": "REF-047",
+      "citation": "MDPI Molecules 2023, 28(3):941 — Comprehensive identification of ginsenosides with PPD/PPT diagnostic ions"
+    },
+    {
+      "id": "REF-048",
+      "citation": "PMC10920005 — Mass spectrometry-based ginsenoside profiling: recent applications (2024)"
+    },
+    {
+      "id": "REF-049",
+      "citation": "Clifford MN et al. Hierarchical scheme for LC-MSⁿ identification of chlorogenic acids. J Agric Food Chem 2003;51:2900-2911. PMID:12822898"
+    },
+    {
+      "id": "REF-050",
+      "citation": "PMC5891158 — Procyanidins: A comprehensive review on structure elucidation by MS (2018)"
+    },
+    {
+      "id": "REF-051",
+      "citation": "PMC6272380 — Wei et al. Simultaneous determination of ferulic acid and phthalides in Angelica sinensis. Molecules 2015, 20:4681"
+    },
+    {
+      "id": "REF-052",
+      "citation": "PMC6268525 — Li et al. Structural characterization of Angelica dahurica constituents including phthalides"
+    },
+    {
+      "id": "REF-053",
+      "citation": "Lao SC et al. Identification and quantification of 13 components in Angelica sinensis by LC-ESI-MS/MS. Anal Chim Acta 2004. Cited 178×"
+    },
+    {
+      "id": "REF-054",
+      "citation": "PMC2582176 — Determination of ephedrine alkaloids in human urine and plasma by LC-MS/MS"
+    },
+    {
+      "id": "REF-055",
+      "citation": "MDPI Molecules 2021, 26:6991 — Pharmacokinetic study of ephedrine and pseudoephedrine by LC-MS/MS"
+    },
+    {
+      "id": "REF-056",
+      "citation": "PMC8514958 — Systematic characterization and identification of saikosaponins in Bupleurum (2021)"
+    },
+    {
+      "id": "REF-057",
+      "citation": "Frontiers in Chemistry 2021, 9:747987 — Diagnostic MS/MS fragmentation patterns for saikosaponin discrimination"
+    },
+    {
+      "id": "REF-058",
+      "citation": "MDPI Molecules 2024, 29(6):1295 — Comprehensive characterization of Astragalus triterpene saponins"
+    },
+    {
+      "id": "REF-059",
+      "citation": "Kachlicki P et al. Structural characterization of flavonoid glycoconjugates and their CID fragmentation. Molecules 2016, 21:1494. PMC5067219"
+    },
+    {
+      "id": "REF-060",
+      "citation": "ScienceDirect Microchemical J. 2010 — Metabolic profiling of liquorice (Glycyrrhiza glabra) roots by LC-MS"
+    },
+    {
+      "id": "REF-061",
+      "citation": "Wiley PCA 2022 — UPLC-Q-TOF-MS/MS-guided dereplication of Pulsatilla triterpenoid saponins with diagnostic ions m/z 473, 455, 437"
+    },
+    {
+      "id": "REF-062",
+      "citation": "Ekroos K et al. Quantitative profiling of phospholipids by PIS. PNAS 2002;99:7996"
+    },
+    {
+      "id": "REF-063",
+      "citation": "Grossert JS et al. Dicarboxylic acid MS. J Am Soc Mass Spectrom. 2007"
+    },
+    {
+      "id": "REF-064",
+      "citation": "Sullards MC et al. Mammalian sphingolipid analysis by LC-MS. J. Biol. Chem. 2003. PMID:3205276"
+    },
+    {
+      "id": "REF-065",
+      "citation": "Ikeda K et al. Targeted ganglioside and sulfatide analysis. J Lipid Res. 2008;49:18. PMID:18204080"
+    },
+    {
+      "id": "REF-066",
+      "citation": "Cyriac A et al. ESI-MS and DFT study of curcumin fragmentation. J Am Soc Mass Spectrom. 2019. PMID:31080356"
+    },
+    {
+      "id": "REF-067",
+      "citation": "Hsu FF, Turk J. Characterization of phosphatidylinositol by CID. J Am Soc Mass Spectrom. 2000. PMID:11073262"
+    },
+    {
+      "id": "REF-068",
+      "citation": "PMC6858605. Plant glycerolipid analysis by LC-MS/MS. 2019"
+    },
+    {
+      "id": "REF-069",
+      "citation": "PMC10920005. Mass spectrometry-based ginsenoside profiling. 2024"
+    },
+    {
+      "id": "REF-070",
+      "citation": "PMID:23378093. Fatty acid neutral losses and sn-1/sn-2 preference in glycerolipids"
+    },
+    {
+      "id": "REF-071",
+      "citation": "PMID:16631762. Zhao et al. Separation and characterization of silymarin flavonolignans by LC-ESI-MS/MS"
+    },
+    {
+      "id": "REF-072",
+      "citation": "PMID:15639440. Glycyrrhizin and glycyrrhetinic acid LC-MS/MS"
+    },
+    {
+      "id": "REF-073",
+      "citation": "Fokoue HH et al. Fragmentation pattern of amides by EI and HRESI. RSC Adv. 2018;8:21407. PMC9080946"
+    },
+    {
+      "id": "REF-074",
+      "citation": "Murphy RC, Gaskell SJ. New applications of mass spectrometry in lipid analysis. J Lipid Res. 2011;52:579. PMC3117083"
+    },
+    {
+      "id": "REF-075",
+      "citation": "Thomas MC et al. Ozone-induced dissociation for C=C location in lipids. Anal Chem. 2008;80:303. PMID:18067341"
+    },
+    {
+      "id": "REF-076",
+      "citation": "Ma X, Xia Y. Paterno-Buchi reaction for lipid C=C location. Angew Chem Int Ed. 2014;53:2592. PMID:24500881"
+    },
+    {
+      "id": "REF-077",
+      "citation": "Mohimani H et al. Sequencing cyclic peptides by multistage MS. Proteomics. 2011;11:3642. PMID:21751357"
+    },
+    {
+      "id": "REF-078",
+      "citation": "Fellenberg AJ et al. Mass spectrometric differentiation of n-3, n-6, n-9 FA. Biomed Environ Mass Spectrom. 1987;14:127"
+    },
+    {
+      "id": "REF-079",
+      "citation": "Di Mari SJ et al. Mass spectra of vitamin K isomers. JACS. 1966;88:1226. PMID:5910960"
+    },
+    {
+      "id": "REF-080",
+      "citation": "Vessecchi R et al. Fragmentation of naphthoquinone derivatives by ESI-MS. J Mass Spectrom. DOI:10.1002/jms.2045"
+    },
+    {
+      "id": "REF-081",
+      "citation": "van Breemen RB et al. APCI MS/MS of carotenoids. Int J Mass Spectrom. 2012;312:163. PMID:22408388"
+    }
+  ],
+  "sugar_loss_reference": {
+    "_description": "糖基中性丢失精确质量参考表",
+    "hexose": {
+      "mass": 162.052823,
+      "formula": "C6H10O5",
+      "examples": [
+        "葡萄糖Glc",
+        "半乳糖Gal"
+      ]
+    },
+    "deoxyhexose": {
+      "mass": 146.057909,
+      "formula": "C6H10O4",
+      "examples": [
+        "鼠李糖Rha",
+        "夫糖Fuc",
+        "洋地黄毒糖Digitoxose"
+      ]
+    },
+    "pentose": {
+      "mass": 132.042259,
+      "formula": "C5H8O4",
+      "examples": [
+        "木糖Xyl",
+        "阿拉伯糖Ara"
+      ]
+    },
+    "glucuronic_acid": {
+      "mass": 176.032088,
+      "formula": "C6H8O6",
+      "examples": [
+        "葡萄糖醛酸GlcA"
+      ]
+    },
+    "hexosamine": {
+      "mass": 203.079373,
+      "formula": "C8H13NO5",
+      "examples": [
+        "N-乙酰氨基葡萄糖GlcNAc"
+      ]
+    },
+    "disaccharide": {
+      "mass": 324.105647,
+      "formula": "C12H20O10",
+      "examples": [
+        "二糖(Hex-Hex)"
+      ]
+    },
+    "deoxyhexose_hexose": {
+      "mass": 308.110732,
+      "formula": "C12H20O9",
+      "examples": [
+        "芸香糖Rutinose",
+        "新橙皮糖Neohesperidose"
+      ]
+    },
+    "pentose_hexose": {
+      "mass": 294.095082,
+      "formula": "C11H18O9",
+      "examples": [
+        "戊糖-己糖"
+      ]
+    },
+    "malonyl_hexose": {
+      "mass": 248.053216,
+      "formula": "C9H12O8",
+      "examples": [
+        "丙二酰己糖"
+      ]
+    },
+    "acetyl_hexose": {
+      "mass": 204.063388,
+      "formula": "C8H12O6",
+      "examples": [
+        "乙酰己糖"
+      ]
+    },
+    "caffeoyl": {
+      "mass": 162.031694,
+      "formula": "C9H6O3",
+      "examples": [
+        "咖啡酰基"
+      ]
+    },
+    "galloyl": {
+      "mass": 152.010959,
+      "formula": "C7H4O4",
+      "examples": [
+        "没食子酰基"
+      ]
+    },
+    "HHDP": {
+      "mass": 302.006267,
+      "formula": "C14H6O8",
+      "examples": [
+        "六羟基联苯二甲酰基"
+      ]
+    }
+  },
+  "immonium_ion_reference": {
+    "_description": "氨基酸特征亚胺离子 (用于肽类化合物鉴定)",
+    "Gly": 30.0344,
+    "Ala": 44.05,
+    "Ser": 60.0449,
+    "Pro": 70.0657,
+    "Val": 72.0813,
+    "Thr": 74.0606,
+    "Cys": 76.0221,
+    "Leu_Ile": 86.097,
+    "Asn": 87.0558,
+    "Asp": 88.0398,
+    "Gln": 101.0715,
+    "Lys": 101.1079,
+    "Glu": 102.0555,
+    "Met": 104.0534,
+    "His": 110.0718,
+    "Phe": 120.0813,
+    "Arg": 129.114,
+    "Tyr": 136.0762,
+    "Trp": 159.0922
+  },
+  "common_aglycone_reference": {
+    "_description": "常见黄酮苷元质谱参考表 (正负离子模式)",
+    "apigenin": {
+      "mw": 270.0528,
+      "formula": "C15H10O5",
+      "[M+H]+": 271.0601,
+      "[M-H]-": 269.0455,
+      "key_positive": [
+        153.0182,
+        121.0284,
+        119.0491
+      ],
+      "key_negative": [
+        225.0557,
+        151.0037,
+        149.0244,
+        117.0346
+      ]
+    },
+    "luteolin": {
+      "mw": 286.0477,
+      "formula": "C15H10O6",
+      "[M+H]+": 287.055,
+      "[M-H]-": 285.0405,
+      "key_positive": [
+        153.0182,
+        137.0233,
+        135.0441
+      ],
+      "key_negative": [
+        243.0299,
+        217.0506,
+        199.0401,
+        151.0037,
+        133.0295
+      ]
+    },
+    "quercetin": {
+      "mw": 302.0427,
+      "formula": "C15H10O7",
+      "[M+H]+": 303.0499,
+      "[M-H]-": 301.0354,
+      "key_positive": [
+        285.0394,
+        275.0548,
+        257.0442,
+        229.0495,
+        165.0182,
+        153.0182,
+        137.0233
+      ],
+      "key_negative": [
+        273.0405,
+        257.0455,
+        229.0506,
+        179.0349,
+        151.0037
+      ]
+    },
+    "kaempferol": {
+      "mw": 286.0477,
+      "formula": "C15H10O6",
+      "[M+H]+": 287.055,
+      "[M-H]-": 285.0405,
+      "key_positive": [
+        269.0445,
+        259.0601,
+        241.0495,
+        213.0546,
+        165.0182,
+        153.0182,
+        121.0284
+      ],
+      "key_negative": [
+        257.0455,
+        239.0349,
+        229.0506,
+        211.0401,
+        151.0037
+      ]
+    },
+    "myricetin": {
+      "mw": 318.0376,
+      "formula": "C15H10O8",
+      "[M+H]+": 319.0448,
+      "[M-H]-": 317.0303,
+      "key_positive": [
+        301.0344,
+        291.0499,
+        273.0394,
+        165.0182,
+        153.0182,
+        137.0233
+      ],
+      "key_negative": [
+        289.0354,
+        271.0248,
+        179.0349,
+        151.0037
+      ]
+    },
+    "naringenin": {
+      "mw": 272.0685,
+      "formula": "C15H12O5",
+      "[M+H]+": 273.0758,
+      "[M-H]-": 271.0612,
+      "key_positive": [
+        153.0182,
+        147.0441,
+        119.0491
+      ],
+      "key_negative": [
+        227.0714,
+        177.0193,
+        151.0037,
+        119.0502,
+        107.0139
+      ]
+    },
+    "hesperetin": {
+      "mw": 302.079,
+      "formula": "C16H14O6",
+      "[M+H]+": 303.0863,
+      "[M-H]-": 301.0718,
+      "key_positive": [
+        177.0546,
+        153.0182,
+        149.0597,
+        135.0441
+      ],
+      "key_negative": [
+        286.0483,
+        258.0534,
+        242.0585,
+        164.0115,
+        136.0166
+      ]
+    },
+    "genistein": {
+      "mw": 270.0528,
+      "formula": "C15H10O5",
+      "[M+H]+": 271.0601,
+      "[M-H]-": 269.0455,
+      "key_positive": [
+        253.0495,
+        243.0652,
+        215.0703,
+        153.0182,
+        137.0233
+      ],
+      "key_negative": [
+        224.0479,
+        201.0557,
+        197.0608,
+        181.0659,
+        133.0295
+      ]
+    },
+    "daidzein": {
+      "mw": 254.0579,
+      "formula": "C15H10O4",
+      "[M+H]+": 255.0652,
+      "[M-H]-": 253.0506,
+      "key_positive": [
+        237.0546,
+        199.0754,
+        181.0648,
+        153.0182,
+        137.0233
+      ],
+      "key_negative": [
+        208.053,
+        195.0452,
+        181.0659,
+        133.0295,
+        117.0346
+      ]
+    },
+    "taxifolin": {
+      "mw": 304.0583,
+      "formula": "C15H12O7",
+      "[M+H]+": 305.0656,
+      "[M-H]-": 303.051,
+      "key_positive": [
+        259.0601,
+        231.0652,
+        203.0703,
+        153.0182,
+        137.0233,
+        125.0233
+      ],
+      "key_negative": [
+        285.0405,
+        275.0561,
+        259.0612,
+        217.0506,
+        151.0037
+      ]
+    },
+    "isoliquiritigenin": {
+      "mw": 256.0736,
+      "formula": "C15H12O4",
+      "[M+H]+": 257.0808,
+      "[M-H]-": 255.0663,
+      "key_positive": [
+        239.0703,
+        147.0441,
+        137.0233,
+        119.0491
+      ],
+      "key_negative": [
+        135.0088,
+        119.0502,
+        107.0139
+      ]
+    },
+    "resveratrol": {
+      "mw": 228.0786,
+      "formula": "C14H12O3",
+      "[M+H]+": 229.0859,
+      "[M-H]-": 227.0714,
+      "key_positive": [
+        211.0754,
+        183.0804,
+        169.0648,
+        143.0491
+      ],
+      "key_negative": [
+        185.0608,
+        183.0452,
+        143.0502
+      ]
+    }
+  },
+  "neutral_loss_reference": {
+    "_description": "通用中性丢失精确质量参考表",
+    "H2O": 18.010565,
+    "CO": 27.994915,
+    "CO2": 43.989829,
+    "CH3": 15.023475,
+    "CH4": 16.0313,
+    "NH3": 17.026549,
+    "HCN": 27.010899,
+    "CH3OH": 32.026215,
+    "HCOOH": 46.005479,
+    "CH3COOH": 60.021129,
+    "C2H2O": 42.010565,
+    "C2H4": 28.0313,
+    "C4H8": 56.0626,
+    "CH3NCO": 57.021464,
+    "SO3": 79.956815,
+    "CH2O": 30.010565,
+    "H2CO3": 62.000394,
+    "C2H5OH": 46.041865,
+    "C3H8O": 60.057515,
+    "C3H6O": 58.041865,
+    "C7H6O2_BzOH": 122.036779,
+    "C8H8O2": 136.05243
+  }
+}

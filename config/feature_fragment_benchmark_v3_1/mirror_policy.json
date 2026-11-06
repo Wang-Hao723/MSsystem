@@ -1,0 +1,43 @@
+{
+  "schema_version": "3.1.0",
+  "policy_id": "v15-feature-fragment-mirror-policy-v3.1-20260827",
+  "exact_edges": [
+    {
+      "edge_type": "canonical_usi_core",
+      "required_fields": [
+        "valid mzspec prefix",
+        "collection",
+        "run",
+        "index type",
+        "index value"
+      ],
+      "role": "same public raw-spectrum locator"
+    },
+    {
+      "edge_type": "origin_raw_locator",
+      "required_fields": [
+        "origin_dataset_id",
+        "raw_file_id",
+        "scan_id"
+      ],
+      "role": "same origin acquisition even when repositories differ"
+    },
+    {
+      "edge_type": "exact_peak_hash",
+      "required_fields": [
+        "exact normalized peak hash"
+      ],
+      "role": "same frozen peak content"
+    }
+  ],
+  "exclusive_first_key": false,
+  "near_edge": {
+    "allowed_without_labelled_calibration": false,
+    "maximum_false_positive_rate": 0.01,
+    "minimum_bilateral_coverage": 0.8,
+    "minimum_positive_pairs": 20,
+    "minimum_negative_pairs": 20
+  },
+  "acquisition_replication_group_uses_peak_hash": false,
+  "source_and_laboratory_counting": "count origin source and origin laboratory after exact-mirror collapse; an aggregator does not create a new source or laboratory"
+}

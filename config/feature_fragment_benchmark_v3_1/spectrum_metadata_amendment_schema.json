@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mssystem.local/schema/feature-fragment-spectrum-v3.1.json",
+  "title": "V3.1 instrument-conditioned spectrum audit record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "spectrum_id",
+    "source",
+    "compound",
+    "acquisition",
+    "independence",
+    "quantitative_eligibility",
+    "v3_1_amendment",
+    "split"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.1.0"
+    },
+    "spectrum_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "quantitative_eligibility": {
+      "type": "object",
+      "required": [
+        "positive_lr_eligible",
+        "negative_lr_eligible",
+        "ineligible_reason_codes"
+      ],
+      "properties": {
+        "positive_lr_eligible": {
+          "type": "boolean"
+        },
+        "negative_lr_eligible": {
+          "type": "boolean"
+        },
+        "ineligible_reason_codes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "v3_1_amendment": {
+      "type": "object",
+      "required": [
+        "amendment_id",
+        "base_positive_lr_eligible",
+        "base_negative_lr_eligible",
+        "collision_energy_program",
+        "spectral_qc",
+        "precursor_purity",
+        "nce_to_ev_conversion_applied",
+        "nce_to_ev_derived_value"
+      ],
+      "properties": {
+        "amendment_id": {
+          "const": "v15-instrument-conditioned-feature-fragment-v3.1-20260827"
+        },
+        "base_positive_lr_eligible": {
+          "type": "boolean"
+        },
+        "base_negative_lr_eligible": {
+          "type": "boolean"
+        },
+        "nce_to_ev_conversion_applied": {
+          "const": false
+        },
+        "nce_to_ev_derived_value": {
+          "type": "null"
+        }
+      }
+    },
+    "split": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "schema_version": "2.0.0",
+  "module_id": "v12_evirank_candidate_recall",
+  "algorithm_id": "mssystem-v12-evirecall-mv-0.2.0",
+  "display_name": "V12 EviRecall-MV",
+  "deployment_state": "shadow",
+  "candidate_pool": {
+    "target_total_connectivities": 20,
+    "maximum_additions_per_entity": 20,
+    "maximum_identities_per_scan_view": 100,
+    "minimum_library_fragment_peaks": 3
+  },
+  "mass_retrieval": {
+    "direct_precursor_da": 0.02,
+    "direct_precursor_ppm": 10.0,
+    "blind_window_widening_allowed": false,
+    "blind_adduct_enumeration_allowed": false,
+    "neutral_mass_requires_explicit_supported_query_adduct": true,
+    "candidate_fitted_mass_correction_allowed": false
+  },
+  "spectral_views": [
+    {
+      "name": "library_match",
+      "peak_processing_preset": "library_match",
+      "similarity": "matchms_modified_cosine_greedy",
+      "fragment_tolerance_da": 0.02
+    },
+    {
+      "name": "sensitive",
+      "peak_processing_preset": "sensitive",
+      "similarity": "matchms_modified_cosine_greedy",
+      "fragment_tolerance_da": 0.05
+    }
+  ],
+  "fusion": {
+    "method": "collision_energy_conditioned_reciprocal_rank_fusion",
+    "rrf_constant": 60.0,
+    "technical_repeats_within_condition": "median_reciprocal_rank_contribution",
+    "distinct_collision_energy_conditions": "sum",
+    "missing_candidate_in_view": "no_contribution_not_negative_evidence",
+    "score_is_probability": false
+  },
+  "source_paired_consensus": {
+    "module_id": "v12_source_paired_ce_consensus",
+    "algorithm_id": "mssystem-v12-source-paired-ce-consensus-0.1.0",
+    "deployment_state": "shadow",
+    "baseline": "v11_top1_connectivity",
+    "candidate_scope": "v11_same_formula_connectivities_else_bounded_evirecall_bridge",
+    "maximum_v11_top1_margin": 0.1,
+    "minimum_same_formula_connectivities": 2,
+    "maximum_same_formula_connectivities": 12,
+    "maximum_expanded_same_formula_challengers": 3,
+    "minimum_common_provenance_strata": 2,
+    "minimum_unique_provenance_evidence_profiles": 2,
+    "minimum_distinct_collision_energy_conditions": 2,
+    "minimum_spectral_views": 2,
+    "minimum_paired_observations": 6,
+    "minimum_median_score_delta": 0.01,
+    "minimum_observation_win_fraction": 0.7,
+    "minimum_provenance_stratum_win_fraction": 0.6666666666666666,
+    "minimum_unique_provenance_profile_win_fraction": 0.6666666666666666,
+    "technical_repeats_within_condition_view_stratum": "median_score_delta",
+    "reference_records_within_provenance_stratum": "maximum_similarity_per_candidate",
+    "reference_content_fingerprint": "normalized_raw_peaks_base_peak_scaled_mz5_intensity6_sha256",
+    "mirrored_provenance_strata": "collapse_identical_candidate_pair_reference_content_profiles",
+    "unique_profile_delta": "median_of_member_provenance_stratum_medians",
+    "qualified_challenger_tie_break": "median_delta_then_observation_win_then_unique_profile_win_then_provenance_win_then_identity",
+    "provenance_strata_are_independent_sources": false,
+    "unqualified_result": "abstain_and_retain_v11_top1",
+    "score_is_probability": false,
+    "production_effect": false
+  },
+  "library_gate": {
+    "maximum_sql_rows_per_precursor_window": 20000,
+    "maximum_precursor_windows_in_memory": 16,
+    "searchable_source_tiers": [
+      "curated",
+      "experimental",
+      "massbank_supplement",
+      "merged",
+      "legacy_unresolved"
+    ],
+    "excluded_source_tiers": [
+      "predicted",
+      "in_silico",
+      "literature_presence_only",
+      "user_unverified",
+      "metadata_conflict",
+      "quarantined",
+      "unknown"
+    ],
+    "require_stable_2d_connectivity_identity": true,
+    "same_polarity_or_unknown_library_polarity": true
+  },
+  "forbidden_inputs": [
+    "compound_name_for_retrieval_or_scoring",
+    "ground_truth_identity",
+    "standard_id",
+    "expected_compound_list",
+    "expert_score",
+    "classification",
+    "biosynthetic_pathway",
+    "language_model_output"
+  ],
+  "invariants": {
+    "candidate_names_are_display_only": true,
+    "v11_artifact_is_immutable": true,
+    "legacy_results_are_immutable": true,
+    "production_ranking_changes": false,
+    "expanded_candidates_enter_shadow_candidate_union": true,
+    "expanded_candidates_enter_residual_model_scoring": false,
+    "qualified_source_paired_switches_are_shadow_only": true,
+    "candidate_recall_and_top1_are_reported_separately": true
+  }
+}

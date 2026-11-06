@@ -1,0 +1,2713 @@
+{
+  "base_registry": {
+    "path": "/Users/zizi/Desktop/Mssystem/mssystem_V14/config/canonical_name_identity_registry.json",
+    "retained_entry_count": 4,
+    "sha256": "a65b333256213878d0fb412042bd86c053c16d35d5c31bd211113b805f88e2ef"
+  },
+  "entries": [
+    {
+      "connectivity_inchikey": "YXAKCQIIROBKOP",
+      "connectivity_smiles": "C1=CC(=CC=C1C=CC(=CC(=O)C=CC2=CC=C(C=C2)O)O)O",
+      "formula": "C19H16O4",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C19H16O4/c20-16-7-1-14(2-8-16)5-11-18(22)13-19(23)12-6-15-3-9-17(21)10-4-15/h1-13,20-22H/b11-5+,12-6+,18-13-",
+      "inchikey": "YXAKCQIIROBKOP-HSSGTREWSA-N",
+      "isomeric_smiles": "C1=CC(=CC=C1/C=C/C(=C/C(=O)/C=C/C2=CC=C(C=C2)O)/O)O",
+      "name_key": "(1e,4z,6e)-5-hydroxy-1,7-bis(4-hydroxyphenyl)hepta-1,4,6-trien-3-one",
+      "observed_connectivity_identities": [
+        "ik14:YXAKCQIIROBKOP",
+        "std2d:PREBVFJICNPEKM"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/%281E%2C4Z%2C6E%29-5-hydroxy-1%2C7-bis%284-hydroxyphenyl%29hepta-1%2C4%2C6-trien-3-one/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5324473,
+      "pubchem_title": "(1E,4Z,6E)-5-Hydroxy-1,7-Bis(4-Hydroxyphenyl)Hepta-1,4,6-Trien-3-One",
+      "query_name": "(1E,4Z,6E)-5-hydroxy-1,7-bis(4-hydroxyphenyl)hepta-1,4,6-trien-3-one",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "245945548219_results.json",
+        "3ddc3f493492_results.json",
+        "5e6379a10c70_results.json",
+        "9094d4772673_results.json",
+        "d486ede3e8d8_results.json",
+        "d589a06a1461_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "ROVMFAGBUFXRBD",
+      "connectivity_smiles": "COC1=CC2=C(C=C1)C(=C(O2)C(=O)C3=CC=CC=C3)O",
+      "formula": "C16H12O4",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C16H12O4/c1-19-11-7-8-12-13(9-11)20-16(15(12)18)14(17)10-5-3-2-4-6-10/h2-9,18H,1H3",
+      "inchikey": "ROVMFAGBUFXRBD-UHFFFAOYSA-N",
+      "isomeric_smiles": "COC1=CC2=C(C=C1)C(=C(O2)C(=O)C3=CC=CC=C3)O",
+      "name_key": "(2e)-2-[hydroxy(phenyl)methylidene]-6-methoxy-1-benzofuran-3-one",
+      "observed_connectivity_identities": [
+        "ik14:TXVHSAPNXGBCKX",
+        "std2d:ROVMFAGBUFXRBD"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/%282E%29-2-%5Bhydroxy%28phenyl%29methylidene%5D-6-methoxy-1-benzofuran-3-one/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 642146,
+      "pubchem_title": "(2E)-2-[hydroxy(phenyl)methylidene]-6-methoxy-1-benzofuran-3-one",
+      "query_name": "(2E)-2-[hydroxy(phenyl)methylidene]-6-methoxy-1-benzofuran-3-one",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "3788afc82028_results.json",
+        "4615340e3463_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "SWLNXMJZQXZBCB",
+      "connectivity_smiles": "CCCCCC=CC(CCCCCCCC=CC=CC(=O)NCC(C)C)OO",
+      "formula": "C24H43NO3",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C24H43NO3/c1-4-5-6-12-15-18-23(28-27)19-16-13-10-8-7-9-11-14-17-20-24(26)25-21-22(2)3/h11,14-15,17-18,20,22-23,27H,4-10,12-13,16,19,21H2,1-3H3,(H,25,26)/b14-11+,18-15+,20-17+",
+      "inchikey": "SWLNXMJZQXZBCB-QQYDYBFASA-N",
+      "isomeric_smiles": "CCCCC/C=C/C(CCCCCCC/C=C/C=C/C(=O)NCC(C)C)OO",
+      "name_key": "(2e,4e,14e)-13-hydroperoxy-n-(2-methylpropyl)icosa-2,4,14-trienamide",
+      "observed_connectivity_identities": [
+        "ik14:SWLNXMJZQXZBCB",
+        "std2d:RAVSOLDUKNJZIG"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/%282E%2C4E%2C14E%29-13-hydroperoxy-N-%282-methylpropyl%29icosa-2%2C4%2C14-trienamide/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 75528920,
+      "pubchem_title": "(2E,4E,14E)-13-hydroperoxy-N-(2-methylpropyl)icosa-2,4,14-trienamide",
+      "query_name": "(2E,4E,14E)-13-hydroperoxy-N-(2-methylpropyl)icosa-2,4,14-trienamide",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "f67e7a326bff_results.json",
+        "f67e7a326bff_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "NBQYBZYBTNQEQG",
+      "connectivity_smiles": "C1=CC(=C(C(=C1)O)C2C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+      "formula": "C15H12O7",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H12O7/c16-6-4-9(19)12-10(5-6)22-15(14(21)13(12)20)11-7(17)2-1-3-8(11)18/h1-5,14-19,21H/t14-,15+/m0/s1",
+      "inchikey": "NBQYBZYBTNQEQG-LSDHHAIUSA-N",
+      "isomeric_smiles": "C1=CC(=C(C(=C1)O)[C@@H]2[C@H](C(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+      "name_key": "(2r,3r)-2-(2,6-dihydroxyphenyl)-3,5,7-trihydroxy-2,3-dihydrochromen-4-one",
+      "observed_connectivity_identities": [
+        "ik14:NBQYBZYBTNQEQG",
+        "std2d:CLGGLFVMXGSKKJ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/%282R%2C3R%29-2-%282%2C6-dihydroxyphenyl%29-3%2C5%2C7-trihydroxy-2%2C3-dihydrochromen-4-one/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 157633,
+      "pubchem_title": "2',3,5,6',7-Pentahydroxyflavanone",
+      "query_name": "(2R,3R)-2-(2,6-dihydroxyphenyl)-3,5,7-trihydroxy-2,3-dihydrochromen-4-one",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "178afb91b97a_results.json",
+        "3788afc82028_results.json",
+        "3788afc82028_v11_flagship.json",
+        "430e44cebcb1_results.json",
+        "430e44cebcb1_v11_flagship.json",
+        "4bbd348c85c2_results.json",
+        "69c05aeca7c9_results.json",
+        "9c56ff565900_results.json",
+        "f67e7a326bff_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "MRPJBTFHICBFNE",
+      "connectivity_smiles": "COC1=CC(=C2C(=C1)OC(C(C2=O)O)C3=CC(=C(C=C3)O)O)O",
+      "formula": "C16H14O7",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C16H14O7/c1-22-8-5-11(19)13-12(6-8)23-16(15(21)14(13)20)7-2-3-9(17)10(18)4-7/h2-6,15-19,21H,1H3/t15-,16+/m0/s1",
+      "inchikey": "MRPJBTFHICBFNE-JKSUJKDBSA-N",
+      "isomeric_smiles": "COC1=CC(=C2C(=C1)O[C@@H]([C@H](C2=O)O)C3=CC(=C(C=C3)O)O)O",
+      "name_key": "(2r,3r)-2-(3,4-dihydroxyphenyl)-3,5-dihydroxy-7-methoxy-2,3-dihydrochromen-4-one",
+      "observed_connectivity_identities": [
+        "ik14:MRPJBTFHICBFNE",
+        "std2d:GTXZTKMMFNOOMW"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/%282R%2C3R%29-2-%283%2C4-dihydroxyphenyl%29-3%2C5-dihydroxy-7-methoxy-2%2C3-dihydrochromen-4-one/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 12313901,
+      "pubchem_title": "Padmatin",
+      "query_name": "(2R,3R)-2-(3,4-dihydroxyphenyl)-3,5-dihydroxy-7-methoxy-2,3-dihydrochromen-4-one",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "5849781f5454_results.json",
+        "f67e7a326bff_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "FNUPUYFWZXZMIE",
+      "connectivity_smiles": "C1=CC(=C(C=C1C2C(C(=O)C3=C(O2)C=C(C=C3)O)O)O)O",
+      "formula": "C15H12O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H12O6/c16-8-2-3-9-12(6-8)21-15(14(20)13(9)19)7-1-4-10(17)11(18)5-7/h1-6,14-18,20H/t14-,15+/m1/s1",
+      "inchikey": "FNUPUYFWZXZMIE-CABCVRRESA-N",
+      "isomeric_smiles": "C1=CC(=C(C=C1[C@H]2[C@@H](C(=O)C3=C(O2)C=C(C=C3)O)O)O)O",
+      "name_key": "(2s,3s)-2-(3,4-dihydroxyphenyl)-3,7-dihydroxy-2,3-dihydrochromen-4-one",
+      "observed_connectivity_identities": [
+        "ik14:FNUPUYFWZXZMIE",
+        "std2d:PHVVIHXXDVAMST"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/%282S%2C3S%29-2-%283%2C4-dihydroxyphenyl%29-3%2C7-dihydroxy-2%2C3-dihydrochromen-4-one/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 12310641,
+      "pubchem_title": "Fustin, (-)-",
+      "query_name": "(2S,3S)-2-(3,4-dihydroxyphenyl)-3,7-dihydroxy-2,3-dihydrochromen-4-one",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4615340e3463_results.json",
+        "5849781f5454_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "PADQINQHPQKXNL",
+      "connectivity_smiles": "C1=CC(=CC=C1C2C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+      "formula": "C15H12O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H12O6/c16-8-3-1-7(2-4-8)15-14(20)13(19)12-10(18)5-9(17)6-11(12)21-15/h1-6,14-18,20H/t14-,15+/m1/s1",
+      "inchikey": "PADQINQHPQKXNL-CABCVRRESA-N",
+      "isomeric_smiles": "C1=CC(=CC=C1[C@H]2[C@@H](C(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+      "name_key": "(2s,3s)-3,5,7-trihydroxy-2-(4-hydroxyphenyl)-2,3-dihydrochromen-4-one",
+      "observed_connectivity_identities": [
+        "ik14:PADQINQHPQKXNL",
+        "std2d:ICEDBMJSTNTMIT"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/%282S%2C3S%29-3%2C5%2C7-trihydroxy-2-%284-hydroxyphenyl%29-2%2C3-dihydrochromen-4-one/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 9838882,
+      "pubchem_title": "Ddd01025617",
+      "query_name": "(2S,3S)-3,5,7-trihydroxy-2-(4-hydroxyphenyl)-2,3-dihydrochromen-4-one",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4615340e3463_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "IAJILQKETJEXLJ",
+      "connectivity_smiles": "C(=O)C(C(C(C(C(=O)O)O)O)O)O",
+      "formula": "C6H10O7",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C6H10O7/c7-1-2(8)3(9)4(10)5(11)6(12)13/h1-5,8-11H,(H,12,13)/t2-,3-,4+,5+/m1/s1",
+      "inchikey": "IAJILQKETJEXLJ-MBMOQRBOSA-N",
+      "isomeric_smiles": "C(=O)[C@H]([C@H]([C@@H]([C@@H](C(=O)O)O)O)O)O",
+      "name_key": "(2s,3s,4s,5s)-2,3,4,5-tetrahydroxy-6-oxohexanoic acid",
+      "observed_connectivity_identities": [
+        "ik14:IAJILQKETJEXLJ",
+        "std2d:FOQBTHCPENPVKZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/%282S%2C3S%2C4S%2C5S%29-2%2C3%2C4%2C5-tetrahydroxy-6-oxohexanoic%20acid/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 81264,
+      "pubchem_title": "Mannuronic Acid",
+      "query_name": "(2S,3S,4S,5S)-2,3,4,5-tetrahydroxy-6-oxohexanoic acid",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4615340e3463_results.json",
+        "4615340e3463_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "BWHPKBOLJFNCPW",
+      "connectivity_smiles": "COC1=C(C=CC(=C1)CCC(=O)C=C(C=CC2=CC(=C(C=C2)O)OC)O)O",
+      "formula": "C21H22O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C21H22O6/c1-26-20-11-14(5-9-18(20)24)3-7-16(22)13-17(23)8-4-15-6-10-19(25)21(12-15)27-2/h3,5-7,9-13,22,24-25H,4,8H2,1-2H3/b7-3+,16-13-",
+      "inchikey": "BWHPKBOLJFNCPW-YJNULWIISA-N",
+      "isomeric_smiles": "COC1=C(C=CC(=C1)CCC(=O)/C=C(/C=C/C2=CC(=C(C=C2)O)OC)\\O)O",
+      "name_key": "(4z,6e)-5-hydroxy-1,7-bis(4-hydroxy-3-methoxyphenyl)-4,6-heptadien-3-one",
+      "observed_connectivity_identities": [
+        "ik14:BWHPKBOLJFNCPW",
+        "std2d:MUYJSOCNDLUHPJ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/%284Z%2C6E%29-5-Hydroxy-1%2C7-bis%284-hydroxy-3-methoxyphenyl%29-4%2C6-heptadien-3-one/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5372374,
+      "pubchem_title": "(4Z,6E)-5-Hydroxy-1,7-bis(4-hydroxy-3-methoxyphenyl)-4,6-heptadien-3-one",
+      "query_name": "(4Z,6E)-5-Hydroxy-1,7-bis(4-hydroxy-3-methoxyphenyl)-4,6-heptadien-3-one",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "c5ed267b4224_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "GUEIZVNYDFNHJU",
+      "connectivity_smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C=CC(=C3C2=O)O)O",
+      "formula": "C14H8O4",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C14H8O4/c15-9-5-6-10(16)12-11(9)13(17)7-3-1-2-4-8(7)14(12)18/h1-6,15-16H",
+      "inchikey": "GUEIZVNYDFNHJU-UHFFFAOYSA-N",
+      "isomeric_smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C=CC(=C3C2=O)O)O",
+      "name_key": "1,4-dihydroxyanthraquinone",
+      "observed_connectivity_identities": [
+        "ik14:GUEIZVNYDFNHJU",
+        "std2d:YELPHMDBAUJJNL"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/1%2C4-dihydroxyanthraquinone/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 6688,
+      "pubchem_title": "Quinizarin",
+      "query_name": "1,4-dihydroxyanthraquinone",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "5849781f5454_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "JCICIFOYVSPMHG",
+      "connectivity_smiles": "C1C2=CC=CC=C2N(C1=O)C3=C(C=CC=C3Cl)Cl",
+      "formula": "C14H9Cl2NO",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C14H9Cl2NO/c15-10-5-3-6-11(16)14(10)17-12-7-2-1-4-9(12)8-13(17)18/h1-7H,8H2",
+      "inchikey": "JCICIFOYVSPMHG-UHFFFAOYSA-N",
+      "isomeric_smiles": "C1C2=CC=CC=C2N(C1=O)C3=C(C=CC=C3Cl)Cl",
+      "name_key": "1-(2,6-dichlorophenyl)-2-indolinone",
+      "observed_connectivity_identities": [
+        "ik14:JCICIFOYVSPMHG",
+        "std2d:RNGLFXNHJGNZRO"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/1-%282%2C6-Dichlorophenyl%29-2-indolinone/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 27211,
+      "pubchem_title": "Diclofenac lactam",
+      "query_name": "1-(2,6-Dichlorophenyl)-2-indolinone",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "5849781f5454_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "WJMFXQBNYLYADA",
+      "connectivity_smiles": "C1=CC(=C(C=C1C2C(C(=CC3=CC(=C(C=C23)O)O)C(=O)O)C(=O)O)O)O",
+      "formula": "C18H14O8",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C18H14O8/c19-11-2-1-7(4-12(11)20)15-9-6-14(22)13(21)5-8(9)3-10(17(23)24)16(15)18(25)26/h1-6,15-16,19-22H,(H,23,24)(H,25,26)",
+      "inchikey": "WJMFXQBNYLYADA-UHFFFAOYSA-N",
+      "isomeric_smiles": "C1=CC(=C(C=C1C2C(C(=CC3=CC(=C(C=C23)O)O)C(=O)O)C(=O)O)O)O",
+      "name_key": "1-(3,4-dihydroxyphenyl)-6,7-dihydroxy-1,2-dihydronaphthalene-2,3-dicarboxylic acid",
+      "observed_connectivity_identities": [
+        "std2d:HOSKZAVLPRXMPO",
+        "std2d:WJMFXQBNYLYADA"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/1-%283%2C4-Dihydroxyphenyl%29-6%2C7-dihydroxy-1%2C2-dihydronaphthalene-2%2C3-dicarboxylic%20acid/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 3035586,
+      "pubchem_title": "1-(3,4-Dihydroxyphenyl)-6,7-dihydroxy-1,2-dihydronaphthalene-2,3-dicarboxylic acid",
+      "query_name": "1-(3,4-Dihydroxyphenyl)-6,7-dihydroxy-1,2-dihydronaphthalene-2,3-dicarboxylic acid",
+      "resolution_triggers": [
+        "same_name_formula_bound_to_multiple_connectivities"
+      ],
+      "source_artifacts": [
+        "6086f5c71341_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "YIMHGPSYDOGBPI",
+      "connectivity_smiles": "CC1CCC2(CCC3(C(=CC(=O)C4C3(CCC5C4(CCC(C5(C)C(=O)O)O)C)C)C2C1C)C)C",
+      "formula": "C30H46O4",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C30H46O4/c1-17-8-11-26(3)14-15-28(5)19(23(26)18(17)2)16-20(31)24-27(4)12-10-22(32)30(7,25(33)34)21(27)9-13-29(24,28)6/h16-18,21-24,32H,8-15H2,1-7H3,(H,33,34)/t17-,18+,21-,22-,23+,24-,26-,27+,28-,29-,30-/m1/s1",
+      "inchikey": "YIMHGPSYDOGBPI-YZCVQEKWSA-N",
+      "isomeric_smiles": "C[C@@H]1CC[C@@]2(CC[C@@]3(C(=CC(=O)[C@H]4[C@]3(CC[C@@H]5[C@@]4(CC[C@H]([C@]5(C)C(=O)O)O)C)C)[C@@H]2[C@H]1C)C)C",
+      "name_key": "11-keto-beta-boswellic acid",
+      "observed_connectivity_identities": [
+        "ik14:YIMHGPSYDOGBPI",
+        "std2d:XPMQJVHMFLZDSA"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/11-Keto-beta-boswellic%20acid/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 9847548,
+      "pubchem_title": "11-Keto-beta-boswellic acid",
+      "query_name": "11-Keto-beta-boswellic acid",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "5849781f5454_results.json",
+        "9c56ff565900_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "IRSFLDGTOHBADP",
+      "connectivity_smiles": "CCCCCCCCCCCC1=C(C(=O)C=C(C1=O)O)O",
+      "formula": "C17H26O4",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C17H26O4/c1-2-3-4-5-6-7-8-9-10-11-13-16(20)14(18)12-15(19)17(13)21/h12,18,21H,2-11H2,1H3",
+      "inchikey": "IRSFLDGTOHBADP-UHFFFAOYSA-N",
+      "isomeric_smiles": "CCCCCCCCCCCC1=C(C(=O)C=C(C1=O)O)O",
+      "name_key": "2,5-dihydroxy-3-undecylcyclohexa-2,5-diene-1,4-dione",
+      "observed_connectivity_identities": [
+        "ik14:IRSFLDGTOHBADP",
+        "std2d:LEMOCKLYNMZOCJ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/2%2C5-dihydroxy-3-undecylcyclohexa-2%2C5-diene-1%2C4-dione/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 3218,
+      "pubchem_title": "Embelin",
+      "query_name": "2,5-dihydroxy-3-undecylcyclohexa-2,5-diene-1,4-dione",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "0389dbd4cfa3_results.json",
+        "08d60a11e3cf_results.json",
+        "08d60a11e3cf_v11_flagship.json",
+        "0dcc2d80dbe0_results.json",
+        "0e81d86272c6_results.json",
+        "0e81d86272c6_v11_flagship.json",
+        "0ea01f01d454_results.json",
+        "0ea01f01d454_v11_flagship.json",
+        "0ed68ecf64ed_results.json",
+        "0ed68ecf64ed_v11_flagship.json",
+        "10c2991e5aaa_results.json",
+        "10c2991e5aaa_v11_flagship.json",
+        "168c971a92ad_results.json",
+        "168c971a92ad_v11_flagship.json",
+        "178afb91b97a_results.json",
+        "178afb91b97a_v11_flagship.json",
+        "18b19bef44b1_results.json",
+        "18b19bef44b1_v11_flagship.json",
+        "195c729528a4_results.json",
+        "195c729528a4_v11_flagship.json",
+        "19e0157daa81_results.json",
+        "19e0157daa81_v11_flagship.json",
+        "1e7cd61d5c1b_results.json",
+        "1e7cd61d5c1b_v11_flagship.json",
+        "245945548219_results.json",
+        "245945548219_v11_flagship.json",
+        "2d1c07a6ef17_results.json",
+        "2d1c07a6ef17_v11_flagship.json",
+        "356ffc176659_results.json",
+        "3be604ab4b4b_results.json",
+        "3be604ab4b4b_v11_flagship.json",
+        "40f9f3f538e2_results.json",
+        "40f9f3f538e2_v11_flagship.json",
+        "4228fd2c46a1_results.json",
+        "4228fd2c46a1_v11_flagship.json",
+        "42ff920a3d33_results.json",
+        "4303031710cb_results.json",
+        "4303031710cb_v11_flagship.json",
+        "430e44cebcb1_results.json",
+        "430e44cebcb1_v11_flagship.json",
+        "486b5f07dafc_results.json",
+        "486b5f07dafc_v11_flagship.json",
+        "48f80c28b8c6_results.json",
+        "48f80c28b8c6_v11_flagship.json",
+        "4bbd348c85c2_results.json",
+        "4bd0ecff3d51_results.json",
+        "4bd0ecff3d51_v11_flagship.json",
+        "4e1ae6a5ca7c_results.json",
+        "4e1ae6a5ca7c_v11_flagship.json",
+        "4e4322009839_results.json",
+        "4e4322009839_v11_flagship.json",
+        "53fa9de9edeb_results.json",
+        "5ced4c3e2e77_results.json",
+        "5ced4c3e2e77_v11_flagship.json",
+        "5e6379a10c70_results.json",
+        "5fd4e9cac8ea_results.json",
+        "5fd4e9cac8ea_v11_flagship.json",
+        "6086f5c71341_results.json",
+        "6086f5c71341_v11_flagship.json",
+        "60926f048b63_results.json",
+        "60926f048b63_v11_flagship.json",
+        "6787f6c3b0fe_results.json",
+        "6787f6c3b0fe_v11_flagship.json",
+        "6c28918ae345_results.json",
+        "6c28918ae345_v11_flagship.json",
+        "71d296b6f19e_results.json",
+        "71d296b6f19e_v11_flagship.json",
+        "72eba4e9311c_results.json",
+        "72eba4e9311c_v11_flagship.json",
+        "759e33f8440a_results.json",
+        "759e33f8440a_v11_flagship.json",
+        "76502d34a060_results.json",
+        "77431488df00_results.json",
+        "77431488df00_v11_flagship.json",
+        "7cbc9dc47a92_results.json",
+        "7cbc9dc47a92_v11_flagship.json",
+        "7cc8356e3a32_results.json",
+        "7cc8356e3a32_v11_flagship.json",
+        "7e2503d0d957_results.json",
+        "7e2503d0d957_v11_flagship.json",
+        "7eef7ffddf34_results.json",
+        "7eef7ffddf34_v11_flagship.json",
+        "8020c2217c9e_results.json",
+        "8020c2217c9e_v11_flagship.json",
+        "879cb3884bef_results.json",
+        "879cb3884bef_v11_flagship.json",
+        "9094d4772673_results.json",
+        "97887d83818e_results.json",
+        "97887d83818e_v11_flagship.json",
+        "9b49807fad82_results.json",
+        "9b49807fad82_v11_flagship.json",
+        "9be80bcf9ebb_results.json",
+        "9be80bcf9ebb_v11_flagship.json",
+        "9ec7050856aa_results.json",
+        "9ec7050856aa_v11_flagship.json",
+        "a3dadb9bd614_results.json",
+        "a3dadb9bd614_v11_flagship.json",
+        "ad75a3cddd36_results.json",
+        "ad75a3cddd36_v11_flagship.json",
+        "ae5271e8e57c_results.json",
+        "ae5271e8e57c_v11_flagship.json",
+        "af3bcc5c8690_results.json",
+        "af3bcc5c8690_v11_flagship.json",
+        "b10daf42e2c3_results.json",
+        "b10daf42e2c3_v11_flagship.json",
+        "b71c3b687483_results.json",
+        "b71c3b687483_v11_flagship.json",
+        "b842fe9778d2_results.json",
+        "b842fe9778d2_v11_flagship.json",
+        "b8b2f6afca8c_results.json",
+        "c5ca5d0e94a1_results.json",
+        "c5ca5d0e94a1_v11_flagship.json",
+        "c5ed267b4224_results.json",
+        "c77961cf06ff_results.json",
+        "c77961cf06ff_v11_flagship.json",
+        "c9b4c703ac31_results.json",
+        "c9b4c703ac31_v11_flagship.json",
+        "cc2ad0680541_results.json",
+        "cc2ad0680541_v11_flagship.json",
+        "d04683288a93_results.json",
+        "d486ede3e8d8_results.json",
+        "d486ede3e8d8_v11_flagship.json",
+        "d589a06a1461_results.json",
+        "d589a06a1461_v11_flagship.json",
+        "dbfffe88a157_results.json",
+        "ddde8a39ce58_results.json",
+        "dfd298b3c174_results.json",
+        "dfd298b3c174_v11_flagship.json",
+        "ea20e82c7bab_results.json",
+        "f105097d1c8f_results.json",
+        "f105097d1c8f_v11_flagship.json",
+        "f8a959246e49_results.json",
+        "f8a959246e49_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "REFJWTPEDVJJIY",
+      "connectivity_smiles": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O",
+      "formula": "C15H10O7",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H10O7/c16-7-4-10(19)12-11(5-7)22-15(14(21)13(12)20)6-1-2-8(17)9(18)3-6/h1-5,16-19,21H",
+      "inchikey": "REFJWTPEDVJJIY-UHFFFAOYSA-N",
+      "isomeric_smiles": "C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O",
+      "name_key": "2-(3,4-dihydroxyphenyl)-3,5,7-trihydroxy-4h-chromen-4-one",
+      "observed_connectivity_identities": [
+        "ik14:UMVWYQXKBPJMOF",
+        "std2d:REFJWTPEDVJJIY"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/2-%283%2C4-dihydroxyphenyl%29-3%2C5%2C7-trihydroxy-4H-chromen-4-one/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5280343,
+      "pubchem_title": "Quercetin",
+      "query_name": "2-(3,4-dihydroxyphenyl)-3,5,7-trihydroxy-4H-chromen-4-one",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "69c05aeca7c9_results.json",
+        "9c56ff565900_results.json",
+        "f67e7a326bff_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "WVCHIGAIXREVNS",
+      "connectivity_smiles": "C1=CC=C2C(=C1)C(=CC(=O)C2=O)O",
+      "formula": "C10H6O3",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C10H6O3/c11-8-5-9(12)10(13)7-4-2-1-3-6(7)8/h1-5,11H",
+      "inchikey": "WVCHIGAIXREVNS-UHFFFAOYSA-N",
+      "isomeric_smiles": "C1=CC=C2C(=C1)C(=CC(=O)C2=O)O",
+      "name_key": "2-hydroxynaphthalene-1,4-dione",
+      "observed_connectivity_identities": [
+        "ik14:CSFWPUWCSPOLJW",
+        "std2d:SLJWCCMDGTZEGQ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/2-hydroxynaphthalene-1%2C4-dione/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 6755,
+      "pubchem_title": "2-Hydroxy-1,4-naphthoquinone",
+      "query_name": "2-hydroxynaphthalene-1,4-dione",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "69c05aeca7c9_results.json",
+        "69c05aeca7c9_v11_flagship.json",
+        "9c56ff565900_results.json",
+        "9c56ff565900_v11_flagship.json",
+        "f67e7a326bff_results.json",
+        "f67e7a326bff_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "JQNVCUBPURTQPQ",
+      "connectivity_smiles": "CC(CCC(C(C)(C1CCC2(C1(CCC3C2=CC(=O)C4C3(CC(C(C4)O)O)C)C)O)O)O)CO",
+      "formula": "C27H44O7",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C27H44O7/c1-15(14-28)5-6-23(32)26(4,33)22-8-10-27(34)17-11-19(29)18-12-20(30)21(31)13-24(18,2)16(17)7-9-25(22,27)3/h11,15-16,18,20-23,28,30-34H,5-10,12-14H2,1-4H3/t15-,16-,18-,20+,21-,22-,23+,24+,25+,26+,27+/m0/s1",
+      "inchikey": "JQNVCUBPURTQPQ-BMZRUTLMSA-N",
+      "isomeric_smiles": "C[C@@H](CC[C@H]([C@@](C)([C@H]1CC[C@@]2([C@@]1(CC[C@H]3C2=CC(=O)[C@H]4[C@@]3(C[C@@H]([C@@H](C4)O)O)C)C)O)O)O)CO",
+      "name_key": "25s-inokosterone",
+      "observed_connectivity_identities": [
+        "ik14:JQNVCUBPURTQPQ",
+        "std2d:MHGKDTTXFHUGAY"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/25S-Inokosterone/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 12358616,
+      "pubchem_title": "25S-Inokosterone",
+      "query_name": "25S-Inokosterone",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "b19a5350df59_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "AHKPCKHDSIQVNI",
+      "connectivity_smiles": "C1=CC=C(C=C1)CC2=C(C(OC2=O)C3=CC=C(C=C3)O)O",
+      "formula": "C17H14O4",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C17H14O4/c18-13-8-6-12(7-9-13)16-15(19)14(17(20)21-16)10-11-4-2-1-3-5-11/h1-9,16,18-19H,10H2",
+      "inchikey": "AHKPCKHDSIQVNI-UHFFFAOYSA-N",
+      "isomeric_smiles": "C1=CC=C(C=C1)CC2=C(C(OC2=O)C3=CC=C(C=C3)O)O",
+      "name_key": "3-benzyl-4-hydroxy-5-(4-hydroxyphenyl)-2,5-dihydrofuran-2-one",
+      "observed_connectivity_identities": [
+        "ik14:AHKPCKHDSIQVNI",
+        "std2d:DTRQYDCJHLATMU"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/3-benzyl-4-hydroxy-5-%284-hydroxyphenyl%29-2%2C5-dihydrofuran-2-one/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 54738507,
+      "pubchem_title": "3-Benzyl-4-hydroxy-5-(4-hydroxyphenyl)-2,5-dihydrofuran-2-one",
+      "query_name": "3-benzyl-4-hydroxy-5-(4-hydroxyphenyl)-2,5-dihydrofuran-2-one",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "245945548219_results.json",
+        "3788afc82028_results.json",
+        "3788afc82028_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "RHBOHEXDGUVIIY",
+      "connectivity_smiles": "CC1=CC(=O)C(=C(C)C)CC2C1CCC2(C)O",
+      "formula": "C15H22O2",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H22O2/c1-9(2)12-8-13-11(5-6-15(13,4)17)10(3)7-14(12)16/h7,11,13,17H,5-6,8H2,1-4H3",
+      "inchikey": "RHBOHEXDGUVIIY-UHFFFAOYSA-N",
+      "isomeric_smiles": "CC1=CC(=O)C(=C(C)C)CC2C1CCC2(C)O",
+      "name_key": "3-hydroxy-3,8-dimethyl-5-(propan-2-ylidene)-1,2,3,3a,4,5,6,8a-octahydroazulen-6-one",
+      "observed_connectivity_identities": [
+        "ik14:RHBOHEXDGUVIIY",
+        "std2d:DAUDFKSHOYLOOB"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/3-hydroxy-3%2C8-dimethyl-5-%28propan-2-ylidene%29-1%2C2%2C3%2C3a%2C4%2C5%2C6%2C8a-octahydroazulen-6-one/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5320710,
+      "pubchem_title": "3-Hydroxy-3,8-dimethyl-5-(propan-2-ylidene)-1,2,3,3a,4,5,6,8a-octahydroazulen-6-one",
+      "query_name": "3-hydroxy-3,8-dimethyl-5-(propan-2-ylidene)-1,2,3,3a,4,5,6,8a-octahydroazulen-6-one",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "9c56ff565900_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "JCZGUFVZKUDRMM",
+      "connectivity_smiles": "CC1=C(C=C2C(=C1O)C(=O)C3=C(C2=O)C(=C(C=C3)O)O)O",
+      "formula": "C15H10O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H10O6/c1-5-9(17)4-7-11(12(5)18)13(19)6-2-3-8(16)15(21)10(6)14(7)20/h2-4,16-18,21H,1H3",
+      "inchikey": "JCZGUFVZKUDRMM-UHFFFAOYSA-N",
+      "isomeric_smiles": "CC1=C(C=C2C(=C1O)C(=O)C3=C(C2=O)C(=C(C=C3)O)O)O",
+      "name_key": "3-hydroxymorindone",
+      "observed_connectivity_identities": [
+        "ik14:JCZGUFVZKUDRMM",
+        "std2d:RWZHXPNIGVPRRL"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/3-hydroxymorindone/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 86012754,
+      "pubchem_title": "3-Hydroxymorindone",
+      "query_name": "3-hydroxymorindone",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "3788afc82028_results.json",
+        "3788afc82028_v11_flagship.json",
+        "430e44cebcb1_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "FHEHIXJLCWUPCZ",
+      "connectivity_smiles": "C=CCC1=CC(=C(C=C1)O)O",
+      "formula": "C9H10O2",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C9H10O2/c1-2-3-7-4-5-8(10)9(11)6-7/h2,4-6,10-11H,1,3H2",
+      "inchikey": "FHEHIXJLCWUPCZ-UHFFFAOYSA-N",
+      "isomeric_smiles": "C=CCC1=CC(=C(C=C1)O)O",
+      "name_key": "4-allylpyrocatechol",
+      "observed_connectivity_identities": [
+        "ik14:FHEHIXJLCWUPCZ",
+        "std2d:MDXYNRAMDATLBT"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/4-Allylpyrocatechol/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 70775,
+      "pubchem_title": "Hydroxychavicol",
+      "query_name": "4-Allylpyrocatechol",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "69c05aeca7c9_results.json",
+        "69c05aeca7c9_v11_flagship.json",
+        "9c56ff565900_results.json",
+        "9c56ff565900_v11_flagship.json",
+        "ec973f1c42e3_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "YPKUMLKVFXFYOT",
+      "connectivity_smiles": "CC1=C2C(=C(C(=O)OC2=C(C=C1)OC)CC=C(C)C)O",
+      "formula": "C16H18O4",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C16H18O4/c1-9(2)5-7-11-14(17)13-10(3)6-8-12(19-4)15(13)20-16(11)18/h5-6,8,17H,7H2,1-4H3",
+      "inchikey": "YPKUMLKVFXFYOT-UHFFFAOYSA-N",
+      "isomeric_smiles": "CC1=C2C(=C(C(=O)OC2=C(C=C1)OC)CC=C(C)C)O",
+      "name_key": "4-hydroxy-8-methoxy-5-methyl-3-(3-methylbut-2-enyl)chromen-2-one",
+      "observed_connectivity_identities": [
+        "ik14:YPKUMLKVFXFYOT",
+        "std2d:RVHYNFGNCWESHI"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/4-hydroxy-8-methoxy-5-methyl-3-%283-methylbut-2-enyl%29chromen-2-one/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 54739882,
+      "pubchem_title": "4-Hydroxy-8-methoxy-5-methyl-3-(3-methylbut-2-enyl)chromen-2-one",
+      "query_name": "4-hydroxy-8-methoxy-5-methyl-3-(3-methylbut-2-enyl)chromen-2-one",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "879cb3884bef_results.json",
+        "879cb3884bef_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "GBDMODVZBPFQKI",
+      "connectivity_smiles": "C1C(=O)C2=C(O1)C=C(C=C2)O",
+      "formula": "C8H6O3",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C8H6O3/c9-5-1-2-6-7(10)4-11-8(6)3-5/h1-3,9H,4H2",
+      "inchikey": "GBDMODVZBPFQKI-UHFFFAOYSA-N",
+      "isomeric_smiles": "C1C(=O)C2=C(O1)C=C(C=C2)O",
+      "name_key": "6-hydroxybenzofuran-3(2h)-one",
+      "observed_connectivity_identities": [
+        "ik14:GBDMODVZBPFQKI",
+        "std2d:NCXTXUZQHUMZPO"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/6-hydroxybenzofuran-3%282H%29-one/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 235717,
+      "pubchem_title": "6-Hydroxy-3-coumaranone",
+      "query_name": "6-hydroxybenzofuran-3(2H)-one",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "168c971a92ad_results.json",
+        "168c971a92ad_v11_flagship.json",
+        "3788afc82028_results.json",
+        "3788afc82028_v11_flagship.json",
+        "c3ce26b37909_results.json",
+        "c3ce26b37909_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "OQWKEEOHDMUXEO",
+      "connectivity_smiles": "CCCCCC=CC(=O)CCC1=CC(=C(C=C1)O)OC",
+      "formula": "C17H24O3",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C17H24O3/c1-3-4-5-6-7-8-15(18)11-9-14-10-12-16(19)17(13-14)20-2/h7-8,10,12-13,19H,3-6,9,11H2,1-2H3/b8-7+",
+      "inchikey": "OQWKEEOHDMUXEO-BQYQJAHWSA-N",
+      "isomeric_smiles": "CCCCC/C=C/C(=O)CCC1=CC(=C(C=C1)O)OC",
+      "name_key": "6-shogaol",
+      "observed_connectivity_identities": [
+        "ik14:OQWKEEOHDMUXEO",
+        "std2d:LVCXAKWFQYYXLU"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/6-Shogaol/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5281794,
+      "pubchem_title": "Shogaol",
+      "query_name": "6-Shogaol",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "5849781f5454_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "LZJZZMDDFMCWMX",
+      "connectivity_smiles": "C1CN(CC2=C1N=C3C=CNN3C2=O)C(=O)C4=CC(=CC=C4)OC(F)(F)F",
+      "formula": "C17H13F3N4O3",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C17H13F3N4O3/c18-17(19,20)27-11-3-1-2-10(8-11)15(25)23-7-5-13-12(9-23)16(26)24-14(22-13)4-6-21-24/h1-4,6,8,21H,5,7,9H2",
+      "inchikey": "LZJZZMDDFMCWMX-UHFFFAOYSA-N",
+      "isomeric_smiles": "C1CN(CC2=C1N=C3C=CNN3C2=O)C(=O)C4=CC(=CC=C4)OC(F)(F)F",
+      "name_key": "7-[3-(trifluoromethoxy)benzoyl]-5,6,7,8-tetrahydropyrazolo[1,5-a]pyrido[4,3-d]pyrimidin-9(1h)-one",
+      "observed_connectivity_identities": [
+        "ik14:LZJZZMDDFMCWMX",
+        "std2d:AHHORZBJSZUHIZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/7-%5B3-%28trifluoromethoxy%29benzoyl%5D-5%2C6%2C7%2C8-tetrahydropyrazolo%5B1%2C5-a%5Dpyrido%5B4%2C3-d%5Dpyrimidin-9%281H%29-one/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 53183975,
+      "pubchem_title": "7-[3-(trifluoromethoxy)benzoyl]-5,6,7,8-tetrahydropyrazolo[1,5-a]pyrido[4,3-d]pyrimidin-9(1H)-one",
+      "query_name": "7-[3-(trifluoromethoxy)benzoyl]-5,6,7,8-tetrahydropyrazolo[1,5-a]pyrido[4,3-d]pyrimidin-9(1H)-one",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "f105097d1c8f_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "RGCKGOZRHPZPFP",
+      "connectivity_smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C2=O)C(=C(C=C3)O)O",
+      "formula": "C14H8O4",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C14H8O4/c15-10-6-5-9-11(14(10)18)13(17)8-4-2-1-3-7(8)12(9)16/h1-6,15,18H",
+      "inchikey": "RGCKGOZRHPZPFP-UHFFFAOYSA-N",
+      "isomeric_smiles": "C1=CC=C2C(=C1)C(=O)C3=C(C2=O)C(=C(C=C3)O)O",
+      "name_key": "alizarin",
+      "observed_connectivity_identities": [
+        "ik14:RGCKGOZRHPZPFP",
+        "std2d:GADFHZPEJJBGDD"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Alizarin/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 6293,
+      "pubchem_title": "Alizarin",
+      "query_name": "Alizarin",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "5849781f5454_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "AFHJQYHRLPMKHU",
+      "connectivity_smiles": "C1=CC2=C(C(=C1)O)C(=O)C3=C(C2C4C(C(C(C(O4)CO)O)O)O)C=C(C=C3O)CO",
+      "formula": "C21H22O9",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C21H22O9/c22-6-8-4-10-14(21-20(29)19(28)17(26)13(7-23)30-21)9-2-1-3-11(24)15(9)18(27)16(10)12(25)5-8/h1-5,13-14,17,19-26,28-29H,6-7H2/t13-,14?,17-,19+,20-,21+/m1/s1",
+      "inchikey": "AFHJQYHRLPMKHU-CGISPIQUSA-N",
+      "isomeric_smiles": "C1=CC2=C(C(=C1)O)C(=O)C3=C(C2[C@H]4[C@@H]([C@H]([C@@H]([C@H](O4)CO)O)O)O)C=C(C=C3O)CO",
+      "name_key": "aloin",
+      "observed_connectivity_identities": [
+        "ik14:AFHJQYHRLPMKHU",
+        "std2d:UBCKYWKJKPMKAA"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/ALOIN/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 9866696,
+      "pubchem_title": "Aloin",
+      "query_name": "ALOIN",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "19e0157daa81_results.json",
+        "5849781f5454_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "AFHJQYHRLPMKHU",
+      "connectivity_smiles": "C1=CC2=C(C(=C1)O)C(=O)C3=C(C2C4C(C(C(C(O4)CO)O)O)O)C=C(C=C3O)CO",
+      "formula": "C21H22O9",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C21H22O9/c22-6-8-4-10-14(21-20(29)19(28)17(26)13(7-23)30-21)9-2-1-3-11(24)15(9)18(27)16(10)12(25)5-8/h1-5,13-14,17,19-26,28-29H,6-7H2/t13-,14-,17-,19+,20-,21+/m1/s1",
+      "inchikey": "AFHJQYHRLPMKHU-WEZNYRQKSA-N",
+      "isomeric_smiles": "C1=CC2=C(C(=C1)O)C(=O)C3=C([C@@H]2[C@H]4[C@@H]([C@H]([C@@H]([C@H](O4)CO)O)O)O)C=C(C=C3O)CO",
+      "name_key": "aloin b",
+      "observed_connectivity_identities": [
+        "ik14:AFHJQYHRLPMKHU",
+        "std2d:UBCKYWKJKPMKAA"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Aloin%20B/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 14989,
+      "pubchem_title": "Aloin B",
+      "query_name": "Aloin B",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "19e0157daa81_results.json",
+        "5849781f5454_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "KUFXJZXMWHNCEH",
+      "connectivity_smiles": "CC1=C2CC(CCC2(CCC1=O)C)C(=C)C",
+      "formula": "C15H22O",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H22O/c1-10(2)12-5-7-15(4)8-6-14(16)11(3)13(15)9-12/h12H,1,5-9H2,2-4H3/t12-,15+/m1/s1",
+      "inchikey": "KUFXJZXMWHNCEH-DOMZBBRYSA-N",
+      "isomeric_smiles": "CC1=C2C[C@@H](CC[C@]2(CCC1=O)C)C(=C)C",
+      "name_key": "alpha cyperone",
+      "observed_connectivity_identities": [
+        "ik14:KUFXJZXMWHNCEH",
+        "std2d:OJPLCPBWIQWABI"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Alpha%20Cyperone/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 6452086,
+      "pubchem_title": "(+)-alpha-Cyperone",
+      "query_name": "Alpha Cyperone",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "1ada992c1678_results.json",
+        "69c05aeca7c9_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "UGVIZCBJCSXBCJ",
+      "connectivity_smiles": "CC1CCCC2=CC(=O)C3C(C12C)C3(C)C",
+      "formula": "C15H22O",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H22O/c1-9-6-5-7-10-8-11(16)12-13(14(12,2)3)15(9,10)4/h8-9,12-13H,5-7H2,1-4H3/t9-,12-,13+,15+/m1/s1",
+      "inchikey": "UGVIZCBJCSXBCJ-JWFUOXDNSA-N",
+      "isomeric_smiles": "C[C@@H]1CCCC2=CC(=O)[C@@H]3[C@H]([C@@]12C)C3(C)C",
+      "name_key": "aristolone",
+      "observed_connectivity_identities": [
+        "ik14:UGVIZCBJCSXBCJ",
+        "std2d:QIPICQCNJGOBHW"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Aristolone/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 165536,
+      "pubchem_title": "Aristolone",
+      "query_name": "Aristolone",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "69c05aeca7c9_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "PADQINQHPQKXNL",
+      "connectivity_smiles": "C1=CC(=CC=C1C2C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+      "formula": "C15H12O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H12O6/c16-8-3-1-7(2-4-8)15-14(20)13(19)12-10(18)5-9(17)6-11(12)21-15/h1-6,14-18,20H/t14-,15+/m0/s1",
+      "inchikey": "PADQINQHPQKXNL-LSDHHAIUSA-N",
+      "isomeric_smiles": "C1=CC(=CC=C1[C@@H]2[C@H](C(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+      "name_key": "aromadendrin",
+      "observed_connectivity_identities": [
+        "ik14:PADQINQHPQKXNL",
+        "std2d:ICEDBMJSTNTMIT"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/aromadendrin/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 122850,
+      "pubchem_title": "Dihydrokaempferol",
+      "query_name": "aromadendrin",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4615340e3463_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "PLGZOIJJUOHZJA",
+      "connectivity_smiles": "CCCC(=O)C1=C(C(=C(C(C1=O)(C)C)O)CC2=C(C(=C(C(=C2O)C)OC)C(=O)CCC)O)O",
+      "formula": "C25H32O8",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C25H32O8/c1-7-9-15(26)17-20(29)13(19(28)12(3)22(17)33-6)11-14-21(30)18(16(27)10-8-2)24(32)25(4,5)23(14)31/h28-31H,7-11H2,1-6H3",
+      "inchikey": "PLGZOIJJUOHZJA-UHFFFAOYSA-N",
+      "isomeric_smiles": "CCCC(=O)C1=C(C(=C(C(C1=O)(C)C)O)CC2=C(C(=C(C(=C2O)C)OC)C(=O)CCC)O)O",
+      "name_key": "aspidin bb",
+      "observed_connectivity_identities": [
+        "ik14:DCEHSZHMKGBNHS",
+        "std2d:OIYHMGDRJCPHQZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Aspidin%20BB/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 120290,
+      "pubchem_title": "Aspidin",
+      "query_name": "Aspidin BB",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "0389dbd4cfa3_results.json",
+        "0389dbd4cfa3_v11_flagship.json",
+        "0dcc2d80dbe0_results.json",
+        "0dcc2d80dbe0_v11_flagship.json",
+        "0ea01f01d454_results.json",
+        "0ea01f01d454_v11_flagship.json",
+        "0ed68ecf64ed_results.json",
+        "0ed68ecf64ed_v11_flagship.json",
+        "356ffc176659_results.json",
+        "356ffc176659_v11_flagship.json",
+        "42ff920a3d33_results.json",
+        "42ff920a3d33_v11_flagship.json",
+        "4bbd348c85c2_results.json",
+        "4bbd348c85c2_v11_flagship.json",
+        "4e1ae6a5ca7c_results.json",
+        "4e1ae6a5ca7c_v11_flagship.json",
+        "4e4322009839_results.json",
+        "4e4322009839_v11_flagship.json",
+        "5fd4e9cac8ea_results.json",
+        "5fd4e9cac8ea_v11_flagship.json",
+        "6c28918ae345_results.json",
+        "6c28918ae345_v11_flagship.json",
+        "759e33f8440a_results.json",
+        "759e33f8440a_v11_flagship.json",
+        "8020c2217c9e_results.json",
+        "8020c2217c9e_v11_flagship.json",
+        "879cb3884bef_results.json",
+        "879cb3884bef_v11_flagship.json",
+        "88743792c2fe_results.json",
+        "88743792c2fe_v11_flagship.json",
+        "9ec7050856aa_results.json",
+        "9ec7050856aa_v11_flagship.json",
+        "b8b2f6afca8c_results.json",
+        "b8b2f6afca8c_v11_flagship.json",
+        "c3ce26b37909_results.json",
+        "c3ce26b37909_v11_flagship.json",
+        "c7796b5fff98_results.json",
+        "c7796b5fff98_v11_flagship.json",
+        "d04683288a93_results.json",
+        "d04683288a93_v11_flagship.json",
+        "d589a06a1461_results.json",
+        "d589a06a1461_v11_flagship.json",
+        "dbfffe88a157_results.json",
+        "dbfffe88a157_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "RSIHSRDYCUFFLA",
+      "connectivity_smiles": "CC12CCC3C(C1CCC2O)CCC4=CC(=O)C=CC34C",
+      "formula": "C19H26O2",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C19H26O2/c1-18-9-7-13(20)11-12(18)3-4-14-15-5-6-17(21)19(15,2)10-8-16(14)18/h7,9,11,14-17,21H,3-6,8,10H2,1-2H3/t14-,15-,16-,17-,18-,19-/m0/s1",
+      "inchikey": "RSIHSRDYCUFFLA-DYKIIFRCSA-N",
+      "isomeric_smiles": "C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=CC(=O)C=C[C@]34C",
+      "name_key": "boldenone",
+      "observed_connectivity_identities": [
+        "ik14:RSIHSRDYCUFFLA",
+        "std2d:YCWFSAIGFBNDPM"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Boldenone/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 13308,
+      "pubchem_title": "Boldenone",
+      "query_name": "Boldenone",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "69c05aeca7c9_results.json",
+        "69c05aeca7c9_v11_flagship.json",
+        "9c56ff565900_results.json",
+        "9c56ff565900_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "QPMSXPMLTYTHGM",
+      "connectivity_smiles": "CC12CCC3C(C1CCC2OC(=O)CCC4CCCC4)CCC5=CC(=O)C=CC35C",
+      "formula": "C27H38O3",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C27H38O3/c1-26-15-13-20(28)17-19(26)8-9-21-22-10-11-24(27(22,2)16-14-23(21)26)30-25(29)12-7-18-5-3-4-6-18/h13,15,17-18,21-24H,3-12,14,16H2,1-2H3/t21-,22-,23-,24-,26-,27-/m0/s1",
+      "inchikey": "QPMSXPMLTYTHGM-ZLQWOROUSA-N",
+      "isomeric_smiles": "C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2OC(=O)CCC4CCCC4)CCC5=CC(=O)C=C[C@]35C",
+      "name_key": "boldenone cypionate",
+      "observed_connectivity_identities": [
+        "ik14:QPMSXPMLTYTHGM",
+        "std2d:QPMSXPMLTYTHGM",
+        "std2d:RSQJGCLXNWSOAD"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Boldenone%20Cypionate/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 71314193,
+      "pubchem_title": "((8R,9S,10R,13S,14S,17S)-10,13-dimethyl-3-oxo-6,7,8,9,11,12,14,15,16,17-decahydrocyclopenta(a)phenanthren-17-yl) 3-cyclopentylpropanoate",
+      "query_name": "Boldenone Cypionate",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "69c05aeca7c9_results.json",
+        "mix33-pos1_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "AHMMSNQYOPMLSX",
+      "connectivity_smiles": "CC12CCC3C(C1CCC2OC(=O)CCCCCCCCC=C)CCC4=CC(=O)C=CC34C",
+      "formula": "C30H44O3",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C30H44O3/c1-4-5-6-7-8-9-10-11-12-28(32)33-27-16-15-25-24-14-13-22-21-23(31)17-19-29(22,2)26(24)18-20-30(25,27)3/h4,17,19,21,24-27H,1,5-16,18,20H2,2-3H3/t24-,25-,26-,27-,29-,30-/m0/s1",
+      "inchikey": "AHMMSNQYOPMLSX-CNQKSJKFSA-N",
+      "isomeric_smiles": "C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2OC(=O)CCCCCCCCC=C)CCC4=CC(=O)C=C[C@]34C",
+      "name_key": "boldenone undecylenate",
+      "observed_connectivity_identities": [
+        "ik14:AHMMSNQYOPMLSX",
+        "std2d:VKDSLLAXPVZSPZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Boldenone%20undecylenate/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 11954310,
+      "pubchem_title": "Boldenone Undecylenate",
+      "query_name": "Boldenone undecylenate",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "5849781f5454_results.json",
+        "69c05aeca7c9_results.json",
+        "9c56ff565900_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "CGRCGRBHNKRILW",
+      "connectivity_smiles": "C1=CC=C(C=C1)C2=C(C(=C3C4=CC=CC=C4OC3=O)OC2=O)O",
+      "formula": "C18H10O5",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C18H10O5/c19-15-13(10-6-2-1-3-7-10)17(20)23-16(15)14-11-8-4-5-9-12(11)22-18(14)21/h1-9,19H/b16-14+",
+      "inchikey": "CGRCGRBHNKRILW-JQIJEIRASA-N",
+      "isomeric_smiles": "C1=CC=C(C=C1)C2=C(/C(=C\\3/C4=CC=CC=C4OC3=O)/OC2=O)O",
+      "name_key": "calycin",
+      "observed_connectivity_identities": [
+        "ik14:CGRCGRBHNKRILW",
+        "std2d:KHHDAVTUBGFTOU"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Calycin/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 54694371,
+      "pubchem_title": "Calycin",
+      "query_name": "Calycin",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "f67e7a326bff_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "NPUXQAACUNUHIX",
+      "connectivity_smiles": "CC1=CC(=O)C2=C(O1)C=C3C(=C2O)C(=CC(=O)C3=O)O",
+      "formula": "C14H8O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C14H8O6/c1-5-2-7(15)12-10(20-5)3-6-11(14(12)19)8(16)4-9(17)13(6)18/h2-4,16,19H,1H3",
+      "inchikey": "NPUXQAACUNUHIX-UHFFFAOYSA-N",
+      "isomeric_smiles": "CC1=CC(=O)C2=C(O1)C=C3C(=C2O)C(=CC(=O)C3=O)O",
+      "name_key": "canarione",
+      "observed_connectivity_identities": [
+        "ik14:NPUXQAACUNUHIX",
+        "std2d:YGGZRFGMVXIZFR"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Canarione/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 53483342,
+      "pubchem_title": "5,8-Dihydroxy-2-methyl-4H-naphtho[2,3-b]pyran-4,6,9-trione",
+      "query_name": "Canarione",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "f67e7a326bff_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "NKDFYOWSKOHCCO",
+      "connectivity_smiles": "CC12CCC3C(=CC(=O)C4C3(CC(C(C4)O)O)C)C1(CCC2C(C)(C(CCC(C)(C)O)O)O)O",
+      "formula": "C27H44O7",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C27H44O7/c1-23(2,32)9-8-22(31)26(5,33)21-7-11-27(34)16-12-18(28)17-13-19(29)20(30)14-24(17,3)15(16)6-10-25(21,27)4/h12,15,17,19-22,29-34H,6-11,13-14H2,1-5H3/t15-,17-,19+,20-,21-,22+,24+,25+,26+,27+/m0/s1",
+      "inchikey": "NKDFYOWSKOHCCO-YPVLXUMRSA-N",
+      "isomeric_smiles": "C[C@]12CC[C@H]3C(=CC(=O)[C@H]4[C@@]3(C[C@@H]([C@@H](C4)O)O)C)[C@@]1(CC[C@@H]2[C@](C)([C@@H](CCC(C)(C)O)O)O)O",
+      "name_key": "crustecdysone",
+      "observed_connectivity_identities": [
+        "ik14:NKDFYOWSKOHCCO",
+        "std2d:LAFYUFZYMDYGLR"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/CRUSTECDYSONE/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5459840,
+      "pubchem_title": "20-Hydroxyecdysone",
+      "query_name": "CRUSTECDYSONE",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "b19a5350df59_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "VFLDPWHFBUODDF",
+      "connectivity_smiles": "COC1=C(C=CC(=C1)C=CC(=O)CC(=O)C=CC2=CC(=C(C=C2)O)OC)O",
+      "formula": "C21H20O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C21H20O6/c1-26-20-11-14(5-9-18(20)24)3-7-16(22)13-17(23)8-4-15-6-10-19(25)21(12-15)27-2/h3-12,24-25H,13H2,1-2H3/b7-3+,8-4+",
+      "inchikey": "VFLDPWHFBUODDF-FCXRPNKRSA-N",
+      "isomeric_smiles": "COC1=C(C=CC(=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC(=C(C=C2)O)OC)O",
+      "name_key": "curcumin",
+      "observed_connectivity_identities": [
+        "ik14:ZIUSSTSXXLLKKK",
+        "std2d:VFLDPWHFBUODDF"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Curcumin/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 969516,
+      "pubchem_title": "Curcumin",
+      "query_name": "Curcumin",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "3261633e5247_results.json",
+        "5e6379a10c70_results.json",
+        "9094d4772673_results.json",
+        "c5ed267b4224_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "ZVMJXSJCBLRAPD",
+      "connectivity_smiles": "CC1=COC2=C1C(=O)C(C(C2)(C)C=C)C(=C)C",
+      "formula": "C15H18O2",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H18O2/c1-6-15(5)7-11-12(10(4)8-17-11)14(16)13(15)9(2)3/h6,8,13H,1-2,7H2,3-5H3/t13-,15-/m0/s1",
+      "inchikey": "ZVMJXSJCBLRAPD-ZFWWWQNUSA-N",
+      "isomeric_smiles": "CC1=COC2=C1C(=O)[C@@H]([C@@](C2)(C)C=C)C(=C)C",
+      "name_key": "curzerenone",
+      "observed_connectivity_identities": [
+        "ik14:ZVMJXSJCBLRAPD",
+        "std2d:VWWCDVHRHSFKKK"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Curzerenone/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 3081930,
+      "pubchem_title": "Curzerenone",
+      "query_name": "Curzerenone",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "69c05aeca7c9_results.json",
+        "823255093254_results.json",
+        "823255093254_v11_flagship.json",
+        "9c56ff565900_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "PGRHXDWITVMQBC",
+      "connectivity_smiles": "CC1=CC(=O)C(C(=O)O1)C(=O)C",
+      "formula": "C8H8O4",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C8H8O4/c1-4-3-6(10)7(5(2)9)8(11)12-4/h3,7H,1-2H3",
+      "inchikey": "PGRHXDWITVMQBC-UHFFFAOYSA-N",
+      "isomeric_smiles": "CC1=CC(=O)C(C(=O)O1)C(=O)C",
+      "name_key": "dehydroacetic acid",
+      "observed_connectivity_identities": [
+        "ik14:PGRHXDWITVMQBC",
+        "std2d:PKLPQOJFHFGVBS"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/DEHYDROACETIC%20ACID/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 122903,
+      "pubchem_title": "Dehydroacetic acid",
+      "query_name": "DEHYDROACETIC ACID",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "5849781f5454_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "HJTVQHVGMGKONQ",
+      "connectivity_smiles": "COC1=C(C=CC(=C1)C=CC(=O)CC(=O)C=CC2=CC=C(C=C2)O)O",
+      "formula": "C20H18O5",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C20H18O5/c1-25-20-12-15(6-11-19(20)24)5-10-18(23)13-17(22)9-4-14-2-7-16(21)8-3-14/h2-12,21,24H,13H2,1H3/b9-4+,10-5+",
+      "inchikey": "HJTVQHVGMGKONQ-LUZURFALSA-N",
+      "isomeric_smiles": "COC1=C(C=CC(=C1)/C=C/C(=O)CC(=O)/C=C/C2=CC=C(C=C2)O)O",
+      "name_key": "demethoxycurcumin",
+      "observed_connectivity_identities": [
+        "ik14:UEPVWRDHSPMIAZ",
+        "std2d:HJTVQHVGMGKONQ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Demethoxycurcumin/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5469424,
+      "pubchem_title": "Demethoxycurcumin",
+      "query_name": "Demethoxycurcumin",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "5e6379a10c70_results.json",
+        "d486ede3e8d8_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "VSJCDPYIMBSOKN",
+      "connectivity_smiles": "C1=CC2=C(C=C1O)OC(C(C2=O)O)C3=CC(=C(C(=C3)O)O)O",
+      "formula": "C15H12O7",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H12O7/c16-7-1-2-8-11(5-7)22-15(14(21)12(8)19)6-3-9(17)13(20)10(18)4-6/h1-5,14-18,20-21H",
+      "inchikey": "VSJCDPYIMBSOKN-UHFFFAOYSA-N",
+      "isomeric_smiles": "C1=CC2=C(C=C1O)OC(C(C2=O)O)C3=CC(=C(C(=C3)O)O)O",
+      "name_key": "dihydrorobinetin",
+      "observed_connectivity_identities": [
+        "ik14:VSJCDPYIMBSOKN",
+        "std2d:IBRNBCIGVDAWHZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Dihydrorobinetin/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 20399,
+      "pubchem_title": "Dihydrorobinetin",
+      "query_name": "Dihydrorobinetin",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "178afb91b97a_results.json",
+        "4bbd348c85c2_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "LZFZMUMEGBBDTC",
+      "connectivity_smiles": "CC(C(=O)N1CCCC1C(=O)O)NC(CCC2=CC=CC=C2)C(=O)O",
+      "formula": "C18H24N2O5",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C18H24N2O5/c1-12(16(21)20-11-5-8-15(20)18(24)25)19-14(17(22)23)10-9-13-6-3-2-4-7-13/h2-4,6-7,12,14-15,19H,5,8-11H2,1H3,(H,22,23)(H,24,25)/t12-,14-,15-/m0/s1",
+      "inchikey": "LZFZMUMEGBBDTC-QEJZJMRPSA-N",
+      "isomeric_smiles": "C[C@@H](C(=O)N1CCC[C@H]1C(=O)O)N[C@@H](CCC2=CC=CC=C2)C(=O)O",
+      "name_key": "enalaprilat",
+      "observed_connectivity_identities": [
+        "std2d:LZFZMUMEGBBDTC",
+        "std2d:VPHZAKHKNGOIBF"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/ENALAPRILAT/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5462501,
+      "pubchem_title": "Enalaprilat",
+      "query_name": "ENALAPRILAT",
+      "source_artifacts": [
+        "mix33-pos1_v11_flagship.json",
+        "mix33-pos2_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "MPDGHEJMBKOTSU",
+      "connectivity_smiles": "CC1(C2CCC3(C(C2(CCC1O)C)C(=O)C=C4C3(CCC5(C4CC(CC5)(C)C(=O)O)C)C)C)C",
+      "formula": "C30H46O4",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C30H46O4/c1-25(2)21-8-11-30(7)23(28(21,5)10-9-22(25)32)20(31)16-18-19-17-27(4,24(33)34)13-12-26(19,3)14-15-29(18,30)6/h16,19,21-23,32H,8-15,17H2,1-7H3,(H,33,34)/t19-,21-,22-,23+,26+,27-,28-,29+,30+/m0/s1",
+      "inchikey": "MPDGHEJMBKOTSU-YKLVYJNSSA-N",
+      "isomeric_smiles": "C[C@]12CC[C@](C[C@H]1C3=CC(=O)[C@@H]4[C@]5(CC[C@@H](C([C@@H]5CC[C@]4([C@@]3(CC2)C)C)(C)C)O)C)(C)C(=O)O",
+      "name_key": "enoxolone",
+      "observed_connectivity_identities": [
+        "ik14:MPDGHEJMBKOTSU",
+        "std2d:YLHIVIHHVKLKEI"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Enoxolone/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 10114,
+      "pubchem_title": "Glycyrrhetinic Acid",
+      "query_name": "Enoxolone",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4615340e3463_results.json",
+        "5849781f5454_results.json",
+        "69c05aeca7c9_results.json",
+        "9c56ff565900_results.json",
+        "f67e7a326bff_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "JUKPWJGBANNWMW",
+      "connectivity_smiles": "CC12CCC(=O)C=C1CC(C3C24C(O4)CC5(C3CCC56CCC(=O)O6)C)C(=O)OC",
+      "formula": "C24H30O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C24H30O6/c1-21-7-4-14(25)10-13(21)11-15(20(27)28-3)19-16-5-8-23(9-6-18(26)30-23)22(16,2)12-17-24(19,21)29-17/h10,15-17,19H,4-9,11-12H2,1-3H3/t15-,16+,17-,19+,21+,22+,23-,24-/m1/s1",
+      "inchikey": "JUKPWJGBANNWMW-VWBFHTRKSA-N",
+      "isomeric_smiles": "C[C@]12CCC(=O)C=C1C[C@H]([C@@H]3[C@]24[C@H](O4)C[C@]5([C@H]3CC[C@@]56CCC(=O)O6)C)C(=O)OC",
+      "name_key": "eplerenone",
+      "observed_connectivity_identities": [
+        "ik14:JUKPWJGBANNWMW",
+        "std2d:FGDFBDMCHJUKLV"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Eplerenone/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 443872,
+      "pubchem_title": "Eplerenone",
+      "query_name": "Eplerenone",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "0a94c5cd31ed_results.json",
+        "13507b31f9d7_results.json",
+        "1ada992c1678_results.json",
+        "1b995641acc3_results.json",
+        "1b995641acc3_v11_flagship.json",
+        "212ec17d3ad4_results.json",
+        "212ec17d3ad4_v11_flagship.json",
+        "265b3a1d53d4_results.json",
+        "2945b74276a5_results.json",
+        "2c74bc5a0342_results.json",
+        "30f8acb093cd_results.json",
+        "4e35c81db8d9_results.json",
+        "5340b6711eea_results.json",
+        "5849781f5454_results.json",
+        "69c05aeca7c9_results.json",
+        "827449094e7f_results.json",
+        "884c817abf80_results.json",
+        "984700d0892f_results.json",
+        "98b915c0cf2b_results.json",
+        "9c56ff565900_results.json",
+        "9c56ff565900_v11_flagship.json",
+        "a0d1800d95e3_results.json",
+        "a9edb2db07de_results.json",
+        "af344590d070_results.json",
+        "b19a5350df59_results.json",
+        "cbc8ae74f8c7_results.json",
+        "ec973f1c42e3_results.json",
+        "f7ec234feab9_results.json",
+        "fb9d02bd9a6e_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "OXZGFGFICRZIFY",
+      "connectivity_smiles": "CC1C(C2C(O2)C3=CC(=O)C(CC13C)C(=C)C)O",
+      "formula": "C15H20O3",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H20O3/c1-7(2)9-6-15(4)8(3)12(17)14-13(18-14)10(15)5-11(9)16/h5,8-9,12-14,17H,1,6H2,2-4H3/t8-,9-,12+,13-,14+,15+/m0/s1",
+      "inchikey": "OXZGFGFICRZIFY-DURCKFPESA-N",
+      "isomeric_smiles": "C[C@H]1[C@H]([C@@H]2[C@@H](O2)C3=CC(=O)[C@@H](C[C@]13C)C(=C)C)O",
+      "name_key": "eremofortin b",
+      "observed_connectivity_identities": [
+        "ik14:OXZGFGFICRZIFY",
+        "std2d:HVLSFHWTAQKQMC"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Eremofortin%20B/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 101316756,
+      "pubchem_title": "Eremofortin B",
+      "query_name": "Eremofortin B",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "69c05aeca7c9_results.json",
+        "823255093254_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "LKDRXBCSQODPBY",
+      "connectivity_smiles": "C1C(C(C(C(O1)(CO)O)O)O)O",
+      "formula": "C6H12O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C6H12O6/c7-2-6(11)5(10)4(9)3(8)1-12-6/h3-5,7-11H,1-2H2/t3-,4-,5+,6?/m1/s1",
+      "inchikey": "LKDRXBCSQODPBY-VRPWFDPXSA-N",
+      "isomeric_smiles": "C1[C@H]([C@H]([C@@H](C(O1)(CO)O)O)O)O",
+      "name_key": "fructose",
+      "observed_connectivity_identities": [
+        "ik14:BJHIKXHVCXFQLS",
+        "std2d:DWJZKGYQNOQQEZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Fructose/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 2723872,
+      "pubchem_title": "D-Fructose",
+      "query_name": "Fructose",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4615340e3463_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "MYDJDVOVZVSVIE",
+      "connectivity_smiles": "CC1C(C2=C(O1)C3=C4C(=C2O)C(=O)C(=O)OC4=C(C=C3C)O)(C)C",
+      "formula": "C18H16O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C18H16O6/c1-6-5-8(19)15-10-9(6)16-12(18(3,4)7(2)23-16)13(20)11(10)14(21)17(22)24-15/h5,7,19-20H,1-4H3/t7-/m0/s1",
+      "inchikey": "MYDJDVOVZVSVIE-ZETCQYMHSA-N",
+      "isomeric_smiles": "C[C@H]1C(C2=C(O1)C3=C4C(=C2O)C(=O)C(=O)OC4=C(C=C3C)O)(C)C",
+      "name_key": "furo[2',3':5,6]napho[1,8-bc]pyran-5,6-dione,8,9-dihydro-3,7-dihydroxy-1,8,8,9-tetramethyl-,(9s)-",
+      "observed_connectivity_identities": [
+        "ik14:MYDJDVOVZVSVIE",
+        "std2d:QCBYPZMBCRALGZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/furo%5B2%27%2C3%27%3A5%2C6%5Dnapho%5B1%2C8-BC%5Dpyran-5%2C6-dione%2C8%2C9-dihydro-3%2C7-dihydroxy-1%2C8%2C8%2C9-tetramethyl-%2C%289S%29-/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 13786694,
+      "pubchem_title": "Scleroderolide",
+      "query_name": "furo[2',3':5,6]napho[1,8-BC]pyran-5,6-dione,8,9-dihydro-3,7-dihydroxy-1,8,8,9-tetramethyl-,(9S)-",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "9c56ff565900_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "PRUKRWUTUBERIO",
+      "connectivity_smiles": "CC12CC(C(C1O)O)(OC2(COC(=O)C3=C(C(=C(C=C3)O)O)O)OC45CC6=COC(=C64)OC5)COC(=O)C7CC(C(C(=C7)O)O)O",
+      "formula": "C30H32O16",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C30H32O16/c1-27-8-29(23(38)22(27)37,10-42-24(39)12-4-16(32)20(35)17(33)5-12)46-30(27,45-28-6-13-7-41-26(18(13)28)44-9-28)11-43-25(40)14-2-3-15(31)21(36)19(14)34/h2-4,7,12,17,20,22-23,31-38H,5-6,8-11H2,1H3/t12?,17?,20?,22-,23-,27?,28-,29?,30+/m0/s1",
+      "inchikey": "PRUKRWUTUBERIO-IFPUPTAISA-N",
+      "isomeric_smiles": "CC12CC([C@H]([C@@H]1O)O)(O[C@@]2(COC(=O)C3=C(C(=C(C=C3)O)O)O)O[C@]45CC6=COC(=C64)OC5)COC(=O)C7CC(C(C(=C7)O)O)O",
+      "name_key": "galloyloxypaeoniflorin",
+      "observed_connectivity_identities": [
+        "ik14:PRUKRWUTUBERIO",
+        "std2d:ZGMUFLUASKDOGW"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Galloyloxypaeoniflorin/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 3036133,
+      "pubchem_title": "Galloyloxypaeoniflorin",
+      "query_name": "Galloyloxypaeoniflorin",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "6c28918ae345_results.json",
+        "6c28918ae345_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "CAULGCQHVOVVRN",
+      "connectivity_smiles": "CC1=CCC(=C(C)C)C(=O)CC(=CCC1)C",
+      "formula": "C15H22O",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H22O/c1-11(2)14-9-8-12(3)6-5-7-13(4)10-15(14)16/h7-8H,5-6,9-10H2,1-4H3/b12-8+,13-7+",
+      "inchikey": "CAULGCQHVOVVRN-SWZPTJTJSA-N",
+      "isomeric_smiles": "C/C/1=C\\CC(=C(C)C)C(=O)C/C(=C/CC1)/C",
+      "name_key": "germacrone",
+      "observed_connectivity_identities": [
+        "ik14:CAULGCQHVOVVRN",
+        "std2d:NOWZBRLFRHWZOY"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Germacrone/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 6436348,
+      "pubchem_title": "Germacrone",
+      "query_name": "Germacrone",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "1ada992c1678_results.json",
+        "1ada992c1678_v11_flagship.json",
+        "69c05aeca7c9_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "LPLVUJXQOOQHMX",
+      "connectivity_smiles": "CC1(C2CCC3(C(C2(CCC1OC4C(C(C(C(O4)C(=O)O)O)O)OC5C(C(C(C(O5)C(=O)O)O)O)O)C)C(=O)C=C6C3(CCC7(C6CC(CC7)(C)C(=O)O)C)C)C)C",
+      "formula": "C42H62O16",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C42H62O16/c1-37(2)21-8-11-42(7)31(20(43)16-18-19-17-39(4,36(53)54)13-12-38(19,3)14-15-41(18,42)6)40(21,5)10-9-22(37)55-35-30(26(47)25(46)29(57-35)33(51)52)58-34-27(48)23(44)24(45)28(56-34)32(49)50/h16,19,21-31,34-35,44-48H,8-15,17H2,1-7H3,(H,49,50)(H,51,52)(H,53,54)/t19-,21-,22-,23-,24-,25-,26-,27+,28-,29-,30+,31+,34-,35-,38+,39-,40-,41+,42+/m0/s1",
+      "inchikey": "LPLVUJXQOOQHMX-QWBHMCJMSA-N",
+      "isomeric_smiles": "C[C@]12CC[C@](C[C@H]1C3=CC(=O)[C@@H]4[C@]5(CC[C@@H](C([C@@H]5CC[C@]4([C@@]3(CC2)C)C)(C)C)O[C@@H]6[C@@H]([C@H]([C@@H]([C@H](O6)C(=O)O)O)O)O[C@H]7[C@@H]([C@H]([C@@H]([C@H](O7)C(=O)O)O)O)O)C)(C)C(=O)O",
+      "name_key": "glycyrrhizic acid",
+      "observed_connectivity_identities": [
+        "std2d:LPLVUJXQOOQHMX",
+        "std2d:QCQGNTXXPCJRFZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Glycyrrhizic%20acid/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 14982,
+      "pubchem_title": "Glycyrrhizin",
+      "query_name": "Glycyrrhizic acid",
+      "source_artifacts": [
+        "mix33-neg1_v11_flagship.json",
+        "mix33-neg2_v11_flagship.json",
+        "mix33-pos1_v11_flagship.json",
+        "mix33-pos2_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "HNNSUZPWERIYIL",
+      "connectivity_smiles": "C1C2=CC(=C(C=C2C3=C4C=CC(=O)C(=C4OCC31O)O)O)O",
+      "formula": "C16H12O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C16H12O6/c17-10-2-1-8-13-9-4-12(19)11(18)3-7(9)5-16(13,21)6-22-15(8)14(10)20/h1-4,18-21H,5-6H2",
+      "inchikey": "HNNSUZPWERIYIL-UHFFFAOYSA-N",
+      "isomeric_smiles": "C1C2=CC(=C(C=C2C3=C4C=CC(=O)C(=C4OCC31O)O)O)O",
+      "name_key": "hematein",
+      "observed_connectivity_identities": [
+        "ik14:HLUCICHZHWJHLL",
+        "std2d:BEBLLQPTMVOKAX"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/HEMATEIN/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 135403802,
+      "pubchem_title": "Hematein",
+      "query_name": "HEMATEIN",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "7e2503d0d957_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "YOVKRULUNJAFON",
+      "connectivity_smiles": "COC(=C(C1=CC=CC=C1)O)C(=O)O",
+      "formula": "C10H10O4",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C10H10O4/c1-14-9(10(12)13)8(11)7-5-3-2-4-6-7/h2-6,11H,1H3,(H,12,13)",
+      "inchikey": "YOVKRULUNJAFON-UHFFFAOYSA-N",
+      "isomeric_smiles": "COC(=C(C1=CC=CC=C1)O)C(=O)O",
+      "name_key": "hydroxy-methoxy cinnamic acid",
+      "observed_connectivity_identities": [
+        "ik14:YOVKRULUNJAFON",
+        "std2d:QQVFCCXOZCQFAH"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/hydroxy-methoxy%20cinnamic%20acid/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 129689711,
+      "pubchem_title": "Hydroxy-methoxy cinnamic acid",
+      "query_name": "hydroxy-methoxy cinnamic acid",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "3788afc82028_results.json",
+        "9f00bb1fe18f_results.json",
+        "b10daf42e2c3_results.json",
+        "cc2ad0680541_results.json",
+        "f105097d1c8f_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "IAVUBSCVWHLRGE",
+      "connectivity_smiles": "C1=CC(=CC=C1C=CC(=C2C(=C(C(=O)C(C2=O)(C3C(C(C(C(O3)CO)O)O)O)O)C4C(C(C(C(O4)CO)O)O)O)O)O)O",
+      "formula": "C27H32O16",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C27H32O16/c28-7-12-16(32)19(35)21(37)23(42-12)15-18(34)14(11(31)6-3-9-1-4-10(30)5-2-9)24(39)27(41,25(15)40)26-22(38)20(36)17(33)13(8-29)43-26/h1-6,12-13,16-17,19-23,26,28-38,41H,7-8H2/b6-3+,14-11-",
+      "inchikey": "IAVUBSCVWHLRGE-RFTOOIFDSA-N",
+      "isomeric_smiles": "C1=CC(=CC=C1/C=C/C(=C/2\\C(=C(C(=O)C(C2=O)(C3C(C(C(C(O3)CO)O)O)O)O)C4C(C(C(C(O4)CO)O)O)O)O)/O)O",
+      "name_key": "hydroxysaffloryellow a",
+      "observed_connectivity_identities": [
+        "ik14:IAVUBSCVWHLRGE",
+        "std2d:UXKUFSUUTWAEDT"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Hydroxysaffloryellow%20A/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 117825877,
+      "pubchem_title": "Hydroxysaffloryellow A",
+      "query_name": "Hydroxysaffloryellow A",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "0a94c5cd31ed_results.json",
+        "0a94c5cd31ed_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "GRIDHCOCFJSWSY",
+      "connectivity_smiles": "CC1=C(C(=C(C2=C1OC3=CC(=C(C(=O)C32C)C(=O)C)O)O)C(=O)C)O",
+      "formula": "C18H16O7",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C18H16O7/c1-6-14(22)12(8(3)20)15(23)13-16(6)25-10-5-9(21)11(7(2)19)17(24)18(10,13)4/h5,21-23H,1-4H3",
+      "inchikey": "GRIDHCOCFJSWSY-UHFFFAOYSA-N",
+      "isomeric_smiles": "CC1=C(C(=C(C2=C1OC3=CC(=C(C(=O)C32C)C(=O)C)O)O)C(=O)C)O",
+      "name_key": "isousnic acid",
+      "observed_connectivity_identities": [
+        "ik14:GRIDHCOCFJSWSY",
+        "std2d:SBQBXSUPJSMJNU"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Isousnic%20acid/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 621371,
+      "pubchem_title": "Isousnic acid",
+      "query_name": "Isousnic acid",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "0e81d86272c6_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "BJHIKXHVCXFQLS",
+      "connectivity_smiles": "C(C(C(C(C(=O)CO)O)O)O)O",
+      "formula": "C6H12O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C6H12O6/c7-1-3(9)5(11)6(12)4(10)2-8/h3,5-9,11-12H,1-2H2/t3-,5+,6+/m0/s1",
+      "inchikey": "BJHIKXHVCXFQLS-OTWZMJIISA-N",
+      "isomeric_smiles": "C([C@@H]([C@H]([C@@H](C(=O)CO)O)O)O)O",
+      "name_key": "l-(-)-sorbose",
+      "observed_connectivity_identities": [
+        "ik14:BJHIKXHVCXFQLS",
+        "std2d:DWJZKGYQNOQQEZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/L-%28-%29-Sorbose/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 6904,
+      "pubchem_title": "L-(-)-Sorbose",
+      "query_name": "L-(-)-Sorbose",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4615340e3463_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "WQZGKKKJIJFFOK",
+      "connectivity_smiles": "C(C1C(C(C(C(O1)O)O)O)O)O",
+      "formula": "C6H12O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C6H12O6/c7-1-2-3(8)4(9)5(10)6(11)12-2/h2-11H,1H2/t2-,3-,4+,5-,6?/m0/s1",
+      "inchikey": "WQZGKKKJIJFFOK-ZZWDRFIYSA-N",
+      "isomeric_smiles": "C([C@H]1[C@@H]([C@H]([C@@H](C(O1)O)O)O)O)O",
+      "name_key": "l-glucose",
+      "observed_connectivity_identities": [
+        "ik14:GZCGUPFRVQAUEE",
+        "std2d:DWJZKGYQNOQQEZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/L-Glucose/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 2724488,
+      "pubchem_title": "L-glucose",
+      "query_name": "L-Glucose",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4615340e3463_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "GZCGUPFRVQAUEE",
+      "connectivity_smiles": "C(C(C(C(C(C=O)O)O)O)O)O",
+      "formula": "C6H12O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C6H12O6/c7-1-3(9)5(11)6(12)4(10)2-8/h1,3-6,8-12H,2H2/t3-,4+,5-,6-/m1/s1",
+      "inchikey": "GZCGUPFRVQAUEE-JGWLITMVSA-N",
+      "isomeric_smiles": "C([C@@H]([C@H]([C@@H]([C@@H](C=O)O)O)O)O)O",
+      "name_key": "l-gulose",
+      "observed_connectivity_identities": [
+        "ik14:GZCGUPFRVQAUEE",
+        "std2d:DWJZKGYQNOQQEZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/L-Gulose/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 80127,
+      "pubchem_title": "L-Gulose",
+      "query_name": "L-Gulose",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4615340e3463_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "WBQVRPYEEYUEBQ",
+      "connectivity_smiles": "CC12CCC(CC1C3=CC(=O)C4C5(CCC(C(C5CCC4(C3(CC2)C)C)(C)CO)OC6C(C(C(C(O6)C(=O)O)O)O)OC7C(C(C(C(O7)C(=O)O)O)O)O)C)(C)C(=O)O",
+      "formula": "C42H62O17",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C42H62O17/c1-37-11-12-38(2,36(54)55)16-19(37)18-15-20(44)31-39(3)9-8-22(40(4,17-43)21(39)7-10-42(31,6)41(18,5)14-13-37)56-35-30(26(48)25(47)29(58-35)33(52)53)59-34-27(49)23(45)24(46)28(57-34)32(50)51/h15,19,21-31,34-35,43,45-49H,7-14,16-17H2,1-6H3,(H,50,51)(H,52,53)(H,54,55)/t19-,21+,22-,23-,24-,25-,26-,27+,28-,29-,30+,31+,34-,35+,37+,38-,39-,40+,41+,42+/m0/s1",
+      "inchikey": "WBQVRPYEEYUEBQ-OJVDLISWSA-N",
+      "isomeric_smiles": "C[C@]12CC[C@](C[C@H]1C3=CC(=O)[C@@H]4[C@]5(CC[C@@H]([C@]([C@@H]5CC[C@]4([C@@]3(CC2)C)C)(C)CO)O[C@H]6[C@@H]([C@H]([C@@H]([C@H](O6)C(=O)O)O)O)O[C@H]7[C@@H]([C@H]([C@@H]([C@H](O7)C(=O)O)O)O)O)C)(C)C(=O)O",
+      "name_key": "licoricesaponin g2",
+      "observed_connectivity_identities": [
+        "ik14:WBQVRPYEEYUEBQ",
+        "std2d:WIGUUKSQPAOWFS"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Licoricesaponin%20G2/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 14891565,
+      "pubchem_title": "Licoricesaponin G2",
+      "query_name": "Licoricesaponin G2",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4615340e3463_results.json",
+        "4e887e7196a7_results.json",
+        "5849781f5454_results.json",
+        "9c56ff565900_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "IQVQXVFMNOFTMU",
+      "connectivity_smiles": "CCCC=C1C2=C(C=CCC2)C(=O)O1",
+      "formula": "C12H14O2",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C12H14O2/c1-2-3-8-11-9-6-4-5-7-10(9)12(13)14-11/h5,7-8H,2-4,6H2,1H3/b11-8-",
+      "inchikey": "IQVQXVFMNOFTMU-FLIBITNWSA-N",
+      "isomeric_smiles": "CCC/C=C\\1/C2=C(C=CCC2)C(=O)O1",
+      "name_key": "ligustilide",
+      "observed_connectivity_identities": [
+        "ik14:IQVQXVFMNOFTMU",
+        "std2d:KRSPMDOGSDBDBB"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Ligustilide/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5319022,
+      "pubchem_title": "Ligustilide",
+      "query_name": "Ligustilide",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "2c74bc5a0342_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "RXVWSYJTUUKTEA",
+      "connectivity_smiles": "C(C1C(C(C(C(O1)OC2C(OC(C(C2O)O)OC(C(CO)O)C(C(C=O)O)O)CO)O)O)O)O",
+      "formula": "C18H32O16",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C18H32O16/c19-1-5(23)9(25)15(6(24)2-20)33-18-14(30)12(28)16(8(4-22)32-18)34-17-13(29)11(27)10(26)7(3-21)31-17/h1,5-18,20-30H,2-4H2/t5-,6+,7+,8+,9+,10+,11-,12+,13+,14+,15+,16+,17+,18+/m0/s1",
+      "inchikey": "RXVWSYJTUUKTEA-CGQAXDJHSA-N",
+      "isomeric_smiles": "C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)O[C@@H]2[C@H](O[C@@H]([C@@H]([C@H]2O)O)O[C@H]([C@@H](CO)O)[C@@H]([C@H](C=O)O)O)CO)O)O)O)O",
+      "name_key": "maltotriose",
+      "observed_connectivity_identities": [
+        "ik14:RXVWSYJTUUKTEA",
+        "std2d:MEPFYDHQKHJYRE"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Maltotriose/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 92146,
+      "pubchem_title": "Maltotriose",
+      "query_name": "Maltotriose",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4615340e3463_results.json",
+        "4615340e3463_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "FZWBNHMXJMCXLU",
+      "connectivity_smiles": "C(C1C(C(C(C(O1)OCC2C(C(C(C(O2)OCC(C(C(C(C=O)O)O)O)O)O)O)O)O)O)O)O",
+      "formula": "C18H32O16",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C18H32O16/c19-1-5(21)9(23)10(24)6(22)3-31-17-16(30)14(28)12(26)8(34-17)4-32-18-15(29)13(27)11(25)7(2-20)33-18/h1,5-18,20-30H,2-4H2/t5-,6+,7+,8+,9+,10+,11-,12-,13-,14-,15+,16+,17-,18-/m0/s1",
+      "inchikey": "FZWBNHMXJMCXLU-YRBKNLIBSA-N",
+      "isomeric_smiles": "C([C@@H]1[C@@H]([C@@H]([C@H]([C@H](O1)OC[C@@H]2[C@@H]([C@@H]([C@H]([C@H](O2)OC[C@H]([C@H]([C@@H]([C@H](C=O)O)O)O)O)O)O)O)O)O)O)O",
+      "name_key": "manninotriose",
+      "observed_connectivity_identities": [
+        "ik14:FZWBNHMXJMCXLU",
+        "std2d:BYMPKULJRANZCQ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Manninotriose/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5461026,
+      "pubchem_title": "Manninotriose",
+      "query_name": "Manninotriose",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4615340e3463_results.json",
+        "4615340e3463_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "FRQMUZJSZHZSGN",
+      "connectivity_smiles": "CC1CC2C(CCC3(C2CCC3(C(=O)C)O)C)C4(C1=CC(=O)CC4)C",
+      "formula": "C22H32O3",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C22H32O3/c1-13-11-16-17(20(3)8-5-15(24)12-19(13)20)6-9-21(4)18(16)7-10-22(21,25)14(2)23/h12-13,16-18,25H,5-11H2,1-4H3/t13-,16+,17-,18-,20+,21-,22-/m0/s1",
+      "inchikey": "FRQMUZJSZHZSGN-HBNHAYAOSA-N",
+      "isomeric_smiles": "C[C@H]1C[C@@H]2[C@H](CC[C@]3([C@H]2CC[C@@]3(C(=O)C)O)C)[C@@]4(C1=CC(=O)CC4)C",
+      "name_key": "medroxyprogesterone",
+      "observed_connectivity_identities": [
+        "ik14:FRQMUZJSZHZSGN",
+        "std2d:QOVGIKUHSFCSIK"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Medroxyprogesterone/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 10631,
+      "pubchem_title": "Medroxyprogesterone",
+      "query_name": "Medroxyprogesterone",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4e1c84bae8f2_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "AYRXSINWFIIFAE",
+      "connectivity_smiles": "C(C1C(C(C(C(O1)OCC(C(C(C(C=O)O)O)O)O)O)O)O)O",
+      "formula": "C12H22O11",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C12H22O11/c13-1-4(15)7(17)8(18)5(16)3-22-12-11(21)10(20)9(19)6(2-14)23-12/h1,4-12,14-21H,2-3H2/t4-,5+,6+,7+,8+,9-,10-,11+,12-/m0/s1",
+      "inchikey": "AYRXSINWFIIFAE-GFRRCQKTSA-N",
+      "isomeric_smiles": "C([C@@H]1[C@@H]([C@@H]([C@H]([C@H](O1)OC[C@H]([C@H]([C@@H]([C@H](C=O)O)O)O)O)O)O)O)O",
+      "name_key": "melibiose, pure",
+      "observed_connectivity_identities": [
+        "ik14:AYRXSINWFIIFAE",
+        "std2d:ANPXUTLKCKWLGY"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Melibiose%2C%20pure/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5460027,
+      "pubchem_title": "(2R,3S,4R,5R)-2,3,4,5-Tetrahydroxy-6-(((2S,3R,4S,5R,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl)oxy)hexanal",
+      "query_name": "Melibiose, pure",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4e887e7196a7_results.json",
+        "4e887e7196a7_v11_flagship.json",
+        "f105097d1c8f_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "ARGKVCXINMKCAZ",
+      "connectivity_smiles": "CC1C(C(C(C(O1)OC2C(C(C(OC2OC3=CC(=C4C(=O)CC(OC4=C3)C5=CC(=C(C=C5)OC)O)O)CO)O)O)O)O)O",
+      "formula": "C28H34O15",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C28H34O15/c1-10-21(33)23(35)25(37)27(39-10)43-26-24(36)22(34)19(9-29)42-28(26)40-12-6-14(31)20-15(32)8-17(41-18(20)7-12)11-3-4-16(38-2)13(30)5-11/h3-7,10,17,19,21-31,33-37H,8-9H2,1-2H3/t10-,17-,19+,21-,22+,23+,24-,25+,26+,27-,28+/m0/s1",
+      "inchikey": "ARGKVCXINMKCAZ-UZRWAPQLSA-N",
+      "isomeric_smiles": "C[C@H]1[C@@H]([C@H]([C@H]([C@@H](O1)O[C@@H]2[C@H]([C@@H]([C@H](O[C@H]2OC3=CC(=C4C(=O)C[C@H](OC4=C3)C5=CC(=C(C=C5)OC)O)O)CO)O)O)O)O)O",
+      "name_key": "neohesperidin",
+      "observed_connectivity_identities": [
+        "std2d:AODBEDTXATXPNK",
+        "std2d:ARGKVCXINMKCAZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Neohesperidin/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 442439,
+      "pubchem_title": "Neohesperidin",
+      "query_name": "Neohesperidin",
+      "resolution_triggers": [
+        "same_name_formula_bound_to_multiple_connectivities"
+      ],
+      "source_artifacts": [
+        "18b19bef44b1_v11_flagship.json",
+        "40f9f3f538e2_v11_flagship.json",
+        "a95bb2aa77bb_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "WTOYNNBCKUYIKC",
+      "connectivity_smiles": "CC1CC(=O)C=C2C1(CC(CC2)C(=C)C)C",
+      "formula": "C15H22O",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H22O/c1-10(2)12-5-6-13-8-14(16)7-11(3)15(13,4)9-12/h8,11-12H,1,5-7,9H2,2-4H3/t11-,12-,15+/m1/s1",
+      "inchikey": "WTOYNNBCKUYIKC-JMSVASOKSA-N",
+      "isomeric_smiles": "C[C@@H]1CC(=O)C=C2[C@]1(C[C@@H](CC2)C(=C)C)C",
+      "name_key": "nootkatone",
+      "observed_connectivity_identities": [
+        "ik14:WTOYNNBCKUYIKC",
+        "std2d:ZCIAZFSKBUFPBI"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/NOOTKATONE/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 1268142,
+      "pubchem_title": "(+)-Nootkatone",
+      "query_name": "NOOTKATONE",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "1ada992c1678_results.json",
+        "69c05aeca7c9_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "ADIMAYPTOBDMTL",
+      "connectivity_smiles": "C1=CC=C(C=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)O",
+      "formula": "C15H11ClN2O2",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H11ClN2O2/c16-10-6-7-12-11(8-10)13(9-4-2-1-3-5-9)18-15(20)14(19)17-12/h1-8,15,20H,(H,17,19)",
+      "inchikey": "ADIMAYPTOBDMTL-UHFFFAOYSA-N",
+      "isomeric_smiles": "C1=CC=C(C=C1)C2=NC(C(=O)NC3=C2C=C(C=C3)Cl)O",
+      "name_key": "oxazepam",
+      "observed_connectivity_identities": [
+        "ik14:ADIMAYPTOBDMTL",
+        "std2d:AQKCJDFMDAPELP"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Oxazepam/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 4616,
+      "pubchem_title": "Oxazepam",
+      "query_name": "Oxazepam",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "430e44cebcb1_results.json",
+        "b71c3b687483_results.json",
+        "c7796b5fff98_results.json",
+        "c9b4c703ac31_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "ZHYQCBCBTQWPLC",
+      "connectivity_smiles": "COC1=C(C2=C(C=C1)C=C3C4=CC5=C(C=C4CCN3C2=O)OCO5)OC",
+      "formula": "C20H17NO5",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C20H17NO5/c1-23-15-4-3-12-7-14-13-9-17-16(25-10-26-17)8-11(13)5-6-21(14)20(22)18(12)19(15)24-2/h3-4,7-9H,5-6,10H2,1-2H3",
+      "inchikey": "ZHYQCBCBTQWPLC-UHFFFAOYSA-N",
+      "isomeric_smiles": "COC1=C(C2=C(C=C1)C=C3C4=CC5=C(C=C4CCN3C2=O)OCO5)OC",
+      "name_key": "oxyberberine",
+      "observed_connectivity_identities": [
+        "std2d:PJTYPIGQKDTERS",
+        "std2d:ZHYQCBCBTQWPLC"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Oxyberberine/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 11066,
+      "pubchem_title": "Oxyberberine",
+      "query_name": "Oxyberberine",
+      "source_artifacts": [
+        "mix33-pos1_v11_flagship.json",
+        "mix33-pos2_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "ZFHSKBJBODQVBX",
+      "connectivity_smiles": "CC1CCC(CC2=C(C(=O)CC12)C)C(=C)C(=O)O",
+      "formula": "C15H20O3",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H20O3/c1-8-4-5-11(9(2)15(17)18)6-13-10(3)14(16)7-12(8)13/h8,11-12H,2,4-7H2,1,3H3,(H,17,18)/t8-,11+,12-/m0/s1",
+      "inchikey": "ZFHSKBJBODQVBX-AXTRIDKLSA-N",
+      "isomeric_smiles": "C[C@H]1CC[C@H](CC2=C(C(=O)C[C@@H]12)C)C(=C)C(=O)O",
+      "name_key": "pechueloic acid",
+      "observed_connectivity_identities": [
+        "ik14:ZFHSKBJBODQVBX",
+        "std2d:ZCXYLTOTINNGDP"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Pechueloic%20Acid/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 24094149,
+      "pubchem_title": "Pechueloic Acid",
+      "query_name": "Pechueloic Acid",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "69c05aeca7c9_results.json",
+        "69c05aeca7c9_v11_flagship.json",
+        "823255093254_results.json",
+        "823255093254_v11_flagship.json",
+        "9c56ff565900_results.json",
+        "9c56ff565900_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "LLHVQDWTNVJRDD",
+      "connectivity_smiles": "COC1=C(C=CC(=C1)C2=C(C=C3C(=CC(=O)C=C3O2)O)OC4C(C(C(C(O4)CO)O)O)O)O",
+      "formula": "C22H22O11",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C22H22O11/c1-30-15-4-9(2-3-12(15)25)21-16(7-11-13(26)5-10(24)6-14(11)31-21)32-22-20(29)19(28)18(27)17(8-23)33-22/h2-7,17-20,22-23,25-29H,8H2,1H3",
+      "inchikey": "LLHVQDWTNVJRDD-UHFFFAOYSA-N",
+      "isomeric_smiles": "COC1=C(C=CC(=C1)C2=C(C=C3C(=CC(=O)C=C3O2)O)OC4C(C(C(C(O4)CO)O)O)O)O",
+      "name_key": "peonidin-3-o-beta-galactoside",
+      "observed_connectivity_identities": [
+        "std2d:LLHVQDWTNVJRDD",
+        "std2d:ZZWPMFROUHHAKY"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Peonidin-3-O-beta-galactoside/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 25202299,
+      "pubchem_title": "Peonidin-3-O-beta-galactoside",
+      "query_name": "Peonidin-3-O-beta-galactoside",
+      "resolution_triggers": [
+        "same_name_formula_bound_to_multiple_connectivities"
+      ],
+      "source_artifacts": [
+        "3788afc82028_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "AJFPOVBARCSOLH",
+      "connectivity_smiles": "CC1C(CCC2=CC(=O)C(CC12C)C(=C)C)O",
+      "formula": "C15H22O2",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H22O2/c1-9(2)12-8-15(4)10(3)13(16)6-5-11(15)7-14(12)17/h7,10,12-13,16H,1,5-6,8H2,2-4H3/t10-,12-,13+,15+/m0/s1",
+      "inchikey": "AJFPOVBARCSOLH-MUYACECFSA-N",
+      "isomeric_smiles": "C[C@H]1[C@@H](CCC2=CC(=O)[C@@H](C[C@]12C)C(=C)C)O",
+      "name_key": "petasol",
+      "observed_connectivity_identities": [
+        "ik14:AJFPOVBARCSOLH",
+        "std2d:TVDMUSYVWJLIDK"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Petasol/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5275907,
+      "pubchem_title": "Petasol",
+      "query_name": "Petasol",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "22ffc3311fbd_results.json",
+        "22ffc3311fbd_v11_flagship.json",
+        "69c05aeca7c9_results.json",
+        "69c05aeca7c9_v11_flagship.json",
+        "9c56ff565900_results.json",
+        "9c56ff565900_v11_flagship.json",
+        "dd84bcb1a06f_results.json",
+        "dd84bcb1a06f_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "SUYJZKRQHBQNCA",
+      "connectivity_smiles": "C1=CC=C(C=C1)C2C(C(=O)C3=C(C=C(C=C3O2)O)O)O",
+      "formula": "C15H12O5",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H12O5/c16-9-6-10(17)12-11(7-9)20-15(14(19)13(12)18)8-4-2-1-3-5-8/h1-7,14-17,19H/t14-,15+/m0/s1",
+      "inchikey": "SUYJZKRQHBQNCA-LSDHHAIUSA-N",
+      "isomeric_smiles": "C1=CC=C(C=C1)[C@@H]2[C@H](C(=O)C3=C(C=C(C=C3O2)O)O)O",
+      "name_key": "pinobanksin",
+      "observed_connectivity_identities": [
+        "ik14:SUYJZKRQHBQNCA",
+        "std2d:IJVBAVVYMVTACT"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Pinobanksin/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 73202,
+      "pubchem_title": "Pinobanksin",
+      "query_name": "Pinobanksin",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4e887e7196a7_results.json",
+        "4e887e7196a7_v11_flagship.json",
+        "5849781f5454_results.json",
+        "5849781f5454_v11_flagship.json",
+        "69c05aeca7c9_results.json",
+        "9c56ff565900_results.json",
+        "f105097d1c8f_results.json",
+        "f105097d1c8f_v11_flagship.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "OQWKEEOHDMUXEO",
+      "connectivity_smiles": "CCCCCC=CC(=O)CCC1=CC(=C(C=C1)O)OC",
+      "formula": "C17H24O3",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C17H24O3/c1-3-4-5-6-7-8-15(18)11-9-14-10-12-16(19)17(13-14)20-2/h7-8,10,12-13,19H,3-6,9,11H2,1-2H3/b8-7+",
+      "inchikey": "OQWKEEOHDMUXEO-BQYQJAHWSA-N",
+      "isomeric_smiles": "CCCCC/C=C/C(=O)CCC1=CC(=C(C=C1)O)OC",
+      "name_key": "shogaol",
+      "observed_connectivity_identities": [
+        "ik14:OQWKEEOHDMUXEO",
+        "std2d:LVCXAKWFQYYXLU"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/shogaol/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5281794,
+      "pubchem_title": "Shogaol",
+      "query_name": "shogaol",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "5849781f5454_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "DHDSCKPFZHKEJM",
+      "connectivity_smiles": "CC1=CC(=O)C2=C(OC=C3C2=C1C(=O)C(=C3OC)O)O",
+      "formula": "C14H10O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C14H10O6/c1-5-3-7(15)10-9-6(4-20-14(10)18)13(19-2)12(17)11(16)8(5)9/h3-4,17-18H,1-2H3",
+      "inchikey": "DHDSCKPFZHKEJM-UHFFFAOYSA-N",
+      "isomeric_smiles": "CC1=CC(=O)C2=C(OC=C3C2=C1C(=O)C(=C3OC)O)O",
+      "name_key": "simonyellin",
+      "observed_connectivity_identities": [
+        "ik14:GJSCVPZGPZIBMU",
+        "std2d:DHDSCKPFZHKEJM"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Simonyellin/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 138756224,
+      "pubchem_title": "Simonyellin",
+      "query_name": "Simonyellin",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "f67e7a326bff_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "CXQWRCVTCMQVQX",
+      "connectivity_smiles": "C1=CC(=C(C=C1C2C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O",
+      "formula": "C15H12O7",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H12O7/c16-7-4-10(19)12-11(5-7)22-15(14(21)13(12)20)6-1-2-8(17)9(18)3-6/h1-5,14-19,21H/t14-,15+/m0/s1",
+      "inchikey": "CXQWRCVTCMQVQX-LSDHHAIUSA-N",
+      "isomeric_smiles": "C1=CC(=C(C=C1[C@@H]2[C@H](C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O",
+      "name_key": "taxifolin",
+      "observed_connectivity_identities": [
+        "ik14:CXQWRCVTCMQVQX",
+        "std2d:BYVWXQRJRYELNP"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Taxifolin/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 439533,
+      "pubchem_title": "Taxifolin",
+      "query_name": "Taxifolin",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "178afb91b97a_results.json",
+        "4bbd348c85c2_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "LPLVUJXQOOQHMX",
+      "connectivity_smiles": "CC1(C2CCC3(C(C2(CCC1OC4C(C(C(C(O4)C(=O)O)O)O)OC5C(C(C(C(O5)C(=O)O)O)O)O)C)C(=O)C=C6C3(CCC7(C6CC(CC7)(C)C(=O)O)C)C)C)C",
+      "formula": "C42H62O16",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C42H62O16/c1-37(2)21-8-11-42(7)31(20(43)16-18-19-17-39(4,36(53)54)13-12-38(19,3)14-15-41(18,42)6)40(21,5)10-9-22(37)55-35-30(26(47)25(46)29(57-35)33(51)52)58-34-27(48)23(44)24(45)28(56-34)32(49)50/h16,19,21-31,34-35,44-48H,8-15,17H2,1-7H3,(H,49,50)(H,51,52)(H,53,54)/t19-,21-,22-,23-,24-,25-,26-,27+,28-,29-,30+,31+,34-,35+,38+,39-,40-,41+,42+/m0/s1",
+      "inchikey": "LPLVUJXQOOQHMX-MOGLOQIBSA-N",
+      "isomeric_smiles": "C[C@]12CC[C@](C[C@H]1C3=CC(=O)[C@@H]4[C@]5(CC[C@@H](C([C@@H]5CC[C@]4([C@@]3(CC2)C)C)(C)C)O[C@H]6[C@@H]([C@H]([C@@H]([C@H](O6)C(=O)O)O)O)O[C@H]7[C@@H]([C@H]([C@@H]([C@H](O7)C(=O)O)O)O)O)C)(C)C(=O)O",
+      "name_key": "uralsaponin a",
+      "observed_connectivity_identities": [
+        "ik14:LPLVUJXQOOQHMX",
+        "std2d:QCQGNTXXPCJRFZ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Uralsaponin%20A/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 128229,
+      "pubchem_title": "Uralsaponin A",
+      "query_name": "Uralsaponin A",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "4615340e3463_results.json",
+        "4e887e7196a7_results.json",
+        "5849781f5454_results.json",
+        "5849781f5454_v11_flagship.json",
+        "69c05aeca7c9_results.json",
+        "9c56ff565900_results.json",
+        "f105097d1c8f_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "PJVWKTKQMONHTI",
+      "connectivity_smiles": "CC(=O)CC(C1=CC=CC=C1)C2=C(C3=CC=CC=C3OC2=O)O",
+      "formula": "C19H16O4",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C19H16O4/c1-12(20)11-15(13-7-3-2-4-8-13)17-18(21)14-9-5-6-10-16(14)23-19(17)22/h2-10,15,21H,11H2,1H3",
+      "inchikey": "PJVWKTKQMONHTI-UHFFFAOYSA-N",
+      "isomeric_smiles": "CC(=O)CC(C1=CC=CC=C1)C2=C(C3=CC=CC=C3OC2=O)O",
+      "name_key": "warfarin",
+      "observed_connectivity_identities": [
+        "ik14:QTXVAVXCBMYBJW",
+        "std2d:PJVWKTKQMONHTI"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/WARFARIN/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 54678486,
+      "pubchem_title": "Warfarin",
+      "query_name": "WARFARIN",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "5e6379a10c70_results.json",
+        "d589a06a1461_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "GLLRIXZGBQOFLM",
+      "connectivity_smiles": "CC1=CC2=C(C(=C1)O)C(=O)C3=C(C2=O)C(=C(C=C3O)OC)O",
+      "formula": "C16H12O6",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C16H12O6/c1-6-3-7-11(8(17)4-6)16(21)12-9(18)5-10(22-2)15(20)13(12)14(7)19/h3-5,17-18,20H,1-2H3",
+      "inchikey": "GLLRIXZGBQOFLM-UHFFFAOYSA-N",
+      "isomeric_smiles": "CC1=CC2=C(C(=C1)O)C(=O)C3=C(C2=O)C(=C(C=C3O)OC)O",
+      "name_key": "xanthorin",
+      "observed_connectivity_identities": [
+        "ik14:GLLRIXZGBQOFLM",
+        "std2d:ROAHWVMKIWCCHH"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Xanthorin/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 12444971,
+      "pubchem_title": "1,4,5-Trihydroxy-2-methoxy-7-methyl-9,10-anthracenedione",
+      "query_name": "Xanthorin",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "7e2503d0d957_results.json"
+      ]
+    },
+    {
+      "connectivity_inchikey": "GIHNTRQPEMKFKO",
+      "connectivity_smiles": "CC1=CCC(C=CC(=O)C(=CCC1)C)(C)C",
+      "formula": "C15H22O",
+      "identity_source": "pubchem_exact_name_formula_rdkit_verified",
+      "inchi": "InChI=1S/C15H22O/c1-12-6-5-7-13(2)14(16)9-11-15(3,4)10-8-12/h7-9,11H,5-6,10H2,1-4H3/b11-9+,12-8+,13-7+",
+      "inchikey": "GIHNTRQPEMKFKO-SKTNYSRSSA-N",
+      "isomeric_smiles": "C/C/1=C\\CC(/C=C/C(=O)/C(=C/CC1)/C)(C)C",
+      "name_key": "zerumbone",
+      "observed_connectivity_identities": [
+        "ik14:GIHNTRQPEMKFKO",
+        "std2d:YDNJTOFCQOCRQJ"
+      ],
+      "property_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Zerumbone/property/Title,MolecularFormula,IsomericSMILES,ConnectivitySMILES,InChI,InChIKey/JSON",
+      "pubchem_cid": 5470187,
+      "pubchem_title": "Zerumbone",
+      "query_name": "Zerumbone",
+      "resolution_triggers": [
+        "reported_inchikey_disagrees_with_stored_structure"
+      ],
+      "source_artifacts": [
+        "1ada992c1678_results.json",
+        "69c05aeca7c9_results.json",
+        "69c05aeca7c9_v11_flagship.json"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "formula": "C20H19NO4",
+      "name_key": "(+)-n-acetylnornuciferine",
+      "query_name": "(+)-N-acetylnornuciferine",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C15H22O",
+      "name_key": "(+)-nootkatone, crystalline, 98+%",
+      "query_name": "(+)-Nootkatone, crystalline, 98+%",
+      "reason": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "formula": "C30H44O3",
+      "name_key": "(22e,24e)-3-oxo-9,19-cyclolanosta-22,24-dien-26-oic acid",
+      "query_name": "(22E,24E)-3-Oxo-9,19-cyclolanosta-22,24-dien-26-oic acid",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C15H20O3",
+      "name_key": "(9e)-3,6,10-trimethyl-7,8,11,11a-tetrahydrocyclodeca[b]furan-2,5(4h,6h)-dione",
+      "query_name": "(9E)-3,6,10-Trimethyl-7,8,11,11a-tetrahydrocyclodeca[b]furan-2,5(4H,6H)-dione",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C30H46O4",
+      "name_key": "18b-glycyrrhetinic acid",
+      "query_name": "18b-glycyrrhetinic acid",
+      "reason": "ValueError: expected_one_pubchem_resolution_got_3"
+    },
+    {
+      "formula": "C15H20O5",
+      "name_key": "3,11-dihydroxy-1,2,5-trimethylspiro[8-oxatricyclo[7.2.1.02,7]dodec-5-ene-12,2'-oxirane]-4-one",
+      "query_name": "3,11-Dihydroxy-1,2,5-trimethylspiro[8-oxatricyclo[7.2.1.02,7]dodec-5-ene-12,2'-oxirane]-4-one",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C8H12O4",
+      "name_key": "3,4-dimethoxy-5-hydroxybenzaldehyde [ccs=134.3086700439453]",
+      "query_name": "3,4-dimethoxy-5-hydroxybenzaldehyde [CCS=134.3086700439453]",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C16H14O4",
+      "name_key": "4'-hydroxy-4-methoxydalbergione",
+      "query_name": "4'-Hydroxy-4-methoxydalbergione",
+      "reason": "ValueError: expected_one_pubchem_resolution_got_2"
+    },
+    {
+      "formula": "C15H20O3",
+      "name_key": "5-azuleneacetic acid, 1,2,4,5,6,7,8,8a-octahydro-3,8-dimethyl-alpha-methylene-2-oxo-, (5r,8s,8as)-",
+      "query_name": "5-Azuleneacetic acid, 1,2,4,5,6,7,8,8a-octahydro-3,8-dimethyl-alpha-methylene-2-oxo-, (5R,8S,8aS)-",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C6H10O7",
+      "name_key": "5-keto-gluconic acid",
+      "query_name": "5-KETO-GLUCONIC ACID",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C20H28O3",
+      "name_key": "7-ethenyl-1,4a,7-trimethyl-6-oxo-2,3,4,8,8a,9,10,10a-octahydrophenanthrene-1-carboxylic",
+      "query_name": "7-ethenyl-1,4a,7-trimethyl-6-oxo-2,3,4,8,8a,9,10,10a-octahydrophenanthrene-1-carboxylic",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C20H28O3",
+      "name_key": "7-oxo-13-epi-pimara-8,15-dien-18-oic acid",
+      "query_name": "7-oxo-13-epi-pimara-8,15-dien-18-oic acid",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C21H22O9",
+      "name_key": "aloin(mixture of a&b)",
+      "query_name": "Aloin(mixture of A&B)",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C17H12O5",
+      "name_key": "aspulvinone e - yellow pigment - found in aspergillus",
+      "query_name": "Aspulvinone E - Yellow pigment - Found in Aspergillus",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C30H44O3",
+      "name_key": "boldenone undecylenate [ccs=232.352]",
+      "query_name": "Boldenone undecylenate [CCS=232.352]",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C15H12O7",
+      "name_key": "dihydroquercetin",
+      "query_name": "dihydroquercetin",
+      "reason": "ValueError: expected_one_pubchem_resolution_got_3"
+    },
+    {
+      "formula": "C18H30O3S",
+      "name_key": "dodecylbenzenesulfonic acid",
+      "query_name": "Dodecylbenzenesulfonic acid",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C27H44O7",
+      "name_key": "ecdysone, beta",
+      "query_name": "ECDYSONE, BETA",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C6H10O7",
+      "name_key": "glucuronic acid; lc-tdda; ce40",
+      "query_name": "Glucuronic acid; LC-tDDA; CE40",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C47H81NO18",
+      "name_key": "hex3cer 29:4;2o",
+      "query_name": "Hex3Cer 29:4;2O",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C27H32O16",
+      "name_key": "hydroxysafflor yellow a",
+      "query_name": "Hydroxysafflor yellow A",
+      "reason": "ValueError: expected_one_pubchem_resolution_got_10"
+    },
+    {
+      "formula": "C30H46O4",
+      "name_key": "keto-b-boswellic acid, 11",
+      "query_name": "KETO-B-BOSWELLIC ACID, 11",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C6H12O5",
+      "name_key": "l-(+)-rhamnose",
+      "query_name": "L-(+)-Rhamnose",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C6H12O5",
+      "name_key": "massbank:ce000428 rhamnose",
+      "query_name": "Massbank:CE000428 Rhamnose",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C21H20O6",
+      "name_key": "massbank:fio00945 curcumin",
+      "query_name": "Massbank:FIO00945 Curcumin",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C15H11ClN2O2",
+      "name_key": "oxazepam; lc-esi-itft; ms2; ce",
+      "query_name": "Oxazepam; LC-ESI-ITFT; MS2; CE",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C14H8O5",
+      "name_key": "purpurin - casmi2016 category 1 - challenge 18",
+      "query_name": "Purpurin - CASMI2016 Category 1 - Challenge 18",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    },
+    {
+      "formula": "C42H65NO16",
+      "name_key": "rizinsan a",
+      "query_name": "Rizinsan A",
+      "reason": "ValueError: expected_one_pubchem_resolution_got_2"
+    },
+    {
+      "formula": "C15H12O7",
+      "name_key": "taxifolin-(+/-)",
+      "query_name": "TAXIFOLIN-(+/-)",
+      "reason": "HTTPError: HTTP Error 404: PUGREST.NotFound"
+    }
+  ],
+  "generated_at": "2026-08-25T11:24:57.631167+00:00",
+  "registry_id": "mssystem-v14-pubchem-name-formula-identity-repair-2.0.0",
+  "schema_version": "1.0.0",
+  "selection_contract": {
+    "formula_must_match": true,
+    "ground_truth_inputs_used": false,
+    "rdkit_must_reproduce_full_inchikey": true,
+    "triggers": [
+      "same exact normalized name and formula bound to multiple candidate connectivities",
+      "reported InChIKey disagrees with stored structure connectivity"
+    ],
+    "unresolved_or_ambiguous_is_neutral": true
+  },
+  "source": "PubChem PUG REST exact submitted name",
+  "source_artifact_sha256": {
+    "0389dbd4cfa3_results.json": "a3acaa4e886825def11bf6f1e4f1a43ce543d71792649d9ddf50595adab12f84",
+    "0389dbd4cfa3_v11_flagship.json": "a3e2b9b5802adabe7e6ca210bc11ecc0bcf0001ea7798ef4c54a46312c90e407",
+    "06faf7c075d8_results.json": "1e05cd1f998f0f2bf34012b69e8aecafb1460e5387938fdd23112e36071158e9",
+    "06faf7c075d8_v11_flagship.json": "078e4337a695fd0a80ddfa649e4750fc184b5ad421e5f5211fc68d8d9631a0a0",
+    "08aec0b121e9_results.json": "c8460159f37481f0c031b827662355f227f9d7c7b6b60a6df061fa9402936fce",
+    "08aec0b121e9_v11_flagship.json": "5c72016516e142c0e86cf8b4ccb5e96d4094cb745f98943f1ee07a85edf1058f",
+    "08d60a11e3cf_results.json": "76c4ca9ac1f24a450a0ce84a0e696aa4e1d1b2b004c3e7c61044a965d678ddf3",
+    "08d60a11e3cf_v11_flagship.json": "faf205c4b618d43329b071af06c6fcbd7d52cafc2d46f14518fdac12e0a0a106",
+    "0a94c5cd31ed_results.json": "384004f159ef1ce67a8a087c33335c4eaa0fc6bc2a160da47efef5b63202cbec",
+    "0a94c5cd31ed_v11_flagship.json": "bd4e56011eb4bb288235e9da8f862f68fd5268b2d816435ec90fd3e0fec40d23",
+    "0dcc2d80dbe0_results.json": "68f55d0b8be868cae915e50c8e5048623fcd38e6da49aa448acf0b12f150aa69",
+    "0dcc2d80dbe0_v11_flagship.json": "d30497e7d7d36e978526e5ebc5718e12cbc9babf287ae10a04317135584a899f",
+    "0e81d86272c6_results.json": "4043aeb66dd85675a1093173bf665c8613c6b19f07aba40799d33326687cf5a5",
+    "0e81d86272c6_v11_flagship.json": "795df951efbfdffbea4602717f9afd1ab5b0eb5586c16a3fb263df0ef78dea1f",
+    "0ea01f01d454_results.json": "516a16f0b410689fac9435682bdb947ab2800f8bd877ec8ec0f2b636b32cf160",
+    "0ea01f01d454_v11_flagship.json": "fed0e8e83fe234c0292c7eebb54fb783a1ecfb0b0c1d832bc8933d0576d320cf",
+    "0ed68ecf64ed_results.json": "469493a1358fdf92857c17ba1fbf60164f570561ce0405794424656a8529a6a5",
+    "0ed68ecf64ed_v11_flagship.json": "67a1274ae321c812254bcaf31d665e4c57558309bdf9e06a7cff23711b54963a",
+    "10c2991e5aaa_results.json": "cbaa38ca7513f334fb2522a6b5159f6419df842d8412d03758981e8eb47e5bfe",
+    "10c2991e5aaa_v11_flagship.json": "544352d78344d3e925455ba10fef028f7cb758f065936542cc5321de21b02a2b",
+    "13507b31f9d7_results.json": "c9ff87b2dd62a72dcd2c782b1a95bf466a936f21bb5f0c201660b5728059f038",
+    "13507b31f9d7_v11_flagship.json": "4ac8fbcd14579ce6abc0a01ce08593282a90c125a17c04bf0887eeb10d08f65d",
+    "159ba2d9e4b8_results.json": "f7edcef4379b5c5c37ea0703b5b1b55670d5a1f6351aab4a9c9e6d80bd548522",
+    "159ba2d9e4b8_v11_flagship.json": "aaf670a1bad3a377f7cd5efb2acf7a5d219dc00aab9fdcf8631b084040dfd152",
+    "168c971a92ad_results.json": "cbc6ffd47518e37073a0d2eebac51738121bae67b7f61d22a8e65f339f4b694f",
+    "168c971a92ad_v11_flagship.json": "049746c2f4e77c93f0ab376534f377d1a5e249c232147e5c5ff8013ae8072843",
+    "178afb91b97a_results.json": "f0c14272771831dc431718f5dc53e5220a3c8e158d4e2e5d3c0adc5318332523",
+    "178afb91b97a_v11_flagship.json": "06e6774fbd9b506bb934515786864a098bed9b2b3299fc45ec441cf1b39d26f1",
+    "18b19bef44b1_results.json": "988497fafd526e837da5c5f97ea3af9b7a720f0b15f04c0ee7d0e75466f4209c",
+    "18b19bef44b1_v11_flagship.json": "df9562df5b9f58d64949bdf5212f0f55118367ae0c9d8f0549b8f12715b8de07",
+    "195c729528a4_results.json": "b5d495c7bb044b7df8bd2100ef7f678c732e43b282e932b79461cd631ad3250e",
+    "195c729528a4_v11_flagship.json": "6335cf948f2830255b1c473c0d0365845d08402fce282286aae531f7b27aabf6",
+    "19e0157daa81_results.json": "f2384092854fa405d3c1dce3bf546f468b71ed13227366b70b993cf8b8cb0926",
+    "19e0157daa81_v11_flagship.json": "c24156b23806a27a96ae2f3f7c366e2eaa36cf60b32a53f1ba8139d8aa92f7db",
+    "1ada992c1678_results.json": "003ac150c0ab7cd30e4e7f9da98760b01364658e5702365c8b989e6bc4499659",
+    "1ada992c1678_v11_flagship.json": "ffbf463fc5da7d99181cfa23d70992296e0ac833d8bc96714743d72dff70a2dc",
+    "1b995641acc3_results.json": "b7a6df6c512bc5b87a9f3a1cb45160c8b3b49b6b63db258faf11f71b0389dcb0",
+    "1b995641acc3_v11_flagship.json": "bd1cdf677012ba4c9a9a45c93e9efe3ae924ebf3568bb461a8e0f5f0a01dc117",
+    "1e7cd61d5c1b_results.json": "26bdbccf631ee428162cbbe376cda4fedf2ff317a3e9711d87356e6f6c673433",
+    "1e7cd61d5c1b_v11_flagship.json": "1a3d74b7e23d02338f3aad1359dbd4f418265ec35d759c2c71dfb691ba1c8940",
+    "2074f0d6ef06_results.json": "ca99844dea2630fe618e282eaed1af37a45405fb3d254bb34c463e9d926ff225",
+    "2074f0d6ef06_v11_flagship.json": "077859382381dc09752c230920c603e60bd91e0202a12be7cdb52257158df083",
+    "212ec17d3ad4_results.json": "9fa1d7b775d138824465c898037c25f8bac80640d9dc8881f5a94011b07eb884",
+    "212ec17d3ad4_v11_flagship.json": "b1a2849351936b07815637996059365e5023b159b47bc91b92242abcbf234727",
+    "22ffc3311fbd_results.json": "302414cbf93204de5668315466812eb7e66eed111d886a43c5c4057dabb27bd2",
+    "22ffc3311fbd_v11_flagship.json": "23c77da79b9271aeecb04fed860fcacc7a4c21736b46c0b037a3672712c60ea4",
+    "245945548219_results.json": "cbae50e11c99957f74dac7c9784715f9603c606078e66c66cd66f46411a16134",
+    "245945548219_v11_flagship.json": "efbe51b24e209c1ed4a3c39c2094d8f1ee2788925aed27ed1368a3279d161f0e",
+    "265b3a1d53d4_results.json": "c5f0f07775b1ad89a83229e23500c0952f30d5408480b1ab6f6c82f5b45c9786",
+    "265b3a1d53d4_v11_flagship.json": "8e0d6a081de870164824326f4bd0ef88bd8b3e0386c79d459accc47dddaedb41",
+    "2782714973d8_results.json": "762b3983c524582ff164cd0bc16bcf27f327d5a0b5f6c405feb135c55b141029",
+    "2782714973d8_v11_flagship.json": "663a8c1feb157ec08910e68d2f73c7c639d3e85658bb5529cd7bdf4d1e885e05",
+    "2945b74276a5_results.json": "1acb5462c098deac0369e234a1d0b3e61732d1b85799cada9719f9b61da45a28",
+    "2945b74276a5_v11_flagship.json": "23cda5b8d1aa42c0dd4c8449ab880ce08a37c681d62058711074df038f61c7c6",
+    "2c74bc5a0342_results.json": "f5e9d0717f257f3701fd96972c35a645af656e51b3e15b0392cc1bec2d41d3b6",
+    "2c74bc5a0342_v11_flagship.json": "a859b57f8d1ff7b427000c4827c6586a981ddc25793c48c2ae130c2f7166a8d7",
+    "2d1c07a6ef17_results.json": "6c3630801e5b6a6abb68d85ecb1b71dfc45a5408aa9ee6578eedb4109112a5c6",
+    "2d1c07a6ef17_v11_flagship.json": "54b2167c37fd09dc7bec86597e76d7de4864d99ae9db6c30b36225c03705ef82",
+    "30f8acb093cd_results.json": "bc64f834b835f455e0c532936ba313d9a202ec13cac7bd4d5ee2584b1860af0f",
+    "30f8acb093cd_v11_flagship.json": "90f6dfe6b0c7a16fdf47568bfe19e069b4f2fc6e06c22604fedbd24eb9058b59",
+    "3209fe5fab53_results.json": "8bcaa6f37ed8657b5b029595725a7a3135212e9dff3fc2ecd4239f2e8cd779d3",
+    "3209fe5fab53_v11_flagship.json": "5196c08e1dae85a57e4d6ebae6ea652442dfeca5a88257953b1b982f0a299a2a",
+    "3261633e5247_results.json": "789ee3d64e7ae650c6dd39071d579aac1766c46949fd21cc01aa7f7225c7be3d",
+    "3261633e5247_v11_flagship.json": "b7965842994f5decc5727a53394dddbf849e0d54d7c33e319cef4c949bd648dc",
+    "356ffc176659_results.json": "df1f6127c78d5848472fb4c9f7dc72f993e3760421241bcbe61b63d66e32408d",
+    "356ffc176659_v11_flagship.json": "3b9a917fa56325be54dd54f8370f125936c21914b69112160822a5bf96d6bd84",
+    "3788afc82028_results.json": "ce397501ca7f9431336fcf4d375d7c3d86f8c51511414fb99e6aa9c1291527c2",
+    "3788afc82028_v11_flagship.json": "7d6ed13136e6982627bea1de3121afe1f2cd431ab7a55e122f34befc8e30aa81",
+    "3b4c3ee0deae_results.json": "014870cc52f1bfb78e2054b92d9d4d59fb5d5389b5223bafa12733e19fe6a45d",
+    "3b4c3ee0deae_v11_flagship.json": "a360fae66a7eb3b419e56d40d0df88a4e0ce44caa34c82552ca6d38bfe2d24aa",
+    "3be604ab4b4b_results.json": "4b69c6023ad6d00d7aac80c622a485ebc8434ce21336fcda77b86d40cf3a4217",
+    "3be604ab4b4b_v11_flagship.json": "0f92c1a3f48c40a8b84ad57b5f69ed8e98e58434b22e7ea4159f292f5f6bf477",
+    "3c4c611b0948_results.json": "149774c033c7d3f5c731e68bed43584bf13351f55fa5ef600ba5ce6e140f092d",
+    "3c4c611b0948_v11_flagship.json": "902d91522a587221bb010ca562134500603b966ed840580a6624ae5ad6b7f9b8",
+    "3ddc3f493492_results.json": "8ca54e25b9bd578256884597caed0efb2af311003d3af390c1d0c3f5cf423b94",
+    "3ddc3f493492_v11_flagship.json": "f72823bde5fa28c7ce448e47c50cb735b37869e35f03125a939948439fdf50a9",
+    "3efa8e0999ee_results.json": "5ded47d488c5f70ec5372a0e9e065befb6e40314d764d8c5bea615722f5463b3",
+    "3efa8e0999ee_v11_flagship.json": "63bab8bb74200cb69a73cc14a4c6e9d4d6b0c6cf4853fb0fba418de2473eff3a",
+    "40f9f3f538e2_results.json": "3a6236adf64c59e3d90ad7b52faaaf3c7585a68c66d97188f1ccc31bfa2676d3",
+    "40f9f3f538e2_v11_flagship.json": "a790ef6b3bcc01ef7de06f9d24c9d7d9bba290112511e068a014eef1ddcffc83",
+    "4228fd2c46a1_results.json": "994932ab2eca0fb09cb98f9b1c5f535737a9e0da242cbcd6fdcf35b8e2cc1944",
+    "4228fd2c46a1_v11_flagship.json": "be62b4ddbee4de4bb448f053d81bfa7e02f75088fcc133229cc896caf605beba",
+    "42ff920a3d33_results.json": "073e02fc8afb63733ac6d94ac238f64a86e72e02ea752debc40a1fb6c5d0c6a6",
+    "42ff920a3d33_v11_flagship.json": "16179dc0f635f7da02fccf3a2aca94e2cd05d96cd1b02a4c4c979d2ce4af7507",
+    "4303031710cb_results.json": "0281853236f31c624be87e26863a2c0d0f7b51e5aa4156f49575d3e2cf6fa9ff",
+    "4303031710cb_v11_flagship.json": "2b7f8e0c38468457db2486dc02cc7ce9247f80e4197c49e3f586fd5ccef71efb",
+    "430e44cebcb1_results.json": "c7f616327e6fc17175d94ff304f481d0bed674e0add854608ebb4381f36feeba",
+    "430e44cebcb1_v11_flagship.json": "1de12bd47a9ef6bdea9206ef9dc1c19c0edf0d5dc21cb9f451a823be0a3ac534",
+    "4615340e3463_results.json": "3cfe3dc64fcce6ca3b6f26c7d32614a2f9c78c841584a429934cfcd4a6a4b09b",
+    "4615340e3463_v11_flagship.json": "63645f362546eaf6b0ea262e065e2882681dfed613172d795677bc78ef038b06",
+    "486b5f07dafc_results.json": "6507dd245c4ef620ba4ceb6e160ab2717a0089aa298140cc58c2b9138f26b20c",
+    "486b5f07dafc_v11_flagship.json": "4acdca25be5416934d99401d078efd8356c84603819dac4461755caa1da2ebf5",
+    "48f80c28b8c6_results.json": "5033fcae81b9e33f49061ac8d4bafce4aaa6ae949a41f2347ab41094a50ec4d3",
+    "48f80c28b8c6_v11_flagship.json": "ce546be2d0c978b76cf966d667968294fa3c5fa314695f3d65ae0d786d0840f3",
+    "4bbd348c85c2_results.json": "aa52560734dedef79dff8a6f3512a948377613818c302f4c6d5045fda98f7aaa",
+    "4bbd348c85c2_v11_flagship.json": "bbecf4aa59f39476302e449ea1006c6c916ec81bb19a344a1fecbf98a882de55",
+    "4bd0ecff3d51_results.json": "5b4caca5f3b4dc6e5c7f1e449626250396e4fb7740a3d5ad9f7e04b482439b0c",
+    "4bd0ecff3d51_v11_flagship.json": "57e495e3ef49a8517ac3dcc5bce4a7413c258b89ad7f0fceac774fd3f49f0bea",
+    "4e1133f56a0b_results.json": "08cfd3a55d14ed21d09544e5fa48b03f49b4dc4e9a744237666d70c7c96f31f6",
+    "4e1133f56a0b_v11_flagship.json": "4b3bba03a11ac72ef836c32dcca187c1572aee975f08473d757d161fafabd60e",
+    "4e1ae6a5ca7c_results.json": "75163c20b7cd5e95a587fab2ac49d24514fd2303981d2cccc84a4e6914bdb5de",
+    "4e1ae6a5ca7c_v11_flagship.json": "05f276fbabdb464f1e3b1401b21b5566307094d17b332d55e0211b4c4e74073e",
+    "4e1c84bae8f2_results.json": "1f2649938018537b93732f5e0162583c5c206c83e5c368c2f525c271efb17a7b",
+    "4e1c84bae8f2_v11_flagship.json": "270b795f25efa3979abdaf4c13d4dd8e8338daba0c6b69c2f58d70780be0bd14",
+    "4e35c81db8d9_results.json": "bd983016e7f95135b3ba8110ec09f9d6c650b257e3ef331c9c29cfc15288bf19",
+    "4e35c81db8d9_v11_flagship.json": "fb59c4b0630dc9f7dcdefaa9947c625f63b6ea41313e24ba2969700286be72d3",
+    "4e4322009839_results.json": "bfb494f13fe57a7fa9f23cf63ba3f9386710364ee7332bea9b13aebd95e508d0",
+    "4e4322009839_v11_flagship.json": "d3da7f536477d047a74641418328f7b94f451c5e8d3e1fcb144281e02d9b30eb",
+    "4e887e7196a7_results.json": "b9890ab95a288d0d9c424f433463bfda63e985f68652ddd99ce33ace83fada9a",
+    "4e887e7196a7_v11_flagship.json": "9bc29b82c6eaf2dfd2ab1b15060b4f9fb08783522f58a560288b90382cb3a8f9",
+    "5020666db3a4_results.json": "636a55a761f1e15822c45d080f6ade13db1750202e4e654368e7bc23c765af49",
+    "5020666db3a4_v11_flagship.json": "9245ad4bebe7c44a34a871eb270634609d2040b7274c99b5314ee6ad50adcd20",
+    "52b23188d941_results.json": "178846b24f240de060dea42dd887d6bec972f896320e4edec17b354c3843200c",
+    "52b23188d941_v11_flagship.json": "6ce7bfe9d9c0433f69b469e2a308fc5ed0d087e5eafa6260a25233e06a0033cb",
+    "5340b6711eea_results.json": "bc4c41f2ebbe556016445df0b7e549b2a6ddefbae2e27ce2e8116189b4bfb198",
+    "5340b6711eea_v11_flagship.json": "14ee72ed40dd23beda4425a19b99dabc6f779a080cc6b6fad81c3257618c517d",
+    "53fa9de9edeb_results.json": "b3d33dd98d0a7d153d6ff5b0de6f7e467df38c155218062f44bc434f124a1c15",
+    "53fa9de9edeb_v11_flagship.json": "4550007a907716c13c8bb1ae31143011a10948d0e246215534e41f40704b7495",
+    "5849781f5454_results.json": "61f2118f697abe69a07cd083cae1d3d209b73b5440cc2c89748625ef9b91b924",
+    "5849781f5454_v11_flagship.json": "a33921bfc7fd15500badef6efdf95da813b93628417ddc86f98108680da411df",
+    "5ced4c3e2e77_results.json": "fea2c7b2841439dfedc27a4ddae89c531f1df6c4e5e6f5bf0ca96c0d54af92b3",
+    "5ced4c3e2e77_v11_flagship.json": "19be043f0c1bc27fe3e4125f4bbdc501b1b8d3724ec204df64dbffb1e476cb9d",
+    "5e6379a10c70_results.json": "b8ff369dfb16799c8df59fa4d3fb33b0a68e7fd07dee6a672fadfaedc0068e18",
+    "5e6379a10c70_v11_flagship.json": "992fa59a2cce8282c2bab03892c3916334b7e5a3cadf691aaa5ff4d25f7499e2",
+    "5fd4e9cac8ea_results.json": "91e9b0f2c8b8c8f85220bb426365a8011a7b441f8901888df8ff0a3704cf86e7",
+    "5fd4e9cac8ea_v11_flagship.json": "6f9b6855062bb4c34ddec9ff2d5984e4b014741ea5b81d03090788998ece00d9",
+    "6086f5c71341_results.json": "f2b4a4deebf608ac34cc11ad8485481602225e20980ccb7d4487818810e209fa",
+    "6086f5c71341_v11_flagship.json": "5e5ecb287a7305b7bedfe1f51bd38e2d561d18f23953f6e7c42b47e591e4309b",
+    "60926f048b63_results.json": "4995179a3d26edf00974eaf468cc0148dc52b9ece67cab06bb2ab51b73cf0163",
+    "60926f048b63_v11_flagship.json": "e7991ff43b9c3ef80ce1f60e9f8964923b46fc57f8146765be2cbdc8eb09fe6f",
+    "62d52b9448d6_results.json": "43a0641ce43e71a10f4bc677e011e57754514f624f826ebab672ad2c47fc92a1",
+    "62d52b9448d6_v11_flagship.json": "9b4cc184536a9d8682859f20487f42a59aa97ba34f67d618d8b8c71425a17742",
+    "6454eefbc5e4_results.json": "574178f6e757aa64ec1a2dde166bd44737dd29bc2cef98824bd389a7623fadb7",
+    "6454eefbc5e4_v11_flagship.json": "4d18643539c5bb8b65b763d9d397e812df398cc25e252904ca86b876b027d5f1",
+    "6787f6c3b0fe_results.json": "90aeb998422f2aad047f5572a703511941ff723d9160521f9a08fc4c58237bf1",
+    "6787f6c3b0fe_v11_flagship.json": "2021bfd51bbe036b622af9ce05da40934803118ab49e39be9795e477a8c4e66d",
+    "69c05aeca7c9_results.json": "752b336d47c0cefc737101b3f6f1fff77dff2acac4a0424404ac4331cdb2b064",
+    "69c05aeca7c9_v11_flagship.json": "e6a867d2f34318d39d2cd413befe9100b4e3b8ede25a873e6cdc4fa140b95ee9",
+    "6c28918ae345_results.json": "c70da5a9092e37e87ef4236c83c38e6217c2517d42af324148b331220db6437b",
+    "6c28918ae345_v11_flagship.json": "3becb0ba34692b5d1a8ccb15253c1747770e8edb4cbef454d1db642336c8c1d8",
+    "71d296b6f19e_results.json": "193b28489c809834685d09dc665aff1d5363f8b957e5ad03bc67aa23154c3427",
+    "71d296b6f19e_v11_flagship.json": "d6108ab071df0f8e20613dab21011411e9ec4971d1980d32606dcbafbbf97d5d",
+    "72eba4e9311c_results.json": "ecbf58150c26c619a54e5278a0965b5f313261585424119a00038e92722bd52c",
+    "72eba4e9311c_v11_flagship.json": "c8b49eb0e50b3941f689af1769d57c39aa8c5f02bbe2b8419e80700be6395a81",
+    "7399e849583d_results.json": "da411b0d01ff3aa8f53690a7a5b87aff5e7512b109bea896a472fdbdbc459ea8",
+    "7399e849583d_v11_flagship.json": "40a344f97afcea7dcbe1a5317d492b3b67c35262016597197694056abc5d974c",
+    "759e33f8440a_results.json": "b1c7e63185bb7de68ed0a0a8d6925cc255866ef36a8e8d75ddd0ee6cee2feb94",
+    "759e33f8440a_v11_flagship.json": "999209b85aa19c7e0cbb147214307647064ad54d184020fa822aa9f6de459415",
+    "76502d34a060_results.json": "f789283578c31e1e893f3fa0e401fbb54cde8404a8b3da0c1d7f9e2aed4344d7",
+    "76502d34a060_v11_flagship.json": "985dabeb8cd462d8e5a369c1c58bfd3c8cb5295354983a4e143b442b61395c5f",
+    "77431488df00_results.json": "a27b7a7c1bbadf51506ca8237cd68f408ca06f87c61351d2be3e1a8448b2032e",
+    "77431488df00_v11_flagship.json": "b27eb5dbdde45db511f95cf793178e9352b96f8fc8df94ec3428b3e04b22e263",
+    "7cbc9dc47a92_results.json": "bd6c3d06c7a7c64df89674c57f347a65cce6a2177087d9bbb168b4222a49ff32",
+    "7cbc9dc47a92_v11_flagship.json": "7ecbbd1277a8ab1442433876a576a046773efaeb853fe0b75b3fbce7293c7f02",
+    "7cc8356e3a32_results.json": "10f23841ca79bf88e529593967f37ca7a95ab460a75577e9d0433f4f8ddff2f1",
+    "7cc8356e3a32_v11_flagship.json": "6074d981954aed29316a098dd067f981c4a4f595a9b011cb32a1ac4d58fd7fdc",
+    "7e2503d0d957_results.json": "e255702bf160e0f74fa79f5c0e608f3fed8d8c28723bc52e0505d38375aceb5d",
+    "7e2503d0d957_v11_flagship.json": "37b6e6494d2f8087afb5755bddb38bca05ae2240f9a4c968e1efa7b52a19f287",
+    "7eef7ffddf34_results.json": "821ab4eb6e196f13e3835612ed03f8a3ef9614b3a446fe18e6981f613dd857ff",
+    "7eef7ffddf34_v11_flagship.json": "cd9aa8e31770b8f4fec03d0c3f7d39b16abf7a5adc7bfc97000e63643aeccecb",
+    "8020c2217c9e_results.json": "c34eb80c139846aad81192c4c2cd32e0e03104ea64b3db08f76dbc6bdd557555",
+    "8020c2217c9e_v11_flagship.json": "a630f134b6af88ed67cc7d00c6dee33058e532b420684dbd08ae69623b577255",
+    "823255093254_results.json": "6e8cea1dcce11dfdd616fd30c8a857e831af9ac215ca91e02920aabbbe237d92",
+    "823255093254_v11_flagship.json": "bc6f4519c69662b0095707daab94db90e7307224c6f01dfd22ecf1311018b606",
+    "827449094e7f_results.json": "83d4ab53fbb15e72ca5c8197b1a5fae15e8951f683c5da14c2db3d6d26a09ce5",
+    "827449094e7f_v11_flagship.json": "6fa35d04d9241e648c2659df532d23d62fbce87557a4232367f271cbdeb4d8fe",
+    "879cb3884bef_results.json": "70b9daaea279e2feca963b12b81813bd48ef86b5cfe250eb11126a9328c52162",
+    "879cb3884bef_v11_flagship.json": "5cc85bd950302d25589b9c64848b454d80995eba4945fcc731f1676dbd85885e",
+    "884c817abf80_results.json": "90b9ceb898d17a1933a6ff31e490d34afc4bc3d4f5eab9a697ded943671f84ee",
+    "884c817abf80_v11_flagship.json": "5ccf5c313c4ed6d45deb43c1a2c2db1ae7705ebc052514cf34621f3eb400d601",
+    "88743792c2fe_results.json": "aa44f8e748436cc8b67044164d13fc49ec65b8be7b2a9176238cd404aea53312",
+    "88743792c2fe_v11_flagship.json": "fc1ec966d250398279a052aee10b05c077938af51cff02bcf2a22ef04f613f9a",
+    "890e01631e35_results.json": "1f68d170730e95cdd2926a970066b4617a495417bcda4db9d586f88a86fbced7",
+    "890e01631e35_v11_flagship.json": "d5e3253c65feb22ddda5ea501c11a8c55850cf33fd94056b8d8b1b9cad68f159",
+    "9094d4772673_results.json": "9e16df457bfdd002aba100fdcbbd8d1288e514f9f78321276ab85b1b7241e75c",
+    "9094d4772673_v11_flagship.json": "3bc0033e2c0d94642ebcc92d05a56a284292d58242c906752f0c8209caed04ff",
+    "97887d83818e_results.json": "32724514b919b5832a1c012ac78c6a770151097e54178b5c75f9aeb8b22fd4d9",
+    "97887d83818e_v11_flagship.json": "49b15bf419f92734277e115cd7dc408ad3a604a03de24bf745c87d8619d56773",
+    "984700d0892f_results.json": "e86e0cf17a54f52c621b92ab5f07bda9096aa565e224af645178d41159a126ca",
+    "984700d0892f_v11_flagship.json": "dff7562687365e19c13b1706a2952bdc4e522ab42e2237a66a7a77066922673d",
+    "98b915c0cf2b_results.json": "d7ec939b1aeeddcb25b71dd6611d39232b7e22dac192ca70e1429e4f0e15bdca",
+    "98b915c0cf2b_v11_flagship.json": "3549012595e49f26f62a089e04c1e1f4fbaf6a30ce9d0ff3ed0fd7cffd738654",
+    "9b49807fad82_results.json": "63b7b4a8f515d5c984e8acca7082bac58148b54dfc434707ebd06a47822bd5ed",
+    "9b49807fad82_v11_flagship.json": "a1435abd50dd057621c7cbd8091c94db8f69a8b72f2211d12445f880c02cc377",
+    "9be80bcf9ebb_results.json": "08f9788f6c848fe4f075631c59b809b169fdb51f974c665615e0f2f9c21f54da",
+    "9be80bcf9ebb_v11_flagship.json": "96f7a18a8c899ce1b64da0c5d50a2d51622822b522b4f3241d7f76a5be5fbdb9",
+    "9c56ff565900_results.json": "f825d9f37b5ce14591dca3f895f138a035eb6ba407e1b4eb33a3fb1aeb685b3f",
+    "9c56ff565900_v11_flagship.json": "e404a6a50fa808a688c60001254eb8bb55dd37d4ee8e3315835fbaf2bd47e73d",
+    "9ec7050856aa_results.json": "940a1c05a738da16ffb5a97d03b1438b6614239d0b7c54e56a69293519a7a6a5",
+    "9ec7050856aa_v11_flagship.json": "56b2f79b87c40c89edfd760611cf1770bb1e0bf84c8206a89d9f233379e977a5",
+    "9f00bb1fe18f_results.json": "32f3b655a218bfc3a2b387bacc0ed178f4ddf925a012c3eca88055c2c37b72cc",
+    "9f00bb1fe18f_v11_flagship.json": "0996bf6572aa2f52bfe50be7fed91722ca863a3c673c6b7cf21976f8e28675de",
+    "a0d1800d95e3_results.json": "199eafccf427722955ff8de123d432c1668b20fdcaee52c06234270eb1792627",
+    "a0d1800d95e3_v11_flagship.json": "905c8c0bc6ea7ea3721ea837dc417406a61af989cdc29bb2821c742caaff7151",
+    "a3dadb9bd614_results.json": "9d215819bd379f5a37088caff1663d531d715fc014fc0cfa281d792bbe21d209",
+    "a3dadb9bd614_v11_flagship.json": "244bba60bfb3350aafdb49ced18aa5ff5c96c4cab33e298c5d8a20b8e04e4696",
+    "a95bb2aa77bb_results.json": "065a337af26f2bfc666d32642d9a15d91c7a58d9dded4cbd8a688b9253c45111",
+    "a95bb2aa77bb_v11_flagship.json": "f69709488deb07002285388576a95551137e96f419058ed5d6454d57ada53d44",
+    "a9edb2db07de_results.json": "c4bd11b9a27cfb66d215c6f8194f147b63c1670cc7c70d38f337b3c8c7034aa4",
+    "a9edb2db07de_v11_flagship.json": "4efbee9f5ad535dca713f2fb009ac61ea23bcf52f6bd2fdcec45cd9419ea233a",
+    "ad75a3cddd36_results.json": "0fb2733cf3f22afeab4f256a6c7500c20f95f9785813361d489b8e0e8da9dbc4",
+    "ad75a3cddd36_v11_flagship.json": "272254b86c16f8911693c1be933df07d39bbffd058b62f290df9cc57f692388c",
+    "ae5271e8e57c_results.json": "46a753524eec7fea9aaaeebff5df4bf239c846200598339f40f753869a750a0f",
+    "ae5271e8e57c_v11_flagship.json": "23f53300cf8a5c1ba8452dbc0bb367a869aecbb9b9075a13f2be1a287cdbd7a7",
+    "af344590d070_results.json": "761f3363359d84c0d4a84f70ad8eb9b7c486db7d083ac3200c0875e4b492d115",
+    "af344590d070_v11_flagship.json": "bd4fc636f37a4225617dd40388931fe9cad1e7c290b45b4c438d5ec92b86edd2",
+    "af3bcc5c8690_results.json": "e9318e5a9f6657b319f5fda9b10afccdca2bce09ea52b0c336eb54b803225409",
+    "af3bcc5c8690_v11_flagship.json": "40f37c1748b046ff0b21100f5e3e14e292349f1a12662496368fe361a863167a",
+    "b10daf42e2c3_results.json": "e506461870d615871cdb19ddc30c06159b7238a7fd68896994e717e34608ae78",
+    "b10daf42e2c3_v11_flagship.json": "9b496c40e85f28e24bbb0046c68051d404f2af649b021a83e080194b33acd960",
+    "b19a5350df59_results.json": "adee65fae3dc0a2349afcec2691eb214d520172e6f5b12d6070bc2e051b93200",
+    "b19a5350df59_v11_flagship.json": "b7445e13835acb424fb0a8d069c797bc5d72a9d70d1e661e230d82fc18d3bc36",
+    "b71c3b687483_results.json": "1b34309ae3b0f3097b551dd3211d4776e6577103624ee6b9781cb0c24e3ddd3c",
+    "b71c3b687483_v11_flagship.json": "52666a361a0fb483a756a63487f5c82d439f765a96e77c00565e36b1546e2c18",
+    "b842fe9778d2_results.json": "f5be689ac10d4add3210fc3f7381dead34920d22c588c7cff0ac4f7d67e8cfd6",
+    "b842fe9778d2_v11_flagship.json": "6cd11b439ad4da1e7c7a1e4ac5877e1b880350454410c3d76efa6228205e9c81",
+    "b8b2f6afca8c_results.json": "d95300d24fd787077c1fe447de74686777749469f1a780df670f5347a0c29478",
+    "b8b2f6afca8c_v11_flagship.json": "5a98327a376c23dbed934c77589d30b4ecda70c525d5fd473bbebc887f4bc737",
+    "bbd538c9e91b_results.json": "de5e491d2a7c684bd0a0b441d6c040447609dae0ed4e7a2b6b8d206a9e414264",
+    "bbd538c9e91b_v11_flagship.json": "a9ece518cdbb41586dbd53585bd0f396db8d077f99dfd34fbdc0fe09bfbe78cd",
+    "c2c88f48487d_results.json": "1f01f94828a522f5bfc12886b4bbd806a4cf491c7f693fef279472e6bcdb9914",
+    "c2c88f48487d_v11_flagship.json": "48cd77c26b03829afe872a2a258a4a14caabf8b9ef0156290e6072e4fbcf3fc9",
+    "c3ce26b37909_results.json": "78075cabab277ffba9340ca89cf8b6fa2285e055956e4478a08c5f892a78e16b",
+    "c3ce26b37909_v11_flagship.json": "775a2b03ee52db02ab8ca410d7a101df11fdaee60ba1ae19a82b38bd9c878fbe",
+    "c5ca5d0e94a1_results.json": "a0910eee91809980aa3f90349a2806b291d06d7228625a5d742f6fe768309aa6",
+    "c5ca5d0e94a1_v11_flagship.json": "2965e3fade7249da2d9171350943c30382651d710ca5e1277b0e8426842b54e4",
+    "c5ed267b4224_results.json": "36596dc38ea2c65d92e0b11bc141f8765a4ad2156033d449a30b42d8bdb83336",
+    "c5ed267b4224_v11_flagship.json": "eb5982246b819e26e4251ef8582a1726a1471ff499b0f4b76e2ac6d6842a2b16",
+    "c77961cf06ff_results.json": "17ad04163cfc4772858ba8efc9ca4d099ecb7ada3cbea59b2f2d98ed232f424c",
+    "c77961cf06ff_v11_flagship.json": "e59ad700821c7ae5cf2a815edb4830c0926c404fcbfb0af1796ad821c61d04de",
+    "c7796b5fff98_results.json": "643280af46976edb09036fa6613d4131ce1f6f5e22d8bfdadaa9df1f8e3846e3",
+    "c7796b5fff98_v11_flagship.json": "e9b7a780b8685000a26f78aee620066772da2ef71e86172bece5487d9013ac3e",
+    "c7f5fa6e549f_results.json": "034c92f3cf287d45d85adc00a778499be373fe707321ab391f76c9f23dc7f88b",
+    "c7f5fa6e549f_v11_flagship.json": "104804a03b1d8c71f43bdab15079b1cb3fc04addb3b9246a5134d0b65b451bfd",
+    "c9b4c703ac31_results.json": "0a79349570d6bac9298d18a5638436de1a8f3b111937f1c55d4149386b5f90b7",
+    "c9b4c703ac31_v11_flagship.json": "f85f3dcd3a55b3f9102755f6e1cbf86e4f6d061afc159fe22b67f4355952b5a2",
+    "cbc8ae74f8c7_results.json": "af3115e7943de383769538e6b58e8b35d7c22cc4584e7b911e71dff4276e25f0",
+    "cbc8ae74f8c7_v11_flagship.json": "a0ea918b16135368550386b2182984968dc0629d548808dd016a4dfe59df9993",
+    "cc2ad0680541_results.json": "2cf41e5ed202a3af9e09a7d97ccd1e2fb16602667a1a1a529c1e3b55d0311769",
+    "cc2ad0680541_v11_flagship.json": "007b91aaf8c4d5fa97c355bbb9f81cbfe1b4a3e87bbf2e97a77c24c19d1c9c93",
+    "d04683288a93_results.json": "0befc4bd58c85d211dce42624ac402fed65a3427af914961e599924806eaf655",
+    "d04683288a93_v11_flagship.json": "43be6224a05c0e1ed83e1c9a08320c3554302324c1c281f490393e0c9f7e0204",
+    "d486ede3e8d8_results.json": "614447e5428f3ed2d8f82b945c9a1298dd1de78f549261dbe109424b0b6ae0c9",
+    "d486ede3e8d8_v11_flagship.json": "78e4036252c84232ce717c910881b056402c74bfee40b6bd17abe755c7047d62",
+    "d589a06a1461_results.json": "e34ea01de324026d2d384a0d7d040751aee49649c0bd772a8252c28d20cb36ed",
+    "d589a06a1461_v11_flagship.json": "64e2a3fa91172e66952f6e2ebbcdb7c675d877a6450911dba3fa5f079b8b73bf",
+    "d633f56b7670_results.json": "e3b8f0b60c9f331d75e124dbab0c2f879d1648612a6f23a7ebf312f3586b0af2",
+    "d633f56b7670_v11_flagship.json": "8809b77019c7010b9f347f97cab0509dc93de5d518a7f83a3bb3a1cb04a2c411",
+    "d744f8acc374_results.json": "223eb8badc002777a5567742d13478f77e8a3ab3c15b2405861a57b9e126d646",
+    "d744f8acc374_v11_flagship.json": "a546143ca611a69351dbf5cedba314f278ecc53647c8eee643ace2f05efabab5",
+    "dbfffe88a157_results.json": "d8a6ea8147cce89586fa4000601f3597d2a96873b0d9a51abe331ece2d23b552",
+    "dbfffe88a157_v11_flagship.json": "9fd147c0c907810039deff31615a4b9a15d0c7a72dd1acdc10a6d02da6db16cc",
+    "dd84bcb1a06f_results.json": "cc4b083ff04a2429590dd9dfbea5c529f51cbcf472a9e9199c13598f73bd1aec",
+    "dd84bcb1a06f_v11_flagship.json": "06ecc6c146a02abc4ac8a8e9d5ef592f25c2689846ccddc03f4c86cce7e623a1",
+    "ddde8a39ce58_results.json": "cd7e24b4098853da70c3466f2f9dfb99809869599f156a6c01f2301b0e1c3a12",
+    "ddde8a39ce58_v11_flagship.json": "452f1b887eca1d48e92dc89dcb1b738608d2709773114b3d29c7ed755a017969",
+    "dfd298b3c174_results.json": "21ddcf94d56bc71620402e6ced42ad06d93f10767706e51c80093ff8dd344cd8",
+    "dfd298b3c174_v11_flagship.json": "cea1fe6db3b5ea8fe1308487425a79c2d8b7732808528b633bee61a40eb7dbac",
+    "e2cbbd245c9a_results.json": "504f3e7c5cc55f5c262a60951e7415ac4745822bf9a476649374d9651bc05f02",
+    "e2cbbd245c9a_v11_flagship.json": "126500c7a1fb2575226a954300a60b5e5036d1e78e53605126f82b167b7bc299",
+    "e458c671c1d8_results.json": "0bdafc8d6e75448d9c04d62b6b0baccfa0d5f93ec98aeec2345b9972a2cdc76e",
+    "e458c671c1d8_v11_flagship.json": "2a65ea485b862aa8f5177ba8a37b2de03d07f5a8bfb2f14079dc94dabe75cc50",
+    "ea20e82c7bab_results.json": "4f7f10e6e216f608a81e7f75ced69edeb64802b75423e62b05428e36fd11bdac",
+    "ea20e82c7bab_v11_flagship.json": "c1f4e6853a0e14ae2fa77a892a589df38ee8170bf3001720f659048eda57779d",
+    "ec973f1c42e3_results.json": "9bfb682a66b7cd24d43bb459e850ec5cc96d2bfabc078932a4a48d3f5244e232",
+    "ec973f1c42e3_v11_flagship.json": "e41bf88604ac7e9671b758092cf2c1c95c2d5e4fca53ebd964ee2983832112d1",
+    "edead19dfacd_results.json": "36423b940a5a834ffb0e0b32c2755532bda0b5e1b96de7779e2519c25394d87d",
+    "edead19dfacd_v11_flagship.json": "adfeb005b705172aead797d1f1cdaaf822a0a13f90913697702b48040b22e658",
+    "f105097d1c8f_results.json": "e7f3a06504db27e6a9d49224d5b57941a6d7eb495ffea22d278ab7d075098bcb",
+    "f105097d1c8f_v11_flagship.json": "23dde695098d26b5fbe26c21d06704abc5dc1aec96f86b5c8b3ecd80ba7c8720",
+    "f24a94e0dbb9_results.json": "df243593f9ac11f7b21a8a9fdfb35e74162e25c1a740984c098d0f71d133eba0",
+    "f24a94e0dbb9_v11_flagship.json": "7c52ca6715bdae24a448d8179481f0ff9fe28e5e534f2b79e6abb9a26274cc1b",
+    "f67e7a326bff_results.json": "d52c06acc1679cbfbb7d96d0d36320e984fc5f48125d92d4403575943501e44e",
+    "f67e7a326bff_v11_flagship.json": "bc9c9f998e890d8c1d2c819df6ade233750b0ddfef7896640415b4a606e39baa",
+    "f7ec234feab9_results.json": "78cb189f80cddf2904d008a647c4b9c862a211d2ac3be0aa382daaf118bbbe9f",
+    "f7ec234feab9_v11_flagship.json": "497cae9ccd13cd6f0c64fc419b1360c1c9fd3567b8b7a1256ea75e75cd8eed3d",
+    "f8a959246e49_results.json": "aa039102f7de1ae85c955635b4283e8d2e868b09a87e39cca23255ead65edfe9",
+    "f8a959246e49_v11_flagship.json": "ef780d223509e78712069fc77c68eb1a594aa8fae95d77e1b289ce519b08abe1",
+    "fb9d02bd9a6e_results.json": "9485554034035fd0325938dd0e4b884f4aab54a2aea891e3e6441eaa45bfc11e",
+    "fb9d02bd9a6e_v11_flagship.json": "6bfbee1dc01c50be7525e2b38ee473b97adba2b3027bdf8295eeaac60e5f6964"
+  }
+}

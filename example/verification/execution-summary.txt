@@ -1,0 +1,10 @@
+Environment: Linux x86-64, CPython 3.12.3, newly installed dependencies.
+Source archive SHA-256: f90beb6a377a5217289ba564bae425ea8114089af0805c6d637f97aa026b5458
+Reference input: the two MassBank records listed in provenance.json.
+10:11:23  INFO      质量门结果: spectral=2 rejected=0 presence-only=0 tiers={'experimental': 2}
+10:11:23  INFO      staging 审计通过: {'quick_check': 'ok', 'Compounds': 1, 'Spectra': 2, 'Mapping': 2, 'source_tier_counts': {'experimental': 2}, 'mapping_csv_rows': 2}
+Wrote 2 ranked entries from 2 reference spectra.
+PASS: 2/2 rankings and all saved peak pairs reproduced.
+query	rank	candidate	inchikey	reference_accession	score	matched_peak_pairs
+MSBNK-IPB_Halle-PB002410	1	Quercetin	REFJWTPEDVJJIY-UHFFFAOYSA-N	MSBNK-RIKEN-PR040049	0.8596	5
+MSBNK-IPB_Halle-PB002412	1	Quercetin	REFJWTPEDVJJIY-UHFFFAOYSA-N	MSBNK-IPB_Halle-PB002411	0.6575	10

@@ -1,0 +1,174 @@
+{
+  "schema_version": "3.0.0",
+  "registry_id": "v15-feature-fragment-public-sources-v3",
+  "repository": {
+    "name": "MassBank Europe",
+    "api_root": "https://massbank.eu/MassBank-api",
+    "release": "2025.10",
+    "release_timestamp": "2025-10-24T10:33:06Z",
+    "metadata_url": "https://massbank.eu/MassBank-api/metadata",
+    "retrieved_on": "2026-08-27"
+  },
+  "sources": [
+    {
+      "source_id": "massbank_antwerp_univ_qtof_ms2",
+      "origin_dataset_id": "massbank_antwerp_univ_submission",
+      "origin_study_id": "massbank_antwerp_univ_submission",
+      "cache_filename": "antwerp.json",
+      "contributor": "Antwerp_Univ",
+      "laboratory_id": "university_of_antwerp_toxicological_centre",
+      "research_id": "massbank_antwerp_univ_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=Antwerp_Univ&instrument_type=LC-ESI-QTOF&ms_type=MS2",
+      "expected_record_count": 1762,
+      "expected_source_file_sha256": "36a1387c3c211cf00216887abe696bcde146ccb5a61f86b5a8437e728ada1a69",
+      "domain_ids": ["agilent_6560_qtof_cid_contributor_text_v3", "agilent_6530_qtof_cid_contributor_text_v3"]
+    },
+    {
+      "source_id": "massbank_athens_univ_qtof_ms2",
+      "origin_dataset_id": "massbank_athens_univ_submission",
+      "origin_study_id": "massbank_athens_univ_submission",
+      "cache_filename": "athens.json",
+      "contributor": "Athens_Univ",
+      "laboratory_id": "national_and_kapodistrian_university_of_athens",
+      "research_id": "massbank_athens_univ_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=Athens_Univ&instrument_type=LC-ESI-QTOF&ms_type=MS2",
+      "expected_record_count": 5158,
+      "expected_source_file_sha256": "01b99cd67e8f6c85017a0e6239f88a39ab353a1b4797b233de0876a05e509381",
+      "domain_ids": ["bruker_maxis_impact_qtof_cid_contributor_text_v3"]
+    },
+    {
+      "source_id": "massbank_eawag_qft_ms2",
+      "origin_dataset_id": "massbank_eawag_qft_submission",
+      "origin_study_id": "massbank_eawag_qft_submission",
+      "cache_filename": "eawag.json",
+      "contributor": "Eawag",
+      "laboratory_id": "eawag",
+      "research_id": "massbank_eawag_qft_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=Eawag&instrument_type=LC-ESI-QFT&ms_type=MS2",
+      "expected_record_count": 11515,
+      "expected_source_file_sha256": "742e18455e73070d4c737f8456fd57d4a052f11231c76c48f1c7acee43d220cb",
+      "domain_ids": ["thermo_exploris_240_hcd_v3", "thermo_q_exactive_plus_hcd_v3", "thermo_q_exactive_hcd_v3"]
+    },
+    {
+      "source_id": "massbank_eawag_upper_qft_ms2",
+      "origin_dataset_id": "massbank_eawag_upper_submission",
+      "origin_study_id": "massbank_eawag_upper_submission",
+      "cache_filename": "eawag_upper.json",
+      "contributor": "EAWAG",
+      "laboratory_id": "eawag",
+      "research_id": "massbank_eawag_upper_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=EAWAG&instrument_type=LC-ESI-QFT&ms_type=MS2",
+      "expected_record_count": 2546,
+      "expected_source_file_sha256": "77227168029f13739525cf4f598cb18c5c234e3c496f46ef3a911bf131321772",
+      "domain_ids": ["thermo_exploris_240_hcd_v3"]
+    },
+    {
+      "source_id": "massbank_hbm4eu_sciex_qtof_ms2",
+      "origin_dataset_id": "massbank_hbm4eu_qtof_submission",
+      "origin_study_id": "massbank_hbm4eu_qtof_submission",
+      "cache_filename": "hbm4eu.json",
+      "contributor": "HBM4EU",
+      "laboratory_id": "hbm4eu_mass_spectral_library",
+      "research_id": "massbank_hbm4eu_qtof_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=HBM4EU&instrument_type=ESI-QTOF&ms_type=MS2",
+      "expected_record_count": 149,
+      "expected_source_file_sha256": "533d669ba4d0a7da33aa54b7fa413f51ad960fb6fbc42bf1e3b2e46258dc93d3",
+      "domain_ids": ["sciex_tripletof_5600plus_qtof_cid_contributor_text_v3"]
+    },
+    {
+      "source_id": "massbank_mssj_sciex_qtof_ms2",
+      "origin_dataset_id": "massbank_mssj_x500r_submission",
+      "origin_study_id": "massbank_mssj_x500r_submission",
+      "cache_filename": "mssj.json",
+      "contributor": "MSSJ",
+      "laboratory_id": "mass_spectrometry_society_of_japan",
+      "research_id": "massbank_mssj_x500r_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=MSSJ&instrument_type=ESI-QTOF&ms_type=MS2",
+      "expected_record_count": 780,
+      "expected_source_file_sha256": "3971e8242fff87a19262168854a3f227a562b3f2ee8f2cb5672dc39662f616ac",
+      "domain_ids": ["sciex_x500r_qtof_cid_contributor_text_v3"]
+    },
+    {
+      "source_id": "massbank_riken_waters_qtof_ms2",
+      "origin_dataset_id": "massbank_riken_qtof_submission",
+      "origin_study_id": "massbank_riken_qtof_submission",
+      "cache_filename": "riken.json",
+      "contributor": "RIKEN",
+      "laboratory_id": "riken",
+      "research_id": "massbank_riken_qtof_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=RIKEN&instrument_type=LC-ESI-QTOF&ms_type=MS2",
+      "expected_record_count": 11503,
+      "expected_source_file_sha256": "614f79fc5e5e4ed8002b6b45b0a1058c23e5ff7fed532a71c26c934b7231dd5c",
+      "domain_ids": ["waters_qtof_premier_low_energy_cid_contributor_text_v3"]
+    },
+    {
+      "source_id": "massbank_isas_dual_platform_ms2",
+      "origin_dataset_id": "massbank_isas_dortmund_submission",
+      "origin_study_id": "massbank_isas_dortmund_submission",
+      "cache_filename": "isas.json",
+      "contributor": "ISAS_Dortmund",
+      "laboratory_id": "isas_dortmund",
+      "research_id": "massbank_isas_dortmund_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=ISAS_Dortmund&ms_type=MS2",
+      "expected_record_count": 339,
+      "expected_source_file_sha256": "4fdf171b6d093571ebc732648bbee73e400ed6112cb46e6b9cb1620e8fbf9bb5",
+      "domain_ids": ["thermo_q_exactive_hf_hcd_v3", "agilent_6545_qtof_cid_contributor_text_v3"]
+    },
+    {
+      "source_id": "massbank_fiocruz_bruker_qtof_ms2",
+      "origin_dataset_id": "massbank_fiocruz_submission",
+      "origin_study_id": "massbank_fiocruz_submission",
+      "cache_filename": "fiocruz.json",
+      "contributor": "Fiocruz",
+      "laboratory_id": "fiocruz",
+      "research_id": "massbank_fiocruz_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=Fiocruz&instrument_type=LC-ESI-QTOF&ms_type=MS2",
+      "expected_record_count": 1107,
+      "expected_source_file_sha256": "fa29f80245846a3417b4af0aaee4a3be1daff468139e601a6f57ec73e8df7b71",
+      "allow_precursor_mz_from_neutral_exact_mass": true,
+      "domain_ids": ["bruker_maxis_qtof_cid_contributor_text_v3"]
+    }
+  ],
+  "screening_register": [
+    {
+      "candidate_source": "GNPS direct library spectra",
+      "official_url": "https://ccms-ucsd.github.io/GNPSDocumentation/browselibraries/",
+      "license_state": "GNPS-generated spectra may be CC0; third-party submissions retain per-library terms",
+      "integration_status": "screened_not_integrated",
+      "blocking_fields": ["exact model", "analyzer", "precursor isolation", "scan range", "laboratory", "per-spectrum license"],
+      "action": "freeze a named library release and accept only spectra with every blocking field resolved"
+    },
+    {
+      "candidate_source": "GNPS/MassIVE public raw acquisitions",
+      "official_url": "https://ccms-ucsd.github.io/GNPSDocumentation/api/",
+      "license_state": "dataset-specific",
+      "integration_status": "screened_not_integrated",
+      "blocking_fields": ["named dataset release", "sample material record", "exact acquisition method", "per-scan precursor selection", "stable truth identity"],
+      "action": "register a dataset-specific adapter only after all raw-to-spectrum links and identity records are frozen"
+    },
+    {
+      "candidate_source": "MetaboLights and Metabolomics Workbench public raw data",
+      "official_url": "https://www.ebi.ac.uk/metabolights/",
+      "license_state": "study-specific",
+      "integration_status": "screened_not_integrated",
+      "blocking_fields": ["study-specific license", "reference-material identity", "raw file and scan mapping", "complete CE and isolation metadata"],
+      "action": "admit only study records that satisfy the V3 metadata schema without inferred fields"
+    },
+    {
+      "candidate_source": "NIST Tandem Mass Spectral Library",
+      "official_url": "https://www.nist.gov/programs-projects/tandem-mass-spectral-library",
+      "license_state": "distributed commercial library",
+      "integration_status": "excluded",
+      "blocking_fields": ["redistribution and derived-catalog rights", "purchase prohibited by project scope"],
+      "action": "do not purchase, import, or use"
+    },
+    {
+      "candidate_source": "NIST public quality-control research spectra",
+      "official_url": "https://www.nist.gov/publications/quality-control-building-libraries-electrospray-ionization-tandem-mass-spectra",
+      "license_state": "paper and associated-data terms require asset-specific verification",
+      "integration_status": "screened_not_integrated",
+      "blocking_fields": ["stable public spectrum files", "asset license", "per-spectrum acquisition and material metadata"],
+      "action": "integrate only a frozen public asset, never the distributor library"
+    }
+  ]
+}

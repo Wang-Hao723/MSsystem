@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "cohorts": [
+    {
+      "id": "mix33_pre_recap_baseline",
+      "purpose": "Production baseline before formula-conditioned RECAP-Iso runtime activation",
+      "task_ids": ["d19359bc9856", "7030c48e2484"]
+    },
+    {
+      "id": "mix33_rank_enabled_negative_control",
+      "purpose": "Preserved negative-control run that demonstrated real MIX33 regression",
+      "task_ids": ["92becdbf0217", "8a9d1d22d31a"]
+    },
+    {
+      "id": "mix33_final_shadow",
+      "purpose": "Final production-safe RECAP-Iso shadow run; must equal the pre-RECAP baseline",
+      "task_ids": ["4515e871f701", "81f15dd0f196"]
+    },
+    {
+      "id": "thermo_qe_blind_20260803",
+      "purpose": "Thermo Q Exactive blind-batch end-to-end regression with same-polarity blanks",
+      "task_ids": ["066490a5802b", "1497fc29b76d", "f9d31b7a1362", "e53ce8b76e42"]
+    }
+  ]
+}

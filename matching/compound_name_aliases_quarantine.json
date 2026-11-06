@@ -1,0 +1,1091 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-07-28T17:38:20.092629+00:00",
+  "source": "/Users/zizi/Desktop/Mssystem/mssystem_V7/matching/compound_name_aliases.json",
+  "policy": "Quarantined aliases remain provenance only and are never presented as canonical compound names.",
+  "reason_counts": {
+    "bracketed_fragment_only": 20,
+    "generic_substituent_or_fragment": 31,
+    "identifier_or_internal_code": 138,
+    "putative_or_collision_metadata": 12,
+    "safe": 1384,
+    "unresolved_stereochemistry_or_corrupt_text": 14
+  },
+  "aliases": [
+    {
+      "inchikey": "AAHSTEUFCXJGIV-DUBKMGCZSA-N",
+      "alias": "MEGxp0_001853",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "ABJOCPBDVGJFLG-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "ABTNALLHJFCFRZ-UHFFFAOYSA-N",
+      "alias": "[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "ACGWJYPSNRKNPW-SRNLTMNISA-N",
+      "alias": "MEGxp0_000166",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "ADACAMXIRQREOB-ZODIVDNVSA-N",
+      "alias": "MEGxm0_000401",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "AOXGLIJSZLOQNZ-UHFFFAOYSA-N",
+      "alias": "Putative_Margaritene",
+      "reason": "putative_or_collision_metadata"
+    },
+    {
+      "inchikey": "APZBLWQCTHVAMR-XRZTVBGOSA-N",
+      "alias": "MEGxp0_001463",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "AUVKOEQGZIDTGI-FHCQAZNMSA-N",
+      "alias": "MEGxp0_000470",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "AVBLSPPEZPLINV-LPUDELNJSA-N",
+      "alias": "MEGxm0_000354",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "AZEASYGWRLHADI-UHFFFAOYSA-N",
+      "alias": "[4-(1-acetyloxyprop-2-enyl)-2-methoxyphenyl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "BCUDKRWNGQAFLF-GYMZVKDOSA-N",
+      "alias": "(3?,5?,9?,14?,25S)-Spirostan-3-yl 6-deoxy-?-L-mannopyranosyl-(1->4)-[?-D-glucopyranosyl-(1->2)]-?-D-glucopyranoside",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "BHPGSJYBVOBTHV-UHFFFAOYSA-N",
+      "alias": "(?)-Miliusfragranol B",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "BITFKDUCQOBZDL-POHAHGRESA-N",
+      "alias": "11-methyl-2,7-dimethylidene-6,12-dioxo-5,14-dioxatricyclo[9.2.1.0?,?]tetradec-1(13)-en-9-yl (2Z)-2-methylbut-2-enoate",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "BIZAJDCIOZNYLQ-XDWAVFMPSA-N",
+      "alias": "ACon1_001775",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "BMHIJFUMNIBEFW-APCGUEJZSA-N",
+      "alias": "MEGxp0_000228",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "BOPPUHZKIKFBHH-GEOUXAIOSA-N",
+      "alias": "(1S,8R,16S,17R)-11,12-dimethoxy-5,15-diazahexacyclo[13.4.2.0?,??.0?,??.0?,??.0?,??]henicosa-2,9,11,13-tetraen-21-one",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "BPWYDRTYBYRFDY-WRPCLEDJSA-N",
+      "alias": "MEGxp0_000694",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "BRELKNNWUMEGDN-VOTSOKGWSA-N",
+      "alias": "ACon1_000873",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "BRQQPHKRRCUYLA-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "BSUNYCAAALCBNU-MONCMAELSA-N",
+      "alias": "MEGxp0_001514",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "BUKNGVJDVSRYIT-UHFFFAOYSA-N",
+      "alias": "ACon1_001771",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "BUOADWXGPJXKRM-UHFFFAOYSA-N",
+      "alias": "[5-hydroxy-3-(hydroxymethyl)-2-oxo-6-propan-2-ylcyclohex-3-en-1-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "BXZJZDQDHHZIIB-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "BZXXSUZFEIFGEX-RMRSBADTSA-N",
+      "alias": "ACon1_002128",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "CDYGRHOHQUXDMN-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "CEJSYHIZUAMEQV-RFOFMGPBSA-N",
+      "alias": "MEGxp0_000849",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "CIGQQQTZOIDQQR-SGWMQEFOSA-N",
+      "alias": "[(1R,5R,9S,13S)-5,9,13-trimethyltetracyclo[11.2.1.0?,??.0?,?]hexadec-14-en-5-yl]methanol",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "CJHYKSSBQRABTM-GKNYHGHUSA-N",
+      "alias": "ACon1_001357",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "CLFOWTUGPBWLGH-UHFFFAOYSA-N",
+      "alias": "MEGxm0_000208",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "CLNPDDMTKIPNGZ-SCKRRUALSA-N",
+      "alias": "ACon1_001553",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "CLZUMLIVUFEQRJ-DMTNONPGSA-N",
+      "alias": "MEGxp0_001395",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "CMKFQVZJOWHHDV-QYWJTTNJSA-N",
+      "alias": "methyl (1R,18R)-17-ethyl-3,13-diazapentacyclo[13.3.1.0?,??.0?,?.0??,??]nonadeca-2(10),4(9),5,7,16-pentaene-1-carboxylate",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "CNEWEMXPRRKCTL-ZTHVCKICSA-N",
+      "alias": "1-methyl 4-[(5R,9S,13S)-5,9,13-trimethyltetracyclo[11.2.1.0?,??.0?,?]hexadec-14-en-5-yl]methyl butanedioate_major",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "COWWBPRRBQOULA-NABHEWRGSA-N",
+      "alias": "MEGxp0_000960",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "CPCRJSQNWHCGOP-GJRJVGSCSA-N",
+      "alias": "MEGxm0_000492",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "CPLXLUNIGVIJMQ-ZBXQRWCVSA-N",
+      "alias": "MEGxp0_001967",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "CPMFRQHRPWPNMP-VOTSOKGWSA-N",
+      "alias": "ACon1_002086",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "CTBHKOAPXBDFPX-OUEZSCCGSA-N",
+      "alias": "MEGxp0_001409",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "CXFDTBRNJQYDLK-UHFFFAOYSA-N",
+      "alias": "[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "DBNSETUPZTZJFY-UHFFFAOYSA-N",
+      "alias": "ACon1_000955",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "DFGOIVFBKDWNBI-QXFWGQDYSA-N",
+      "alias": "MEGxp0_001669",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "DFGYGTWTXGTQIC-GGCVLVMGSA-N",
+      "alias": "ACon1_000262",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "DGIMMEWTLSCNGO-UHFFFAOYSA-N",
+      "alias": "6-hydroxy-3,5a,9-trimethyl-3,3a,4,5,6,7,9a,9b-octahydrobenzo[g][1]benzofuran-2-one_major",
+      "reason": "putative_or_collision_metadata"
+    },
+    {
+      "inchikey": "DORNRAAPIXGDPH-UHFFFAOYSA-N",
+      "alias": "MEGxm0_000178",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "DPFSNFFFCPHBOW-JHSONMHFSA-N",
+      "alias": "MEGxp0_000211",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "DXQHDILKRYSUPK-UHFFFAOYSA-N",
+      "alias": "ACon1_000943",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "DYFXVIVUWANJGN-UHFFFAOYSA-N",
+      "alias": "ACon1_002431",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "DYMYDSWEIIXYNX-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "FBUJYYRONHLNQF-JTGGRASYSA-N",
+      "alias": "MEGxp0_001644",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "FCSKUNOKIVAIKK-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "FEMTVABTBAWCEK-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "FFXYBQSGDXRLHS-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "FLSPBPZSXFDRFE-HHQDNIDLSA-N",
+      "alias": "ACon1_001989",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "FLZGWKBABNBFOA-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "FMEUWIKCSICJBO-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "FYTGEKJFCXSGKK-LHVPILOOSA-N",
+      "alias": "MEGxp0_000717",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "FYWCDZKQBWSMDD-MWKDSIEZSA-N",
+      "alias": "MEGxp0_000244",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "FZAVQTYIBVEBHF-IBWWKVRASA-N",
+      "alias": "MEGxp0_000519",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "GCMGJWLOGKSUGX-RFDVGSOASA-N",
+      "alias": "MEGxp0_001931",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "GFDOSVZSTRYXMK-UHFFFAOYSA-N",
+      "alias": "[12-hydroxy-6-(hydroxymethyl)-10-methyl-2-(4-methylpent-3-enyl)dodeca-2,6,10-trienyl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "GFYNKSLVMQVEBT-BAUVLOOGSA-N",
+      "alias": "MEGxp0_001455",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "GGNFGJZLCXTJLH-UHFFFAOYSA-N",
+      "alias": "HYDRANGENOSIDE",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "GIJDACMRFIMBET-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "GJBRADPPUCQNGC-PQURZFQKSA-N",
+      "alias": "MEGxm0_000127",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "GJGRGJCMJUMZKN-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "GOLVEYNUJMICCU-UHFFFAOYSA-N",
+      "alias": "MEGxp0_000592",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "GQDFYCPPHMEHJL-AEAWKSJYSA-N",
+      "alias": "MEGxp0_000658",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "GQUCOZSVXCLPKQ-SQNVVSGMSA-N",
+      "alias": "MEGxp0_000443",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "GRBXNADBNJGZRK-UHFFFAOYNA-N",
+      "alias": "Andrastin (Putative_Observed from A. flavus)",
+      "reason": "putative_or_collision_metadata"
+    },
+    {
+      "inchikey": "GTLYLWQDKQVONL-KDOFPFPSSA-N",
+      "alias": "MEGxm0_000315",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "HBAVPWHKFSXASX-UVFOGWNSSA-N",
+      "alias": "ACon1_002441",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "HDWMNUJZNUJIFF-MLNFOKRASA-N",
+      "alias": "MEGxp0_001449",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "HHKGQYGYEDKXNE-XBXARRHUSA-N",
+      "alias": "MEGxp0_000480",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "HILBWEPXZDMOAE-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "HLPXMGYELYMAQM-UHFFFAOYSA-N",
+      "alias": "[7-(3,4-dihydroxyphenyl)-1-(4-hydroxyphenyl)heptan-3-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "HXLDSEPZKLJMIQ-DHZHZOJOSA-N",
+      "alias": "ACon1_000829",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "IADWMRZHOGHTMQ-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "IAYQFYAFBVYKJZ-DGEPIGJSSA-N",
+      "alias": "(6Z,10E)-4-hydroxy-6-(hydroxymethyl)-10-methyl-3-methylidene-3a,4,5,8,9,11a-hexahydrocyclodeca[b]furan-2-one_minor",
+      "reason": "putative_or_collision_metadata"
+    },
+    {
+      "inchikey": "IBZLICPLPYSFNZ-HDKBWNSDSA-N",
+      "alias": "ACon1_000569",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "IHXLRPOTFALLKF-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "IJGMVUXEZUEDJR-RTWAVKEYSA-N",
+      "alias": "(1R,2S,5S,8R)-7,7-dimethyl-6-methylidenetricyclo[6.2.1.0?,?]undecane-2-carboxylic acid",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "IPUONOHBPFSQMA-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "ISTWCKNDZOSMPU-CIORFEAFSA-N",
+      "alias": "MEGxp0_001159",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "IVEJMWCGEFICJC-UHFFFAOYSA-N",
+      "alias": "[5-acetyloxy-3-(hydroxymethyl)-2-oxo-6-propan-2-ylcyclohex-3-en-1-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "IXQBRUSHWUDFSM-RJGCIVIHSA-N",
+      "alias": "MEGxp0_000963",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "JBSTZXRMJYWRCO-ACMQGEPBSA-N",
+      "alias": "MEGxm0_000224",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "JFDNMLUPLXZXGV-YAYCWVCRSA-N",
+      "alias": "MEGxp0_000347",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "JLPDBLFIVFSOCC-JSUYUZTESA-N",
+      "alias": "MEGxp0_000247",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "JLSIEPYLSSNFSK-PWHKKFIBSA-N",
+      "alias": "MEGxp0_000628",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "JPGYRFJJNVYGPI-UHFFFAOYSA-N",
+      "alias": "MEGxm0_000295",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "JSGVRMXIAILPPO-UHFFFAOYSA-N",
+      "alias": "MEGxp0_000666",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "JWESWEUFMKPWPH-UHFFFAOYSA-N",
+      "alias": "ACon1_001722",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "KAFSORTZFREQSQ-UHFFFAOYSA-N",
+      "alias": "ACon1_001798",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "KCSPYQSCNFOIII-UHFFFAOYSA-N",
+      "alias": "[5-formyl-4,8-dihydroxy-3-(3-methoxy-3-oxoprop-1-en-2-yl)-8a-methyl-2,3,4,4a,5,6,7,8-octahydro-1H-naphthalen-2-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "KEBWMOINOKSPFY-SHPRMFOESA-N",
+      "alias": "ACon1_001384",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "KFFCKOBAHMGTMW-WNIRDIQNSA-N",
+      "alias": "MEGxp0_000526",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "KIWTVJVARRPBPR-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "KNEQPJSDSYNUHP-SOFGYWHQSA-N",
+      "alias": "(5E)-4,9-dihydroxy-6-methyl-3,10-dimethylidene-4,7,8,9,11,11a-hexahydro-3aH-cyclodeca[b]furan-2-one_major",
+      "reason": "putative_or_collision_metadata"
+    },
+    {
+      "inchikey": "KPJIGLLMDBHXEB-XUMBOQAASA-N",
+      "alias": "MEGxp0_000977",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "KRODDZHZLZSLCJ-NSCUHMNNSA-N",
+      "alias": "MEGxm0_000374",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "KTYZKXFERQUCPX-SPUCVAIDSA-N",
+      "alias": "(3E,12E)-3,12-dimethyl-8-methylidene-6,18-dioxatricyclo[14.2.1.0?,?]nonadeca-3,12,16(19)-triene-7,17-dione",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "KWEIJKWXQKCOKC-UHFFFAOYSA-N",
+      "alias": "ACon1_001840",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "KYDNOVLBVBYOSW-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "LARSXHUKWMVHRB-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "LBZXZXIGWNHGTB-UHFFFAOYSA-N",
+      "alias": "[5-hydroxy-3-(hydroxymethyl)-2-oxo-6-propan-2-ylcyclohex-3-en-1-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "LIHVMLWWVHJRMA-UHFFFAOYSA-N",
+      "alias": "MEGxm0_000141",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "LINOMUASTDIRTM-JSXZITHDSA-N",
+      "alias": "MEGxm0_000321",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "LISLGICORSJAKO-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "LKOCXGZSSYQSLN-UHFFFAOYSA-N",
+      "alias": "MEGxm0_000328",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "LPIOEJKQFMDVFS-UHFFFAOYSA-N",
+      "alias": "MEGxp0_000409",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "LSNUUAUXWJZSFD-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "LTEYADKCUWEHSA-ZYCAGONGSA-N",
+      "alias": "ACon1_000306",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "MBWUSSKCCUMJHO-PLAVSGCFSA-N",
+      "alias": "ACon1_002016",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "MHCYVCDXRQGUFW-UHFFFAOYSA-N",
+      "alias": "ACon1_001929",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "MHJLKHNHGMUAPQ-UHFFFAOYSA-N",
+      "alias": "[1-hydroxy-1-(4-methoxyphenyl)propan-2-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "MIQMVCTWXSPFSC-TUVVYHBMSA-N",
+      "alias": "MEGxp0_000606",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "MPAKYMOQGZITTQ-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "MPXXSICHRNCHHK-UHFFFAOYSA-N",
+      "alias": "[5-acetyloxy-3-(hydroxymethyl)-2-oxo-6-propan-2-ylcyclohex-3-en-1-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "MQFYOYGIGPVWSJ-IUNAMMOKSA-N",
+      "alias": "(Z)-2-[[(Z)-2-methylbut-2-enoyl]oxymethyl]but-2-enoic acid_major",
+      "reason": "putative_or_collision_metadata"
+    },
+    {
+      "inchikey": "NDPYMEUORCDDDL-UHFFFAOYSA-N",
+      "alias": "MEGxp0_000388",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "NEMKJBVVPNFVCU-VDVULAQNSA-N",
+      "alias": "MEGxm0_000257",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "NFBYZSYLZUMCFV-JJRRTKJUSA-N",
+      "alias": "MEGxp0_000288",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "NFMZRMNYRASNPY-UHFFFAOYSA-N",
+      "alias": "[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "NIKHGUQULKYIGE-MOWPSDGOSA-N",
+      "alias": "(5R,9S)-5,9-dimethyl-14-methylidenetetracyclo[11.2.1.0?,??.0?,?]hexadecane-5-carboxylic acid",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "NLFUQHCGODFTIB-UHFFFAOYSA-N",
+      "alias": "ACon1_001668",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "NNOMPFCNQCRAIO-RQAAHYCXSA-N",
+      "alias": "ACon0_000980",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "NOFXXAHHOJWYAL-FFSKSLCISA-N",
+      "alias": "MEGxp0_000277",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "NOSUBWMAOPEEBW-UHFFFAOYSA-N",
+      "alias": "MEGxp0_000103",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "NQIZIOGKLJAGSU-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "NSOXQYCFHDMMGV-UHFFFAOYSA-N",
+      "alias": "N,N,N?,N?-Tetrakis(2-hydroxypropyl)ethylenediamine",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "ODRFGSPTMBKUAY-KDUIZRCMSA-N",
+      "alias": "MEGxp0_000188",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "OGTDCWCKOKLYSK-UHFFFAOYSA-N",
+      "alias": "MEGxm0_000258",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "OJAGBDHRHPCDLN-XOZBCDBDSA-N",
+      "alias": "MEGxp0_000663",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "OLFRCQFNQXYDGW-NDOBWRGRSA-N",
+      "alias": "MEGxp0_000647",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "OQXBCMJIIDQITC-PJROZREGSA-N",
+      "alias": "MEGxp0_000445",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "OSDVNRJELRKKGM-PNIRBJDYSA-N",
+      "alias": "MEGxp0_000276",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "OSFCFXQMAHURHU-OIKOUPSRSA-N",
+      "alias": "MEGxp0_001310",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "OSHZDTNWJYPSSP-WKGGGXJXSA-N",
+      "alias": "(3?,8?,9?,14?,16?,17?,20?,22?)-Spirostan-3-yl 6-O-?-D-xylopyranosyl-?-D-galactopyranoside",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "OXVUXGFZHDKYLS-YFIQRXMRSA-N",
+      "alias": "MEGxp0_000407",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "OZDABLANSWPSGY-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "PACBNJFGEWTGCE-OVYNBQGTSA-N",
+      "alias": "MEGxp0_001390",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "PAZRNFHBUAVIRN-UHFFFAOYSA-N",
+      "alias": "MEGxm0_000076",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "PBKUOHTZGOWWBK-UHFFFAOYSA-N",
+      "alias": "[4,5-dihydroxy-3,4-bis(hydroxymethyl)-4a,8,8-trimethyl-5,6,7,8a-tetrahydro-1H-naphthalen-1-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "PILWRMVFWRVMAP-KPFCIGHHSA-N",
+      "alias": "ACon1_002082",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "PLAPMLGJVGLZOV-RKNSFIPESA-N",
+      "alias": "MEGxp0_000462",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "PQQRNPDHSJDAGV-OVYNBQGTSA-N",
+      "alias": "MEGxp0_000300",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "PUOQHFWXBKTHST-ZQQVZHLFSA-N",
+      "alias": "ACon1_002471",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "PUUYULQKNFTVDK-UHFFFAOYSA-N",
+      "alias": "[5-ethenyl-3-hydroxy-4-(3-hydroxyprop-1-en-2-yl)-2-(3-methoxy-3-oxoprop-1-en-2-yl)-5-methylcyclohexyl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "QCLOIXSOULWMON-GVNWTKAWSA-N",
+      "alias": "MEGxp0_001626",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "QJRVMRSNTLYPQD-JABYDRCCSA-N",
+      "alias": "MEGxp0_000566",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "QJWRRPPVKXMSJD-VXJOFSGDSA-N",
+      "alias": "MEGxp0_001324",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "QKFYQBBBSKOMPQ-BKOATVBFSA-N",
+      "alias": "MEGxp0_001601",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "QKSRJNOHZIOCSF-KWFAMOQRSA-N",
+      "alias": "MEGxp0_000681",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "QSFNHAFPXWQTGZ-PFWBXDKASA-N",
+      "alias": "ACon1_002162",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "QSJIZGQGHYROGD-BMDRNQJUSA-N",
+      "alias": "MEGxp0_000121",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "QSWYVJWAKZGGIL-BQHOWTECSA-N",
+      "alias": "ACon1_001901",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "QXRUNNQSVHTDBO-VLHCGLNOSA-N",
+      "alias": "ACon1_002381",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "QYINOGPWFQBOJX-MDZDMXLPSA-N",
+      "alias": "(4E)-8-hydroxy-4-(1-hydroxypropan-2-ylidene)-10-oxatricyclo[7.2.1.0?,?]dodecane-8-carboxylic acid",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "QZGOQORSUIQVIR-CDTKZNFUSA-N",
+      "alias": "MEGxm0_000027",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "RBFOMTAWEHHDSX-TZHFLBFYSA-N",
+      "alias": "ACon1_001937",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "RCCXCTSYJHNSRE-KOPIJTNESA-N",
+      "alias": "MEGxp0_001653",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "RFVMVHYMAGKNDK-UHFFFAOYSA-N",
+      "alias": "MEGxm0_000519",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "RJIPNPHMQGDUBW-LGEIONFXSA-N",
+      "alias": "(1S,4S,5R,9R,13S)-5,9-dimethyl-14-methylidenetetracyclo[11.2.1.0?,??.0?,?]hexadec-10-ene-5-carboxylic acid",
+      "reason": "unresolved_stereochemistry_or_corrupt_text"
+    },
+    {
+      "inchikey": "RLCWEUBIDIWNEA-JACXBSBZSA-N",
+      "alias": "MEGxp0_000630",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "RLGRBYHBNWLGER-RMKNXTFCSA-N",
+      "alias": "MEGxp0_000746",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "RMCRQBAILCLJGU-SMCKTMTRSA-N",
+      "alias": "MEGxp0_001204",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "RNWHJFUXZQBBLK-VWJHISDNSA-N",
+      "alias": "MEGxp0_001616",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "RTCISXKUWWQSRF-VMPITWQZSA-N",
+      "alias": "MEGxp0_000468",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "RVMPLOSJMIQORE-XPDAHERZSA-N",
+      "alias": "MEGxp0_001176",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "SNGHLUWTFLYPMT-OEZBNQCDSA-N",
+      "alias": "MEGxp0_000286",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "SPWHQAUMLDQOFU-LWZOEEAQSA-N",
+      "alias": "MEGxp0_001338",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "STEQTZOENAMHLZ-UHFFFAOYSA-N",
+      "alias": "ethyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "STYCQQCWPHBTIH-UHFFFAOYSA-N",
+      "alias": "[1,3-dihydroxy-1-(7-methoxy-2-oxochromen-6-yl)-3-methylbutan-2-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "TURXCFUGBPBPRS-UHFFFAOYSA-N",
+      "alias": "ethyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "UIEGOKVPCRANSU-RIGHBNFWSA-N",
+      "alias": "MEGxp0_001163",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "UJKUPLFZLUIDFV-QEVJKITNSA-N",
+      "alias": "ACon1_002319",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "ULPUBSPPYRXUOZ-UHFFFAOYSA-N",
+      "alias": "[4-acetyloxy-5-(2,4-dioxopyrimidin-1-yl)-2-(hydroxymethyl)oxolan-3-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "UPNVKIZABMRHNR-BBYAVRKXSA-N",
+      "alias": "Tulipinolide_major",
+      "reason": "putative_or_collision_metadata"
+    },
+    {
+      "inchikey": "UQNONRHPSCIIJO-SKVKQCJPSA-N",
+      "alias": "(3aR,5S,5aS,9aR)-5,8-dimethyl-1-methylidene-4,5,5a,6,9,9a-hexahydro-3aH-azuleno[6,5-b]furan-2,7-dione_major",
+      "reason": "putative_or_collision_metadata"
+    },
+    {
+      "inchikey": "URBFANMWRODMRT-QQBJTHHXSA-N",
+      "alias": "ACon1_001313",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "UTAIBCIOWTVUDJ-UHFFFAOYSA-N",
+      "alias": "MEGxm0_000408",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "UTGBBPSEQPITLF-IXRUDUFRSA-N",
+      "alias": "terpestacin_major",
+      "reason": "putative_or_collision_metadata"
+    },
+    {
+      "inchikey": "UVZZDDLIOJPDKX-KXYXOSITSA-N",
+      "alias": "MEGxm0_000074",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "UWTOESDPWKUNBD-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "VKPCNUJDGKJSIE-HUSRUCGJSA-N",
+      "alias": "MEGxp0_000500",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "VLHOVPZUSXEINR-UHFFFAOYSA-N",
+      "alias": "[1-(7-methoxy-2-oxochromen-8-yl)-3-methyl-2-oxobutyl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "VMCFTVWDHVWSOB-GXDHUFHOSA-N",
+      "alias": "ACon1_000415",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "VNVWHMGDHZPSCD-RQZCQDPDSA-N",
+      "alias": "ACon1_000448",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "VQIUANBMNYRFDG-KKWQFPQQSA-N",
+      "alias": "MEGxp0_000691",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "WBEFPLHFVLPKHQ-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "WKPLWDFQTVJLIX-WFYKWJGLSA-N",
+      "alias": "MEGxm0_000342",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "WTFIFQXTQCYJKU-JWVODRKRSA-N",
+      "alias": "(2R)-2-[(1E,3E)-penta-1,3-dienyl]-2,3-dihydro-1-benzofuran-5,7-diol_major",
+      "reason": "putative_or_collision_metadata"
+    },
+    {
+      "inchikey": "WTOYNGQRGOLPNU-UHFFFAOYSA-N",
+      "alias": "MEGxp0_000018",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "WUGDNVYHMVWTAP-GVBKEDSZSA-N",
+      "alias": "MEGxp0_000232",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "WYUMOABRAAEBAO-XMIJWRSESA-N",
+      "alias": "MEGxp0_000610",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "XNXXZRQPTAQILV-CRVFWCNJSA-N",
+      "alias": "MEGxm0_000506",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "XOEFANNJIKAWGX-BTBZVGSOSA-N",
+      "alias": "MEGxm0_000051",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "XPDBYTRMUWQPTF-UHFFFAOYSA-N",
+      "alias": "[1-(3,5-dihydroxyphenyl)-12-hydroxytridecan-2-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "XTMCUUVQSGQNSI-UHFFFAOYSA-N",
+      "alias": "[5-ethenyl-3-hydroxy-4-(3-hydroxyprop-1-en-2-yl)-2-(3-methoxy-3-oxoprop-1-en-2-yl)-5-methylcyclohexyl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "XUUBSPXZCBAWET-AACVHOIVSA-N",
+      "alias": "MEGxm0_000278",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "YCKKAXDZPAQYOF-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "YHDASZCBNPALIL-HQPFYNDMSA-N",
+      "alias": "(9aR,9bS)-9a-hydroxy-6,9-dimethyl-3-methylidene-3a,4,5,9b-tetrahydroazuleno[4,5-b]furan-2,7-dione_major",
+      "reason": "putative_or_collision_metadata"
+    },
+    {
+      "inchikey": "YLCJNMGKCHGJRF-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "YUXPMUIKXCUNQY-DCCRIRPPSA-N",
+      "alias": "MEGxp0_000230",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "YYIPXGSVFFKMDD-UHFFFAOYSA-N",
+      "alias": "MEGxp0_000041",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "YYLAARMDRFESOL-CVAYNVNESA-N",
+      "alias": "MEGxm0_000130",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "ZAUMFTVHLHASMN-UHFFFAOYSA-N",
+      "alias": "methyl",
+      "reason": "generic_substituent_or_fragment"
+    },
+    {
+      "inchikey": "ZGVSETXHNHBTRK-UJAAUXMUSA-N",
+      "alias": "MEGxp0_001776",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "ZHNZMTIAIBWJJB-KLULDUBUSA-N",
+      "alias": "MEGxp0_000919",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "ZLOTZUGMLIVSJQ-XFFHRFSLSA-N",
+      "alias": "MEGxp0_000370",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "ZNVUQZAVBXKEGF-WUXMJOGZSA-N",
+      "alias": "MEGxp0_000831",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "ZRTBPOAMWLLGTO-BIUINBLHSA-N",
+      "alias": "MEGxp0_000233",
+      "reason": "identifier_or_internal_code"
+    },
+    {
+      "inchikey": "ZTDFZLVUIVPZDU-VANIYDICSA-N",
+      "alias": "cnicin_major",
+      "reason": "putative_or_collision_metadata"
+    },
+    {
+      "inchikey": "ZTRKHQRICPULDJ-UHFFFAOYSA-N",
+      "alias": "[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]",
+      "reason": "bracketed_fragment_only"
+    },
+    {
+      "inchikey": "ZZDVZVBAZHPHLY-UXXRCYHCSA-N",
+      "alias": "MEGxp0_000481",
+      "reason": "identifier_or_internal_code"
+    }
+  ]
+}

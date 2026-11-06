@@ -1,0 +1,32 @@
+{
+  "path": "/Users/zizi/Desktop/Mssystem_shared_data/local_library.db",
+  "database_size_bytes": 5339983872,
+  "database_mtime_ns": 1785291886672916277,
+  "recomputed_at": "2026-07-29T02:58:15.814524+00:00",
+  "polarity_rule_version": "v7-explicit-ion-mode_then-adduct_then-unambiguous-signed-charge-2",
+  "polarity_precedence": [
+    "explicit ion_mode when physically present",
+    "specific adduct sign",
+    "unambiguous signed charge (+1/-1/1+/1-; bare positive magnitude ignored)",
+    "UNKNOWN (never guessed from precursor m/z)"
+  ],
+  "quick_check": "ok",
+  "total_spectra": 4669839,
+  "positive_spectra": 2741588,
+  "negative_spectra": 1767206,
+  "unknown_polarity_spectra": 161045,
+  "polarity_metadata_conflicts": 0,
+  "mapped_compounds": 1436450,
+  "compounds_with_positive": 1067402,
+  "compounds_with_negative": 665609,
+  "both_polarities": 302261,
+  "positive_only_compounds": 765141,
+  "negative_only_compounds": 363348,
+  "unknown_only_compounds": 5700,
+  "coverage_percent": {
+    "positive": 74.308,
+    "negative": 46.337,
+    "both": 21.042
+  },
+  "interpretation": "Coverage uses one runtime-identical polarity rule. Unknown and conflict counts are explicit; no spectrum is assigned from precursor m/z alone."
+}

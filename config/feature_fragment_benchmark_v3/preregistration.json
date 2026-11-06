@@ -1,0 +1,92 @@
+{
+  "schema_version": "3.0.0",
+  "preregistration_id": "v15-instrument-conditioned-feature-fragment-v3-20260827",
+  "frozen_on": "2026-08-27",
+  "runtime_effect": "none_fail_closed",
+  "primary_endpoint": "For each frozen exact-domain rule, the sealed-test LR+ lower 95% bound exceeds 1 after Holm family-wise correction and every sample-size, source, laboratory, formula, metadata, isolation, and interval-width gate passes.",
+  "analysis_unit": "one two-dimensional molecular connectivity identity per exact acquisition stratum",
+  "replication_rule": "technical scans and mirror copies collapse first by acquisition_replication_group_id; peak content cannot create a new experimental replicate",
+  "background_definition": "all eligible non-target identities in the identical exact acquisition stratum",
+  "splitting": {
+    "development_fraction": 0.8,
+    "sealed_test_fraction": 0.2,
+    "discovery_fraction_within_development": 0.75,
+    "calibration_fraction_within_development": 0.25,
+    "seed": "v15-feature-fragment-benchmark-v3-origin-isolated",
+    "sealed_test_zero_overlap": ["two-dimensional identity", "formula family", "source", "laboratory", "mirror cluster", "raw acquisition group"],
+    "discovery_calibration_zero_overlap": ["two-dimensional identity", "formula family", "mirror cluster", "raw acquisition group"],
+    "infeasible_action": "stop before rule discovery and report an origin-isolation failure"
+  },
+  "primary_thresholds": {
+    "minimum_target_identities": 30,
+    "minimum_background_identities": 30,
+    "minimum_target_formula_families": 10,
+    "minimum_background_formula_families": 10,
+    "minimum_target_sources": 3,
+    "minimum_background_sources": 3,
+    "minimum_target_laboratories": 2,
+    "minimum_background_laboratories": 2,
+    "lr_positive_lower_95_minimum_exclusive": 1.0,
+    "maximum_log_lr_interval_half_width": 0.6931471805599453,
+    "holm_family_wise_alpha": 0.05
+  },
+  "discovery": {
+    "benjamini_hochberg_q_maximum": 0.05,
+    "minimum_exploratory_lr_positive": 2.0,
+    "calibration_freezes_all_rule_parameters_before_test": true,
+    "test_may_create_or_select_rules": false
+  },
+  "confidence_intervals": {
+    "analytic_method": "Haldane-Anscombe corrected log risk-ratio interval",
+    "cluster_bootstrap_order": ["source", "laboratory", "identity"],
+    "cluster_bootstrap_replicates": 2000,
+    "reported_interval": "union of analytic and cluster-bootstrap 95% intervals",
+    "random_seed": 151503
+  },
+  "negative_evidence": {
+    "required_lr_negative_upper_95_maximum_exclusive": 1.0,
+    "maximum_log_lr_interval_half_width": 0.6931471805599453,
+    "verified_precursor_isolation_required": true,
+    "reported_scan_range_containing_precursor_required": true,
+    "forbidden_for_in_source_or_composite_dia": true,
+    "missing_metadata_action": "unavailable, never zero"
+  },
+  "collision_energy": {
+    "cross_unit_conversion": false,
+    "nce_model_includes_precursor_mz_and_charge": true,
+    "fixed_settings_at_least_four": "natural cubic spline with three degrees of freedom when at least 20 identities are shared",
+    "exactly_three_settings": "categorical fixed-setting model",
+    "sparse_fixed_settings": "five-native-unit bins; each bin must independently pass every primary threshold",
+    "composite_program": "retain the full vector and weights; no midpoint substitution",
+    "rolling_or_dynamic_program": "retain the reported equation",
+    "mse_bbcid_all_ions": "positive evidence only after verified deconvolution; no LR-"
+  },
+  "fragment_dependence": {
+    "representative_per_fragment_pathway_group": 1,
+    "representative_is_frozen_before_test": true,
+    "query_time_maximum_absolute_lr_selection": false,
+    "sum_across_groups_only_if_absolute_residual_phi_below": 0.2,
+    "source_direction_consistency_required": true
+  },
+  "evidence_grades": {
+    "G0": "metadata unavailable; no quantitative likelihood ratio",
+    "G1": "observed fragment only",
+    "G2": "provisional exact-domain class association",
+    "G3": "sealed-test validated LR+ class support",
+    "G4": "sealed-test validated LR+ and LR- class support"
+  },
+  "claim_limits": {
+    "exact_identity_upgrade": false,
+    "formula_upgrade": false,
+    "isomer_resolution": false,
+    "standard_confirmation": false,
+    "database_identifier_may_be_compound_name": false
+  },
+  "failure_action": {
+    "rule_status": "provisional_or_unavailable",
+    "runtime_exported_rule_count": 0,
+    "runtime_ranking_enabled": false,
+    "score_contribution": 0.0,
+    "next_state": "waiting_user_review"
+  }
+}

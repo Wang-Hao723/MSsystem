@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this MSsystem source supplement, please cite the associated manuscript and this software snapshot."
+title: "MSsystem: LC-MS/MS spectral retrieval and evidence governance"
+type: software
+authors:
+  - family-names: Wang
+    given-names: Hao
+  - family-names: Zhou
+    given-names: Hua
+version: "1.0.0"
+date-released: 2026-11-02
+license: MIT
+keywords:
+  - mass spectrometry
+  - LC-MS/MS
+  - spectral library retrieval
+  - metabolite annotation
+  - evidence governance
+

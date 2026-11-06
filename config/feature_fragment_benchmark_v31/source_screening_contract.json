@@ -1,0 +1,64 @@
+{
+  "schema_version": "3.1.0",
+  "contract_id": "v15-feature-fragment-v31-dataset-specific-source-screen-20260827",
+  "admissible_statuses": [
+    "quantitative_candidate",
+    "audit_only",
+    "excluded"
+  ],
+  "quantitative_candidate_requirements": [
+    "dataset_specific_origin",
+    "stable_per_spectrum_accession",
+    "stable_record_url",
+    "record_or_dataset_license_permits_analysis",
+    "reference_identity_with_full_inchikey_and_formula",
+    "source_origin_id",
+    "laboratory_id",
+    "exact_instrument_model",
+    "activation_literal",
+    "native_collision_energy_program",
+    "polarity_adduct_and_charge",
+    "scan_range_contains_precursor",
+    "precursor_selection_verified",
+    "raw_acquisition_mapping_or_verified_single_compound_material"
+  ],
+  "negative_evidence_additional_requirements": [
+    "verified_precursor_isolation_window",
+    "not_all_ions_mse_bbcid_or_in_source",
+    "reported_scan_range_contains_precursor"
+  ],
+  "repository_policies": [
+    {
+      "repository": "MassBank",
+      "status_without_complete_per_spectrum_fields": "audit_only",
+      "rule": "screen each contributor dataset and accession; a repository-wide record count is not an independent source count"
+    },
+    {
+      "repository": "GNPS",
+      "status_without_dataset_and_spectrum_metadata": "audit_only",
+      "rule": "screen the named library or dataset, preserve per-spectrum license and provenance, and require a raw-file-to-spectrum mapping before quantitative use"
+    },
+    {
+      "repository": "MoNA",
+      "status_without_original_source_and_license": "audit_only",
+      "rule": "use as a locator; duplicate records do not create a new source, laboratory, identity, or acquisition replicate"
+    },
+    {
+      "repository": "NIST Tandem Mass Spectral Library",
+      "status": "excluded",
+      "rule": "commercial distributor content is outside the public-spectrum intake authorized for this task"
+    }
+  ],
+  "priority_query": {
+    "instrument_model": "Agilent 6546 LC/Q-TOF",
+    "required_assets": [
+      "public raw files",
+      "acquisition method",
+      "raw scan to exported spectrum map",
+      "reference identity table",
+      "license and attribution",
+      "source laboratory and study identifier"
+    ],
+    "status_without_all_required_assets": "audit_only"
+  }
+}

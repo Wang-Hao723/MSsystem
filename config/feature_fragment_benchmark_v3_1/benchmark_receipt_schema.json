@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mssystem.local/schema/feature-fragment-benchmark-receipt-v3.1.json",
+  "title": "V3.1 instrument-conditioned fragment benchmark receipt",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "status",
+    "runtime_state",
+    "next_state",
+    "input",
+    "base_v3_freeze",
+    "configuration_sha256",
+    "policy",
+    "mirrors",
+    "feasibility",
+    "rules",
+    "runtime",
+    "artifact_sha256"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.1.0"
+    },
+    "receipt_id": {
+      "const": "v15-feature-fragment-benchmark-v3.1-20260827"
+    },
+    "status": {
+      "enum": [
+        "infeasible_for_frozen_release",
+        "failed_closed",
+        "candidates_waiting_review"
+      ]
+    },
+    "runtime_state": {
+      "const": "fail_closed"
+    },
+    "next_state": {
+      "const": "waiting_user_review"
+    },
+    "runtime": {
+      "type": "object",
+      "required": [
+        "fail_closed_verified",
+        "runtime_exported_rule_count",
+        "runtime_ranking_enabled",
+        "score_contribution",
+        "runtime_files_modified"
+      ],
+      "properties": {
+        "fail_closed_verified": {
+          "const": true
+        },
+        "runtime_exported_rule_count": {
+          "const": 0
+        },
+        "runtime_ranking_enabled": {
+          "const": false
+        },
+        "score_contribution": {
+          "const": 0.0
+        },
+        "runtime_files_modified": {
+          "const": false
+        }
+      }
+    }
+  }
+}

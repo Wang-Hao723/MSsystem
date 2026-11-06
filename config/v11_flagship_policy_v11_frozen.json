@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "algorithm_id": "mssystem-v11-flagship-chem-entity-ranker-1.2.1",
+  "deployment_state": "production",
+  "decision_unit": "candidate_independent_precursor_entity",
+  "candidate_pool": {
+    "maximum_candidates_per_scan": 20,
+    "shortlist_size": 5,
+    "missing_from_truncated_topk_is_negative_evidence": false,
+    "connectivity_identity": "bounded_tautomer_standardized_nonisomeric_structure_then_inchikey",
+    "collapse_stereoisomers": true,
+    "tautomer_standardization": {
+      "enabled": true,
+      "maximum_tautomers": 32,
+      "maximum_transforms": 100,
+      "used_for_identity_collapse_only": true
+    }
+  },
+  "scan_score": {
+    "cosine": 0.35,
+    "entropy": 0.25,
+    "reverse_match": 0.15,
+    "mass_accuracy": 0.10,
+    "fragment_coverage": 0.10,
+    "intensity_agreement": 0.05,
+    "reciprocal_rank_fraction": 0.30,
+    "spectral_fraction": 0.70
+  },
+  "entity_score": {
+    "mean_collision_energy_support": 0.45,
+    "median_collision_energy_support": 0.30,
+    "collision_energy_coverage": 0.15,
+    "collision_energy_top1_fraction": 0.10
+  },
+  "collision_energy": {
+    "bin_width": 0.5,
+    "unknown_values_share_one_bin": true,
+    "technical_replicates_are_independent_votes": false,
+    "distinct_energy_bins_are_independent_votes": false,
+    "distinct_energy_bins_are_separate_measurement_conditions": true
+  },
+  "reference_provenance": {
+    "source_family_unit": "normalized_dataset_source",
+    "source_diversity_saturation": 3,
+    "spectrum_accessions_are_independent_votes": false,
+    "source_diversity_affects_score": false
+  },
+  "identity_registry": {
+    "enabled": true,
+    "path": "config/canonical_name_identity_registry.json",
+    "sha256": "a65b333256213878d0fb412042bd86c053c16d35d5c31bd211113b805f88e2ef",
+    "required": true,
+    "exact_normalized_name_and_formula_required": true,
+    "ground_truth_inputs_used": false,
+    "unresolved_is_neutral": true
+  },
+  "chemistry_gate": {
+    "parent_mass_tolerance_ppm": 25.0,
+    "parent_mass_tolerance_da": 0.02,
+    "supported_fragmentation_adducts": ["[M+H]+", "[M-H]-", "[M]+", "[M]-"],
+    "candidate_mass_inference_adducts_positive": ["[M+H]+", "[M]+", "[M+Na]+", "[M+NH4]+", "[M+K]+"],
+    "candidate_mass_inference_adducts_negative": ["[M-H]-", "[M]-", "[M+Cl]-", "[M+FA-H]-", "[M+Hac-H]-"],
+    "candidate_independent_formula_adduct_contradiction_is_veto": true,
+    "candidate_library_adduct_contradiction_is_veto": false,
+    "missing_formula_or_adduct_is_negative_evidence": false,
+    "mass_only_neutral_loss_is_mechanism": false
+  },
+  "decision": {
+    "minimum_entity_score": 0.50,
+    "minimum_connectivity_margin": 0.04,
+    "minimum_distinct_collision_energies_for_connectivity": 2,
+    "minimum_winner_collision_energy_support": 2,
+    "isomer_group_margin": 0.05,
+    "single_spectrum_exact_structure_allowed": false,
+    "stereochemistry_claimed": false,
+    "score_is_probability": false
+  },
+  "forbidden_ranking_inputs": [
+    "expert_score",
+    "classification",
+    "biosynthetic_pathway",
+    "candidate_pathway_alignment",
+    "language_model_output",
+    "legacy_confidence_label"
+  ]
+}

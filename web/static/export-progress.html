@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MSsystem · 导出文件</title>
+<style>
+body{font:16px/1.7 system-ui,sans-serif;background:#f4f7fb;color:#203249;margin:0;padding:8vh 24px}
+main{max-width:760px;margin:auto;background:white;padding:36px;border-radius:16px;border:1px solid #dce4ee}
+h1{font-size:26px;margin:0 0 16px}progress{width:100%;height:20px}#sample{overflow-wrap:anywhere;color:#526579}
+a{color:#1459ac}#download{display:inline-block;background:#1459ac;color:white;padding:12px 22px;border-radius:8px;text-decoration:none}#download[hidden]{display:none}
+small{color:#526579}#error{color:#a51f25;white-space:pre-wrap}
+</style>
+<main><h1>导出文件</h1><p id="status" role="status">正在读取导出进度…</p>
+<progress id="progress" max="1" value="0"></progress><p id="sample"></p><p id="error"></p>
+<a id="download" hidden>下载 文件</a>
+<p><small>生成任务在本机后台执行。关闭此页面不影响生成；完成后可以再次打开本链接下载。</small></p>
+<a href="/#export">返回报告与导出</a></main>
+<script>
+const phaseNames = {reading_results:'读取结果', checking_evidence:'核验证据', writing_csv:'写入 CSV', packing_raw_peaks:'打包原始峰附件', writing_report:'生成报告', saving:'保存并校验文件', verifying_library:'核验谱库文件', preparing:'准备导出', waiting_export_slot:'等待前一个导出释放资源', validating_sources:'核验报告数据', projecting_results:'整理报告结果', rendering_worksheets:'写入工作表', styling_workbook:'设置表格格式', rendering_raw_peaks:'写入完整原始峰', finalizing_xlsx:'压缩工作簿', xlsx_ready:'工作簿已生成'};
+const jobId = new URLSearchParams(location.search).get('job');
+const statusNode = document.getElementById('status');
+const bar = document.getElementById('progress');
+let names = {};
+fetch('/api/tasks?status=completed').then(r=>r.json()).then(data=>{
+  (data.tasks || []).forEach(task=>{names[task.id]=task.filename;});
+}).catch(()=>{});
+async function poll() {
+  if (!/^[a-f0-9]{32}$/.test(jobId || '')) { statusNode.textContent='导出链接无效'; return; }
+  try {
+    const response = await fetch(`/api/export/jobs/${jobId}`, {cache:'no-store'});
+    if (!response.ok) throw new Error('无法读取导出任务，请稍后重试');
+    const job = await response.json();
+    bar.max = job.total;
+    if (job.status === 'queued' || (job.request?.mode === 'single' && job.status === 'running')) bar.removeAttribute('value'); else bar.value = job.completed;
+    document.getElementById('sample').textContent = job.current_task && job.status === 'running'
+      ? '当前样本：' + (names[job.current_task] || job.current_task) : '';
+    if (job.status === 'completed') {
+      const failed = Number(job.headers['x-mssystem-failed-tasks'] || 0);
+      statusNode.textContent = (job.stale ? '历史导出文件，重新生成请回到导出页面。 ' : '') + `文件已生成：${job.exported ?? job.total} 个样本，失败 ${failed} 个。`;
+      const link = document.getElementById('download');
+      link.href = `/api/export/jobs/${jobId}/download`; link.hidden = false;
+      return;
+    }
+    if (job.status === 'failed') {
+      statusNode.textContent = '导出失败'; document.getElementById('error').textContent=job.error; return;
+    }
+    statusNode.textContent = job.status === 'queued' ? '正在等待前一个导出任务完成…'
+      : `已处理 ${job.completed} / ${job.total} 个样本；成功 ${job.exported || 0}，失败 ${job.failed || 0}。当前：${phaseNames[job.phase] || job.phase}`;
+  } catch (error) { statusNode.textContent=error.message+'，正在重新连接…'; }
+  setTimeout(poll, 2500);
+}
+poll();
+</script></html>

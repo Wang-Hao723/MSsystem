@@ -1,0 +1,23 @@
+{
+  "catalog_id": "mssystem-v16-report-compound-roles",
+  "catalog_version": "20260914.1",
+  "scope": "candidate_role_for_report_selection_only",
+  "annotations": {
+    "FKMHSNTVILORFA-UHFFFAOYSA-N": {
+      "reviewed_name": "Triethylene glycol monododecyl ether",
+      "aliases": ["Laureth-3", "Triethylene Glycol Monododecyl Ether", "2-(2-(2-(Dodecyloxy)ethoxy)ethoxy)ethanol"],
+      "formula": "C18H38O4",
+      "smiles": "CCCCCCCCCCCCOCCOCCOCCO",
+      "pubchem_cid": 76458,
+      "compound_role": "external_contaminant",
+      "contaminant_category": "alcohol_ethoxylate_surfactant",
+      "role_annotation_scope": "exact_full_inchikey_verified_identity",
+      "note_cn": "该候选对应 Laureth-3 类非离子表面活性剂；从植物内源正文候选表排除，保留在外源复核记录。谱库匹配不证明样本中实际存在该物质，也不确定污染来源。",
+      "identity_source": "https://pubchem.ncbi.nlm.nih.gov/compound/Triethylene-glycol-monododecyl-ether",
+      "identity_property_source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/76458/property/InChIKey,CanonicalSMILES,MolecularFormula/JSON",
+      "role_annotation_source": "https://www.makingcosmetics.com/on/demandware.static/-/Sites-makingcosmetics-master/default/dw63fd2a16/fact-sheets/fact-sheet-laureth-3-2.pdf",
+      "role_source_scope_note": "Manufacturer describes the commercial Laureth-3 material as an emulsifier and surfactant. Commercial material can be an ethoxylate distribution; the report rule is restricted to the exact PubChem 76458 structure and does not infer a homolog-wide exclusion.",
+      "reviewed_at": "2026-09-14"
+    }
+  }
+}

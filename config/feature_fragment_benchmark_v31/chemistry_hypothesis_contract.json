@@ -1,0 +1,29 @@
+{
+  "schema_version": "3.1.0",
+  "contract_id": "v15-feature-fragment-v31-chemistry-hypothesis-20260827",
+  "active_manual_fragment_rules": [],
+  "rule_generation": "data_discovery_with_source_backed_hypotheses_only",
+  "formula_compatibility_levels": [
+    "compatible",
+    "ambiguous",
+    "incompatible"
+  ],
+  "hard_rejection_allowed_only_when": [
+    "parent and proposed product or neutral-loss formulas parse without ambiguity",
+    "adduct, charge, radical, and isotope assumptions are explicit",
+    "the proposed elemental balance is impossible under those frozen assumptions"
+  ],
+  "ambiguous_action": "retain for audit and do not count formula compatibility as positive or negative evidence",
+  "compatible_action": "mark chemical plausibility only; do not add a fixed score and do not change the empirical likelihood ratio",
+  "seed_requirements": [
+    "primary paper, textbook, or official technical source",
+    "chemical class scope",
+    "adduct and polarity scope",
+    "activation and instrument scope",
+    "native collision-energy scope when reported",
+    "mass tolerance",
+    "positive and negative claim limits",
+    "fragment-pathway multiplicity group"
+  ],
+  "joint_rules": "two fragments may enter only as one jointly estimated event after the single-fragment rule family is frozen"
+}

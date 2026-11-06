@@ -1,0 +1,115 @@
+{
+  "schema_version": "3.1.0",
+  "reviewed_on": "2026-08-27",
+  "sources": [
+    {
+      "source_id": "PSI-MS-CV-CURRENT",
+      "type": "official_standard_vocabulary",
+      "title": "Proteomics Standards Initiative Mass Spectrometry controlled vocabulary",
+      "url": "https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.obo",
+      "supports": [
+        "activation terms",
+        "native collision-energy fields",
+        "scan-window fields",
+        "isolation-window fields"
+      ]
+    },
+    {
+      "source_id": "SCIEX-TRIPLETOF-5600PLUS-GUIDE",
+      "type": "official_vendor_manual",
+      "title": "TripleTOF 5600+ System User Guide",
+      "url": "https://sciex.com/content/dam/SCIEX/pdf/customer-docs/user-guide/5600-system-user-guide-en.pdf",
+      "supports": [
+        "TripleTOF 5600+ architecture",
+        "Q2 collision-cell context",
+        "model-matched audit trail"
+      ]
+    },
+    {
+      "source_id": "SCIEX-X500-QTOF-GUIDE",
+      "type": "official_vendor_manual",
+      "title": "X500 QTOF System User Guide",
+      "url": "https://sciex.com/content/dam/SCIEX/pdf/customer-docs/user-guide/x500-qtof-system-user-guide-en.pdf",
+      "supports": [
+        "X500-series architecture",
+        "Q2 collision-cell context",
+        "model-matched audit trail"
+      ]
+    },
+    {
+      "source_id": "MONA-LICENSE",
+      "type": "official_repository_documentation",
+      "title": "MoNA License Documentation",
+      "url": "https://mona.fiehnlab.ucdavis.edu/documentation/license",
+      "supports": [
+        "site-level license statement",
+        "need to retain origin-specific provenance for aggregated records"
+      ]
+    },
+    {
+      "source_id": "USI-2021",
+      "type": "peer_reviewed_primary",
+      "title": "Universal Spectrum Identifier for mass spectra",
+      "journal": "Nature Methods",
+      "year": 2021,
+      "doi": "10.1038/s41592-021-01184-6",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8405201/",
+      "supports": [
+        "USI collection, run, index type, and index value structure",
+        "stable public spectrum addressing"
+      ]
+    },
+    {
+      "source_id": "HOANG-2024-CROSS-PLATFORM-COMPLETE",
+      "type": "peer_reviewed_primary",
+      "title": "Tandem Mass Spectrometry across Platforms",
+      "journal": "Analytical Chemistry",
+      "year": 2024,
+      "volume": "96",
+      "issue": "14",
+      "pages": "5478-5488",
+      "doi": "10.1021/acs.analchem.3c05576",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11007677/",
+      "supports": [
+        "platform-dependent fragmentation",
+        "collision-energy-dependent fragmentation",
+        "no assumed cross-platform equivalence"
+      ]
+    },
+    {
+      "source_id": "SZABO-2021-QTOF-HCD-COMPLETE",
+      "type": "peer_reviewed_primary",
+      "title": "Comparison of peptide fragmentation on Bruker Maxis II QTOF CID and Thermo Q Exactive Focus HCD",
+      "journal": "Journal of Mass Spectrometry",
+      "year": 2021,
+      "volume": "56",
+      "article": "e4693",
+      "doi": "10.1002/jms.4693",
+      "pmid": "33277714",
+      "url": "https://real.mtak.hu/138822/1/paper-QTofOrbitrapComparison-revised-final-notrk.pdf",
+      "supports": [
+        "instrument-specific energy matching in the reported peptide experiment",
+        "no general NCE-to-eV conversion for this benchmark"
+      ]
+    },
+    {
+      "source_id": "DAVIDSON-2021-INSOURCE-BEAM-COMPLETE",
+      "type": "peer_reviewed_primary",
+      "title": "Comparison of in-source CID and beam-type CID using a high-resolution QTOF",
+      "journal": "Journal of Mass Spectrometry",
+      "year": 2021,
+      "doi": "10.1002/jms.4679",
+      "pmid": "33410270",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33410270/",
+      "supports": [
+        "in-source and collision-cell fragmentation are distinct acquisition conditions",
+        "fragment abundance changes with applied energy"
+      ]
+    }
+  ],
+  "interpretation_limits": [
+    "vendor documentation defines method fields and architecture but does not validate a cross-vendor likelihood ratio",
+    "a formula reported in one peptide experiment is not imported as a general NCE-to-eV transformation",
+    "repository license documentation does not replace per-spectrum origin and rights tracking"
+  ]
+}

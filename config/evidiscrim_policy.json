@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0.0",
+  "policy_id": "evidiscrim-ms-candidate-contrast-v2.0.0-shadow-20260807",
+  "module_state": "shadow",
+  "candidate_scope": {
+    "maximum_candidates_per_spectrum": 5,
+    "require_same_normalized_formula": true,
+    "require_different_2d_connectivity": true,
+    "require_same_explicit_adduct": true,
+    "stereoisomer_resolution_allowed": false
+  },
+  "peak_alignment": {
+    "mz_tolerance_da": 0.02,
+    "observed_energy_tolerance": 0.01,
+    "minimum_relative_intensity": 0.01,
+    "maximum_diagnostic_ions_per_pair": 12
+  },
+  "diagnostic_evidence": {
+    "minimum_absolute_prediction_delta": 0.12,
+    "minimum_diagnostic_ions": 2,
+    "minimum_total_diagnostic_weight": 0.08,
+    "minimum_absolute_pair_fit_margin": 0.05,
+    "observed_presence_threshold": 0.01,
+    "missing_observed_peak_penalty_weight": 0.35
+  },
+  "prediction_uncertainty": {
+    "minimum_independent_architecture_families": 2,
+    "require_common_architecture_families_per_candidate_pair": true,
+    "within_architecture_variance_weight": 1.0,
+    "apply_reliability_weight": true,
+    "singleton_resolution_allowed": false,
+    "method": "equal_family_aligned_between_architecture_sd_plus_within_architecture_variance"
+  },
+  "bounded_execution": {
+    "selection_strategy": "source_order_unique_eligible_candidate_pair_signature",
+    "deduplicate_candidate_pair_signatures": true,
+    "reason": "Repeated injections of the same candidate competition must not consume the bounded default analysis budget."
+  },
+  "energy_selection": {
+    "default_collision_energy_grid": [10.0, 20.0, 40.0],
+    "objective": "maximize_worst_pair_spectral_distribution_divergence",
+    "minimum_recommendable_worst_pair_separation": 0.10,
+    "require_all_eligible_pairs_at_selected_energy": true,
+    "cross_instrument_conversion_allowed": false,
+    "universal_complete_fragmentation_assumed": false
+  },
+  "hard_invariants": [
+    "candidate-conditioned predictions are not independent evidence",
+    "the artifact cannot change retrieval ranking confidence claim scope or release",
+    "same-connectivity stereoisomers are explicitly out of scope for the current 2D forward model",
+    "a singleton model or repeated runs of one architecture cannot resolve a candidate pair or recommend collision energy",
+    "missing or invalid structures cause abstention rather than negative identity evidence",
+    "scores are uncalibrated diagnostic fits and spectral-distribution divergences not probabilities",
+    "a collision-energy recommendation is planning-only and remains instrument-unit native",
+    "no collision energy is claimed to fragment every compound completely",
+    "promotion requires identity-disjoint held-out candidate-pair validation and project-level false-discovery non-inferiority"
+  ]
+}

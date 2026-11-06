@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "models": [
+    {
+      "id": "isopair-metric-v2-noprec",
+      "purpose": "Same-formula 2-D connectivity counterfactual ranking and selective High veto",
+      "deployment_state": "shadow_ranking_qualified_selective_high_veto_only",
+      "ranking_runtime_influence": false,
+      "selective_high_policy": "veto_existing_high_only_never_promote",
+      "formula_conditioned_policy": "shadow_only_after_mix33_validation_regressed",
+      "identity_scope": "2d_connectivity_only",
+      "independent_family_confirmation": {
+        "ranking_gain_qualified": false,
+        "reason": "confidence_interval_crossed_zero_and_paired_test_not_significant"
+      },
+      "artifacts": [
+        {
+          "role": "lightgbm_model",
+          "path": "models/isopair_metric_v2_noprec/isopair_metric_v1.txt",
+          "required": true
+        },
+        {
+          "role": "runtime_config",
+          "path": "models/isopair_metric_v2_noprec/runtime_config.json",
+          "required": true
+        },
+        {
+          "role": "locked_evaluation",
+          "path": "models/isopair_metric_v2_noprec/locked_evaluation.json",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "isopair-deep-head-v1",
+      "purpose": "Research-only deep representation comparison",
+      "deployment_state": "rejected_negative_locked_evaluation",
+      "runtime_influence": false,
+      "artifacts": [
+        {
+          "role": "weights",
+          "path": "models/isopair_ms/isopair_ms_v1.pt",
+          "required": false
+        },
+        {
+          "role": "locked_evaluation",
+          "path": "models/isopair_ms/locked_evaluation.json",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "msfiddle-2.1.0-qtof",
+      "purpose": "Open-world molecular-formula candidate generation from measured QTOF MS/MS",
+      "deployment_state": "shadow_available",
+      "runtime_influence": false,
+      "output_scope": "molecular_formula_only",
+      "score_semantics": "model_candidate_score_not_probability_not_project_qvalue",
+      "artifacts": [
+        {
+          "role": "formula_model",
+          "path": "/Users/zizi/Desktop/Mssystem_model_assets/fiddle/fiddle_tcn_qtof.pt",
+          "sha256": "3a9e9c52fb8f37245ca97b2d404f42b45c39337ed30d0f54f43c3f835cd8fa87",
+          "required": false
+        },
+        {
+          "role": "rescore_model",
+          "path": "/Users/zizi/Desktop/Mssystem_model_assets/fiddle/fiddle_rescore_qtof.pt",
+          "sha256": "a7708f98a1564133dc517baf10a20e8eb18ddb2e454f3ea40b463e9a1083c37b",
+          "required": false
+        },
+        {
+          "role": "qtof_config",
+          "path": "/opt/anaconda3/envs/fiddle/lib/python3.10/site-packages/msfiddle/config/fiddle_tcn_qtof.yml",
+          "sha256": "89b83a642bd19eddea3cca22bff6b553d3c0cb61039a7b6db49a81d6ab22a1b5",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "fiora-os-v1.0.0-msnlib-v7",
+      "purpose": "Candidate-conditioned structure-to-MS/MS forward prediction and disagreement audit",
+      "deployment_state": "shadow_available",
+      "runtime_influence": false,
+      "training_domain": "MSnLib_v7_HCD",
+      "current_sample_domain_note": "QTOF spectra are projected to HCD and therefore domain shifted",
+      "artifacts": [
+        {
+          "role": "forward_model",
+          "path": "/Users/zizi/Desktop/fiora/fiora/resources/models/fiora_OS_v1.0.0.pt",
+          "sha256": "273807127861ca0ac8404962f111ff8628ba02e6beb5d1142d8772ced07443a0",
+          "required": false
+        },
+        {
+          "role": "runtime_entrypoint",
+          "path": "/opt/anaconda3/envs/fiora/bin/fiora-predict",
+          "sha256": "b16afbc7799c79671735d4fbb99063b6bc197687281c52b47f3f868f1e03f3c3",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "iceberg-massspecgym-open",
+      "purpose": "Alternative candidate-conditioned forward-spectrum model for future orthogonal comparison",
+      "deployment_state": "weights_available_adapter_not_qualified",
+      "runtime_influence": false,
+      "artifacts": [
+        {
+          "role": "dag_generation_checkpoint",
+          "path": "/Users/zizi/Desktop/ms-pred/weights/iceberg_dag_gen_msg_best.ckpt",
+          "sha256": "57a79845fba4293ab2332c1960baa1f0978f8958ccd733a6a96d4f76097640bf",
+          "required": false
+        },
+        {
+          "role": "intensity_checkpoint",
+          "path": "/Users/zizi/Desktop/ms-pred/weights/iceberg_dag_inten_msg_best.ckpt",
+          "sha256": "ab07f9097fb09c09e87bdc2c08e5500995fd12c1fb2ea2ee4f85b39673b40c0c",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "diffms-formula-conditioned",
+      "purpose": "Formula-conditioned de novo molecular-structure generation for future open-world recall",
+      "deployment_state": "code_available_checkpoint_unavailable",
+      "runtime_influence": false,
+      "source_revision": "814220bf0acf8433d8052e7f3e07be9fe7b6b9ca",
+      "artifacts": []
+    }
+  ]
+}

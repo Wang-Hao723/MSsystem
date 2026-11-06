@@ -1,0 +1,44 @@
+{
+  "schema_version": "3.1.0",
+  "registry_id": "v15-feature-fragment-public-source-amendments-v3.1",
+  "sources": [
+    {
+      "candidate_source": "MoNA (MassBank of North America)",
+      "official_url": "https://mona.fiehnlab.ucdavis.edu/",
+      "license_documentation_url": "https://mona.fiehnlab.ucdavis.edu/documentation/license",
+      "integration_status": "screened_not_integrated",
+      "permitted_use_in_v3_1": "origin-discovery register only",
+      "default_site_license_observation": "site content is described as CC BY 4.0",
+      "default_site_license_is_per_spectrum_proof": false,
+      "aggregator_counts_as_new_source_or_laboratory": false,
+      "blocking_fields": [
+        "frozen release identifier and asset hash",
+        "experimental rather than in-silico spectrum status",
+        "original repository record or study",
+        "origin source and laboratory",
+        "per-spectrum license and rights holder",
+        "exact vendor, model, analyzer, activation, collision-cell region, native CE program, scan range, polarity, adduct, precursor isolation",
+        "stable compound name and full structure key",
+        "cross-repository mirror linkage"
+      ],
+      "admission_action": "admit only an origin record that independently satisfies every V3.1 field and license gate; never count the MoNA aggregation layer as independent replication"
+    }
+  ],
+  "record_provenance_required": [
+    "repository",
+    "repository_release",
+    "accession",
+    "record_url",
+    "retrieval_date",
+    "record_sha256",
+    "origin_dataset_id",
+    "origin_study_id",
+    "laboratory_id",
+    "license_label",
+    "license_url",
+    "rights_holder",
+    "attribution"
+  ],
+  "license_failure_action": "quarantine_from_primary_and_quantitative_analysis",
+  "new_public_spectra_integrated_in_this_amendment": 0
+}

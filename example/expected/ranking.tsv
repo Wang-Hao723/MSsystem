@@ -1,0 +1,3 @@
+query	rank	candidate	inchikey	reference_accession	score	matched_peak_pairs
+MSBNK-IPB_Halle-PB002410	1	Quercetin	REFJWTPEDVJJIY-UHFFFAOYSA-N	MSBNK-RIKEN-PR040049	0.8596	5
+MSBNK-IPB_Halle-PB002412	1	Quercetin	REFJWTPEDVJJIY-UHFFFAOYSA-N	MSBNK-IPB_Halle-PB002411	0.6575	10

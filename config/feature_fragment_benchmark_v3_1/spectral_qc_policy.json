@@ -1,0 +1,37 @@
+{
+  "schema_version": "3.1.0",
+  "policy_id": "v15-feature-fragment-spectral-qc-v3.1-20260827",
+  "peak_presence": {
+    "minimum_relative_intensity": 0.01,
+    "minimum_relative_intensity_source": "frozen V3 rule implementation",
+    "mass_tolerance": {
+      "rule": "maximum_of_absolute_da_and_ppm",
+      "absolute_da": 0.01,
+      "ppm": 20.0
+    },
+    "minimum_deduplicated_peak_count_gate": {
+      "active": false,
+      "minimum": null,
+      "mz_window": null,
+      "activation_gate": "calibrate against labelled usable and unusable spectra, freeze before discovery, and record in a new amendment"
+    }
+  },
+  "precursor_purity": {
+    "required_for_lr_negative": true,
+    "minimum_fraction": null,
+    "threshold_status": "not_calibrated",
+    "unknown_action": "lr_negative_unavailable",
+    "future_threshold_gate": "estimate and freeze a same-domain threshold from linked MS1 isolation-window signals before any LR-negative analysis"
+  },
+  "shared_or_deconvoluted_peaks": {
+    "positive_observation_allowed": true,
+    "negative_evidence_allowed": false,
+    "reason": "absence is not interpretable without a validated deconvolution-specific detection floor"
+  },
+  "centroid_and_duplicate_handling": {
+    "input_representation": "retain the frozen V3 normalized peak list",
+    "reprocessing_allowed_in_this_amendment": false,
+    "future_change_requires_new_frozen_release": true
+  },
+  "cross_unit_conversion_allowed": false
+}

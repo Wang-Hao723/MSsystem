@@ -1,0 +1,2210 @@
+{
+  "alkaloid": {
+    "neg": {
+      "n_spectra": 33417,
+      "diagnostic_ions": [
+        {
+          "mz": 42.0125,
+          "freq": 0.251,
+          "n_support": 8371
+        }
+      ],
+      "neutral_losses": []
+    },
+    "pos": {
+      "n_spectra": 151044,
+      "diagnostic_ions": [
+        {
+          "mz": 91.0625,
+          "freq": 0.223,
+          "n_support": 33669
+        },
+        {
+          "mz": 95.0625,
+          "freq": 0.171,
+          "n_support": 25801
+        },
+        {
+          "mz": 79.0625,
+          "freq": 0.155,
+          "n_support": 23392
+        }
+      ],
+      "neutral_losses": []
+    }
+  },
+  "amino_acid": {
+    "neg": {
+      "n_spectra": 15380,
+      "diagnostic_ions": [
+        {
+          "mz": 42.0125,
+          "freq": 0.216,
+          "n_support": 3326
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 44.0125,
+          "freq": 0.244,
+          "n_support": 3750,
+          "annotation": "CO2"
+        }
+      ]
+    },
+    "pos": {
+      "n_spectra": 69999,
+      "diagnostic_ions": [],
+      "neutral_losses": [
+        {
+          "loss_da": 46.0125,
+          "freq": 0.158,
+          "n_support": 11026,
+          "annotation": "HCOOH"
+        }
+      ]
+    }
+  },
+  "coumarin": {
+    "neg": {
+      "n_spectra": 1495,
+      "diagnostic_ions": [
+        {
+          "mz": 161.0375,
+          "freq": 0.177,
+          "n_support": 265
+        },
+        {
+          "mz": 133.0375,
+          "freq": 0.176,
+          "n_support": 263
+        },
+        {
+          "mz": 117.0375,
+          "freq": 0.174,
+          "n_support": 260
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 44.0125,
+          "freq": 0.239,
+          "n_support": 357,
+          "annotation": "CO2"
+        },
+        {
+          "loss_da": 15.0375,
+          "freq": 0.163,
+          "n_support": 244,
+          "annotation": null
+        }
+      ]
+    },
+    "pos": {
+      "n_spectra": 11253,
+      "diagnostic_ions": [
+        {
+          "mz": 91.0625,
+          "freq": 0.273,
+          "n_support": 3077
+        },
+        {
+          "mz": 131.0625,
+          "freq": 0.198,
+          "n_support": 2223
+        },
+        {
+          "mz": 115.0625,
+          "freq": 0.184,
+          "n_support": 2074
+        },
+        {
+          "mz": 105.0875,
+          "freq": 0.17,
+          "n_support": 1918
+        },
+        {
+          "mz": 147.0625,
+          "freq": 0.164,
+          "n_support": 1850
+        },
+        {
+          "mz": 79.0625,
+          "freq": 0.164,
+          "n_support": 1844
+        },
+        {
+          "mz": 175.0625,
+          "freq": 0.16,
+          "n_support": 1800
+        },
+        {
+          "mz": 103.0625,
+          "freq": 0.158,
+          "n_support": 1779
+        }
+      ],
+      "neutral_losses": []
+    }
+  },
+  "flavonoid": {
+    "neg": {
+      "n_spectra": 8698,
+      "diagnostic_ions": [
+        {
+          "mz": 151.0125,
+          "freq": 0.394,
+          "n_support": 3427
+        },
+        {
+          "mz": 65.0125,
+          "freq": 0.247,
+          "n_support": 2146
+        },
+        {
+          "mz": 255.0375,
+          "freq": 0.241,
+          "n_support": 2098
+        },
+        {
+          "mz": 227.0375,
+          "freq": 0.241,
+          "n_support": 2094
+        },
+        {
+          "mz": 107.0375,
+          "freq": 0.234,
+          "n_support": 2038
+        },
+        {
+          "mz": 121.0375,
+          "freq": 0.211,
+          "n_support": 1835
+        },
+        {
+          "mz": 125.0375,
+          "freq": 0.211,
+          "n_support": 1831
+        },
+        {
+          "mz": 285.0625,
+          "freq": 0.198,
+          "n_support": 1725
+        },
+        {
+          "mz": 149.0375,
+          "freq": 0.196,
+          "n_support": 1702
+        },
+        {
+          "mz": 93.0375,
+          "freq": 0.193,
+          "n_support": 1681
+        },
+        {
+          "mz": 117.0375,
+          "freq": 0.193,
+          "n_support": 1675
+        },
+        {
+          "mz": 163.0125,
+          "freq": 0.191,
+          "n_support": 1659
+        },
+        {
+          "mz": 109.0375,
+          "freq": 0.19,
+          "n_support": 1649
+        },
+        {
+          "mz": 211.0625,
+          "freq": 0.184,
+          "n_support": 1602
+        },
+        {
+          "mz": 133.0375,
+          "freq": 0.184,
+          "n_support": 1600
+        },
+        {
+          "mz": 83.0375,
+          "freq": 0.179,
+          "n_support": 1557
+        },
+        {
+          "mz": 159.0625,
+          "freq": 0.178,
+          "n_support": 1549
+        },
+        {
+          "mz": 284.0375,
+          "freq": 0.178,
+          "n_support": 1546
+        },
+        {
+          "mz": 165.0375,
+          "freq": 0.176,
+          "n_support": 1531
+        },
+        {
+          "mz": 199.0625,
+          "freq": 0.17,
+          "n_support": 1483
+        },
+        {
+          "mz": 161.0375,
+          "freq": 0.17,
+          "n_support": 1478
+        },
+        {
+          "mz": 187.0625,
+          "freq": 0.169,
+          "n_support": 1473
+        },
+        {
+          "mz": 145.0375,
+          "freq": 0.168,
+          "n_support": 1463
+        },
+        {
+          "mz": 135.0125,
+          "freq": 0.167,
+          "n_support": 1456
+        },
+        {
+          "mz": 164.0125,
+          "freq": 0.163,
+          "n_support": 1416
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 162.0625,
+          "freq": 0.16,
+          "n_support": 1392,
+          "annotation": "己糖 hexose"
+        }
+      ]
+    },
+    "pos": {
+      "n_spectra": 35376,
+      "diagnostic_ions": [
+        {
+          "mz": 91.0625,
+          "freq": 0.173,
+          "n_support": 6128
+        },
+        {
+          "mz": 153.0375,
+          "freq": 0.155,
+          "n_support": 5490
+        }
+      ],
+      "neutral_losses": []
+    }
+  },
+  "glycoside": {
+    "neg": {
+      "n_spectra": 6329,
+      "diagnostic_ions": [
+        {
+          "mz": 101.0375,
+          "freq": 0.363,
+          "n_support": 2297
+        },
+        {
+          "mz": 113.0375,
+          "freq": 0.36,
+          "n_support": 2279
+        },
+        {
+          "mz": 85.0375,
+          "freq": 0.34,
+          "n_support": 2152
+        },
+        {
+          "mz": 89.0375,
+          "freq": 0.322,
+          "n_support": 2035
+        },
+        {
+          "mz": 71.0375,
+          "freq": 0.244,
+          "n_support": 1543
+        },
+        {
+          "mz": 161.0625,
+          "freq": 0.238,
+          "n_support": 1507
+        },
+        {
+          "mz": 73.0375,
+          "freq": 0.235,
+          "n_support": 1489
+        },
+        {
+          "mz": 59.0375,
+          "freq": 0.216,
+          "n_support": 1365
+        },
+        {
+          "mz": 125.0375,
+          "freq": 0.207,
+          "n_support": 1313
+        },
+        {
+          "mz": 59.0125,
+          "freq": 0.179,
+          "n_support": 1135
+        },
+        {
+          "mz": 87.0125,
+          "freq": 0.179,
+          "n_support": 1130
+        },
+        {
+          "mz": 99.0125,
+          "freq": 0.176,
+          "n_support": 1115
+        },
+        {
+          "mz": 119.0375,
+          "freq": 0.176,
+          "n_support": 1112
+        },
+        {
+          "mz": 71.0125,
+          "freq": 0.172,
+          "n_support": 1091
+        },
+        {
+          "mz": 95.0375,
+          "freq": 0.164,
+          "n_support": 1040
+        },
+        {
+          "mz": 83.0375,
+          "freq": 0.158,
+          "n_support": 997
+        },
+        {
+          "mz": 97.0375,
+          "freq": 0.156,
+          "n_support": 986
+        },
+        {
+          "mz": 57.0375,
+          "freq": 0.152,
+          "n_support": 960
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 162.0625,
+          "freq": 0.27,
+          "n_support": 1711,
+          "annotation": "己糖 hexose"
+        }
+      ]
+    },
+    "pos": {
+      "n_spectra": 188056,
+      "diagnostic_ions": [
+        {
+          "mz": 179.0625,
+          "freq": 0.257,
+          "n_support": 48311
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 46.0125,
+          "freq": 0.228,
+          "n_support": 42821,
+          "annotation": "HCOOH"
+        },
+        {
+          "loss_da": 162.0625,
+          "freq": 0.187,
+          "n_support": 35109,
+          "annotation": "己糖 hexose"
+        },
+        {
+          "loss_da": 180.0875,
+          "freq": 0.182,
+          "n_support": 34281,
+          "annotation": "己糖+H2O?"
+        },
+        {
+          "loss_da": 198.0875,
+          "freq": 0.179,
+          "n_support": 33724,
+          "annotation": null
+        },
+        {
+          "loss_da": 60.0375,
+          "freq": 0.152,
+          "n_support": 28565,
+          "annotation": "CH2CO+OH?"
+        }
+      ]
+    }
+  },
+  "lignan": {
+    "neg": {
+      "n_spectra": 3284,
+      "diagnostic_ions": [
+        {
+          "mz": 93.0375,
+          "freq": 0.213,
+          "n_support": 699
+        },
+        {
+          "mz": 121.0375,
+          "freq": 0.188,
+          "n_support": 616
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 15.0375,
+          "freq": 0.187,
+          "n_support": 614,
+          "annotation": null
+        }
+      ]
+    },
+    "pos": {
+      "n_spectra": 13650,
+      "diagnostic_ions": [
+        {
+          "mz": 91.0625,
+          "freq": 0.311,
+          "n_support": 4240
+        },
+        {
+          "mz": 79.0625,
+          "freq": 0.22,
+          "n_support": 2998
+        },
+        {
+          "mz": 95.0625,
+          "freq": 0.2,
+          "n_support": 2730
+        },
+        {
+          "mz": 105.0875,
+          "freq": 0.19,
+          "n_support": 2588
+        },
+        {
+          "mz": 103.0625,
+          "freq": 0.186,
+          "n_support": 2533
+        },
+        {
+          "mz": 107.0625,
+          "freq": 0.184,
+          "n_support": 2513
+        },
+        {
+          "mz": 115.0625,
+          "freq": 0.167,
+          "n_support": 2276
+        },
+        {
+          "mz": 121.0875,
+          "freq": 0.166,
+          "n_support": 2263
+        },
+        {
+          "mz": 131.0625,
+          "freq": 0.159,
+          "n_support": 2170
+        },
+        {
+          "mz": 135.0625,
+          "freq": 0.156,
+          "n_support": 2123
+        }
+      ],
+      "neutral_losses": []
+    }
+  },
+  "lipid": {
+    "neg": {
+      "n_spectra": 22940,
+      "diagnostic_ions": [
+        {
+          "mz": 281.2625,
+          "freq": 0.201,
+          "n_support": 4609
+        },
+        {
+          "mz": 255.2375,
+          "freq": 0.195,
+          "n_support": 4475
+        }
+      ],
+      "neutral_losses": []
+    },
+    "pos": {
+      "n_spectra": 640631,
+      "diagnostic_ions": [],
+      "neutral_losses": [
+        {
+          "loss_da": 17.0375,
+          "freq": 0.239,
+          "n_support": 153188,
+          "annotation": null
+        },
+        {
+          "loss_da": 46.0125,
+          "freq": 0.203,
+          "n_support": 129874,
+          "annotation": "HCOOH"
+        },
+        {
+          "loss_da": 60.0375,
+          "freq": 0.169,
+          "n_support": 108355,
+          "annotation": "CH2CO+OH?"
+        }
+      ]
+    }
+  },
+  "phenolic_acid": {
+    "neg": {
+      "n_spectra": 10611,
+      "diagnostic_ions": [
+        {
+          "mz": 93.0375,
+          "freq": 0.198,
+          "n_support": 2104
+        },
+        {
+          "mz": 135.0625,
+          "freq": 0.184,
+          "n_support": 1954
+        },
+        {
+          "mz": 121.0375,
+          "freq": 0.16,
+          "n_support": 1695
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 44.0125,
+          "freq": 0.309,
+          "n_support": 3277,
+          "annotation": "CO2"
+        }
+      ]
+    },
+    "pos": {
+      "n_spectra": 26221,
+      "diagnostic_ions": [
+        {
+          "mz": 91.0625,
+          "freq": 0.294,
+          "n_support": 7719
+        },
+        {
+          "mz": 95.0625,
+          "freq": 0.213,
+          "n_support": 5597
+        },
+        {
+          "mz": 79.0625,
+          "freq": 0.207,
+          "n_support": 5440
+        },
+        {
+          "mz": 81.0875,
+          "freq": 0.172,
+          "n_support": 4501
+        },
+        {
+          "mz": 105.0875,
+          "freq": 0.166,
+          "n_support": 4354
+        },
+        {
+          "mz": 107.0625,
+          "freq": 0.157,
+          "n_support": 4124
+        },
+        {
+          "mz": 67.0625,
+          "freq": 0.156,
+          "n_support": 4084
+        },
+        {
+          "mz": 93.0875,
+          "freq": 0.155,
+          "n_support": 4066
+        },
+        {
+          "mz": 89.0625,
+          "freq": 0.153,
+          "n_support": 4019
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 18.0125,
+          "freq": 0.156,
+          "n_support": 4089,
+          "annotation": "H2O"
+        }
+      ]
+    }
+  },
+  "quinone": {
+    "neg": {
+      "n_spectra": 518,
+      "diagnostic_ions": [
+        {
+          "mz": 211.0625,
+          "freq": 0.313,
+          "n_support": 162
+        },
+        {
+          "mz": 210.0375,
+          "freq": 0.286,
+          "n_support": 148
+        },
+        {
+          "mz": 183.0625,
+          "freq": 0.247,
+          "n_support": 128
+        },
+        {
+          "mz": 227.0375,
+          "freq": 0.245,
+          "n_support": 127
+        },
+        {
+          "mz": 195.0625,
+          "freq": 0.241,
+          "n_support": 125
+        },
+        {
+          "mz": 225.0625,
+          "freq": 0.236,
+          "n_support": 122
+        },
+        {
+          "mz": 239.0375,
+          "freq": 0.218,
+          "n_support": 113
+        },
+        {
+          "mz": 182.0375,
+          "freq": 0.201,
+          "n_support": 104
+        },
+        {
+          "mz": 167.0625,
+          "freq": 0.183,
+          "n_support": 95
+        },
+        {
+          "mz": 199.0625,
+          "freq": 0.18,
+          "n_support": 93
+        },
+        {
+          "mz": 224.0625,
+          "freq": 0.178,
+          "n_support": 92
+        },
+        {
+          "mz": 240.0625,
+          "freq": 0.17,
+          "n_support": 88
+        },
+        {
+          "mz": 255.0375,
+          "freq": 0.156,
+          "n_support": 81
+        },
+        {
+          "mz": 241.0625,
+          "freq": 0.154,
+          "n_support": 80
+        },
+        {
+          "mz": 196.0625,
+          "freq": 0.151,
+          "n_support": 78
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 44.0125,
+          "freq": 0.351,
+          "n_support": 182,
+          "annotation": "CO2"
+        },
+        {
+          "loss_da": 28.0125,
+          "freq": 0.324,
+          "n_support": 168,
+          "annotation": "CO"
+        },
+        {
+          "loss_da": 71.9875,
+          "freq": 0.322,
+          "n_support": 167,
+          "annotation": null
+        },
+        {
+          "loss_da": 43.0375,
+          "freq": 0.193,
+          "n_support": 100,
+          "annotation": null
+        },
+        {
+          "loss_da": 99.9875,
+          "freq": 0.185,
+          "n_support": 96,
+          "annotation": null
+        },
+        {
+          "loss_da": 56.0125,
+          "freq": 0.178,
+          "n_support": 92,
+          "annotation": null
+        },
+        {
+          "loss_da": 29.0125,
+          "freq": 0.158,
+          "n_support": 82,
+          "annotation": null
+        },
+        {
+          "loss_da": 73.0125,
+          "freq": 0.158,
+          "n_support": 82,
+          "annotation": null
+        },
+        {
+          "loss_da": 74.0125,
+          "freq": 0.153,
+          "n_support": 79,
+          "annotation": null
+        }
+      ]
+    },
+    "pos": {
+      "n_spectra": 2162,
+      "diagnostic_ions": [
+        {
+          "mz": 91.0625,
+          "freq": 0.234,
+          "n_support": 506
+        },
+        {
+          "mz": 67.0625,
+          "freq": 0.17,
+          "n_support": 368
+        },
+        {
+          "mz": 81.0875,
+          "freq": 0.169,
+          "n_support": 365
+        },
+        {
+          "mz": 57.0875,
+          "freq": 0.167,
+          "n_support": 362
+        },
+        {
+          "mz": 95.0875,
+          "freq": 0.159,
+          "n_support": 344
+        },
+        {
+          "mz": 61.0125,
+          "freq": 0.155,
+          "n_support": 335
+        },
+        {
+          "mz": 69.0875,
+          "freq": 0.154,
+          "n_support": 334
+        }
+      ],
+      "neutral_losses": []
+    }
+  },
+  "steroid": {
+    "neg": {
+      "n_spectra": 812,
+      "diagnostic_ions": [
+        {
+          "mz": 96.9625,
+          "freq": 0.246,
+          "n_support": 200
+        },
+        {
+          "mz": 79.9625,
+          "freq": 0.192,
+          "n_support": 156
+        },
+        {
+          "mz": 123.0875,
+          "freq": 0.192,
+          "n_support": 156
+        },
+        {
+          "mz": 109.0875,
+          "freq": 0.18,
+          "n_support": 146
+        },
+        {
+          "mz": 123.0625,
+          "freq": 0.179,
+          "n_support": 145
+        },
+        {
+          "mz": 95.0625,
+          "freq": 0.164,
+          "n_support": 133
+        },
+        {
+          "mz": 135.0875,
+          "freq": 0.16,
+          "n_support": 130
+        },
+        {
+          "mz": 137.0625,
+          "freq": 0.16,
+          "n_support": 130
+        },
+        {
+          "mz": 57.0375,
+          "freq": 0.158,
+          "n_support": 128
+        },
+        {
+          "mz": 297.1625,
+          "freq": 0.155,
+          "n_support": 126
+        },
+        {
+          "mz": 125.0625,
+          "freq": 0.154,
+          "n_support": 125
+        },
+        {
+          "mz": 61.9875,
+          "freq": 0.15,
+          "n_support": 122
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 18.0125,
+          "freq": 0.196,
+          "n_support": 159,
+          "annotation": "H2O"
+        },
+        {
+          "loss_da": 48.0375,
+          "freq": 0.151,
+          "n_support": 123,
+          "annotation": null
+        }
+      ]
+    },
+    "pos": {
+      "n_spectra": 8749,
+      "diagnostic_ions": [
+        {
+          "mz": 119.0875,
+          "freq": 0.406,
+          "n_support": 3549
+        },
+        {
+          "mz": 145.1125,
+          "freq": 0.381,
+          "n_support": 3331
+        },
+        {
+          "mz": 105.0875,
+          "freq": 0.378,
+          "n_support": 3307
+        },
+        {
+          "mz": 133.1125,
+          "freq": 0.368,
+          "n_support": 3221
+        },
+        {
+          "mz": 131.0875,
+          "freq": 0.364,
+          "n_support": 3182
+        },
+        {
+          "mz": 107.0875,
+          "freq": 0.349,
+          "n_support": 3053
+        },
+        {
+          "mz": 147.1375,
+          "freq": 0.328,
+          "n_support": 2868
+        },
+        {
+          "mz": 95.0875,
+          "freq": 0.323,
+          "n_support": 2827
+        },
+        {
+          "mz": 143.0875,
+          "freq": 0.323,
+          "n_support": 2826
+        },
+        {
+          "mz": 157.1125,
+          "freq": 0.309,
+          "n_support": 2704
+        },
+        {
+          "mz": 93.0875,
+          "freq": 0.306,
+          "n_support": 2680
+        },
+        {
+          "mz": 121.0875,
+          "freq": 0.305,
+          "n_support": 2671
+        },
+        {
+          "mz": 81.0875,
+          "freq": 0.303,
+          "n_support": 2652
+        },
+        {
+          "mz": 91.0625,
+          "freq": 0.3,
+          "n_support": 2621
+        },
+        {
+          "mz": 159.1375,
+          "freq": 0.297,
+          "n_support": 2598
+        },
+        {
+          "mz": 121.1125,
+          "freq": 0.29,
+          "n_support": 2534
+        },
+        {
+          "mz": 147.0875,
+          "freq": 0.279,
+          "n_support": 2438
+        },
+        {
+          "mz": 135.0875,
+          "freq": 0.267,
+          "n_support": 2332
+        },
+        {
+          "mz": 161.1125,
+          "freq": 0.255,
+          "n_support": 2234
+        },
+        {
+          "mz": 161.1375,
+          "freq": 0.253,
+          "n_support": 2211
+        },
+        {
+          "mz": 135.1375,
+          "freq": 0.25,
+          "n_support": 2187
+        },
+        {
+          "mz": 171.1375,
+          "freq": 0.247,
+          "n_support": 2163
+        },
+        {
+          "mz": 159.0875,
+          "freq": 0.247,
+          "n_support": 2159
+        },
+        {
+          "mz": 79.0625,
+          "freq": 0.241,
+          "n_support": 2106
+        },
+        {
+          "mz": 173.1125,
+          "freq": 0.239,
+          "n_support": 2093
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 18.0125,
+          "freq": 0.212,
+          "n_support": 1859,
+          "annotation": "H2O"
+        },
+        {
+          "loss_da": 36.0375,
+          "freq": 0.182,
+          "n_support": 1590,
+          "annotation": null
+        }
+      ]
+    }
+  },
+  "stilbene": {
+    "neg": {
+      "n_spectra": 570,
+      "diagnostic_ions": [
+        {
+          "mz": 225.0625,
+          "freq": 0.281,
+          "n_support": 160
+        },
+        {
+          "mz": 185.0625,
+          "freq": 0.277,
+          "n_support": 158
+        },
+        {
+          "mz": 143.0625,
+          "freq": 0.268,
+          "n_support": 153
+        },
+        {
+          "mz": 197.0625,
+          "freq": 0.246,
+          "n_support": 140
+        },
+        {
+          "mz": 181.0875,
+          "freq": 0.223,
+          "n_support": 127
+        },
+        {
+          "mz": 93.0375,
+          "freq": 0.209,
+          "n_support": 119
+        },
+        {
+          "mz": 157.0875,
+          "freq": 0.205,
+          "n_support": 117
+        },
+        {
+          "mz": 180.0625,
+          "freq": 0.174,
+          "n_support": 99
+        },
+        {
+          "mz": 183.0625,
+          "freq": 0.167,
+          "n_support": 95
+        },
+        {
+          "mz": 159.0875,
+          "freq": 0.163,
+          "n_support": 93
+        },
+        {
+          "mz": 119.0625,
+          "freq": 0.16,
+          "n_support": 91
+        },
+        {
+          "mz": 117.0375,
+          "freq": 0.153,
+          "n_support": 87
+        },
+        {
+          "mz": 183.0875,
+          "freq": 0.151,
+          "n_support": 86
+        },
+        {
+          "mz": 227.0875,
+          "freq": 0.151,
+          "n_support": 86
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 84.0375,
+          "freq": 0.219,
+          "n_support": 125,
+          "annotation": null
+        },
+        {
+          "loss_da": 44.0125,
+          "freq": 0.207,
+          "n_support": 118,
+          "annotation": "CO2"
+        },
+        {
+          "loss_da": 60.0375,
+          "freq": 0.2,
+          "n_support": 114,
+          "annotation": "CH2CO+OH?"
+        },
+        {
+          "loss_da": 42.0125,
+          "freq": 0.195,
+          "n_support": 111,
+          "annotation": null
+        },
+        {
+          "loss_da": 16.0375,
+          "freq": 0.156,
+          "n_support": 89,
+          "annotation": null
+        }
+      ]
+    },
+    "pos": {
+      "n_spectra": 2362,
+      "diagnostic_ions": [
+        {
+          "mz": 91.0625,
+          "freq": 0.344,
+          "n_support": 813
+        },
+        {
+          "mz": 107.0625,
+          "freq": 0.284,
+          "n_support": 670
+        },
+        {
+          "mz": 165.0875,
+          "freq": 0.27,
+          "n_support": 638
+        },
+        {
+          "mz": 115.0625,
+          "freq": 0.218,
+          "n_support": 515
+        },
+        {
+          "mz": 77.0625,
+          "freq": 0.181,
+          "n_support": 428
+        },
+        {
+          "mz": 152.0625,
+          "freq": 0.179,
+          "n_support": 422
+        },
+        {
+          "mz": 79.0625,
+          "freq": 0.178,
+          "n_support": 421
+        },
+        {
+          "mz": 95.0625,
+          "freq": 0.176,
+          "n_support": 416
+        },
+        {
+          "mz": 181.0875,
+          "freq": 0.176,
+          "n_support": 415
+        },
+        {
+          "mz": 119.0625,
+          "freq": 0.171,
+          "n_support": 404
+        },
+        {
+          "mz": 58.0875,
+          "freq": 0.166,
+          "n_support": 393
+        },
+        {
+          "mz": 178.0875,
+          "freq": 0.165,
+          "n_support": 389
+        },
+        {
+          "mz": 105.0875,
+          "freq": 0.16,
+          "n_support": 379
+        },
+        {
+          "mz": 103.0625,
+          "freq": 0.16,
+          "n_support": 377
+        },
+        {
+          "mz": 153.0875,
+          "freq": 0.154,
+          "n_support": 363
+        }
+      ],
+      "neutral_losses": []
+    }
+  },
+  "sugar": {
+    "neg": {
+      "n_spectra": 1604,
+      "diagnostic_ions": [
+        {
+          "mz": 101.0375,
+          "freq": 0.68,
+          "n_support": 1090
+        },
+        {
+          "mz": 89.0375,
+          "freq": 0.637,
+          "n_support": 1022
+        },
+        {
+          "mz": 85.0375,
+          "freq": 0.568,
+          "n_support": 911
+        },
+        {
+          "mz": 59.0375,
+          "freq": 0.564,
+          "n_support": 904
+        },
+        {
+          "mz": 113.0375,
+          "freq": 0.554,
+          "n_support": 888
+        },
+        {
+          "mz": 71.0375,
+          "freq": 0.534,
+          "n_support": 857
+        },
+        {
+          "mz": 119.0375,
+          "freq": 0.438,
+          "n_support": 703
+        },
+        {
+          "mz": 73.0375,
+          "freq": 0.423,
+          "n_support": 678
+        },
+        {
+          "mz": 55.0375,
+          "freq": 0.355,
+          "n_support": 570
+        },
+        {
+          "mz": 87.0125,
+          "freq": 0.347,
+          "n_support": 557
+        },
+        {
+          "mz": 83.0375,
+          "freq": 0.339,
+          "n_support": 544
+        },
+        {
+          "mz": 57.0375,
+          "freq": 0.329,
+          "n_support": 527
+        },
+        {
+          "mz": 131.0375,
+          "freq": 0.272,
+          "n_support": 436
+        },
+        {
+          "mz": 161.0625,
+          "freq": 0.252,
+          "n_support": 404
+        },
+        {
+          "mz": 95.0375,
+          "freq": 0.235,
+          "n_support": 377
+        },
+        {
+          "mz": 97.0375,
+          "freq": 0.226,
+          "n_support": 362
+        },
+        {
+          "mz": 59.0125,
+          "freq": 0.218,
+          "n_support": 349
+        },
+        {
+          "mz": 149.0625,
+          "freq": 0.217,
+          "n_support": 348
+        },
+        {
+          "mz": 143.0375,
+          "freq": 0.214,
+          "n_support": 343
+        },
+        {
+          "mz": 45.0125,
+          "freq": 0.208,
+          "n_support": 334
+        },
+        {
+          "mz": 73.0125,
+          "freq": 0.208,
+          "n_support": 333
+        },
+        {
+          "mz": 71.0125,
+          "freq": 0.201,
+          "n_support": 322
+        },
+        {
+          "mz": 69.0375,
+          "freq": 0.2,
+          "n_support": 321
+        },
+        {
+          "mz": 43.0375,
+          "freq": 0.197,
+          "n_support": 316
+        },
+        {
+          "mz": 179.0625,
+          "freq": 0.181,
+          "n_support": 290
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 120.0625,
+          "freq": 0.295,
+          "n_support": 473,
+          "annotation": "C7H4O2?"
+        },
+        {
+          "loss_da": 162.0625,
+          "freq": 0.274,
+          "n_support": 439,
+          "annotation": "己糖 hexose"
+        },
+        {
+          "loss_da": 180.0875,
+          "freq": 0.234,
+          "n_support": 375,
+          "annotation": "己糖+H2O?"
+        },
+        {
+          "loss_da": 78.0375,
+          "freq": 0.229,
+          "n_support": 367,
+          "annotation": null
+        },
+        {
+          "loss_da": 282.1125,
+          "freq": 0.219,
+          "n_support": 352,
+          "annotation": null
+        },
+        {
+          "loss_da": 90.0375,
+          "freq": 0.215,
+          "n_support": 345,
+          "annotation": "(脱氧)糖? "
+        },
+        {
+          "loss_da": 18.0125,
+          "freq": 0.203,
+          "n_support": 325,
+          "annotation": "H2O"
+        },
+        {
+          "loss_da": 108.0625,
+          "freq": 0.194,
+          "n_support": 311,
+          "annotation": null
+        },
+        {
+          "loss_da": 240.0875,
+          "freq": 0.19,
+          "n_support": 304,
+          "annotation": null
+        },
+        {
+          "loss_da": 268.0875,
+          "freq": 0.184,
+          "n_support": 295,
+          "annotation": null
+        },
+        {
+          "loss_da": 270.1125,
+          "freq": 0.178,
+          "n_support": 285,
+          "annotation": null
+        },
+        {
+          "loss_da": 66.0375,
+          "freq": 0.175,
+          "n_support": 281,
+          "annotation": null
+        },
+        {
+          "loss_da": 60.0375,
+          "freq": 0.175,
+          "n_support": 280,
+          "annotation": "CH2CO+OH?"
+        },
+        {
+          "loss_da": 252.0875,
+          "freq": 0.17,
+          "n_support": 273,
+          "annotation": null
+        },
+        {
+          "loss_da": 222.0875,
+          "freq": 0.164,
+          "n_support": 263,
+          "annotation": null
+        },
+        {
+          "loss_da": 92.0625,
+          "freq": 0.162,
+          "n_support": 260,
+          "annotation": null
+        },
+        {
+          "loss_da": 254.1125,
+          "freq": 0.153,
+          "n_support": 245,
+          "annotation": null
+        },
+        {
+          "loss_da": 256.0875,
+          "freq": 0.151,
+          "n_support": 243,
+          "annotation": null
+        }
+      ]
+    },
+    "pos": {
+      "n_spectra": 3986,
+      "diagnostic_ions": [
+        {
+          "mz": 85.0375,
+          "freq": 0.425,
+          "n_support": 1694
+        },
+        {
+          "mz": 97.0375,
+          "freq": 0.317,
+          "n_support": 1264
+        },
+        {
+          "mz": 69.0375,
+          "freq": 0.315,
+          "n_support": 1257
+        },
+        {
+          "mz": 91.0625,
+          "freq": 0.289,
+          "n_support": 1152
+        },
+        {
+          "mz": 81.0375,
+          "freq": 0.272,
+          "n_support": 1084
+        },
+        {
+          "mz": 57.0375,
+          "freq": 0.229,
+          "n_support": 914
+        },
+        {
+          "mz": 127.0625,
+          "freq": 0.218,
+          "n_support": 868
+        },
+        {
+          "mz": 55.0375,
+          "freq": 0.212,
+          "n_support": 846
+        },
+        {
+          "mz": 81.0875,
+          "freq": 0.209,
+          "n_support": 832
+        },
+        {
+          "mz": 93.0875,
+          "freq": 0.202,
+          "n_support": 805
+        },
+        {
+          "mz": 109.0375,
+          "freq": 0.198,
+          "n_support": 789
+        },
+        {
+          "mz": 73.0375,
+          "freq": 0.198,
+          "n_support": 788
+        },
+        {
+          "mz": 79.0625,
+          "freq": 0.192,
+          "n_support": 767
+        },
+        {
+          "mz": 95.0625,
+          "freq": 0.189,
+          "n_support": 753
+        },
+        {
+          "mz": 95.0875,
+          "freq": 0.182,
+          "n_support": 724
+        },
+        {
+          "mz": 99.0625,
+          "freq": 0.181,
+          "n_support": 722
+        },
+        {
+          "mz": 67.0625,
+          "freq": 0.179,
+          "n_support": 714
+        },
+        {
+          "mz": 101.0375,
+          "freq": 0.176,
+          "n_support": 700
+        },
+        {
+          "mz": 105.0875,
+          "freq": 0.175,
+          "n_support": 698
+        },
+        {
+          "mz": 55.0625,
+          "freq": 0.173,
+          "n_support": 688
+        },
+        {
+          "mz": 61.0375,
+          "freq": 0.167,
+          "n_support": 665
+        },
+        {
+          "mz": 71.0625,
+          "freq": 0.161,
+          "n_support": 641
+        },
+        {
+          "mz": 57.0875,
+          "freq": 0.159,
+          "n_support": 635
+        },
+        {
+          "mz": 71.0375,
+          "freq": 0.155,
+          "n_support": 619
+        },
+        {
+          "mz": 83.0625,
+          "freq": 0.155,
+          "n_support": 618
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 162.0625,
+          "freq": 0.167,
+          "n_support": 664,
+          "annotation": "己糖 hexose"
+        }
+      ]
+    }
+  },
+  "terpenoid": {
+    "neg": {
+      "n_spectra": 1864,
+      "diagnostic_ions": [
+        {
+          "mz": 83.0625,
+          "freq": 0.238,
+          "n_support": 443
+        },
+        {
+          "mz": 57.0375,
+          "freq": 0.222,
+          "n_support": 413
+        },
+        {
+          "mz": 96.9625,
+          "freq": 0.2,
+          "n_support": 372
+        },
+        {
+          "mz": 59.0125,
+          "freq": 0.197,
+          "n_support": 368
+        },
+        {
+          "mz": 69.0375,
+          "freq": 0.177,
+          "n_support": 330
+        },
+        {
+          "mz": 79.9625,
+          "freq": 0.164,
+          "n_support": 306
+        },
+        {
+          "mz": 73.0375,
+          "freq": 0.159,
+          "n_support": 296
+        },
+        {
+          "mz": 95.0625,
+          "freq": 0.155,
+          "n_support": 288
+        },
+        {
+          "mz": 71.0625,
+          "freq": 0.154,
+          "n_support": 287
+        },
+        {
+          "mz": 61.9875,
+          "freq": 0.15,
+          "n_support": 280
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 44.0125,
+          "freq": 0.26,
+          "n_support": 485,
+          "annotation": "CO2"
+        },
+        {
+          "loss_da": 62.0125,
+          "freq": 0.248,
+          "n_support": 462,
+          "annotation": null
+        },
+        {
+          "loss_da": 60.0375,
+          "freq": 0.205,
+          "n_support": 382,
+          "annotation": "CH2CO+OH?"
+        },
+        {
+          "loss_da": 18.0125,
+          "freq": 0.168,
+          "n_support": 313,
+          "annotation": "H2O"
+        }
+      ]
+    },
+    "pos": {
+      "n_spectra": 13154,
+      "diagnostic_ions": [
+        {
+          "mz": 105.0875,
+          "freq": 0.396,
+          "n_support": 5207
+        },
+        {
+          "mz": 119.0875,
+          "freq": 0.383,
+          "n_support": 5044
+        },
+        {
+          "mz": 91.0625,
+          "freq": 0.366,
+          "n_support": 4812
+        },
+        {
+          "mz": 107.0875,
+          "freq": 0.361,
+          "n_support": 4746
+        },
+        {
+          "mz": 81.0875,
+          "freq": 0.36,
+          "n_support": 4741
+        },
+        {
+          "mz": 93.0875,
+          "freq": 0.355,
+          "n_support": 4665
+        },
+        {
+          "mz": 95.0875,
+          "freq": 0.353,
+          "n_support": 4645
+        },
+        {
+          "mz": 131.0875,
+          "freq": 0.33,
+          "n_support": 4336
+        },
+        {
+          "mz": 145.1125,
+          "freq": 0.328,
+          "n_support": 4313
+        },
+        {
+          "mz": 133.1125,
+          "freq": 0.319,
+          "n_support": 4202
+        },
+        {
+          "mz": 79.0625,
+          "freq": 0.295,
+          "n_support": 3881
+        },
+        {
+          "mz": 121.1125,
+          "freq": 0.286,
+          "n_support": 3761
+        },
+        {
+          "mz": 157.1125,
+          "freq": 0.277,
+          "n_support": 3649
+        },
+        {
+          "mz": 67.0625,
+          "freq": 0.277,
+          "n_support": 3648
+        },
+        {
+          "mz": 109.1125,
+          "freq": 0.274,
+          "n_support": 3603
+        },
+        {
+          "mz": 143.0875,
+          "freq": 0.273,
+          "n_support": 3588
+        },
+        {
+          "mz": 159.1375,
+          "freq": 0.268,
+          "n_support": 3529
+        },
+        {
+          "mz": 69.0875,
+          "freq": 0.254,
+          "n_support": 3338
+        },
+        {
+          "mz": 95.0625,
+          "freq": 0.251,
+          "n_support": 3298
+        },
+        {
+          "mz": 121.0875,
+          "freq": 0.239,
+          "n_support": 3144
+        },
+        {
+          "mz": 147.1375,
+          "freq": 0.237,
+          "n_support": 3116
+        },
+        {
+          "mz": 55.0625,
+          "freq": 0.235,
+          "n_support": 3095
+        },
+        {
+          "mz": 117.0875,
+          "freq": 0.233,
+          "n_support": 3064
+        },
+        {
+          "mz": 57.0875,
+          "freq": 0.225,
+          "n_support": 2957
+        },
+        {
+          "mz": 135.0875,
+          "freq": 0.218,
+          "n_support": 2867
+        }
+      ],
+      "neutral_losses": []
+    }
+  },
+  "xanthone": {
+    "neg": {
+      "n_spectra": 343,
+      "diagnostic_ions": [
+        {
+          "mz": 283.0375,
+          "freq": 0.21,
+          "n_support": 72
+        },
+        {
+          "mz": 227.0375,
+          "freq": 0.204,
+          "n_support": 70
+        },
+        {
+          "mz": 255.0375,
+          "freq": 0.192,
+          "n_support": 66
+        },
+        {
+          "mz": 242.0375,
+          "freq": 0.187,
+          "n_support": 64
+        },
+        {
+          "mz": 271.0375,
+          "freq": 0.181,
+          "n_support": 62
+        },
+        {
+          "mz": 295.0375,
+          "freq": 0.178,
+          "n_support": 61
+        },
+        {
+          "mz": 267.0375,
+          "freq": 0.169,
+          "n_support": 58
+        },
+        {
+          "mz": 258.0375,
+          "freq": 0.155,
+          "n_support": 53
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 15.0375,
+          "freq": 0.408,
+          "n_support": 140,
+          "annotation": null
+        },
+        {
+          "loss_da": 43.0375,
+          "freq": 0.19,
+          "n_support": 65,
+          "annotation": null
+        },
+        {
+          "loss_da": 58.0875,
+          "freq": 0.178,
+          "n_support": 61,
+          "annotation": null
+        },
+        {
+          "loss_da": 32.0375,
+          "freq": 0.175,
+          "n_support": 60,
+          "annotation": null
+        },
+        {
+          "loss_da": 30.0625,
+          "freq": 0.157,
+          "n_support": 54,
+          "annotation": null
+        },
+        {
+          "loss_da": 70.0875,
+          "freq": 0.155,
+          "n_support": 53,
+          "annotation": null
+        },
+        {
+          "loss_da": 162.0625,
+          "freq": 0.152,
+          "n_support": 52,
+          "annotation": "己糖 hexose"
+        }
+      ]
+    },
+    "pos": {
+      "n_spectra": 1582,
+      "diagnostic_ions": [
+        {
+          "mz": 257.0625,
+          "freq": 0.25,
+          "n_support": 395
+        },
+        {
+          "mz": 271.0625,
+          "freq": 0.168,
+          "n_support": 266
+        },
+        {
+          "mz": 229.0625,
+          "freq": 0.154,
+          "n_support": 244
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 18.0125,
+          "freq": 0.218,
+          "n_support": 345,
+          "annotation": "H2O"
+        },
+        {
+          "loss_da": 44.0375,
+          "freq": 0.173,
+          "n_support": 274,
+          "annotation": null
+        },
+        {
+          "loss_da": 28.0125,
+          "freq": 0.162,
+          "n_support": 256,
+          "annotation": "CO"
+        }
+      ]
+    }
+  },
+  "iridoid": {
+    "pos": {
+      "n_spectra": 1198,
+      "diagnostic_ions": [
+        {
+          "mz": 91.0625,
+          "freq": 0.339,
+          "n_support": 406
+        },
+        {
+          "mz": 85.0375,
+          "freq": 0.277,
+          "n_support": 332
+        },
+        {
+          "mz": 119.0625,
+          "freq": 0.25,
+          "n_support": 299
+        },
+        {
+          "mz": 121.0875,
+          "freq": 0.214,
+          "n_support": 256
+        },
+        {
+          "mz": 149.0625,
+          "freq": 0.208,
+          "n_support": 249
+        }
+      ],
+      "neutral_losses": []
+    },
+    "neg": {
+      "n_spectra": 206,
+      "diagnostic_ions": [
+        {
+          "mz": 101.0375,
+          "freq": 0.524,
+          "n_support": 108
+        },
+        {
+          "mz": 123.0625,
+          "freq": 0.515,
+          "n_support": 106
+        },
+        {
+          "mz": 147.0625,
+          "freq": 0.427,
+          "n_support": 88
+        },
+        {
+          "mz": 85.0375,
+          "freq": 0.374,
+          "n_support": 77
+        },
+        {
+          "mz": 59.0125,
+          "freq": 0.33,
+          "n_support": 68
+        },
+        {
+          "mz": 89.0375,
+          "freq": 0.316,
+          "n_support": 65
+        },
+        {
+          "mz": 119.0625,
+          "freq": 0.301,
+          "n_support": 62
+        },
+        {
+          "mz": 113.0375,
+          "freq": 0.291,
+          "n_support": 60
+        },
+        {
+          "mz": 207.0875,
+          "freq": 0.282,
+          "n_support": 58
+        },
+        {
+          "mz": 71.0125,
+          "freq": 0.257,
+          "n_support": 53
+        },
+        {
+          "mz": 93.0375,
+          "freq": 0.248,
+          "n_support": 51
+        },
+        {
+          "mz": 111.0125,
+          "freq": 0.248,
+          "n_support": 51
+        },
+        {
+          "mz": 59.0375,
+          "freq": 0.223,
+          "n_support": 46
+        },
+        {
+          "mz": 119.0375,
+          "freq": 0.223,
+          "n_support": 46
+        },
+        {
+          "mz": 69.0125,
+          "freq": 0.223,
+          "n_support": 46
+        },
+        {
+          "mz": 121.0375,
+          "freq": 0.209,
+          "n_support": 43
+        },
+        {
+          "mz": 105.0375,
+          "freq": 0.204,
+          "n_support": 42
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 162.0625,
+          "freq": 0.325,
+          "n_support": 67,
+          "annotation": "hexose"
+        },
+        {
+          "loss_da": 286.1125,
+          "freq": 0.262,
+          "n_support": 54
+        },
+        {
+          "loss_da": 180.0875,
+          "freq": 0.248,
+          "n_support": 51,
+          "annotation": "hexose+H2O"
+        }
+      ]
+    }
+  },
+  "saponin": {
+    "pos": {
+      "n_spectra": 6451,
+      "diagnostic_ions": [],
+      "neutral_losses": []
+    },
+    "neg": {
+      "n_spectra": 317,
+      "diagnostic_ions": [
+        {
+          "mz": 101.0375,
+          "freq": 0.498,
+          "n_support": 158
+        },
+        {
+          "mz": 113.0375,
+          "freq": 0.479,
+          "n_support": 152
+        },
+        {
+          "mz": 89.0375,
+          "freq": 0.407,
+          "n_support": 129
+        },
+        {
+          "mz": 85.0375,
+          "freq": 0.397,
+          "n_support": 126
+        },
+        {
+          "mz": 161.0625,
+          "freq": 0.356,
+          "n_support": 113
+        },
+        {
+          "mz": 73.0375,
+          "freq": 0.312,
+          "n_support": 99
+        },
+        {
+          "mz": 99.0125,
+          "freq": 0.284,
+          "n_support": 90
+        },
+        {
+          "mz": 119.0375,
+          "freq": 0.274,
+          "n_support": 87
+        },
+        {
+          "mz": 71.0375,
+          "freq": 0.265,
+          "n_support": 84
+        },
+        {
+          "mz": 71.0125,
+          "freq": 0.227,
+          "n_support": 72
+        },
+        {
+          "mz": 159.0375,
+          "freq": 0.221,
+          "n_support": 70
+        },
+        {
+          "mz": 59.0375,
+          "freq": 0.205,
+          "n_support": 65
+        }
+      ],
+      "neutral_losses": [
+        {
+          "loss_da": 162.0625,
+          "freq": 0.309,
+          "n_support": 98,
+          "annotation": "hexose"
+        },
+        {
+          "loss_da": 161.0625,
+          "freq": 0.205,
+          "n_support": 65
+        }
+      ]
+    }
+  }
+}

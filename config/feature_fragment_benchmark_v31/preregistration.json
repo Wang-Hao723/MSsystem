@@ -1,0 +1,101 @@
+{
+  "schema_version": "3.1.0",
+  "preregistration_id": "v15-feature-fragment-v31-readiness-20260827",
+  "frozen_on": "2026-08-27",
+  "phase": "readiness_and_dataset_specific_intake",
+  "inherits_quantitative_rule_contract_from": "config/feature_fragment_benchmark_v3/preregistration.json",
+  "runtime_effect": "none_fail_closed",
+  "analysis_unit": "one two-dimensional molecular connectivity identity per exact acquisition stratum after technical-acquisition and mirror collapse",
+  "exact_stratum_fields": [
+    "instrument_domain_id",
+    "polarity",
+    "adduct",
+    "charge",
+    "collision_energy_unit",
+    "collision_energy_mode",
+    "collision_energy_stratum",
+    "license_tier"
+  ],
+  "target_class_field": "frozen ChemOnt leaf class",
+  "background_definition": "eligible identities assigned to another frozen ChemOnt leaf class in the identical exact acquisition stratum",
+  "primary_thresholds_per_stratum_and_class": {
+    "minimum_target_identities": 30,
+    "minimum_background_identities": 30,
+    "minimum_target_formula_families": 10,
+    "minimum_background_formula_families": 10,
+    "minimum_target_sources": 3,
+    "minimum_background_sources": 3,
+    "minimum_target_laboratories": 2,
+    "minimum_background_laboratories": 2,
+    "maximum_log_lr_interval_half_width": 0.6931471805599453
+  },
+  "prospective_power_design": {
+    "test": "two-sided independent two-proportion normal approximation used only for intake planning",
+    "target_power": 0.8,
+    "holm_family_size": 50,
+    "family_wise_alpha": 0.05,
+    "planning_background_frequency": 0.1,
+    "planning_target_frequency": 0.3,
+    "planning_likelihood_ratio_positive": 3.0,
+    "required_per_arm_is_maximum_of": [
+      "two-proportion power calculation",
+      "Haldane-Anscombe expected-count interval precision calculation",
+      "minimum_target_or_background_identity threshold"
+    ],
+    "claim_limit": "planning values are acquisition targets, not achieved statistical power and not evidence for a fragment rule"
+  },
+  "collision_energy": {
+    "fixed_native_unit_bin_width": 5.0,
+    "bin_boundary": "left_closed_right_open",
+    "cross_unit_conversion": false,
+    "fixed_and_composite_pooling": false,
+    "composite_program": "retain ordered values and weights as one acquisition program",
+    "rolling_or_dynamic_program": "retain the reported equation; do not substitute a midpoint"
+  },
+  "near_mirror_calibration": {
+    "holdout_validation_required": true,
+    "source_laboratory_identity_isolation_required": true,
+    "one_sided_confidence": 0.95,
+    "maximum_false_link_probability": 0.01,
+    "minimum_true_link_recall": 0.9,
+    "minimum_independent_negative_pairs_if_zero_false_links": 299,
+    "minimum_independent_positive_pairs_if_zero_missed_links": 29,
+    "uncalibrated_action": "do_not_create_near_mirror_edges"
+  },
+  "split_gate": {
+    "required_zero_overlap_axes": [
+      "two-dimensional identity",
+      "formula family",
+      "source origin",
+      "laboratory",
+      "mirror cluster",
+      "raw acquisition group"
+    ],
+    "reported_readiness_views": [
+      "identity_and_formula",
+      "source_and_laboratory",
+      "mirror_and_raw_acquisition"
+    ],
+    "no_eligible_records_action": "report each isolation view as infeasible and stop before rule discovery"
+  },
+  "rule_scope": {
+    "single_fragment_rules_first": true,
+    "joint_fragment_pairs_are_atomic_joint_likelihood_ratios": true,
+    "fixed_fragment_points_forbidden": true,
+    "post_hoc_leaf_to_parent_rescue_forbidden": true,
+    "cross_domain_class_support_runtime_effect": false
+  },
+  "claim_limits": {
+    "exact_identity_upgrade": false,
+    "formula_upgrade": false,
+    "isomer_resolution": false,
+    "standard_confirmation": false,
+    "database_identifier_may_be_compound_name": false
+  },
+  "failure_action": {
+    "runtime_exported_rule_count": 0,
+    "runtime_ranking_enabled": false,
+    "score_contribution": 0.0,
+    "next_state": "dataset_specific_metadata_intake_required"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.2.0",
+  "policy_id": "eviacquire-ms-maximin-v1.2.0-resource-instrument-gated-20260804",
+  "module_state": "shadow",
+  "objective": "maximize worst-pair observable separation under measurement, transferability, purity, duty-cycle and risk constraints",
+  "utility_semantics": "bounded priority score; not a posterior probability, confidence interval, q-value or conformal coverage guarantee",
+  "minimum_actionable_separation": 0.25,
+  "default_rt_window_min": 0.15,
+  "allow_opposite_polarity": true,
+  "resource_policy": {
+    "default_mode": "sample_only_fail_closed",
+    "principle": "An unavailable laboratory resource is omitted from the action space rather than assigned an optimistic utility.",
+    "authentic_standard_rt": {
+      "default_available": false,
+      "requires_explicit_candidate_identity_inventory": true,
+      "requires_positive_task_action_budget": true,
+      "maximum_action_budget": 200
+    },
+    "ion_mobility_ccs": {
+      "default_available": false,
+      "requires_explicit_instrument_capability": true,
+      "requires_candidate_specific_ccs_reference": true,
+      "requires_positive_task_action_budget": true,
+      "maximum_action_budget": 200
+    }
+  },
+  "utility_weights": {
+    "duty_cycle_cost": 0.18,
+    "risk": 0.12
+  },
+  "utility_defaults": {
+    "measurement_success_base": 0.72
+  },
+  "collision_energy_design": {
+    "principle": "No single collision energy is assumed to fragment every precursor completely or optimally; energy-response measurements select the useful diagnostic window.",
+    "agilent_qtof_ev": {
+      "profile_id": "agilent_qtof_ev_sequential_v1.0.0",
+      "initial_scout_energies_eV": [10.0, 20.0, 40.0],
+      "conditional_low_energy_eV": [5.0],
+      "conditional_midpoint_energy_eV": [30.0],
+      "conditional_high_energy_eV": [60.0],
+      "automatic_ceiling_eV": 60.0,
+      "response_metrics": [
+        "precursor_survival_yield",
+        "informative_product_ion_count_after_1pct_and_precursor_exclusion",
+        "spectral_entropy",
+        "cross_energy_fragment_novelty",
+        "diagnostic_ion_onset_and_persistence",
+        "total_product_ion_signal"
+      ],
+      "screening_rules": {
+        "resistant_precursor_extension": "add 60 eV only when survival yield at 40 eV remains above 0.50 or informative product ions remain below the preregistered minimum",
+        "labile_precursor_refinement": "add 5 eV only when survival yield is already below 0.50 at 10 eV or primary fragmentation onset is lost",
+        "transition_refinement": "add 30 eV only when the survival/novelty transition lies between 20 and 40 eV",
+        "stop_high_energy_escalation": "stop when precursor is substantially depleted and fragment novelty plateaus or the spectrum collapses toward nonspecific low-mass ions"
+      }
+    },
+    "unsupported_or_unknown_domain": {
+      "profile_id": "manual_instrument_native_energy_design_v1.0.0",
+      "numeric_schedule_emitted": false,
+      "response_metrics": [
+        "precursor_survival_yield",
+        "informative_product_ion_count",
+        "spectral_entropy",
+        "cross_energy_fragment_novelty"
+      ],
+      "reason": "eV, NCE, collision voltage and percent are not numerically interchangeable"
+    }
+  },
+  "isolation_width_design": {
+    "principle": "Isolation width is instrument-native; a numeric value is emitted only for a qualified domain or an observed method setting.",
+    "agilent_qtof": {
+      "profile_id": "agilent_qtof_native_isolation_v1.0.0",
+      "medium_isolation_width_da": 4.0,
+      "narrow_isolation_width_da": 1.3,
+      "narrow_setting_label": "Narrow (~1.3 amu)",
+      "source_basis": "Agilent Q-TOF quadrupole isolation tune and application methods"
+    },
+    "unsupported_or_unknown_domain": {
+      "numeric_narrow_width_emitted": false,
+      "reason": "Orbitrap-style and Q-TOF isolation-width numbers are not assumed interchangeable"
+    }
+  },
+  "action_defaults": {
+    "routine_injection_time_ms": 100.0,
+    "narrow_injection_time_ms": 150.0,
+    "long_injection_time_ms": 250.0,
+    "weak_fragment_peak_count": 8
+  },
+  "duty_cycle_costs": {
+    "targeted_ms2_multi_ce": 0.50,
+    "narrow_isolation_ms2": 0.48,
+    "high_sensitivity_targeted_ms2": 0.55,
+    "authentic_standard_rt": 0.95,
+    "ion_mobility_ccs": 0.72,
+    "opposite_polarity_targeted_ms2": 0.68
+  },
+  "risk_penalties": {
+    "targeted_ms2_multi_ce": 0.12,
+    "narrow_isolation_ms2": 0.20,
+    "high_sensitivity_targeted_ms2": 0.24,
+    "authentic_standard_rt": 0.05,
+    "ion_mobility_ccs": 0.16,
+    "opposite_polarity_targeted_ms2": 0.30
+  },
+  "hard_invariants": [
+    "plans do not change current retrieval ranking confidence claim scope or release",
+    "predicted observables are planning aids and never confirmatory evidence",
+    "follow-up linkage uses only polarity precursor m/z and retention time before candidate comparison",
+    "vendor-oriented exports are advisory CSV files and not executable instrument methods",
+    "missing or failed follow-up measurements are not negative identity evidence",
+    "no fixed collision energy is claimed to fragment all compounds completely or optimally",
+    "single-energy data cannot establish an energy-response curve",
+    "eV NCE collision voltage and percent are never numerically converted across instrument domains",
+    "high-energy extension is conditional on measured precursor survival and fragment information rather than candidate identity",
+    "authentic-standard RT actions require an explicit candidate-specific inventory and a positive task budget",
+    "ion-mobility CCS actions require explicit instrument capability candidate-specific references and a positive task budget",
+    "unavailable resources are omitted from scoring ranking display and export rather than merely downweighted",
+    "Agilent QTOF narrow isolation uses the instrument-native approximately 1.3 amu setting rather than an unqualified 0.4 Da value",
+    "unknown instrument domains do not receive a numeric narrow isolation width"
+  ],
+  "research_precedent": [
+    "multi-run exclusion and coverage expansion",
+    "real-time library-search-triggered acquisition",
+    "collision-energy-dependent fragmentation",
+    "structure-agnostic closed-loop analytical optimization"
+  ]
+}

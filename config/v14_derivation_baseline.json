@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "created_at_utc": "2026-08-25T10:54:57Z",
+  "version": "V14",
+  "derivation": {
+    "source_version": "V12",
+    "source_project_root": "/Users/zizi/Desktop/Mssystem/mssystem_V12",
+    "target_project_root": "/Users/zizi/Desktop/Mssystem/mssystem_V14",
+    "source_git_commit": "041a9ea2ce5e9e5fa941bab6a403d41f5ba6a564",
+    "source_runtime_snapshot_id": "v12-56305b89d485cd4fe90bd515",
+    "source_runtime_manifest_sha256": "cd66f538b14963e5a2772f03823c01cb6c6fd74e80dae114a92ab3868818b9c9",
+    "source_tree_sha256": "e25e0cef68793b17b245c9738e5039032229b9cc986bfc884103e64fd4c7fdf8",
+    "source_file_count": 297,
+    "source_file_hash_mismatches_after_copy": 0,
+    "source_worktree_was_dirty": true
+  },
+  "identity_baseline": {
+    "canonical_registry_sha256": "a65b333256213878d0fb412042bd86c053c16d35d5c31bd211113b805f88e2ef",
+    "flagship_policy_sha256": "381fe0bb4f4bc62b814b96d87003678854baed2fde1d12a118c1447d9dcf15a8"
+  },
+  "storage_contract": {
+    "shared_library_path": "/Users/zizi/Desktop/Mssystem_shared_data/local_library.db",
+    "shared_library_default_access": "read_only",
+    "v12_output_copied_into_v14": false,
+    "v12_logs_copied_into_v14": false,
+    "v14_output_is_independent": true,
+    "v14_logs_are_independent": true
+  },
+  "purpose": "Preserve the exact V12 runtime-source identity used to derive V14 before any V14 optimization. V12 remains the paired frozen comparator."
+}

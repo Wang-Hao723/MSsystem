@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "v15_candidate_recall_support",
+  "algorithm_id": "mssystem-v15-candidate-recall-support-1.0.0",
+  "base_policy_path": "config/v12_candidate_recall_policy.json",
+  "base_policy_file_sha256": "e0cf44a17fe903f28e13f8bb3f3ff11f3ca8932e74c242bea710a254e3c00ee1",
+  "selected_predeclared_variant": "R2_exact_mass_rrf40",
+  "candidate_pool_overrides": {
+    "target_total_connectivities": 40,
+    "maximum_additions_per_entity": 40
+  },
+  "spectral_views_retained": [
+    "library_match",
+    "sensitive"
+  ],
+  "neutral_loss_view_selected": false,
+  "claim_scope": "candidate_hypothesis_support_only",
+  "expanded_candidates_can_replace_winner": false,
+  "expanded_candidates_can_receive_2d_connectivity_decision": false,
+  "expanded_candidates_enter_residual_model_scoring": false,
+  "score_is_probability": false,
+  "ground_truth_used_at_inference": false,
+  "selection_evidence": {
+    "qtof_valid_anchor_n": 76,
+    "qtof_native_recall": 69,
+    "qtof_rrf40_recall": 75,
+    "qtof_gain": 6,
+    "qtof_loss": 0,
+    "qtof_exact_mcnemar_two_sided_p": 0.03125,
+    "qtof_holm_adjusted_p": 0.09375,
+    "qtof_formula_cluster_bootstrap_delta_interval_percentage_points": [2.5, 14.86],
+    "mix33_valid_anchor_n": 62,
+    "mix33_native_recall": 60,
+    "mix33_rrf40_recall": 62,
+    "mix33_gain": 2,
+    "mix33_loss": 0,
+    "qe_truth_unit_n": 39,
+    "qe_native_recall": 37,
+    "qe_rrf40_recall": 37,
+    "qe_gain": 0,
+    "qe_loss": 0
+  }
+}

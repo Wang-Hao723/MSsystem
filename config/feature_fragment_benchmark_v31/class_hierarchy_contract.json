@@ -1,0 +1,12 @@
+{
+  "schema_version": "3.1.0",
+  "contract_id": "v15-feature-fragment-v31-class-hierarchy-20260827",
+  "ontology": "ChemOnt",
+  "primary_target_level": "leaf_class",
+  "path_source": "compound.chemical_class.path from the frozen V3 record manifest",
+  "identity_conflict_action": "exclude the identity from quantitative class target and background counts when one identity maps to more than one leaf class",
+  "missing_leaf_action": "exclude from quantitative class target and background counts",
+  "parent_levels": "audit_counts_only",
+  "post_hoc_leaf_to_parent_rescue": false,
+  "runtime_effect": false
+}

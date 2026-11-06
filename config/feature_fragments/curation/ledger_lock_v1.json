@@ -1,0 +1,24 @@
+{
+  "coverage_contract": {
+    "default_relationship": "defer",
+    "each_ledger_item_has_exactly_one_terminal_relationship": true,
+    "runtime_catalog_auto_load": false,
+    "unknown_item_ids_allowed": false
+  },
+  "ledger": {
+    "format": "JSON Lines; one immutable legacy occurrence per line",
+    "path": "docs/audits/V15_FEATURE_FRAGMENT_LEGACY_PROVENANCE_LEDGER_20260826.jsonl",
+    "record_count": 2030,
+    "sha256": "926a85ca00abebf0775205007b727dac2b641c860ba6083fb0a706aaf2e81fa3"
+  },
+  "lock_id": "v15-feature-fragment-legacy-ledger-lock-20260826",
+  "runtime_influence": false,
+  "schema_version": "1.0.0",
+  "source_files": {
+    "kb_v3/empirical_rules.json": "988e237dda3a21d5dab080ac5bde834f43fac13cd460605cc488d03e61a2c16a",
+    "kb_v3/empirical_rules_candidates_v2.json": "e59ae49089a003b4ed3e5eef2158101e02f12cbca356b406b561a1c98facadb7",
+    "matching/fragment_feature_library.py": "f8838ccee8f6e986622cc5974cd6ad2ba5afea534e17ed6b4ca1e4d2614b3b72",
+    "matching/fragmentation_rules.py": "a8c0682db115bbf0b8ef151bc9800372f587c43aad4b885c910a9ba523a21e01",
+    "matching/fragmentation_rules_curation.json": "5e36b20cce02223316f4ad9a2756f029c99ec374820625e16b019c196a576129"
+  }
+}

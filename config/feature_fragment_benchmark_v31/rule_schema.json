@@ -1,0 +1,80 @@
+{
+  "schema_version": "3.1.0",
+  "schema_id": "v15-feature-fragment-v31-auditable-rule-contract",
+  "required_fields": [
+    "rule_id",
+    "rule_kind",
+    "source_evidence",
+    "chemical_scope",
+    "adducts",
+    "polarities",
+    "instrument_scope",
+    "collision_energy_scope",
+    "mass_tolerance",
+    "target_frequency",
+    "background_frequency",
+    "fragment_pathway_group_id",
+    "positive_evidence_limit",
+    "negative_evidence_limit",
+    "likelihood_ratio_positive",
+    "likelihood_ratio_negative",
+    "evidence_grade",
+    "validation"
+  ],
+  "rule_kinds": [
+    "single_fragment",
+    "single_neutral_loss",
+    "atomic_joint_fragment_event"
+  ],
+  "evidence_grades": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4"
+  ],
+  "forbidden_fields": [
+    "score_points",
+    "fragment_points",
+    "one_fragment_points",
+    "two_fragment_points",
+    "manual_rank_bonus"
+  ],
+  "source_evidence_minimum": {
+    "source_id": true,
+    "source_type": true,
+    "stable_locator": true,
+    "supported_claim": true
+  },
+  "frequency_fields": [
+    "event_count",
+    "identity_denominator",
+    "frequency"
+  ],
+  "instrument_scope_fields": [
+    "instrument_domain_ids",
+    "activation",
+    "collision_cell_regions"
+  ],
+  "collision_energy_scope_fields": [
+    "native_unit",
+    "acquisition_mode",
+    "minimum",
+    "maximum",
+    "program_values",
+    "program_weights",
+    "cross_unit_conversion_applied"
+  ],
+  "mass_tolerance_fields": [
+    "mz_tolerance_da",
+    "mz_tolerance_ppm",
+    "calibration_basis"
+  ],
+  "claim_limits": {
+    "identity_upgrade_allowed": false,
+    "formula_upgrade_allowed": false,
+    "isomer_resolution_allowed": false,
+    "standard_confirmation_allowed": false
+  },
+  "joint_rule_requirement": "an atomic joint event has one jointly estimated LR and cannot sum or multiply component rule scores at query time"
+}

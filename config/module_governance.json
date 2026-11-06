@@ -1,0 +1,593 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "mssystem-v12-flagship-shadow-governance-20260811",
+  "global_invariants": [
+    "shadow modules cannot change retrieval ranking confidence claim scope or release",
+    "candidate-conditioned evidence cannot be an independent vote",
+    "missing module prerequisites cannot become negative evidence",
+    "module promotion requires a frozen artifact and structure-disjoint validation",
+    "v11_flagship_chem_entity_ranker supplies the base entity ranking; the explicitly activated V16 cross-occurrence module may only reorder its existing same-formula native Top-5 without widening claim scope",
+    "expert class biosynthetic and candidate-pathway outputs cannot alter identity ranking",
+    "canonical identity repair cannot be built from evaluation ground truth",
+    "all final chemical claims are compiled downstream by EviGate 2.0",
+    "legacy High is an operational tier and not a project q-value tier",
+    "v12_flagship_evirank_mv remains shadow and cannot alter the V11 production artifact",
+    "v12_evirank_candidate_recall is hash-bound and cannot silently widen mass windows or preexclude the same connectivity across detection methods",
+    "v16_dual_polarity_evidence_graph freezes candidate-independent neutral-mass and retention-time links before reading candidate identities and cannot change V15 production outputs or compound counts"
+  ],
+  "modules": [
+    {
+      "module_id": "v11_flagship_chem_entity_ranker",
+      "display_name": "V11-Flagship",
+      "state": "production",
+      "scientific_role": "the only entity identity selector; standardizes tautomeric 2-D encodings, treats truncated Top-K absence as missing, collapses same-energy technical repeats, aggregates distinct collision energies, repairs externally verified name/formula identity conflicts, and applies only candidate-independent formula/adduct/precursor conservation vetoes",
+      "allowed_effects": ["ranking", "entity_identity_selection", "abstention", "claim_scope_input", "audit"],
+      "forbidden_effects": ["posterior_probability", "stereochemical_release", "mass_only_fragmentation_mechanism", "expert_rank_fusion", "class_rank_fusion", "pathway_rank_fusion"],
+      "runtime_assertions": [
+        {"setting": "EXPERT_RANK_INFLUENCE_ENABLED", "expected": false},
+        {"setting": "USE_CONSISTENCY_FILTER", "expected": false},
+        {"setting": "USE_PATHWAY_RERANK", "expected": false},
+        {"setting": "ISOPAIR_RANK_INFLUENCE_ENABLED", "expected": false}
+      ],
+      "validation_artifacts": [
+        {
+          "path": "config/v11_flagship_policy.json",
+          "required": true,
+          "interpretation": "frozen V11 scoring, collision-energy aggregation, chemistry-gate and abstention policy"
+        },
+        {
+          "path": "docs/MSSYSTEM_V11_FLAGSHIP_METHOD.md",
+          "required": true,
+          "interpretation": "method contract, forbidden inputs, limitations and validation plan"
+        },
+        {
+          "path": "config/canonical_name_identity_registry.json",
+          "sha256": "cefc5b2804173ccc9ae29d025991ffeee187d38947c76b2bef39927bc310e0d7",
+          "required": true,
+          "interpretation": "candidate-conflict-triggered PubChem name/formula identity repairs; no evaluation ground truth inputs"
+        },
+        {
+          "path": "eval/v11_flagship/results/mix33_flagship_ablation.json",
+          "required": true,
+          "interpretation": "identifier-complete internal development ablation; not external confirmation"
+        }
+      ],
+      "demotion_triggers": ["expert_or_class_rank_leak", "identity_registry_ground_truth_leakage", "candidate_library_adduct_used_as_veto", "technical_repeat_double_counting", "mass_only_pathway_claim", "structure_disjoint_validation_degradation"]
+    },
+    {
+      "module_id": "v12_flagship_evirank_mv",
+      "display_name": "V12-Flagship / EviRank-MV",
+      "state": "shadow",
+      "scientific_role": "bounded multi-view residual challenger over an immutable V11 entity artifact; missing views are neutral, candidate recall is audited separately, and same-identity records from different detection methods are retained",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["production_retrieval", "production_ranking", "production_confidence", "claim_scope", "release_gate", "high_promotion", "posterior_probability", "ground_truth_inference_input", "method_variant_exclusion"],
+      "applicability_requirements": ["hash-consistent V11 flagship artifact", "frozen V12 policy", "optional views bound to the same source semantic hash", "qualified residual model or explicit zero-residual fallback"],
+      "validation_artifacts": [
+        {
+          "path": "config/v12_flagship_policy.json",
+          "required": true,
+          "interpretation": "V12 bounded residual, multi-view applicability, method-case retention and promotion contract"
+        },
+        {
+          "path": "docs/MSSYSTEM_V12_EVIRANK_MV_METHOD.md",
+          "required": true,
+          "interpretation": "algorithm design, leakage barriers, current gain status and external validation requirements"
+        },
+        {
+          "path": "eval/v12_evirank_mv/results/mix33_internal_audit.json",
+          "required": true,
+          "interpretation": "identity-grouped internal development audit with candidate-recall ceiling; not external confirmation"
+        }
+      ],
+      "promotion_requirements": ["frozen qualified residual model", "connectivity-identity-disjoint external authentic standards", "same-identity cross-method records retained", "paired Top-1 confidence interval lower bound above zero", "project FDR non-inferiority", "calibration and selective-risk report"],
+      "demotion_triggers": ["residual exceeds 0.08", "missing view treated as negative evidence", "same compound excluded because another method exists", "technical repeat counted as an independent identity", "ground-truth name or identity used at inference", "any mutation of the V11 production artifact"]
+    },
+    {
+      "module_id": "v12_evirank_candidate_recall",
+      "display_name": "V12 EviRecall-MV",
+      "state": "shadow",
+      "scientific_role": "hash-bound read-only candidate expansion from measured precursor, polarity, collision-energy conditions and symmetrically processed MS/MS views; stable 2-D identities are expanded within one entity and detection method without entering the current production or EviRank winner selection",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["production_retrieval", "production_ranking", "production_confidence", "claim_scope", "release_gate", "posterior_probability", "ground_truth_inference_input", "compound_name_scoring", "blind_precursor_window_widening", "blind_adduct_enumeration", "cross_method_identity_preexclusion"],
+      "applicability_requirements": ["runtime-manifest-bound read-only SQLite snapshot", "exact measured precursor window max(0.02 Da, 10 ppm)", "same-polarity or unknown-polarity measured library spectrum", "stable 2-D connectivity identity", "V11/raw-row membership partition validation"],
+      "validation_artifacts": [
+        {
+          "path": "config/v12_candidate_recall_policy.json",
+          "required": true,
+          "interpretation": "frozen EviRecall-MV candidate budget, exact mass window, source and identity gates, two-view RRF and leakage barriers"
+        },
+        {
+          "path": "eval/v12_candidate_recall/results/mix33_candidate_recall_audit.json",
+          "required": true,
+          "interpretation": "all-case internal candidate-recall and anchor-integrity audit; not external confirmation and not a Top-1 gain claim"
+        }
+      ],
+      "promotion_requirements": ["identity-disjoint external authentic-standard candidate-recall validation", "predeclared candidate budget and library snapshot", "paired end-to-end Top-1 benefit after a separately qualified ranker", "project FDR non-inferiority", "zero V11 raw-result and library mutation"],
+      "demotion_triggers": ["truth-selected retrieval trigger", "compound name affects order", "mass window widened after seeing a miss", "unstable or name-only identity admitted", "same connectivity removed because it appeared under another detection method", "technical repeats increase condition count", "shared library write", "expanded candidate enters production ranking"]
+    },
+    {
+      "module_id": "core_spectral_ranker",
+      "display_name": "Core spectral ranker",
+      "state": "production",
+      "scientific_role": "scan-level spectral-library candidate generation for the V11 flagship entity ranker",
+      "allowed_effects": ["retrieval", "candidate_generation", "scan_evidence"],
+      "forbidden_effects": ["entity_identity_selection", "posterior_probability", "automatic_exact_structure_release"],
+      "validation_artifacts": [
+        {
+          "path": "config/golden_baseline.json",
+          "required": true,
+          "interpretation": "ten-task frozen semantic regression"
+        }
+      ],
+      "demotion_triggers": ["golden_topk_difference", "library_snapshot_mismatch"]
+    },
+    {
+      "module_id": "source_polarity_mass_gates",
+      "display_name": "Source, polarity and mass eligibility gates",
+      "state": "production",
+      "scientific_role": "candidate-space eligibility before dense-window budgeting",
+      "allowed_effects": ["retrieval", "quality_gate"],
+      "forbidden_effects": ["probability"],
+      "validation_artifacts": [
+        {
+          "path": "config/retrieval_policy.json",
+          "required": true,
+          "interpretation": "predeclared retrieval gate order and source tiers"
+        }
+      ]
+    },
+    {
+      "module_id": "candidate_independent_lockmass_recalibration",
+      "display_name": "Candidate-independent lock-mass recalibration",
+      "state": "shadow",
+      "scientific_role": "estimate sample mass-axis error from an explicitly declared vendor reference ion without chemical-library identities",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["retrieval", "ranking", "confidence", "claim_scope", "release_gate", "high_promotion", "candidate_fitted_correction"],
+      "applicability_requirements": ["vendor reference ion declared for the acquisition method", "stable reference peak across sufficient MS1 scans", "candidate-independent fit"],
+      "promotion_requirements": ["frozen reference-ion policy", "blank and authentic-standard validation", "pre/post correction mass-error benchmark", "candidate retrieval and project-FDR non-inferiority", "raw-vendor and converted-mzML agreement"],
+      "demotion_triggers": ["library match used to estimate correction", "unstable or sparse reference peak", "single-reference extrapolation outside validated mass range"]
+    },
+    {
+      "module_id": "expert_v3",
+      "display_name": "Chemical expert rules",
+      "state": "shadow",
+      "scientific_role": "candidate-conditioned chemical explanation retained after a negative internal Top-1 ablation",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["ranking", "quality_gate", "confidence", "claim_scope", "release_gate", "standalone_exact_structure_release", "probability"],
+      "runtime_assertions": [
+        {"setting": "EXPERT_SYSTEM_ENABLED", "expected": true},
+        {"setting": "USE_EXPERT_V3", "expected": true},
+        {"setting": "EXPERT_RANK_INFLUENCE_ENABLED", "expected": false}
+      ],
+      "validation_artifacts": [
+        {
+          "path": "eval/v7val/results/evigate_locked_ablation.json",
+          "sha256": "32518d9d02a8d5b897d5ff7f4f0b82152bf2178a882bad989f92aba1c99fee13",
+          "required": true,
+          "interpretation": "development-informed internal gate ablation, not external calibration"
+        }
+      ],
+      "demotion_triggers": ["scope_leak", "candidate_conditioned_rule_used_as_independent_vote"]
+    },
+    {
+      "module_id": "candidate_pathway_alignment",
+      "display_name": "Candidate-specific pathway alignment",
+      "state": "shadow",
+      "scientific_role": "counterfactual candidate-conditioned library-pathway audit after historical query leakage was identified",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["ranking", "confidence", "claim_scope", "release_gate"],
+      "runtime_assertions": [
+        {"setting": "USE_PATHWAY_ALIGN", "expected": false},
+        {"setting": "USE_PATHWAY_ALIGN_SHADOW", "expected": true},
+        {"setting": "USE_PATHWAY_CONFIDENCE", "expected": false}
+      ],
+      "validation_artifacts": [
+        {
+          "path": "docs/pab_benchmark_degrade_verdict.md",
+          "required": true,
+          "interpretation": "historical result explicitly invalidated for production because query/source exclusion was absent"
+        }
+      ],
+      "promotion_requirements": ["query-record and dataset-source cross-fit", "untouched candidate-family cohort", "pre-registered paired significance and precision gates"],
+      "demotion_triggers": ["any expert-score rerank or confidence influence"]
+    },
+    {
+      "module_id": "diagnostic_peak_rescue",
+      "display_name": "Diagnostic peak rescue",
+      "state": "off",
+      "scientific_role": "class-rule-selected low-intensity peak recovery pending independent validation",
+      "allowed_effects": [],
+      "forbidden_effects": ["ranking", "confidence", "claim_scope", "release_gate"],
+      "runtime_assertions": [
+        {"setting": "USE_DIAGNOSTIC_RESCUE", "expected": false}
+      ],
+      "promotion_requirements": ["candidate-independent peak-selection benchmark", "untouched instrument/source holdout"]
+    },
+    {
+      "module_id": "margin_confidence_promotion",
+      "display_name": "Top-1 margin confidence promotion",
+      "state": "off",
+      "scientific_role": "descriptive winner-separation statistic that is not a calibrated probability or q-value",
+      "allowed_effects": [],
+      "forbidden_effects": ["confidence", "claim_scope", "release_gate"],
+      "runtime_assertions": [
+        {"setting": "USE_MARGIN_UPGRADE", "expected": false}
+      ],
+      "promotion_requirements": ["untouched project-level calibration", "predeclared High-tier precision lower bound"]
+    },
+    {
+      "module_id": "structure_classifier_ml",
+      "display_name": "ECFP structure classifier",
+      "state": "off",
+      "scientific_role": "research-only scaffold-split classifier with abstention; weak SMARTS/database labels are not independent truth",
+      "allowed_effects": [],
+      "forbidden_effects": ["ranking", "confidence", "independent_vote", "release_gate"],
+      "promotion_requirements": ["independently curated labels", "canonical deduplication", "scaffold-disjoint train calibration and test", "per-class selective precision qualification"]
+    },
+    {
+      "module_id": "isopair_explicit_adduct_ranking",
+      "display_name": "IsoPair-MS explicit-adduct ranking",
+      "state": "shadow",
+      "scientific_role": "same-formula 2D-connectivity counterfactual ranking after independent family gain failed statistical qualification",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["ranking", "confidence", "claim_scope", "stereochemical_release"],
+      "applicability_requirements": ["explicit supported adduct", "same-formula candidate competition", "locked model domain"],
+      "runtime_assertions": [
+        {"setting": "USE_ISOPAIR_MS", "expected": true},
+        {"setting": "ISOPAIR_RANK_INFLUENCE_ENABLED", "expected": false}
+      ],
+      "validation_artifacts": [
+        {
+          "path": "models/isopair_metric_v2_noprec/locked_evaluation.json",
+          "required": true,
+          "interpretation": "locked internal evaluation retained for counterfactual audit, not ranking deployment"
+        }
+      ],
+      "promotion_requirements": ["new independent identity-disjoint family cohort", "confidence interval excluding zero gain", "no connectivity overlap after normalized-formula split audit"],
+      "demotion_triggers": ["any runtime ranking influence", "stereochemical claim leak"]
+    },
+    {
+      "module_id": "isopair_selective_high_veto",
+      "display_name": "IsoPair-MS selective High veto",
+      "state": "qualified",
+      "scientific_role": "precision-only veto on an already-High MS/MS 2D-connectivity call; never promotion or ranking",
+      "allowed_effects": ["confidence_gate", "audit"],
+      "forbidden_effects": ["ranking", "high_promotion", "stereochemical_release", "formula_conditioned_activation"],
+      "applicability_requirements": ["explicit supported adduct", "existing MS/MS High", "locked selective threshold domain"],
+      "runtime_assertions": [
+        {"setting": "USE_ISOPAIR_HIGH_PRECISION_VETO", "expected": true}
+      ],
+      "validation_artifacts": [
+        {
+          "path": "models/isopair_metric_v2_noprec/locked_evaluation.json",
+          "required": true,
+          "interpretation": "locked selective-High precision evaluation; qualified only as a veto"
+        }
+      ],
+      "demotion_triggers": ["promotion_behavior", "scope expansion", "selective precision lower-bound regression"]
+    },
+    {
+      "module_id": "recap_formula_conditioned_adduct",
+      "display_name": "RECAP formula-conditioned adduct inference",
+      "state": "shadow",
+      "scientific_role": "candidate-conditioned counterfactual audit only",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["retrieval", "ranking", "confidence", "claim_scope", "release_gate"],
+      "validation_artifacts": [
+        {
+          "path": "config/golden_task_sets.json",
+          "required": true,
+          "interpretation": "negative-control and final-shadow MIX33/QE cohorts"
+        }
+      ],
+      "promotion_requirements": ["new untouched blind cohort", "pre-registered rank and precision gates", "candidate-independent adduct evidence"],
+      "demotion_triggers": ["any runtime ranking influence"]
+    },
+    {
+      "module_id": "multimetric_similarity",
+      "display_name": "Multi-metric similarity",
+      "state": "shadow",
+      "scientific_role": "comparison metrics for ablation",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["ranking", "confidence", "release_gate"],
+      "runtime_assertions": [
+        {"setting": "USE_MULTIMETRIC_SHADOW", "expected": true}
+      ],
+      "promotion_requirements": ["compound-split external validation", "project target-decoy calibration"]
+    },
+    {
+      "module_id": "collision_energy_profile",
+      "display_name": "Collision-energy profile evidence",
+      "state": "shadow",
+      "scientific_role": "instrument/energy comparability audit",
+      "allowed_effects": ["audit", "display"],
+      "forbidden_effects": ["ranking", "confidence", "release_gate"],
+      "runtime_assertions": [
+        {"setting": "USE_CE_PROFILE_SHADOW", "expected": true}
+      ],
+      "promotion_requirements": ["cross-instrument CE normalization", "held-out benefit without FDR inflation"]
+    },
+    {
+      "module_id": "contrastive_expert",
+      "display_name": "Contrastive expert evidence",
+      "state": "shadow",
+      "scientific_role": "class-level counterfactual explanation",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["ranking", "confidence", "release_gate"],
+      "promotion_requirements": ["candidate-independent labels", "compound-split precision gain"]
+    },
+    {
+      "module_id": "feature_candidate_consensus",
+      "display_name": "Feature-collapsed candidate consensus",
+      "state": "shadow",
+      "scientific_role": "one-vote-per-precursor-event stability analysis",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["ranking", "confidence", "release_gate"],
+      "validation_artifacts": [
+        {
+          "path": "eval/v7val/results/evigate_locked_ablation.json",
+          "sha256": "32518d9d02a8d5b897d5ff7f4f0b82152bf2178a882bad989f92aba1c99fee13",
+          "required": true,
+          "interpretation": "27/33 internal feature-consensus lead; development-informed"
+        }
+      ],
+      "promotion_requirements": ["untouched feature-level validation", "project q-value calibration"]
+    },
+    {
+      "module_id": "chimeric_deconvolution",
+      "display_name": "Chimeric-spectrum deconvolution",
+      "state": "qualified",
+      "scientific_role": "bounded score refinement that must preserve selected candidate identity",
+      "allowed_effects": ["score_within_selected_identity", "audit", "display"],
+      "forbidden_effects": ["top1_identity_change", "independent_vote", "exact_structure_release"],
+      "runtime_assertions": [
+        {"setting": "USE_CHIMERIC_DECONVOLUTION", "expected": true}
+      ],
+      "promotion_requirements": ["external chimeric benchmark", "FDR non-inferiority", "Top1 invariant test"]
+    },
+    {
+      "module_id": "project_target_decoy_calibration",
+      "display_name": "Project target-decoy calibration",
+      "state": "qualified",
+      "scientific_role": "post-ranking empirical q-value assignment",
+      "allowed_effects": ["calibration", "release_gate", "audit"],
+      "forbidden_effects": ["ranking", "probability_without_labels", "cross-project_transfer"],
+      "validation_artifacts": [
+        {
+          "path": "docs/audits/V9_P3_CALIBRATION_READINESS.json",
+          "required": true,
+          "interpretation": "engine ready; current production calibration unavailable"
+        }
+      ],
+      "promotion_requirements": ["complete current-project paired competition artifact", "entity-level calls", "runtime/library/candidate-space match"]
+    },
+    {
+      "module_id": "evigate_v2_claim_compiler",
+      "display_name": "EviGate 2.0 claim compiler",
+      "state": "qualified",
+      "scientific_role": "single final claim decision and abstention outlet",
+      "allowed_effects": ["claim_scope", "release_gate", "abstention", "audit"],
+      "forbidden_effects": ["retrieval", "ranking", "legacy_confidence_overwrite"],
+      "promotion_requirements": ["all report consumers migrated", "independent-injection tests", "project calibration available for ordinary releases"]
+    },
+    {
+      "module_id": "eviacquire_active_evidence",
+      "display_name": "EviAcquire-MS active evidence planner",
+      "state": "shadow",
+      "scientific_role": "candidate-pair ambiguity graph and maximin follow-up acquisition recommendation",
+      "allowed_effects": ["audit", "display", "counterfactual", "acquisition_recommendation", "export"],
+      "forbidden_effects": ["retrieval", "ranking", "confidence", "claim_scope", "release_gate"],
+      "applicability_requirements": ["at least two unresolved candidates", "candidate-independent precursor and retention-time coordinates"],
+      "validation_artifacts": [
+        {
+          "path": "config/acquisition_policy.json",
+          "required": true,
+          "interpretation": "versioned maximin acquisition policy and hard scientific invariants"
+        }
+      ],
+      "promotion_requirements": ["prospective multi-run benchmark", "held-out authentic standards", "vendor-method feasibility review", "measured ambiguity-resolution benefit per duty-cycle cost"],
+      "demotion_triggers": ["current ranking influence", "predicted evidence treated as observed", "candidate-conditioned follow-up linkage"],
+      "notes": ["exports are advisory CSV only", "utility is not probability or calibrated confidence"]
+    },
+    {
+      "module_id": "evograph_fragmentation",
+      "display_name": "EvoGraph-F structured fragmentation graph",
+      "state": "shadow",
+      "scientific_role": "charge-aware sparse peak-to-subformula neutral-loss graph with explicit abstention and uncalibrated edge marginals",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["retrieval", "ranking", "confidence", "claim_scope", "release_gate", "high_promotion", "probability_claim", "uncalibrated_bayes_factor"],
+      "applicability_requirements": ["committed immutable task result", "valid precursor and fragment peaks", "explicit supported singly charged adduct for formula assignment"],
+      "validation_artifacts": [
+        {
+          "path": "config/evograph_policy.json",
+          "required": true,
+          "interpretation": "frozen shadow-only inference limits, calibration absence, and preregistered promotion gate"
+        }
+      ],
+      "promotion_requirements": ["identity-disjoint external authentic standards", "predeclared neutral-loss truth protocol", "high-confidence neutral-loss precision at least 95%", "95% Wilson lower bound at least 90%", "adduct polarity collision-energy and instrument stratification", "production ranking non-inferiority"],
+      "demotion_triggers": ["heuristic marginal represented as probability", "polarity-only adduct guess used for formula assignment", "candidate-conditioned formula treated as independent evidence", "any Top-1 confidence or High influence"],
+      "notes": ["log Bayes factor is unavailable before external calibration", "legacy result is a read-only input and the graph is an additive sidecar"]
+    },
+    {
+      "module_id": "v16_dual_polarity_evidence_graph",
+      "display_name": "V16 dual-polarity shadow evidence graph",
+      "state": "shadow",
+      "scientific_role": "explicitly pair one completed POS task and one completed NEG task, freeze candidate-independent neutral-mass and retention-time links, then annotate the frozen links with stable 2-D connectivity hypotheses from immutable V15 artifacts",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["retrieval", "ranking", "confidence", "claim_scope", "release_gate", "high_promotion", "compound_counting", "automatic_task_pairing", "candidate_conditioned_entity_linking", "stereochemical_release", "probability_claim"],
+      "applicability_requirements": ["two distinct explicitly selected completed task IDs", "exact task metadata identifies one POS task and one NEG task", "operator confirms the same sample and LC method", "reliable IIMN or separately validated multi-feature adduct-group neutral mass", "neutral mass and retention time both satisfy the frozen edge thresholds", "current immutable V15 flagship artifacts for both tasks"],
+      "validation_artifacts": [
+        {
+          "path": "config/v16_dual_polarity_policy.json",
+          "required": true,
+          "interpretation": "frozen task-pairing anchor edge candidate-support and production-invariant contract"
+        },
+        {
+          "path": "docs/V16_DUAL_POLARITY_SHADOW_METHOD.md",
+          "required": true,
+          "interpretation": "method sequence source-hash bindings ambiguity handling and present evidence limits"
+        }
+      ],
+      "promotion_requirements": ["prospective locked dual-polarity authentic-standard cohort", "sample and LC-method pairing declared before result inspection", "identity-disjoint validation not used to select thresholds", "paired candidate-recall and end-to-end Top-1 confidence intervals", "project false-discovery non-inferiority", "zero mutation of V15 production artifacts"],
+      "demotion_triggers": ["filename-derived automatic pairing", "candidate identity used before graph freeze", "one-to-many edge resolved by candidate agreement", "same name or formula treated as connectivity identity", "cross-polarity spectral similarity changes Top-1", "neutral entity increases the reported compound count", "source V15 artifact mutation"],
+      "notes": ["one accepted neutral entity retains two precursor-event evidence records", "cross-polarity MS2 similarity is auxiliary edge annotation only", "post-reveal dual-polarity union statistics are not confirmation performance"]
+    },
+    {
+      "module_id": "formula_prediction_fiddle",
+      "display_name": "msFIDDLE QTOF formula prediction",
+      "state": "shadow",
+      "scientific_role": "open-world molecular-formula candidate generation for matched and library-unmatched MS/MS",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["retrieval", "ranking", "confidence", "claim_scope", "release_gate", "high_promotion", "structure_identity_release"],
+      "applicability_requirements": ["QTOF-domain MS/MS", "at least five valid product ions", "explicit supported adduct or clearly labeled polarity-derived hypothesis"],
+      "promotion_requirements": ["identity-disjoint authentic-standard cohort", "adduct-stratified formula recall and false-discovery assessment", "current-project target-decoy or equivalent empirical calibration", "predeclared High precision lower bound"],
+      "demotion_triggers": ["model score represented as probability", "polarity-derived adduct treated as measured", "formula output represented as exact structure"]
+    },
+    {
+      "module_id": "formula_conditioned_library_enumeration",
+      "display_name": "Formula-conditioned structure enumeration",
+      "state": "shadow",
+      "scientific_role": "map refined formula candidates to deduplicated local-catalog structure hypotheses without spectral reranking",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["retrieval", "ranking", "confidence", "claim_scope", "release_gate", "high_promotion", "automatic_structure_release"],
+      "applicability_requirements": ["completed formula shadow artifact", "normalized molecular formula", "read-only candidate catalog"],
+      "promotion_requirements": ["candidate-source provenance and database snapshot", "formula-disjoint retrieval benchmark", "validated second-stage spectral ranking", "project-level false-discovery control"],
+      "demotion_triggers": ["catalog order represented as spectral rank", "generated hypothesis represented as identification", "shared library write access"]
+    },
+    {
+      "module_id": "evidiscrim_candidate_contrast",
+      "display_name": "EviDiscrim-MS candidate-contrastive diagnostic evidence",
+      "state": "shadow",
+      "scientific_role": "same-formula different-connectivity candidate-pair diagnostic-ion audit with prediction uncertainty and planning-only collision-energy maximin selection",
+      "allowed_effects": ["audit", "display", "counterfactual", "acquisition_recommendation"],
+      "forbidden_effects": ["retrieval", "ranking", "confidence", "claim_scope", "release_gate", "high_promotion", "independent_vote", "stereochemical_release", "probability_claim"],
+      "applicability_requirements": ["at least two unresolved candidates with valid structures", "same normalized neutral formula", "different RDKit-normalized 2D connectivity", "same explicit supported adduct", "candidate and collision-energy matched predicted spectra", "at least two common registered independent architecture groups for any resolved pair or CE recommendation"],
+      "validation_artifacts": [
+        {
+          "path": "config/evidiscrim_policy.json",
+          "required": true,
+          "interpretation": "versioned candidate scope diagnostic thresholds independent-architecture disagreement CE objective and hard shadow invariants"
+        },
+        {
+          "path": "config/evidiscrim_benchmark_policy.json",
+          "required": true,
+          "interpretation": "identity-disjoint authentic-standard split QTOF calibration five-method comparison paired Top-1 CI and project FDR gate"
+        },
+        {
+          "path": "docs/audits/EVIDISCRIM_V2_BENCHMARK_READINESS.json",
+          "required": true,
+          "interpretation": "current engineering readiness and explicit unavailable performance status"
+        }
+      ],
+      "promotion_requirements": ["identity-disjoint authentic-standard candidate-pair cohort", "instrument and collision-energy matched forward model", "predeclared pairwise selective accuracy and coverage", "paired Top-1 improvement confidence interval excluding zero", "project target-decoy false-discovery non-inferiority", "prospective diagnostic-ion reacquisition benefit"],
+      "demotion_triggers": ["predicted spectrum treated as experimental confirmation", "same-connectivity stereoisomer resolution claim", "unqualified cross-instrument CE recommendation", "uncalibrated fit represented as probability", "any current ranking confidence High claim or release influence"],
+      "notes": ["a singleton model or repeated checkpoints from one architecture must abstain", "at least two common independent architecture families are required", "missing diagnostic ions cause abstention", "EviAcquire may consume only current source-hash-matched recommended-shadow CE context"]
+    },
+    {
+      "module_id": "forward_spectrum_fiora",
+      "display_name": "FIORA forward-spectrum prediction",
+      "state": "shadow",
+      "scientific_role": "candidate-conditioned predicted-spectrum disagreement and counterfactual ranking audit",
+      "allowed_effects": ["audit", "display", "counterfactual"],
+      "forbidden_effects": ["retrieval", "ranking", "confidence", "claim_scope", "release_gate", "high_promotion", "independent_vote"],
+      "applicability_requirements": ["candidate structure", "supported explicit adduct", "collision energy", "instrument-domain audit"],
+      "promotion_requirements": ["QTOF-matched or cross-instrument calibrated model", "identity-disjoint candidate-pair benchmark", "paired rank improvement with confidence interval excluding zero", "project-level false-discovery non-inferiority"],
+      "demotion_triggers": ["predicted spectrum treated as experimental measurement", "domain-shifted HCD score used for High", "candidate-conditioned evidence counted as independent confirmation"]
+    },
+    {
+      "module_id": "forward_spectrum_iceberg",
+      "display_name": "ICEBERG forward-spectrum prediction",
+      "state": "off",
+      "scientific_role": "future second forward model for architecture-disagreement analysis after a reproducible adapter is validated",
+      "allowed_effects": [],
+      "forbidden_effects": ["retrieval", "ranking", "confidence", "claim_scope", "release_gate", "independent_vote"],
+      "promotion_requirements": ["frozen adapter and checkpoint manifest", "instrument/adduct applicability audit", "identity-disjoint comparison against FIORA and experimental spectra"]
+    },
+    {
+      "module_id": "evitwin_ms",
+      "display_name": "EviTwin-MS authentic-standard joint ranking",
+      "state": "qualified",
+      "scientific_role": "active authentic-reference candidate display ranker using precursor-mass filtering, collision-energy-matched measured MS/MS, and one-to-one monotonic retention-order assignment while keeping formal claim release separate",
+      "allowed_effects": ["audit", "display", "candidate_generation", "ranking", "isomer_group_scope"],
+      "forbidden_effects": ["legacy_v11_mutation", "legacy_v12_mutation", "single_standard_self_match", "ground_truth_inference_input", "compound_name_scoring", "formal_level1_release", "same_2d_stereoisomer_exact_claim", "posterior_probability"],
+      "applicability_requirements": ["explicit installed authentic-standard library", "same instrument family", "precursor mass within the frozen tolerance", "at least two matched collision-energy conditions for priority ranking", "query task differs from authentic reference source task"],
+      "validation_artifacts": [
+        {
+          "path": "config/authentic_anchor_registry.json",
+          "required": true,
+          "interpretation": "active authentic-library binding, activation scope and post-reveal limitation"
+        },
+        {
+          "path": "output/validation_eval/20260825_authentic_anchor_ms/authentic_anchor_library_rtqc_v2.json",
+          "sha256": "a41a309a0347db594287279d023ec6cade6e6b09130366b907940007765a8162",
+          "required": true,
+          "interpretation": "77-entry measured authentic-standard runtime library; exact file and semantic hashes are bound by the active registry"
+        },
+        {
+          "path": "output/validation_eval/20260825_evitwin_ms/evitwin_ms_post_reveal_evaluation.json",
+          "required": true,
+          "interpretation": "frozen V12 truth-after-inference engineering evidence inherited unchanged by V14; V14 paired regeneration is additive and remains non-confirmatory"
+        },
+        {
+          "path": "eval/v14_validation/results/v14_evitwin_effective_evaluation.json",
+          "sha256": "633540df9a512cda414e24c73c41fccd392ae76359658f2203960c6fc1f3b750",
+          "required": true,
+          "interpretation": "V14-bound paired laboratory replay: candidate-display Top-1 25/39 to 29/39, safe scope 36/45 to 38/45, four gains and zero losses; post-reveal engineering evidence"
+        },
+        {
+          "path": "eval/v14_validation/results/v14_evitwin_external_gate.json",
+          "sha256": "e6f1548c8d9e2c55d114f84a265a128cd497af8b2f6e4b4eee6720a9406f9abc",
+          "required": true,
+          "interpretation": "QE Orbitrap fail-closed cross-instrument audit and MIX33 no-qualified-anchor no-regression gate"
+        },
+        {
+          "path": "docs/audits/V14_AUTHENTIC_ANCHOR_INSTALL_RECEIPT_20260825.json",
+          "sha256": "d46e87bf8a594f5278f6e7c4d0cb4fc949d67fe5556b260d969bc8c959d78910",
+          "required": true,
+          "interpretation": "explicit hash-bound installation receipt proving that the V12 source artifact was not mutated"
+        }
+      ],
+      "promotion_requirements": ["prospective locked query batch not used to choose thresholds", "same-method RT calibration before formal Level-1 release", "blank and carryover negative-control false-positive audit", "paired Top-1 confidence interval excluding zero for manuscript superiority"],
+      "demotion_triggers": ["single-standard self spectrum used as query reference", "truth or expected name enters inference", "priority candidate outside the installed authentic library", "legacy public-library artifact overwritten", "formal Level-1 release without same-method RT contract"],
+      "notes": ["qualified only for the authentic-reference display-ranking lane", "post-reveal laboratory results are engineering validation", "public-library candidates remain available for audit"]
+    },
+    {
+      "module_id": "de_novo_structure_diffms",
+      "display_name": "DiffMS formula-conditioned structure generation",
+      "state": "off",
+      "scientific_role": "future open-world structure proposal after formula prediction; generated structures are hypotheses rather than identifications",
+      "allowed_effects": [],
+      "forbidden_effects": ["retrieval", "ranking", "confidence", "claim_scope", "release_gate", "high_promotion", "automatic_structure_release"],
+      "promotion_requirements": ["verified published checkpoint", "formula-constrained validity and uniqueness audit", "identity-disjoint top-k recall benchmark", "candidate database novelty audit", "orthogonal experimental confirmation policy"]
+    },
+    {
+      "module_id": "v16_cross_occurrence_consensus_ranker",
+      "display_name": "V16 cross-occurrence consensus ranker",
+      "state": "qualified",
+      "scientific_role": "controlled opt-in reranking of an existing same-formula native Top-5 when at least two other explicitly selected same-method tasks and the target task independently select the same 2-D connectivity from measured MS/MS",
+      "allowed_effects": ["ranking", "audit", "display"],
+      "forbidden_effects": ["retrieval", "candidate_generation", "confidence", "claim_scope", "release_gate", "high_promotion", "compound_counting", "expanded_candidate_promotion", "automatic_task_grouping", "compound_name_scoring", "ground_truth_inference_input", "stereochemical_release", "posterior_probability"],
+      "applicability_requirements": ["3 to 100 explicitly selected completed task IDs", "operator confirms one LC method and directly comparable retention times", "QTOF acquisition domain", "same polarity complete-link alignment within 15 ppm and 0.15 min", "at least two external same-formula task votes with at least two-thirds agreement", "target direct-neutral Top-1 equals the external peer winner", "peer winner already exists in the target non-vetoed native Top-5"],
+      "validation_artifacts": [
+        {
+          "path": "config/v16_cross_occurrence_policy.json",
+          "required": true,
+          "interpretation": "locked explicit-cohort activation, Top-5 candidate boundary, direct-neutral scoring, peer-vote and rollback contract"
+        },
+        {
+          "path": "docs/audits/v16_cross_occurrence_consensus_exploration/runtime_top5_replay.json",
+          "required": true,
+          "interpretation": "retrospective F002-F008 runtime-code replay: 131 to 140 of 184, 9 corrected and 0 newly incorrect; not independent confirmation"
+        },
+        {
+          "path": "docs/audits/V16_CROSS_OCCURRENCE_RUNTIME_INTEGRATION_20260904.md",
+          "required": true,
+          "interpretation": "implementation, atomic activation, rollback and scientific claim limits"
+        }
+      ],
+      "promotion_requirements": ["new sealed identity-disjoint QTOF standard cohort", "predeclared same-method grouping before result inspection", "identity-balanced Top-1 difference interval lower bound above zero", "no net loss in either polarity", "Top-5 non-inferiority", "project false-discovery non-inferiority"],
+      "demotion_triggers": ["filename-derived cohort grouping", "target included in its own peer vote", "cross-formula switch", "expanded candidate promoted", "candidate name or truth affects scoring", "decision scope confidence or compound count increases", "artifact replaced without a verified rollback copy"],
+      "notes": ["qualified only for explicit operator-controlled use; not enabled automatically after analysis", "retrospective gain cannot replace manuscript accuracy results before an independent sealed cohort", "a reordered lead remains within an unresolved same-formula isomer group without authentic-standard confirmation"]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "evidiscrim-ms-identity-disjoint-benchmark-v1.0.0-20260807",
+  "study_state": "locally_locked_protocol_awaiting_authentic_standard_manifest_and_external_timestamp",
+  "random_seed": 20260807,
+  "split": {
+    "unit": "rdkit_connectivity_candidate_graph_component",
+    "train_fraction": 0.6,
+    "calibration_fraction": 0.2,
+    "blind_test_fraction": 0.2,
+    "stratify_by": ["instrument_domain", "polarity", "adduct", "acquisition_batch"],
+    "keep_all_replicates_together": true,
+    "minimum_total_connectivity_identities": 30,
+    "minimum_blind_test_connectivity_identities": 10,
+    "freeze_assignments_before_prediction": true,
+    "seal_blind_labels": true
+  },
+  "truth": {
+    "required_status": "authentic_standard",
+    "allowed_provenance": [
+      "authenticated_reference_material",
+      "in_house_authentic_standard_with_lot_record",
+      "certified_reference_material"
+    ],
+    "forbidden_provenance_tokens": [
+      "search_result",
+      "library_top1",
+      "predicted_identity",
+      "candidate_ranking"
+    ],
+    "require_nonempty_standard_lot": true
+  },
+  "leakage": {
+    "fail_on_connectivity_overlap": true,
+    "fail_on_exact_isomeric_smiles_overlap": true,
+    "fail_on_spectrum_fingerprint_overlap": true,
+    "fail_on_source_record_overlap": true,
+    "fail_on_standard_id_overlap": true,
+    "murcko_scaffold_overlap": "report_only"
+  },
+  "candidate_pair": {
+    "require_true_candidate_present_once": true,
+    "require_same_normalized_formula": true,
+    "require_at_least_one_different_connectivity_competitor": true,
+    "same_connectivity_stereoisomers": "excluded_from_2d_confirmatory_set_and_reported_as_stereo_abstention"
+  },
+  "spectrum_processing": {
+    "implementation": "matchms_0.33.1",
+    "normalization": "base_peak_to_one",
+    "minimum_relative_intensity": 0.01,
+    "minimum_peak_count": 2,
+    "mz_tolerance_da": 0.02,
+    "whole_spectrum_similarity": "CosineHungarian",
+    "remove_precursor_peak": false,
+    "modified_cosine_mass_shift": false
+  },
+  "qtof_calibration": {
+    "method": "identity_disjoint_domain_specific_isotonic_peak_intensity_transfer",
+    "base_architecture_family_preserved": true,
+    "counts_as_independent_architecture": false,
+    "require_qtof_analyzer": true,
+    "require_exact_vendor_model_activation_polarity_adduct_energy_unit": true,
+    "allow_collision_energy_interpolation": false,
+    "allow_cross_instrument_transfer": false,
+    "minimum_connectivity_identities_per_domain": 20,
+    "minimum_predicted_peaks_per_domain": 200,
+    "out_of_bounds": "clip"
+  },
+  "ensemble": {
+    "minimum_common_independent_architecture_families": 2,
+    "equal_weight_architecture_families": true,
+    "same_architecture_checkpoints_are_within_family_replicates": true,
+    "singleton_uncertainty_floor_allowed": false,
+    "single_architecture_pair_resolution_allowed": false,
+    "architecture_family_registry": {
+      "fiora_local_neighborhood_fragmentation_gnn": {
+        "independence_group": "fragmentation_graph_local_neighborhood",
+        "reference_instrument_domain": "HCD"
+      },
+      "3dmolms_3d_conformation_gnn": {
+        "independence_group": "three_dimensional_conformation_message_passing",
+        "reference_instrument_domain": "QTOF"
+      }
+    },
+    "require_model_artifact_sha256_for_every_declared_family": true
+  },
+  "comparisons": {
+    "required_methods": [
+      "production_baseline",
+      "whole_spectrum_fiora",
+      "evidiscrim_full",
+      "evidiscrim_no_uncertainty",
+      "evidiscrim_no_abstention"
+    ],
+    "primary_contrast": ["evidiscrim_full", "production_baseline"],
+    "secondary_comparisons_are_descriptive": true,
+    "abstention_counts_as_incorrect_for_complete_top1": true,
+    "primary_unit": "connectivity_identity",
+    "technical_replicates_are_not_independent_n": true
+  },
+  "statistics": {
+    "confidence_level": 0.95,
+    "paired_cluster_bootstrap_iterations": 10000,
+    "paired_cluster_bootstrap_seed": 20260807,
+    "top1_gain_ci_must_exclude_zero": true,
+    "top1_gain_ci_lower_bound_must_be_greater_than": 0.0,
+    "project_fdr_noninferiority_margin": 0.0,
+    "project_fdr_delta_ci_upper_bound_must_be_at_most_margin": true
+  },
+  "promotion_gate": {
+    "action": "allow_discussion_only_not_automatic_deployment",
+    "require_identity_disjoint_audit_pass": true,
+    "require_all_five_methods_locked": true,
+    "require_full_ensemble_qualified": true,
+    "require_top1_gain_ci_excludes_zero": true,
+    "require_project_fdr_not_worse": true,
+    "production_ranking_change_before_gate": false
+  }
+}

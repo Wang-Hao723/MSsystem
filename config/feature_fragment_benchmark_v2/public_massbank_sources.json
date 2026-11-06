@@ -1,0 +1,319 @@
+{
+  "schema_version": "2.0.0",
+  "repository": {
+    "name": "MassBank Europe",
+    "api_root": "https://massbank.eu/MassBank-api",
+    "release": "2025.10",
+    "metadata_url": "https://massbank.eu/MassBank-api/metadata",
+    "openapi_url": "https://massbank.eu/MassBank-api/ui/openapi.yaml",
+    "retrieved_on": "2026-08-26"
+  },
+  "license_policy": {
+    "raw_records_are_not_committed": true,
+    "accepted_labels_for_local_analysis": [
+      "CC0",
+      "CC BY",
+      "CC BY-SA",
+      "CC BY-NC",
+      "CC BY-NC-SA"
+    ],
+    "preserve_each_record_label": true,
+    "spdx_mapping_is_intentionally_omitted_when_version_is_unreported": true
+  },
+  "sources": [
+    {
+      "source_id": "massbank_antwerp_univ_qtof_ms2",
+      "cache_filename": "antwerp.json",
+      "contributor": "Antwerp_Univ",
+      "laboratory_id": "university_of_antwerp_toxicological_centre",
+      "research_id": "massbank_antwerp_univ_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=Antwerp_Univ&instrument_type=LC-ESI-QTOF&ms_type=MS2",
+      "expected_record_count": 1762,
+      "domain_ids": [
+        "agilent_6560_qtof_cid_contributor_text",
+        "agilent_6530_qtof_cid_contributor_text"
+      ]
+    },
+    {
+      "source_id": "massbank_athens_univ_qtof_ms2",
+      "cache_filename": "athens.json",
+      "contributor": "Athens_Univ",
+      "laboratory_id": "national_and_kapodistrian_university_of_athens",
+      "research_id": "massbank_athens_univ_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=Athens_Univ&instrument_type=LC-ESI-QTOF&ms_type=MS2",
+      "expected_record_count": 5158,
+      "domain_ids": ["bruker_maxis_impact_qtof_cid_contributor_text"]
+    },
+    {
+      "source_id": "massbank_eawag_qft_ms2",
+      "cache_filename": "eawag.json",
+      "contributor": "Eawag",
+      "laboratory_id": "eawag",
+      "research_id": "massbank_eawag_qft_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=Eawag&instrument_type=LC-ESI-QFT&ms_type=MS2",
+      "expected_record_count": 11515,
+      "domain_ids": [
+        "thermo_exploris_240_hcd",
+        "thermo_q_exactive_plus_hcd",
+        "thermo_q_exactive_hcd"
+      ]
+    },
+    {
+      "source_id": "massbank_eawag_upper_qft_ms2",
+      "cache_filename": "eawag_upper.json",
+      "contributor": "EAWAG",
+      "laboratory_id": "eawag",
+      "research_id": "massbank_eawag_upper_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=EAWAG&instrument_type=LC-ESI-QFT&ms_type=MS2",
+      "expected_record_count": 2546,
+      "domain_ids": ["thermo_exploris_240_hcd"]
+    },
+    {
+      "source_id": "massbank_hbm4eu_sciex_qtof_ms2",
+      "cache_filename": "hbm4eu.json",
+      "contributor": "HBM4EU",
+      "laboratory_id": "hbm4eu_mass_spectral_library",
+      "research_id": "massbank_hbm4eu_qtof_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=HBM4EU&instrument_type=ESI-QTOF&ms_type=MS2",
+      "expected_record_count": 149,
+      "domain_ids": ["sciex_tripletof_5600plus_qtof_cid_contributor_text"]
+    },
+    {
+      "source_id": "massbank_mssj_sciex_qtof_ms2",
+      "cache_filename": "mssj.json",
+      "contributor": "MSSJ",
+      "laboratory_id": "mass_spectrometry_society_of_japan",
+      "research_id": "massbank_mssj_x500r_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=MSSJ&instrument_type=ESI-QTOF&ms_type=MS2",
+      "expected_record_count": 780,
+      "domain_ids": ["sciex_x500r_qtof_cid_contributor_text"]
+    },
+    {
+      "source_id": "massbank_riken_waters_qtof_ms2",
+      "cache_filename": "riken.json",
+      "contributor": "RIKEN",
+      "laboratory_id": "riken",
+      "research_id": "massbank_riken_qtof_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=RIKEN&instrument_type=LC-ESI-QTOF&ms_type=MS2",
+      "expected_record_count": 11503,
+      "domain_ids": ["waters_qtof_premier_low_energy_cid_contributor_text"]
+    },
+    {
+      "source_id": "massbank_isas_dual_platform_ms2",
+      "cache_filename": "isas.json",
+      "contributor": "ISAS_Dortmund",
+      "laboratory_id": "isas_dortmund",
+      "research_id": "massbank_isas_dortmund_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=ISAS_Dortmund&ms_type=MS2",
+      "expected_record_count": 339,
+      "domain_ids": [
+        "thermo_q_exactive_hf_hcd",
+        "agilent_6545_qtof_cid_contributor_text"
+      ]
+    },
+    {
+      "source_id": "massbank_fiocruz_bruker_qtof_ms2",
+      "cache_filename": "fiocruz.json",
+      "contributor": "Fiocruz",
+      "laboratory_id": "fiocruz",
+      "research_id": "massbank_fiocruz_submission",
+      "query_url": "https://massbank.eu/MassBank-api/records?contributor=Fiocruz&instrument_type=LC-ESI-QTOF&ms_type=MS2",
+      "expected_record_count": 1107,
+      "allow_precursor_mz_from_neutral_exact_mass": true,
+      "domain_ids": ["bruker_maxis_qtof_cid_contributor_text"]
+    }
+  ],
+  "instrument_domains": [
+    {
+      "domain_id": "agilent_6560_qtof_cid_contributor_text",
+      "vendor": "Agilent Technologies",
+      "family": "6500 Series Q-TOF",
+      "models": ["Agilent 6560 QTOF"],
+      "analyzer": "QTOF",
+      "activation_raw": ["CID"],
+      "activation": "CID",
+      "activation_evidence": "MassBank contributor text",
+      "psi_beam_type_cid_confirmed": false,
+      "architecture_interpretation": "QTOF collision-cell dissociation is compatible with beam-type CID, but the record does not contain PSI MS:1000422",
+      "collision_cell_region": "instrument_specific_collision_cell_not_reported_in_record",
+      "allowed_ce_units": ["eV"],
+      "allowed_ce_modes": ["fixed"]
+    },
+    {
+      "domain_id": "agilent_6530_qtof_cid_contributor_text",
+      "vendor": "Agilent Technologies",
+      "family": "6500 Series Q-TOF",
+      "models": ["Agilent 6530 QTOF"],
+      "analyzer": "QTOF",
+      "activation_raw": ["CID"],
+      "activation": "CID",
+      "activation_evidence": "MassBank contributor text",
+      "psi_beam_type_cid_confirmed": false,
+      "architecture_interpretation": "QTOF collision-cell dissociation is compatible with beam-type CID, but the record does not contain PSI MS:1000422",
+      "collision_cell_region": "instrument_specific_collision_cell_not_reported_in_record",
+      "allowed_ce_units": ["eV"],
+      "allowed_ce_modes": ["fixed"]
+    },
+    {
+      "domain_id": "agilent_6545_qtof_cid_contributor_text",
+      "vendor": "Agilent Technologies",
+      "family": "6500 Series Q-TOF",
+      "models": ["Agilent QTof 6545, Agilent Technologies [MS:1000490]"],
+      "analyzer": "QTOF",
+      "activation_raw": ["CID"],
+      "activation": "CID",
+      "activation_evidence": "MassBank contributor text",
+      "psi_beam_type_cid_confirmed": false,
+      "architecture_interpretation": "QTOF collision-cell dissociation is compatible with beam-type CID, but the record does not contain PSI MS:1000422",
+      "collision_cell_region": "instrument_specific_collision_cell_not_reported_in_record",
+      "allowed_ce_units": ["eV"],
+      "allowed_ce_modes": ["fixed"]
+    },
+    {
+      "domain_id": "bruker_maxis_impact_qtof_cid_contributor_text",
+      "vendor": "Bruker Daltonics",
+      "family": "maXis QTOF",
+      "models": ["Bruker maXis Impact"],
+      "analyzer": "QTOF",
+      "activation_raw": ["CID"],
+      "activation": "CID",
+      "activation_evidence": "MassBank contributor text",
+      "psi_beam_type_cid_confirmed": false,
+      "architecture_interpretation": "QTOF collision-cell dissociation is compatible with beam-type CID, but the record does not contain PSI MS:1000422",
+      "collision_cell_region": "instrument_specific_collision_cell_not_reported_in_record",
+      "allowed_ce_units": ["eV"],
+      "allowed_ce_modes": ["fixed", "ramp"]
+    },
+    {
+      "domain_id": "bruker_maxis_qtof_cid_contributor_text",
+      "vendor": "Bruker Daltonics",
+      "family": "maXis QTOF",
+      "models": ["maXis (Bruker Daltonics)"],
+      "analyzer": "QTOF",
+      "activation_raw": ["CID"],
+      "activation": "CID",
+      "activation_evidence": "MassBank contributor text",
+      "psi_beam_type_cid_confirmed": false,
+      "architecture_interpretation": "QTOF collision-cell dissociation is compatible with beam-type CID, but the record does not contain PSI MS:1000422",
+      "collision_cell_region": "instrument_specific_collision_cell_not_reported_in_record",
+      "allowed_ce_units": ["eV"],
+      "allowed_ce_modes": ["fixed"]
+    },
+    {
+      "domain_id": "thermo_exploris_240_hcd",
+      "vendor": "Thermo Fisher Scientific",
+      "family": "Orbitrap Exploris",
+      "models": [
+        "Exploris 240 Orbitrap Thermo Scientific",
+        "Exploris 240 Thermo Scientific",
+        "Orbitrap Exploris 240 Thermo Scientific"
+      ],
+      "analyzer": "Orbitrap",
+      "activation_raw": ["HCD"],
+      "activation": "HCD",
+      "activation_evidence": "MassBank contributor text plus exact-model vendor HCD documentation",
+      "psi_hcd_cv_confirmed": false,
+      "collision_cell_region": "HCD_cell_not_reported_in_record",
+      "allowed_ce_units": ["percent_nominal"],
+      "allowed_ce_modes": ["fixed"]
+    },
+    {
+      "domain_id": "thermo_q_exactive_plus_hcd",
+      "vendor": "Thermo Fisher Scientific",
+      "family": "Q Exactive",
+      "models": [
+        "Q Exactive Plus Orbitrap Thermo Scientific",
+        "Q Exactive Plus"
+      ],
+      "analyzer": "Orbitrap",
+      "activation_raw": ["HCD"],
+      "activation": "HCD",
+      "activation_evidence": "MassBank contributor text plus exact-model vendor HCD documentation",
+      "psi_hcd_cv_confirmed": false,
+      "collision_cell_region": "HCD_cell_not_reported_in_record",
+      "allowed_ce_units": ["percent_nominal"],
+      "allowed_ce_modes": ["fixed"]
+    },
+    {
+      "domain_id": "thermo_q_exactive_hcd",
+      "vendor": "Thermo Fisher Scientific",
+      "family": "Q Exactive",
+      "models": [
+        "Q Exactive Orbitrap Thermo Scientific",
+        "Q Exactive"
+      ],
+      "analyzer": "Orbitrap",
+      "activation_raw": ["HCD"],
+      "activation": "HCD",
+      "activation_evidence": "MassBank contributor text plus exact-model vendor HCD documentation",
+      "psi_hcd_cv_confirmed": false,
+      "collision_cell_region": "HCD_cell_not_reported_in_record",
+      "allowed_ce_units": ["percent_nominal"],
+      "allowed_ce_modes": ["fixed"]
+    },
+    {
+      "domain_id": "thermo_q_exactive_hf_hcd",
+      "vendor": "Thermo Fisher Scientific",
+      "family": "Q Exactive HF",
+      "models": ["Q-Exactive HF, Thermo Scientific [MS:1002523]"],
+      "analyzer": "Orbitrap",
+      "activation_raw": ["HCD"],
+      "activation": "HCD",
+      "activation_evidence": "MassBank contributor text plus exact-model vendor HCD documentation",
+      "psi_hcd_cv_confirmed": false,
+      "collision_cell_region": "HCD_cell_not_reported_in_record",
+      "allowed_ce_units": ["NCE"],
+      "allowed_ce_modes": ["fixed"]
+    },
+    {
+      "domain_id": "sciex_tripletof_5600plus_qtof_cid_contributor_text",
+      "vendor": "SCIEX",
+      "family": "TripleTOF",
+      "models": ["TripleTOF 5600+SCIEX"],
+      "analyzer": "QTOF",
+      "activation_raw": ["CID"],
+      "activation": "CID",
+      "activation_evidence": "MassBank contributor text",
+      "psi_beam_type_cid_confirmed": false,
+      "architecture_interpretation": "Q1-to-Q2 collision-cell architecture is documented by SCIEX, but the record does not contain PSI MS:1000422 or CES state",
+      "collision_cell_region": "Q2_collision_cell_not_reported_in_record",
+      "allowed_ce_units": ["eV"],
+      "allowed_ce_modes": ["fixed"]
+    },
+    {
+      "domain_id": "sciex_x500r_qtof_cid_contributor_text",
+      "vendor": "SCIEX",
+      "family": "X500R QTOF",
+      "models": [
+        "X500R QTOF (AB Sciex LLC, USA)",
+        "X500R QTOF (AB Sciex LLC, MA, USA)",
+        "X500R QTOF (AB Sciex Pte. Ltd, USA)",
+        "X500R QTOF ( AB Sciex LLC, USA)"
+      ],
+      "analyzer": "QTOF",
+      "activation_raw": ["CID"],
+      "activation": "CID",
+      "activation_evidence": "MassBank contributor text",
+      "psi_beam_type_cid_confirmed": false,
+      "architecture_interpretation": "QTOF collision-cell dissociation is documented by SCIEX, but the record does not contain PSI MS:1000422 or CES state",
+      "collision_cell_region": "Q2_collision_cell_not_reported_in_record",
+      "allowed_ce_units": ["V"],
+      "allowed_ce_modes": ["fixed"]
+    },
+    {
+      "domain_id": "waters_qtof_premier_low_energy_cid_contributor_text",
+      "vendor": "Waters Corporation",
+      "family": "Q-Tof Premier",
+      "models": ["UPLC Q-Tof Premier, Waters"],
+      "analyzer": "QTOF",
+      "activation_raw": ["LOW-ENERGY CID"],
+      "activation": "LOW-ENERGY CID",
+      "activation_evidence": "MassBank contributor text",
+      "psi_beam_type_cid_confirmed": false,
+      "architecture_interpretation": "Q-Tof Premier collision-cell architecture is documented by Waters, but the record does not contain PSI MS:1000422 or an MS_E/FastDDA acquisition label",
+      "collision_cell_region": "collision_cell_region_not_reported_in_record",
+      "allowed_ce_units": ["V", "eV"],
+      "allowed_ce_modes": ["fixed", "ramp"]
+    }
+  ]
+}
