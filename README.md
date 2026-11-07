@@ -1,5 +1,7 @@
 # MSsystem
 
+[![verify-examples](https://github.com/Wang-Hao723/MSsystem/actions/workflows/verify-examples.yml/badge.svg)](https://github.com/Wang-Hao723/MSsystem/actions/workflows/verify-examples.yml)
+
 **English | [中文](#mssystem-1)**
 
 Open-source LC–MS/MS annotation software for natural products. MSsystem matches every compatible MS/MS scan against experimental reference spectra, aggregates spectral support at the candidate-structure level across repeated scans and collision energies, and keeps the scan–reference–fragment links that support evidence review of candidate rankings and of the structural details reported.

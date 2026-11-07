@@ -54,7 +54,9 @@ detection and MS2 association) is not exercised here.
 `expected/` holds the outputs of the validated run (macOS arm64, CPython
 3.13.5, `verification/requirements-macos-arm64-py313-tested.txt`; the run is
 deterministic — two independent runs produced byte-identical ranking and
-evidence files):
+evidence files). The repository's verification workflow
+(`.github/workflows/verify-examples.yml`) re-runs both examples on a fresh
+Linux x86-64 runner with Python 3.12 at every push:
 
 - rank 1 — connectivity `OVSQVDMCBVZWGM` (quercetin O-hexoside;
   isoquercitrin and hyperoside collapse to one connectivity identity),
