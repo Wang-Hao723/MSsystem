@@ -43,6 +43,12 @@ to a fresh work directory. `verify_entity_outputs.py` then checks the result
 rank 1, retention of the distinct competitor connectivity, per-bin support,
 reporting decision, and per-scan evidence).
 
+Scope note: the three scans enter the entity layer with a shared
+precursor-feature identifier assigned during example construction. The example
+exercises retrieval, entity aggregation, competition, the reporting decision
+and evidence export; the observation-association step itself (feature
+detection and MS2 association) is not exercised here.
+
 ## Expected result
 
 `expected/` holds the outputs of the validated run (macOS arm64, CPython

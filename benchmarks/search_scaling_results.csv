@@ -1,0 +1,5 @@
+library_refs,records_loaded,build_seconds,search_ms_median,search_ms_p95,search_ms_min,search_ms_max,queries_matched,peak_rss_mb
+10,3,2.12,22.48,23.01,21.68,1018.69,10,435.5
+100,84,2.2,22.16,22.49,21.43,1021.28,10,442.6
+1000,866,2.85,22.68,23.16,22.13,1024.0,10,446.8
+5000,4355,5.61,42.44,43.37,41.02,1118.65,10,469.0

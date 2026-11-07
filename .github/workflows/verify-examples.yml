@@ -1,0 +1,29 @@
+name: verify-examples
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          uv venv --python 3.12 .venv
+          uv --no-cache pip install --python .venv/bin/python --only-binary :all: -r requirements.lock
+
+      - name: Scan-level example (Additional file 3)
+        run: bash example/run_demo.sh "$PWD/.venv/bin/python" "$PWD" "$RUNNER_TEMP"
+
+      - name: Competing-candidate entity example
+        run: bash example_entity/run_entity_demo.sh "$PWD/.venv/bin/python" "$PWD" "$RUNNER_TEMP"
