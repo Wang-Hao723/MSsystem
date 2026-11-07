@@ -19,8 +19,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          uv venv --python 3.12 .venv
-          uv --no-cache pip install --python .venv/bin/python --only-binary :all: -r requirements.lock
+          uv --no-cache pip install --only-binary :all: -r requirements.lock
 
       - name: Scan-level example (Additional file 3)
         run: bash example/run_demo.sh "$PWD/.venv/bin/python" "$PWD" "$RUNNER_TEMP"
